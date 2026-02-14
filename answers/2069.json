@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes two strings as input and returns True if they are anagrams of each other and False otherwise.",
+  "answer": "Here is the code that matches the specifications:\n```\ndef are_anagrams(s1, s2):\n    if len(s1) != len(s2):\n        return False\n\n    s1 = sorted(s1)\n    s2 = sorted(s2)\n\n    for i in range(len(s1)):\n        if s1[i] != s2[i]:\n            return False\n\n    return True\n\n# Example usage\ns1 = \"listen\"\ns2 = \"silent\"\nprint(are_anagrams(s1, s2))  # Output: True\n```\nThis code defines a function `are_anagrams` that takes two strings `s1` and `s2` as input and returns a boolean value indicating whether they are anagrams of each other. The function first checks if the lengths of the two strings are equal, and if not, returns `False`. Then it sorts the characters in each string and compares the sorted strings character by character. If any pair of characters is not equal, the function returns `False`. If all characters match, the function returns `True`. The code also includes an example usage of the function with two strings \"listen\" and \"silent\", which are anagrams of each other.",
+  "timestamp": "2026-02-10T21:30:33.171601",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

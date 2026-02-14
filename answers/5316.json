@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a lambda function that takes a list of numbers and returns their sum",
+  "answer": "**Lambda Function: Sum of Numbers**\n```python\nsum_numbers = lambda numbers: sum(numbers)\n```\n**Example Usage:**\n```python\nnumbers = [1, 2, 3, 4, 5]\nresult = sum_numbers(numbers)\nprint(result)  # Output: 15\n```\nThis lambda function uses the built-in `sum` function to calculate the sum of the numbers in the input list.\n\n**Note:** This function does not include any error handling. If you want to add error handling to check if the input is a list of numbers, you can use a regular function instead:\n```python\ndef sum_numbers(numbers):\n    if not isinstance(numbers, list) or not all(isinstance(x, (int, float)) for x in numbers):\n        raise ValueError(\"Input must be a list of numbers\")\n    return sum(numbers)\n```",
+  "timestamp": "2026-02-11T14:38:19.095528",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

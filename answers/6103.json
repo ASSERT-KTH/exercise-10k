@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes an array of integers and two indices as input, and returns a new array containing the elements between the two indices.",
+  "answer": "Here is the code that matches the specification:\n```\n#include <iostream>\n#include <vector>\n\nusing namespace std;\n\nvector<int> between(vector<int> arr, int start, int end) {\n    vector<int> newarr;\n    for (int i = start; i < end; i++) {\n        newarr.push_back(arr[i]);\n    }\n    return newarr;\n}\n\nint main() {\n    vector<int> arr = {1, 2, 3, 4, 5};\n    vector<int> result = between(arr, 1, 3);\n    for (int i = 0; i < result.size(); i++) {\n        cout << result[i] << \" \";\n    }\n    return 0;\n}\n```\nThis code defines a function `between` that takes an array of integers `arr`, an integer `start`, and an integer `end` as input, and returns a new array containing the elements of `arr` between indices `start` and `end`. The `main` function demonstrates the use of this function by creating a sample array, calling the `between` function, and printing the result.",
+  "timestamp": "2026-02-11T17:49:06.960646",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

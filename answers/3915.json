@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that calculates the number of months needed to reach a savings goal given the current savings, monthly deposit, and goal amount.",
+  "answer": "Here is the code that meets the specifications:\n```\n<?php\n\nfunction calc_months_until_goal_met($current_savings, $monthly_deposit, $goal_amount) {\n  $months = 0;\n  while ($current_savings < $goal_amount) {\n    $current_savings += $monthly_deposit;\n    $months++;\n  }\n  return $months;\n}\n\n// Test the function\n$current_savings = 1000;\n$monthly_deposit = 500;\n$goal_amount = 5000;\n\n$months_until_goal_met = calc_months_until_goal_met($current_savings, $monthly_deposit, $goal_amount);\nprint(\"It will take $months_until_goal_met months to reach your goal.\");\n\n?>\n```\nThis code defines a function `calc_months_until_goal_met` that takes three arguments: `$current_savings`, `$monthly_deposit`, and `$goal_amount`. It uses a while loop to keep adding the monthly deposit to the current savings until the goal amount is reached. The number of months it takes to reach the goal is incremented each time the loop runs, and the function returns this number of months.\n\nThe code then tests the function with some sample values and prints the result to the screen.",
+  "timestamp": "2026-02-11T09:01:24.544881",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

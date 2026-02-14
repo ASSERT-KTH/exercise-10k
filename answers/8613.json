@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a string and a delimiter as input, and returns a list of substrings split by the delimiter.",
+  "answer": "Here is the code that meets the specifications:\n```\nfunction splitString(string, delimiter) {\n  var array = [];\n  var index = string.indexOf(delimiter);\n  var string1 = string;\n\n  while (index !== -1) {\n    array.push(string1.substring(0, index));\n    string1 = string1.substring(index + 1);\n    index = string1.indexOf(delimiter);\n  }\n\n  array.push(string1);\n  return array;\n}\n\n// Test the function\nconsole.log(splitString(\"01/02/03\", \"/\"));\n```\nThis code defines a function `splitString` that takes a string and a delimiter as input, and returns a list of substrings split by the delimiter. The function uses a `while` loop to split the string into substrings, and stores them in an array. The array is then returned.\n\nThe test at the end of the code calls the `splitString` function with the string `\"01/02/03\"` and the delimiter `\"/\"`, and logs the result to the console. The expected output is an array of length 3, containing the strings `\"01\"`, `\"02\"`, and `\"03\"`.",
+  "timestamp": "2026-02-12T01:04:56.826707",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

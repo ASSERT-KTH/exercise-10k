@@ -1,0 +1,6 @@
+{
+  "prompt": "Create a program that asks the user for their name and age, then validates the input to ensure the name is not empty and the age is a positive integer. If the input is valid, print out a greeting message with the user's name and age. If the input is invalid, print an error message and ask for the input again.",
+  "answer": "Here is the code that matches the provided specification:\n```\ndef get_user_info():\n    name = input(\"What is your name? \")\n    while not name:\n        print(\"Error: Name cannot be empty.\")\n        name = input(\"What is your name? \")\n\n    age = input(\"How old are you? \")\n    while not age.isdigit():\n        print(\"Error: Age must be a positive integer.\")\n        age = input(\"How old are you? \")\n\n    return name, int(age)\n\ndef main():\n    name, age = get_user_info()\n    print(f\"Hello, {name}! You are {age} years old.\")\n\nif __name__ == \"__main__\":\n    main()\n```\nI've carefully followed the specification to ensure that the code matches the requirements. Let me know if you have any further questions or if there's anything else I can help with!",
+  "timestamp": "2026-02-12T23:08:57.774723",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

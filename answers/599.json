@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes two strings as input and returns true if the first string is a rotation of the second string, and false otherwise.",
+  "answer": "Here is the code that meets the specifications:\n```\ndef isRotation(s1, s2):\n    if len(s1) != len(s2):\n        return False\n\n    temp = s1 + s1\n\n    for i in range(len(temp)):\n        if temp[i:i+len(s1)] == s2:\n            return True\n\n    return False\n\n# Test the function\ns1 = \"abcd\"\ns2 = \"dabc\"\n\nif isRotation(s1, s2):\n    print(\"True\")\nelse:\n    print(\"False\")\n```\nThis code defines the `isRotation` function, which takes two strings `s1` and `s2` as input and returns a boolean value indicating whether `s1` is a rotation of `s2`. The function first checks if the lengths of `s1` and `s2` are equal, and if not, returns `False`. If the lengths are equal, it creates a temporary string `temp` by concatenating `s1` with itself, and then checks if `s2` is a substring of `temp` starting from each position `i` in `temp`. If it finds a match, it returns `True`. If it doesn't find a match after checking all positions, it returns `False`. The code then tests the function with the example strings \"abcd\" and \"dabc\", and prints the result.",
+  "timestamp": "2026-02-10T15:21:05.809558",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

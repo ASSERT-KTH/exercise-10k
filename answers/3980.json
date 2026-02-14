@@ -1,0 +1,6 @@
+{
+  "prompt": "Implement the counting sort algorithm to sort a list of integers in ascending order. The program should take a list of integers as input and output the sorted list.",
+  "answer": "Here is the code that implements the counting sort algorithm to sort a list of integers in ascending order:\n```python\ndef counting_sort(arr):\n    max_val = max(arr)\n    min_val = min(arr)\n    count = [0] * (max_val - min_val + 1)\n    output = [0] * len(arr)\n\n    for num in arr:\n        count[num - min_val] += 1\n\n    for i in range(1, len(count)):\n        count[i] += count[i - 1]\n\n    i = len(arr) - 1\n    while i >= 0:\n        output[count[arr[i] - min_val] - 1] = arr[i]\n        count[arr[i] - min_val] -= 1\n        i -= 1\n\n    return output\n\narr = [4, 2, 2, 8, 3, 3, 1]\nsorted_arr = counting_sort(arr)\nprint(sorted_arr)\n```\nThis code implements the counting sort algorithm using the steps outlined in the specification. It first finds the maximum and minimum values in the input array, then creates a count array and an output array. It then iterates through the input array to update the count array, and finally uses the count array to build the output array in sorted order.",
+  "timestamp": "2026-02-11T09:17:00.040712",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

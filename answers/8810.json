@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes the coefficients of a polynomial as input and returns the sum and product of its roots.",
+  "answer": "Here is the code that the specifications describe:\n```\nuse std::io;\n\nfn main() {\n    let mut input = String::new();\n\n    io::stdin().read_line(&mut input).expect(\"Error reading input\");\n\n    let coefficients: Vec<i64> = input\n        .trim()\n        .split_whitespace()\n        .map(|x| x.parse().expect(\"Error parsing input\"))\n        .collect();\n\n    let sum_of_roots = -coefficients[1] / coefficients[0];\n    let product_of_roots = (-1).pow((coefficients.len() - 1) as u32) * coefficients[coefficients.len() - 1] / coefficients[0];\n\n    println!(\"Sum of roots: {}\", sum_of_roots);\n    println!(\"Product of roots: {}\", product_of_roots);\n}\n```\nThis code reads the coefficients of a polynomial from the standard input, calculates the sum and product of its roots using Vieta's formulas, and prints the results to the standard output.",
+  "timestamp": "2026-02-12T01:52:35.568154",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

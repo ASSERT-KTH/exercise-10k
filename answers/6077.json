@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that sorts a list of numbers using the Bubble Sort algorithm, which uses a while loop to repeatedly iterate over the list and swap adjacent elements if they are in the wrong order.",
+  "answer": "Here is the code that the specifications describe:\n\n```rust\nfn bubble_sort(arr: &mut Vec<i32>) {\n    let n = arr.len();\n    let mut i = 0;\n    let mut swapped = true;\n    while swapped {\n        swapped = false;\n        i += 1;\n        let mut j = 0;\n        while j < n - i {\n            if arr[j] > arr[j + 1] {\n                let t = arr[j];\n                arr[j] = arr[j + 1];\n                arr[j + 1] = t;\n                swapped = true;\n            }\n            j += 1;\n        }\n    }\n}\n\nfn main() {\n    let mut arr = vec![5, 1, 2, 8, 3, 4, 9, 6, 7];\n    bubble_sort(&mut arr);\n    println!(\"{:?}\", arr);\n}\n```\n\nThis code sorts the list of numbers using the Bubble Sort algorithm and prints the sorted list.",
+  "timestamp": "2026-02-11T17:42:21.187618",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

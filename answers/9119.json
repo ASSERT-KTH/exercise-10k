@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a list of integers as input and sorts them in ascending order using a basic algorithm such as bubble sort or selection sort.",
+  "answer": "Here is the Python code that implements the Bubble Sort algorithm as described in the specifications:\n\n```python\ndef bubble_sort(items):\n    for i in range(len(items)):\n        for j in range(len(items) - 1 - i):\n            if items[j] > items[j + 1]:\n                items[j], items[j + 1] = items[j + 1], items[j]\n    return items\n\ndef main():\n    items = [6, 9, 3, 1]\n    print(\"Original list:\", items)\n    sorted_items = bubble_sort(items)\n    print(\"Sorted list:\", sorted_items)\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis code defines the `bubble_sort` function, which takes a list of integers `items` as input and sorts it in ascending order using the Bubble Sort algorithm. The `main` function creates a list of integers, prints the original list, calls the `bubble_sort` function to sort the list, and then prints the sorted list. The `if __name__ == \"__main__\":` line is used to ensure that the `main` function is only executed when the script is run directly, not when it's imported as a module by another script.",
+  "timestamp": "2026-02-13T06:00:04.170950",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

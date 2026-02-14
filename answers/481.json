@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes an array and an index as input, and returns the element at that index in the array. If the index is out of bounds, return an error message.",
+  "answer": "Here is the code based on the specifications you provided:\n```\n// 1. Import modules\nvar readline = require('readline');\nvar rl = readline.createInterface({\n  input: process.stdin,\n  output: process.stdout\n});\n\n// 2. Define the Element function\nfunction Element(arr, index) {\n  if (index < arr.length) {\n    return arr[index];\n  } else {\n    return \"Invalid index\";\n  }\n}\n\n// 3. Read input from the user\nrl.question('Enter an array (comma-separated): ', function(arr) {\n  var array = arr.split(',').map(Number);\n  rl.question('Enter an index: ', function(index) {\n    var idx = parseInt(index);\n    console.log(Element(array, idx));\n    rl.close();\n  });\n});\n```\nThis code follows the specifications you provided, importing the `readline` module, defining the `Element` function, reading input from the user, and logging the result to the console. Let me know if you have any questions or if you'd like me to explain any part of the code!",
+  "timestamp": "2026-02-10T14:51:53.404195",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

@@ -1,0 +1,6 @@
+{
+  "prompt": "Delete a key-value pair from a dictionary",
+  "answer": "**Deleting a Key-Value Pair from a Dictionary**\n\nYou can delete a key-value pair from a dictionary using the `del` statement or the `pop()` method.\n\n### Method 1: Using `del`\n\n```python\n# Create a dictionary\nmy_dict = {'a': 1, 'b': 2, 'c': 3}\n\n# Delete a key-value pair\ndel my_dict['b']\n\nprint(my_dict)  # Output: {'a': 1, 'c': 3}\n```\n\n### Method 2: Using `pop()`\n\n```python\n# Create a dictionary\nmy_dict = {'a': 1, 'b': 2, 'c': 3}\n\n# Delete a key-value pair and return the value\nvalue = my_dict.pop('b')\n\nprint(my_dict)  # Output: {'a': 1, 'c': 3}\nprint(value)    # Output: 2\n```\n\nNote that if the key is not found in the dictionary, `del` will raise a `KeyError`, while `pop()` will raise a `KeyError` unless you provide a default value as the second argument.\n\n### Example with Default Value\n\n```python\n# Create a dictionary\nmy_dict = {'a': 1, 'b': 2, 'c': 3}\n\n# Delete a key-value pair with default value\nvalue = my_dict.pop('d', 'Key not found')\n\nprint(my_dict)  # Output: {'a': 1, 'b': 2, 'c': 3}\nprint(value)    # Output: Key not found\n```",
+  "timestamp": "2026-02-11T13:56:26.465100",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

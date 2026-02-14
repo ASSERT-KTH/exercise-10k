@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a list of strings as input and returns the longest common prefix among all the strings.",
+  "answer": "Here is the code that meets the specifications:\n```\nfunction longestCommonPrefix(strs) {\n  const prefix = [];\n  for (let i = 0; i < strs[0].length; i++) {\n    const letter = strs[0][i];\n    for (let j = 1; j < strs.length; j++) {\n      if (strs[j][i] !== letter) {\n        return prefix.join('');\n      }\n    }\n    prefix.push(letter);\n  }\n  return prefix.join('');\n}\n\n// Test cases\nconsole.log(longestCommonPrefix([\"flower\",\"flow\",\"flight\"])); // Output: \"fl\"\nconsole.log(longestCommonPrefix([\"dog\",\"racecar\",\"car\"])); // Output: \"\"\nconsole.log(longestCommonPrefix([\"interview\",\"interrupt\",\"interior\"])); // Output: \"inter\"\n```",
+  "timestamp": "2026-02-10T15:10:37.758786",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

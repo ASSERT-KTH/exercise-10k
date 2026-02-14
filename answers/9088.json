@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a dictionary as input where keys are student names and values are lists of their scores in different subjects. The program should calculate the average score for each student and return a new dictionary with student names as keys and their average scores as values.",
+  "answer": "Here is the code that meets the specifications:\n```\ndef average_score(students):\n    scores = {}\n    for student, grades in students.items():\n        average = sum(grades) / len(grades)\n        scores[student] = average\n    return scores\n\nstudents = {\n    'Alice': [85, 90, 95],\n    'Bob': [70, 80, 90],\n    'Charlie': [60, 70, 80],\n    'David': [90, 95, 100],\n    'Eve': [80, 85, 90]\n}\n\nprint(average_score(students))\n```\nThis code defines the `average_score` function, creates a dictionary `students` with student names and their scores, and calls the `average_score` function with the `students` dictionary as an argument. The function calculates the average score for each student and returns a new dictionary with the average scores. The result is printed to the console.",
+  "timestamp": "2026-02-13T05:53:40.930714",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

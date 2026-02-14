@@ -1,0 +1,168 @@
+## Exercise
+Create a simple simulator that simulates a real-world scenario.
+
+## Reference Solution
+```python
+class BankAccount:
+    def __init__(self, account_number, account_holder, initial_balance):
+        """
+        Initialize a bank account.
+
+        Args:
+            account_number (str): The account number.
+            account_holder (str): The account holder's name.
+            initial_balance (float): The initial account balance.
+        """
+        self.account_number = account_number
+        self.account_holder = account_holder
+        self.balance = initial_balance
+
+    def deposit(self, amount):
+        """
+        Deposit funds into the account.
+
+        Args:
+            amount (float): The amount to deposit.
+        """
+        if amount > 0:
+            self.balance += amount
+            print(f"Deposited ${amount:.2f} into account {self.account_number}. New balance: ${self.balance:.2f}")
+        else:
+            print("Invalid deposit amount.")
+
+    def withdraw(self, amount):
+        """
+        Withdraw funds from the account.
+
+        Args:
+            amount (float): The amount to withdraw.
+        """
+        if 0 < amount <= self.balance:
+            self.balance -= amount
+            print(f"Withdrew ${amount:.2f} from account {self.account_number}. New balance: ${self.balance:.2f}")
+        elif amount <= 0:
+            print("Invalid withdrawal amount.")
+        else:
+            print("Insufficient funds.")
+
+    def check_balance(self):
+        """
+        Check the current account balance.
+        """
+        print(f"Current balance for account {self.account_number}: ${self.balance:.2f}")
+
+
+class Bank:
+    def __init__(self):
+        """
+        Initialize the bank.
+        """
+        self.accounts = {}
+
+    def create_account(self, account_number, account_holder, initial_balance):
+        """
+        Create a new bank account.
+
+        Args:
+            account_number (str): The account number.
+            account_holder (str): The account holder's name.
+            initial_balance (float): The initial account balance.
+        """
+        if account_number not in self.accounts:
+            self.accounts[account_number] = BankAccount(account_number, account_holder, initial_balance)
+            print(f"Account {account_number} created for {account_holder}.")
+        else:
+            print("Account number already exists.")
+
+    def get_account(self, account_number):
+        """
+        Retrieve a bank account by account number.
+
+        Args:
+            account_number (str): The account number.
+
+        Returns:
+            BankAccount: The bank account object, or None if not found.
+        """
+        return self.accounts.get(account_number)
+
+
+def main():
+    bank = Bank()
+
+    while True:
+        print("\nBank Account Simulator")
+        print("1. Create account")
+        print("2. Deposit funds")
+        print("3. Withdraw funds")
+        print("4. Check balance")
+        print("5. Exit")
+
+        choice = input("Choose an option: ")
+
+        if choice == "1":
+            account_number = input("Enter account number: ")
+            account_holder = input("Enter account holder's name: ")
+            initial_balance = float(input("Enter initial balance: "))
+            bank.create_account(account_number, account_holder, initial_balance)
+        elif choice == "2":
+            account_number = input("Enter account number: ")
+            account = bank.get_account(account_number)
+            if account:
+                amount = float(input("Enter amount to deposit: "))
+                account.deposit(amount)
+            else:
+                print("Account not found.")
+        elif choice == "3":
+            account_number = input("Enter account number: ")
+            account = bank.get_account(account_number)
+            if account:
+                amount = float(input("Enter amount to withdraw: "))
+                account.withdraw(amount)
+            else:
+                print("Account not found.")
+        elif choice == "4":
+            account_number = input("Enter account number: ")
+            account = bank.get_account(account_number)
+            if account:
+                account.check_balance()
+            else:
+                print("Account not found.")
+        elif choice == "5":
+            break
+        else:
+            print("Invalid option. Please choose again.")
+
+
+if __name__ == "__main__":
+    main()
+```
+
+## Generated Output
+```
+Bank Account Simulator
+1. Create account
+2. Deposit funds
+3. Withdraw funds
+4. Check balance
+5. Exit
+Choose an option: Invalid option. Please choose again.
+
+Bank Account Simulator
+1. Create account
+2. Deposit funds
+3. Withdraw funds
+4. Check balance
+5. Exit
+Choose an option: 
+Traceback (most recent call last):
+  File "/tmp/tmpbsau2q6c.py", line 133, in <module>
+    main()
+  File "/tmp/tmpbsau2q6c.py", line 96, in main
+    choice = input("Choose an option: ")
+EOFError: EOF when reading a line
+```
+
+generated by python 3.10.13
+
+solution generated by RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic

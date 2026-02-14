@@ -1,0 +1,6 @@
+{
+  "prompt": "Given an array of stock prices, find the maximum possible profit that can be achieved by buying and selling a stock at most twice. The function should take in an array of stock prices as input and return the maximum possible profit.",
+  "answer": "Here is the code that meets the specifications:\n```\ndef maxProfit(prices):\n    buy1 = buy2 = float('-inf')\n    sell1 = sell2 = 0\n    for price in prices:\n        buy1 = max(buy1, -price)\n        sell1 = max(sell1, buy1 + price)\n        buy2 = max(buy2, sell1 - price)\n        sell2 = max(sell2, buy2 + price)\n    return sell2\n\n# Example usage\nprices = [3, 3, 5, 0, 0, 3, 1, 4]\nprint(maxProfit(prices))  # Output: 6\n```\nThis code implements the dynamic programming algorithm described in the specification. It initializes the variables `buy1`, `sell1`, `buy2`, and `sell2` as specified, and then iterates over the `prices` array, updating these variables according to the recurrence relations. Finally, it returns the value of `sell2`, which represents the maximum possible profit that can be achieved by buying and selling a stock at most twice.",
+  "timestamp": "2026-02-11T12:43:09.030999",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that formats the current date and time as a string in the format 'YYYY-MM-DD HH:MM:SS'.",
+  "answer": "Here is the Python code that matches the provided specification:\n\n```python\nimport time\nimport datetime\n\n# Get the current time in seconds since the epoch (January 1, 1970)\nt = time.time()\n\n# Convert the time in seconds to a struct_time object\nst = time.localtime(t)\n\n# Create a string representation of the current date and time\ns = str(datetime.datetime(st.tm_year, st.tm_mon, st.tm_mday, st.tm_hour, st.tm_min, st.tm_sec))\n\nprint(s)\n```\n\nThis code will output the current date and time in the format 'YYYY-MM-DD HH:MM:SS'. Note that the `st` object has attributes like `tm_year`, `tm_mon`, `tm_mday`, `tm_hour`, `tm_min`, and `tm_sec` which are used to create a `datetime` object, and then the `str()` function is used to convert this object to a string representation.",
+  "timestamp": "2026-02-10T21:48:48.056192",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a list and a filter function as input, and returns a new list containing only the elements that pass the filter function.",
+  "answer": "Here is the code that meets the specifications:\n```\ndef filter_list(list, filter_func):\n    new_list = []\n    for element in list:\n        if filter_func(element):\n            new_list.append(element)\n    return new_list\n\ndef is_even(n):\n    return n % 2 == 0\n\ndef main():\n    list = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n    result_list = filter_list(list, is_even)\n    print(result_list)\n\nif __name__ == \"__main__\":\n    main()\n```\nThis code defines the `filter_list` function, which takes a list and a filter function as input and returns a new list containing only the elements that pass the filter function. The `is_even` function is used as a filter function to check if a number is even. The `main` function demonstrates how to use the `filter_list` function with the `is_even` filter function.",
+  "timestamp": "2026-02-10T14:52:00.112690",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

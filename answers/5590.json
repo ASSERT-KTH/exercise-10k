@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a function that takes a number as an argument and returns its square root.",
+  "answer": "**Square Root Function**\n```python\nimport math\n\ndef calculate_square_root(number: float) -> float:\n    \"\"\"\n    Calculate the square root of a given number.\n\n    Args:\n        number (float): The number to calculate the square root of.\n\n    Returns:\n        float: The square root of the given number.\n\n    Raises:\n        ValueError: If the input number is negative.\n    \"\"\"\n    if number < 0:\n        raise ValueError(\"Input number cannot be negative.\")\n    return math.sqrt(number)\n\n# Example usage:\nif __name__ == \"__main__\":\n    try:\n        number = 16.0\n        square_root = calculate_square_root(number)\n        print(f\"The square root of {number} is {square_root}.\")\n    except ValueError as e:\n        print(e)\n```\nThis function uses the `math.sqrt` function from Python's standard library to calculate the square root of a given number. It also includes input validation to ensure the input number is not negative, as square roots of negative numbers are undefined in real mathematics. If a negative number is provided, it raises a `ValueError` with an informative message.",
+  "timestamp": "2026-02-11T15:43:28.277568",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that finds the maximum value in an array of integers. The program should take an array of integers as input, iterate through the array, and return the maximum value found.",
+  "answer": "Here's the code that meets the specifications:\n\n```c\n#include <stdio.h>\n\nint maxValue(int* arr, int size) {\n    int max = arr[0];\n    for (int i = 1; i < size; i++) {\n        if (arr[i] > max) {\n            max = arr[i];\n        }\n    }\n    return max;\n}\n\nint main() {\n    int arr[] = {1, 2, 3, 4, 5};\n    int size = sizeof(arr) / sizeof(arr[0]);\n    printf(\"Max value: %d\\n\", maxValue(arr, size));\n    return 0;\n}\n```\n\nThis code includes the necessary header file (`stdio.h`), defines the `maxValue` function, and implements the `main` function to test the `maxValue` function. The `maxValue` function takes an array of integers and its size as input, finds the maximum value, and returns it. The `main` function creates an array, finds its size, calls the `maxValue` function, and prints the result.",
+  "timestamp": "2026-02-12T23:15:03.749013",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

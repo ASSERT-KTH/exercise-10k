@@ -1,0 +1,6 @@
+{
+  "prompt": "Create a program that takes a string input from the user, checks if it's a valid email address, and then outputs a greeting message with the user's name extracted from the email address. The email address is considered valid if it contains '@' and '.'. You should use basic string manipulation to extract the name and format the output.",
+  "answer": "Here is the code that meets the specifications:\n```\nimport re\n\ndef main():\n    email = input(\"Enter your email address: \")\n    if '@' in email and '.' in email:\n        name = re.sub(r'@.*', '', email)\n        print(f\"Hello, {name}!\")\n    else:\n        print(\"Invalid email address.\")\n\nif __name__ == \"__main__\":\n    main()\n```\nThis code imports the `re` module, defines the `main` function, prompts the user for an email address, checks if it's valid, extracts the name using `re.sub`, prints the greeting message, and uses the `if __name__ == \"__main__\":` guard to ensure the `main` function is only executed when the script is run directly.",
+  "timestamp": "2026-02-12T22:55:13.740730",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

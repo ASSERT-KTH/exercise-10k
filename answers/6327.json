@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes an array as input, reverses it, and returns the reversed array.",
+  "answer": "Here is the code that meets the specifications:\n```\n#include <stdio.h>\n#include <stdlib.h>\n\n// Function to reverse an array\nvoid reverse(int a[], int n) {\n    int temp;\n    int i;\n    for (i = 0; i < n / 2; i++) {\n        temp = a[i];\n        a[i] = a[n - 1 - i];\n        a[n - 1 - i] = temp;\n    }\n}\n\nint main() {\n    int n = 5;\n    int a[n] = {1, 2, 3, 4, 5};\n\n    printf(\"Original array: \");\n    for (int i = 0; i < n; i++) {\n        printf(\"%d \", a[i]);\n    }\n    printf(\"\\n\");\n\n    reverse(a, n);\n\n    printf(\"Reversed array: \");\n    for (int i = 0; i < n; i++) {\n        printf(\"%d \", a[i]);\n    }\n    printf(\"\\n\");\n\n    return 0;\n}\n```\nThis code defines a `reverse` function that takes an array `a` and its size `n` as input, and reverses the array in place. The `main` function demonstrates the usage of the `reverse` function by creating an array `a` with 5 elements, printing the original array, calling the `reverse` function, and printing the reversed array.",
+  "timestamp": "2026-02-11T18:34:59.352994",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

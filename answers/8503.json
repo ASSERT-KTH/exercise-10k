@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that asks the user for their name and age, then prints out a greeting message with their name and age. The program should handle invalid age input and ensure the age is a positive integer.",
+  "answer": "Here is the code that matches the provided specification:\n```\n# Author: [Your Name]\n# Date: [Today's Date]\n# Description: A program that prints out a greeting message with the user's name and age.\n\ndef get_age():\n    while True:\n        try:\n            age = int(input(\"Please enter your age: \"))\n            if age < 0:\n                print(\"Age must be a positive integer.\")\n            else:\n                return age\n        except ValueError:\n            print(\"Invalid age input. Please enter a positive integer.\")\n\ndef main():\n    name = input(\"Please enter your name: \")\n    age = get_age()\n    print(f\"Hello, {name}! You are {age} years old.\")\n\nif __name__ == \"__main__\":\n    main()\n```\nNote that I've left the author and date fields blank, as they would depend on the actual author and date of creation. You can fill those in as needed.",
+  "timestamp": "2026-02-13T05:44:39.656716",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

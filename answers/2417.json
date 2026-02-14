@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a function that uses abstract classes to define an interface. Then, call this function with an input value and print the result.",
+  "answer": "```cpp\n#include <iostream>\n\n// Define an abstract class\nclass AbstractClass {\npublic:\n    // Define an abstract method\n    virtual int do_something(int input_value) = 0;\n};\n\n// Define a concrete class that implements the abstract class\nclass ConcreteClass : public AbstractClass {\npublic:\n    int do_something(int input_value) override {\n        return input_value * 2;\n    }\n};\n\n// Define a function that uses the abstract class as an interface\nint use_abstract_class(AbstractClass& abstract_class_instance, int input_value) {\n    return abstract_class_instance.do_something(input_value);\n}\n\nint main() {\n    // Create an instance of the concrete class\n    ConcreteClass concrete_class_instance;\n\n    // Call the function with the concrete class instance and an input value\n    int result = use_abstract_class(concrete_class_instance, 10);\n\n    // Print the result\n    std::cout << result << std::endl;  // Output: 20\n\n    return 0;\n}\n```",
+  "timestamp": "2026-02-10T22:52:04.397765",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

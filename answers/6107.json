@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes an array of integers and a pivot value as input, and returns two new arrays: one containing the integers less than the pivot, and one containing the integers greater than the pivot.",
+  "answer": "Here is the code that meets the specified requirements:\n```\ndef pivot(arr, pivot):\n    less = []\n    greater = []\n    for num in arr:\n        if num < pivot:\n            less.append(num)\n        elif num > pivot:\n            greater.append(num)\n    return less, greater\n\n# Example usage:\narr = [1, 2, 3, 4, 5, 6]\npivot_value = 4\nless, greater = pivot(arr, pivot_value)\nprint(less)  # [1, 2, 3]\nprint(greater)  # [5, 6]\n```\nThis code defines the `pivot` function, which takes an array `arr` and a pivot value `pivot` as input, and returns two new arrays: `less` and `greater`. The function iterates over each number in the input array, and uses if-elif statements to determine whether to append the number to the `less` or `greater` array. Finally, the function returns the `less` and `greater` arrays.\n\nThe example usage shows how to call the `pivot` function with an array `[1, 2, 3, 4, 5, 6]` and a pivot value `4`, and prints the resulting `less` and `greater` arrays.",
+  "timestamp": "2026-02-11T17:49:43.416418",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

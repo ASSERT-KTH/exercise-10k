@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that uses a for loop to implement a Caesar cipher, which shifts each letter in a given string by a specified number of positions.",
+  "answer": "Here is the code in Python that matches the detailed specification:\n\n```python\ns = \"Hello, world!\"\nshift = 3\n\nfor i in range(len(s)):\n    if s[i].isalpha():\n        ascii_offset = 65 if s[i].isupper() else 97\n        print(chr((ord(s[i]) - ascii_offset + shift) % 26 + ascii_offset), end='')\n    else:\n        print(s[i], end='')\n```\n\nThis code implements a Caesar cipher that shifts each letter in the string `s` by `shift` positions, wrapping around the alphabet if necessary. It handles both uppercase and lowercase letters, and non-alphabetic characters are printed unchanged.",
+  "timestamp": "2026-02-10T19:51:27.979811",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

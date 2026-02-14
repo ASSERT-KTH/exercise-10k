@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a function to find the maximum contiguous subarray of an array of integers. The function should take an array of integers as input and return the maximum sum of a contiguous subarray.",
+  "answer": "Here is the code that meets the specifications:\n```\ndef maximum_subarray(arr):\n    \"\"\"\n    This function finds the maximum sum of a contiguous subarray within a given array of integers.\n\n    Parameters:\n    arr (list): A list of integers.\n\n    Returns:\n    int: The maximum sum of a contiguous subarray.\n    \"\"\"\n    max_sum = float('-inf')\n    current_sum = 0\n\n    for num in arr:\n        current_sum = max(num, current_sum + num)\n        max_sum = max(max_sum, current_sum)\n\n    return max_sum\n\n# Example usage:\narr = [-2, -3, 4, -1, -2, 1, 5, -3]\nresult = maximum_subarray(arr)\nprint(result)  # Output: 7\n```\nThis code implements the maximum subarray problem solution using Kadane's algorithm, as described in the specification. It initializes `max_sum` to negative infinity and `current_sum` to 0, then iterates through the array, updating `current_sum` and `max_sum` accordingly. Finally, it returns the maximum sum of a contiguous subarray. The example usage demonstrates the function's behavior on a given array.",
+  "timestamp": "2026-02-12T22:14:38.320335",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

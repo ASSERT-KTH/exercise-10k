@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a list and a predicate function as input, and returns a new list that contains only the elements that satisfy the predicate function.",
+  "answer": "Here is the code that meets the specifications:\n```\ndef filter_list(list, predicate):\n    result = []\n    for element in list:\n        if predicate(element):\n            result.append(element)\n    return result\n\n# Example usage:\nnumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\neven_numbers = filter_list(numbers, lambda x: x % 2 == 0)\nprint(even_numbers)  # Output: [2, 4, 6, 8, 10]\n```\nNote that I've used a `lambda` function as the predicate, which is a shorthand way to define a small, anonymous function. In this case, the `lambda` function takes an element `x` and returns `True` if `x` is even (i.e., `x % 2 == 0`) and `False` otherwise.",
+  "timestamp": "2026-02-11T17:15:16.873331",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

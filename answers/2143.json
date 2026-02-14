@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that formats a given number as a currency value, with two decimal places and a dollar sign.",
+  "answer": "Here is the code that meets the specifications:\n```\n#include <iostream>\n#include <iomanip>\n#include <string>\nusing namespace std;\n\nstring currencyFormat(int n) {\n    string dollars = to_string(n / 100);\n    string cents = to_string(n % 100);\n\n    if (cents.length() == 1) {\n        cents.insert(0, \"0\");\n    }\n\n    string formatted = \"$\" + dollars + \".\" + cents;\n    return formatted;\n}\n\nint main() {\n    int n;\n    cin >> n;\n    cout << currencyFormat(n) << endl;\n    return 0;\n}\n```\nI hope this meets your requirements! Let me know if you have any further questions or if you'd like me to explain any part of the code.",
+  "timestamp": "2026-02-10T21:48:12.432716",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

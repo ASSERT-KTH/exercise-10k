@@ -1,0 +1,6 @@
+{
+  "prompt": "Implement the selection sort algorithm to sort a list of integers in ascending order. The program should take a list of integers as input and output the sorted list.",
+  "answer": "Here is the Python implementation of the selection sort algorithm:\n```\ndef selection_sort(arr):\n    for i in range(len(arr)):\n        min_index = i\n        for j in range(i + 1, len(arr)):\n            if arr[j] < arr[min_index]:\n                min_index = j\n        arr[i], arr[min_index] = arr[min_index], arr[i]\n    return arr\n\n# Example usage:\narr = [64, 34, 25, 12, 22, 11, 90]\nprint(\"Original list:\", arr)\nprint(\"Sorted list:\", selection_sort(arr))\n```\nThis code defines a function `selection_sort` that takes a list of integers as input and returns the sorted list. The function uses the selection sort algorithm to sort the list in ascending order. The example usage at the end demonstrates how to call the function with a sample list of integers and print the original and sorted lists.",
+  "timestamp": "2026-02-11T09:15:20.512432",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

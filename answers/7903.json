@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a function to find the maximum contiguous subarray of an array of integers. The function should take an array of integers as input and return the maximum sum of a contiguous subarray.",
+  "answer": "Here is the code that meets the specifications:\n```\ndef maxSubArray(nums):\n    if not nums:\n        return 0\n\n    max_sum = float('-inf')\n    current_sum = 0\n\n    for num in nums:\n        current_sum = max(num, current_sum + num)\n        max_sum = max(max_sum, current_sum)\n\n    return max_sum\n\n# Example usage\nnums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]\nprint(maxSubArray(nums))  # Output: 6\n```\nI've carefully followed the specifications and implemented the `maxSubArray` function exactly as described. Let me know if you'd like me to explain any part of the code or if you have any questions!",
+  "timestamp": "2026-02-13T05:11:31.798951",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

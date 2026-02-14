@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that groups the elements of a given array by a specified key function and returns a dictionary with the results.",
+  "answer": "Here is the code that meets the specifications:\n```\ndef group_by_key(arr, key_func):\n    result = {}\n    for value in arr:\n        key = key_func(value)\n        if key not in result:\n            result[key] = []\n        result[key].append(value)\n    return result\n\nif __name__ == '__main__':\n    arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n    result = group_by_key(arr, lambda x: x % 2)\n    print(result)\n```\nThis code defines the `group_by_key` function, which takes an array `arr` and a key function `key_func` as input. It initializes an empty dictionary `result` to store the grouped elements. It then iterates over the input array, applies the key function to each element to get the key, and adds the element to the list of values in the `result` dictionary.\n\nThe code also includes a `main` block that tests the `group_by_key` function with a sample input array and key function. The key function is a lambda function that returns the remainder of the element divided by 2, which groups the elements by their parity (even or odd). The result is printed to the console.",
+  "timestamp": "2026-02-11T00:24:48.058006",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

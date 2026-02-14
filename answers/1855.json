@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes an array of integers and a rotation amount as input, and returns a new array containing the same elements rotated by the specified amount.",
+  "answer": "Here is the code that matches the specifications:\n\n```javascript\nexport default function rotate(arr, numRotations) {\n  return arr.slice(numRotations).concat(arr.slice(0, numRotations));\n}\n```\n\nThis code defines a function `rotate` that takes two parameters, `arr` and `numRotations`, and returns a new array that is a rotated version of the input array `arr` by the number of positions specified by `numRotations`.\n\nThe function uses the `slice` method to extract two parts of the input array: the part from the `numRotations` index to the end, and the part from the start to the `numRotations` index. It then concatenates these two parts using the `concat` method, effectively rotating the array by the specified amount.\n\nYou can test this function by calling it with an array and a rotation amount, like this:\n\n```javascript\nconst arr = [1, 2, 3, 4, 5];\nconst numRotations = 2;\nconst rotatedArr = rotate(arr, numRotations);\nconsole.log(rotatedArr); // Output: [3, 4, 5, 1, 2]\n```",
+  "timestamp": "2026-02-10T20:28:30.579946",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

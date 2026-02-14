@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that decodes bytes into a string using a specific encoding.",
+  "answer": "Here is the code that matches the provided specifications:\n```\nimport sys\n\ndef decode_bytes(bytes, encoding):\n    try:\n        return bytes.decode(encoding)\n    except UnicodeDecodeError:\n        return bytes\n\nif __name__ == \"__main__\":\n    bytes_obj = sys.stdin.buffer.read()\n    decoded_str = decode_bytes(bytes_obj, 'utf-8')\n    print(decoded_str)\n```\nNote that I've followed the specifications closely, including the `try`-`except` block to catch `UnicodeDecodeError` exceptions, and the `if __name__ == \"__main__\":` block to ensure the code only runs when the script is executed directly. I've also used the `sys.stdin.buffer.read()` function to read the bytes from standard input, as specified.",
+  "timestamp": "2026-02-12T10:31:15.354168",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes two functions as input and returns their composition. The composition of two functions f and g, denoted as (f \u2218 g)(x), is defined as f(g(x)).",
+  "answer": "Here is the code that these specifications describe:\n\n```python\ndef compose(f, g):\n    def h(*args, **kwargs):\n        return f(g(*args, **kwargs))\n    return h\n\ndef f(x):\n    return x * x\n\ndef g(x):\n    return x * 2\n\nh = compose(f, g)\nprint(h(1))  # Output: 4\n```\n\nThis code defines a `compose` function that takes two functions `f` and `g` as input and returns a new function `h` that is the composition of `f` and `g`. The `f` and `g` functions are then defined, and their composition is calculated using the `compose` function. The result is printed to the console.",
+  "timestamp": "2026-02-12T22:44:54.872183",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

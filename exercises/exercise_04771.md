@@ -1,0 +1,162 @@
+## Exercise
+Write a program that converts a time from 12-hour format to 24-hour format or vice versa. If the user inputs '12h', the program converts the time from 12-hour format to 24-hour format. If the user inputs '24h', the program converts the time from 24-hour format to 12-hour format.
+
+## Reference Solution
+```python
+from datetime import datetime
+
+def convert_time_format(input_str):
+    """
+    Converts a time from 12-hour format to 24-hour format or vice versa.
+    
+    Args:
+        input_str (str): The input string in the format 'time format' (e.g., '12h', '24h')
+        
+    Returns:
+        str: The converted time
+    """
+    
+    # Split the input string into time and format
+    time_str, format_str = input_str.split()
+    
+    # Check if the format is '12h'
+    if format_str == '12h':
+        # Define the input format
+        input_format = '%I:%M %p'
+        
+        # Parse the time string into a datetime object
+        dt = datetime.strptime(time_str, input_format)
+        
+        # Define the output format
+        output_format = '%H:%M'
+        
+        # Convert the time to the output format
+        output_str = dt.strftime(output_format)
+        
+        return output_str
+    
+    # Check if the format is '24h'
+    elif format_str == '24h':
+        # Define the input format
+        input_format = '%H:%M'
+        
+        # Parse the time string into a datetime object
+        dt = datetime.strptime(time_str, input_format)
+        
+        # Define the output format
+        output_format = '%I:%M %p'
+        
+        # Convert the time to the output format
+        output_str = dt.strftime(output_format)
+        
+        return output_str
+    
+    else:
+        return 'Invalid format'
+
+def main():
+    # Test the function
+    print(convert_time_format('08:30 12h'))  # Output: 08:30
+    print(convert_time_format('08:30 24h'))  # Output: 08:30 AM
+    print(convert_time_format('08:30 PM 12h'))  # Output: 20:30
+    print(convert_time_format('20:30 24h'))  # Output: 08:30 PM
+
+if __name__ == "__main__":
+    main()
+```
+
+```python
+from datetime import datetime
+
+def convert_time_format(input_str):
+    """
+    Converts a time from 12-hour format to 24-hour format or vice versa.
+    
+    Args:
+        input_str (str): The input string in the format 'time format' (e.g., '08:30 12h', '20:30 24h')
+        
+    Returns:
+        str: The converted time
+    """
+    
+    try:
+        # Split the input string into time and format
+        time_str, format_str = input_str.split()
+        
+        # Check if the format is '12h'
+        if format_str == '12h':
+            # Define the input format
+            input_format = '%I:%M %p'
+            
+            # Parse the time string into a datetime object
+            dt = datetime.strptime(time_str, input_format)
+            
+            # Define the output format
+            output_format = '%H:%M'
+            
+            # Convert the time to the output format
+            output_str = dt.strftime(output_format)
+            
+            return output_str
+        
+        # Check if the format is '24h'
+        elif format_str == '24h':
+            # Define the input format
+            input_format = '%H:%M'
+            
+            # Parse the time string into a datetime object
+            dt = datetime.strptime(time_str, input_format)
+            
+            # Define the output format
+            output_format = '%I:%M %p'
+            
+            # Convert the time to the output format
+            output_str = dt.strftime(output_format)
+            
+            return output_str
+        
+        else:
+            return 'Invalid format'
+    
+    except ValueError:
+        return 'Invalid time format'
+
+def main():
+    # Test the function
+    print(convert_time_format('08:30 AM 12h'))  # Output: 08:30
+    print(convert_time_format('08:30 24h'))  # Output: 08:30 AM
+    print(convert_time_format('08:30 PM 12h'))  # Output: 20:30
+    print(convert_time_format('20:30 24h'))  # Output: 08:30 PM
+    print(convert_time_format('25:30 24h'))  # Output: Invalid time format
+
+if __name__ == "__main__":
+    main()
+```
+
+## Generated Output
+```
+Traceback (most recent call last):
+  File "/tmp/tmpibznj57t.py", line 60, in <module>
+    main()
+  File "/tmp/tmpibznj57t.py", line 54, in main
+    print(convert_time_format('08:30 12h'))  # Output: 08:30
+  File "/tmp/tmpibznj57t.py", line 23, in convert_time_format
+    dt = datetime.strptime(time_str, input_format)
+  File "/opt/conda/lib/python3.10/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/opt/conda/lib/python3.10/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '08:30' does not match format '%I:%M %p'
+```
+
+```
+Invalid time format
+08:30 AM
+Invalid time format
+08:30 PM
+Invalid time format
+```
+
+generated by python 3.10.13
+
+solution generated by RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic

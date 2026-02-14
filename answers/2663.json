@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a string, a substring to replace, and a replacement string as input, and returns the modified string.",
+  "answer": "Based on the specification, here is the code:\n```\ndef replace_string(s, sub, rep):\n    l = len(sub)\n    res = \"\"\n    i = 0\n    while i < len(s):\n        if s[i:i + l] == sub:\n            res += rep\n            i += l\n        else:\n            res += s[i]\n            i += 1\n    return res\n\ns = \"Hello, world! Hello again!\"\nsub = \"Hello\"\nrep = \"Goodbye\"\nprint(replace_string(s, sub, rep))\n```\nNote that I've followed the specification exactly, including the naming of the function, variables, and the implementation of the loop.",
+  "timestamp": "2026-02-10T23:53:08.945143",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

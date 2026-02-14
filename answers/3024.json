@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes two strings as input and returns true if they are anagrams of each other, and false otherwise.",
+  "answer": "Here is a Python solution that implements the anagram check:\n\n```python\ndef are_anagrams(str1, str2):\n    # Remove spaces and convert to lower case\n    str1 = str1.replace(\" \", \"\").lower()\n    str2 = str2.replace(\" \", \"\").lower()\n    \n    # Check if sorted strings are equal\n    return sorted(str1) == sorted(str2)\n\n# Example usage:\nprint(are_anagrams(\"Listen\", \"Silent\"))  # Returns: True\nprint(are_anagrams(\"Hello\", \"World\"))  # Returns: False\n```\n\nThis program works by first removing any spaces from the input strings and converting them to lower case. This ensures that the comparison is case-insensitive and ignores any spaces. It then sorts the characters in each string and checks if the sorted strings are equal. If they are, the original strings are anagrams of each other, and the function returns `True`. Otherwise, it returns `False`.",
+  "timestamp": "2026-02-11T01:24:46.602626",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

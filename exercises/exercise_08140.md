@@ -1,0 +1,178 @@
+## Exercise
+Create a program that implements a game of Hangman using if/else statements
+
+## Reference Solution
+```python
+import random
+
+# List of words to choose from
+words = ['apple', 'banana', 'cherry', 'date', 'elderberry']
+
+def hangman():
+    # Choose a random word from the list
+    word = random.choice(words)
+    word_length = len(word)
+    
+    # Initialize the display with underscores
+    display = ['_'] * word_length
+    guessed = False
+    guessed_letters = []
+    guessed_words = []
+    tries = 6
+    
+    print("Let's play Hangman!")
+    print(display_hangman(tries))
+    print(' '.join(display))
+    
+    while not guessed and tries > 0:
+        guess = input("Please guess a letter or word: ").lower()
+        
+        if len(guess) == 1 and guess.isalpha():
+            if guess in guessed_letters:
+                print("You already guessed the letter", guess)
+            elif guess not in word:
+                print(guess, "is not in the word.")
+                tries -= 1
+                guessed_letters.append(guess)
+            else:
+                print("Good job,", guess, "is in the word!")
+                guessed_letters.append(guess)
+                word_as_list = list(word)
+                indices = [i for i, letter in enumerate(word_as_list) if letter == guess]
+                for index in indices:
+                    display[index] = guess
+        elif len(guess) == word_length and guess.isalpha():
+            if guess in guessed_words:
+                print("You already guessed the word", guess)
+            elif guess != word:
+                print(guess, "is not the word.")
+                tries -= 1
+                guessed_words.append(guess)
+            else:
+                guessed = True
+                display = list(guess)
+        else:
+            print("Not a valid guess.")
+        
+        print(display_hangman(tries))
+        print(' '.join(display))
+    
+    if guessed:
+        print("Congratulations, you guessed the word!")
+    else:
+        print("Sorry, you ran out of tries. The word was " + word)
+
+def display_hangman(tries):
+    stages = [  # final state: head, torso, both arms, and both legs
+                """
+                   --------
+                   |      |
+                   |      O
+                   |     \\|/
+                   |      |
+                   |     / \\
+                   -
+                """,
+                # head, torso, both arms, and one leg
+                """
+                   --------
+                   |      |
+                   |      O
+                   |     \\|/
+                   |      |
+                   |     / 
+                   -
+                """,
+                # head, torso, and both arms
+                """
+                   --------
+                   |      |
+                   |      O
+                   |     \\|/
+                   |      |
+                   |      
+                   -
+                """,
+                # head, torso, and one arm
+                """
+                   --------
+                   |      |
+                   |      O
+                   |     \\|
+                   |      |
+                   |     
+                   -
+                """,
+                # head and torso
+                """
+                   --------
+                   |      |
+                   |      O
+                   |      |
+                   |      |
+                   |     
+                   -
+                """,
+                # head
+                """
+                   --------
+                   |      |
+                   |      O
+                   |    
+                   |      
+                   |     
+                   -
+                """,
+                # initial empty state
+                """
+                   --------
+                   |      |
+                   |      
+                   |    
+                   |      
+                   |     
+                   -
+                """
+    ]
+    return stages[tries]
+
+if __name__ == "__main__":
+    hangman()
+```
+
+## Generated Output
+```
+Let's play Hangman!
+
+                   --------
+                   |      |
+                   |      
+                   |    
+                   |      
+                   |     
+                   -
+                
+_ _ _ _ _ _
+Please guess a letter or word: Not a valid guess.
+
+                   --------
+                   |      |
+                   |      
+                   |    
+                   |      
+                   |     
+                   -
+                
+_ _ _ _ _ _
+Please guess a letter or word: 
+Traceback (most recent call last):
+  File "/tmp/tmpeujqreii.py", line 135, in <module>
+    hangman()
+  File "/tmp/tmpeujqreii.py", line 23, in hangman
+    guess = input("Please guess a letter or word: ").lower()
+EOFError: EOF when reading a line
+```
+
+generated by python 3.10.13
+
+solution generated by RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic

@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a list of numbers and a target value as input, and returns a new list with the first occurrence of the target value removed.",
+  "answer": "Here's the code that meets the specifications:\n```python\ndef solution(nums, val):\n    nums.remove(val)\n    return nums\n\n# Example usage:\nnums = [0,1,9,3,12]\nval = 9\nprint(solution(nums, val))  # Output: [0, 1, 3, 12]\n```\nIn this code, the `solution` function takes two arguments: `nums` (a list of integers) and `val` (the target value to be removed). The `remove` method is used to remove the first occurrence of `val` from the `nums` list. The modified `nums` list is then returned as the result.\n\nNote that this code assumes that the `val` is present in the `nums` list. If `val` is not found in the list, the `remove` method will raise a `ValueError`. If you want to handle this case, you can add a check before calling `remove`, like this:\n```python\ndef solution(nums, val):\n    if val in nums:\n        nums.remove(val)\n    return nums\n```\nThis version of the function will not raise an error if `val` is not found in the list. Instead, it will simply return the original list.",
+  "timestamp": "2026-02-10T19:56:06.229581",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

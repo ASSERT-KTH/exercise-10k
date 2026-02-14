@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a phone number as input and formats it to a standard format (XXX-XXX-XXXX). Print the formatted phone number to the console.",
+  "answer": "Here is the code that meets the specifications:\n```\nimport re\n\ndef format_phone_number(phone_number: str) -> str:\n    # Remove non-digit characters\n    phone_number = re.sub(r\"\\D\", \"\", phone_number)\n    \n    # Format the phone number\n    formatted_phone_number = f\"{phone_number[:3]}-{phone_number[3:6]}-{phone_number[6:]}\"\n    \n    return formatted_phone_number\n\n# Test the function\nprint(format_phone_number(\"(123) 456-7890\"))\n```\nThis code defines a function `format_phone_number` that takes a `phone_number` string as input, removes non-digit characters, formats the resulting string, and returns the formatted string. The function is then tested with a sample phone number string.",
+  "timestamp": "2026-02-10T22:02:17.574817",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

@@ -1,0 +1,6 @@
+{
+  "prompt": "Create a function that uses map-reduce to calculate the sum of squares of a list of numbers. Then, call this function with a list of input numbers and print the result.",
+  "answer": "Here is the code that meets the specifications:\n```\ndef map_func(x):\n    return x ** 2\n\ndef reduce_func(x, y):\n    return x + y\n\ndef calculate_sum_squares(numbers):\n    squares = list(map(map_func, numbers))\n    result = reduce(reduce_func, squares)\n    return result\n\nnumbers = [1, 2, 3, 4, 5]\nresult = calculate_sum_squares(numbers)\nprint(result)\n```\nNote that I assumed the `map` and `reduce` functions are from the `functools` module, which is the standard way to use these functions in Python. If you want to use the `map` and `reduce` functions from the `itertools` module, you'll need to import them explicitly.\n\nAlso, I used the `list` function to convert the iterator returned by `map` to a list, as required by the specification.",
+  "timestamp": "2026-02-10T22:51:00.926239",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

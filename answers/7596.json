@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that checks if a given variable is immutable.",
+  "answer": "<|python_tag|>def is_immutable(var):\n    \"\"\"\n    Checks if a given variable is immutable.\n\n    Args:\n        var: The variable to check.\n\n    Returns:\n        bool: True if the variable is immutable, False otherwise.\n    \"\"\"\n    # Check the type of the variable\n    var_type = type(var)\n    \n    # List of immutable types in Python\n    immutable_types = (int, float, complex, str, tuple, bytes, frozenset)\n    \n    # Check if the variable is of an immutable type\n    if var_type in immutable_types:\n        return True\n    else:\n        return False\n\n# Test the function\nprint(is_immutable(5))  # True\nprint(is_immutable(\"hello\"))  # True\nprint(is_immutable((1, 2, 3)))  # True\nprint(is_immutable([1, 2, 3]))  # False\nprint(is_immutable({\"a\": 1, \"b\": 2}))  # False\nprint(is_immutable({1, 2, 3}))  # False",
+  "timestamp": "2026-02-11T21:59:21.914354",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

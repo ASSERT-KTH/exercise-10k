@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a function that takes an array and an aggregation function (such as sum, product, or average) as input, and returns the aggregated value of the array elements.",
+  "answer": "Here is the Python code that matches the provided specification:\n```\nfrom functools import reduce\nfrom operator import mul\n\ndef aggregate(arr, agg_func):\n    if agg_func == \"sum\":\n        return sum(arr)\n    elif agg_func == \"product\":\n        return reduce(mul, arr, 1)\n    elif agg_func == \"average\":\n        return sum(arr) / len(arr)\n    else:\n        raise ValueError(\"Invalid aggregation function\")\n```",
+  "timestamp": "2026-02-11T14:42:49.673827",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

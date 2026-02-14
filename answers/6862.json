@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes an array of integers and an index as input, and returns the element at the specified index. If the index is out of range, return an error message.",
+  "answer": "Here is the code that meets the specifications:\n```\n#include <iostream>\nusing namespace std;\n\nint get(int arr[], int index, int size) {\n    if (index >= 0 && index < size) {\n        return arr[index];\n    } else {\n        cout << \"Index out of range\" << endl;\n        return -1; // or any other value to indicate an error\n    }\n}\n\nint main() {\n    int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};\n    int size = sizeof(arr) / sizeof(arr[0]);\n    int index = 3; // for example\n\n    cout << get(arr, index, size) << endl;\n\n    return 0;\n}\n```\nThis code defines a function `get` that takes an array of integers, an index, and the size of the array as input, and returns the element at the specified index if it is within range, or an error message otherwise. The `main` function demonstrates how to use this function by creating an array, getting its size, specifying an index, and calling the `get` function to retrieve the element at that index.",
+  "timestamp": "2026-02-12T22:21:40.969962",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

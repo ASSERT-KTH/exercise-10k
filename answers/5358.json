@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a function that takes a list and a chunk size as input, and returns a new list containing the elements of the input list, divided into chunks of the specified size.",
+  "answer": "Here is the code that meets the specifications:\n```python\ndef chunker(lst, size):\n    return [lst[i:i + size] for i in range(0, len(lst), size)]\n\n# Test the function\nprint(chunker([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 3))\n```\nThis code defines the `chunker` function, which takes a list `lst` and a chunk size `size` as input, and returns a new list containing the elements of the input list, divided into chunks of the specified size. The function uses a list comprehension to create the chunks, and the `range` function to generate the indices at which to start each chunk.\n\nWhen you run this code, it will print a list of lists, where each inner list is a chunk of the original input list, with the specified chunk size. For example, given the input list `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]` and a chunk size of 3, the output will be:\n```python\n[[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11]]\n```",
+  "timestamp": "2026-02-11T14:45:59.766809",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

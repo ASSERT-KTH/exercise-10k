@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a string as input and returns the string with all characters converted to lowercase or uppercase.",
+  "answer": "Here is the code that meets the specifications:\n```\n#include <iostream>\n#include <string>\n\nusing namespace std;\n\nstring toLower(string s) {\n    for (int i = 0; i < s.length(); i++) {\n        if (s[i] >= 'A' && s[i] <= 'Z') {\n            s[i] = s[i] + 32;\n        }\n    }\n    return s;\n}\n\nstring toUpper(string s) {\n    for (int i = 0; i < s.length(); i++) {\n        if (s[i] >= 'a' && s[i] <= 'z') {\n            s[i] = s[i] - 32;\n        }\n    }\n    return s;\n}\n\nint main() {\n    string s;\n    cin >> s;\n\n    string lower = toLower(s);\n    string upper = toUpper(s);\n\n    cout << lower << endl;\n    cout << upper << endl;\n\n    return 0;\n}\n```\nThis code should work as expected, taking a string as input, converting it to lowercase and uppercase, and printing the results. Note that this implementation assumes that the input string only contains letters (either uppercase or lowercase) and does not handle other characters. If you need to handle other characters, you may need to modify the code accordingly.",
+  "timestamp": "2026-02-11T09:38:15.966706",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

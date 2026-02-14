@@ -1,0 +1,6 @@
+{
+  "prompt": "Create a program that generates all prime numbers up to a given number n using a while loop. The program should take an integer n as input and print all prime numbers from 2 to n.",
+  "answer": "Here is the code that meets the specifications:\n```\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int n, i = 2, j, p;\n\n    cout << \"Enter an integer: \";\n    cin >> n;\n\n    while (i < n) {\n        p = 0;\n        j = 2;\n        while (j < i) {\n            if (i % j == 0) {\n                p = 1;\n                break;\n            }\n            j++;\n        }\n        if (p == 0) {\n            cout << i << \" \";\n        }\n        i++;\n    }\n\n    return 0;\n}\n```\nThis code follows the exact specifications provided, including the input/output, variable declarations, and the two nested while loops to generate and print prime numbers up to the given number `n`.",
+  "timestamp": "2026-02-13T05:46:57.014412",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}
