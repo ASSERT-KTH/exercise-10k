@@ -1,6 +1,10 @@
 # Exercise-10k: A Dataset of Programming Exercises in Python
 
-This repository contains a collection of 10,000 AI-generated programming exercises and their corresponding AI-generated solutions. Exercises are meant to be for an introduction to programming course.
+This repository contains a collection of 10,000 AI-generated programming exercises and their corresponding AI-generated solutions. Exercises are meant to be for an introduction to programming course. For example:
+
+> Write a function that takes an integer as input and returns a list of factorials from 1 to the given number.
+
+The problems & solutions are generated with [RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic](https://huggingface.co/RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic).
 
 ```bibtex
 @misc{exercise-10k,
