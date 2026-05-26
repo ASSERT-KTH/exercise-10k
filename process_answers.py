@@ -7,6 +7,7 @@ import math
 import subprocess
 import sys
 import tempfile
+import argparse
 
 def extract_code_blocks(text):
     # Regex to find content between ``` and ```
@@ -59,10 +60,30 @@ def execute_code(code, input_data=None):
         if os.path.exists(temp_name):
             os.remove(temp_name)
 
+def find_answer_path(answers_dir, exercise_id):
+    """Try all known naming conventions for answer files."""
+    candidates = [
+        os.path.join(answers_dir, f"{exercise_id}.json"),
+        os.path.join(answers_dir, f"{str(exercise_id).zfill(5)}.json"),
+        os.path.join(answers_dir, f"result_{str(exercise_id).zfill(5)}.json"),
+    ]
+    if exercise_id == 0:
+        candidates.insert(0, os.path.join(answers_dir, "00000.json"))
+    for path in candidates:
+        if os.path.exists(path):
+            return path
+    return None
+
+
 def main():
+    parser = argparse.ArgumentParser(description="Process exercise answers into markdown.")
+    parser.add_argument('--answers-dir', default='answers', help='Directory containing answer files')
+    parser.add_argument('--output-dir', default='exercises', help='Directory for output markdown files')
+    args = parser.parse_args()
+
     exercises_dir = 'specifications'
-    answers_dir = 'answers'
-    output_dir = 'exercises'
+    answers_dir = args.answers_dir
+    output_dir = args.output_dir
     python_version = sys.version.split()[0]
 
     if not os.path.exists(output_dir):
@@ -94,17 +115,8 @@ def main():
         sample_input = exercise_data.get('sample_input')
 
         # Try to find the answer file
-        answer_filename = f"{exercise_id}.json"
-        if exercise_id == 0:
-            answer_filename = "00000.json"
-        
-        answer_path = os.path.join(answers_dir, answer_filename)
-        
-        if not os.path.exists(answer_path):
-            padded_answer_filename = f"{str(exercise_id).zfill(5)}.json"
-            answer_path = os.path.join(answers_dir, padded_answer_filename)
-
-        if not os.path.exists(answer_path):
+        answer_path = find_answer_path(answers_dir, exercise_id)
+        if answer_path is None:
             continue
 
         total_cases += 1

@@ -61,7 +61,7 @@ Top 10 Topics:
 * variables: 853
 * strings: 824
 
-### Program stats
+### Generated solutions with RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic
 
 AI output with no code blocks: 87 cases
 
@@ -76,10 +76,25 @@ Program Length Distribution (characters):
 
 Syntactically Valid Python (AST): 9,533 (95.32%)
 
-**Execution:**
+**Execution:**: Number of successfully executed cases: 7168 (71.70%)
 
-Number of successfully executed cases: 7168 (71.70%)
 
+### Generated solutions with nvidia/nemotron-mini-4b-instruct
+
+AI output with no code blocks: 79 cases
+
+AI output with multiple code blocks: 3,674 cases. In this case, we only execute the first one.
+
+Program Length Distribution (characters):
+- Median: 603.0
+- Range: 0 - 3131
+- 25th Percentile: 414
+- 75th Percentile: 829
+- 95th Percentile: 1300
+
+Syntactically Valid Python (AST): 2,305 (23.05%)
+
+**Execution:**: Number of successfully executed cases: 7,483 (74.83%)
 
 ## Related work
 
