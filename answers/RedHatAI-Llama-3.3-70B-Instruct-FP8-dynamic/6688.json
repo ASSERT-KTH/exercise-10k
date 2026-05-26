@@ -1,0 +1,6 @@
+{
+  "prompt": "Create a program that takes two numbers as input and returns the result of raising the first number to the power of the second.",
+  "answer": "Here is the code that meets the specifications:\n```\ndef power(base, exponent):\n    result = 1\n    for i in range(abs(exponent)):\n        result *= base\n    if exponent < 0:\n        return 1.0 / result\n    return result\n\nprint(power(2, 3))  # Output: 8\nprint(power(2, -3))  # Output: 0.125\n```\nNote that I've used the `abs` function to ensure that the loop runs the correct number of times, even if the exponent is negative. I've also used the `1.0` literal to ensure that the division result is a float, even if the result is an integer.",
+  "timestamp": "2026-02-11T20:02:31.034839",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

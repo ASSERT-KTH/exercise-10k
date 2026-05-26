@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes an array and an index as input, and returns the array with the element at the given index removed.",
+  "answer": "Here is the code that satisfies the given specification:\n```\ndef remove_by_index(arr, index):\n    if index < 0 or index >= len(arr):\n        return arr\n    return arr[:index] + arr[index+1:]\n\n# Test case\narr = [10, 20, 30, 40, 50]\nindex = 2\nprint(remove_by_index(arr, index))\n```\nThis code defines the `remove_by_index` function, which takes an array `arr` and an index `index` as input. It checks if the index is out of range and returns the original array if it is. Otherwise, it constructs a new array by concatenating two slices of the original array: one up to the given index and one from the index plus one to the end. The resulting array is then returned.\n\nThe test case at the end creates an array `arr` with five elements and an index `index` with value 2. It then calls the `remove_by_index` function with these inputs and prints the result, which should be the array with the element at index 2 removed: `[10, 20, 40, 50]`.",
+  "timestamp": "2026-02-10T17:12:42.085502",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

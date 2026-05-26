@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes an array and a rotation amount as input, and returns the array rotated by the specified amount.",
+  "answer": "Here is the code in Python that matches the specification:\n```\ndef rotate(array, rotation_amount):\n    rotation_amount = rotation_amount % len(array)\n    return array[-rotation_amount:] + array[:-rotation_amount]\n\narr = [1, 2, 3, 4, 5, 6, 7]\nr = 3\nprint(rotate(arr, r))  # Output: [5, 6, 7, 1, 2, 3, 4]\n```\nThis code defines the `rotate` function, which takes an array and a rotation amount as input, and returns the rotated array. It uses the modulo operator to handle cases where the rotation amount is greater than the length of the array, and then returns the rotated array by concatenating the last `rotation_amount` elements with the rest of the array (excluding the last `rotation_amount` elements). The example usage at the end demonstrates how to use the function with an array `[1, 2, 3, 4, 5, 6, 7]` and a rotation amount of `3`.",
+  "timestamp": "2026-02-10T14:52:54.127585",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

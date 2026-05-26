@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that checks whether a given number is prime or not. The program should take an integer as input and output 'Prime' if the number is prime, and 'Not Prime' otherwise.",
+  "answer": "Here is the Python code that matches the detailed specification:\n```\nn = int(input())\nif n <= 1:\n    print(\"Not Prime\")\nelse:\n    a = [True] * (n + 1)\n    a[0] = False\n    a[1] = False\n    p = 2\n    while p * p <= n:\n        if a[p]:\n            for i in range(p * p, n + 1, p):\n                a[i] = False\n        p += 1\n    if a[n]:\n        print(\"Prime\")\n    else:\n        print(\"Not Prime\")\n```\nI've followed the specification carefully and implemented the algorithm as described. Let me know if you have any questions or need further clarification!",
+  "timestamp": "2026-02-11T09:13:30.728339",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

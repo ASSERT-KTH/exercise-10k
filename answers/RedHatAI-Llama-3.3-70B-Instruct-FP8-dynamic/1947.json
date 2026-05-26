@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes an array and an index as input and removes the element at that index from the array.",
+  "answer": "Here is the code that meets the specifications:\n```\n#include <stdio.h>\n\nint main() {\n    int n, i, k;\n    int a[100];\n\n    printf(\"Enter the size of the array: \");\n    scanf(\"%d\", &n);\n\n    printf(\"Enter the elements of the array: \");\n    for (i = 0; i < n; i++) {\n        scanf(\"%d\", &a[i]);\n    }\n\n    printf(\"Enter the index to remove: \");\n    scanf(\"%d\", &k);\n\n    printf(\"Original array: \");\n    for (i = 0; i < n; i++) {\n        printf(\"%d \", a[i]);\n    }\n    printf(\"\\n\");\n\n    if (k >= 1 && k <= n) {\n        for (i = k - 1; i < n - 1; i++) {\n            a[i] = a[i + 1];\n        }\n        n--;\n    }\n\n    printf(\"Array after removing the element at index %d: \", k);\n    for (i = 0; i < n; i++) {\n        printf(\"%d \", a[i]);\n    }\n    printf(\"\\n\");\n\n    return 0;\n}\n```\nThis code follows the specifications exactly, including the variable names, data types, and program structure. It reads the array size, elements, and index from the user, removes the element at the specified index, and prints the original and modified arrays.",
+  "timestamp": "2026-02-10T20:58:02.317867",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

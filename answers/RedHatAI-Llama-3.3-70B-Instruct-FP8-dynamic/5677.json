@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a number as input and outputs whether it is a perfect square or not.",
+  "answer": "Here's a Python program that checks if a number is a perfect square:\n\n```python\nimport math\n\ndef is_perfect_square(n):\n    if n < 0:\n        return False\n    sqrt = math.sqrt(n)\n    return sqrt == int(sqrt)\n\ndef main():\n    num = int(input(\"Enter a number: \"))\n    if is_perfect_square(num):\n        print(f\"{num} is a perfect square.\")\n    else:\n        print(f\"{num} is not a perfect square.\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\nIn this program:\n\n1. We import the math module for calculating the square root.\n2. The `is_perfect_square` function checks if a number `n` is a perfect square:\n   - If `n` is less than 0, it's not a perfect square because negative numbers cannot be perfect squares.\n   - We calculate the square root of `n` and check if it equals its integer value. If they are equal, `n` is a perfect square.\n3. The `main` function asks the user to enter a number, checks if it's a perfect square, and prints the result.\n4. The `if __name__ == \"__main__\":` line ensures the `main` function runs when the script is executed directly.",
+  "timestamp": "2026-02-11T16:06:45.380358",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

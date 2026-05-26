@@ -1,0 +1,6 @@
+{
+  "prompt": "Implement the quicksort algorithm to sort a list of integers in ascending order. The program should take a list of integers as input and output the sorted list.",
+  "answer": "Here's the code based on the provided specifications:\n\n```python\ndef quicksort(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    middle = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    return quicksort(left) + middle + quicksort(right)\n\ndef main():\n    n = int(input())\n    arr = list(map(int, input().split()))\n    print(quicksort(arr))\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis code implements the quicksort algorithm using the Lomuto partition scheme. The `quicksort` function recursively sorts the input list by selecting a pivot element, partitioning the list into three sublists, and recursively sorting the `left` and `right` sublists. The `main` function reads the input from the user, calls the `quicksort` function, and prints the sorted list.",
+  "timestamp": "2026-02-11T09:14:40.027860",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

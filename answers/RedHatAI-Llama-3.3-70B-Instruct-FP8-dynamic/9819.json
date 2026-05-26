@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that calculates the sum of all elements in an array using a for loop and a while loop. The program should first ask for the size of the array, then ask for each element, and finally print the sum of all elements.",
+  "answer": "Here is the code that meets the specifications:\n```\n#include <iostream>\n#include <vector>\n\nusing namespace std;\n\nint main() {\n    int n;\n    cout << \"Enter the size of the array: \";\n    cin >> n;\n\n    vector<int> v(n);\n    cout << \"Enter \" << n << \" elements: \";\n    for (int i = 0; i < n; i++) {\n        cin >> v[i];\n    }\n\n    int sum = 0;\n    for (int i = 0; i < n; i++) {\n        sum += v[i];\n    }\n\n    cout << \"Sum of elements using for loop: \" << sum << endl;\n\n    sum = 0;\n    int i = 0;\n    while (i < n) {\n        sum += v[i];\n        i++;\n    }\n\n    cout << \"Sum of elements using while loop: \" << sum << endl;\n\n    return 0;\n}\n```\nThis code follows the specifications exactly, using `cin` to get user input, `vector` to store the elements, `for` and `while` loops to calculate the sum, and `cout` to print the results.",
+  "timestamp": "2026-02-13T06:50:59.832076",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

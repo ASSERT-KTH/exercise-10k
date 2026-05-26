@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a polynomial and a value as input and returns the result of evaluating the polynomial at that value.",
+  "answer": "Here is the code that matches the provided specification:\n```\nconst readline = require('readline');\n\nconst rl = readline.createInterface({\n  input: process.stdin,\n  output: process.stdout\n});\n\nlet polinomio = [];\nlet resultado = 0;\n\nrl.on('line', (input) => {\n  polinomio = input.split(' ');\n  polinomio = polinomio.map(Number);\n  polinomio = polinomio.reverse();\n\n  const n = parseInt(input, 10);\n  const x = parseInt(input, 10);\n\n  for (let i = 0; i < polinomio.length; i++) {\n    resultado += polinomio[i] * Math.pow(n, polinomio.length - (i + 1));\n  }\n\n  console.log(resultado);\n  rl.close();\n});\n```\nNote that I've assumed that the input format is a string of space-separated numbers, where the first number is the value of `n` and the remaining numbers are the coefficients of the polynomial. If this is not the case, please let me know and I can modify the code accordingly.",
+  "timestamp": "2026-02-12T09:47:38.340260",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

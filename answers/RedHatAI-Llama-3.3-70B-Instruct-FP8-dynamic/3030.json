@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a string and a rotation value as input, and returns the string rotated by the specified value.",
+  "answer": "Here is the code in Python:\n\n```python\ndef rotate_string(s, n):\n    if n > len(s):\n        n = n % len(s)\n    return s[-n:] + s[:-n]\n\nprint(rotate_string(\"Hello, World!\", 5))\nprint(rotate_string(\"I love Python!\", 13))\n```\n\nThis code defines a function called `rotate_string` that takes two parameters: `s` (the string to be rotated) and `n` (the number of positions to rotate the string). If `n` is greater than the length of `s`, it adjusts `n` to be the remainder of `n` divided by the length of `s`. This is because rotating a string of length `m` by `m` or more positions is equivalent to rotating it by the remainder of the division of the rotation value by `m`.\n\nThe function then returns the rotated string by concatenating two parts: the last `n` characters of `s` and the rest of `s` (i.e., all characters except the last `n` characters). The `[-n:]` slice gets the last `n` characters of `s`, and the `[:-n]` slice gets all characters except the last `n` characters.\n\nFinally, the code calls the `rotate_string` function with two example strings and prints the results.",
+  "timestamp": "2026-02-11T01:25:47.958409",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

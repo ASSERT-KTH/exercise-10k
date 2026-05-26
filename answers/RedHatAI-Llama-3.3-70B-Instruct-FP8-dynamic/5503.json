@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program to search for a specific element in an array of integers using the linear search algorithm.",
+  "answer": "Here is the code that meets the specifications:\n```\n#include <stdio.h>\n\nint main() {\n    int n, i, pos = 0;\n    int a[10], x;\n\n    printf(\"Enter the number of elements in the array: \");\n    scanf(\"%d\", &n);\n\n    printf(\"Enter the elements of the array: \");\n    for (i = 0; i < n; i++) {\n        scanf(\"%d\", &a[i]);\n    }\n\n    printf(\"Enter the element to search for: \");\n    scanf(\"%d\", &x);\n\n    for (i = 0; i < n; i++) {\n        if (a[i] == x) {\n            pos = i;\n            break;\n        }\n    }\n\n    if (pos == 0) {\n        printf(\"Element not found in the array.\\n\");\n    } else {\n        printf(\"Element found at position %d.\\n\", pos);\n    }\n\n    return 0;\n}\n```\nThis code follows the specifications exactly, including the use of `scanf` to read input from the user, the use of a `for` loop to iterate over the array, and the check for the element not being found by checking if `pos` is still 0 after the loop.",
+  "timestamp": "2026-02-11T15:21:20.293948",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

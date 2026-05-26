@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a sorted list of integers and a target value as input and returns the index of the target value in the list using binary search.",
+  "answer": "Here is the code that meets the specifications:\n```\ndef binary_search(nums, target):\n    left = 0\n    right = len(nums) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if nums[mid] == target:\n            return mid\n        elif nums[mid] > target:\n            right = mid - 1\n        else:\n            left = mid + 1\n    return -1\n\nnums = [1, 2, 3, 4, 5, 6, 7, 8, 9]\ntarget = 6\nres = binary_search(nums, target)\nprint(res)\n```\nI've carefully followed the specification and implemented the binary search algorithm as described. The code defines the `binary_search` function, which takes a sorted list `nums` and a target value `target` as input, and returns the index of the target value in the list. The function uses a `while` loop to repeatedly narrow down the search range until the target value is found or the search range is empty.\n\nThe example code at the end creates a sample input list `nums`, sets the target value to 6, calls the `binary_search` function, and prints the result.",
+  "timestamp": "2026-02-11T06:30:36.985065",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

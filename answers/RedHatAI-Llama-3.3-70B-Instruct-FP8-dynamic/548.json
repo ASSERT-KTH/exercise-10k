@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a string and a shift value as input and returns the encrypted string using the Caesar cipher algorithm.",
+  "answer": "Here is the code that meets the specifications:\n```\ndef caesar_cipher(s, shift):\n    result = \"\"\n    for char in s:\n        if char.isupper():\n            result += chr((ord(char) - 65 + shift) % 26 + 65)\n        elif char.islower():\n            result += chr((ord(char) - 97 + shift) % 26 + 97)\n        else:\n            result += char\n    return result\n\nprint(caesar_cipher(\"Python\", 3))\nprint(caesar_cipher(\"Khoor\", -3))\n```\nThis code defines a function `caesar_cipher` that takes two parameters: `s` (the string to be encrypted) and `shift` (the shift value). The function iterates over each character in the string, applies the Caesar cipher algorithm to uppercase and lowercase letters, and returns the encrypted string. The code also includes two test cases that demonstrate the function's behavior.",
+  "timestamp": "2026-02-10T15:10:07.079536",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that prints the first 10 numbers in the Tribonacci sequence using a while loop.",
+  "answer": "Here's a Python program that prints the first 10 numbers in the Tribonacci sequence using a while loop:\n\n```python\ndef tribonacci(n):\n    sequence = [0, 0, 1]\n    i = 3\n    while i < n:\n        sequence.append(sum(sequence[-3:]))\n        i += 1\n    return sequence\n\nprint(tribonacci(10))\n```\n\nThis program starts with the first three numbers in the Tribonacci sequence (0, 0, 1), then uses a while loop to generate the next numbers in the sequence. The `sum(sequence[-3:])` expression calculates the sum of the last three numbers in the sequence, which is then appended to the sequence.\n\nWhen you run this program, it will print the first 10 numbers in the Tribonacci sequence. The output will be:\n\n```\n[0, 0, 1, 1, 2, 4, 7, 13, 24, 44]\n```",
+  "timestamp": "2026-02-11T15:35:14.335839",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

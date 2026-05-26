@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program to take a user's name and age as input and print a greeting message with their name and age, but handle any errors that may occur during input and validation.",
+  "answer": "Here is the code that matches the specification:\n```\n# Importing Libraries\nimport sys\n\n# Defining a Function\ndef get_user_input():\n    try:\n        name = input(\"Enter your name: \")\n        age = int(input(\"Enter your age: \"))\n\n        # Validation\n        if age < 0:\n            print(\"Age cannot be negative.\")\n            return get_user_input()  # recursive call to prompt user again\n\n        return name, age\n    except ValueError:\n        print(\"Invalid input. Please enter a valid age.\")\n        return get_user_input()  # recursive call to prompt user again\n    except KeyboardInterrupt:\n        print(\"\\nGoodbye!\")\n        sys.exit()  # exit the program\n    except EOFError:\n        print(\"\\nGoodbye!\")\n        sys.exit()  # exit the program\n\n# Main Program\nname, age = get_user_input()\nprint(f\"Hello, {name}! You are {age} years old.\")\n\n# Quitting the Program\nsys.exit()\n```\nI hope this meets the requirements! Let me know if you have any further questions.",
+  "timestamp": "2026-02-10T22:31:11.883074",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

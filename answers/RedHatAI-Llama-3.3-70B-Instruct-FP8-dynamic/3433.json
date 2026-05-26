@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a function that takes two strings as input and returns the index of the first occurrence of the second string in the first string using the KMP algorithm",
+  "answer": "Here is the code that meets the specifications:\n```\ndef compute_prefix_function(s):\n    prefix = [0] * len(s)\n    j = 0\n    for i in range(1, len(s)):\n        while j > 0 and s[i] != s[j]:\n            j = prefix[j - 1]\n        if s[i] == s[j]:\n            j += 1\n        prefix[i] = j\n    return prefix\n\ndef findSubstringKMP(text, pattern):\n    prefix = compute_prefix_function(pattern)\n    j = 0\n    for i in range(len(text)):\n        while j > 0 and text[i] != pattern[j]:\n            j = prefix[j - 1]\n        if text[i] == pattern[j]:\n            j += 1\n        if j == len(pattern):\n            return i - len(pattern) + 1\n    return -1\n\ntext = \"abxabcabcaby\"\npattern = \"abcaby\"\nprint(findSubstringKMP(text, pattern))\n```\nNote that I've added a `main` function (in the form of a simple test case) to demonstrate the usage of the `findSubstringKMP` function. The output of this code will be the index of the first occurrence of the pattern \"abcaby\" in the text \"abxabcabcaby\", which is 6.",
+  "timestamp": "2026-02-11T07:00:48.347762",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

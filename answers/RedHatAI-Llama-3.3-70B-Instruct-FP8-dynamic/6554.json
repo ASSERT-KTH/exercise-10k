@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a function that counts the number of letters in a given string.",
+  "answer": "**Letter Count Function**\n=========================\n\n### Description\n\nThis function takes a string as input and returns the number of letters in the string.\n\n### Code\n```python\ndef count_letters(input_string: str) -> int:\n    \"\"\"\n    Counts the number of letters in a given string.\n\n    Args:\n        input_string (str): The input string to count letters from.\n\n    Returns:\n        int: The number of letters in the input string.\n    \"\"\"\n    return sum(1 for char in input_string if char.isalpha())\n\n# Example usage:\ndef main():\n    input_str = \"Hello, World!\"\n    letter_count = count_letters(input_str)\n    print(f\"The string '{input_str}' contains {letter_count} letters.\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\n### Explanation\n\n* The `count_letters` function uses a generator expression to iterate over each character in the input string.\n* The `isalpha` method checks if a character is a letter. If it is, the generator expression yields 1, which is then summed up by the `sum` function.\n* The `main` function demonstrates how to use the `count_letters` function with an example string.",
+  "timestamp": "2026-02-11T19:31:45.676593",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

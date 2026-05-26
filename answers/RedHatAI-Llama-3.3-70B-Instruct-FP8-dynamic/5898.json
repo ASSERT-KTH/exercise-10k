@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a function that takes an array and a chunk size as input and returns a list of chunks, where each chunk is a subset of the original array.",
+  "answer": "Here is the code that meets the specifications:\n```\ndef chunks(array, size):\n    for i in range(0, len(array), size):\n        yield array[i:i + size]\n\nprint(list(chunks([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3)))\n```\nThis code defines a generator function `chunks` that takes an array and a chunk size as input, and yields a list of chunks where each chunk is a subset of the original array. The `print` statement at the end tests the function with an example array and chunk size, and prints the resulting list of chunks.\n\nThe `for` loop iterates over the indices of the input array, stepping by the chunk size `size` each time. The `yield` statement yields a slice of the input array, starting at the current index `i` and ending at `i + size`. This creates a chunk of the desired size.\n\nWhen the `print` statement is executed, it converts the generator object returned by `chunks` to a list using the `list` function, and prints the resulting list of chunks.",
+  "timestamp": "2026-02-11T16:59:48.589089",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

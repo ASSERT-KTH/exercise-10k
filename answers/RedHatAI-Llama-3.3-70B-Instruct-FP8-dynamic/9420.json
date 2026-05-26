@@ -1,0 +1,6 @@
+{
+  "prompt": "Create a function that takes a dictionary and returns the sum of its values",
+  "answer": "**Sum of Dictionary Values Function**\n\n### Code\n```python\ndef sum_dict_values(dictionary):\n    \"\"\"\n    Returns the sum of the values in the dictionary.\n\n    Args:\n        dictionary (dict): The dictionary to sum values from.\n\n    Returns:\n        int or float: The sum of the dictionary values.\n\n    Raises:\n        TypeError: If the dictionary contains non-numeric values.\n    \"\"\"\n    try:\n        return sum(dictionary.values())\n    except TypeError:\n        raise TypeError(\"Dictionary contains non-numeric values.\")\n\n# Example usage:\nif __name__ == \"__main__\":\n    example_dict = {\"a\": 1, \"b\": 2, \"c\": 3}\n    print(sum_dict_values(example_dict))  # Output: 6\n```\n\n### Explanation\n\n*   This function uses the built-in Python `sum()` function to calculate the sum of the dictionary's values.\n*   The `try-except` block handles cases where the dictionary contains non-numeric values, raising a `TypeError` in such cases.\n*   The example usage demonstrates how to call the function with a sample dictionary and print the result.",
+  "timestamp": "2026-02-12T09:08:25.893006",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

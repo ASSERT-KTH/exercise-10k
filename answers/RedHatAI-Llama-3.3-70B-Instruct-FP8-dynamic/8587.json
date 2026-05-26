@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a function to convert a dictionary to a list of tuples",
+  "answer": "### Converting a Dictionary to a List of Tuples\n\nYou can use the built-in `items()` method in Python to achieve this conversion.\n\n#### Code\n\n```python\ndef dict_to_tuple_list(dictionary):\n    \"\"\"\n    Converts a dictionary to a list of tuples.\n    \n    Args:\n        dictionary (dict): The dictionary to be converted.\n    \n    Returns:\n        list: A list of tuples, where each tuple contains a key-value pair from the dictionary.\n    \"\"\"\n    return list(dictionary.items())\n\n# Example usage:\nif __name__ == \"__main__\":\n    example_dict = {\"apple\": 1, \"banana\": 2, \"cherry\": 3}\n    tuple_list = dict_to_tuple_list(example_dict)\n    print(tuple_list)\n```\n\n#### Explanation\n\n1. The `items()` method returns a view object that displays a list of a dictionary's key-value tuple pairs.\n2. The `list()` function is used to convert this view object into a list.\n3. The resulting list contains tuples, where each tuple contains a key-value pair from the original dictionary.\n\n#### Output\n\nWhen you run this code with the provided example dictionary, the output will be:\n```python\n[('apple', 1), ('banana', 2), ('cherry', 3)]\n```",
+  "timestamp": "2026-02-12T00:59:48.615867",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

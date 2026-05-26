@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that calculates the minimum number of coins required to make change for a given amount using coins of denominations 1, 5, and 10.",
+  "answer": "Here is the code that the specifications describe:\n```\nfunction main() {\n  let change = 20;\n  let coins = [1, 5, 10];\n  let minCoins = getMinCoins(coins, change);\n  console.log(`Minimum number of coins required to make change for ${change} is ${minCoins}`);\n}\n\nfunction getMinCoins(coins, change) {\n  let minCoins = [];\n  let i = coins.length - 1;\n\n  while (change > 0) {\n    if (coins[i] <= change) {\n      minCoins.push(coins[i]);\n      change = change - coins[i];\n    } else if (i <= 0) {\n      break;\n    } else {\n      i--;\n    }\n  }\n\n  return minCoins.length;\n}\n\nmain();\n```\nThis code calculates the minimum number of coins required to make change for a given amount using coins of denominations 1, 5, and 10. It uses a greedy algorithm to select the largest coin that is less than or equal to the remaining amount, until the amount is reduced to 0. The `getMinCoins` function returns the length of the `minCoins` array, which represents the minimum number of coins required to make the change.",
+  "timestamp": "2026-02-11T02:13:00.796721",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

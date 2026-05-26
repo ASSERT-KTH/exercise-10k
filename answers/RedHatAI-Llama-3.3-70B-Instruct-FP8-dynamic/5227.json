@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a voltage as input and prints 'Safe' if the voltage is between 0 and 12, and 'Danger' if the voltage is outside this range.",
+  "answer": "Here is the code based on the specifications:\n\n```python\n# Importing the required module\nimport sys\n\n# Defining the function\ndef voltage_check(voltage):\n    if 0 <= voltage <= 12:\n        print(\"Safe\")\n    else:\n        print(\"Danger\")\n\n# Checking the command-line argument\nif len(sys.argv) > 1:\n    # Converting the command-line argument and calling the function\n    voltage = int(sys.argv[1])\n    voltage_check(voltage)\nelse:\n    # Providing a default input\n    voltage_check(10)\n```\n\nThis code does exactly what the specifications describe. It checks the voltage and prints 'Safe' if it's between 0 and 12, and 'Danger' otherwise. If a command-line argument is provided, it's used as the voltage; otherwise, the default voltage of 10 is used.",
+  "timestamp": "2026-02-11T14:16:13.048404",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

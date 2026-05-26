@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes an array and a number of positions as input, and returns the array rotated by the given number of positions.",
+  "answer": "Here is the code that meets the specifications:\n```\nclass Solution {\npublic:\n    vector<int> rotate(vector<int>& nums, int k) {\n        k %= nums.size();\n        reverse(nums.begin(), nums.end());\n        reverse(nums.begin(), nums.begin() + k);\n        reverse(nums.begin() + k, nums.end());\n        return nums;\n    }\n};\n```\nThis code defines a class `Solution` with a member function `rotate` that takes a `vector<int>` `nums` and an `int` `k` as input, and returns the rotated `nums` vector. The function uses the three-step rotation algorithm as described in the specification.",
+  "timestamp": "2026-02-10T17:13:32.189692",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

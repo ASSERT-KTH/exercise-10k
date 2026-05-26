@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes in a year and outputs whether it is a leap year or not based on the following conditions: a year is a leap year if it is divisible by 4, but not by 100, unless it is also divisible by 400.",
+  "answer": "Here is the code based on your specifications:\n\n```python\n# This program determines whether a given year is a leap year or not.\n# A year is a leap year if it is divisible by 4, but not by 100, \n# unless it is also divisible by 400.\n\ndef is_leap_year(year):\n    \"\"\"\n    Returns True if the year is a leap year, False otherwise.\n    \"\"\"\n    if year % 4 == 0:\n        if year % 100 == 0:\n            return year % 400 == 0\n        else:\n            return True\n    else:\n        return False\n\nyear = int(input(\"Enter a year: \"))\nprint(\"The year\", year, \"is a leap year\" if is_leap_year(year) else \"The year\", year, \"is not a leap year\")\n```\n\nThis code defines a function `is_leap_year` that checks whether a year is a leap year or not based on the conditions you provided. It then prompts the user to enter a year, checks whether it's a leap year using the `is_leap_year` function, and prints out the result.",
+  "timestamp": "2026-02-10T16:25:00.219188",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

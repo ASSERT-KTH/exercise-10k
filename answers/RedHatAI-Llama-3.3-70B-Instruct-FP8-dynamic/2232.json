@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that reduces a list of numbers to a single value by applying a specified operation (e.g. sum, product, etc.).",
+  "answer": "Here is the code that the specifications describe:\n```\ndef reduce_list_to_single_value(lst, func):\n    if len(lst) == 0:\n        return 0\n    elif len(lst) == 1:\n        return lst[0]\n    else:\n        result = lst[0]\n        for num in lst[1:]:\n            result = func(result, num)\n        return result\n\n# Example usage:\nnumbers = [1, 2, 3, 4, 5]\nsum_result = reduce_list_to_single_value(numbers, lambda x, y: x + y)\nprint(\"Sum:\", sum_result)\n\nproduct_result = reduce_list_to_single_value(numbers, lambda x, y: x * y)\nprint(\"Product:\", product_result)\n```\nThis code defines the `reduce_list_to_single_value` function, which takes a list of numbers and a function as input, and returns a single value by applying the function to the list of numbers. The function handles three cases: empty list, list with one element, and list with multiple elements. The example usage demonstrates how to use this function to calculate the sum and product of a list of numbers using lambda functions.",
+  "timestamp": "2026-02-10T22:06:28.552411",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

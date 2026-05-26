@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a function to find the maximum contiguous subarray of an array of integers. The function should take an array of integers as input and return the maximum sum of a contiguous subarray. If the array is empty, return 0.",
+  "answer": "Here is the code that meets the specifications:\n```\ndef maxSubArray(nums):\n    if not nums:\n        return 0\n\n    max_so_far = nums[0]\n    max_ending_here = nums[0]\n\n    for i in range(1, len(nums)):\n        max_ending_here = max(nums[i], max_ending_here + nums[i])\n        max_so_far = max(max_so_far, max_ending_here)\n\n    return max_so_far\n```\nThis code follows the step-by-step breakdown provided in the specification, and it uses the Kadane's algorithm to find the maximum contiguous subarray of an array of integers.",
+  "timestamp": "2026-02-12T22:48:59.663152",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

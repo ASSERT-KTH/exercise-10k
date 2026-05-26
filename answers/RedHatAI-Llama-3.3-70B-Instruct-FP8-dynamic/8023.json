@@ -1,0 +1,6 @@
+{
+  "prompt": "Create a program that checks if a given string is a palindrome. The program should ignore non-alphanumeric characters and be case-insensitive. It should return 'True' if the string is a palindrome and 'False' otherwise.",
+  "answer": "Here is the code that meets the provided specification:\n```\ndef check_palindrome(input_string):\n    s = ''.join(filter(str.isalnum, input_string)).lower()\n    return s == s[::-1]\n\n# Test cases\nprint(check_palindrome(\"A man, a plan, a canal: Panama\"))  # True\nprint(check_palindrome(\"Not a palindrome\"))  # False\nprint(check_palindrome(\"Was it a car or a cat I saw?\"))  # True\nprint(check_palindrome(\"No 'x' in Nixon\"))  # True\nprint(check_palindrome(\"Able was I ere I saw Elba\"))  # True\n```\nNote that I've added some test cases to demonstrate the function's behavior, but you can remove them if you don't need them. The code should work as expected, ignoring non-alphanumeric characters, converting to lowercase, and checking if the resulting string is a palindrome.",
+  "timestamp": "2026-02-13T05:17:49.846318",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

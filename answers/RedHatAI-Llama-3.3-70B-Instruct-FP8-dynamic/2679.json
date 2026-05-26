@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a string as input and returns the string decompressed using run-length encoding.",
+  "answer": "Here is the code that matches the specification:\n```python\ndef decompressRLElist(nums):\n    ans = []\n    for i in range(0, len(nums), 2):\n        ans += [nums[i+1]] * nums[i]\n    return ans\n\n# Example input:\nnums = [1, 2, 3, 4]\nprint(decompressRLElist(nums))  # Output: [2, 4, 4, 4]\n```\nThis code defines the `decompressRLElist` function, which takes a list of integers `nums` as input and returns a decompressed list. The function iterates through the input list in steps of 2 using a `for` loop, and for each iteration, it appends the corresponding value from the input list to the `ans` list repeated `nums[i]` times. Finally, the function returns the `ans` list.\n\nThe example input is provided in the comments, which demonstrates how to call the `decompressRLElist` function with a sample input list and print the resulting output.",
+  "timestamp": "2026-02-10T23:56:02.770099",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

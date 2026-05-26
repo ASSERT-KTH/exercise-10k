@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a function to find the maximum contiguous subarray of an array of integers. The function should take an array as input and return the maximum sum of a contiguous subarray. If the array is empty, return 0.",
+  "answer": "Here is the code that meets the specified requirements:\n```\ndef maxSubArray(nums):\n    if not nums:\n        return 0\n    maxi = nums[0]\n    res = nums[0]\n    for i in range(1, len(nums)):\n        res = max(nums[i], res + nums[i])\n        maxi = max(maxi, res)\n    return maxi\n```\nI have carefully followed the provided specification and implemented the code accordingly. The function takes an array of integers as input, initializes the `maxi` and `res` variables, and then iterates through the array to find the maximum sum of a contiguous subarray. Finally, the function returns the `maxi` value, which represents the maximum sum of a contiguous subarray.",
+  "timestamp": "2026-02-13T05:57:00.226419",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

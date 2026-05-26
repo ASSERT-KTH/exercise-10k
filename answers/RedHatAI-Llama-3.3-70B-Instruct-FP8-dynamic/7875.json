@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that analyzes a list and determines the maximum, minimum, and average values using conditional statements.",
+  "answer": "Here is the code that meets the specifications:\n```\nclass Solution:\n    def max_min_avg(self, lst):\n        max_val = lst[0]\n        min_val = lst[0]\n        avg_val = 0\n        for i in lst:\n            if i > max_val:\n                max_val = i\n            elif i < min_val:\n                min_val = i\n        avg_val = sum(lst) / len(lst)\n        return max_val, min_val, avg_val\n\nif __name__ == \"__main__\":\n    s = Solution()\n    lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n    result = s.max_min_avg(lst)\n    print(\"Max value:\", result[0])\n    print(\"Min value:\", result[1])\n    print(\"Average value:\", result[2])\n```\nThis code defines a `Solution` class with a `max_min_avg` method that takes a list `lst` as input and returns the maximum, minimum, and average values of the list. The main part of the code creates an instance of the `Solution` class, defines a list `lst`, calls the `max_min_avg` method on the list, and prints the results.",
+  "timestamp": "2026-02-11T22:43:32.725631",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a list and a function as input and applies the function to the first two elements of the list, then to the result and the next element, and so on.",
+  "answer": "Here is the code that meets the specifications:\n```\ndef foldr(op, l):\n    if len(l) == 0:\n        raise ValueError(\"Input list cannot be empty\")\n    elif len(l) == 1:\n        return l[0]\n    else:\n        return op(foldr(op, l[1:]), l[0])\n\ndef add(x, y):\n    return x + y\n\n# Test the code\nlst = [1, 2, 3, 4, 5]\nresult = foldr(add, lst)\nprint(result)  # Output: 15\n```\nNote that I've used the `len()` function to get the length of the list, and I've also used the `ValueError` exception to raise an error when the input list is empty. The rest of the code follows the specifications exactly.",
+  "timestamp": "2026-02-11T15:14:17.560566",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a number as input, and prints 'Prime' if the number is prime, 'Not Prime' otherwise.",
+  "answer": "Here's a Python program that does that:\n\n```python\ndef is_prime(n):\n    \"\"\"Check if a number is prime.\"\"\"\n    if n < 2:\n        return False\n    for i in range(2, int(n ** 0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\ndef main():\n    \"\"\"Get user input and print whether the number is prime.\"\"\"\n    num = int(input(\"Enter a number: \"))\n    if is_prime(num):\n        print(\"Prime\")\n    else:\n        print(\"Not Prime\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\n### Explanation:\n\n*   The `is_prime` function checks if a number `n` is prime.\n*   It returns `False` for numbers less than 2, since they are not prime.\n*   It checks divisibility from 2 to the square root of `n`, since a larger factor of `n` would be a multiple of a smaller factor that has already been checked.\n*   The `main` function gets user input, checks whether the number is prime, and prints the result.\n*   The `if __name__ == \"__main__\":` line ensures that the `main` function is called when the script is run directly, but not when it's imported as a module.",
+  "timestamp": "2026-02-11T14:17:57.427084",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

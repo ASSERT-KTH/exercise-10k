@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes two arrays of integers as input and returns their concatenation.",
+  "answer": "Here is the code that meets the specifications:\n```\n#include <iostream>\n\nint* concat(int a[], int b[], int sizea, int sizeb) {\n  int* c = new int[sizea + sizeb];\n  int idx = 0;\n\n  for (int i = 0; i < sizea; i++) {\n    c[idx++] = a[i];\n  }\n\n  for (int i = 0; i < sizeb; i++) {\n    c[idx++] = b[i];\n  }\n\n  return c;\n}\n\nint main() {\n  int a[] = {1, 2, 3, 4, 5};\n  int b[] = {6, 7, 8, 9, 10};\n\n  int* c = concat(a, b, 5, 5);\n\n  for (int i = 0; i < 10; i++) {\n    std::cout << c[i] << \" \";\n  }\n\n  delete[] c; // don't forget to free the memory!\n\n  return 0;\n}\n```\nThis code implements the `concat` function, which concatenates two arrays `a` and `b` into a new array `c`. The `main` function demonstrates the usage of the `concat` function by concatenating two sample arrays `a` and `b` and printing the resulting array `c`. Note that I've added a `delete[] c` statement to free the memory allocated for the `c` array, which is good practice to avoid memory leaks.",
+  "timestamp": "2026-02-11T06:28:36.111904",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

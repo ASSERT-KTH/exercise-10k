@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a list and a condition as input and returns a new list containing only the elements that satisfy the condition.",
+  "answer": "Here is the code that meets the specifications:\n```\ndef filter_list(lst, condition):\n    new_lst = []\n    for element in lst:\n        if condition(element):\n            new_lst.append(element)\n    return new_lst\n\n# Example usage:\nlst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\ncondition = lambda x: x % 2 == 0\nprint(filter_list(lst, condition))  # Output: [2, 4, 6, 8, 10]\n```\nThis code defines a function `filter_list` that takes a list `lst` and a condition `condition` as input. It initializes an empty list `new_lst` to store the filtered elements. It then iterates over each element in the input list, applies the condition to each element, and appends the element to `new_lst` if the condition is true. Finally, it returns the filtered list `new_lst`.\n\nThe example usage shows how to use the `filter_list` function with a list of integers and a condition that checks if an integer is even. The output is a new list containing only the even integers from the original list.",
+  "timestamp": "2026-02-11T15:11:59.568815",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

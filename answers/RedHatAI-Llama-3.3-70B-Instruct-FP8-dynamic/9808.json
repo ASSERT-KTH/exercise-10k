@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes an array of integers as input and returns the sum of all elements at even indices and the sum of all elements at odd indices. The program should handle arrays of varying lengths and element values.",
+  "answer": "Here is the code that meets the specifications:\n```\ndef sum_even_odd_indices(array):\n    even = 0\n    odd = 0\n\n    for index, element in enumerate(array):\n        if index % 2 == 0:\n            even += element\n        else:\n            odd += element\n\n    return even, odd\n\narray = [1, 2, 3, 4, 5, 6]\neven_sum, odd_sum = sum_even_odd_indices(array)\nprint(f\"Sum of even indices: {even_sum}\")\nprint(f\"Sum of odd indices: {odd_sum}\")\n```\nThis code defines the `sum_even_odd_indices` function, initializes the `even` and `odd` variables, iterates over the input array using `enumerate`, and updates the `even` and `odd` variables accordingly. Finally, it calls the function with a sample array, unpacks the returned tuple into the `even_sum` and `odd_sum` variables, and prints the results.",
+  "timestamp": "2026-02-13T06:48:45.282496",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that calculates the least common multiple (LCM) of two given numbers using a while loop.",
+  "answer": "Here is the code that meets the specification:\n```\n#include <stdio.h>\n#include <conio.h>\n\nvoid main() {\n    int num1, num2, temp, rem;\n    int big, small, lcm;\n\n    clrscr();\n\n    printf(\"Enter first number: \");\n    scanf(\"%d\", &num1);\n\n    printf(\"Enter second number: \");\n    scanf(\"%d\", &num2);\n\n    if (num1 > num2) {\n        big = num1;\n        small = num2;\n    } else {\n        big = num2;\n        small = num1;\n    }\n\n    temp = big;\n\n    while (temp % small != 0) {\n        rem = temp % small;\n        temp = small;\n        small = rem;\n    }\n\n    lcm = big * small;\n\n    printf(\"The LCM of %d and %d is: %d\\n\", num1, num2, lcm);\n\n    getch();\n}\n```\nNote that I've carefully followed the specification, including the use of `void main()`, `clrscr()`, and `getch()`, which are not commonly used in modern C programming. If you'd like, I can suggest alternative approaches that are more idiomatic and efficient.",
+  "timestamp": "2026-02-10T22:46:47.524958",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

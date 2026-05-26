@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a list and a predicate as input, and returns two lists: one containing the elements that satisfy the predicate, and one containing the elements that do not.",
+  "answer": "Here is the code that matches the specification:\n```\nfunction split_list(list, predicate) {\n  const true_list = [];\n  const false_list = [];\n\n  for (const element of list) {\n    if (predicate(element)) {\n      true_list.push(element);\n    } else {\n      false_list.push(element);\n    }\n  }\n\n  return [true_list, false_list];\n}\n\n// Example usage:\nfunction is_even(x) {\n  return x % 2 === 0;\n}\n\nconst numbers = [1, 2, 3, 4, 5, 6];\n\nconst [even_numbers, odd_numbers] = split_list(numbers, is_even);\n\nconsole.log(\"Even numbers:\", even_numbers);\nconsole.log(\"Odd numbers:\", odd_numbers);\n```\nThis code defines the `split_list` function, which takes a list and a predicate as input and returns two lists: one containing the elements that satisfy the predicate, and one containing the elements that do not. The example usage demonstrates how to use this function to split a list of numbers into even and odd numbers using the `is_even` predicate.",
+  "timestamp": "2026-02-11T02:34:19.924259",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes an array of integers as input and returns the sum of the elements at the even indices and the sum of the elements at the odd indices separately. The program should handle arrays of varying lengths.",
+  "answer": "Here is the code that matches the provided specification:\n```\n#include <iostream>\n\nint main() {\n    int size;\n    std::cout << \"Enter the size of the array: \";\n    std::cin >> size;\n\n    int* arr = new int[size];\n\n    std::cout << \"Enter the elements of the array: \";\n    for (int i = 0; i < size; i++) {\n        std::cin >> arr[i];\n    }\n\n    int evenSum = 0;\n    int oddSum = 0;\n\n    for (int i = 0; i < size; i++) {\n        if (i % 2 == 0) {\n            evenSum += arr[i];\n        } else {\n            oddSum += arr[i];\n        }\n    }\n\n    std::cout << \"Sum of elements at even indices: \" << evenSum << std::endl;\n    std::cout << \"Sum of elements at odd indices: \" << oddSum << std::endl;\n\n    delete[] arr;\n    return 0;\n}\n```\nThis code matches the provided specification and should work as expected. Let me know if you have any questions or need further clarification!",
+  "timestamp": "2026-02-12T23:14:36.412868",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

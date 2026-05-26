@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes an array and a function as input, applies the function to each element of the array, and returns a new array with the results.",
+  "answer": "Here is the code that matches the specifications you provided:\n```\n// Define the function applyToArray\nfunction applyToArray(array, func) {\n  const result = [];\n  for (let i = 0; i < array.length; i++) {\n    result.push(func(array[i]));\n  }\n  return result;\n}\n\n// Define a function that doubles a number\nfunction double(num) {\n  return num * 2;\n}\n\n// Call the applyToArray function\nconst numbers = [1, 2, 3, 4, 5];\nconst doubledNumbers = applyToArray(numbers, double);\n\n// Log the result\nconsole.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]\n```\nNote that I've assumed that the function `func` takes a single argument, and that the array `array` contains elements that can be passed as an argument to `func`. If this is not the case, the code may need to be modified accordingly.",
+  "timestamp": "2026-02-11T18:35:39.421256",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

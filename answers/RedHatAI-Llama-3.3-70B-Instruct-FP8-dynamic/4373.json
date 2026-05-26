@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that reduces a dictionary to a single value by applying a reduction function to its values.",
+  "answer": "Here is the code based on the specification:\n```\ndef reduce_dict(d, func):\n    return func(*d.values())\n\ndef main():\n    d = {'a': 1, 'b': 2, 'c': 3}\n    res = reduce_dict(d, sum)\n    print(\"Result:\", res)\n\nif __name__ == \"__main__\":\n    main()\n```\nThis code defines the `reduce_dict` function, which takes a dictionary `d` and a reduction function `func` as input, and applies the reduction function to the dictionary's values using the `*` operator to unpack the values into separate arguments. The `main` function demonstrates the usage of `reduce_dict` by creating a dictionary `d` and applying the `sum` reduction function to it, printing the result.",
+  "timestamp": "2026-02-11T10:52:15.598051",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

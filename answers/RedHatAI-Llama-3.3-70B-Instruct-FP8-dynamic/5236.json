@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a weather forecast as input, and prints 'Sunny' if the forecast is 'Clear', 'Rainy' if the forecast is 'Rain', and 'Snowy' if the forecast is 'Snow'.",
+  "answer": "Here is the code based on the specifications you provided:\n\n```rust\nuse std::collections::HashMap;\n\nfn get_weather(forecast: &str) -> String {\n    let mut weather: HashMap<&str, &str> = HashMap::new();\n\n    weather.insert(\"Clear\", \"Sunny\");\n    weather.insert(\"Rain\", \"Rainy\");\n    weather.insert(\"Snow\", \"Snowy\");\n\n    let weather = weather.get(forecast);\n\n    match weather {\n        Some(x) => String::from(x),\n        None => String::from(\"Unknown\"),\n    }\n}\n\nfn main() {\n    let forecast = \"Clear\";\n    println!(\"{}\", get_weather(forecast));\n}\n```\n\nThis code will output `Sunny` when run. If you change the `forecast` variable to `\"Rain\"` or `\"Snow\"`, it will output `Rainy` or `Snowy` respectively. If you use any other forecast, it will output `Unknown`.",
+  "timestamp": "2026-02-11T14:17:33.121433",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

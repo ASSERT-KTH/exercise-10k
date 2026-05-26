@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a list of integers as input, reverses the order of the elements, and then rotates the list by a specified number of positions. The rotation should be to the right, meaning that the last elements of the list should move to the beginning. The number of positions to rotate should also be provided as input.",
+  "answer": "Here is the code that meets the specifications:\n```\n#include <iostream>\n#include <vector>\n\nint main() {\n    std::vector<int> v;\n    int n, m;\n\n    std::cin >> n;\n    for (int i = 0; i < n; i++) {\n        int a;\n        std::cin >> a;\n        v.push_back(a);\n    }\n\n    std::cin >> m;\n    for (int i = 0; i < m; i++) {\n        int temp = v.back();\n        v.pop_back();\n        v.insert(v.begin(), temp);\n    }\n\n    for (int i = 0; i < n; i++) {\n        std::cout << v[i];\n        if (i != n - 1) {\n            std::cout << \" \";\n        }\n    }\n\n    return 0;\n}\n```\nThis code reads the size of the input vector `n`, reads `n` integers and stores them in the vector `v`, reads the number of positions to rotate `m`, rotates the vector `m` times, and finally prints the rotated vector to the standard output.",
+  "timestamp": "2026-02-13T05:58:14.362089",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

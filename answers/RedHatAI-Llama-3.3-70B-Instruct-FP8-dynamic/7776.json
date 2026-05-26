@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that traverses a given matrix in a spiral order. The program should take a 2D list of integers as input and return a list of integers representing the spiral traversal of the matrix.",
+  "answer": "Here is the code based on the provided specification:\n\n```python\ndef spiralOrder(matrix):\n    ans = []\n    while matrix:\n        ans += matrix.pop(0)\n        if matrix and matrix[0]:\n            for row in matrix:\n                ans.append(row.pop())\n        if matrix:\n            ans += matrix.pop()[::-1]\n        if matrix and matrix[0]:\n            for row in matrix[::-1]:\n                ans.append(row.pop(0))\n    return ans\n\n# Example usage:\nmatrix = [\n    [1, 2, 3],\n    [4, 5, 6],\n    [7, 8, 9]\n]\nprint(spiralOrder(matrix))  # Output: [1, 2, 3, 6, 9, 8, 7, 4, 5]\n```\n\nThis code follows the provided specification and performs the spiral traversal of the input matrix. It uses a while loop to repeatedly remove the first row, last column, last row, and first column from the matrix, appending the elements to the `ans` list in the correct order. The loop continues until the matrix is empty.",
+  "timestamp": "2026-02-12T23:39:03.494705",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

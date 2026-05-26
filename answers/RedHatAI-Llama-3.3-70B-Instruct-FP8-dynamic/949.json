@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that prints prime numbers from 1 to 20 using a for loop.",
+  "answer": "Here is a simple Python program that prints prime numbers from 1 to 20 using a for loop:\n\n```python\ndef is_prime(n):\n    \"\"\"Check if a number is prime.\"\"\"\n    if n < 2:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\ndef print_primes(n):\n    \"\"\"Print prime numbers from 1 to n.\"\"\"\n    for i in range(1, n+1):\n        if is_prime(i):\n            print(i)\n\nprint_primes(20)\n```\n\nIn this program, the `is_prime` function checks if a number is prime by checking divisibility from 2 to the square root of the number. The `print_primes` function uses a for loop to iterate over the numbers from 1 to `n` and prints the prime numbers.\n\nWhen you run this program, it will print the prime numbers from 1 to 20, which are:\n\n```\n2\n3\n5\n7\n11\n13\n17\n19\n```\n\nNote: This program uses a trial division method to check for primality, which is not the most efficient method for large numbers. For larger ranges, you may want to use a more efficient primality test, such as the Sieve of Eratosthenes algorithm.",
+  "timestamp": "2026-02-10T16:48:35.679850",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

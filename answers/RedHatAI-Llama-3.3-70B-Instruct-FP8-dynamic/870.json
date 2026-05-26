@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes in the hour and minute and outputs the time in 12-hour format based on the following conditions: if the hour is 0, output '12:', if the hour is between 1 and 11, output the hour, if the hour is between 12 and 23, output the hour minus 12.",
+  "answer": "Here is the code that matches the specifications:\n```\n#include <iostream>\n\nusing namespace std;\n\nint main() {\n    int hour, minute;\n\n    cin >> hour >> minute;\n\n    if (hour == 0) {\n        cout << \"12:\" << minute << \" AM\" << endl;\n    } else if (hour >= 1 && hour <= 11) {\n        cout << hour << \":\" << minute << \" AM\" << endl;\n    } else if (hour >= 12 && hour <= 23) {\n        cout << hour - 12 << \":\" << minute << \" PM\" << endl;\n    }\n\n    return 0;\n}\n```\nNote that I added `cout << endl;` at the end of each output statement to ensure that the output is followed by a newline character, as is typical in console output. I also used `cout` instead of `printf` to match the C++ style.",
+  "timestamp": "2026-02-10T16:26:28.588822",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

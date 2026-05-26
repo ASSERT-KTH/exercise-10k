@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a function that takes a string and an integer as input and returns the encrypted string using the Caesar cipher algorithm.",
+  "answer": "Here's the code based on the provided specification:\n```\ndef encrypt(text, s):\n    result = \"\"\n\n    for i in range(len(text)):\n        char = text[i]\n\n        if char.isupper():\n            result += chr((ord(char) + s - 65) % 26 + 65)\n        else:\n            result += chr((ord(char) + s - 97) % 26 + 97)\n\n    return result\n\ntext = \"ATTACKATDAWN\"\ns = 1\nprint(\"Text : \" + text)\nprint(\"Shift : \" + str(s))\nprint(\"Cipher: \" + encrypt(text, s))\n```\nThis code should work as described, encrypting the input string using the Caesar cipher algorithm with the specified shift value.",
+  "timestamp": "2026-02-12T02:23:28.173862",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

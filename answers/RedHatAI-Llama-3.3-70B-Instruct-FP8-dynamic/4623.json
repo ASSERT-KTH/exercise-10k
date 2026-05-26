@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes an array and a partition size as input, and returns a list of sub-arrays, each with the specified partition size.",
+  "answer": "Here is the code that meets the specifications:\n```\nexport default function partition<T>(array: T[], partitionSize: number): T[][] {\n  const partitions: T[][] = [];\n\n  if (partitionSize <= 0) {\n    return partitions;\n  }\n\n  for (let i = 0; i < array.length; i += partitionSize) {\n    partitions.push(array.slice(i, i + partitionSize));\n  }\n\n  return partitions;\n}\n```\nI've carefully followed the specifications to ensure that the code meets all the requirements. Let me know if you'd like me to explain any part of the code!",
+  "timestamp": "2026-02-11T11:58:23.265735",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

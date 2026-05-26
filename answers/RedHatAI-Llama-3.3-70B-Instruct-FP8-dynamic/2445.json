@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes an array and a reduction function as input and returns the result of applying the reduction function to all elements in the array.",
+  "answer": "Here is the code that the specifications describe:\n```\ndef reduce(arr, fn):\n    result = arr[0]\n    for i in range(1, len(arr)):\n        result = fn(result, arr[i])\n    return result\n\n# Test cases\nprint(reduce([1, 2, 3, 4, 5], lambda x, y: x + y))  # Output: 15\nprint(reduce([1, 2, 3, 4, 5], lambda x, y: x * y))  # Output: 120\n```\nThis code defines the `reduce` function, which takes an array `arr` and a function `fn` as input, and applies the function to all elements in the array, accumulating the result. The function is then tested with two different reduction functions: a sum function and a product function.\n\nNote that I assumed the `fn` function takes two arguments, `x` and `y`, which are the accumulator and the current element, respectively. This is a common convention for reduction functions. If the `fn` function has a different signature, the code may need to be adjusted accordingly.",
+  "timestamp": "2026-02-10T22:59:23.470338",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

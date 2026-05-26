@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes an array and a target element as input and returns the index of the target element if it exists in the array.",
+  "answer": "Here is the code that meets the specifications:\n```\ndef find_index(arr, x):\n    try:\n        idx = arr.index(x)\n    except ValueError:\n        idx = -1\n    return idx\n\narr = [1, 2, 3, 4, 5, 6, 7, 8, 9]\nx = 5\nidx = find_index(arr, x)\nprint(idx)  # Output: 4\n```\nThis code defines a function `find_index` that takes an array `arr` and a target element `x` as input. It uses a try-except block to attempt to find the index of `x` in `arr` using the `index` method. If `x` is found, the index is returned. If `x` is not found, a `ValueError` exception is raised, and the function returns `-1`. The code then defines an example array `arr` and a target element `x`, calls the `find_index` function, and prints the result.\n\nNote that I've used the `index` method of the list, which raises a `ValueError` if the element is not found. This is equivalent to checking if the element is in the list using the `in` operator, but it's more efficient because it stops searching as soon as it finds the element.",
+  "timestamp": "2026-02-10T22:59:42.415303",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

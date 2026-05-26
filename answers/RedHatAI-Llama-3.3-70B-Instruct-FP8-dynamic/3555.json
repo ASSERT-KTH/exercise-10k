@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes two arrays as input, and returns a new array containing the elements that are in either array but not in both.",
+  "answer": "Here is the code that meets the specification:\n```\ndef findUniqueNumbers(array1, array2):\n    new_array = []\n    for x in array1:\n        if x not in array2:\n            new_array.append(x)\n    for x in array2:\n        if x not in array1:\n            new_array.append(x)\n    return new_array\n\narray1 = [3, 2, 1]\narray2 = [2, 4, 5]\nprint(findUniqueNumbers(array1, array2))\n```\nThis code defines the `findUniqueNumbers` function, which takes two arrays `array1` and `array2` as input. It initializes an empty array `new_array` and then iterates over each element in `array1`. If an element is not found in `array2`, it is appended to `new_array`. The same process is repeated for `array2`, checking each element against `array1`. Finally, the function returns `new_array`.\n\nThe example usage at the end creates two arrays `array1` and `array2` and calls the `findUniqueNumbers` function with these arrays as arguments, printing the resulting array.",
+  "timestamp": "2026-02-11T07:31:46.877034",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

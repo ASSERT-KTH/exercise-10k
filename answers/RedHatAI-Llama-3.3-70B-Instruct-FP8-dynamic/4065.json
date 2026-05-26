@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a string and a separator as input and returns a list of substrings split by the separator.",
+  "answer": "Here's the code based on the specifications you provided:\n\n```python\ndef split_string_by_separator(str, separator):\n    list = []\n    while separator in str:\n        index = str.find(separator)\n        list.append(str[:index])\n        str = str[index + 1:]\n    list.append(str)\n    return list\n\nstring = \"This is a test string\"\nseparator = \" \"\nprint(split_string_by_separator(string, separator))\n```\n\nThis code defines a function `split_string_by_separator` that splits a given string into substrings based on a specified separator. The function uses a while loop to repeatedly find the separator in the string, append the substring before the separator to a list, and update the string to start after the separator. Once the separator is no longer found in the string, the remaining string is appended to the list. The function returns the list of substrings.\n\nIn the example usage, the function is called with the string `\"This is a test string\"` and the separator `\" \"`. The output should be `['This', 'is', 'a', 'test', 'string']`.",
+  "timestamp": "2026-02-11T09:37:28.774283",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

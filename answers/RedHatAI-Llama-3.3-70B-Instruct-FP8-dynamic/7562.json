@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a function that calculates the Fibonacci sequence using memoization to optimize performance.",
+  "answer": "Here is the code that meets the specifications:\n```\nfrom functools import lru_cache\n\n@lru_cache(maxsize=64)\ndef fibonacci(n):\n    if n < 2:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n```\nThis code uses the `lru_cache` decorator from the `functools` module to memoize the `fibonacci` function, which calculates the Fibonacci sequence. The `lru_cache` decorator is used with a `maxsize` of 64, which means that the cache will store the results of the last 64 calls to the function. This helps to avoid redundant calculations and improve performance.\n\nThe `fibonacci` function itself is a recursive function that takes a single argument `n`. If `n` is less than 2, the function returns `n` directly. Otherwise, the function calls itself recursively with the arguments `n - 1` and `n - 2`, and returns the sum of these two calls. The `lru_cache` decorator ensures that these recursive calls are optimized by storing the results of previous calls in the cache.",
+  "timestamp": "2026-02-11T21:50:15.680361",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

@@ -1,0 +1,6 @@
+{
+  "prompt": "Create a program with a complex bug (e.g. infinite loop) and debug it using a debugger or print statements, then print out the debugged output.",
+  "answer": "```cpp\n#include <iostream>\n#include <vector>\n\nvoid max_pair(std::vector<int> elements) {\n    int maximum_index = -1;\n    int maximum_sum = -1;  // Initialize with -1 instead of float('-inf')\n\n    for (int i = 0; i < elements.size() - 1; i++) {\n        int pair_sum = elements[i] + elements[i + 1];\n        if (pair_sum > maximum_sum) {  // Change to > for maximum sum\n            maximum_index = i;\n            maximum_sum = pair_sum;\n        }\n    }\n\n    if (maximum_index != -1) {\n        std::cout << \"Maximum pair sum: \" << maximum_sum << \" at index \" << maximum_index << std::endl;\n    } else {\n        std::cout << \"List is too short\" << std::endl;\n    }\n}\n\nint main() {\n    std::vector<int> elements = {1, 2, 3, 4, 5};\n    max_pair(elements);\n\n    return 0;\n}\n```",
+  "timestamp": "2026-02-12T08:19:13.892464",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

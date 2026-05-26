@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a string, a character to replace, and a replacement character as input and returns the string with all occurrences of the character replaced.",
+  "answer": "Here's the code based on your detailed specification:\n\n```python\ndef replaceChar(s, a, b):\n    if len(s) == 0:\n        return ''\n    elif s[0] == a:\n        return b + replaceChar(s[1:], a, b)\n    else:\n        return s[0] + replaceChar(s[1:], a, b)\n\n# Example usage:\ns = 'abxyab'\na = 'a'\nb = 'b'\nprint(replaceChar(s, a, b))\n```\n\nThis code defines a recursive function `replaceChar` that replaces all occurrences of a character `a` with character `b` in a given string `s`. The function checks the first character of the string and recursively calls itself with the rest of the string until it reaches the end. If the first character matches `a`, it appends `b` to the result of the recursive call; otherwise, it appends the first character itself to the result. The example usage demonstrates how to use the function to replace all occurrences of 'a' with 'b' in the string 'abxyab'.",
+  "timestamp": "2026-02-11T23:28:08.268131",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}

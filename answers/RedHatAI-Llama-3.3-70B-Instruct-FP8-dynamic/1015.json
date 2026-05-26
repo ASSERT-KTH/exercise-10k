@@ -1,0 +1,6 @@
+{
+  "prompt": "Write a program that takes a string as input and returns the normalized version of the string, where all whitespace characters are replaced by a single space.",
+  "answer": "Here is the code that meets the specifications:\n```\nimport re\n\ndef normalize_string(s):\n    s = re.sub(r'\\s+', ' ', s)\n    s = s.strip()\n    return s\n\n# Test the function\ns = \"Hello,   World!  \"\nprint(normalize_string(s))\n```\nThis code imports the `re` module, defines the `normalize_string` function, and tests it with a sample string. The regular expression `r'\\s+'` matches one or more whitespace characters, and the `sub` function replaces each match with a single space. The `strip` function removes any leading or trailing whitespace characters. The result is the normalized string, which is printed to the console.",
+  "timestamp": "2026-02-10T17:04:25.628132",
+  "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic"
+}
