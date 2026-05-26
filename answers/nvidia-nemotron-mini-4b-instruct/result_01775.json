@@ -1,0 +1,9 @@
+{
+  "id": 1775,
+  "title": "Checking for Symmetric Trees",
+  "prompt": "Write a function to check if a given binary tree is symmetric.\nSample Input: [1, 2, 2, 3, 4, 4, 3]\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a binary tree is symmetric, which means the left and right subtrees are mirror images of each other. The function uses a recursive approach to traverse the tree and compare the left and right subtrees.\n\n```python\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef is_symmetric(root):\n    \"\"\"\n    Check if a binary tree is symmetric.\n\n    :param root: The root node of the binary tree.\n    :return: True if the tree is symmetric, False otherwise.\n    \"\"\"\n\n    def is_symmetric_helper(left, right):\n        \"\"\"\n        Recursive helper function to check if two subtrees are symmetric.\n\n        :param left: The left subtree of the current node.\n        :param right: The right subtree of the current node.\n        :return: True if the subtrees are symmetric, False otherwise.\n        \"\"\"\n        if left is None and right is None:\n            return True\n        if left is None or right is None:\n            return False\n\n        return left.val == right.val and is_symmetric_helper(left.right, right.left) and is_symmetric_helper(left.left, right.right)\n\n    return is_symmetric_helper(root, root)\n```\n\nHere's an example of how to use the function:\n\n```python\n# Sample input\nroot = TreeNode(1, TreeNode(2, TreeNode(3), TreeNode(4)), TreeNode(2, TreeNode(4), TreeNode(3)))\n\n# Check if the tree is symmetric\nprint(is_symmetric(root))  # Output: True\n```",
+  "error": null,
+  "elapsed_seconds": 4.47,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 829,
+  "title": "Subsequence Checking",
+  "prompt": "Given two strings, check if the first string is a subsequence of the second string and return True or False.\nSample Input: abc, abcdef\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if the first string is a subsequence of the second string:\n\n```python\ndef is_subsequence(str1, str2):\n    \"\"\"\n    Check if str1 is a subsequence of str2.\n\n    :param str1: The first string to check.\n    :param str2: The second string to check against.\n    :return: True if str1 is a subsequence of str2, False otherwise.\n    \"\"\"\n    # If str1 is an empty string, it is a subsequence of any string\n    if not str1:\n        return True\n\n    # Iterate over each character in str2\n    for char in str2:\n        # If the current character matches the first character of str1,\n        # recursively check if the remaining characters of str1 are also\n        # subsequences of the remaining characters of str2\n        if str1[0] == char:\n            return is_subsequence(str1[1:], str2[len(str1):])\n\n    # If we didn't find a match, str1 is not a subsequence of str2\n    return False\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(is_subsequence('abc', 'abcdef'))  # Output: True\nprint(is_subsequence('abc', 'abcdefg')) # Output: False\n```\n\nThis function works by recursively checking if the remaining characters of `str1` are subsequences of the remaining characters of `str2`. If it finds a match, it moves on to the next character in `str2`. If it doesn't find a match after checking all characters in `str2`, it returns `False`.",
+  "error": null,
+  "elapsed_seconds": 4.31,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

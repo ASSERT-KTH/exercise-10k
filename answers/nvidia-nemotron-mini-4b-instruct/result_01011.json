@@ -1,0 +1,9 @@
+{
+  "id": 1011,
+  "title": "String Rotation",
+  "prompt": "Write a program that takes a string and an integer as input, and returns the rotated string, where the last n characters are moved to the beginning of the string.\nSample Input: abcdef 3\nSample Output: defabc\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef rotate_string(input_str: str, n: int) -> str:\n    \"\"\"\n    Rotates the last n characters of a string to the beginning.\n\n    :param input_str: The input string.\n    :param n: The number of characters to rotate.\n    :return: The rotated string.\n    \"\"\"\n    if n < 0 or n > len(input_str):\n        raise ValueError(\"n must be a non-negative integer less than or equal to the length of the input string.\")\n\n    return input_str[-n:] + input_str[:-n]\n\n# Example usage:\ninput_str = \"abcdef\"\nn = 3\noutput_str = rotate_string(input_str, n)\nprint(output_str)  # Output: defabc\n```\nThis program defines a function `rotate_string` that takes an input string and a rotation count as arguments, and returns the rotated string. It first checks that the rotation count is a non-negative integer less than or equal to the length of the input string, and raises a `ValueError` if it's not. Then, it uses slicing to extract the last `n` characters of the input string and prepends them to the beginning of the string, returning the result. The example usage at the end of the program demonstrates how to use the function to rotate the string \"abcdef\" by 3 characters.",
+  "error": null,
+  "elapsed_seconds": 3.5,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

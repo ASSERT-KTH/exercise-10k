@@ -1,0 +1,9 @@
+{
+  "id": 8895,
+  "title": "Calculate the Circumradius of a Triangle",
+  "prompt": "Write a program that takes the lengths of the sides of a triangle as input and returns the length of its circumradius.\nSample Input: 3 4 5\nSample Output: 2.5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes the lengths of the sides of a triangle as input and returns the length of its circumradius:\n```python\nimport math\n\ndef triangle_circumradius(a, b, c):\n    \"\"\"\n    Calculates the length of the circumradius of a triangle with sides a, b, and c.\n\n    :param a: The length of one side of the triangle.\n    :param b: The length of another side of the triangle.\n    :param c: The length of the third side of the triangle.\n    :return: The length of the circumradius of the triangle.\n    \"\"\"\n\n    # Ensure the input values are positive\n    a, b, c = [max(x, 0) for x in (a, b, c)]\n\n    # Calculate the semi-perimeter (s)\n    s = (a + b + c) / 2\n\n    # Calculate the circumradius (r) using the formula r = sqrt(s * (s - a) * (s - b) * (s - c))\n    r = math.sqrt(s * (s - a) * (s - b) * (s - c))\n\n    return r\n\n# Get user input for the triangle sides\na = float(input(\"Enter the length of the first side: \"))\nb = float(input(\"Enter the length of the second side: \"))\nc = float(input(\"Enter the length of the third side: \"))\n\n# Calculate and print the circumradius\ncircumradius = triangle_circumradius(a, b, c)\nprint(f\"The length of the circumradius is {circumradius}.\")\n```\nThis program first checks that the input values are non-negative, since the circumradius is only defined for a valid triangle. Then, it calculates the semi-perimeter of the triangle and uses the formula for the circumradius to calculate the length of the circumradius. Finally, it prints the result.",
+  "error": null,
+  "elapsed_seconds": 4.54,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

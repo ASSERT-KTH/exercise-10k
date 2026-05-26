@@ -1,0 +1,9 @@
+{
+  "id": 4571,
+  "title": "Dictionary Intersection",
+  "prompt": "Write a function that takes two dictionaries and returns a new dictionary with the key-value pairs that exist in both dictionaries\nSample Input: {'a': 1, 'b': 2, 'c': 3}, {'b': 2, 'c': 4}\nSample Output: {'b': 2, 'c': 3}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function uses the `set` data structure to efficiently find the keys that exist in both input dictionaries, and then creates a new dictionary with those key-value pairs.\n\n```python\ndef common_key_value_pairs(dict1, dict2):\n    \"\"\"\n    Returns a new dictionary with the key-value pairs that exist in both input dictionaries.\n\n    :param dict1: The first input dictionary\n    :param dict2: The second input dictionary\n    :return: A new dictionary with common key-value pairs\n    \"\"\"\n    # Convert input dictionaries to sets for efficient lookup\n    set1 = set(dict1.items())\n    set2 = set(dict2.items())\n\n    # Find the keys that exist in both dictionaries\n    common_keys = set1 & set2\n\n    # Create a new dictionary with the common key-value pairs\n    common_dict = {key: dict1[key] if key in set1 else None for key in common_keys}\n\n    return common_dict\n```\n\nHere's an example of how to use this function:\n\n```python\ndict1 = {'a': 1, 'b': 2, 'c': 3}\ndict2 = {'b': 2, 'c': 4}\n\ncommon_dict = common_key_value_pairs(dict1, dict2)\nprint(common_dict)  # Output: {'b': 2, 'c': 3}\n```",
+  "error": null,
+  "elapsed_seconds": 3.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

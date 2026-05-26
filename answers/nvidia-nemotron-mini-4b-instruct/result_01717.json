@@ -1,0 +1,9 @@
+{
+  "id": 1717,
+  "title": "For Loop Matrix Printer",
+  "prompt": "Write a program that uses a for loop to print a given matrix.\nSample Input: [[1, 2, 3], [4, 5, 6]]\nSample Output: 1 2 3\n4 5 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses a for loop to print a given matrix:\n\n```python\ndef print_matrix(matrix):\n    \"\"\"Print a given matrix using a for loop.\"\"\"\n    # Check if the input is a list and contains at least one sublist\n    if not isinstance(matrix, list) or len(matrix) == 0:\n        raise ValueError(\"Input should be a non-empty list of lists.\")\n\n    # Print each row of the matrix\n    for row in matrix:\n        # Check if each element in the row is a number (assume integers for simplicity)\n        if not all(isinstance(num, int) for num in row):\n            raise ValueError(\"All elements in a row should be integers.\")\n\n        # Print the elements of the row\n        print(*row, sep=\" \")\n\n# Example usage\nmatrix = [[1, 2, 3], [4, 5, 6]]\nprint_matrix(matrix)\n```\n\nWhen you run this program with the sample input `[[1, 2, 3], [4, 5, 6]]`, it will output:\n\n```\n1 2 3\n4 5 6\n```\n\nThis program checks if the input is a non-empty list of lists, and then prints each row of the matrix using a for loop and the `*row, sep=\" \"` syntax to print the elements of the row separated by spaces.",
+  "error": null,
+  "elapsed_seconds": 3.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

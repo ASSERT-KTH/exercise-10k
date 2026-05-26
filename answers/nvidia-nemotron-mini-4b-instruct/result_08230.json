@@ -1,0 +1,9 @@
+{
+  "id": 8230,
+  "title": "Student Information",
+  "prompt": "Create a program that displays student information using if/else statements\nSample Input: John, 20, Junior\nSample Output: Name: John, Age: 20, Year: Junior\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that displays student information using if/else statements, similar to your sample input and output:\n\n```python\ndef display_student_info():\n    \"\"\"Displays student information using if/else statements.\"\"\"\n\n    # Get user input\n    name, age, year = input(\"Enter student's name, age, and year (comma-separated): \").split(',')\n\n    # Validate input\n    if not all(isinstance(i, str) for i in (name, age, year)):\n        print(\"Error: All inputs must be strings.\")\n        return\n\n    if not all(len(i) == 10 and i.isdigit() for i in (age, year)):\n        print(\"Error: Age and year must be integers with exactly 4 digits.\")\n        return\n\n    # Display student information\n    print(f\"Name: {name}, Age: {age}, Year: {year}\")\n\n\n# Call the function\ndisplay_student_info()\n```\n\nThis program first validates the user input to ensure it's a comma-separated string of strings (names, ages, and years) and that the ages and years are integers with exactly 4 digits. If the input is valid, the program displays the student information using f-strings for formatting.",
+  "error": null,
+  "elapsed_seconds": 3.03,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1401,
+  "title": "Conditional greetings",
+  "prompt": "Write a program that greets the user based on the time of day. If the time is between 6am and 12pm, print 'Good morning', between 12pm and 5pm print 'Good afternoon', otherwise print 'Good evening'. Assume the user inputs the time in 24-hour format.\nSample Input: 10\nSample Output: Good morning\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef greet_user(time):\n    # Convert the input time to a string in the format 'HH:MM'\n    time_str = time.strftime('%H:%M')\n\n    # Define the time ranges for each greeting\n    morning = '06:00'\n    afternoon = '12:00'\n    evening = '18:00'\n\n    # Check which greeting to print based on the time range\n    if time_str < morning:\n        greeting = 'Good morning'\n    elif time_str >= morning and time_str < afternoon:\n        greeting = 'Good afternoon'\n    else:\n        greeting = 'Good evening'\n\n    # Print the greeting\n    print(greeting)\n\n# Get user input and convert it to an integer\ntime = int(input('Enter the time (in 24-hour format): '))\n\n# Call the greet_user function with the user's input\ngreet_user(time)\n```\n\nThis program first converts the user's input to a string in the format 'HH:MM' using the `strftime` method. Then, it defines three time ranges for each greeting (6am-12pm, 12pm-5pm, and 5pm-midnight) and checks which range the input time falls into. Finally, it prints the appropriate greeting based on the time range.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

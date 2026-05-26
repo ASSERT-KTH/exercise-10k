@@ -1,0 +1,9 @@
+{
+  "id": 1233,
+  "title": "While Loop Simulation",
+  "prompt": "Write a program that uses a while loop to simulate a simple banking system, allowing users to deposit and withdraw money.\nSample Input: deposit 100\nSample Output: Balance: 100\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that simulates a simple banking system using a while loop, allowing users to deposit and withdraw money. This program keeps track of the balance in a variable and prompts the user for input until they choose to quit.\n\n```python\nbalance = 0\n\nwhile True:\n    user_input = input(\"Enter 'deposit' to add money, 'withdraw' to take money, or 'quit' to exit: \").lower()\n\n    if user_input == 'quit':\n        print(f\"\\nYour balance is: {balance}\")\n        break\n    elif user_input == 'deposit':\n        deposit_amount = float(input(\"Enter the amount to deposit: \"))\n        balance += deposit_amount\n        print(f\"\\nYour new balance is: {balance}\")\n    elif user_input == 'withdraw':\n        withdraw_amount = float(input(\"Enter the amount to withdraw: \"))\n        if balance >= withdraw_amount:\n            balance -= withdraw_amount\n            print(f\"\\nYour new balance is: {balance}\")\n        else:\n            print(\"Insufficient funds. Current balance is:\", balance)\n    else:\n        print(\"Invalid input. Please try again.\")\n\nprint(f\"\\nYour balance is: {balance}\")\n```\n\nThis program will continue to prompt the user for input until they choose to quit. The user can then deposit or withdraw money by entering the appropriate command and the desired amount. The program will keep track of the balance and display it at the end of each transaction.",
+  "error": null,
+  "elapsed_seconds": 3.65,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

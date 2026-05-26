@@ -1,0 +1,9 @@
+{
+  "id": 1676,
+  "title": "Weather Forecast",
+  "prompt": "Write a program that takes the temperature as input and prints the corresponding weather forecast (sunny, cloudy, rainy, snowy) based on the following criteria: sunny (20-30), cloudy (10-19), rainy (0-9), snowy (below 0) using if/else statements\nSample Input: 25\nSample Output: sunny\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef get_weather_forecast(temperature):\n    \"\"\"\n    Takes the temperature as input and prints the corresponding weather forecast.\n\n    :param temperature: float or int representing the temperature\n    :return: None\n    \"\"\"\n\n    # Define the temperature ranges for each weather condition\n    sunny_range = (20, 30)\n    cloudy_range = (10, 19)\n    rainy_range = (0, 9)\n    snowy_range = (-10, 0)\n\n    # Check the temperature range and print the corresponding weather forecast\n    if temperature in sunny_range:\n        print(\"sunny\")\n    elif temperature in cloudy_range:\n        print(\"cloudy\")\n    elif temperature in rainy_range:\n        print(\"rainy\")\n    elif temperature in snowy_range:\n        print(\"snowy\")\n    else:\n        print(\"Invalid temperature range. Please enter a temperature between 0 and 30 degrees.\")\n\n# Get user input and call the function\nuser_input = float(input(\"Enter the temperature: \"))\nget_weather_forecast(user_input)\n```\n\nThis program defines four temperature ranges (sunny, cloudy, rainy, snowy) and checks the user's input against these ranges using nested `if` statements. If the temperature falls within a range, the corresponding weather forecast is printed. If the temperature is outside the valid range, an error message is displayed.",
+  "error": null,
+  "elapsed_seconds": 3.77,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

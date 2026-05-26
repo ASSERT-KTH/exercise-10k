@@ -1,0 +1,9 @@
+{
+  "id": 9531,
+  "title": "Multi-Dimensional Array Search",
+  "prompt": "Create a function that takes a 2D array and a target value as input, then returns the row and column indices of the target value if found. If the target value is not found, return a message indicating that the value is not present in the array.\nSample Input: [[1, 2, 3], [4, 5, 6], [7, 8, 9]], 5\nSample Output: [1, 1]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function uses a nested loop to iterate over each element in the 2D array and checks if the target value is equal to it. If a match is found, the function returns the row and column indices of the target value. If no match is found, the function returns a message indicating that the value is not present in the array.\n\n```python\ndef find_target(arr, target):\n    \"\"\"\n    Given a 2D array and a target value, return the row and column indices of the target value if found.\n    If the target value is not found, return a message indicating that the value is not present in the array.\n\n    :param arr: A 2D array of integers\n    :param target: The target value to search for\n    :return: A tuple (row_index, col_index) if the target value is found, or a string message otherwise\n    \"\"\"\n    for row_index, row in enumerate(arr):\n        for col_index, element in enumerate(row):\n            if element == target:\n                return (row_index, col_index)\n    return f\"The target value {target} is not present in the array.\"\n```\n\nHere's an example of how to use this function:\n\n```python\narr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nprint(find_target(arr, 5))  # Output: (1, 1)\nprint(find_target(arr, 10))  # Output: The target value 10 is not present in the array.\n```",
+  "error": null,
+  "elapsed_seconds": 4.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

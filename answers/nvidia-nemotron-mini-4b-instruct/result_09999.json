@@ -1,0 +1,9 @@
+{
+  "id": 9999,
+  "title": "Enum Type",
+  "prompt": "Use an enum type to store a set of named values\nSample Input: enum Color { Red, Green, Blue }\nSample Output: Color.Red\n",
+  "answer": "Sure, I'd be happy to help you with that! An enum type is a great way to store a set of named values, which can be particularly useful when dealing with constants or enums in programming languages like C#, Java, or C++. Here's how you can use an enum type to store a set of named values and retrieve a specific value by name:\n\nSuppose you have the following enum type:\n\n```csharp\npublic enum Color\n{\n    Red,\n    Green,\n    Blue\n}\n```\n\nTo retrieve a specific value by name, you can use the `Value` property of the enum type. Here's an example:\n\n```csharp\nColor color = Color.Red; // or Color.Green or Color.Blue\n```\n\nIf you want to retrieve a value by name from a string, you can use the `TryGetEnumValue` method of the enum type. This method takes a string as an argument and returns a boolean indicating whether the string represents a valid enum value. If the string is valid, the method returns the corresponding enum value. Here's an example:\n\n```csharp\nColor? color = Enum.TryGetEnumValue<Color>(\"Red\");\n```\n\nIf the string is not a valid enum value, the method returns `null`. Here's an example:\n\n```csharp\nColor? color = Enum.TryGetEnumValue<Color>(\"InvalidColor\"); // Returns null\n```\n\nI hope this helps! Let me know if you have any further questions.",
+  "error": null,
+  "elapsed_seconds": 3.78,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9600,
+  "title": "Quiz Program",
+  "prompt": "Write a program that asks the user a series of questions and keeps track of the score\nSample Input: answer1\nanswer2\nanswer3\nSample Output: Score: 2/3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_user_input(prompt):\n    \"\"\"Get user input and return it as a string.\"\"\"\n    return input(prompt).strip()\n\ndef get_score(user_answers, correct_answers):\n    \"\"\"Get the score based on user and correct answers.\"\"\"\n    score = sum(a == c for a, c in zip(user_answers, correct_answers))\n    return score\n\ndef main():\n    # Define the questions and correct answers\n    questions = [\n        \"What is the capital of France?\",\n        \"Who is the current Prime Minister of the UK?\",\n        \"What is the name of the largest city in Germany?\",\n    ]\n    correct_answers = [\n        \"Paris\",\n        \"Boris Johnson\",\n        \"Berlin\",\n    ]\n\n    # Ask the user a series of questions and keep track of the score\n    score = 0\n    user_answers = []\n    for question in questions:\n        answer = get_user_input(question)\n        user_answers.append(answer)\n        if answer.lower() == correct_answers[questions.index(question)].lower():\n            score += 1\n\n    # Print the score\n    print(f\"Score: {score}/{len(questions)}\")\n\nif __name__ == \"__main__\":\n    main()\n```\nThis program defines a function `get_user_input` to get user input and a function `get_score` to calculate the score based on user and correct answers. The `main` function asks the user a series of questions, keeps track of the score, and prints the final score. You can modify the questions and correct answers to suit your needs.",
+  "error": null,
+  "elapsed_seconds": 4.09,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

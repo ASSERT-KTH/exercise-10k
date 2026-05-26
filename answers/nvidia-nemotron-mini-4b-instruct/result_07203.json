@@ -1,0 +1,9 @@
+{
+  "id": 7203,
+  "title": "Weather Forecast",
+  "prompt": "Write a program that prints a weather forecast using a while loop.\nSample Input: sunny\nSample Output: Today: sunny\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that prints a weather forecast using a while loop, given a sample input of \"sunny\". You can modify the `forecast` dictionary to include different weather conditions as needed.\n\n```python\nforecast = {\n    \"sunny\": \"Today: The sun is shining brightly!\",\n    \"cloudy\": \"Today: A few clouds in the sky, but mostly sunny.\",\n    \"rainy\": \"Today: A chance of rain, bring an umbrella.\",\n    \"snowy\": \"Today: Bundle up, it's going to be cold and snowy.\"\n}\n\nwhile True:\n    weather_condition = input(\"Enter the weather condition (or type 'quit' to exit): \").lower()\n\n    if weather_condition == \"quit\":\n        print(\"Goodbye!\")\n        break\n\n    if weather_condition in forecast:\n        print(f\"{forecast[weather_condition]}\")\n    else:\n        print(f\"Sorry, I don't have a forecast for '{weather_condition}'. Please try again.\")\n```\n\nThis program prompts the user to enter a weather condition, checks if it's in the `forecast` dictionary, and prints the corresponding forecast if it exists. If the user enters \"quit\", the program exits.",
+  "error": null,
+  "elapsed_seconds": 3.01,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

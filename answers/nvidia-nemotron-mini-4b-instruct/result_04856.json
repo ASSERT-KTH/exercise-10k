@@ -1,0 +1,9 @@
+{
+  "id": 4856,
+  "title": "List Statistics",
+  "prompt": "Write a program that takes a list as input, and returns its mean, median, and standard deviation.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: {mean: 3, median: 3, std_dev: 1.4142135623730951}\n",
+  "answer": "Here's a Python program that calculates the mean, median, and standard deviation of a given list:\n\n```python\nimport statistics\n\ndef calculate_stats(numbers):\n    # Calculate mean\n    mean = statistics.mean(numbers)\n\n    # Calculate median\n    median = statistics.median(numbers)\n\n    # Calculate standard deviation\n    std_dev = statistics.stdev(numbers)\n\n    return {\n        'mean': mean,\n        'median': median,\n        'std_dev': std_dev\n    }\n\n# Example usage\ninput_list = [1, 2, 3, 4, 5]\nstats = calculate_stats(input_list)\nprint(stats)\n```\n\nThis program uses the `statistics` module in Python to calculate the mean, median, and standard deviation. The `statistics.mean()` function calculates the mean of a list, `statistics.median()` calculates the median, and `statistics.stdev()` calculates the standard deviation. The results are returned as a dictionary with keys 'mean', 'median', and 'std_dev'. The example usage at the end of the program demonstrates how to use this function with a sample input list.",
+  "error": null,
+  "elapsed_seconds": 2.87,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

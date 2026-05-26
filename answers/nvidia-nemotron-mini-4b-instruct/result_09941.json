@@ -1,0 +1,9 @@
+{
+  "id": 9941,
+  "title": "Data Type Analyzer",
+  "prompt": "Write a program that takes in a list of values as input and determines the data type of each value. The program should then print out the data type of each value in the list.\nSample Input: [1, 'hello', 3.14, True, None]\nSample Output: int, str, float, bool, NoneType\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef determine_data_type(value):\n    \"\"\"Determines the data type of a given value.\"\"\"\n    try:\n        if isinstance(value, int):\n            return \"int\"\n        elif isinstance(value, str):\n            return \"str\"\n        elif isinstance(value, float):\n            return \"float\"\n        elif isinstance(value, bool):\n            return \"bool\"\n        elif value is None:\n            return \"NoneType\"\n        else:\n            return type(value).__name__\n    except Exception as e:\n        return str(e)\n\ndef main():\n    values = [1, 'hello', 3.14, True, None]\n    for value in values:\n        print(determine_data_type(value), end=\" \")\n    print()\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program defines a helper function `determine_data_type` that checks if a value is an integer, string, float, boolean, `None`, or an instance of some other class. The `main` function takes in a list of values and prints out the data type of each value using the helper function.",
+  "error": null,
+  "elapsed_seconds": 2.91,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

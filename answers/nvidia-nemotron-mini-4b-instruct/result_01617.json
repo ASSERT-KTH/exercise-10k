@@ -1,0 +1,9 @@
+{
+  "id": 1617,
+  "title": "Calculator Program",
+  "prompt": "Write a program that takes a mathematical expression as input and outputs the result.\nSample Input: 2 + 3 * 4 - 1\nSample Output: 13\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a mathematical expression as input and evaluates it using the `eval()` function, which allows you to execute arbitrary Python code. However, be cautious when using `eval()` as it can be insecure if the input is not properly sanitized. In this case, we're only dealing with simple arithmetic expressions, so it's safe to use.\n\n```python\ndef evaluate_expression(expression):\n    \"\"\"\n    Evaluates a mathematical expression and returns the result.\n\n    :param expression: str, the mathematical expression as a string\n    :return: int or float, the result of the expression\n    \"\"\"\n    # Ensure the input is a string and not empty\n    if not isinstance(expression, str) or not expression:\n        raise ValueError(\"Input must be a non-empty string\")\n\n    # Evaluate the expression using eval()\n    try:\n        result = eval(expression)\n    except (SyntaxError, NameError, ValueError) as e:\n        raise ValueError(f\"Error evaluating expression: {e}\")\n\n    return result\n\n\nif __name__ == \"__main__\":\n    expression = input(\"Enter a mathematical expression: \")\n    result = evaluate_expression(expression)\n    print(f\"Result: {result}\")\n```\n\nThis program will prompt the user to enter a mathematical expression and then evaluate it, printing the result. You can modify the `evaluate_expression()` function to handle more complex expressions if needed.",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3566,
+  "title": "Dictionary Mapping",
+  "prompt": "Write a function that maps a dictionary to a new dictionary with transformed values\nSample Input: {\"a\": 1, \"b\": 2, \"c\": 3} and transformation (value * 2)\nSample Output: {\"a\": 2, \"b\": 4, \"c\": 6}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef transform_dict(input_dict, transformation_func):\n    \"\"\"\n    Maps a dictionary to a new dictionary with transformed values.\n\n    Parameters:\n    input_dict (dict): The dictionary to transform.\n    transformation_func (callable): A function that takes a single argument (the value to transform) and returns the transformed value.\n\n    Returns:\n    dict: A new dictionary with transformed values.\n    \"\"\"\n    return {k: transformation_func(v) for k, v in input_dict.items()}\n```\nHere's an example of how to use this function:\n```python\ninput_dict = {\"a\": 1, \"b\": 2, \"c\": 3}\ntransformation_func = lambda value: value * 2\noutput_dict = transform_dict(input_dict, transformation_func)\nprint(output_dict)  # Output: {'a': 2, 'b': 4, 'c': 6}\n```\nThis function uses a dictionary comprehension to create a new dictionary with transformed values. The `items()` method is used to iterate over the key-value pairs in the input dictionary, and the `transformation_func()` is applied to each value using the `lambda` function. The resulting transformed values are stored in the new dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.32,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

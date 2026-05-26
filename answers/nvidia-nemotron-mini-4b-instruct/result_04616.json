@@ -1,0 +1,9 @@
+{
+  "id": 4616,
+  "title": "Circle Circumference",
+  "prompt": "Write a program to calculate the circumference of a circle given its radius.\nSample Input: 5\nSample Output: Circumference: 31.42\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the circumference of a circle given its radius:\n\n```python\nimport math\n\ndef calculate_circumference(radius):\n    \"\"\"\n    Calculates the circumference of a circle given its radius.\n\n    :param radius: The radius of the circle.\n    :return: The circumference of the circle as a float.\n    \"\"\"\n    if not isinstance(radius, (int, float)) or radius < 0:\n        raise ValueError(\"The radius must be a non-negative number.\")\n\n    circumference = 2 * math.pi * radius\n    return circumference\n\n# Get user input for the radius\nradius = float(input(\"Enter the radius of the circle: \"))\n\n# Calculate and print the circumference\ncircumference = calculate_circumference(radius)\nprint(f\"Circumference: {circumference:.2f}\")\n```\n\nThis program defines a function `calculate_circumference` that checks if the input is a non-negative number and calculates the circumference using the formula `2 * π * radius`. The program then prompts the user to enter the radius, calls the function with the user input, and prints the result with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 2.85,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

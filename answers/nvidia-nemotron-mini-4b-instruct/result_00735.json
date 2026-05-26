@@ -1,0 +1,9 @@
+{
+  "id": 735,
+  "title": "Decimal to Fraction",
+  "prompt": "Write a program that takes a decimal number as input and outputs its equivalent fraction.\nSample Input: 0.5\nSample Output: 1/2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a decimal number as input and outputs its equivalent fraction:\n```python\ndef decimal_to_fraction(decimal):\n    \"\"\"\n    Converts a decimal number to its equivalent fraction.\n\n    :param decimal: The decimal number to convert.\n    :return: A string representing the fraction.\n    \"\"\"\n    # Ensure the input is a number (float or int)\n    try:\n        integer_part, decimal_part = divmod(float(decimal), 1)\n    except ValueError:\n        raise ValueError(\"Input must be a number.\")\n\n    # Determine the denominator (the power of 10 in the decimal part)\n    denominator = int(round(abs(decimal_part) * 10 ** len(str(abs(int(decimal))))))\n\n    # Determine the numerator (the integer part of the decimal number)\n    numerator = int(integer_part * denominator)\n\n    # Ensure the numerator is positive (if the decimal number was negative)\n    if decimal < 0:\n        numerator = -numerator\n\n    return f\"{numerator} / {denominator}\"\n\n# Get user input\ndecimal = input(\"Enter a decimal number: \")\n\n# Convert the decimal to a fraction and print the result\nresult = decimal_to_fraction(decimal)\nprint(f\"The equivalent fraction is: {result}\")\n```\nThis program first checks if the input is a number (float or int). Then, it determines the power of 10 in the decimal part and the numerator and denominator of the equivalent fraction. Finally, it prints the result as a string.",
+  "error": null,
+  "elapsed_seconds": 3.77,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

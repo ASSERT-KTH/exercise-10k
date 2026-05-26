@@ -1,0 +1,9 @@
+{
+  "id": 9335,
+  "title": "Pass by Value vs Pass by Reference",
+  "prompt": "Write a program to demonstrate the difference between pass by value and pass by reference.\nSample Input: None\nSample Output: Variable values\n",
+  "answer": "Sure, I'd be happy to help you understand the difference between pass by value and pass by reference with a simple program. Here's an example in Python:\n\n```python\ndef modify_by_value(x):\n    \"\"\"Modifies a value passed as an argument.\"\"\"\n    x = 42  # This line changes the value of the argument\n\ndef modify_by_reference(y):\n    \"\"\"Modifies a reference passed as an argument.\"\"\"\n    y[0] = 42  # This line changes the first element of the list\n\n# Create two variables and pass them to the functions\na = [1, 2, 3]\nb = [10, 20, 30]\n\nmodify_by_value(a)\nprint(\"Variable a:\", a)  # Output: Variable a: [1, 2, 3]\n\nmodify_by_reference(b)\nprint(\"Variable b:\", b)  # Output: Variable b: [10, 20, 30]\n```\n\nIn this example, we have two functions: `modify_by_value` and `modify_by_reference`. The first function modifies the value of the argument it receives, while the second function modifies the reference of the argument it receives.\n\nWhen we call `modify_by_value(a)`, it changes the value of the `a` list, but the original list remains unchanged. This is because Python passes the list as a value, not a reference.\n\nOn the other hand, when we call `modify_by_reference(b)`, it changes the first element of the `b` list. This is because Python passes the list as a reference, allowing the function to modify the list directly.\n\nThe output of the program demonstrates the difference between pass by value and pass by reference.",
+  "error": null,
+  "elapsed_seconds": 4.3,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

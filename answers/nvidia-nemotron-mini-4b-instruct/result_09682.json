@@ -1,0 +1,9 @@
+{
+  "id": 9682,
+  "title": "Function Fusion",
+  "prompt": "Create a function called fusion that takes two functions as arguments and returns a new function that combines their functionality. The new function should apply the first function to the input and then apply the second function to the result.\nSample Input: fusion(double, add_one)(5)\nSample Output: 11\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef fusion(func1, func2):\n    \"\"\"\n    Combines the functionality of two functions into a new function.\n\n    The new function applies the first function to the input and then applies\n    the second function to the result.\n\n    Parameters:\n    func1 (callable): The first function to apply.\n    func2 (callable): The second function to apply.\n\n    Returns:\n    callable: A new function that combines the functionality of func1 and func2.\n    \"\"\"\n    def new_function(input_value):\n        result = func1(input_value)\n        return func2(result)\n    return new_function\n```\nHere's an example of how to use this function:\n```python\ndef double(x):\n    return 2 * x\n\ndef add_one(x):\n    return x + 1\n\nprint(fusion(double, add_one)(5))  # Output: 11\n```\nThis function takes two functions as arguments and returns a new function that combines their functionality. The new function applies the first function to the input and then applies the second function to the result. In the example above, the `double` function is applied first, which doubles the input value, and then the `add_one` function is applied to the result, which adds one to the doubled value.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6695,
+  "title": "Gregorian Calendar Leap Year",
+  "prompt": "Create a program that takes a year as input and returns whether it is a leap year in the Gregorian calendar.\nSample Input: 2020\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you create a program that checks if a given year is a leap year in the Gregorian calendar. Here's a Python solution:\n\n```python\ndef is_leap_year(year):\n    \"\"\"\n    Check if a given year is a leap year in the Gregorian calendar.\n\n    :param year: int - The year to check.\n    :return: bool - True if the year is a leap year, False otherwise.\n    \"\"\"\n    # A year is a leap year if it is divisible by 4, but not by 100,\n    # unless it is also divisible by 400.\n    return (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\n\n# Get user input\nyear = int(input(\"Enter a year: \"))\n\n# Check if the year is a leap year\nif is_leap_year(year):\n    print(f\"{year} is a leap year.\")\nelse:\n    print(f\"{year} is not a leap year.\")\n```\n\nThis program defines a function `is_leap_year` that checks if a given year is a leap year according to the Gregorian calendar rules. The function uses modular arithmetic to determine if a year is divisible by 4, 100, or 400. The program then prompts the user to enter a year, calls the function with the user input, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

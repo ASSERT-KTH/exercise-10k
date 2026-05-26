@@ -1,0 +1,9 @@
+{
+  "id": 2209,
+  "title": "Email Extractor",
+  "prompt": "Write a program that takes a string as input and extracts all email addresses from it. Print the extracted email addresses to the console.\nSample Input: My email is john@example.com and my friend's email is jane@example.com\nSample Output: john@example.com\njane@example.com\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses a regular expression to extract all email addresses from a given string:\n```python\nimport re\n\ndef extract_emails(text):\n    \"\"\"Extract all email addresses from a given text and return them as a list.\"\"\"\n    # Regular expression pattern to match email addresses\n    pattern = r\"(?i)\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b\"\n    emails = re.findall(pattern, text)\n    return emails\n\n# Example usage\ntext = \"My email is john@example.com and my friend's email is jane@example.com\"\nemails = extract_emails(text)\nprint(emails)\n```\nThis program defines a function `extract_emails` that takes a text string as input and returns a list of all email addresses found in the text. The regular expression pattern used in the function matches any sequence of one or more alphanumeric characters, dots, underscores, or hyphens, followed by an `@` symbol, then another sequence of one or more alphanumeric characters, dots, or hyphens, followed by a period, and finally two or more letters (either uppercase or lowercase).\n\nWhen you run the example usage, it prints out:\n```\n['john@example.com', 'jane@example.com']\n```\nwhich are the two email addresses found in the sample input text.",
+  "error": null,
+  "elapsed_seconds": 3.59,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

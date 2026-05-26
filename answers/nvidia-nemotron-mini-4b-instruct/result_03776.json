@@ -1,0 +1,9 @@
+{
+  "id": 3776,
+  "title": "Dictionary Grouping",
+  "prompt": "Group a dictionary by a common key.\nSample Input: [{'name': 'John', 'age': 30}, {'name': 'Jane', 'age': 30}, {'name': 'Bob', 'age': 25}]\nSample Output: {30: [{'name': 'John'}, {'name': 'Jane'}], 25: [{'name': 'Bob'}]}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution using the built-in `dict.groupby()` method, which groups the dictionary items by a common key (in this case, the 'age' key). If you don't have access to Python 3.7 or later, you can use a list comprehension instead:\n\nPython 3.7+ solution:\n\n```python\ndef group_dict_by_key(d):\n    return dict(group for group in d.groupby(key) for key, value in group)\n\n# Sample input\ndata = [{'name': 'John', 'age': 30}, {'name': 'Jane', 'age': 30}, {'name': 'Bob', 'age': 25}]\n\n# Sample output\nprint(group_dict_by_key(data))  # Output: {30: [{'name': 'John', 'age': 30}, {'name': 'Jane'}], 25: [{'name': 'Bob'}]}\n```\n\nPython 3.6 or earlier solution (using list comprehension):\n\n```python\ndef group_dict_by_key(d):\n    return {k: [v for k, v in group] for k, group in d.items()}\n\n# Sample input\ndata = [{'name': 'John', 'age': 30}, {'name': 'Jane', 'age': 30}, {'name': 'Bob', 'age': 25}]\n\n# Sample output\nprint(group_dict_by_key(data))  # Output: {30: [{'name': 'John', 'age': 30}, {'name': 'Jane'}], 25: [{'name': 'Bob'}]}\n```",
+  "error": null,
+  "elapsed_seconds": 4.3,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

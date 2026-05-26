@@ -1,0 +1,9 @@
+{
+  "id": 7918,
+  "title": "Sum of Squares",
+  "prompt": "Create a program to calculate the sum of squares of two numbers.\nSample Input: 2 3\nSample Output: 13\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the sum of squares of two numbers:\n\n```python\ndef calculate_sum_of_squares(num1, num2):\n    \"\"\"\n    Calculates the sum of squares of two numbers.\n\n    :param num1: The first number.\n    :param num2: The second number.\n    :return: The sum of squares of the two numbers.\n    \"\"\"\n\n    # Validate input\n    if not isinstance(num1, (int, float)) or not isinstance(num2, (int, float)):\n        raise TypeError(\"Both inputs must be numbers.\")\n\n    # Calculate the sum of squares\n    sum_of_squares = (num1 ** 2) + (num2 ** 2)\n\n    return sum_of_squares\n\n\n# Get sample input\nsample_input = input(\"Enter two numbers separated by a space: \")\n\n# Split the input into two numbers\nnumbers = sample_input.split()\n\n# Convert the numbers to integers and calculate the sum of squares\nnum1, num2 = map(int, numbers)\nsum_of_squares = calculate_sum_of_squares(num1, num2)\n\n# Print the result\nprint(f\"The sum of squares of {num1} and {num2} is {sum_of_squares}.\")\n```\n\nWhen you run this program and enter `2 3` as input, it will output `13`, as expected.",
+  "error": null,
+  "elapsed_seconds": 3.55,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

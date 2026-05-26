@@ -1,0 +1,9 @@
+{
+  "id": 1995,
+  "title": "Student Grade Report",
+  "prompt": "Develop a program to generate a student grade report using conditional statements to determine the grade\nSample Input: 90\nSample Output: A\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates a student grade report using conditional statements to determine the grade based on the input score. The program supports scores from 0 to 100.\n\n```python\ndef generate_grade(score):\n    \"\"\"\n    Generate a student grade report based on the given score.\n\n    :param score: The student's score as an integer between 0 and 100.\n    :return: A string representing the student's grade.\n    \"\"\"\n\n    # Define the grade boundaries\n    grade_boundaries = [0, 30, 60, 80, 100]\n    grade_labels = ['F', 'D', 'C', 'B', 'A']\n\n    # Check if the score is within the valid range\n    if score < 0 or score > 100:\n        return \"Invalid score. Please enter a score between 0 and 100.\"\n\n    # Determine the grade based on the score and boundaries\n    for i in range(len(grade_boundaries) - 1):\n        if score >= grade_boundaries[i] and score < grade_boundaries[i + 1]:\n            return grade_labels[i]\n\n    # If the score is greater than 90, return an 'A'\n    return 'A' if score >= 90 else 'F'\n\n\n# Get user input and generate the grade report\nscore = int(input(\"Enter a score between 0 and 100: \"))\ngrade = generate_grade(score)\nprint(f\"Your grade is: {grade}\")\n```\n\nThis program defines a function `generate_grade` that takes a score as input and returns a corresponding grade label based on the given boundaries. The function checks if the score is within the valid range and determines the grade based on the score and boundaries. If the score is greater than 90, the function returns an 'A' instead of 'A+' or 'A-'.",
+  "error": null,
+  "elapsed_seconds": 4.79,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

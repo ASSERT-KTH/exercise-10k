@@ -1,0 +1,9 @@
+{
+  "id": 4486,
+  "title": "To-Do List",
+  "prompt": "Create a function that allows the user to add, remove, and view items on a to-do list.\nSample Input: add buy milk\nSample Output: To-do list: buy milk\n",
+  "answer": "Sure, I'd be happy to help you create a function for a to-do list with the specified requirements. Here's an example implementation in Python:\n\n```python\ndef add_task(task):\n    \"\"\"Add a task to the to-do list.\n\n    Args:\n    task (str): The task to add to the to-do list.\n\n    Returns:\n    str: The updated to-do list.\n    \"\"\"\n    global to_do_list\n    to_do_list.append(task)\n    return f\"To-do list: {', '.join(to_do_list)}\"\n\n\ndef remove_task(index):\n    \"\"\"Remove a task from the to-do list by index.\n\n    Args:\n    index (int): The index of the task to remove.\n\n    Returns:\n    str: The updated to-do list.\n    \"\"\"\n    global to_do_list\n    if 0 <= index < len(to_do_list):\n        del to_do_list[index]\n    return f\"To-do list: {', '.join(to_do_list)}\"\n\n\ndef view_tasks():\n    \"\"\"View the current to-do list.\n\n    Returns:\n    str: The to-do list as a string.\n    \"\"\"\n    return f\"To-do list: {', '.join(to_do_list)}\"\n\n\n# Initialize the to-do list\nto_do_list = []\n\n# Example usage\nprint(add_task(\"buy milk\"))\nprint(add_task(\"go to gym\"))\nprint(remove_task(1))\nprint(view_tasks())  # Output: To-do list: buy milk\n```\n\nThis implementation defines three functions: `add_task`, `remove_task`, and `view_tasks`. The `add_task` function adds a task to the to-do list and returns the updated list. The `remove_task` function removes a task from the to-do list by index and returns the updated list. The `view_tasks` function simply returns the current to-do list as a string. The `global` keyword is used to modify the `to_do_list` variable outside of the functions.",
+  "error": null,
+  "elapsed_seconds": 5.14,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2759,
+  "title": "Discount Calculator",
+  "prompt": "Write a program that calculates the discount amount given the original price and discount percentage.\nSample Input: 20 10\nSample Output: 2.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the discount amount given the original price and discount percentage:\n\n```python\ndef calculate_discount(original_price, discount_percentage):\n    \"\"\"\n    Calculates the discount amount given the original price and discount percentage.\n\n    :param original_price: The original price of the item.\n    :param discount_percentage: The discount percentage as a decimal (e.g., 0.1 for 10%).\n    :return: The discount amount as a float.\n    \"\"\"\n\n    # Validate input\n    if not isinstance(original_price, (float, int)) or original_price < 0:\n        raise ValueError(\"Original price must be a non-negative number.\")\n\n    if not isinstance(discount_percentage, (float, int)) or discount_percentage < 0:\n        raise ValueError(\"Discount percentage must be a non-negative number.\")\n\n    # Calculate the discount amount\n    discount_amount = original_price * (1 - discount_percentage)\n\n    return discount_amount\n\n\n# Sample input and output\noriginal_price = 20.0\ndiscount_percentage = 10\n\ndiscount_amount = calculate_discount(original_price, discount_percentage)\nprint(f\"The discount amount is {discount_amount:.2f}.\")\n```\n\nThis program defines a function `calculate_discount` that takes the original price and discount percentage as arguments and returns the discount amount. The function validates the input to ensure it's valid and then calculates the discount amount using the formula `discount_amount = original_price * (1 - discount_percentage)`. The sample input and output demonstrate how to use the function.",
+  "error": null,
+  "elapsed_seconds": 3.84,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

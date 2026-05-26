@@ -1,0 +1,9 @@
+{
+  "id": 3089,
+  "title": "Function to Generate Fibonacci Sequence",
+  "prompt": "Create a function to generate the Fibonacci sequence up to the nth term.\nSample Input: 10\nSample Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that generates the Fibonacci sequence up to the nth term:\n\n```python\ndef fibonacci(n):\n    \"\"\"\n    Generate the Fibonacci sequence up to the nth term.\n\n    :param n: The index of the last term to include in the sequence.\n    :return: A list of the first n Fibonacci numbers.\n    \"\"\"\n    if n < 1:\n        raise ValueError(\"Input must be a positive integer\")\n\n    fib_sequence = [0, 1]\n\n    while len(fib_sequence) < n:\n        fib_sequence.append(sum(fib_sequence[-2:]))\n\n    return fib_sequence[:n]\n```\n\nThis function first checks if the input `n` is a positive integer. If not, it raises a `ValueError`. Then, it initializes the Fibonacci sequence with the first two terms (0 and 1). In a loop, it calculates the next term by adding the last two terms in the sequence and appends it to the sequence. The function returns the first `n` terms of the sequence.\n\nHere's an example of how to use this function:\n\n```python\nprint(fibonacci(10))  # Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]\n```",
+  "error": null,
+  "elapsed_seconds": 3.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

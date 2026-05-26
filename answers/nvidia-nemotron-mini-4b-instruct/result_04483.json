@@ -1,0 +1,9 @@
+{
+  "id": 4483,
+  "title": "Guessing Game",
+  "prompt": "Create a function that generates a random number between 1 and 100, then asks the user to guess the number. After each guess, tell the user if their guess is too high or too low.\nSample Input: 50\nSample Output: Too high\n",
+  "answer": "Sure, I'd be happy to help you create that function. Here's an example implementation in Python:\n\n```python\nimport random\n\ndef guess_number():\n    \"\"\"\n    Generates a random number between 1 and 100 and asks the user to guess it.\n    After each guess, tells the user if their guess is too high or too low.\n    \"\"\"\n    # Generate a random number between 1 and 100\n    random_number = random.randint(1, 100)\n\n    # Initialize a variable to keep track of the number of guesses\n    guesses = 0\n\n    while True:\n        # Ask the user to guess the number\n        guess = int(input(\"Guess a number between 1 and 100: \"))\n\n        # Increment the number of guesses\n        guesses += 1\n\n        # Check if the user guessed the number\n        if guess == random_number:\n            print(f\"Congratulations! You guessed the number in {guesses} guesses.\")\n            break\n        else:\n            # Tell the user if their guess is too high or too low\n            if guess > random_number:\n                print(\"Too low. Try again!\")\n            else:\n                print(\"Too high. Try again!\")\n\n# Call the function to start the game\nguess_number()\n```\n\nThis function generates a random number between 1 and 100, then asks the user to guess the number. After each guess, it tells the user if their guess is too high or too low. The function keeps asking the user to guess until they guess the correct number.",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

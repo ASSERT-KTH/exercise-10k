@@ -1,0 +1,9 @@
+{
+  "id": 1859,
+  "title": "Array Flatten",
+  "prompt": "Write a program that takes a list of lists of integers as input, and returns a new list containing all the elements from the input list, but with the inner lists flattened.\nSample Input: [[1, 2], [3, 4], [5, 6]]\nSample Output: [1, 2, 3, 4, 5, 6]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef flatten_list(nested_list):\n    \"\"\"\n    Flattens a list of lists of integers into a single list.\n\n    :param nested_list: The input list of lists of integers\n    :return: A new list containing all the elements from the input list,\n             with the inner lists flattened.\n    \"\"\"\n    # Use a list comprehension to iterate over each inner list and append its elements\n    # to the result list\n    result = [element for sublist in nested_list for element in sublist]\n\n    return result\n```\nHere's an example of how you can use this function:\n```python\nnested_list = [[1, 2], [3, 4], [5, 6]]\nflattened_list = flatten_list(nested_list)\nprint(flattened_list)  # Output: [1, 2, 3, 4, 5, 6]\n```\nThis program defines a function `flatten_list` that takes a list of lists as input and returns a new list containing all the elements from the input list, with the inner lists flattened. The function uses a list comprehension to iterate over each inner list and append its elements to the result list.",
+  "error": null,
+  "elapsed_seconds": 3.06,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6863,
+  "title": "Maximum Subarray Sum",
+  "prompt": "Write a program that finds the maximum sum of a subarray within a given one-dimensional array of numbers. The subarray must be a contiguous subset of the original array.\nSample Input: [-2, 1, -3, 4, -1, 2, 1, -5, 4]\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the maximum sum of a subarray within a given one-dimensional array of numbers. This program uses a sliding window technique to efficiently find the maximum sum of a subarray.\n\n```python\ndef max_subarray_sum(arr):\n    \"\"\"\n    Find the maximum sum of a subarray within a given one-dimensional array of numbers.\n\n    :param arr: List[int] - The input array of numbers\n    :return: int - The maximum sum of a subarray\n    \"\"\"\n\n    # Initialize variables to keep track of the current sum and the maximum sum\n    current_sum = max_sum = arr[0]\n\n    # Iterate through the array using a sliding window technique\n    for i in range(1, len(arr)):\n        # Update the current sum by adding the current element to the previous sum\n        # or setting it to the previous sum if the current element is negative\n        current_sum = max(arr[i], current_sum + arr[i])\n\n        # Update the maximum sum if the current sum is greater than the maximum sum\n        max_sum = max(max_sum, current_sum)\n\n    return max_sum\n\n\n# Test the function with the given sample input\nsample_arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]\nprint(max_subarray_sum(sample_arr))  # Output: 6\n```\n\nThis program has a time complexity of O(n), where n is the length of the input array, making it efficient for large arrays.",
+  "error": null,
+  "elapsed_seconds": 3.83,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

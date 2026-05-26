@@ -1,0 +1,9 @@
+{
+  "id": 3079,
+  "title": "Volume Calculator",
+  "prompt": "Create a program that calculates the volume of a rectangular prism given its length, width, and height.\nSample Input: 5, 3, 2\nSample Output: 30.0\n",
+  "answer": "Sure, I'd be happy to help you create a program that calculates the volume of a rectangular prism. Here's an example solution in Python:\n\n```python\ndef calculate_volume(length, width, height):\n    \"\"\"\n    Calculates the volume of a rectangular prism given its length, width, and height.\n\n    :param length: The length of the rectangular prism.\n    :param width: The width of the rectangular prism.\n    :param height: The height of the rectangular prism.\n    :return: The volume of the rectangular prism.\n    \"\"\"\n\n    # Check if the inputs are positive numbers\n    if length <= 0 or width <= 0 or height <= 0:\n        raise ValueError(\"All dimensions must be positive numbers.\")\n\n    # Calculate and return the volume\n    volume = length * width * height\n    return volume\n\n# Get user input\nlength = float(input(\"Enter the length of the rectangular prism: \"))\nwidth = float(input(\"Enter the width of the rectangular prism: \"))\nheight = float(input(\"Enter the height of the rectangular prism: \"))\n\n# Calculate and print the volume\nvolume = calculate_volume(length, width, height)\nprint(f\"The volume of the rectangular prism is {volume:.2f}.\")\n```\n\nThis program defines a function `calculate_volume` that checks if the inputs are positive numbers and calculates the volume using the formula `length * width * height`. The function is then called with user input, and the result is printed with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 3.51,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 586,
+  "title": "Find the Longest Common Prefix",
+  "prompt": "Write a program that takes an array of strings as input and returns the longest common prefix among all the strings.\nSample Input: ['hello', 'hello world', 'helloAgain']\nSample Output: hello\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes an array of strings as input and returns the longest common prefix among all the strings using a recursive approach with early termination to avoid unnecessary comparisons:\n```python\ndef longest_common_prefix(strs):\n    if not strs:\n        return \"\"\n\n    shortest_str = min(strs, key=len)\n\n    for i, char in enumerate(shortest_str):\n        for other_str in strs[1:]:\n            if char not in other_str or other_str[i] != char:\n                return shortest_str[:i]\n\n    return shortest_str\n```\nHere's how this program works:\n\n1. If the input array `strs` is empty, it returns an empty string as there is no common prefix.\n2. It finds the shortest string in the array using the `min()` function with a key function that returns the length of each string.\n3. It iterates through each character in the shortest string and checks if it is also present in all other strings. If it's not, it returns the common prefix up to the current character.\n4. If it completes the loop without finding a mismatch, it means that the shortest string is the longest common prefix, so it returns the shortest string.\n\nHere's an example of how you can use this function:\n```python\nprint(longest_common_prefix(['hello', 'hello world', 'helloAgain']))  # Output: hello\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.55,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

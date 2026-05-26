@@ -1,0 +1,9 @@
+{
+  "id": 7416,
+  "title": "Array Indexing and Slicing",
+  "prompt": "Write a program that takes an array of integers as input and returns the sum of the elements at the even indices and the sum of the elements at the odd indices separately. The program should handle arrays of varying lengths.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: Even index sum: 9, Odd index sum: 6\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef split_array_sums(arr):\n    \"\"\"\n    Given an array of integers, return the sum of the elements at the even indices and the sum of the elements at the odd indices separately.\n\n    :param arr: List[int] - The input array\n    :return: Tuple[int, int] - A tuple containing the sum of even indices and the sum of odd indices\n    \"\"\"\n    even_sums = [arr[i] for i in range(len(arr)) if i % 2 == 0]\n    odd_sums = [arr[i] for i in range(len(arr)) if i % 2 != 0]\n\n    return sum(even_sums), sum(odd_sums)\n\n# Example usage\ninput_array = [1, 2, 3, 4, 5]\neven_sum, odd_sum = split_array_sums(input_array)\nprint(f\"Even index sum: {even_sum}, Odd index sum: {odd_sum}\")\n```\n\nThis program defines a function `split_array_sums()` that takes an array as input and returns a tuple containing the sum of the elements at the even indices and the sum of the elements at the odd indices. It uses list comprehensions to create two new lists containing only the elements at the even and odd indices, respectively. Finally, it calculates the sums of these lists using the built-in `sum()` function and returns them as a tuple.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4247,
+  "title": " architectorial Style Checker",
+  "prompt": "Develop a program that checks if a given building style is modern or traditional. The program should take the style as input and print 'Modern' or 'Traditional' based on the following criteria: modern (glass, steel), traditional (stone, brick).\nSample Input: glass\nSample Output: Modern\n",
+  "answer": "Sure, I'd be happy to help you develop a program for this task. Here's a Python solution using a simple if-else statement to check the building style:\n\n```python\ndef check_building_style(building_style):\n    \"\"\"\n    Check if a given building style is modern or traditional.\n\n    :param building_style: str, the building style to check (e.g., 'glass', 'stone')\n    :return: str, 'Modern' or 'Traditional'\n    \"\"\"\n\n    # Define the modern and traditional building styles\n    modern_styles = ['glass', 'steel']\n    traditional_styles = ['stone', 'brick']\n\n    # Check if the building style matches any modern style\n    if building_style.lower() in modern_styles:\n        return 'Modern'\n\n    # Check if the building style matches any traditional style\n    elif building_style.lower() in traditional_styles:\n        return 'Traditional'\n\n    # If the building style does not match any modern or traditional style, return 'Unknown'\n    else:\n        return 'Unknown'\n\n# Example usage\nbuilding_style = 'glass'\nresult = check_building_style(building_style)\nprint(f\"The building style '{building_style}' is {result}.\")\n```\n\nThis program defines two lists of building styles (modern and traditional) and checks if the given building style matches any of the styles in those lists. If it does, the program returns the corresponding string ('Modern' or 'Traditional'). If the building style does not match any of the styles, the program returns 'Unknown'.",
+  "error": null,
+  "elapsed_seconds": 3.7,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

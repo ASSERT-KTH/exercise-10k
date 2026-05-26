@@ -1,0 +1,9 @@
+{
+  "id": 1669,
+  "title": "BMI Calculator",
+  "prompt": "Create a program that takes a person's weight and height as input and calculates their BMI (body mass index) and classifies them as 'underweight', 'normal', 'overweight', or 'obese' based on the following criteria: underweight (BMI < 18.5), normal (18.5 <= BMI < 25), overweight (25 <= BMI < 30), obese (BMI >= 30) using if/else statements\nSample Input: 70 1.75\nSample Output: normal\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses the `math` module to calculate the BMI and the `if` statement to classify the person based on the BMI criteria.\n\n```python\nimport math\n\ndef calculate_bmi(weight, height):\n    \"\"\"Calculate BMI and return a string indicating the classification.\"\"\"\n    # Convert height from meters to centimeters\n    height_cm = height * 100\n\n    # Calculate BMI\n    bmi = weight / (height_cm / 100) ** 2\n\n    # Classify based on BMI\n    if bmi < 18.5:\n        classification = \"underweight\"\n    elif 18.5 <= bmi < 25:\n        classification = \"normal\"\n    elif 25 <= bmi < 30:\n        classification = \"overweight\"\n    else:\n        classification = \"obese\"\n\n    return f\"BMI: {bmi:.1f}, Classification: {classification}\"\n\n# Get user input\nweight = float(input(\"Enter weight in kg: \"))\nheight = float(input(\"Enter height in meters: \"))\n\n# Calculate and print BMI classification\nprint(calculate_bmi(weight, height))\n```\n\nThis program will prompt the user to enter their weight and height, calculate their BMI, and print a message indicating their classification based on the given criteria.",
+  "error": null,
+  "elapsed_seconds": 3.23,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

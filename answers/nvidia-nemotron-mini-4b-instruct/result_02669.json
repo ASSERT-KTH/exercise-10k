@@ -1,0 +1,9 @@
+{
+  "id": 2669,
+  "title": "Shortest Word",
+  "prompt": "Write a program that takes a string as input and returns the shortest word in the string.\nSample Input: hello world this is a very short test\nSample Output: a\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef shortest_word(input_string: str) -> str:\n    \"\"\"\n    Given a string, return the shortest word in the string.\n\n    :param input_string: The input string.\n    :return: The shortest word in the input string.\n    \"\"\"\n    # Split the input string into a list of words, then find the shortest one\n    words = input_string.split()\n    return min(words, key=len)\n\n# Example usage\ninput_string = \"hello world this is a very short test\"\nshortest_word_result = shortest_word(input_string)\nprint(f\"The shortest word in the input string is: {shortest_word_result}\")\n```\nThis program defines a function `shortest_word` that takes an input string as a parameter and returns the shortest word in the string. The function splits the input string into a list of words using the `split` method, and then uses the `min` function with a key argument of `len` to find the shortest word in the list. The function returns the shortest word as a string.\n\nThe example usage at the end of the program demonstrates how to use the `shortest_word` function with a sample input string, and prints the result to the console.",
+  "error": null,
+  "elapsed_seconds": 3.15,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

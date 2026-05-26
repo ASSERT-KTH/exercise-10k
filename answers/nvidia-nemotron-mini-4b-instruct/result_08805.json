@@ -1,0 +1,9 @@
+{
+  "id": 8805,
+  "title": "Trigonometric Functions",
+  "prompt": "Write a program that takes an angle in radians as input and returns its sine, cosine, and tangent.\nSample Input: 1.57\nSample Output: 1.0 0.0 1.63e+16\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. It uses the `math` module to perform trigonometric calculations.\n\n```python\nimport math\n\ndef calculate_trigonometric_values(angle_in_radians):\n    \"\"\"\n    Calculates the sine, cosine, and tangent of a given angle in radians.\n\n    :param angle_in_radians: The angle in radians as a float.\n    :return: A tuple containing the sine, cosine, and tangent of the angle.\n    \"\"\"\n\n    # Validate the input angle\n    if not isinstance(angle_in_radians, (float, int)):\n        raise TypeError(\"The angle must be a float or integer.\")\n\n    # Calculate the trigonometric values\n    sine = math.sin(angle_in_radians)\n    cosine = math.cos(angle_in_radians)\n    tangent = math.tan(angle_in_radians)\n\n    # Handle the case where the tangent is undefined (e.g., 90 degrees)\n    if math.isnan(tangent):\n        tangent = 0\n\n    return sine, cosine, tangent\n\n# Example usage\nangle_in_radians = 1.57\nsine, cosine, tangent = calculate_trigonometric_values(angle_in_radians)\n\nprint(f\"Sine: {sine:.6f}\")\nprint(f\"Cosine: {cosine:.6f}\")\nprint(f\"Tangent: {tangent:.6f}\")\n```\n\nThis program defines a function `calculate_trigonometric_values` that takes an angle in radians as input and returns a tuple containing the sine, cosine, and tangent of the angle. The function validates the input to ensure it's a float or integer, and handles the case where the tangent is undefined (e.g., for 90 degrees). The example usage at the end of the program demonstrates how to use the function with a sample input.",
+  "error": null,
+  "elapsed_seconds": 4.61,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

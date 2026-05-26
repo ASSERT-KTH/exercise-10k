@@ -1,0 +1,9 @@
+{
+  "id": 5835,
+  "title": "URL Parser",
+  "prompt": "Write a function to parse a given URL and extract its components\nSample Input: https://example.com/path?query#fragment\nSample Output: {'scheme': 'https', 'netloc': 'example.com', 'path': '/path', 'params': '', 'query': 'query', 'fragment': 'fragment'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses the `urlparse` function from the built-in `urllib.parse` module to parse a given URL and extract its components. This function returns a dictionary with the extracted components.\n\n```python\nfrom urllib.parse import urlparse\n\ndef parse_url(url: str) -> dict:\n    \"\"\"\n    Parses a given URL and extracts its components.\n\n    :param url: The URL to parse.\n    :return: A dictionary containing the extracted components.\n    \"\"\"\n    # Parse the URL using urlparse\n    parsed_url = urlparse(url)\n\n    # Extract the components and return them as a dictionary\n    return {\n        'scheme': parsed_url.scheme,\n        'netloc': parsed_url.netloc,\n        'path': parsed_url.path,\n        'params': parsed_url.params,\n        'query': parsed_url.query,\n        'fragment': parsed_url.fragment\n    }\n```\n\nHere's an example of how to use this function:\n\n```python\nurl = \"https://example.com/path?query#fragment\"\nresult = parse_url(url)\nprint(result)\n# Output: {'scheme': 'https', 'netloc': 'example.com', 'path': '/path', 'params': '', 'query': 'query', 'fragment': 'fragment'}\n```",
+  "error": null,
+  "elapsed_seconds": 3.27,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

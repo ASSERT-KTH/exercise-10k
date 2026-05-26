@@ -1,0 +1,9 @@
+{
+  "id": 4313,
+  "title": "Closure",
+  "prompt": "Create a function that returns another function with access to its own scope\nSample Input: 5\nSample Output: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a JavaScript function that meets your requirements. This function, `createAccessibleScope`, returns a new function with access to its own scope, which includes the original function's parameters and local variables.\n\n```javascript\nfunction createAccessibleScope(initialValue) {\n  // Create a new function with its own scope\n const accessibleScope = function() {\n    // Access the original function's parameters and local variables\n    const { value = initialValue } = arguments;\n    return value + 10;\n  };\n\n  // Return the new function with access to its own scope\n  return accessibleScope;\n}\n\n// Example usage\nconst accessibleScopeCreator = createAccessibleScope(5);\nconst accessibleScope = accessibleScopeCreator();\n\nconsole.log(accessibleScope()); // Output: 15\n```\n\nIn this example, the `createAccessibleScope` function takes an optional `initialValue` parameter, which is used as the initial value for the new function's return value. The new function, `accessibleScope`, has access to the original function's parameters and local variables, including the `initialValue` parameter.",
+  "error": null,
+  "elapsed_seconds": 2.76,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

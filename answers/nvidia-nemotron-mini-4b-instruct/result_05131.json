@@ -1,0 +1,9 @@
+{
+  "id": 5131,
+  "title": "Find Longest Common Prefix",
+  "prompt": "Write a program to find the longest common prefix of two given strings.\nSample Input: hello, hell\nSample Output: hell\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the longest common prefix of two given strings using a simple and efficient approach:\n\n```python\ndef longest_common_prefix(str1, str2):\n    \"\"\"\n    Find the longest common prefix of two given strings.\n\n    :param str1: The first string.\n    :param str2: The second string.\n    :return: The longest common prefix of str1 and str2.\n    \"\"\"\n    if not str1 or not str2:\n        return \"\"\n\n    min_length = min(len(str1), len(str2))\n\n    for i in range(min_length):\n        if str1[i] != str2[i]:\n            return str1[:i]\n\n    return str1[:min_length]\n```\n\nThis function first checks if either of the input strings is empty, in which case an empty string is returned. Then, it finds the minimum length of the two strings and iterates through the first string, comparing each character with the corresponding character in the second string. If a mismatch is found, the function returns the common prefix up to the current index. If no mismatch is found, the function returns the entire common prefix.\n\nHere's an example of how to use this function:\n\n```python\nprint(longest_common_prefix(\"hello\", \"hell\"))  # Output: hell\n```",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

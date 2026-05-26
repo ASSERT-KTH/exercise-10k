@@ -1,0 +1,9 @@
+{
+  "id": 4428,
+  "title": "To-Do List",
+  "prompt": "Create a program that allows the user to add and remove items from a to-do list using a while loop.\nSample Input: Buy milk\nSample Output: [Buy milk, Walk the dog]\n",
+  "answer": "Sure, I'd be happy to help you create a program for a to-do list with the specified requirements. Here's a Python solution using a while loop to allow the user to add and remove items from the list:\n\n```python\n# Initialize an empty list to store the to-do items\nto_do_list = []\n\n# Main loop to keep adding and removing items\nwhile True:\n    # Get user input\n    user_input = input(\"Enter 'add' to add an item, 'remove' to remove an item, or 'done' to finish: \").lower()\n\n    # Exit the loop when the user enters 'done'\n    if user_input == 'done':\n        break\n\n    # Add an item to the list\n    elif user_input == 'add':\n        item = input(\"Enter the item to add: \")\n        to_do_list.append(item)\n\n    # Remove an item from the list\n    elif user_input == 'remove':\n        if to_do_list:\n            index = int(input(\"Enter the index of the item to remove (0-based): \"))\n            del to_do_list[index]\n        else:\n            print(\"The to-do list is empty.\")\n\n    # Invalid input\n    else:\n        print(\"Invalid input. Please try again.\")\n\n# Print the updated to-do list\nprint(f\"Your to-do list is: {to_do_list}\")\n```\n\nThis program will keep prompting the user for input until they enter 'done'. The user can then add, remove, or view their to-do list as desired.",
+  "error": null,
+  "elapsed_seconds": 3.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

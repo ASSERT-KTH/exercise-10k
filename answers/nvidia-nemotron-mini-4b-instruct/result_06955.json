@@ -1,0 +1,9 @@
+{
+  "id": 6955,
+  "title": "Volume Function",
+  "prompt": "Create a function that takes the length, width, and height of a box as arguments and returns its volume.\nSample Input: 2, 3, 4\nSample Output: 24\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n\n```python\ndef calculate_box_volume(length, width, height):\n    \"\"\"\n    Calculates the volume of a box with given length, width, and height.\n\n    Parameters:\n    length (float): The length of the box.\n    width (float): The width of the box.\n    height (float): The height of the box.\n\n    Returns:\n    float: The volume of the box.\n    \"\"\"\n\n    # Check if the inputs are positive numbers\n    if not all(isinstance(dim, (int, float)) and dim > 0 for dim in (length, width, height)):\n        raise ValueError(\"All dimensions must be positive numbers.\")\n\n    # Calculate and return the volume\n    return length * width * height\n```\n\nYou can use this function like this:\n\n```python\nprint(calculate_box_volume(2, 3, 4))  # Output: 24\n```\n\nThis function checks if the inputs are positive numbers and raises a `ValueError` if any of them are not. It then calculates the volume by multiplying the length, width, and height and returns the result.",
+  "error": null,
+  "elapsed_seconds": 2.83,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

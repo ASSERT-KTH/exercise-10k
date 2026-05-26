@@ -1,0 +1,9 @@
+{
+  "id": 6104,
+  "title": "List Sorting",
+  "prompt": "Write a program that takes a list of integers as input, and returns a new list containing the same integers in sorted order.\nSample Input: [4, 2, 9, 6, 5]\nSample Output: [2, 4, 5, 6, 9]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef sort_list(input_list):\n    \"\"\"\n    Takes a list of integers as input and returns a new list containing the same integers in sorted order.\n\n    :param input_list: List of integers\n    :return: Sorted list of integers\n    \"\"\"\n    # Check if the input is a list and contains only integers\n    if not isinstance(input_list, list) or not all(isinstance(num, int) for num in input_list):\n        raise ValueError(\"Input should be a list of integers.\")\n\n    # Sort the list and return the result\n    return sorted(input_list)\n```\nHere's an example of how to use this function:\n```python\nsample_input = [4, 2, 9, 6, 5]\nsorted_output = sort_list(sample_input)\nprint(sorted_output)  # Output: [2, 4, 5, 6, 9]\n```\nThis function first checks if the input is a list and contains only integers. If not, it raises a `ValueError`. Then, it uses the built-in `sorted()` function to sort the list and returns the result.",
+  "error": null,
+  "elapsed_seconds": 3.02,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

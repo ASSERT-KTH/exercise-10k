@@ -1,0 +1,9 @@
+{
+  "id": 7527,
+  "title": "Student Grades Dictionary",
+  "prompt": "Create a program that takes a dictionary of student names as keys and their corresponding grades as values. The program should calculate the average grade of all students and then print out the names of students who have a grade above the average.\nSample Input: {\"John\": 85, \"Alice\": 92, \"Bob\": 78}\nSample Output: Alice\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef calculate_average_grade(students):\n    \"\"\"Calculate the average grade of all students.\"\"\"\n    grades = [grade for name, grade in students.items()]\n    return sum(grades) / len(grades)\n\ndef get_students_above_average(students, average_grade):\n    \"\"\"Print the names of students who have a grade above the average.\"\"\"\n    above_average = [name for name, grade in students.items() if grade > average_grade]\n    print(\", \".join(above_average))\n\n# Example usage\nstudents = {\"John\": 85, \"Alice\": 92, \"Bob\": 78}\naverage_grade = calculate_average_grade(students)\nget_students_above_average(students, average_grade)\n```\n\nThis program defines two functions: `calculate_average_grade()` and `get_students_above_average()`. The first function calculates the average grade of all students by summing up their grades and dividing by the number of students. The second function prints the names of students who have a grade above the average. In the example usage, the program calculates the average grade and then prints the name of the student with the highest grade (`Alice`).",
+  "error": null,
+  "elapsed_seconds": 2.9,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

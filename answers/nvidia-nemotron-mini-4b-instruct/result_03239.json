@@ -1,0 +1,9 @@
+{
+  "id": 3239,
+  "title": "Validate IP Address",
+  "prompt": "Write a program to validate an IP address.\nSample Input: 192.168.0.1\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that validates an IP address using regular expressions. This approach is simple, efficient, and can handle most common IP address formats.\n\n```python\nimport re\n\ndef is_valid_ip(ip_address):\n    \"\"\"\n    Validates an IP address using a regular expression.\n\n    :param ip_address: str, the IP address to validate\n    :return: bool, True if the IP address is valid, False otherwise\n    \"\"\"\n    # Regular expression pattern for a valid IP address\n    pattern = r'^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$'\n\n    # Check if the IP address matches the pattern\n    return bool(re.match(pattern, ip_address))\n\n# Test the function with a sample input\nip_address = \"192.168.0.1\"\nprint(f\"Is '{ip_address}' a valid IP address? {is_valid_ip(ip_address)}\")\n```\n\nThis program defines a function `is_valid_ip` that takes an IP address as a string and returns `True` if it's a valid IP address and `False` otherwise. The function uses a regular expression pattern to match the format of a valid IP address (four octets separated by dots, where each octet is between 0 and 255). The `re.match` function checks if the IP address matches the pattern.",
+  "error": null,
+  "elapsed_seconds": 4.09,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

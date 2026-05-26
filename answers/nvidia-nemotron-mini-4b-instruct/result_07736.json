@@ -1,0 +1,9 @@
+{
+  "id": 7736,
+  "title": "Conditional Student Grades",
+  "prompt": "Write a program that takes a student's score as input and outputs their corresponding grade based on the following conditions: A (90-100), B (80-89), C (70-79), D (60-69), F (below 60). If the score is not within the range of 0 to 100, output 'Invalid score'.\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef get_grade(score):\n    \"\"\"\n    Takes a student's score as input and outputs their corresponding grade.\n\n    :param score: int, the student's score between 0 and 100\n    :return: str, the student's grade (A, B, C, D, or F) or 'Invalid score' if the score is not within the range\n    \"\"\"\n    if not isinstance(score, int) or score < 0 or score > 100:\n        return 'Invalid score'\n\n    if score >= 90:\n        return 'A'\n    elif score >= 80:\n        return 'B'\n    elif score >= 70:\n        return 'C'\n    elif score >= 60:\n        return 'D'\n    else:\n        return 'F'\n\n# Example usage:\nscore = int(input(\"Enter a student's score between 0 and 100: \"))\ngrade = get_grade(score)\n\nif grade != 'Invalid score':\n    print(f\"The student's grade is {grade}.\")\nelse:\n    print(\"Invalid score. Please enter a score between 0 and 100.\")\n```\n\nThis program defines a function `get_grade` that takes a student's score as an integer and returns their corresponding grade. The function checks if the input is valid (i.e., an integer between 0 and 100) and returns 'Invalid score' if it's not. Otherwise, it calculates the grade based on the given conditions and returns the corresponding letter grade. The example usage at the end of the program demonstrates how to use the function to get a student's grade based on their score.",
+  "error": null,
+  "elapsed_seconds": 4.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

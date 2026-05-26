@@ -1,0 +1,9 @@
+{
+  "id": 3235,
+  "title": "Generate Permutations",
+  "prompt": "Write a program to generate all permutations of a given string.\nSample Input: abc\nSample Output: ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates all permutations of a given string using recursion:\n\n```python\ndef generate_permutations(string):\n    if len(string) == 1:\n        return [string]\n    else:\n        permutations = []\n        for i in range(len(string)):\n            next_permutations = generate_permutations(string[:i] + string[i+1:])\n            for next_perm in next_permutations:\n                permutations.append(string[i] + next_perm)\n        return permutations\n\n# Test the function with the sample input\ninput_string = 'abc'\nprint(generate_permutations(input_string))\n```\n\nThis program defines a function `generate_permutations` that takes a string as input and returns a list of all its permutations. The base case is when the input string has only one character, in which case the function returns a list containing that character. Otherwise, the function iterates over each character in the input string, recursively generates all permutations of the substring before that character, and then concatenates the character with each of those permutations to create a new permutation. The resulting permutations are then added to a list and returned by the function.\n\nWhen you run this program with the sample input 'abc', it will output:\n\n```\n['abc', 'acb', 'bac', 'bca', 'cab', 'cba']\n```\n\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.62,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

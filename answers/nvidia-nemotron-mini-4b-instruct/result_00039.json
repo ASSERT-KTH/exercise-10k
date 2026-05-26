@@ -1,0 +1,9 @@
+{
+  "id": 39,
+  "title": "Function to Check for Valid Dates",
+  "prompt": "Create a function that takes a string as input and returns True if it's a valid date in the format YYYY-MM-DD, False otherwise.\nSample Input: 2022-09-01\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\nimport re\n\ndef is_valid_date(date_string: str) -> bool:\n    \"\"\"\n    Returns True if the given string is a valid date in the format YYYY-MM-DD,\n    and False otherwise.\n\n    :param date_string: The string to check for validity.\n    :return: True if the string is a valid date, False otherwise.\n    \"\"\"\n    # Regular expression pattern for a valid date in the format YYYY-MM-DD\n    pattern = r'^\\d{4}-[012][0-9]-(0[1-9]|1[0-2])$'\n\n    # Check if the string matches the pattern using the re module\n    return bool(re.match(pattern, date_string))\n```\nHere's how you can use this function:\n```python\nprint(is_valid_date('2022-09-01'))  # Output: True\nprint(is_valid_date('invalid date'))  # Output: False\n```\nThis function uses a regular expression pattern to check if the input string matches the format `YYYY-MM-DD`. The `re.match()` function is used to check if the string starts with a match to the pattern, and the `bool()` function is used to convert the result to a boolean value.",
+  "error": null,
+  "elapsed_seconds": 4.66,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

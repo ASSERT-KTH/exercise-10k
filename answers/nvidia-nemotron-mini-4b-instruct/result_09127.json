@@ -1,0 +1,9 @@
+{
+  "id": 9127,
+  "title": "Calculating Average Grades",
+  "prompt": "Write a program that calculates the average of a set of grades. The program should take in a list of numerical grades as input and output the average grade. The average should be calculated by summing all the grades and dividing by the total number of grades.\nSample Input: [90, 85, 95, 88, 92]\nSample Output: 90.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_average(grades):\n    \"\"\"\n    Calculates the average of a list of numerical grades.\n\n    :param grades: List of numerical grades\n    :return: Average grade as a float\n    \"\"\"\n    # Check if the input is a non-empty list\n    if not isinstance(grades, list) or len(grades) == 0:\n        raise ValueError(\"Input should be a non-empty list of numerical grades.\")\n\n    # Calculate the sum of all grades\n    total_grade = sum(grades)\n\n    # Calculate the average by dividing the sum by the number of grades\n    average_grade = total_grade / len(grades)\n\n    return average_grade\n```\nYou can use this function by passing a list of numerical grades as an argument, like this:\n```python\ngrades = [90, 85, 95, 88, 92]\naverage = calculate_average(grades)\nprint(f\"The average grade is: {average:.1f}\")  # Output: The average grade is: 90.0\n```\nThis program checks if the input is a non-empty list, calculates the sum of all grades, and then divides the sum by the number of grades to get the average. The `:.1f` format specifier is used to display the average with one decimal place.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

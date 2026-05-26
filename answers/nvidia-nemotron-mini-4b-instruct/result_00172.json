@@ -1,0 +1,9 @@
+{
+  "id": 172,
+  "title": "Static Typing",
+  "prompt": "Write a program to demonstrate static typing, where the data type of a variable is known at compile time.\nSample Input: None\nSample Output: Error: cannot assign string to integer variable\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that demonstrates static typing, where the data type of a variable is known at compile time. In this example, I'll use a custom class for integers to enforce the static typing.\n\n```python\nclass Int:\n    def __init__(self, value):\n        self.value = value\n\n    def __add__(self, other):\n        if not isinstance(other, Int):\n            raise TypeError(\"Cannot add Int and non-Int\")\n        return Int(self.value + other.value)\n\n\ndef main():\n    try:\n        # Static typing error\n        a = 1\n        b = \"2\"\n        c = a + b\n        print(c)\n\n    except TypeError as e:\n        print(e)\n\n\nif __name__ == \"__main__\":\n    main()\n```\n\nIn this program, we define a custom `Int` class that represents integers. The `__add__` method is overridden to ensure that only two `Int` objects can be added together. In the `main` function, we try to add a string to an integer, which results in a `TypeError`. The static typing ensures that the compiler catches this error at compile time, preventing runtime errors.\n\nWhen you run this program, you should see the following output:\n\n```\nTypeError: cannot add Int and non-Int\n```",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

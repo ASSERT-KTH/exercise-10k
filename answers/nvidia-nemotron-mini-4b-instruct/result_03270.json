@@ -1,0 +1,9 @@
+{
+  "id": 3270,
+  "title": "Simulating Coin Flips",
+  "prompt": "Create a program that uses a while loop to simulate coin flips until the user chooses to quit.\nSample Input: flip\nSample Output: Heads\n",
+  "answer": "Sure, I'd be happy to help you create a program that simulates coin flips using a while loop. Here's an example in Python:\n\n```python\nimport random\n\ndef flip_coin():\n    \"\"\"Simulate a coin flip and return 'Heads' or 'Tails'.\"\"\"\n    return 'Heads' if random.randint(0, 1) == 0 else 'Tails'\n\ndef main():\n    \"\"\"Main function to run the coin flip simulation.\"\"\"\n    print(\"Welcome to the Coin Flip Simulator!\")\n\n    while True:\n        choice = input(\"Do you want to flip a coin? (yes/no): \").lower()\n\n        if choice == 'yes':\n            print(flip_coin())\n        elif choice == 'no':\n            print(\"Thanks for playing!\")\n            break\n        else:\n            print(\"Sorry, I didn't understand that. Please enter 'yes' or 'no'.\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program defines two functions: `flip_coin()` to simulate a coin flip and `main()` to run the simulation. The `main()` function uses a while loop to keep asking the user if they want to flip a coin until they enter 'no'. Inside the loop, it calls the `flip_coin()` function to simulate a coin flip and prints the result.\n\nHere's an example of how the program would run:\n\n```\nWelcome to the Coin Flip Simulator!\nDo you want to flip a coin? (yes/no): yes\nHeads\nDo you want to flip a coin? (yes/no): no\nThanks for playing!\n```",
+  "error": null,
+  "elapsed_seconds": 3.85,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

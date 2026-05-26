@@ -1,0 +1,9 @@
+{
+  "id": 6586,
+  "title": "Check if a String is a Palindrome",
+  "prompt": "Write a program to check if a given string is a palindrome or not.\nSample Input: madam\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given string is a palindrome or not:\n\n```python\ndef is_palindrome(s):\n    \"\"\"Check if a given string is a palindrome.\n\n    A palindrome is a word, phrase, number, or other sequence of characters that reads the same forward and backward,\n    ignoring spaces, punctuation, and capitalization.\n\n    Parameters:\n    s (str): The string to check for palindromeness.\n\n    Returns:\n    bool: True if the string is a palindrome, False otherwise.\n    \"\"\"\n    # Remove non-alphanumeric characters and convert to lowercase\n    s = ''.join(c.lower() for c in s if c.isalnum())\n\n    # Check if the string is equal to its reverse\n    return s == s[::-1]\n\n# Test the function\ns = input(\"Enter a string: \")\nprint(f\"{s} is a palindrome: {is_palindrome(s)}\")\n```\n\nThis program first removes any non-alphanumeric characters from the input string and converts it to lowercase. Then, it checks if the string is equal to its reverse, which is a simple way to check if it's a palindrome. The function returns `True` if the string is a palindrome and `False` otherwise. The test part of the program prompts the user to enter a string, calls the function with that string, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 4.74,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

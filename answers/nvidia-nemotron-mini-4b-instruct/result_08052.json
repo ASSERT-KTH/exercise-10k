@@ -1,0 +1,9 @@
+{
+  "id": 8052,
+  "title": "Simple Game with Levels",
+  "prompt": "Write a program that uses an if/else statement to play a simple game with levels based on user input.\nSample Input: play level 1\nSample Output: Level 1 completed\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program defines a function `play_game()` that prompts the user for a level number, validates the input, and then plays the corresponding level. The levels are simple messages that are displayed when the user completes a level.\n\n```python\ndef play_game():\n    \"\"\"\n    Plays a simple game with levels based on user input.\n    \"\"\"\n    levels = {\n        1: \"Level 1 completed. Good job!\",\n        2: \"Level 2 completed. You're getting better!\",\n        3: \"Level 3 completed. Well done! You've mastered the basics.\",\n    }\n\n    while True:\n        level_number = int(input(\"Enter the level number (1-3): \"))\n\n        if 1 <= level_number <= 3:\n            break\n        else:\n            print(\"Invalid level number. Please enter a number between 1 and 3.\")\n\n    print(levels[level_number])\n\n\nif __name__ == \"__main__\":\n    play_game()\n```\n\nThis program defines a dictionary `levels` that maps level numbers to completion messages. The `play_game()` function prompts the user for a level number, validates the input, and then prints the corresponding completion message. The `while` loop ensures that the user enters a valid level number before proceeding to the next level.",
+  "error": null,
+  "elapsed_seconds": 3.2,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

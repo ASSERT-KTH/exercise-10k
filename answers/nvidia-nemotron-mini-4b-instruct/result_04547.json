@@ -1,0 +1,9 @@
+{
+  "id": 4547,
+  "title": "String Concatenation",
+  "prompt": "Create a program that concatenates two or more given strings.\nSample Input: Hello, World\nSample Output: Hello World\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a simple Python program that concatenates two or more given strings:\n\n```python\ndef concatenate_strings(*args):\n    \"\"\"\n    Concatenates two or more given strings.\n\n    :param args: Variable number of arguments, which can be strings.\n    :return: A single string that is the concatenation of all input strings.\n    \"\"\"\n    # Check if at least one argument is provided\n    if len(args) < 1:\n        raise ValueError(\"At least one string argument is required.\")\n\n    # Concatenate all input strings and return the result\n    return ''.join(args)\n\n# Example usage\ninput_strings = \"Hello, \", \"World\"\noutput_string = concatenate_strings(*input_strings)\nprint(output_string)  # Output: Hello World\n```\n\nThis program defines a function `concatenate_strings` that takes any number of string arguments using the `*args` syntax. It first checks if at least one argument is provided, and then concatenates all input strings using the `join()` method. The example usage demonstrates how to call the function with two input strings.",
+  "error": null,
+  "elapsed_seconds": 2.7,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

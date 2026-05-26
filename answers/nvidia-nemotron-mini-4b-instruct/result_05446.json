@@ -1,0 +1,9 @@
+{
+  "id": 5446,
+  "title": "Grade Calculator",
+  "prompt": "Write a program that takes a score as input and prints out the corresponding grade\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a score as input and prints out the corresponding grade:\n```python\ndef get_grade(score):\n    \"\"\"\n    Takes a score as input and returns the corresponding grade.\n\n    :param score: The score as an integer between 0 and 100.\n    :return: The corresponding grade as a string ('A', 'B', 'C', 'D', or 'F').\n    \"\"\"\n    if score < 0 or score > 100:\n        raise ValueError(\"Score must be an integer between 0 and 100.\")\n\n    if score >= 90:\n        return \"A\"\n    elif score >= 80:\n        return \"B\"\n    elif score >= 70:\n        return \"C\"\n    elif score >= 60:\n        return \"D\"\n    else:\n        return \"F\"\n\n# Get user input\nscore = int(input(\"Enter a score between 0 and 100: \"))\n\n# Print the corresponding grade\ngrade = get_grade(score)\nprint(f\"Your grade is {grade}.\")\n```\nThis program defines a function `get_grade` that takes a score as input and returns the corresponding grade. The function checks if the input is valid (between 0 and 100) and raises a `ValueError` if it's not. Then, it uses an `if-elif-elif-else` statement to determine the grade based on the score. Finally, the program gets user input, calls the `get_grade` function, and prints the corresponding grade.",
+  "error": null,
+  "elapsed_seconds": 3.81,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

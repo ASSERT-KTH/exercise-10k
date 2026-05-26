@@ -1,0 +1,9 @@
+{
+  "id": 2997,
+  "title": "Check if List is Rotation",
+  "prompt": "Write a program that checks if a given list is a rotation of another given list.\nSample Input: [[1, 2, 3, 4, 5], [3, 4, 5, 1, 2]]\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given list is a rotation of another given list:\n\n```python\ndef is_rotation(list1, list2):\n    \"\"\"\n    Check if list1 is a rotation of list2.\n\n    :param list1: The first list to check.\n    :param list2: The second list to check against.\n    :return: True if list1 is a rotation of list2, False otherwise.\n    \"\"\"\n\n    # Concatenate list2 with itself to create a single list\n    combined = list1 + list2\n\n    # Check if list1 is a substring of the combined list\n    return list1 in combined\n\n# Example usage\nlist1 = [[1, 2, 3, 4, 5], [3, 4, 5, 1, 2]]\nlist2 = [[3, 4, 5, 1, 2]]\n\nprint(is_rotation(list1, list2))  # Output: True\n```\n\nThis program works by concatenating the two input lists and checking if the first list is a substring of the concatenated list. If it is, then the first list is a rotation of the second list.",
+  "error": null,
+  "elapsed_seconds": 4.45,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

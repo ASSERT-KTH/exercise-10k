@@ -1,0 +1,9 @@
+{
+  "id": 4858,
+  "title": "List Binary Search",
+  "prompt": "Write a program that takes a sorted list and an element as input, and returns the index of the element if it exists in the list using a binary search algorithm.\nSample Input: [1, 2, 3, 4, 5], 3\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that implements a binary search algorithm to find the index of an element in a sorted list:\n\n```python\ndef binary_search(sorted_list, element):\n    \"\"\"\n    Performs a binary search on the given sorted list to find the index of the element.\n\n    :param sorted_list: A sorted list of elements\n    :param element: The element to search for\n    :return: The index of the element if it exists in the list, otherwise -1\n    \"\"\"\n\n    # Initialize the left and right indices\n    left, right = 0, len(sorted_list) - 1\n\n    # Continue searching until the left index is greater than the right index\n    while left <= right:\n        mid = (left + right) // 2  # Calculate the middle index\n\n        # Check if the middle element is equal to the target element\n        if sorted_list[mid] == element:\n            return mid  # Return the index if found\n\n        # If the middle element is less than the target element,\n        # search the right half of the list\n        elif sorted_list[mid] < element:\n            left = mid + 1  # Update the left index\n\n        # If the middle element is greater than the target element,\n        # search the left half of the list\n        else:\n            right = mid - 1  # Update the right index\n\n    # If the element is not found, return -1\n    return -1\n```\n\nYou can use this function as follows:\n\n```python\nsorted_list = [1, 2, 3, 4, 5]\nelement = 3\nindex = binary_search(sorted_list, element)\nprint(index)  # Output: 2\n```",
+  "error": null,
+  "elapsed_seconds": 4.24,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

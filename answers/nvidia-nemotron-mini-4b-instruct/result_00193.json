@@ -1,0 +1,9 @@
+{
+  "id": 193,
+  "title": "Password Validator",
+  "prompt": "Write a program that uses a for loop to check if a password meets certain criteria (e.g., length, uppercase, lowercase, digits).\nSample Input: password: P@ssw0rd\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given password meets certain criteria using a for loop. This program checks for the following criteria:\n\n1. Length (at least 8 characters)\n2. Uppercase letter\n3. Lowercase letter\n4. Digits\n\n```python\ndef check_password(password):\n    \"\"\"\n    Check if a password meets certain criteria.\n\n    :param password: str - The password to check.\n    :return: bool - True if the password meets the criteria, False otherwise.\n    \"\"\"\n\n    # Check length\n    if len(password) < 8:\n        return False\n\n    # Check for uppercase letter\n    if not any(char.isupper() for char in password):\n        return False\n\n    # Check for lowercase letter\n    if not any(char.islower() for char in password):\n        return False\n\n    # Check for digits\n    if not any(char.isdigit() for char in password):\n        return False\n\n    return True\n\n\n# Sample input and output\npassword = \"P@ssw0rd\"\nif check_password(password):\n    print(f\"True\")\nelse:\n    print(f\"False\")\n```\n\nThis program defines a function `check_password` that checks the given password against the specified criteria. The function returns `True` if the password meets all the criteria and `False` otherwise. The sample input and output demonstrate the usage of the function.",
+  "error": null,
+  "elapsed_seconds": 3.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

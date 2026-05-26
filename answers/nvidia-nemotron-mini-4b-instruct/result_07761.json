@@ -1,0 +1,9 @@
+{
+  "id": 7761,
+  "title": "Personalized Greeter",
+  "prompt": "Create a program that takes a user's name as input and prints out a personalized greeting message. The program should also ask for the user's age and print out a message indicating whether they are eligible to vote or not.\nSample Input: John\n25\nSample Output: Hello, John! You are 25 years old. You are eligible to vote.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef greet_and_check_voting_eligibility():\n    \"\"\"\n    Greet the user, ask for their name and age, and print a personalized greeting message and a message indicating whether they are eligible to vote or not.\n    \"\"\"\n    # Get the user's name\n    user_name = input(\"Please enter your name: \")\n\n    # Get the user's age\n    while True:\n        try:\n            user_age = int(input(f\"Please enter your age for {user_name}: \"))\n            break\n        except ValueError:\n            print(\"That's not a valid age. Please try again.\")\n\n    # Check if the user is eligible to vote\n    if user_age >= 18:\n        print(f\"Hello, {user_name}! You are {user_age} years old. You are eligible to vote.\")\n    else:\n        print(f\"Hello, {user_name}! You are {user_age} years old. You are not eligible to vote yet.\")\n\n# Call the function\ngreet_and_check_voting_eligibility()\n```\nThis program defines a function `greet_and_check_voting_eligibility()` that gets the user's name, age, and checks if they are eligible to vote. The function then prints out a personalized greeting message and a message indicating whether they are eligible to vote or not. The function also includes a while loop to ensure that the user enters a valid age.",
+  "error": null,
+  "elapsed_seconds": 5.11,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

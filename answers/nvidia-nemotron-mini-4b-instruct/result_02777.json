@@ -1,0 +1,9 @@
+{
+  "id": 2777,
+  "title": "Word Scramble",
+  "prompt": "Write a program that takes a word as input and scrambles its letters.\nSample Input: hello\nSample Output: lleoh\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a word as input and scrambles its letters using the `random.shuffle()` function from the `random` module:\n\n```python\nimport random\n\ndef scramble_word(word):\n    \"\"\"\n    Scramble the letters of a given word.\n\n    :param word: str - The word to scramble.\n    :return: str - The scrambled word.\n    \"\"\"\n    # Ensure the input is a string\n    if not isinstance(word, str):\n        raise TypeError(\"Input must be a string.\")\n\n    # Shuffle the letters of the word\n    shuffled_word = ''.join(random.sample(word, len(word)))\n\n    return shuffled_word\n\n# Get user input\nuser_input = input(\"Enter a word to scramble its letters: \")\n\n# Scramble the word and print the result\nscrambled_word = scramble_word(user_input)\nprint(f\"The scrambled word is: {scrambled_word}\")\n```\n\nThis program defines a function `scramble_word()` that takes a word as input, shuffles its letters using `random.shuffle()`, and returns the scrambled word. The main part of the program gets user input, calls the function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

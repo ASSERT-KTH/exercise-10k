@@ -1,0 +1,9 @@
+{
+  "id": 4739,
+  "title": "Function Generator",
+  "prompt": "Create a function that uses a generator to produce a sequence of values on the fly.\nSample Input: None\nSample Output: A generator object\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example Python function that uses a generator to produce a sequence of values on the fly. This function will generate a sequence of even numbers starting from 0 up to a specified limit. You can replace the `generate_even_numbers` function with any other generator function that produces a sequence of values.\n\n```python\ndef generate_even_numbers(limit):\n    \"\"\"\n    A generator function that produces a sequence of even numbers on the fly.\n\n    :param limit: The upper limit of the sequence.\n    :return: A generator object that yields even numbers.\n    \"\"\"\n    if limit < 0:\n        raise ValueError(\"Limit must be non-negative\")\n\n    # Yield the first even number (0)\n    yield 0\n\n    # Generate even numbers starting from 2\n    for num in range(2, limit + 1, 2):\n        # Yield each even number in the sequence\n        yield num\n\n# Example usage:\neven_gen = generate_even_numbers(10)\n\n# Print even numbers one by one\nfor num in even_gen:\n    print(num)\n```\n\nThis function uses a `yield` statement to produce a sequence of even numbers on the fly. When you iterate over the generator, it yields each even number one by one, without storing them all in memory at once. This makes the function memory-efficient and suitable for generating large sequences of values.",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

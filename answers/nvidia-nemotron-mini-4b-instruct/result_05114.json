@@ -1,0 +1,9 @@
+{
+  "id": 5114,
+  "title": "Generic Data Types",
+  "prompt": "Work with generic data types to create reusable functions or classes that can handle multiple data types.\nSample Input: function identity<T>(x: T): T { return x; }\nSample Output: Usage examples of the generic function\n",
+  "answer": "Sure, I'd be happy to help! The given code snippet defines a generic function `identity` that takes a type parameter `T` and returns the same value as its input. This is a common pattern used to create reusable functions or classes that can handle multiple data types. Here's how you can use this generic function and some usage examples:\n\n```typescript\n// Usage examples of the generic function\n\n// Function signature\nfunction <T>(x: T): T {\n  return x;\n}\n\n// Usage example 1: Integer\nconst intIdentity = identity<number>;\nconsole.log(intIdentity(5)); // Output: 5\n\n// Usage example 2: String\nconst strIdentity = identity<string>;\nconsole.log(strIdentity(\"Hello\")); // Output: Hello\n\n// Usage example 3: Array\nconst arrIdentity = identity<number[]>;\nconsole.log(arrIdentity([1, 2, 3])); // Output: [1, 2, 3]\n\n// Usage example 4: Object\nconst objIdentity = identity<{ name: string; age: number }>;\nconsole.log(objIdentity({ name: \"John\", age: 30 })); // Output: { name: \"John\", age: 30 }\n```\n\nIn this example, the generic function `identity` can be used with any data type that satisfies its type parameter `T`. This makes it easy to create reusable functions or classes that can handle multiple data types, which can be beneficial in larger projects with complex data structures.",
+  "error": null,
+  "elapsed_seconds": 3.52,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

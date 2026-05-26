@@ -1,0 +1,9 @@
+{
+  "id": 5953,
+  "title": "Chatbot",
+  "prompt": "Create a program that simulates a chatbot. The program should ask for user input and respond based on a set of predefined rules (e.g., 'hello' -> 'Hi, how are you?').\nSample Input: hello\nSample Output: Hi, how are you?\n",
+  "answer": "Sure, I'd be happy to help you create a simple chatbot program. Here's an example using Python and the `re` module for regular expressions to match user inputs with predefined responses. You can expand this to include more complex logic and user inputs as needed.\n\n```python\nimport re\n\n# Define a dictionary of predefined responses\nresponses = {\n    \"hello\": \"Hi, how are you?\",\n    \"hi\": \"Hello! How can I assist you today?\",\n    \"how are you\": \"I'm doing well, thank you for asking. How can I help you?\",\n    # Add more responses as needed\n}\n\ndef chatbot():\n    while True:\n        user_input = input(\"You: \").strip().lower()\n\n        # Match user input with predefined responses\n        for pattern, response in responses.items():\n            if re.search(pattern, user_input):\n                print(f\"Chatbot: {response}\")\n                break\n        else:\n            print(\"Chatbot: I'm sorry, I didn't understand that. Please try again.\")\n\n# Start the chatbot\nchatbot()\n```\n\nThis program will continuously ask for user input and respond with a predefined message based on the user's input. You can add more responses to the `responses` dictionary to make the chatbot more intelligent.",
+  "error": null,
+  "elapsed_seconds": 3.64,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

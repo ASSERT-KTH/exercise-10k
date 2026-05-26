@@ -1,0 +1,9 @@
+{
+  "id": 507,
+  "title": "List Filtering",
+  "prompt": "Write a program to filter out elements from a given list that do not meet a specific condition.\nSample Input: [1, 2, 3, 4, 5], even numbers\nSample Output: [2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that filters out elements from a given list that do not meet a specific condition (in this case, only keeping even numbers):\n```python\ndef filter_even(numbers):\n    \"\"\"\n    Filters out elements from a given list that do not meet a specific condition.\n\n    Parameters:\n    numbers (list): The list of numbers to filter.\n\n    Returns:\n    list: A new list containing only the elements that meet the condition.\n    \"\"\"\n    # Check if the input is a non-empty list\n    if not isinstance(numbers, list) or len(numbers) == 0:\n        raise ValueError(\"Input should be a non-empty list\")\n\n    # Filter out even numbers and return the result\n    return [num for num in numbers if num % 2 == 0]\n\n# Example usage\nnumbers = [1, 2, 3, 4, 5]\nfiltered_numbers = filter_even(numbers)\nprint(filtered_numbers)  # Output: [2, 4]\n```\nThis function first checks if the input is a non-empty list. If not, it raises a `ValueError`. Then, it uses a list comprehension to filter out even numbers from the input list and returns the result. The list comprehension checks if each number is divisible by 2 (i.e., if it's even) using the modulo operator (`%`).",
+  "error": null,
+  "elapsed_seconds": 3.23,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

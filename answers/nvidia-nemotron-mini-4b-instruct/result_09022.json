@@ -1,0 +1,9 @@
+{
+  "id": 9022,
+  "title": "Greeting Function",
+  "prompt": "Create a function that takes a name as an argument and returns a personalized greeting\nSample Input: John\nSample Output: Hello, John!\n",
+  "answer": "Sure, I'd be happy to help you create a function for that! Here's an example Python function that meets your requirements:\n\n```python\ndef personalize_greeting(name):\n    \"\"\"\n    This function takes a name as an argument and returns a personalized greeting.\n\n    :param name: str - The name of the person to greet.\n    :return: str - A personalized greeting.\n    \"\"\"\n    if not isinstance(name, str) or not name:\n        raise ValueError(\"The 'name' argument must be a non-empty string.\")\n\n    return f\"Hello, {name}!\"\n```\n\nThis function checks if the input is a non-empty string, and raises a `ValueError` if it's not. Then, it constructs and returns a personalized greeting using an f-string. Here are some examples of how you can use this function:\n\n```python\n>>> personalize_greeting(\"John\")\n'Hello, John!'\n\n>>> personalize_greeting(\"\")\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\n  File \"<stdin>\", line 5, in personalize_greeting\nValueError: The 'name' argument must be a non-empty string.\n\n>>> personalize_greeting(123)\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\n  File \"<stdin>\", line 5, in personalize_greeting\nValueError: The 'name' argument must be a non-empty string.\n```",
+  "error": null,
+  "elapsed_seconds": 3.47,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

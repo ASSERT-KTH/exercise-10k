@@ -1,0 +1,9 @@
+{
+  "id": 6382,
+  "title": "Grade Checker",
+  "prompt": "Develop a program that takes in a student's score and prints out the corresponding grade. If the score is 90 or above, the grade is A, if it's between 80 and 89, the grade is B, if it's between 70 and 79, the grade is C, if it's between 60 and 69, the grade is D, otherwise the grade is F\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef grade_student(score):\n    \"\"\"\n    Takes in a student's score and prints out the corresponding grade.\n\n    :param score: The student's score as an integer between 0 and 100\n    :return: None\n    \"\"\"\n\n    # Check if the score is within the valid range\n    if not (0 <= score <= 100):\n        raise ValueError(\"Score must be an integer between 0 and 100\")\n\n    # Determine the grade based on the score\n    if score >= 90:\n        grade = \"A\"\n    elif score >= 80:\n        grade = \"B\"\n    elif score >= 70:\n        grade = \"C\"\n    elif score >= 60:\n        grade = \"D\"\n    else:\n        grade = \"F\"\n\n    # Print the grade\n    print(f\"The grade is {grade}.\")\n\n# Example usage\ngrade_student(85)\n```\n\nThis program defines a function `grade_student` that takes in a student's score as an integer between 0 and 100. It checks if the score is valid and then determines the corresponding grade using an `if-elif-else` statement. Finally, it prints out the grade. The example usage at the end of the program calls the function with a score of 85 and prints out the corresponding grade.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

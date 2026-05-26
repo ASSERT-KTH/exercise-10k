@@ -1,0 +1,9 @@
+{
+  "id": 257,
+  "title": "Array Disjoint",
+  "prompt": "Write a program that takes two arrays as input, and returns True if the two arrays have no elements in common, and False otherwise.\nSample Input: [1, 2, 3], [4, 5, 6]\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef arrays_have_no_common_elements(arr1, arr2):\n    \"\"\"\n    Returns True if the two input arrays have no elements in common, and False otherwise.\n\n    :param arr1: The first array to compare\n    :param arr2: The second array to compare\n    :return: True if the arrays have no common elements, False otherwise\n    \"\"\"\n    # Convert the arrays to sets to remove duplicates and enable faster lookup\n    set1 = set(arr1)\n    set2 = set(arr2)\n\n    # Check if the sets have no elements in common (i.e., their intersection is empty)\n    return len(set1 & set2) == 0\n```\nHere's an example of how you can use this function:\n```python\nprint(arrays_have_no_common_elements([1, 2, 3], [4, 5, 6]))  # Output: True\nprint(arrays_have_no_common_elements([1, 2, 3], [1, 2, 3, 4]))  # Output: False\n```\nThis function first converts the input arrays to sets to remove duplicates and enable faster lookup. Then, it checks if the intersection of the two sets (i.e., the common elements) is empty (i.e., has length 0). If it is, the function returns `True`, indicating that the arrays have no common elements. Otherwise, it returns `False`.",
+  "error": null,
+  "elapsed_seconds": 3.84,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7257,
+  "title": "User Information Printer",
+  "prompt": "Create a program that asks the user for their name and age, then prints out a greeting message with their name and tells them how old they will be in 5 years.\nSample Input: John\n25\nSample Output: Hello, John! In 5 years, you will be 30 years old.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef greet_and_predict_age():\n    \"\"\"\n    Asks the user for their name and age, then prints out a greeting message with their name\n    and tells them how old they will be in 5 years.\n    \"\"\"\n\n    # Get the user's name\n    user_name = input(\"Please enter your name: \")\n\n    # Get the user's age\n    while True:\n        try:\n            user_age = int(input(f\"Please enter your age: \"))\n            if user_age >= 0:\n                break\n            else:\n                print(\"Age must be a non-negative integer. Please try again.\")\n        except ValueError:\n            print(\"That's not a valid integer. Please try again.\")\n\n    # Calculate the user's age in 5 years\n    user_age_in_5_years = user_age + 5\n\n    # Print the greeting message and prediction\n    print(f\"Hello, {user_name}! In 5 years, you will be {user_age_in_5_years} years old.\")\n\n# Call the function\ngreet_and_predict_age()\n```\nThis program defines a function `greet_and_predict_age()` that prompts the user for their name and age, validates the input, calculates the user's age in 5 years, and prints out a greeting message with the user's name and prediction. The function is then called to run the program.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

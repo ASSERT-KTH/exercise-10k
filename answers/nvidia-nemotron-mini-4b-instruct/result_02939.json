@@ -1,0 +1,9 @@
+{
+  "id": 2939,
+  "title": "Number Digit Counter",
+  "prompt": "Write a program that uses a while loop to count the number of digits in a given number.\nSample Input: 12345\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses a while loop to count the number of digits in a given number:\n\n```python\ndef count_digits(n):\n    \"\"\"\n    Count the number of digits in a given number using a while loop.\n\n    :param n: The number to count the digits of.\n    :return: The number of digits in the given number.\n    \"\"\"\n    count = 0\n    while n != 0:\n        count += 1\n        n //= 10  # Divide n by 10 to remove its last digit\n\n    return count\n\n# Example usage:\nnumber = int(input(\"Enter a number: \"))\nnum_digits = count_digits(number)\nprint(f\"{number} has {num_digits} digits.\")\n```\n\nThis program defines a function `count_digits` that takes an integer `n` as input and returns the number of digits in `n`. The function uses a while loop to repeatedly divide `n` by 10 and increment the count until `n` becomes zero. The example usage prompts the user to enter a number, calls the `count_digits` function with that number, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 2.82,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

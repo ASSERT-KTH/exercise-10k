@@ -1,0 +1,9 @@
+{
+  "id": 175,
+  "title": "Explicit Type Conversion",
+  "prompt": "Write a program to demonstrate explicit type conversion, where the data type of a variable is manually converted.\nSample Input: None\nSample Output: Explicit conversion from string to integer\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that demonstrates explicit type conversion using the `int()` function, which converts a string to an integer. The program will print the message \"Explicit conversion from string to integer\" when the input is not a valid integer.\n\n```python\ndef explicit_conversion():\n    \"\"\"Demonstrates explicit type conversion from string to integer.\"\"\"\n\n    # Get user input\n    while True:\n        try:\n            user_input = input(\"Please enter an integer: \")\n            user_input_int = int(user_input)\n\n            # Check if the input is a valid integer\n            if not isinstance(user_input_int, int):\n                print(\"Explicit conversion from string to integer\")\n                break\n\n            # If the input is a valid integer, continue the program\n            print(f\"The integer {user_input} is converted to {user_input_int}.\")\n            break\n\n        except ValueError:\n            print(\"Invalid input. Please enter an integer.\")\n\n\nif __name__ == \"__main__\":\n    explicit_conversion()\n```\n\nThis program will keep asking the user for input until a valid integer is provided. If the user enters a non-integer value, the program will print \"Explicit conversion from string to integer\" and prompt the user to enter an integer again.",
+  "error": null,
+  "elapsed_seconds": 3.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

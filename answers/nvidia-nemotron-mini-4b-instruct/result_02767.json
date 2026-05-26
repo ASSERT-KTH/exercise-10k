@@ -1,0 +1,9 @@
+{
+  "id": 2767,
+  "title": "Rock, Paper, Scissors",
+  "prompt": "Write a program that takes the user's choice as input and determines the winner based on the game's rules.\nSample Input: rock\nSample Output: You win!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes the user's choice as input and determines the winner based on the game's rules (rock, paper, scissors). The program will then output a message indicating the winner.\n\n```python\ndef play_game():\n    \"\"\"Get user's choice, determine winner, and output result.\"\"\"\n\n    # Define the game rules\n    rules = {\n        \"rock\": [\"scissors\", \"tie\"],\n        \"paper\": [\"rock\", \"tie\"],\n        \"scissors\": [\"paper\", \"tie\"]\n    }\n\n    # Get user's choice\n    user_choice = input(\"Enter your choice (rock, paper, scissors): \").lower()\n\n    # Ensure valid input\n    while user_choice not in rules:\n        print(\"Invalid input. Please enter 'rock', 'paper', or 'scissors'.\")\n        user_choice = input(\"Enter your choice: \").lower()\n\n    # Determine winner\n    ai_choice = next(key for key, values in rules.items() if user_choice in values)\n\n    # Output result\n    if user_choice == ai_choice:\n        print(\"It's a tie!\")\n    elif user_choice in rules[ai_choice]:\n        print(f\"You win! The computer chose {ai_choice}.\")\n    else:\n        print(f\"The computer wins! You chose {user_choice}.\")\n\n# Call the function\nplay_game()\n```\n\nThis program defines the game rules as a dictionary and uses a generator expression to determine the computer's choice. The rest of the program gets the user's input, checks for valid input, determines the winner, and outputs the result.",
+  "error": null,
+  "elapsed_seconds": 5.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

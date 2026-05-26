@@ -1,0 +1,9 @@
+{
+  "id": 9635,
+  "title": "Function with Generator",
+  "prompt": "Write a function that uses a generator to produce a sequence of values on-the-fly.\nSample Input: 10\nSample Output: Sequence of values\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function generates a sequence of numbers from 1 to 10 on-the-fly, which can be useful for various purposes such as data processing, simulations, or generating random data.\n\n```python\ndef generate_sequence(n: int) -> str:\n    \"\"\"\n    Generates a sequence of values on-the-fly.\n\n    :param n: The number of values to generate.\n    :return: A string containing the sequence of values.\n    \"\"\"\n    if n < 1:\n        raise ValueError(\"Number of values must be at least 1.\")\n\n    # Use a generator to produce the sequence on-the-fly\n    sequence = (f\"{i}\" for i in range(1, n + 1))\n\n    # Join the sequence elements into a string with a space separator\n    return \" \".join(sequence)\n\n# Example usage\nn = 10\nprint(generate_sequence(n))  # Output: \"1 2 3 4 5 6 7 8 9 10\"\n```\n\nThis function first checks if the input `n` is valid (greater than or equal to 1). Then, it uses a generator expression to produce the sequence of numbers from 1 to `n` on-the-fly. Finally, it joins the sequence elements into a string with a space separator and returns the result.",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

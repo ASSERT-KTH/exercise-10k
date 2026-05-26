@@ -1,0 +1,9 @@
+{
+  "id": 3153,
+  "title": "Reverse Linked List",
+  "prompt": "Write a function to reverse a linked list.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [5, 4, 3, 2, 1]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that reverses a singly linked list. This function assumes that the input list contains integers and is already in the format of a linked list (i.e., each element is a node with a next attribute pointing to the next node).\n\n```python\nclass Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\n\ndef reverse_linked_list(head):\n    # Initialize previous and current nodes\n    prev = None\n    current = head\n\n    # Reverse the list by swapping the next pointers of nodes\n    while current is not None:\n        next_node = current.next\n        current.next = prev\n        prev = current\n        current = next_node\n\n    # Return the head of the reversed list\n    return prev\n```\n\nHere's an example of how to use this function:\n\n```python\n# Create a linked list [1, 2, 3, 4, 5]\nhead = Node(1)\ncurrent = head\nfor i in range(2, 6):\n    current.next = Node(i)\n    current = current.next\n\n# Reverse the linked list\nreversed_head = reverse_linked_list(head)\n\n# Print the reversed linked list\ncurrent = reversed_head\nwhile current is not None:\n    print(current.data, end=\" \")\n    current = current.next\n```\n\nOutput:\n\n```\n5 4 3 2 1\n```",
+  "error": null,
+  "elapsed_seconds": 5.18,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

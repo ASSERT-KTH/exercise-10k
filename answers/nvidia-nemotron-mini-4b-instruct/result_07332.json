@@ -1,0 +1,9 @@
+{
+  "id": 7332,
+  "title": "Output to URL",
+  "prompt": "Write a program that takes input from the user and writes it to a URL.\nSample Input: Hello, World!\nSample Output: https://example.com/output\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes input from the user and writes it to a specified URL using the `requests` library. If you don't have it installed, you can install it using pip:\n\n```bash\npip install requests\n```\n\nHere's the Python code:\n\n```python\nimport requests\n\ndef write_to_url(url, data):\n    \"\"\"\n    Writes the given data to the specified URL.\n\n    :param url: The URL to write the data to.\n    :param data: The data to write to the URL.\n    \"\"\"\n    response = requests.post(url, data=data.encode())\n\n    if response.status_code == 200:\n        print(f\"Data written to {url} successfully.\")\n    else:\n        print(f\"Error writing data to {url}. Status code: {response.status_code}\")\n\nif __name__ == \"__main__\":\n    user_input = input(\"Enter the data you want to write to the URL: \")\n    url = input(\"Enter the URL to write the data to: \")\n\n    write_to_url(url, user_input)\n```\n\nThis program prompts the user to enter the data and the URL, then writes the user's input to the specified URL using a `POST` request. The program checks the response status code to ensure the request was successful.",
+  "error": null,
+  "elapsed_seconds": 3.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

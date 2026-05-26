@@ -1,0 +1,9 @@
+{
+  "id": 2854,
+  "title": "Dictionary Keys",
+  "prompt": "Write a function to retrieve a list of all keys in a dictionary.\nSample Input: {'name': 'John', 'age': 30}\nSample Output: ['name', 'age']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that retrieves a list of all keys in a dictionary:\n\n```python\ndef get_dict_keys(dictionary):\n    \"\"\"\n    Retrieves a list of all keys in a dictionary.\n\n    :param dictionary: The dictionary to get the keys from.\n    :return: A list of all keys in the dictionary.\n    \"\"\"\n    if not isinstance(dictionary, dict):\n        raise TypeError(\"The input must be a dictionary.\")\n\n    return list(dictionary.keys())\n```\n\nHere's an example of how to use this function:\n\n```python\nsample_input = {'name': 'John', 'age': 30}\nsample_output = get_dict_keys(sample_input)\nprint(sample_output)  # Output: ['name', 'age']\n```\n\nThis function first checks if the input is a dictionary. If not, it raises a `TypeError`. Then, it uses the `keys()` method of the dictionary to get a view object that provides a view of the dictionary's keys, and converts it to a list using the `list()` function.",
+  "error": null,
+  "elapsed_seconds": 3.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

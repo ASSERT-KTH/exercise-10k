@@ -1,0 +1,9 @@
+{
+  "id": 7336,
+  "title": "Output to Database",
+  "prompt": "Write a program that takes input from the user and writes it to a database.\nSample Input: Hello, World!\nSample Output: example.db\n",
+  "answer": "Sure, I can help you with that. Here's a Python program that takes input from the user and writes it to a SQLite database (named `example.db` by default) using the `sqlite3` module. Make sure you have the `sqlite3` module installed, you can install it using pip:\n\n```python\nimport sqlite3\n\ndef write_to_database(input_text):\n    \"\"\"\n    Writes user input to a SQLite database.\n\n    :param input_text: The user input to be written to the database.\n    \"\"\"\n\n    # Connect to the database (or create it if it doesn't exist)\n    conn = sqlite3.connect('example.db')\n\n    # Create a cursor object\n    cursor = conn.cursor()\n\n    # Create a table if it doesn't exist\n    cursor.execute('''CREATE TABLE IF NOT EXISTS messages (text TEXT)''')\n\n    # Insert the user input into the table\n    cursor.execute(\"INSERT INTO messages (text) VALUES (?)\", (input_text,))\n\n    # Commit the changes and close the connection\n    conn.commit()\n    conn.close()\n\n# Get user input\nuser_input = input(\"Enter a message to write to the database: \")\n\n# Write the user input to the database\nwrite_to_database(user_input)\n```\n\nThis program prompts the user to enter a message, writes it to the database, and then closes the connection. The table name is `messages`, and the column name is `text`. You can modify these values as needed.",
+  "error": null,
+  "elapsed_seconds": 5.52,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

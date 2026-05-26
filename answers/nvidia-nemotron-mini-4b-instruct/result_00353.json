@@ -1,0 +1,9 @@
+{
+  "id": 353,
+  "title": "Array Chunking",
+  "prompt": "Write a program to divide an array into chunks of a specified size.\nSample Input: [1, 2, 3, 4, 5], chunk size: 2\nSample Output: [[1, 2], [3, 4], [5]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that divides an array into chunks of a specified size:\n\n```python\ndef divide_array(arr, chunk_size):\n    \"\"\"\n    Divides the input array into chunks of the specified size.\n\n    Parameters:\n    arr (list): The input array to be divided.\n    chunk_size (int): The size of each chunk.\n\n    Returns:\n    list: A list of lists, where each inner list contains elements from the input array in chunks of size chunk_size.\n    \"\"\"\n\n    # Check if the input is valid\n    if not arr or chunk_size <= 0:\n        return []\n\n    # Calculate the number of chunks\n    num_chunks = len(arr) // chunk_size\n\n    # Divide the array into chunks\n    chunks = [arr[i:i + chunk_size] for i in range(0, len(arr), chunk_size)]\n\n    return chunks\n\n# Example usage\narr = [1, 2, 3, 4, 5]\nchunk_size = 2\nprint(divide_array(arr, chunk_size))  # Output: [[1, 2], [3, 4], [5]]\n```\n\nThis program first checks if the input is valid, and then calculates the number of chunks required based on the chunk size. It then uses a list comprehension to divide the array into chunks of the specified size. The resulting chunks are returned as a list of lists.",
+  "error": null,
+  "elapsed_seconds": 4.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

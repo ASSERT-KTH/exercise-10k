@@ -1,0 +1,9 @@
+{
+  "id": 4580,
+  "title": "Dictionary Cycle Detection",
+  "prompt": "Write a function that takes a dictionary and detects if it contains a cycle\nSample Input: {'a': 'b', 'b': 'c', 'c': 'a'}\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a given dictionary contains a cycle using a set to keep track of visited nodes. This approach has a time complexity of O(V + E), where V is the number of vertices (keys in the dictionary) and E is the number of edges (pairs of keys). If a cycle is detected, the function returns `True`, otherwise it returns `False`.\n\n```python\ndef has_cycle(graph):\n    # Initialize a set to keep track of visited nodes\n    visited = set()\n\n    def dfs(node):\n        if node in visited:\n            return True\n        visited.add(node)\n        for neighbor in graph.get(node, []):\n            if dfs(neighbor):\n                return True\n        return False\n\n    # Iterate through all keys in the graph\n    for node in graph:\n        if dfs(node):\n            return True\n\n    return False\n```\n\nYou can use this function as follows:\n\n```python\ngraph = {'a': 'b', 'b': 'c', 'c': 'a'}\nprint(has_cycle(graph))  # Output: True\n```",
+  "error": null,
+  "elapsed_seconds": 2.73,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9059,
+  "title": "Simple Chatbot",
+  "prompt": "Write a program that acts as a simple chatbot and responds to basic user queries using if statements\nSample Input: hello\nSample Output: Hi, how are you?\n",
+  "answer": "Sure, I'd be happy to help you create a simple chatbot. Here's a Python program that responds to basic user queries using if statements. This program will greet the user, ask about their mood, and respond based on their input.\n\n```python\ndef chatbot():\n    \"\"\"A simple chatbot that responds to basic user queries.\"\"\"\n\n    while True:\n        user_input = input(\"You: \").strip().lower()\n\n        # Greeting and mood query\n        if user_input == \"hello\":\n            print(\"Hi, how are you today?\")\n        elif user_input == \"goodbye\":\n            print(\"Goodbye! Have a great day!\")\n            return\n        elif user_input == \"mood\":\n            mood = input(\"Please tell me your mood (happy, sad, or neutral): \").strip().lower()\n            if mood == \"happy\":\n                print(\"That's great! Keep it up!\")\n            elif mood == \"sad\":\n                print(\"I'm sorry to hear that. Would you like to talk about it?\")\n            else:\n                print(\"That's fine. How can I assist you today?\")\n        else:\n            print(\"I'm sorry, I didn't understand that. Could you please rephrase your question?\")\n\n\n# Run the chatbot\nchatbot()\n```\n\nThis program will keep running until the user types \"goodbye\". You can customize the responses and queries to better suit your chatbot's personality and functionality.",
+  "error": null,
+  "elapsed_seconds": 3.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

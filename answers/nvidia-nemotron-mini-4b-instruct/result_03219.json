@@ -1,0 +1,9 @@
+{
+  "id": 3219,
+  "title": "Average of Digits",
+  "prompt": "Write a program that takes a number as input and prints the average of its digits.\nSample Input: 12345\nSample Output: 3.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes an integer as input and prints its average digit:\n\n```python\ndef average_of_digits(num):\n    \"\"\"\n    Calculates the average of the digits in a given integer.\n\n    :param num: The integer to calculate the average of its digits for.\n    :return: The average of the digits in the input integer.\n    \"\"\"\n    # Check if the input is a non-negative integer\n    if not isinstance(num, int) or num < 0:\n        raise ValueError(\"Input must be a non-negative integer.\")\n\n    # Calculate the sum of the digits\n    digit_sum = 0\n    while num > 0:\n        digit_sum += num % 10\n        num //= 10\n\n    # Calculate the average\n    average = digit_sum / len(str(num))\n\n    return average\n\n# Get user input\nuser_input = int(input(\"Enter an integer: \"))\n\n# Print the average of its digits\naverage = average_of_digits(user_input)\nprint(f\"{user_input} has an average digit of {average}.\")\n```\n\nThis program defines a function `average_of_digits` that takes an integer as input and returns its average digit. The function first checks if the input is a non-negative integer, and then calculates the sum of the digits and the average. The function is then called with user input, and the result is printed to the console.",
+  "error": null,
+  "elapsed_seconds": 4.7,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

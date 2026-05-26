@@ -1,0 +1,9 @@
+{
+  "id": 890,
+  "title": "BMI Calculator",
+  "prompt": "Create a program that asks the user for their weight and height and prints out their BMI (body mass index) based on the following formula: BMI = weight / height^2. Print out a message indicating whether the user is underweight, normal weight, overweight, or obese.\nSample Input: 70 1.75\nSample Output: Normal weight\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef calculate_bmi():\n    \"\"\"\n    Asks the user for their weight and height, calculates their BMI, and prints a message indicating whether they are underweight, normal weight, overweight, or obese.\n    \"\"\"\n\n    # Ask the user for their weight and height\n    weight = float(input(\"Enter your weight in kilograms: \"))\n    height = float(input(\"Enter your height in meters: \"))\n\n    # Calculate the BMI\n    bmi = weight / (height ** 2)\n\n    # Determine whether the user is underweight, normal weight, overweight, or obese\n    if bmi < 18.5:\n        bmi_category = \"underweight\"\n    elif 18.5 <= bmi < 25:\n        bmi_category = \"normal weight\"\n    elif 25 <= bmi < 30:\n        bmi_category = \"overweight\"\n    else:\n        bmi_category = \"obese\"\n\n    # Print the results\n    print(f\"Your BMI is {bmi:.1f}. You are {bmi_category}.\")\n\n# Call the function\ncalculate_bmi()\n```\n\nThis program defines a function `calculate_bmi()` that prompts the user for their weight and height, calculates their BMI, and prints a message indicating whether they are underweight, normal weight, overweight, or obese. The function uses the formula `BMI = weight / (height ** 2)` to calculate the BMI, and checks the value against predefined thresholds to determine the category.",
+  "error": null,
+  "elapsed_seconds": 3.88,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

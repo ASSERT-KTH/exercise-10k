@@ -1,0 +1,9 @@
+{
+  "id": 3068,
+  "title": "Age Validation",
+  "prompt": "Write a program that takes a person's age as input and prints out whether they are eligible to vote or not.\nSample Input: 18\nSample Output: Eligible to vote\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a simple Python program that meets your requirements:\n\n```python\ndef check_voting_eligibility(age):\n    \"\"\"\n    Check if a person is eligible to vote based on their age.\n\n    :param age: The age of the person as an integer.\n    :return: A string indicating whether the person is eligible to vote or not.\n    \"\"\"\n    if not isinstance(age, int) or age < 18:\n        return \"Invalid input. Please enter a positive integer age.\"\n\n    return \"Eligible to vote\" if age >= 18 else \"Not eligible to vote\"\n\n# Get user input and print the result\nage = int(input(\"Enter your age: \"))\nprint(check_voting_eligibility(age))\n```\n\nThis program defines a function `check_voting_eligibility` that takes an age as input and returns a string indicating whether the person is eligible to vote or not. The function checks if the input is a positive integer and prints an error message if it's not. If the age is 18 or above, the function returns \"Eligible to vote\". Otherwise, it returns \"Not eligible to vote\". The program then prompts the user to enter their age and prints the result based on the function's output.",
+  "error": null,
+  "elapsed_seconds": 3.06,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 990,
+  "title": "Prime Number Checker",
+  "prompt": "Create a program that checks if a given number is prime. A number is prime if it is divisible only by 1 and itself.\nSample Input: 23\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you create a program that checks if a given number is prime. Here's a Python solution using a simple for loop to iterate from 2 to the square root of the input number and checking if the number is divisible by any of those numbers. If it's not, then it's a prime number.\n\n```python\ndef is_prime(n):\n    \"\"\"Check if a given number is prime.\"\"\"\n    if n < 2:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\n# Test the function with sample input\nsample_input = 23\nprint(f\"{sample_input} is prime: {is_prime(sample_input)}\")\n```\n\nWhen you run this program with the sample input 23, it will output:\n\n```\n23 is prime: True\n```",
+  "error": null,
+  "elapsed_seconds": 2.22,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

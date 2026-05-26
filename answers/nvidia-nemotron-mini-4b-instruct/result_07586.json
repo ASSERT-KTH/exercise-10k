@@ -1,0 +1,9 @@
+{
+  "id": 7586,
+  "title": "Float Validation",
+  "prompt": "Write a program that checks if a given variable is a float.\nSample Input: var = 10.5\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given variable is a float:\n\n```python\ndef is_float(var):\n    \"\"\"Check if a given variable is a float.\n\n    Args:\n    var (any): The variable to check.\n\n    Returns:\n    bool: True if var is a float, False otherwise.\n    \"\"\"\n    try:\n        float(var)\n        return True\n    except ValueError:\n        return False\n\n# Example usage:\nvar = 10.5\nprint(is_float(var))  # Output: True\n\nvar = 'ten'\nprint(is_float(var))  # Output: False\n```\n\nThis program defines a function `is_float` that takes a variable as an argument and checks if it can be converted to a float using the `float()` function. If the conversion is successful, the function returns `True`. If a `ValueError` is raised (which means the variable cannot be converted to a float), the function returns `False`. The example usage at the end of the program demonstrates how to use the function with different types of variables.",
+  "error": null,
+  "elapsed_seconds": 2.66,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

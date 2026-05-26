@@ -1,0 +1,9 @@
+{
+  "id": 1779,
+  "title": "Checking for Connected Components",
+  "prompt": "Write a function to check if a given graph is connected.\nSample Input: [[0, 1, 0], [1, 0, 1], [0, 1, 0]]\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a given graph (represented as a 2D list of integers) is connected using Depth-First Search (DFS). In this implementation, we assume that the graph is undirected and unweighted. If you need a function for directed or weighted graphs, please provide more details about the requirements.\n\n```python\nfrom collections import defaultdict\n\ndef is_connected(graph):\n    \"\"\"\n    Check if a given graph is connected using Depth-First Search (DFS).\n\n    :param graph: A 2D list of integers representing the graph.\n    :return: True if the graph is connected, False otherwise.\n    \"\"\"\n\n    def dfs(node, visited):\n        visited.add(node)\n        for neighbor in graph[node]:\n            if neighbor not in visited:\n                dfs(neighbor, visited)\n\n    # Initialize the visited set and DFS function\n    visited = set()\n\n    # Check if any node is not visited\n    for node in range(len(graph)):\n        if node not in visited:\n            dfs(node, visited)\n\n            # If all nodes are visited, the graph is connected\n            if len(visited) == len(graph):\n                return True\n\n    return False\n```\n\nHere's an example of how to use the function:\n\n```python\ngraph = [[0, 1, 0], [1, 0, 1], [0, 1, 0]]\nprint(is_connected(graph))  # Output: True\n```",
+  "error": null,
+  "elapsed_seconds": 3.72,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

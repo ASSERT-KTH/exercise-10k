@@ -1,0 +1,9 @@
+{
+  "id": 8819,
+  "title": "Valid Palindrome checker with punctuation and spaces",
+  "prompt": "Create a function that checks if a given string is a valid palindrome. The string can contain punctuation and spaces. The function should ignore case, spaces, and punctuation when checking for palindrome.\nSample Input: A man, a plan, a canal: Panama\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses the `re` module to remove non-alphanumeric characters and converts the string to lowercase for case-insensitive comparison.\n\n```python\nimport re\n\ndef is_valid_palindrome(s: str) -> bool:\n    \"\"\"\n    Check if a given string is a valid palindrome.\n\n    :param s: The string to check.\n    :return: True if the string is a palindrome, False otherwise.\n    \"\"\"\n    # Remove non-alphanumeric characters and convert to lowercase\n    cleaned_s = re.sub(r'\\W+', '', s.lower())\n\n    # Check if the cleaned string is equal to its reverse\n    return cleaned_s == cleaned_s[::-1]\n```\n\nHere's an example of how to use the function:\n\n```python\nprint(is_valid_palindrome(\"A man, a plan, a canal: Panama\"))  # True\nprint(is_valid_palindrome(\"race car\"))                        # True\nprint(is_valid_palindrome(\"hello world\"))                     # False\n```",
+  "error": null,
+  "elapsed_seconds": 2.79,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

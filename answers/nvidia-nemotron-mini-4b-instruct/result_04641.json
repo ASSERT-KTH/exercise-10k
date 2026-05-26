@@ -1,0 +1,9 @@
+{
+  "id": 4641,
+  "title": "Guessing Game",
+  "prompt": "Create a program that generates a random number between 1 and 100. The user has to guess the number. After each guess, the program tells the user if their guess is higher or lower than the generated number. The game continues until the user guesses the correct number.\nSample Input: 50\nSample Output: Your guess is too high. Try again!\n",
+  "answer": "Sure, I'd be happy to help you create a program for this game. Here's an example in Python:\n\n```python\nimport random\n\n# Generate a random number between 1 and 100\nsecret_number = random.randint(1, 100)\n\n# Initialize variables to keep track of the user's guesses\nnum_guesses = 0\nis_correct = False\n\n# Main game loop\nwhile not is_correct:\n    # Get user input and convert it to an integer\n    user_guess = int(input(\"Guess a number between 1 and 100: \"))\n\n    # Increment the number of guesses\n    num_guesses += 1\n\n    # Check if the user guessed the correct number\n    if user_guess == secret_number:\n        is_correct = True\n        print(f\"Congratulations! You guessed the number in {num_guesses} guesses.\")\n    elif user_guess < secret_number:\n        print(\"Your guess is too low. Try again!\")\n    else:\n        print(\"Your guess is too high. Try again!\")\n```\n\nThis program generates a random number between 1 and 100, and then enters a loop where the user takes turns guessing the number. After each guess, the program checks if the user guessed correctly, and if not, it tells the user whether their guess was too high or too low. The game continues until the user guesses the correct number.",
+  "error": null,
+  "elapsed_seconds": 3.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

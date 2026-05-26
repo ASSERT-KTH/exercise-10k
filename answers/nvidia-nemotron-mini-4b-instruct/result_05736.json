@@ -1,0 +1,9 @@
+{
+  "id": 5736,
+  "title": "Function Closures",
+  "prompt": "Create a function that returns a new function that has access to the outer function's scope.\nSample Input: outer_function(x)\nSample Output: a function that has access to x\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a JavaScript function that meets your requirements. This function, `createOuterFunction`, creates a new function that has access to the outer function's scope, including any variables defined within it.\n\n```javascript\nfunction createOuterFunction(outerFunction) {\n  // Create a new function with the same name as the outer function\n const newFunction = function() {\n    // Access the outer function's variables and arguments\n    return outerFunction.apply(this, arguments);\n  };\n\n  // Set the new function's prototype to the outer function's prototype\n newFunction.prototype = Object.create(outerFunction.prototype);\n\n  // Return the new function\n  return newFunction;\n}\n\n// Example usage\nfunction outerFunction(x) {\n console.log(`Outer function with x: ${x}`);\n}\n\nconst newFunction = createOuterFunction(outerFunction);\nnewFunction(5); // Output: Outer function with x: 5\n```\n\nIn this example, `outerFunction` is the outer function, and `newFunction` is the new function created using `createOuterFunction`. The `newFunction` has access to the `x` variable defined in the outer function, as well as any other variables and methods defined in the outer function.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

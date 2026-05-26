@@ -1,0 +1,9 @@
+{
+  "id": 9888,
+  "title": "Simple Palindrome Checker",
+  "prompt": "Write a program that takes a word as input and checks if it is a palindrome.\nSample Input: madam\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given word is a palindrome:\n\n```python\ndef is_palindrome(word):\n    \"\"\"Check if a word is a palindrome. A palindrome is a word that reads the same forward and backward,\n    ignoring spaces, punctuation, and capitalization.\n\n    :param word: str - The word to check\n    :return: bool - True if the word is a palindrome, False otherwise\n    \"\"\"\n    # Remove non-alphanumeric characters and convert to lowercase\n    cleaned_word = ''.join(c.lower() for c in word if c.isalnum())\n\n    # Check if the cleaned word is equal to its reverse\n    return cleaned_word == cleaned_word[::-1]\n\n# Get user input\nuser_input = input(\"Enter a word: \")\n\n# Check if the word is a palindrome\nif is_palindrome(user_input):\n    print(f\"'{user_input}' is a palindrome.\")\nelse:\n    print(f\"'{user_input}' is not a palindrome.\")\n```\n\nThis program first removes any non-alphanumeric characters from the input word and converts it to lowercase. Then, it checks if the cleaned word is equal to its reverse, which indicates that it is a palindrome. The function returns `True` if the word is a palindrome and `False` otherwise. The program then prompts the user to enter a word and checks if it is a palindrome using the `is_palindrome` function.",
+  "error": null,
+  "elapsed_seconds": 3.87,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

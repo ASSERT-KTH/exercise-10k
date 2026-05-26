@@ -1,0 +1,9 @@
+{
+  "id": 3982,
+  "title": "Palindrome Checker",
+  "prompt": "Create a program that checks if a given string is a palindrome. A palindrome is a word, phrase, number, or other sequence of characters that reads the same forward and backward (ignoring spaces, punctuation, and capitalization).\nSample Input: A man a plan a canal Panama\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you create a program that checks if a given string is a palindrome. Here's a Python solution using a simple algorithm:\n\n```python\nimport re\n\ndef is_palindrome(s):\n    # Remove non-alphanumeric characters and convert to lowercase\n    s = re.sub(r'\\W+', '', s).lower()\n\n    # Check if the string is equal to its reverse\n    return s == s[::-1]\n\n# Test the function with the provided sample input\nsample_input = \"A man a plan a canal Panama\"\nprint(is_palindrome(sample_input))  # Output: True\n```\n\nThis program first removes all non-alphanumeric characters from the input string using a regular expression and converts it to lowercase. Then, it checks if the string is equal to its reverse, which is a simple way to check if it's a palindrome. The `re.sub()` function is used to replace all non-alphanumeric characters with an empty string, and slicing with `[::-1]` is used to reverse the string.",
+  "error": null,
+  "elapsed_seconds": 2.55,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4814,
+  "title": "Sorting a Linked List",
+  "prompt": "Given a linked list of integers, sort the linked list in ascending order. The function should take in a linked list of integers as input and return the sorted linked list.\nSample Input: [4, 2, 1, 3]\nSample Output: [1, 2, 3, 4]\n",
+  "answer": "Here's a Python solution using recursion:\n\n```python\nclass ListNode:\n    def __init__(self, x):\n        self.val = x\n        self.next = None\n\ndef sort_linked_list(head):\n    if head is None or head.next is None:\n        return head\n\n    mid = find_middle(head)\n    left = sort_linked_list(head)\n    right = sort_linked_list(mid.next)\n\n    return merge_sorted(left, right)\n\ndef find_middle(head):\n    slow = fast = head\n    while fast and fast.next:\n        slow = slow.next\n        fast = fast.next.next\n    return slow\n\ndef merge_sorted(left, right):\n    result = ListNode(0)\n    current = result\n\n    while left is not None and right is not None:\n        if left.val <= right.val:\n            current.next = left\n            left = left.next\n        else:\n            current.next = right\n            right = right.next\n        current = current.next\n\n    if left is not None:\n        current.next = left\n    else:\n        current.next = right\n\n    return result.next\n```\n\nThis function first finds the middle of the linked list, then recursively sorts the two halves of the list. Finally, it merges the two sorted halves into one sorted linked list.\n\nPlease note that this solution assumes that the input linked list is not empty. If it could be empty, you would need to add a check for `head is None` at the beginning of the function.",
+  "error": null,
+  "elapsed_seconds": 3.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

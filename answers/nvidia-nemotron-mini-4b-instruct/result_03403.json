@@ -1,0 +1,9 @@
+{
+  "id": 3403,
+  "title": "Updating Dictionary Values",
+  "prompt": "Create a program to update the value of a specific key in a given dictionary.\nSample Input: {'name': 'John', 'age': 25, 'city': 'New York'} and key 'age' with new value 30\nSample Output: {'name': 'John', 'age': 30, 'city': 'New York'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that updates the value of a specific key in a given dictionary:\n```python\ndef update_dict_value(dictionary, key, new_value):\n    \"\"\"\n    Updates the value of a specific key in a given dictionary.\n\n    Parameters:\n    dictionary (dict): The dictionary to update.\n    key (str): The key to update.\n    new_value (any): The new value to assign to the key.\n\n    Returns:\n    dict: The updated dictionary.\n    \"\"\"\n    # Check if the key exists in the dictionary\n    if key in dictionary:\n        # Update the value and return the updated dictionary\n        dictionary[key] = new_value\n        return dictionary\n    else:\n        # If the key does not exist, raise a KeyError\n        raise KeyError(f\"The key '{key}' does not exist in the dictionary.\")\n```\nHere's an example of how you can use this function:\n```python\nsample_dict = {'name': 'John', 'age': 25, 'city': 'New York'}\nupdated_dict = update_dict_value(sample_dict, 'age', 30)\nprint(updated_dict)  # Output: {'name': 'John', 'age': 30, 'city': 'New York'}\n```\nThis function checks if the key exists in the dictionary before updating its value. If the key does not exist, it raises a `KeyError` with an appropriate message.",
+  "error": null,
+  "elapsed_seconds": 4.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

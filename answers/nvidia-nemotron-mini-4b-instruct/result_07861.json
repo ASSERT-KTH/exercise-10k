@@ -1,0 +1,9 @@
+{
+  "id": 7861,
+  "title": "Area Calculator",
+  "prompt": "Write a program that calculates the area of a rectangle or triangle using conditional statements.\nSample Input: rectangle 10 20\nSample Output: 200\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the area of a rectangle or triangle based on the user's input. The program uses conditional statements (if-elif-else) to determine the shape and calculate the area accordingly.\n\n```python\ndef calculate_area():\n    \"\"\"\n    Calculates the area of a rectangle or triangle based on user input.\n    \"\"\"\n\n    # Get user input\n    shape = input(\"Enter the shape (rectangle or triangle): \").lower()\n    length = float(input(\"Enter the length: \"))\n    width = float(input(\"Enter the width (for rectangle only): \"))\n\n    # Validate input\n    if shape not in ['rectangle', 'triangle']:\n        print(\"Invalid input. Please enter either 'rectangle' or 'triangle'.\")\n        return\n\n    # Calculate area\n    if shape == 'rectangle':\n        area = length * width\n    else:  # shape == 'triangle'\n        area = 0.5 * length * width\n\n    # Display result\n    print(f\"The area is {area}.\")\n\n\n# Call the function\ncalculate_area()\n```\n\nThis program will prompt the user to enter the shape and length/width for a rectangle or the length and width for a triangle. It will then validate the input and calculate the area before displaying the result.",
+  "error": null,
+  "elapsed_seconds": 3.14,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

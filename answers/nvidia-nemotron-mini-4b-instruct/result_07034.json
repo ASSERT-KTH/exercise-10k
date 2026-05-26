@@ -1,0 +1,9 @@
+{
+  "id": 7034,
+  "title": "Arranging Student Scores",
+  "prompt": "Create a program that takes a list of student scores as input and rearranges them in ascending order. The program should also calculate the average score.\nSample Input: [90, 75, 60, 85, 70]\nSample Output: [60, 70, 75, 85, 90]\nAverage score: 76.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef rearrange_and_calculate_average(student_scores):\n    \"\"\"\n    Takes a list of student scores as input, rearranges them in ascending order,\n    and calculates the average score.\n\n    :param student_scores: List of student scores\n    :return: Tuple containing the rearranged list and the average score\n    \"\"\"\n\n    # Rearrange the scores in ascending order\n    rearranged_scores = sorted(student_scores)\n\n    # Calculate the average score\n    num_scores = len(student_scores)\n    total_score = sum(student_scores)\n    average_score = total_score / num_scores\n\n    return rearranged_scores, average_score\n\n# Example usage\nstudent_scores = [90, 75, 60, 85, 70]\nrearranged_scores, average_score = rearrange_and_calculate_average(student_scores)\n\nprint(\"Rearranged scores:\", rearranged_scores)\nprint(\"Average score:\", average_score)\n```\nWhen you run this program with the sample input `[90, 75, 60, 85, 70]`, it will output:\n```yaml\nRearranged scores: [60, 70, 75, 85, 90]\nAverage score: 76.0\n```",
+  "error": null,
+  "elapsed_seconds": 3.42,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

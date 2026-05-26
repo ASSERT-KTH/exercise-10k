@@ -1,0 +1,9 @@
+{
+  "id": 5119,
+  "title": "Type-Safe Functions",
+  "prompt": "Create type-safe functions that can handle multiple data types while preventing type-related errors.\nSample Input: function add<T>(a: T, b: T): T { return a + b; }\nSample Output: Usage examples of the type-safe function\n",
+  "answer": "Sure, I'd be happy to help! Here's an example of a type-safe function in TypeScript that can handle multiple data types while preventing type-related errors. In this example, I'll use generics to create a function that takes two arguments of any type `T` and returns a value of the same type.\n\n```typescript\n// Type-safe function that can handle multiple data types\nfunction add<T>(a: T, b: T): T {\n  return a + b;\n}\n\n// Usage examples of the type-safe function\n\n// Example 1: Add two numbers\nlet result1: number = add(1, 2); // result1 will be 3\n\n// Example 2: Add two strings\nlet result2: string = add('Hello', ' '); // result2 will be 'Hello '\n\n// Example 3: Add two arrays\nlet result3: number[] = add([1, 2], [3, 4]); // result3 will be [1, 2, 3, 4]\n```\n\nIn this example, the type-safe function `add` works with any type `T` as long as it's a value that can be added to itself. This prevents type-related errors and ensures that the function can handle various data types without any issues.",
+  "error": null,
+  "elapsed_seconds": 3.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

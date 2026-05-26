@@ -1,0 +1,9 @@
+{
+  "id": 5867,
+  "title": "Average Grade",
+  "prompt": "Calculate the average grade of a student given a list of scores.\nSample Input: [90, 85, 95, 92]\nSample Output: 90.5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that calculates the average grade of a student given a list of scores:\n\n```python\ndef calculate_average(scores):\n    \"\"\"\n    Calculates the average grade of a student given a list of scores.\n\n    Parameters:\n    scores (list): A list of scores for the student.\n\n    Returns:\n    float: The average grade of the student.\n    \"\"\"\n\n    # Check if the input is a non-empty list\n    if not isinstance(scores, list) or len(scores) == 0:\n        raise ValueError(\"Input should be a non-empty list of scores.\")\n\n    # Calculate the sum of the scores\n    total_score = sum(scores)\n\n    # Calculate the average grade\n    average_grade = total_score / len(scores)\n\n    return average_grade\n```\n\nYou can use this function as follows:\n\n```python\nscores = [90, 85, 95, 92]\naverage_grade = calculate_average(scores)\nprint(average_grade)  # Output: 90.5\n```\n\nThis function checks if the input is a non-empty list and raises a `ValueError` if it's not. Then, it calculates the sum of the scores and divides it by the number of scores to get the average grade.",
+  "error": null,
+  "elapsed_seconds": 3.29,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3048,
+  "title": "Function Overloading",
+  "prompt": "Simulate function overloading by creating a function that can take either two numbers or four numbers as input and return their sum.\nSample Input: 1, 2\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you simulate function overloading in this case. Here's a Python solution using the `*args` syntax to accept any number of arguments:\n\n```python\ndef sum_of_numbers(*args):\n    \"\"\"\n    A function that can take either two numbers or four numbers as input and return their sum.\n    \"\"\"\n    if len(args) == 2:\n        return args[0] + args[1]\n    else:\n        return sum(args)\n```\n\nYou can test this function with the following sample inputs:\n\n```python\nprint(sum_of_numbers(1, 2))  # Output: 3\nprint(sum_of_numbers(1, 2, 3, 4))  # Output: 10\nprint(sum_of_numbers(1, 2, 3))  # Output: 6\n```\n\nThis solution allows the function to handle different numbers of arguments, making it a form of function overloading.",
+  "error": null,
+  "elapsed_seconds": 3.77,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1017,
+  "title": "Substring Extraction",
+  "prompt": "Write a program that takes a string and two integers as input, and returns the substring between the given start and end indices.\nSample Input: abcdef 2 4\nSample Output: cd\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_substring(s, start, end):\n    \"\"\"\n    Returns the substring between the given start and end indices in the input string s.\n\n    :param s: The input string.\n    :param start: The start index (inclusive).\n    :param end: The end index (exclusive).\n    :return: The substring between start and end indices.\n    \"\"\"\n    # Check if the input is valid\n    if not isinstance(s, str) or not isinstance(start, int) or not isinstance(end, int):\n        raise ValueError(\"Input must be a string and both start and end must be integers.\")\n    if start < 0 or end > len(s):\n        raise ValueError(\"Start index must be non-negative and end index must be less than the length of the string.\")\n\n    # Return the substring\n    return s[start:end]\n\n# Example usage\ninput_str = \"abcdef\"\nstart = 2\nend = 4\nresult = get_substring(input_str, start, end)\nprint(result)  # Output: cd\n```\nThis program defines a function `get_substring` that takes a string `s`, and two integers `start` and `end` as input. It checks if the input is valid, and then returns the substring between `start` and `end` indices (exclusive). The function also includes an example usage to demonstrate its behavior.",
+  "error": null,
+  "elapsed_seconds": 4.3,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

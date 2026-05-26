@@ -1,0 +1,9 @@
+{
+  "id": 2294,
+  "title": "Weather Converter",
+  "prompt": "Create a program that converts temperature between Celsius and Fahrenheit.\nSample Input: celsius 30\nSample Output: 30 Celsius is equal to 86 Fahrenheit\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that converts temperature between Celsius and Fahrenheit based on the given sample input:\n\n```python\ndef convert_temperature():\n    while True:\n        user_input = input(\"Enter 'c' to convert Celsius to Fahrenheit or 'f' to convert Fahrenheit to Celsius, or 'q' to quit: \").lower()\n\n        if user_input == 'c':\n            celsius = float(input(\"Enter the temperature in Celsius: \"))\n            fahrenheit = celsius * (9/5) + 32\n            print(f\"{celsius} Celsius is equal to {fahrenheit} Fahrenheit\")\n\n        elif user_input == 'f':\n            fahrenheit = float(input(\"Enter the temperature in Fahrenheit: \"))\n            celsius = (fahrenheit - 32) * 5/9\n            print(f\"{fahrenheit} Fahrenheit is equal to {celsius} Celsius\")\n\n        elif user_input == 'q':\n            print(\"Goodbye!\")\n            break\n\n        else:\n            print(\"Invalid input. Please enter 'c', 'f', or 'q'.\")\n\nconvert_temperature()\n```\n\nThis program prompts the user to enter 'c' to convert Celsius to Fahrenheit, 'f' to convert Fahrenheit to Celsius, or 'q' to quit. It then validates the user input and converts the temperature accordingly. The program continues to run until the user enters 'q'.",
+  "error": null,
+  "elapsed_seconds": 3.3,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

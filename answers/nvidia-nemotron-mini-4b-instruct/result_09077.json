@@ -1,0 +1,9 @@
+{
+  "id": 9077,
+  "title": "Day of the Year",
+  "prompt": "Write a program that prints out the day of the year based on a given date using if/else statements\nSample Input: 2022-09-01\nSample Output: 244\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a date in the format 'YYYY-MM-DD' as input and prints out the day of the year based on if/else statements:\n```python\ndef day_of_year(date):\n    # Split the date string into its components (year, month, day)\n    year, month, day = map(int, date.split('-'))\n\n    # Calculate the number of days in each month\n    days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\n    if month in (1, 3, 5, 7, 8, 10, 12):  # Months with 31 days\n        days_in_month[month] = 31\n    elif month == 2:  # February\n        if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0):\n            days_in_month[month] = 29\n        else:\n            days_in_month[month] = 28\n\n    # Calculate the day of the year by summing the days in each month up to the given date\n    day_of_year = day\n    for i in range(month - 1):\n        day_of_year += days_in_month[i]\n\n    return day_of_year\n\n# Get user input\ndate = input(\"Enter a date in the format YYYY-MM-DD: \")\n\n# Print the day of the year\nday_of_year_value = day_of_year(date)\nprint(f\"The day of the year is {day_of_year_value}.\")\n```\nThis program first splits the input date string into its components (year, month, day), then calculates the number of days in each month based on whether it's a leap year or not. Finally, it sums up the days in each month up to the given date to calculate the day of the year. The program then prints out the day of the year based on the calculated value.",
+  "error": null,
+  "elapsed_seconds": 5.23,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

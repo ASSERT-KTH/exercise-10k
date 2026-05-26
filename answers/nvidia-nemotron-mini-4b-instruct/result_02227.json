@@ -1,0 +1,9 @@
+{
+  "id": 2227,
+  "title": "Array Statistics",
+  "prompt": "Write a program that calculates the mean, median, and standard deviation of an array of numbers.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: mean: 3, median: 3, std dev: 1.414\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the mean, median, and standard deviation of an array of numbers:\n\n```python\nimport math\n\ndef calculate_stats(numbers):\n    \"\"\"\n    Calculates the mean, median, and standard deviation of a given array of numbers.\n\n    :param numbers: List of numbers\n    :return: A dictionary containing the mean, median, and standard deviation\n    \"\"\"\n\n    # Calculate the mean\n    mean = sum(numbers) / len(numbers)\n\n    # Calculate the median\n    numbers.sort()\n    n = len(numbers)\n    if n % 2 == 0:  # Even number of elements\n        median = (numbers[n // 2 - 1] + numbers[n // 2]) / 2\n    else:  # Odd number of elements\n        median = numbers[n // 2]\n\n    # Calculate the standard deviation\n    variance = sum((x - mean) ** 2 for x in numbers) / (len(numbers) - 1)\n    std_dev = math.sqrt(variance)\n\n    return {\n        \"mean\": mean,\n        \"median\": median,\n        \"std_dev\": std_dev\n    }\n\n# Example usage\nnumbers = [1, 2, 3, 4, 5]\nstats = calculate_stats(numbers)\nprint(f\"mean: {stats['mean']}, median: {stats['median']}, std dev: {stats['std_dev']:.2f}\")\n```\n\nThis program defines a function `calculate_stats` that takes a list of numbers as input and returns a dictionary containing the mean, median, and standard deviation. The example usage at the end of the code demonstrates how to use this function with a sample input array.",
+  "error": null,
+  "elapsed_seconds": 8.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

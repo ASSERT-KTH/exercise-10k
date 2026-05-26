@@ -1,0 +1,9 @@
+{
+  "id": 7169,
+  "title": "Basic Trigonometry",
+  "prompt": "Write a program that calculates the sine of a given angle\nSample Input: 30\nSample Output: 0.5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the sine of a given angle in degrees:\n\n```python\nimport math\n\ndef calculate_sine(angle_in_degrees):\n    \"\"\"\n    Calculates the sine of a given angle in degrees.\n\n    :param angle_in_degrees: The angle in degrees for which to calculate the sine.\n    :return: The sine of the given angle.\n    \"\"\"\n\n    # Check if the input is a valid angle in degrees\n    if not isinstance(angle_in_degrees, (int, float)) or angle_in_degrees < 0 or angle_in_degrees > 360:\n        raise ValueError(\"Input must be a valid angle in degrees between 0 and 360.\")\n\n    # Calculate the sine of the given angle using the math module\n    sine = math.sin(math.radians(angle_in_degrees))\n\n    return sine\n\n# Example usage\nangle = 30\nsine_value = calculate_sine(angle)\nprint(f\"The sine of {angle} degrees is {sine_value}.\")\n```\n\nThis program defines a function `calculate_sine` that checks if the input is a valid angle in degrees and then calculates the sine using the `math.sin` function and the `math.radians` function to convert the angle from degrees to radians. The example usage at the end of the program calculates the sine of an angle of 30 degrees and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.84,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

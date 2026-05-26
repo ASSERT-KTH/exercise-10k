@@ -1,0 +1,9 @@
+{
+  "id": 9747,
+  "title": "Simple Exponentiation",
+  "prompt": "Write a program to calculate the exponentiation of two numbers\nSample Input: 2 3\nSample Output: 8\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a simple Python program that calculates the exponentiation of two numbers:\n\n```python\ndef calculate_exponentiation(base, exponent):\n    \"\"\"\n    Calculates the exponentiation of two numbers.\n\n    :param base: The base number.\n    :param exponent: The exponent number.\n    :return: The result of the exponentiation.\n    \"\"\"\n    if exponent < 0:\n        raise ValueError(\"Exponent must be non-negative\")\n\n    result = 1\n    for _ in range(exponent):\n        result *= base\n\n    return result\n\n# Get sample input from the user\nbase = int(input(\"Enter the base number: \"))\nexponent = int(input(\"Enter the exponent number: \"))\n\n# Calculate and print the result\nresult = calculate_exponentiation(base, exponent)\nprint(f\"The result of {base} raised to the power of {exponent} is {result}.\")\n```\n\nThis program defines a function `calculate_exponentiation` that takes two numbers as arguments and returns their exponentiation. It checks if the exponent is non-negative and raises a `ValueError` if it's not. Then, it uses a loop to multiply the base number by itself the specified number of times (equal to the exponent). Finally, it prints the result.\n\nYou can run this program and enter the base and exponent numbers when prompted to get the desired output.",
+  "error": null,
+  "elapsed_seconds": 3.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

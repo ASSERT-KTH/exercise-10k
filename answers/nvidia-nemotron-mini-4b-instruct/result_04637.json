@@ -1,0 +1,9 @@
+{
+  "id": 4637,
+  "title": "Array Symmetric Difference",
+  "prompt": "Write a program that takes two arrays as input, and returns the symmetric difference between the two arrays.\nSample Input: [1, 2, 3], [2, 3, 4]\nSample Output: [1, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes two arrays as input and returns their symmetric difference using the `set` data structure, which automatically handles unique elements and provides efficient operations for finding the symmetric difference.\n\n```python\ndef symmetric_difference(arr1, arr2):\n    \"\"\"\n    Returns the symmetric difference between two arrays.\n\n    :param arr1: The first input array\n    :param arr2: The second input array\n    :return: A list containing the elements that are in either arr1 or arr2 but not in both\n    \"\"\"\n    # Convert input arrays to sets for efficient operations\n    set1 = set(arr1)\n    set2 = set(arr2)\n\n    # Find the symmetric difference using the ^ operator\n    symmetric_diff = set1 ^ set2\n\n    # Convert the result back to a list and return it\n    return list(symmetric_diff)\n\n# Test the function with the provided sample input\narr1 = [1, 2, 3]\narr2 = [2, 3, 4]\nprint(symmetric_difference(arr1, arr1))  # Output: [1, 4]\n```\n\nThis program first converts the input arrays to sets to take advantage of the set's efficient operations for finding the symmetric difference. The `^` operator is used to perform the symmetric difference, which returns a new set containing elements that are in either set but not in both. Finally, the result is converted back to a list and returned.",
+  "error": null,
+  "elapsed_seconds": 3.71,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6789,
+  "title": "Conditional Evaluator",
+  "prompt": "Write a program that evaluates a given condition and returns a corresponding message. The program should ask for the user's age and then check if they are eligible to vote (age >= 18). If eligible, it should print 'You are eligible to vote.' Otherwise, it should print 'You are not eligible to vote.'\nSample Input: 25\nSample Output: You are eligible to vote.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef evaluate_voting_eligibility():\n    \"\"\"\n    Asks the user for their age and checks if they are eligible to vote.\n    Returns a message indicating whether they are eligible or not.\n    \"\"\"\n    while True:\n        try:\n            # Ask the user for their age\n            age = int(input(\"Please enter your age: \"))\n\n            # Check if the age is valid (must be a positive integer)\n            if age > 0:\n                break\n            else:\n                print(\"Age must be a positive integer. Please try again.\")\n        except ValueError:\n            print(\"That's not a valid number. Please try again.\")\n\n    # Evaluate voting eligibility based on the age\n    if age >= 18:\n        print(\"You are eligible to vote.\")\n    else:\n        print(\"You are not eligible to vote.\")\n\n# Call the function to start the program\nevaluate_voting_eligibility()\n```\nThis program defines a function `evaluate_voting_eligibility()` that prompts the user for their age, validates the input, and then checks if they are eligible to vote based on their age. If they are eligible, it prints a message indicating that they are; otherwise, it prints a message indicating that they are not. The function continues to prompt the user for age until a valid positive integer is entered.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

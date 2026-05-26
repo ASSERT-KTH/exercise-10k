@@ -1,0 +1,9 @@
+{
+  "id": 6367,
+  "title": "Array Filter",
+  "prompt": "Write a program that takes an array and a predicate function as input and returns a new array containing only the elements that satisfy the predicate\nSample Input: [1, 2, 3, 4, 5], is_even\nSample Output: [2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef filter_array(arr, predicate):\n    \"\"\"\n    Filters an array using a given predicate function.\n\n    Parameters:\n    arr (list): The input array.\n    predicate (callable): A function that takes an element as input and returns a boolean.\n\n    Returns:\n    list: A new array containing only the elements that satisfy the predicate.\n    \"\"\"\n    return [element for element in arr if predicate(element)]\n\n# Example usage:\narr = [1, 2, 3, 4, 5]\npredicate = lambda x: x % 2 == 0  # is_even predicate\nfiltered_arr = filter_array(arr, predicate)\nprint(filtered_arr)  # Output: [2, 4]\n```\nThis program defines a function `filter_array` that takes an array and a predicate function as input, and returns a new array containing only the elements that satisfy the predicate. The function uses a list comprehension to filter the input array based on the predicate function. The example usage shows how to use the function with a sample input array and predicate.",
+  "error": null,
+  "elapsed_seconds": 2.87,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

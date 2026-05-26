@@ -1,0 +1,9 @@
+{
+  "id": 272,
+  "title": "LCM of Two Numbers",
+  "prompt": "Write a program that calculates the least common multiple (LCM) of two numbers.\nSample Input: 12 15\nSample Output: LCM: 60\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the least common multiple (LCM) of two numbers:\n\n```python\ndef lcm(a, b):\n    \"\"\"\n    Calculate the least common multiple (LCM) of two numbers.\n\n    :param a: The first number.\n    :param b: The second number.\n    :return: The least common multiple of a and b.\n    \"\"\"\n    # Ensure both inputs are positive integers\n    a, b = abs(int(a)), abs(int(b))\n\n    # Calculate the LCM using the formula: LCM(a, b) = |a*b| / GCD(a, b)\n    gcd = lambda a, b: gcd(b, a % b) if b else abs(a)\n    lcm = abs(a * b) // gcd(a, b)\n\n    return f\"LCM: {lcm}\"\n\n# Get user input\na = int(input(\"Enter the first number: \"))\nb = int(input(\"Enter the second number: \"))\n\n# Call the function and print the result\nprint(lcm(a, b))\n```\n\nThis program first ensures that the inputs are positive integers by taking their absolute values. Then, it calculates the LCM using the formula `LCM(a, b) = |a*b| / GCD(a, b)`. The `gcd` function is used to calculate the greatest common divisor (GCD) of the two numbers, which is used to find the LCM. Finally, the program prints the result.",
+  "error": null,
+  "elapsed_seconds": 5.12,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

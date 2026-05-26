@@ -1,0 +1,9 @@
+{
+  "id": 7726,
+  "title": "Group Anagrams",
+  "prompt": "Group a list of strings by their anagrams.\nSample Input: ['eat', 'tea', 'tan', 'ate', 'nat', 'bat']\nSample Output: [['eat', 'tea', 'ate'], ['tan', 'nat'], ['bat']]\n",
+  "answer": "Here's a Python solution using built-in `collections` module for grouping anagrams:\n\n```python\nfrom collections import defaultdict\n\ndef group_anagrams(strings):\n    # Create a defaultdict to store groups of anagrams\n    group_dict = defaultdict(list)\n\n    # Iterate over each string in the list\n    for string in strings:\n        # Sort the characters in the string and use it as a key for the defaultdict\n        key = ''.join(sorted(string))\n        group_dict[key].append(string)\n\n    # Convert the defaultdict to a list of lists (the output format)\n    return list(group_dict.values())\n\n# Test the function with the sample input\nprint(group_anagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat']))\n```\n\nThis script first creates a `defaultdict` to store groups of anagrams. Then it iterates over each string in the list, sorts its characters, and uses the sorted string as a key for the `defaultdict`. Finally, it converts the `defaultdict` to a list of lists and returns it as the output.",
+  "error": null,
+  "elapsed_seconds": 2.91,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

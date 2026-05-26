@@ -1,0 +1,9 @@
+{
+  "id": 8524,
+  "title": "Volume of a Sphere",
+  "prompt": "Create a program to calculate the volume of a sphere given its radius.\nSample Input: 5\nSample Output: 523.6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the volume of a sphere given its radius:\n\n```python\nimport math\n\ndef calculate_sphere_volume(radius):\n    \"\"\"\n    Calculates the volume of a sphere given its radius.\n\n    :param radius: The radius of the sphere.\n    :return: The volume of the sphere.\n    \"\"\"\n\n    # Validate the input\n    if not isinstance(radius, (int, float)) or radius < 0:\n        raise ValueError(\"The radius must be a non-negative number.\")\n\n    # Calculate the volume using the formula: volume = (4/3) * pi * r^3\n    volume = (4/3) * math.pi * (radius ** 3)\n\n    return volume\n\n# Get user input\nradius = float(input(\"Enter the radius of the sphere: \"))\n\n# Calculate and print the volume\nvolume = calculate_sphere_volume(radius)\nprint(f\"{radius} is the radius of the sphere. The volume is {volume}.\")\n```\n\nThis program defines a function `calculate_sphere_volume` that checks if the input is valid (non-negative number) and then calculates the volume using the formula. The program then gets user input, calls the function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.27,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

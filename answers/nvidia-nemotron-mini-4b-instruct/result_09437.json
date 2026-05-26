@@ -1,0 +1,9 @@
+{
+  "id": 9437,
+  "title": "Function with Async/Await",
+  "prompt": "Create a function that uses async/await to asynchronously compute the sum of a list of numbers\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example of how you could create an async function in JavaScript that computes the sum of a list of numbers using async/await. This function will handle both synchronous and asynchronous input lists.\n\n```javascript\n// Function to compute the sum of a list of numbers using async/await\nasync function sumAsync(numbers) {\n  // Check if the input is an array\n  if (!Array.isArray(numbers)) {\n    throw new Error('Input should be an array');\n  }\n\n  // Use async/await to compute the sum in parallel\n const sum = numbers.reduce((acc, num) => acc + num, 0);\n\n  return sum;\n}\n\n// Example usage\nconst input = [1, 2, 3, 4, 5];\nconsole.log(await sumAsync(input)); // Output: 15\n\n// You can also use async/await with a synchronous input list\nconst input2 = [1, 2, 3, 4, 5];\nconsole.log(sumAsync(input2)); // Output: 15\n```\n\nThis function first checks if the input is an array. If not, it throws an error. Then, it uses the `reduce()` method with an async/await function to compute the sum in parallel, as the `reduce()` method is already async-friendly. The `reduce()` method returns a Promise, so we can use `await` to wait for it to resolve.",
+  "error": null,
+  "elapsed_seconds": 3.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8611,
+  "title": "String Comparison",
+  "prompt": "Write a program that takes two strings as input and returns -1 if the first string is less than the second string, 0 if they are equal, and 1 if the first string is greater than the second string.\nSample Input: hello world\nSample Output: -1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef compare_strings(str1, str2):\n    \"\"\"\n    Compares two strings and returns -1, 0, or 1 based on their relative order.\n\n    :param str1: The first string to compare.\n    :param str2: The second string to compare.\n    :return: An integer indicating the relative order of the two strings.\n    \"\"\"\n    # Ensure both inputs are strings\n    if not isinstance(str1, str) or not isinstance(str2, str):\n        raise TypeError(\"Both inputs must be strings.\")\n\n    # Compare the strings using the '>' operator and return the result\n    return -1 if str1 < str2 else 0 if str1 == str2 else 1\n```\nHere's an example of how you can use this function:\n```python\nprint(compare_strings(\"hello\", \"world\"))  # Output: -1\nprint(compare_strings(\"hello\", \"hello\"))  # Output: 0\nprint(compare_strings(\"hello\", \"world\"))  # Output: 1\n```\nThis function first checks if both inputs are strings, and raises a `TypeError` if they are not. Then, it compares the strings using the `<` operator and returns -1, 0, or 1 based on the result. The function is case-sensitive, meaning that \"Hello\" and \"hello\" will be considered different strings and will return different results.",
+  "error": null,
+  "elapsed_seconds": 3.54,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

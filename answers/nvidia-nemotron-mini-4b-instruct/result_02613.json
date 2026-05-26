@@ -1,0 +1,9 @@
+{
+  "id": 2613,
+  "title": "Dictionary Pop",
+  "prompt": "Remove and return the value of a key in a dictionary\nSample Input: {'name': 'John', 'age': 30}, 'age'\nSample Output: 30\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that removes and returns the value of a key in a dictionary:\n```python\ndef remove_key_and_return_value(dictionary, key):\n    \"\"\"\n    Remove the specified key from the dictionary and return its value.\n\n    :param dictionary: The dictionary to modify.\n    :param key: The key to remove from the dictionary.\n    :return: The value associated with the removed key.\n    \"\"\"\n    # Check if the key exists in the dictionary\n    if key in dictionary:\n        # Remove the key-value pair and return the value\n        value = dictionary.pop(key)\n        return value\n    else:\n        # If the key does not exist, return None\n        return None\n```\nHere's an example of how you can use this function:\n```python\nmy_dict = {'name': 'John', 'age': 30}\nresult = remove_key_and_return_value(my_dict, 'age')\nprint(result)  # Output: 30\n```\nThis function first checks if the specified key exists in the dictionary using the `in` keyword. If the key exists, it removes the key-value pair using the `pop()` method and returns the value associated with the removed key. If the key does not exist, the function returns `None`.",
+  "error": null,
+  "elapsed_seconds": 3.18,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3374,
+  "title": "Generate a List of Prime Numbers",
+  "prompt": "Use a for loop to generate a list of prime numbers up to a given limit\nSample Input: 50\nSample Output: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses a for loop to generate a list of prime numbers up to a given limit:\n```python\ndef generate_primes(limit):\n    primes = []\n    for num in range(2, limit + 1):\n        is_prime = True\n        for i in range(2, int(num**0.5) + 1):\n            if num % i == 0:\n                is_prime = False\n                break\n        if is_prime:\n            primes.append(num)\n    return primes\n```\nThis function first initializes an empty list `primes` to store the prime numbers. Then, it uses a for loop to iterate over numbers from 2 up to (but not including) the given limit. For each number, it checks if it is prime by iterating over all integers from 2 up to the square root of the number (to avoid unnecessary checks for larger divisors). If the number is not divisible by any of these integers, it means that the number is prime, so it is added to the `primes` list. Finally, the function returns the list of prime numbers.\n\nHere's an example of how you can use this function:\n```python\nprint(generate_primes(50))  # Output: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 5.02,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

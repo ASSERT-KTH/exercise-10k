@@ -1,0 +1,9 @@
+{
+  "id": 5164,
+  "title": "Dictionary Deletion",
+  "prompt": "Write a function to delete a key from a dictionary. If the key does not exist, raise a KeyError.\nSample Input: {\"a\": 1, \"b\": 2}, \"a\"\nSample Output: {\"b\": 2}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef delete_key(dictionary, key):\n    \"\"\"\n    Deletes a key from a dictionary and returns the updated dictionary.\n    If the key does not exist, raises a KeyError.\n\n    :param dictionary: The dictionary to modify.\n    :param key: The key to delete.\n    :return: The updated dictionary.\n    \"\"\"\n    if key in dictionary:\n        del dictionary[key]\n    else:\n        raise KeyError(f\"Key '{key}' not found in the dictionary.\")\n\n    return dictionary\n```\nHere's an example of how you can use this function:\n```python\nmy_dict = {\"a\": 1, \"b\": 2}\nupdated_dict = delete_key(my_dict, \"a\")\nprint(updated_dict)  # Output: {'b': 2}\n\ntry:\n    delete_key(my_dict, \"c\")\nexcept KeyError as e:\n    print(e)  # Output: Key 'c' not found in the dictionary.\n```\nThis function checks if the key exists in the dictionary using the `in` keyword. If the key exists, it deletes the key-value pair using the `del` statement. If the key does not exist, it raises a `KeyError` with an appropriate error message.",
+  "error": null,
+  "elapsed_seconds": 3.45,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1068,
+  "title": "Find the Average",
+  "prompt": "Create a program that uses a for loop to calculate the average of a list of numbers.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses a for loop to calculate the average of a list of numbers:\n\n```python\ndef calculate_average(numbers):\n    \"\"\"\n    Calculates the average of a list of numbers using a for loop.\n\n    :param numbers: List of numbers\n    :return: Average of the numbers\n    \"\"\"\n\n    # Check if the input is a non-empty list\n    if not isinstance(numbers, list) or len(numbers) == 0:\n        raise ValueError(\"Input should be a non-empty list of numbers.\")\n\n    # Initialize the sum and count variables\n    total = 0\n    count = 0\n\n    # Use a for loop to iterate over each number in the list\n    for num in numbers:\n        # Check if the number is a number (float or int)\n        if not isinstance(num, (float, int)):\n            raise ValueError(\"All elements in the list should be numbers.\")\n\n        # Add the number to the total and increment the count\n        total += num\n        count += 1\n\n    # Calculate and return the average\n    average = total / count\n    return average\n\n# Example usage\nnumbers = [1, 2, 3, 4, 5]\naverage = calculate_average(numbers)\nprint(f\"The average of {numbers} is {average}.\")\n```\n\nThis program defines a function `calculate_average` that checks if the input is a non-empty list of numbers, then uses a for loop to iterate over each number in the list. It checks if each number is a number (float or int) and adds it to the total and increment the count. Finally, it calculates and returns the average of the numbers. The example usage demonstrates how to call the function with a sample input list.",
+  "error": null,
+  "elapsed_seconds": 5.43,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9728,
+  "title": "Statistics: Mode",
+  "prompt": "Write a program that takes a list of numbers as input and returns their mode.\nSample Input: [1, 2, 2, 3, 3, 3]\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a list of numbers as input and returns their mode:\n```python\nfrom collections import Counter\n\ndef find_mode(numbers):\n    \"\"\"\n    Find the mode(s) of a list of numbers.\n\n    :param numbers: List of numbers\n    :return: List of modes\n    \"\"\"\n    # Count the occurrences of each number\n    num_counts = Counter(numbers)\n\n    # Find the number(s) with the highest count\n    max_count = max(num_counts.values())\n    modes = [num for num, count in num_counts.items() if count == max_count]\n\n    return modes\n```\nHere's how you can use this function:\n```python\nnumbers = [1, 2, 2, 3, 3, 3]\nprint(find_mode(numbers))  # Output: [3]\n```\nThis program first counts the occurrences of each number in the input list using the `Counter` class from the `collections` module. Then, it finds the number(s) with the highest count, which are the modes of the input list. Finally, it returns a list containing the modes.",
+  "error": null,
+  "elapsed_seconds": 2.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

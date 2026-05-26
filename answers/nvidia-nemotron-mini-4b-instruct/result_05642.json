@@ -1,0 +1,9 @@
+{
+  "id": 5642,
+  "title": "Greeting Function",
+  "prompt": "Write a function that takes in a name and returns a personalized greeting message.\nSample Input: John\nSample Output: Hello, John!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef personalize_greeting(name):\n    \"\"\"\n    Takes in a name and returns a personalized greeting message.\n\n    :param name: str, the name of the person to greet\n    :return: str, a personalized greeting message\n    \"\"\"\n    if not isinstance(name, str) or not name:\n        raise ValueError(\"Input must be a non-empty string\")\n\n    return f\"Hello, {name.capitalize()}!\"\n```\nThis function checks if the input is a non-empty string, and raises a `ValueError` if it's not. Then, it uses the `str.capitalize()` method to capitalize the first letter of the name, and returns a personalized greeting message. Here are some examples of how you can use this function:\n\n```python\n>>> personalize_greeting(\"John\")\n'Hello, John!'\n\n>>> personalize_greeting(\"\")\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\n  File \"<stdin>\", line 5, in personalize_greeting\nValueError: Input must be a non-empty string\n\n>>> personalize_greeting(123)\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\n  File \"<stdin>\", line 5, in personalize_greeting\nValueError: Input must be a non-empty string\n```",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

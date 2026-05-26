@@ -1,0 +1,9 @@
+{
+  "id": 2961,
+  "title": "Pattern Printer",
+  "prompt": "Write a program that prints a pattern of asterisks (*) based on user input. The pattern should have a height of n rows, where n is the user's input. Each row should have one more asterisk than the previous row.\nSample Input: 5\nSample Output: *\n**\n***\n****\n*****\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes user input for the number of rows (n) and prints a pattern of asterisks based on that input:\n\n```python\ndef print_pattern(n):\n    \"\"\"Print a pattern of asterisks with increasing height.\"\"\"\n    # Validate the input\n    if n < 1:\n        print(\"Error: The number of rows must be at least 1.\")\n        return\n\n    # Print the pattern\n    for i in range(n):\n        print(\"*\" * (i + 1))\n\n# Get user input for the number of rows\nn = int(input(\"Enter the number of rows: \"))\n\n# Print the pattern\nprint_pattern(n)\n```\n\nWhen you run this program and enter `5` as the number of rows, it will print the following pattern:\n\n```\n*\n**\n***\n****\n*****\n```\n\nYou can modify the `print_pattern` function to allow for different types of patterns (e.g., right-aligned or centered) by changing the format string used in the `print` statement. For example, to center the pattern, you could use:\n\n```python\nprint(\"{:<\" + str(n) + \"}\").format(\"*\" * (i + 1))\n```\n\nThis would center the pattern by padding each row with spaces on the left side until it reaches the desired width of `n` characters.",
+  "error": null,
+  "elapsed_seconds": 3.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

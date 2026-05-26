@@ -1,0 +1,9 @@
+{
+  "id": 4475,
+  "title": "Find the Sum of Elements in a List that Meet a Specific Condition",
+  "prompt": "Write a program to find the sum of elements in a list that meet a specific condition (e.g. numbers greater than 3) using a while loop\nSample Input: [1, 2, 3, 4, 5], 3\nSample Output: 9\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. It uses a while loop to iterate through the list and check if each element is greater than a given number (in this case, 3). The sum of all elements that meet the condition is then returned.\n\n```python\ndef find_sum(lst, num):\n    \"\"\"\n    Find the sum of elements in a list that meet a specific condition (e.g. numbers greater than a given number)\n    using a while loop.\n\n    Parameters:\n    lst (list): The list of numbers to iterate through.\n    num (int): The number to compare each element against.\n\n    Returns:\n    int: The sum of all elements in the list that are greater than the given number.\n    \"\"\"\n\n    # Initialize a variable to keep track of the sum\n    total = 0\n\n    # Use a while loop to iterate through the list\n    i = 0\n    while i < len(lst):\n        # Check if the current element is greater than the given number\n        if lst[i] > num:\n            # Add the element to the sum if it meets the condition\n            total += lst[i]\n        # Move to the next element in the list\n        i += 1\n\n    # Return the sum\n    return total\n\n# Example usage\nsample_input = [1, 2, 3, 4, 5]\nsample_num = 3\nprint(find_sum(sample_input, sample_num))  # Output: 9\n```\n\nThis program should work for any list and any given number as long as the list contains only numbers. If the list contains non-numeric elements, you may need to modify the program to handle those cases as well.",
+  "error": null,
+  "elapsed_seconds": 4.0,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

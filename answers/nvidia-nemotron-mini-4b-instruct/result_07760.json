@@ -1,0 +1,9 @@
+{
+  "id": 7760,
+  "title": "Personalized Greeter",
+  "prompt": "Create a program that takes a user's name as input and prints out a personalized greeting message. The program should also ask for the user's age and print out a message indicating whether they are eligible to vote or not.\nSample Input: John Doe\n25\nSample Output: Hello, John Doe! You are eligible to vote.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef main():\n    # Get the user's name\n    user_name = input(\"Please enter your name: \")\n\n    # Get the user's age\n    while True:\n        try:\n            user_age = int(input(\"Please enter your age: \"))\n            break\n        except ValueError:\n            print(\"That's not a valid age. Please enter a whole number.\")\n\n    # Determine if the user is eligible to vote\n    is_eligible = user_age >= 18\n\n    # Print the personalized greeting message\n    print(f\"Hello, {user_name}! You are eligible to vote.\") if is_eligible else print(f\"Hello, {user_name}! You are not yet eligible to vote.\")\n\n# Call the main function\nmain()\n```\nThis program defines a `main` function that gets the user's name and age, determines if they are eligible to vote based on their age, and prints out a personalized greeting message. The program also includes a loop to ensure that the user enters a valid age.",
+  "error": null,
+  "elapsed_seconds": 2.66,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

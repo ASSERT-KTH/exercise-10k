@@ -1,0 +1,9 @@
+{
+  "id": 8291,
+  "title": "Hypotenuse Calculator",
+  "prompt": "Write a program that calculates the length of the hypotenuse of a right triangle.\nSample Input: 3 4\nSample Output: 5.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the length of the hypotenuse of a right triangle given the lengths of its two legs:\n\n```python\ndef calculate_hypotenuse(leg1, leg2):\n    \"\"\"\n    Calculates the length of the hypotenuse of a right triangle given the lengths of its two legs.\n\n    :param leg1: The length of the first leg of the right triangle.\n    :param leg2: The length of the second leg of the right triangle.\n    :return: The length of the hypotenuse of the right triangle.\n    \"\"\"\n\n    # Check that the input values are positive\n    if leg1 <= 0 or leg2 <= 0:\n        raise ValueError(\"Both legs of a right triangle must be positive.\")\n\n    # Calculate the hypotenuse using the Pythagorean theorem\n    hypotenuse = leg1**2 + leg2**2\n\n    return math.sqrt(hypotenuse)\n```\n\nYou can use this function by calling it with the lengths of the two legs as arguments, like this:\n\n```python\nleg1 = 3\nleg2 = 4\nhypotenuse_length = calculate_hypotenuse(leg1, leg2)\nprint(f\"{leg1} {leg2} => {hypotenuse_length:.2f}\")\n```\n\nThis will output:\n\n```\n3 4 => 5.00\n```",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

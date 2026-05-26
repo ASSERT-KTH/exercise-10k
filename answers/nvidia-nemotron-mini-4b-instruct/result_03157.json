@@ -1,0 +1,9 @@
+{
+  "id": 3157,
+  "title": "Find the Union of Two Arrays",
+  "prompt": "Write a function to find the union of two arrays.\nSample Input: [1, 2, 3, 4, 5], [4, 5, 6, 7, 8]\nSample Output: [1, 2, 3, 4, 5, 6, 7, 8]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the union of two arrays using the built-in `set` data structure, which allows for efficient operations like union (also known as difference). The function first converts the input arrays to sets, then back to a list to preserve the original order of elements.\n\n```python\ndef union(arr1, arr2):\n    \"\"\"\n    Find the union of two arrays.\n\n    :param arr1: The first input array\n    :param arr2: The second input array\n    :return: A new list containing the union of arr1 and arr2\n    \"\"\"\n    # Convert input arrays to sets for efficient operations\n    set1 = set(arr1)\n    set2 = set(arr2)\n\n    # Find the union of sets and convert it back to a list\n    return list(set1.union(set2))\n```\n\nHere's an alternative solution using the `set` data structure without converting it back to a list. This solution is more concise but may not be as efficient as the previous one for large arrays due to the overhead of creating a new set.\n\n```python\ndef union_alt(arr1, arr2):\n    \"\"\"\n    Find the union of two arrays using sets without converting back to a list.\n\n    :param arr1: The first input array\n    :param arr2: The second input array\n    :return: A new list containing the union of arr1 and arr2\n    \"\"\"\n    # Find the union of sets\n    union_set = set1.union(set2)\n\n    # Convert the union set back to a list\n    return list(union_set)\n```\n\nBoth functions will produce the same output for the provided sample input.",
+  "error": null,
+  "elapsed_seconds": 5.29,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

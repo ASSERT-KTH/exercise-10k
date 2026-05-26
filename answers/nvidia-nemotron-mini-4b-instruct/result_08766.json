@@ -1,0 +1,9 @@
+{
+  "id": 8766,
+  "title": "Only Letters",
+  "prompt": "Create a function to remove non-letter characters from a given string.\nSample Input: hello world!@#\nSample Output: helloworld\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\nimport re\n\ndef remove_non_letter_chars(input_string: str) -> str:\n    \"\"\"\n    Remove all non-letter characters from a given string.\n\n    :param input_string: The string to clean.\n    :return: The cleaned string with only letter characters.\n    \"\"\"\n    # Use a regular expression to match any character that's not a letter\n    pattern = re.compile(r'[^a-zA-Z]')\n\n    # Use the pattern to replace all non-letter characters with an empty string\n    cleaned_string = pattern.sub('', input_string)\n\n    return cleaned_string\n```\nHere's an example of how you can use this function:\n```python\ninput_string = \"hello world!@#\"\noutput_string = remove_non_letter_chars(input_string)\nprint(output_string)  # Output: helloworld\n```\nThis function uses a regular expression to match any character that's not a letter (`[^a-zA-Z]`), and then uses the `re.sub()` function to replace all non-letter characters with an empty string. The resulting string contains only letter characters.",
+  "error": null,
+  "elapsed_seconds": 2.92,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

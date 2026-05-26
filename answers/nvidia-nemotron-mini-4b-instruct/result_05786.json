@@ -1,0 +1,9 @@
+{
+  "id": 5786,
+  "title": "Function to Generate Password",
+  "prompt": "Write a function that generates a random password of a specified length. The password should contain a mix of uppercase and lowercase letters, numbers, and special characters.\nSample Input: 10\nSample Output: G4j#8dLpM2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that generates a random password of a specified length, containing a mix of uppercase and lowercase letters, numbers, and special characters. This function uses the `secrets` module for generating random characters and ensures that the password meets the specified length.\n\n```python\nimport secrets\nimport string\n\ndef generate_random_password(length: int) -> str:\n    \"\"\"\n    Generates a random password of the specified length.\n\n    :param length: The desired length of the password.\n    :return: A random password string.\n    \"\"\"\n\n    # Define the character sets for each type of character\n    upper_case = string.ascii_uppercase\n    lower_case = string.ascii_lowercase\n    digits = string.digits\n    special_chars = string.punctuation\n\n    # Combine all character sets and shuffle them\n    all_chars = upper_case + lower_case + digits + special_chars\n    shuffled_chars = ''.join(secrets.choice(all_chars) for _ in range(length))\n\n    return shuffled_chars\n```\n\nHere's an example of how to use this function:\n\n```python\npassword_length = 10\npassword = generate_random_password(password_length)\nprint(password)\n# Output: G4j#8dLpM2\n```",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

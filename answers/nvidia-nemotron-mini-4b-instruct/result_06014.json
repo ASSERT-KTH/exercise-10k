@@ -1,0 +1,9 @@
+{
+  "id": 6014,
+  "title": "Anagram Checker",
+  "prompt": "Write a program that asks the user for two strings, and prints out whether they are anagrams of each other or not\nSample Input: listen, silent\nSample Output: The strings are anagrams\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef are_anagrams(string1, string2):\n    \"\"\"Check if two strings are anagrams of each other.\n\n    Args:\n        string1 (str): The first string to compare.\n        string2 (str): The second string to compare.\n\n    Returns:\n        bool: True if the strings are anagrams, False otherwise.\n    \"\"\"\n    # Ensure both inputs are strings\n    if not isinstance(string1, str) or not isinstance(string2, str):\n        raise TypeError(\"Both inputs must be strings.\")\n\n    # Convert both strings to lowercase and remove any non-alphanumeric characters\n    cleaned_string1 = ''.join(c.lower() for c in string1 if c.isalnum())\n    cleaned_string2 = ''.join(c.lower() for c in string2 if c.isalnum())\n\n    # Check if the cleaned strings are equal\n    return cleaned_string1 == cleaned_string2\n\n# Get user input\nstring1 = input(\"Enter the first string: \")\nstring2 = input(\"Enter the second string: \")\n\n# Check if the strings are anagrams\nif are_anagrams(string1, string2):\n    print(f\"The strings are anagrams: {string1} and {string2}.\")\nelse:\n    print(f\"The strings are not anagrams: {string1} and {string2}.\")\n```\nThis program defines a function `are_anagrams` that checks if two strings are anagrams by converting both strings to lowercase and removing any non-alphanumeric characters. The program then gets user input for two strings, checks if they are anagrams using the `are_anagrams` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 4.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

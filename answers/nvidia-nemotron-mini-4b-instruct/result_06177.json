@@ -1,0 +1,9 @@
+{
+  "id": 6177,
+  "title": "Function to Calculate the Average",
+  "prompt": "Create a function that takes a list as input and returns the average of its elements.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 3.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef calculate_average(numbers):\n    \"\"\"\n    Calculates the average of a list of numbers.\n\n    Parameters:\n    numbers (list): A list of numbers.\n\n    Returns:\n    float: The average of the numbers in the list.\n    \"\"\"\n    # Check if the input is a non-empty list\n    if not isinstance(numbers, list) or len(numbers) == 0:\n        raise ValueError(\"Input should be a non-empty list.\")\n\n    # Calculate the sum of the numbers and return it divided by the length of the list\n    return sum(numbers) / len(numbers)\n```\nHere's an example of how to use this function:\n```python\nprint(calculate_average([1, 2, 3, 4, 5]))  # Output: 3.0\nprint(calculate_average([]))  # Raises ValueError\nprint(calculate_average([1]))  # Raises ValueError\n```\nThis function first checks if the input is a non-empty list. If not, it raises a `ValueError`. Then, it calculates the sum of the numbers and divides it by the length of the list to get the average.",
+  "error": null,
+  "elapsed_seconds": 3.06,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

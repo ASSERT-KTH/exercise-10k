@@ -1,0 +1,9 @@
+{
+  "id": 7585,
+  "title": "Integer Validation",
+  "prompt": "Write a program that checks if a given variable is an integer.\nSample Input: var = 10\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given variable is an integer:\n\n```python\ndef is_integer(var):\n    \"\"\"Check if a given variable is an integer.\n\n    Args:\n    var (any): The variable to check.\n\n    Returns:\n    bool: True if var is an integer, False otherwise.\n    \"\"\"\n    try:\n        # Convert var to an integer and see if it's equal to the original value\n        return var == int(var)\n    except ValueError:\n        # If the conversion fails, var is not an integer\n        return False\n\n# Example usage:\nvar = 10\nprint(is_integer(var))  # Output: True\n\nvar = \"10\"\nprint(is_integer(var))  # Output: False\n```\n\nThis program defines a function `is_integer` that takes a variable as an argument and checks if it can be converted to an integer without raising a `ValueError`. If the conversion is successful and the original value is equal to the converted value, the function returns `True`, indicating that the variable is an integer. Otherwise, it returns `False`. The example usage demonstrates how to use the function with different types of variables.",
+  "error": null,
+  "elapsed_seconds": 2.85,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

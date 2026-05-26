@@ -1,0 +1,9 @@
+{
+  "id": 9730,
+  "title": "Geometry: Circle Area",
+  "prompt": "Write a program that takes a radius as input and returns the area of a circle with that radius.\nSample Input: 5\nSample Output: 78.5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a radius as input and returns the area of a circle with that radius, using the formula `πr^2`. The output will be rounded to two decimal places.\n\n```python\nimport math\n\ndef calculate_circle_area(radius):\n    \"\"\"\n    Calculates the area of a circle with the given radius.\n\n    :param radius: float or int - The radius of the circle.\n    :return: float - The area of the circle.\n    \"\"\"\n\n    # Validate the input\n    if not isinstance(radius, (float, int)) or radius < 0:\n        raise ValueError(\"The radius must be a non-negative number.\")\n\n    # Calculate the area\n    area = math.pi * (radius ** 2)\n\n    # Round the result to two decimal places\n    rounded_area = round(area, 2)\n\n    return rounded_area\n\n# Get user input\nradius = float(input(\"Enter the radius of the circle: \"))\n\n# Calculate and display the area\narea = calculate_circle_area(radius)\nprint(f\"The area of the circle with radius {radius} is {area} square units.\")\n```\n\nThis program defines a function `calculate_circle_area` that takes a radius as input, validates it, calculates the area, and returns the result rounded to two decimal places. The program then gets user input for the radius, calls the function, and displays the result.",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

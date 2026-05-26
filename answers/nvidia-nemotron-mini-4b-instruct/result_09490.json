@@ -1,0 +1,9 @@
+{
+  "id": 9490,
+  "title": "Find the Maximum Value",
+  "prompt": "Write a program to find the maximum value in a list of integers. The program should take a list of integers as input, iterate through the list, and return the maximum value.\nSample Input: [12, 45, 7, 23, 56, 89, 34]\nSample Output: 89\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef find_max(numbers):\n    \"\"\"\n    Find the maximum value in a list of integers.\n\n    :param numbers: List of integers\n    :return: Maximum value in the list\n    \"\"\"\n    if not numbers:  # Check if the input list is empty\n        raise ValueError(\"Input list cannot be empty\")\n\n    max_value = numbers[0]  # Initialize the maximum value to the first element\n\n    for num in numbers[1:]:  # Iterate through the list starting from the second element\n        if num > max_value:  # Update the maximum value if the current number is greater\n            max_value = num\n\n    return max_value\n```\nHere's an example of how to use this function:\n```python\nnumbers = [12, 45, 7, 23, 56, 89, 34]\nprint(find_max(numbers))  # Output: 89\n```\nThis function first checks if the input list is empty and raises a `ValueError` if it is. Then, it initializes the maximum value to the first element of the list. Finally, it iterates through the rest of the list, updating the maximum value if a larger number is found. The function returns the maximum value at the end.",
+  "error": null,
+  "elapsed_seconds": 3.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

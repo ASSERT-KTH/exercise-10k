@@ -1,0 +1,9 @@
+{
+  "id": 3749,
+  "title": "Generating Binary Representation",
+  "prompt": "Write a program to generate the binary representation of a given decimal number using a basic algorithm\nSample Input: 12\nSample Output: 1100\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates the binary representation of a given decimal number using a basic algorithm:\n\n```python\ndef decimal_to_binary(decimal_number):\n    \"\"\"\n    Converts a given decimal number to its binary representation.\n\n    :param decimal_number: The decimal number to convert.\n    :return: The binary representation of the given decimal number.\n    \"\"\"\n\n    # Initialize the binary string with an empty string\n    binary_string = ''\n\n    # Continue dividing the decimal number by 2 and collecting the remainders\n    # in reverse order (from right to left)\n    while decimal_number > 0:\n        remainder = decimal_number % 2\n        decimal_number //= 2\n        binary_string = str(remainder) + binary_string\n\n    return binary_string\n\n# Example usage\ndecimal_number = 12\nbinary_representation = decimal_to_binary(decimal_number)\nprint(f\"The binary representation of {decimal_number} is {binary_representation}.\")\n```\n\nWhen you run this program with the input `12`, it will output:\n\n```\nThe binary representation of 12 is 1100.\n```",
+  "error": null,
+  "elapsed_seconds": 2.98,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 199,
+  "title": "Matrix Multiplication",
+  "prompt": "Write a program that uses a nested for loop to multiply two matrices.\nSample Input: matrix1: [[1, 2], [3, 4]], matrix2: [[5, 6], [7, 8]]\nSample Output: [[19, 22], [43, 50]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses a nested for loop to multiply two matrices. We'll represent matrices as nested lists.\n\n```python\ndef multiply_matrices(matrix1, matrix2):\n    # Check if the number of columns in matrix1 is equal to the number of rows in matrix2\n    if len(matrix1[0]) != len(matrix2):\n        raise ValueError(\"The number of columns in matrix1 must be equal to the number of rows in matrix2.\")\n\n    # Initialize the result matrix with the same dimensions as matrix1\n    result = [[0] * len(matrix1[0]) for _ in range(len(matrix1))]\n\n    # Perform matrix multiplication using nested for loops\n    for i in range(len(matrix1)):\n        for j in range(len(matrix2[0])):\n            for k in range(len(matrix2)):\n                result[i][j] += matrix1[i][k] * matrix2[k][j]\n\n    return result\n\n# Example usage\nmatrix1 = [[1, 2], [3, 4]]\nmatrix2 = [[5, 6], [7, 8]]\n\nprint(multiply_matrices(matrix1, matrix2))\n```\n\nWhen you run this program with the sample input `matrix1: [[1, 2], [3, 4]], matrix2: [[5, 6], [7, 8]]`, it will output:\n\n```\n[[19, 22], [43, 50]]\n```",
+  "error": null,
+  "elapsed_seconds": 3.77,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

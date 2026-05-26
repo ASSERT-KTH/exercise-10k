@@ -1,0 +1,9 @@
+{
+  "id": 8222,
+  "title": "Highest Score",
+  "prompt": "Create a program that finds the highest score among a list of scores using if/else statements\nSample Input: [90, 85, 95, 80]\nSample Output: 95\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the highest score among a list of scores using if/else statements:\n```python\ndef find_highest_score(scores):\n    \"\"\"\n    Find the highest score among a list of scores.\n\n    :param scores: List of scores\n    :return: Highest score\n    \"\"\"\n    # Check if the input is a non-empty list\n    if not isinstance(scores, list) or len(scores) == 0:\n        raise ValueError(\"Input should be a non-empty list of scores.\")\n\n    # Initialize the highest score to the first element in the list\n    highest_score = scores[0]\n\n    # Iterate through the list and update the highest score if a higher score is found\n    for score in scores[1:]:\n        if score > highest_score:\n            highest_score = score\n\n    return highest_score\n\n# Example usage\nscores = [90, 85, 95, 80]\nprint(find_highest_score(scores))  # Output: 95\n```\nThis program defines a function `find_highest_score` that checks if the input is a non-empty list, initializes the highest score to the first element, and then iterates through the list to update the highest score if a higher score is found. The function returns the highest score. The example usage shows how to call the function with a sample input list.",
+  "error": null,
+  "elapsed_seconds": 3.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

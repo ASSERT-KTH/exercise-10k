@@ -1,0 +1,9 @@
+{
+  "id": 824,
+  "title": "Anagram Detection",
+  "prompt": "Write a function that takes two strings as input and returns True if they are anagrams of each other, False otherwise.\nSample Input: listen, silent\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if two strings are anagrams of each other:\n\n```python\ndef are_anagrams(str1, str2):\n    \"\"\"\n    Returns True if str1 and str2 are anagrams of each other, False otherwise.\n    Anagrams are words or phrases that contain the same letters,\n    regardless of order.\n    \"\"\"\n    # Check if the lengths of the strings are equal, since anagrams must have the same number of letters\n    if len(str1) != len(str2):\n        return False\n\n    # Convert both strings to lowercase and remove any whitespace or special characters\n    str1 = ''.join(sorted(str1.lower())).replace(' ', '')\n    str2 = ''.join(sorted(str2.lower())).replace(' ', '')\n\n    # Check if the two strings are equal, which would mean they are anagrams\n    return str1 == str2\n```\n\nHere's an example of how you can use this function:\n\n```python\nprint(are_anagrams(\"listen\", \"silent\"))  # Output: True\nprint(are_anagrams(\"hello\", \"world\"))    # Output: False\n```\n\nThis function first checks if the lengths of the two strings are equal, since anagrams must have the same number of letters. Then, it converts both strings to lowercase and removes any whitespace or special characters using the `replace()` method. Finally, it checks if the two strings are equal, which would mean they are anagrams.",
+  "error": null,
+  "elapsed_seconds": 3.62,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

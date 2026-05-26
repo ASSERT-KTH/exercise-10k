@@ -1,0 +1,9 @@
+{
+  "id": 270,
+  "title": "Time Converter",
+  "prompt": "Write a program that converts a given time from one unit to another (e.g., seconds to minutes, hours to days).\nSample Input: 60 seconds minutes\nSample Output: 60 seconds is equal to 1 minutes\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that converts a given time from one unit to another:\n\n```python\ndef time_conversion(time_in_input, from_unit, to_unit):\n    \"\"\"\n    Converts a given time from one unit to another.\n\n    :param time_in_input: The time to be converted as a string (e.g., '60 seconds').\n    :param from_unit: The unit of the input time (e.g., 'seconds').\n    :param to_unit: The unit to convert to (e.g., 'minutes').\n    :return: A string representing the converted time.\n    \"\"\"\n\n    # Define the conversion factors\n    conversion_factors = {\n        'seconds': 1,\n        'minutes': 60,\n        'hours': 60 * 60,\n        'days': 24 * 60 * 60\n    }\n\n    # Parse the input time and convert it to seconds\n    input_seconds = int(time_in_input.strip().replace(' ', '').replace('seconds', ''))\n\n    # Convert the input time to the target unit\n    target_time = input_seconds / conversion_factors[to_unit]\n\n    # Format the output as a string\n    output = f\"{input_seconds} {from_unit} is equal to {target_time:.2f} {to_unit}\"\n\n    return output\n\n\n# Example usage\ntime_input = '60 seconds'\nfrom_unit = 'seconds'\nto_unit = 'minutes'\n\nprint(time_conversion(time_input, from_unit, to_unit))\n```\n\nThis program defines a function `time_conversion` that takes an input time, the units of the input and target times, and returns a string representing the converted time. The example usage at the end of the program demonstrates how to use the function to convert 60 seconds to minutes.",
+  "error": null,
+  "elapsed_seconds": 4.6,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

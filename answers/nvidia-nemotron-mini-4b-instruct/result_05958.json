@@ -1,0 +1,9 @@
+{
+  "id": 5958,
+  "title": "Pig Latin Translator",
+  "prompt": "Develop a program that translates English words to Pig Latin. The program should ask for the word, and then print out the translated word.\nSample Input: hello\nSample Output: ellohay\n",
+  "answer": "Sure, I'd be happy to help you develop a program that translates English words to Pig Latin. Here's a Python solution that meets your requirements:\n\n```python\ndef translate_to_pig_latin(word):\n    \"\"\"Translate an English word to Pig Latin.\n\n    Args:\n        word (str): The English word to translate.\n\n    Returns:\n        str: The translated Pig Latin word.\n    \"\"\"\n    # Remove any non-alphanumeric characters and convert to lowercase\n    word = ''.join(c for c in word if c.isalnum()).lower()\n\n    # If the word starts with a consonant, move the first consonant to the end and add \"way\"\n    if word[0] not in 'aeiou':\n        first_consonant = next((c for c in word if c.isalpha() and c != word[0]), None)\n        translated_word = word[1:] + first_consonant + 'way'\n    # If the word starts with a vowel, add \"way\" directly\n    else:\n        translated_word = word + 'way'\n\n    return translated_word\n\n\nif __name__ == \"__main__\":\n    english_word = input(\"Enter an English word: \")\n    pig_latin_word = translate_to_pig_latin(english_word)\n    print(f\"{english_word} becomes {pig_latin_word} in Pig Latin.\")\n```\n\nThis program defines a function `translate_to_pig_latin` that takes an English word as input and returns its Pig Latin equivalent. The main part of the script prompts the user to enter an English word, calls the function to translate it, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.89,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

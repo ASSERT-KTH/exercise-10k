@@ -1,0 +1,9 @@
+{
+  "id": 2052,
+  "title": "Dictionary Filtering",
+  "prompt": "Write a function to filter a dictionary based on a condition (e.g., filter out keys with empty values).\nSample Input: {'name': 'John', 'age': 25, 'city': ''}, lambda x: x != ''\nSample Output: {'name': 'John', 'age': 25}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef filter_dict(d, condition):\n    \"\"\"\n    Filters a dictionary based on a condition.\n\n    Parameters:\n    d (dict): The input dictionary.\n    condition (callable): A function that takes a single argument (a key-value pair) and returns a boolean value.\n                          If the function returns True, the key-value pair is included in the filtered dictionary.\n\n    Returns:\n    dict: A new dictionary containing only the key-value pairs that satisfy the condition.\n    \"\"\"\n    return {k: v for k, v in d.items() if condition(k, v)}\n```\nHere's an example of how to use this function:\n```python\nsample_input = {'name': 'John', 'age': 25, 'city': ''}\nsample_condition = lambda x: x != ''\n\nfiltered_dict = filter_dict(sample_input, sample_condition)\nprint(filtered_dict)  # Output: {'name': 'John', 'age': 25}\n```\nThis function uses a dictionary comprehension to create a new dictionary that only includes key-value pairs where the condition function returns `True`. The condition function is passed as an argument to the `filter_dict` function, allowing you to define the filtering logic based on your specific needs.",
+  "error": null,
+  "elapsed_seconds": 3.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

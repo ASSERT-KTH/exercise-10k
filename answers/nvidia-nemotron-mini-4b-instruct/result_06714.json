@@ -1,0 +1,9 @@
+{
+  "id": 6714,
+  "title": "Interactive Story",
+  "prompt": "Write a program that presents the user with a choose-your-own-adventure style story\nSample Input: A\nSample Output: You have chosen option A. The story continues...\n",
+  "answer": "Sure, I'd be happy to help you create a simple choose-your-own-adventure program. Here's a Python solution using a dictionary to store the story branches:\n\n```python\nstory_map = {\n    \"A\": \"You decide to explore the ancient ruins. As you enter, you notice a small, worn-out book on the ground. You pick it up and find it's a map of the ruins. It seems to be an old, hand-drawn map, with symbols and markings you've never seen before. You decide to follow the path marked with a symbol that looks like a labyrinth. The story continues...\",\n    \"B\": \"You decide to head towards the village. As you walk, you see a group of people pointing towards a large, shiny object in the distance. You wonder what it is. The story continues...\",\n    \"C\": \"You decide to head towards the forest. As you walk, you hear rustling in the bushes. You decide to keep moving and try to find a way out of the forest. The story continues...\"\n}\n\ndef tell_story(user_choice):\n    if user_choice not in story_map:\n        print(\"Invalid option. Please choose again.\")\n        return\n\n    print(f\"You have chosen option {user_choice}. The story continues...\")\n    print(story_map[user_choice])\n\n# Main function\nwhile True:\n    user_choice = input(\"Enter A, B, or C: \").upper()\n    tell_story(user_choice)\n```\n\nThis program will allow the user to choose between three options (A, B, or C) and present them with a corresponding story based on their choice. You can easily expand this program by adding more story branches and user choices.",
+  "error": null,
+  "elapsed_seconds": 5.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

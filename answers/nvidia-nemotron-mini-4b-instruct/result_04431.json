@@ -1,0 +1,9 @@
+{
+  "id": 4431,
+  "title": "Calendar Program",
+  "prompt": "Write a program that prints out a calendar for a given month and year using a for loop.\nSample Input: 2024 9\nSample Output:    September 2024\n Su Mo Tu We Th Fr Sa\n 1  2  3  4  5  6  7\n 8  9 10 11 12 13 14\n15 16 17 18 19 20 21\n22 23 24 25 26 27 28\n29 30\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that prints out a calendar for a given month and year using a for loop:\n```python\ndef print_calendar(year, month):\n    # Initialize a list of days in the month\n    days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\n\n    # Handle February differently based on whether it's a leap year\n    if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:\n        days[1] = 29\n\n    # Print the header\n    print(f\"{month.upper()} {year}\")\n    print(\" Su Mo Tu We Th Fr Sa\")\n\n    # Print the calendar rows\n    current_day = 1\n    for day in days:\n        print(f\"{current_day:2} \", end=\"\")\n        current_day += 1\n        if current_day % 7 == 0:\n            print()\n\n# Example usage\nprint_calendar(2024, 9)\n```\nThis program first initializes a list of days in the month based on whether the year is a leap year or not. Then, it prints the header of the calendar and the calendar rows, with each row containing a single day of the month. The `current_day` variable is used to keep track of the current day being printed, and it is incremented and reset to the beginning of a new row every 7 days.\n\nYou can replace `2024` and `9` with your desired year and month, respectively, to print out a calendar for a different month and year.",
+  "error": null,
+  "elapsed_seconds": 4.31,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

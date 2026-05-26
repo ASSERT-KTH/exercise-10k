@@ -1,0 +1,9 @@
+{
+  "id": 3232,
+  "title": "First Missing Positive",
+  "prompt": "Write a program to find the first missing positive integer in an array.\nSample Input: [3, 4, -1, 1]\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the first missing positive integer in an array:\n\n```python\ndef firstMissingPositive(arr):\n    # Initialize a set to store the numbers in the array\n    seen = set()\n\n    # Iterate through the array and mark each number as seen\n    for num in arr:\n        if num > 0 and num <= len(arr) and num not in seen:\n            seen.add(num)\n\n    # Iterate through the numbers from 1 to the length of the array and check if they're not in the set\n    for num in range(1, len(arr) + 1):\n        if num not in seen:\n            return num\n\n    # If no missing positive integer is found, return -1\n    return -1\n\n# Test the function with the sample input\nsample_input = [3, 4, -1, 1]\nprint(FirstMissingPositive(sample_input))  # Output: 2\n```\n\nThis program uses a set to keep track of the numbers that have been seen in the array. It iterates through the array and marks each number as seen if it's a positive integer between 1 and the length of the array. Then, it iterates through the numbers from 1 to the length of the array and checks if each number is not in the set. If it is, that number is the first missing positive integer in the array. If no missing positive integer is found, the function returns -1.\n\nYou can modify this program to use other data structures or algorithms if you prefer, but this should work well for most cases.",
+  "error": null,
+  "elapsed_seconds": 3.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

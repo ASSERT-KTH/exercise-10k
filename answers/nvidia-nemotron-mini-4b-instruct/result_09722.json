@@ -1,0 +1,9 @@
+{
+  "id": 9722,
+  "title": "Decimal Arithmetic",
+  "prompt": "Write a program that takes two decimal numbers as input and returns their sum.\nSample Input: 1.2 2.3\nSample Output: 3.5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes two decimal numbers as input and returns their sum:\n\n```python\ndef get_decimal_input():\n    \"\"\"Get user input for two decimal numbers.\"\"\"\n    while True:\n        try:\n            num1 = float(input(\"Enter the first decimal number: \"))\n            num2 = float(input(\"Enter the second decimal number: \"))\n            return num1, num2\n        except ValueError:\n            print(\"Invalid input. Please enter two decimal numbers.\")\n\ndef calculate_sum(num1, num2):\n    \"\"\"Calculate the sum of two decimal numbers.\"\"\"\n    return num1 + num2\n\nif __name__ == \"__main__\":\n    num1, num2 = get_decimal_input()\n    sum_result = calculate_sum(num1, num2)\n    print(f\"The sum of {num1} and {num2} is {sum_result}.\")\n```\n\nThis program defines three functions: `get_decimal_input()` to get user input for two decimal numbers, `calculate_sum()` to calculate the sum of two decimal numbers, and `main()` to call the other two functions and print the result. The `while` loop in `get_decimal_input()` ensures that the user input is valid before returning the numbers.",
+  "error": null,
+  "elapsed_seconds": 3.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9304,
+  "title": "Longest Word Finder",
+  "prompt": "Create a function that takes a string as input and returns the longest word in the string.\nSample Input: Hello World this is a test\nSample Output: Hello\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef longest_word(input_string: str) -> str:\n    \"\"\"\n    Given a string, return the longest word in the string.\n\n    :param input_string: The input string to search for the longest word.\n    :return: The longest word in the input string.\n    \"\"\"\n    # Split the input string into words, removing any punctuation and converting to lowercase\n    words = [word.strip(\",.!?;:\") for word in input_string.lower().split()]\n\n    # Find the longest word\n    longest_word = max(words, key=len)\n\n    return longest_word\n```\nHere's how you can use this function:\n```python\nsample_input = \"Hello World this is a test\"\nprint(longest_word(sample_input))  # Output: Hello\n```\nThis function first splits the input string into words, removing any punctuation and converting them to lowercase. Then, it finds the longest word using the `max()` function with a key function that returns the length of each word.",
+  "error": null,
+  "elapsed_seconds": 2.66,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

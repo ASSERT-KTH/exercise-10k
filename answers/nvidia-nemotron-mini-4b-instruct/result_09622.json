@@ -1,0 +1,9 @@
+{
+  "id": 9622,
+  "title": "Greeting Function",
+  "prompt": "Create a function that takes a name as an argument and prints out a personalized greeting.\nSample Input: 'John'\nSample Output: Hello, John!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n\n```python\ndef personalized_greeting(name):\n    \"\"\"\n    Prints out a personalized greeting for the given name.\n\n    :param name: str - The name to use in the greeting.\n    \"\"\"\n    if not isinstance(name, str) or not name:\n        raise ValueError(\"The 'name' argument must be a non-empty string.\")\n\n    print(f\"Hello, {name.title()}!\")\n```\n\nThis function checks if the input is a non-empty string and raises a `ValueError` if it's not. Then, it uses an f-string to construct the personalized greeting and prints it out. Here are some examples of how you can use this function:\n\n```python\npersonalized_greeting(\"John\")  # Output: Hello, John!\npersonalized_greeting(\"\")      # Raises ValueError\npersonalized_greeting(123)     # Raises ValueError\n```",
+  "error": null,
+  "elapsed_seconds": 2.51,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

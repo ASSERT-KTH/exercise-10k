@@ -1,0 +1,9 @@
+{
+  "id": 9822,
+  "title": "Multiplication Table Generator",
+  "prompt": "Create a program that generates a multiplication table for a given range of numbers. The program should take two integer inputs, 'start' and 'end', and print a multiplication table for numbers from 'start' to 'end'. The table should include the multiplication results for each number in the range with all other numbers in the range.\nSample Input: 2 5\nSample Output:    2  3  4  5\n2  4  6  8 10\n3  6  9 12 15\n4  8 12 16 20\n5 10 15 20 25\n",
+  "answer": "Here's a Python program that generates a multiplication table for a given range of numbers:\n\n```python\ndef generate_multiplication_table(start, end):\n    # Print the table header\n    print(f\"\\n{start}  {start + 1}  {start + 2}  {start + 3}  {start + 4}\")\n\n    # Iterate over each number in the range\n    for i in range(start, end + 1):\n        # Print the current row header\n        print(f\"{i} \", end=\"\")\n\n        # Iterate over each number in the range\n        for j in range(start, end + 1):\n            # Calculate the product and print it\n            product = i * j\n            print(f\"{product:>3}\", end=\" \")\n\n        # Print a newline after the row\n        print()\n\n# Get user input for start and end values\nstart = int(input(\"Enter the starting number: \"))\nend = int(input(\"Enter the ending number: \"))\n\n# Generate the multiplication table\ngenerate_multiplication_table(start, end)\n```\n\nThis program first prints the table header, then iterates over each number in the range from `start` to `end`. For each number `i`, it prints the current row header and iterates over each number `j` in the range. For each pair of numbers, it calculates their product and prints it in a formatted string. Finally, it prints a newline after each row.",
+  "error": null,
+  "elapsed_seconds": 3.53,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

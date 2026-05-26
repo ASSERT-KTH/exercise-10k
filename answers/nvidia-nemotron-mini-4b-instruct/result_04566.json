@@ -1,0 +1,9 @@
+{
+  "id": 4566,
+  "title": "Dictionary Mapping",
+  "prompt": "Write a function that takes a dictionary and a function, then applies the function to each value in the dictionary and returns a new dictionary with the results\nSample Input: {'a': 1, 'b': 2, 'c': 3}, lambda x: x * 2\nSample Output: {'a': 2, 'b': 4, 'c': 6}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef apply_function_to_dict(dictionary, function):\n    \"\"\"\n    Applies a function to each value in a dictionary and returns a new dictionary with the results.\n\n    Parameters:\n    dictionary (dict): The input dictionary.\n    function (callable): A function that takes a single argument and returns a single value.\n\n    Returns:\n    dict: A new dictionary with the results of applying the function to each value in the input dictionary.\n    \"\"\"\n    # Use a dictionary comprehension to apply the function to each value and create a new dictionary\n    return {key: function(value) for key, value in dictionary.items()}\n```\nHere's an example of how you can use this function:\n```python\nsample_input = {'a': 1, 'b': 2, 'c': 3}\nsample_function = lambda x: x * 2\n\nresult = apply_function_to_dict(sample_input, sample_function)\nprint(result)  # Output: {'a': 2, 'b': 4, 'c': 6}\n```\nThis function uses a dictionary comprehension to create a new dictionary with the results of applying the given function to each value in the input dictionary. The `items()` method is used to iterate over the key-value pairs in the input dictionary, and the function is applied to each value using the `lambda` expression.",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

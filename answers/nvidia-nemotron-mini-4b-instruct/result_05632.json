@@ -1,0 +1,9 @@
+{
+  "id": 5632,
+  "title": "Finding the Longest Increasing Subsequence",
+  "prompt": "Create a program to find the length of the longest increasing subsequence in a given list of integers.\nSample Input: [10, 22, 9, 33, 21, 50, 41, 60]\nSample Output: 5\n",
+  "answer": "Here's a Python solution using dynamic programming. The idea is to keep track of the longest increasing subsequence ending at each index. \n\n```python\ndef longest_increasing_subsequence(arr):\n    n = len(arr)\n    dp = [1]*n  # dp[i] will store the length of LIS ending with arr[i]\n\n    for i in range(1, n):\n        for j in range(0, i):\n            if arr[i] > arr[j] and dp[i] < dp[j]+1:\n                dp[i] = dp[j]+1\n\n    max_length = max(dp)\n    return max_length\n\n# Test the function\nprint(longest_increasing_subsequence([10, 22, 9, 33, 21, 50, 41, 60]))  # Output: 5\n```\n\nThis solution has a time complexity of O(n^2), where n is the length of the input array.",
+  "error": null,
+  "elapsed_seconds": 10.78,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

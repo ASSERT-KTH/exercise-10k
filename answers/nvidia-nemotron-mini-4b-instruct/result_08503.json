@@ -1,0 +1,9 @@
+{
+  "id": 8503,
+  "title": "Name and Age Input",
+  "prompt": "Write a program that asks the user for their name and age, then prints out a greeting message with their name and age. The program should handle invalid age input and ensure the age is a positive integer.\nSample Input: John\n25\nSample Output: Hello, John! You are 25 years old.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_positive_integer_input(prompt):\n    \"\"\"Get a positive integer input from the user, handling invalid input.\"\"\"\n    while True:\n        try:\n            age = int(input(prompt))\n            if age > 0:\n                return age\n            else:\n                print(\"Please enter a positive integer.\")\n        except ValueError:\n            print(\"That's not a valid integer. Please try again.\")\n\ndef greet_user():\n    \"\"\"Get the user's name and age, then print a greeting message.\"\"\"\n    name = input(\"Please enter your name: \")\n    age = get_positive_integer_input(\"Please enter your age: \")\n\n    greeting = f\"Hello, {name}! You are {age} years old.\"\n    print(greeting)\n\n# Call the greet_user function\ngreet_user()\n```\nThis program defines a helper function `get_positive_integer_input` that keeps asking the user for input until they enter a positive integer. The `greet_user` function then prompts the user for their name and age, validates the age input using the helper function, and prints a greeting message with the user's name and age.\n\nWhen you run this program, it will first prompt you to enter your name, then prompt you to enter your age. If you enter a non-integer value or a negative value, it will prompt you to try again. Once you enter a valid age (a positive integer), the program will print a greeting message with your name and age.",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

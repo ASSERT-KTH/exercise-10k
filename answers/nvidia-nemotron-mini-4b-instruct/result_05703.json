@@ -1,0 +1,9 @@
+{
+  "id": 5703,
+  "title": "Basic Calculator",
+  "prompt": "Create a simple calculator that takes two numbers and an operator as input and performs the corresponding operation.\nSample Input: 2 + 3\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you create a simple calculator in Python. Here's a simple implementation that takes two numbers and an operator as input and performs the corresponding operation:\n\n```python\ndef calculate(num1, num2, operator):\n    \"\"\"\n    Performs a calculation based on the given operator and two numbers.\n\n    :param num1: The first number.\n    :param num2: The second number.\n    :param operator: The operator to apply ('+', '-', '*', or '/').\n    :return: The result of the calculation.\n    \"\"\"\n\n    # Ensure the operator is valid\n    valid_operators = {'+': operator.add, '-': operator.sub, '*': operator.mul, '/': operator.truediv}\n    if operator not in valid_operators:\n        raise ValueError(f\"Invalid operator '{operator}'. Please use one of the following: {', '.join(valid_operators.keys())}\")\n\n    # Perform the calculation\n    result = valid_operators[operator](num1, num2)\n\n    return result\n\n\n# Example usage\nnum1 = float(input(\"Enter the first number: \"))\nnum2 = float(input(\"Enter the second number: \"))\noperator = input(\"Enter the operator (+, -, *, or /): \")\n\ntry:\n    result = calculate(num1, num2, operator)\n    print(f\"The result of {num1} {operator} {num2} is {result}.\")\nexcept ValueError as e:\n    print(e)\n```\n\nThis script defines a `calculate` function that takes two numbers and an operator as input, validates the operator, and performs the corresponding calculation. The example usage at the end of the script demonstrates how to use the function to perform simple arithmetic operations.",
+  "error": null,
+  "elapsed_seconds": 4.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

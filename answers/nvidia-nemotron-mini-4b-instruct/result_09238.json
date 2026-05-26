@@ -1,0 +1,9 @@
+{
+  "id": 9238,
+  "title": "Array Indexing",
+  "prompt": "Write a program that accesses and manipulates elements of an array using indexing.\nSample Input: arr = [1, 2, 3, 4, 5]\nSample Output: Element at index 2: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that accesses and manipulates elements of an array (or list) using indexing:\n\n```python\ndef access_array_element(arr, index):\n    \"\"\"\n    Access and manipulate elements of an array using indexing.\n\n    :param arr: The array to access elements from.\n    :param index: The index of the element to access.\n    :return: The value of the element at the given index.\n    \"\"\"\n\n    # Check if the index is within the bounds of the array\n    if index < 0 or index >= len(arr):\n        raise IndexError(f\"Index {index} is out of bounds for array of length {len(arr)}\")\n\n    # Access and return the element at the given index\n    return arr[index]\n\n\n# Example usage\narr = [1, 2, 3, 4, 5]\nindex = 2\n\ntry:\n    element = access_array_element(arr, index)\n    print(f\"Element at index {index}: {element}\")\nexcept IndexError as e:\n    print(e)\n```\n\nWhen you run this program with the sample input `arr = [1, 2, 3, 4, 5]` and `index = 2`, it will output:\n\n```\nElement at index 2: 3\n```",
+  "error": null,
+  "elapsed_seconds": 3.23,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

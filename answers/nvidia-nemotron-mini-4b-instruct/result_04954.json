@@ -1,0 +1,9 @@
+{
+  "id": 4954,
+  "title": "Palindrome Checker",
+  "prompt": "Create a program that checks whether a given string is a palindrome using conditional statements.\nSample Input: madam\nSample Output: Palindrome\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given string is a palindrome using conditional statements:\n\n```python\ndef is_palindrome(s):\n    \"\"\"Check if a given string is a palindrome.\"\"\"\n    # Remove any non-alphanumeric characters and convert to lowercase\n    s = ''.join(c.lower() for c in s if c.isalnum())\n\n    # Check if the string is equal to its reverse\n    return s == s[::-1]\n\n# Get user input\nuser_input = input(\"Enter a string to check if it's a palindrome: \")\n\n# Check if the input is a palindrome\nif is_palindrome(user_input):\n    print(f\"'{user_input}' is a palindrome.\")\nelse:\n    print(f\"'{user_input}' is not a palindrome.\")\n```\n\nThis program first removes any non-alphanumeric characters from the input string and converts it to lowercase. Then, it checks if the string is equal to its reverse (`s[::-1]`). If the two strings are equal, the function returns `True`, indicating that the input string is a palindrome. Otherwise, it returns `False`. The program then prompts the user to enter a string, checks if it's a palindrome using the `is_palindrome` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 4.81,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

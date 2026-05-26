@@ -1,0 +1,9 @@
+{
+  "id": 9426,
+  "title": "Function with Filter Function",
+  "prompt": "Create a function that takes a list of numbers and returns the even numbers using the filter function\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_even_numbers(numbers):\n    \"\"\"\n    Given a list of numbers, return a new list containing only the even numbers.\n\n    :param numbers: list of numbers\n    :return: list of even numbers\n    \"\"\"\n    if not isinstance(numbers, list):\n        raise TypeError(\"Input should be a list\")\n\n    even_numbers = list(filter(lambda x: x % 2 == 0, numbers))\n    return even_numbers\n```\nThis function first checks if the input is a list. If not, it raises a `TypeError`. Then, it uses the built-in `filter()` function to create an iterator that yields only the even numbers from the input list. Finally, it converts the iterator to a list and returns it.\n\nHere's an example of how to use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\neven_numbers = get_even_numbers(numbers)\nprint(even_numbers)  # Output: [2, 4]\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.98,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

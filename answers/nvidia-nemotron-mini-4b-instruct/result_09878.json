@@ -1,0 +1,9 @@
+{
+  "id": 9878,
+  "title": "Unit Converter",
+  "prompt": "Write a program that takes a value and unit as input and converts it to another unit.\nSample Input: 10 inches to centimeters\nSample Output: 25.4 centimeters\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a value and unit as input, converts it to another unit, and outputs the result. In this example, I've implemented conversions for inches to centimeters, feet to meters, and pounds to kilograms. You can easily extend this to support more units by adding them to the `CONVERSION_RATES` dictionary.\n\n```python\nCONVERSION_RATES = {\n    \"inches\": {\n        \"cm\": 2.54,\n        \"m\": 0.0254,\n    },\n    \"feet\": {\n        \"m\": 0.3048,\n    },\n    \"pounds\": {\n        \"kg\": 0.453592,\n    },\n}\n\ndef convert(value, unit, to_unit):\n    \"\"\"Converts a value from one unit to another.\"\"\"\n    if unit not in CONVERSION_RATES:\n        raise ValueError(f\"Unknown unit: {unit}\")\n\n    conversion_rate = CONVERSION_RATES[unit]\n    if to_unit not in conversion_rate:\n        raise ValueError(f\"Unknown to_unit: {to_unit}\")\n\n    return value * conversion_rate[to_unit]\n\n\nif __name__ == \"__main__\":\n    value = float(input(\"Enter a value: \"))\n    unit = input(\"Enter the unit (e.g. inches, feet, or pounds): \").lower()\n    to_unit = input(f\"Enter the to_unit (e.g. cm, m, or kg): \").lower()\n\n    try:\n        result = convert(value, unit, to_unit)\n        print(f\"{value} {unit} is {result} {to_unit}.\")\n    except ValueError as e:\n        print(e)\n```\n\nThis program will prompt the user for a value, unit, and to_unit, and then convert the value from the given unit to the to_unit. It handles invalid units and to_units gracefully by raising appropriate exceptions.",
+  "error": null,
+  "elapsed_seconds": 4.85,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

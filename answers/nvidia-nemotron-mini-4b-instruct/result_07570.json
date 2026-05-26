@@ -1,0 +1,9 @@
+{
+  "id": 7570,
+  "title": "Function with Assertion",
+  "prompt": "Write a function that uses assertions to verify the correctness of its input or internal state.\nSample Input: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example Python function that uses assertions to verify the correctness of its input. In this case, the function is designed to calculate the factorial of a given number. However, you can adapt this example to verify the internal state of your function by changing the assertion statements.\n\n```python\ndef factorial(n: int) -> int:\n    \"\"\"\n    Calculate the factorial of a given number.\n\n    :param n: The number to calculate the factorial of.\n    :return: The factorial of n.\n    :raises ValueError: If n is not a positive integer.\n    \"\"\"\n\n    # Assert that n is a positive integer\n    assert n >= 0, f\"Input must be a non-negative integer, got {n}.\"\n\n    # Base case: factorial of 0 is 1\n    if n == 0:\n        return 1\n\n    # Recursive case: factorial of n is n * factorial(n-1)\n    return n * factorial(n - 1)\n\n# Test the function with sample input\nsample_input = 5\nassert factorial(sample_input) == 120, f\"Factorial of {sample_input} should be 120, got {factorial(sample_input)}.\"\n```\n\nIn this example, the function `factorial` first asserts that the input `n` is a non-negative integer. Then, it checks the base case where `n` is 0 and returns 1. Finally, it asserts that the calculated factorial is equal to the expected value (120 in this case) for the given input (5). You can modify these assertion statements to verify the internal state of your function as needed.",
+  "error": null,
+  "elapsed_seconds": 3.98,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6896,
+  "title": "Conditional Statement Checker",
+  "prompt": "Create a program that takes an integer as input and checks if it is divisible by 3, 5, or both. If the number is divisible by 3, print 'Three'. If it is divisible by 5, print 'Five'. If it is divisible by both, print 'ThreeFive'. If it is not divisible by either, print 'None'.\nSample Input: 15\nSample Output: ThreeFive\n",
+  "answer": "Sure, I'd be happy to help you create a program for that. Here's a Python solution:\n\n```python\ndef check_divisibility(number):\n    \"\"\"\n    Check if the given number is divisible by 3, 5, or both.\n\n    :param number: The integer to check.\n    :return: A string indicating the result: 'Three', 'Five', 'ThreeFive', or 'None'.\n    \"\"\"\n    if number % 3 == 0 and number % 5 == 0:\n        return 'ThreeFive'\n    elif number % 3 == 0:\n        return 'Three'\n    elif number % 5 == 0:\n        return 'Five'\n    else:\n        return 'None'\n\n# Get user input\nuser_input = int(input(\"Enter an integer: \"))\n\n# Print the result\nprint(check_divisibility(user_input))\n```\n\nThis program defines a function `check_divisibility` that takes an integer as input and returns a string indicating whether the number is divisible by 3, 5, or both. The function uses the modulus operator (`%`) to check for divisibility. The program then gets user input, calls the function with the user input, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 2.96,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

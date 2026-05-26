@@ -1,0 +1,9 @@
+{
+  "id": 5739,
+  "title": "Partial Application",
+  "prompt": "Write a function that takes a function and some arguments, and returns a new function that is the partial application of the input function with the given arguments.\nSample Input: add(x, y, z), x=1, y=2\nSample Output: a function that takes z and returns 1+2+z\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef partial(func, *args):\n    \"\"\"\n    Partially applies a function with given arguments.\n\n    Parameters:\n    func (callable): The function to partially apply.\n    *args: Variable number of arguments to pass to the function.\n\n    Returns:\n    callable: A new function that is the partial application of the input function.\n    \"\"\"\n    return lambda *remaining_args: func(*args + remaining_args)\n```\nHere's an example of how to use this function:\n```python\nadd = partial(lambda x, y, z: x + y + z, 1, 2)\nprint(add(3))  # Output: 6\n```\nIn this example, `add` is a new function that takes a single argument `z` and returns the result of adding 1, 2, and `z`. When we call `add(3)`, it calls the original `add` function with the arguments `1`, `2`, and `3`, and returns the result.",
+  "error": null,
+  "elapsed_seconds": 2.63,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

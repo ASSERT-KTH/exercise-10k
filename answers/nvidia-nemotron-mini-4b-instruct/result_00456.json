@@ -1,0 +1,9 @@
+{
+  "id": 456,
+  "title": "Math Game",
+  "prompt": "Write a program that asks the user a series of math questions, then keeps track of the user's score.\nSample Input: What is 2 + 2?\nSample Output: You answered: 4. Correct!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef ask_and_check_math_question():\n    \"\"\"Ask the user a math question and check their answer.\"\"\"\n\n    # Ask the user a math question\n    problem = input(\"What is the answer to this math question? \")\n\n    # Get the correct answer\n    correct_answer = eval(\"2 + 2\")  # Use eval to evaluate the expression\n\n    # Check if the user's answer is correct\n    if problem == str(correct_answer):\n        print(f\"You answered: {problem}. Correct!\")\n    else:\n        print(f\"You answered: {problem}. Incorrect. The correct answer is {correct_answer}.\")\n\n    # Keep track of the user's score\n    global score\n    score += 1 if problem == str(correct_answer) else 0\n\n# Initialize the score\nscore = 0\n\n# Ask the user a series of math questions\nfor _ in range(5):\n    ask_and_check_math_question()\n\n# Print the final score\nprint(f\"\\nYour final score is: {score}\")\n```\nThis program defines a function `ask_and_check_math_question()` that asks the user a math question, checks their answer, and keeps track of the user's score. The program then asks the user a series of 5 math questions and prints the final score. Note that I used `eval()` to evaluate the math expression, but it's not recommended to use this function in production code due to security concerns. You can replace it with a safer alternative like `str(correct_answer)` or `int(correct_answer)`.",
+  "error": null,
+  "elapsed_seconds": 5.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

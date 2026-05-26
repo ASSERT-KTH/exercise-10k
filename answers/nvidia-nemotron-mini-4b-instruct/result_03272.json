@@ -1,0 +1,9 @@
+{
+  "id": 3272,
+  "title": "Finding the Minimum",
+  "prompt": "Create a program that uses a for loop to find the minimum number in a list of numbers.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses a for loop to find the minimum number in a list of numbers:\n\n```python\ndef find_min(numbers):\n    \"\"\"\n    Find the minimum number in a list of numbers using a for loop.\n\n    :param numbers: List of numbers\n    :return: Minimum number in the list\n    \"\"\"\n    if not numbers:  # Check if the list is empty\n        raise ValueError(\"Input list cannot be empty\")\n\n    min_number = numbers[0]  # Initialize the minimum number as the first element\n\n    for num in numbers[1:]:  # Iterate over all elements except the first one\n        if num < min_number:  # If the current number is smaller than the minimum number found so far\n            min_number = num  # Update the minimum number\n\n    return min_number\n\n# Example usage\nnumbers = [1, 2, 3, 4, 5]\nprint(find_min(numbers))  # Output: 1\n```\n\nThis function first checks if the input list is empty and raises a `ValueError` if it is. Then, it initializes the minimum number as the first element of the list. Finally, it iterates over all elements in the list, updating the minimum number if it finds a smaller number. The function returns the minimum number at the end.",
+  "error": null,
+  "elapsed_seconds": 4.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1847,
+  "title": "Array Mapping",
+  "prompt": "Write a program that takes an array of integers and a function as input, and returns a new array containing the results of applying the function to each element in the original array.\nSample Input: [1, 2, 3, 4, 5], lambda x: x * 2\nSample Output: [2, 4, 6, 8, 10]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef apply_function_to_array(arr, func):\n    \"\"\"\n    Applies a given function to each element in an array.\n\n    Parameters:\n    arr (list): The input array of integers.\n    func (callable): A function that takes one argument and returns a value.\n\n    Returns:\n    list: A new array containing the results of applying the function to each element in the original array.\n    \"\"\"\n    # Use a list comprehension to apply the function to each element in the array\n    result = [func(x) for x in arr]\n    return result\n\n# Example usage:\narr = [1, 2, 3, 4, 5]\nfunc = lambda x: x * 2\nprint(apply_function_to_array(arr, func))  # Output: [2, 4, 6, 8, 10]\n```\nThis program defines a function `apply_function_to_array` that takes an array and a function as input, and returns a new array containing the results of applying the function to each element in the original array. The function uses a list comprehension to apply the function to each element in the array, and returns the resulting list. The example usage demonstrates how to use the function with a lambda function that doubles each element in the array.",
+  "error": null,
+  "elapsed_seconds": 3.47,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4032,
+  "title": "Remove Duplicates",
+  "prompt": "Create a function to remove duplicates from a sorted array\nSample Input: [1, 1, 2, 2, 3, 4, 4, 5]\nSample Output: [1, 2, 3, 4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that removes duplicates from a sorted array (list) while preserving the original order:\n\n```python\ndef remove_duplicates(arr):\n    \"\"\"\n    Remove duplicates from a sorted array while preserving the original order.\n\n    :param arr: The sorted array to remove duplicates from.\n    :return: A new array with unique elements.\n    \"\"\"\n    i = 0\n    for j in range(1, len(arr)):\n        if arr[i] != arr[j]:\n            i += 1\n            arr[i] = arr[j]\n    return arr[:i + 1]\n```\n\nHere's how you can use this function:\n\n```python\nsample_input = [1, 1, 2, 2, 3, 4, 4, 5]\nunique_array = remove_duplicates(sample_input)\nprint(unique_array)  # Output: [1, 2, 3, 4, 5]\n```\n\nThis function works by iterating through the array and comparing each element to the next one. If the elements are different, it moves the current element to the next position and continues with the next element. This way, it effectively removes all duplicate elements while preserving the original order.",
+  "error": null,
+  "elapsed_seconds": 3.16,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5960,
+  "title": "Text Analyzer",
+  "prompt": "Develop a program that analyzes a given text and prints out statistics (e.g., word count, character count, most frequent words). The program should ask for the text, and then print out the statistics.\nSample Input: This is a sample text.\nSample Output: Word count: 5, Character count: 20, Most frequent words: ['is', 'a']\n",
+  "answer": "Here's a Python program that meets your requirements. This program uses the `collections` module to count the frequency of words and the `string` module to calculate the character count.\n\n```python\nimport string\nfrom collections import Counter\n\ndef analyze_text():\n    text = input(\"Enter the text: \")\n\n    # Remove punctuation and convert to lowercase\n    text = ''.join(c for c in text if c not in string.punctuation).lower()\n\n    # Split the text into words and count their frequency\n    word_count = len(text.split())\n    char_count = len(text)\n    word_freq = Counter(text.split())\n\n    # Print the statistics\n    print(f\"Word count: {word_count}, Character count: {char_count}\")\n\n    # Print the most frequent words\n    most_frequent = word_freq.most_common(5)\n    print(\"Most frequent words:\")\n    for word, freq in most_frequent:\n        print(f\"{word}: {freq}\")\n\n# Call the function\nanalyze_text()\n```\n\nThis program will ask for the text, remove punctuation, convert to lowercase, split into words, and then count the frequency of each word. The most frequent words are then printed out.",
+  "error": null,
+  "elapsed_seconds": 3.27,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

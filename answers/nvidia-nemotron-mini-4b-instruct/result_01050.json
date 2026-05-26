@@ -1,0 +1,9 @@
+{
+  "id": 1050,
+  "title": "List Filtering",
+  "prompt": "Write a program that takes a list and a predicate as input, and returns a new list containing only the elements that satisfy the predicate.\nSample Input: [1, 2, 3, 4, 5], x % 2 == 0\nSample Output: [2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef filter_list(lst, predicate):\n    \"\"\"\n    Filters a list based on a given predicate.\n\n    Parameters:\n    lst (list): The list to filter.\n    predicate (callable): A function that takes an element as input and returns a boolean.\n\n    Returns:\n    list: A new list containing only the elements that satisfy the predicate.\n    \"\"\"\n    return [element for element in lst if predicate(element)]\n\n# Example usage:\nnumbers = [1, 2, 3, 4, 5]\neven_numbers = filter_list(numbers, lambda x: x % 2 == 0)\nprint(even_numbers)  # Output: [2, 4]\n```\nThis program defines a function `filter_list` that takes a list and a predicate as input, and returns a new list containing only the elements that satisfy the predicate. The function uses a list comprehension to create the new list, iterating over each element in the input list and checking if the predicate function returns `True` for that element.\n\nThe example usage shows how to use the `filter_list` function with a list of numbers and a predicate that checks if a number is even. The resulting list contains only the even numbers.",
+  "error": null,
+  "elapsed_seconds": 3.1,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7900,
+  "title": "Array Element Extractor",
+  "prompt": "Create a function that takes an array and an index as input, and returns the element at the specified index. If the index is out of range, return a message indicating that the index is invalid.\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_element_at_index(arr, index):\n    \"\"\"\n    Returns the element at the specified index in the input array.\n    If the index is out of range, returns a message indicating that the index is invalid.\n\n    :param arr: The input array\n    :param index: The index to get the element from\n    :return: The element at the specified index, or a message if the index is invalid\n    \"\"\"\n    if not isinstance(arr, list) or not all(isinstance(i, (int, float)) for i in arr):\n        return \"Input array must be a list of numbers.\"\n\n    if not isinstance(index, int) or index < 0 or index >= len(arr):\n        return f\"Index {index} is out of range (must be between 0 and {len(arr) - 1}).\"\n\n    return arr[index]\n```\nThis function checks if the input is a list and if the index is a valid integer. If the index is out of range, it returns an appropriate error message. Otherwise, it returns the element at the specified index.\n\nHere's an example of how you can use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\nindex = 2\n\nresult = get_element_at_index(numbers, index)\nprint(result)  # Output: 3\n```",
+  "error": null,
+  "elapsed_seconds": 3.73,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

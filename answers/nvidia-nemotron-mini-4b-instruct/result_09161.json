@@ -1,0 +1,9 @@
+{
+  "id": 9161,
+  "title": "Basic Error Handling",
+  "prompt": "Create a program that handles a basic error (e.g. division by zero) and prints out an error message, then print out the error message.\nSample Input: None\nSample Output: Error: Division by zero!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that handles a basic error (division by zero) and prints out an error message:\n\n```python\ndef divide(dividend, divisor):\n    \"\"\"\n    Performs a division operation and returns the result.\n    If the divisor is zero, raises a ZeroDivisionError.\n    \"\"\"\n    result = dividend / divisor\n    if divisor == 0:\n        raise ZeroDivisionError(\"Error: Division by zero!\")\n    return result\n\ntry:\n    # Example usage: divide(10, 2)\n    result = divide(10, 0)  # This will raise a ZeroDivisionError\nexcept ZeroDivisionError as e:\n    print(e)\n```\n\nIn this program, we define a function `divide()` that checks if the divisor is zero and raises a `ZeroDivisionError` if it is. We then use a `try`-`except` block to handle the exception and print out the error message. The example usage calls `divide()` with a zero divisor, which will raise a `ZeroDivisionError`, and the `except` block will catch and print out the error message.\n\nYou can replace the example usage with any other division operation to test the function.",
+  "error": null,
+  "elapsed_seconds": 3.0,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7842,
+  "title": "Data Type Checker",
+  "prompt": "Write a program that takes a user input and checks its data type. If the input is an integer, it should print 'Integer'. If the input is a float, it should print 'Float'. If the input is a string, it should print 'String'. If the input is none of the above, it should print 'Unknown'\nSample Input: 123\nSample Output: Integer\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef check_data_type(user_input):\n    \"\"\"\n    This function takes a user input and checks its data type.\n    It returns a string indicating whether the input is an integer, float, or string.\n    If the input is none of the above, it returns 'Unknown'.\n    \"\"\"\n    # Check if the input is an integer\n    if isinstance(user_input, int):\n        return 'Integer'\n\n    # Check if the input is a float\n    elif isinstance(user_input, float):\n        return 'Float'\n\n    # Check if the input is a string\n    elif isinstance(user_input, str):\n        return 'String'\n\n    # If the input is none of the above, return 'Unknown'\n    else:\n        return 'Unknown'\n\n# Get user input\nuser_input = input(\"Please enter a number: \")\n\n# Check and print data type\ndata_type = check_data_type(user_input)\nprint(f\"The data type of {user_input} is {data_type}.\")\n```\nThis program defines a function `check_data_type` that takes a user input and checks its data type using the `isinstance` function. The function returns a string indicating whether the input is an integer, float, or string. If the input is none of the above, the function returns 'Unknown'. The program then gets user input using the `input` function, calls the `check_data_type` function to get the data type, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 14.63,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

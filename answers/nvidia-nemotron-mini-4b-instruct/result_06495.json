@@ -1,0 +1,9 @@
+{
+  "id": 6495,
+  "title": "Temperature Converter",
+  "prompt": "Write a program that asks the user for a temperature in Celsius or Fahrenheit and then converts and prints out the temperature in the other unit.\nSample Input: 25 C\nSample Output: 77 F\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef convert_temperature(temp, from_unit):\n    \"\"\"\n    Converts a temperature from Celsius to Fahrenheit or vice versa.\n\n    :param temp: The temperature to convert (float)\n    :param from_unit: The unit of the temperature (str, either 'C' or 'F')\n    :return: The converted temperature (float)\n    \"\"\"\n    if from_unit.upper() == 'C':\n        return temp * 9/5 + 32\n    elif from_unit.upper() == 'F':\n        return (temp - 32) * 5/9\n    else:\n        raise ValueError(\"Invalid unit. Please use 'C' or 'F'.\")\n\n\ndef main():\n    while True:\n        try:\n            temp = float(input(\"Enter a temperature in Celsius or Fahrenheit: \"))\n            from_unit = input(\"Enter the unit (C or F): \").upper()\n\n            converted_temp = convert_temperature(temp, from_unit)\n            print(f\"{temp} {from_unit} is {converted_temp:.2f} {from_unit.upper()}.\")\n\n        except ValueError as e:\n            print(e)\n        except Exception as e:\n            print(\"An unexpected error occurred. Please try again.\")\n        else:\n            break\n\n\nif __name__ == \"__main__\":\n    main()\n```\nThis program defines a function `convert_temperature` that takes a temperature and a unit as input and returns the converted temperature. The `main` function then prompts the user for a temperature and a unit, converts the temperature, and prints the result. The program also includes error handling to ensure that the user enters a valid temperature and unit.",
+  "error": null,
+  "elapsed_seconds": 4.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

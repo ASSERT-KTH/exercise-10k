@@ -1,0 +1,9 @@
+{
+  "id": 4230,
+  "title": "Compound Interest Calculator",
+  "prompt": "Write a program to calculate the compound interest on an investment.\nSample Input: 1000 0.05 5\nSample Output: 1276.78\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the compound interest on an investment:\n\n```python\ndef calculate_compound_interest(initial_amount, annual_rate, years):\n    \"\"\"\n    Calculates the compound interest on an investment.\n\n    Parameters:\n    initial_amount (float): The initial amount of the investment.\n    annual_rate (float): The annual interest rate as a decimal (e.g., 0.05 for 5%).\n    years (int): The number of years the investment will be held.\n\n    Returns:\n    float: The final amount of the investment after applying compound interest.\n    \"\"\"\n\n    # Calculate the monthly interest rate\n    monthly_rate = annual_rate / 12\n\n    # Calculate the compound interest using the formula:\n    # A = P * (1 + r/n)^(nt)\n    final_amount = initial_amount * (1 + monthly_rate)**((months * years) / 12)\n\n    return final_amount\n\n# Sample input and output\ninitial_amount = 1000\nannual_rate = 0.05\nyears = 5\n\nfinal_amount = calculate_compound_interest(initial_amount, annual_rate, years)\nprint(f\"The final amount of the investment is ${final_amount:.2f}.\")\n```\n\nThis program defines a function `calculate_compound_interest` that takes the initial amount, annual interest rate, and number of years as input and returns the final amount of the investment after applying compound interest. The function calculates the monthly interest rate, converts the number of years to months, and uses the formula `A = P * (1 + r/n)^(nt)` to calculate the final amount. The sample input and output are used to demonstrate the function's behavior.",
+  "error": null,
+  "elapsed_seconds": 4.2,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

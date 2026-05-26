@@ -1,0 +1,9 @@
+{
+  "id": 3739,
+  "title": "Print User Input with Quotes",
+  "prompt": "Write a program that reads a string from the user and prints it out with quotes added around each line.\nSample Input: Hello\nWorld\nSample Output: \"Hello\"\n\"World\"\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef print_lines_with_quotes(user_input: str) -> None:\n    \"\"\"\n    Prints a string with quotes added around each line.\n\n    :param user_input: The string to be printed with quotes.\n    :return: None\n    \"\"\"\n    # Split the input string into lines\n    lines = user_input.splitlines()\n\n    # Print each line with quotes\n    for line in lines:\n        print(f'\"{line}\"')\n\n# Get user input\nuser_input = input(\"Enter a string with multiple lines: \")\n\n# Print the lines with quotes\nprint_lines_with_quotes(user_input)\n```\nWhen you run this program and enter \"Hello\\nWorld\", it will output:\n```yaml\n\"Hello\"\n\"World\"\n```\nThis program first splits the user input string into lines using the `splitlines()` method. Then, it iterates over each line and prints it with quotes using an f-string. The `input()` function is used to get user input at runtime, and the `print_lines_with_quotes()` function is called to handle the input.",
+  "error": null,
+  "elapsed_seconds": 2.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

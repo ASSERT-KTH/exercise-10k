@@ -1,0 +1,9 @@
+{
+  "id": 490,
+  "title": "List Comprehension",
+  "prompt": "Write a program that takes a list and a transformation function as input, and returns a new list containing the transformed elements.\nSample Input: [1, 2, 3, 4, 5], lambda x: x ** 2\nSample Output: [1, 4, 9, 16, 25]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef transform_list(input_list, transformation_function):\n    \"\"\"\n    Applies a transformation function to each element in a list and returns a new list.\n\n    Parameters:\n    input_list (list): The list of elements to transform.\n    transformation_function (callable): A function that takes one argument and returns a transformed value.\n\n    Returns:\n    list: A new list containing the transformed elements.\n    \"\"\"\n    # Use a list comprehension to apply the transformation function to each element in the input list\n    return [transformation_function(element) for element in input_list]\n\n# Example usage:\ninput_list = [1, 2, 3, 4, 5]\ntransformation_function = lambda x: x ** 2\noutput_list = transform_list(input_list, transformation_function)\nprint(output_list)  # Output: [1, 4, 9, 16, 25]\n```\nThis program defines a function `transform_list` that takes an input list and a transformation function as arguments, and returns a new list containing the transformed elements. The function uses a list comprehension to apply the transformation function to each element in the input list. The example usage at the end of the program demonstrates how to use this function with a lambda function that squares each element in the input list.",
+  "error": null,
+  "elapsed_seconds": 74.15,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

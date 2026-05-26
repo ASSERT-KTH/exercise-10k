@@ -1,0 +1,9 @@
+{
+  "id": 3689,
+  "title": "Time Calculator",
+  "prompt": "Write a program to calculate the time difference between two given times in hours, minutes, and seconds.\nSample Input: 10:30:00, 12:45:00\nSample Output: 2 hours 15 minutes 0 seconds\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the time difference between two given times in hours, minutes, and seconds:\n```python\nfrom datetime import datetime, timedelta\n\ndef calculate_time_difference(time1, time2):\n    # Convert the input times to datetime objects\n    time1_obj = datetime.strptime(time1, \"%H:%M:%S\")\n    time2_obj = datetime.strptime(time2, \"%H:%M:%S\")\n\n    # Calculate the time difference as a timedelta object\n    time_diff = time2_obj - time1_obj\n\n    # Extract the time difference in hours, minutes, and seconds\n    hours, remainder = divmod(time_diff.seconds, 3600)\n    minutes, seconds = divmod(remainder, 60)\n\n    # Format the output as a string\n    output = f\"{hours} hours {minutes} minutes {seconds} seconds\"\n\n    return output\n\n# Example usage\ntime1 = \"10:30:00\"\ntime2 = \"12:45:00\"\nprint(calculate_time_difference(time1, time2))  # Output: 2 hours 15 minutes 0 seconds\n```\nThis program first converts the input times to `datetime` objects using the `strptime` function. Then, it calculates the time difference between the two `datetime` objects as a `timedelta` object. Finally, it extracts the time difference in hours, minutes, and seconds and formats the output as a string.",
+  "error": null,
+  "elapsed_seconds": 3.63,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

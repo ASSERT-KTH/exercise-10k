@@ -1,0 +1,9 @@
+{
+  "id": 9297,
+  "title": "Substring Finder",
+  "prompt": "Write a function that takes a string and a substring as input and returns the index of the first occurrence of the substring in the string.\nSample Input: Hello World\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef first_occurrence_index(string, substring):\n    \"\"\"\n    Returns the index of the first occurrence of the substring in the string.\n\n    :param string: The input string.\n    :param substring: The substring to search for in the string.\n    :return: The index of the first occurrence of the substring in the string, or -1 if not found.\n    \"\"\"\n    # Ensure the input is a string and the substring is not empty\n    if not isinstance(string, str) or not isinstance(substring, str) or len(substring) == 0:\n        raise ValueError(\"Both input arguments must be strings.\")\n\n    # Use the string method find() to return the index of the first occurrence of the substring\n    return string.find(substring)\n```\nHere's an example of how you can use this function:\n```python\nprint(first_occurrence_index(\"Hello World\", \"World\"))  # Output: 6\nprint(first_occurrence_index(\"Hello World\", \"world\"))  # Output: -1\nprint(first_occurrence_index(\"\", \"world\"))              # Raises ValueError\n```\nThis function first checks that both input arguments are strings. If not, it raises a `ValueError`. Then, it uses the `find()` method of the string to return the index of the first occurrence of the substring. If the substring is not found, the method returns -1.",
+  "error": null,
+  "elapsed_seconds": 3.42,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

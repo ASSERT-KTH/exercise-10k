@@ -1,0 +1,9 @@
+{
+  "id": 9011,
+  "title": "Graphs",
+  "prompt": "Create a function that implements a basic graph data structure.\nSample Input: create_node(1), create_node(2), add_edge(1, 2)\nSample Output: node 1 with edge to node 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that implements a basic graph data structure using an adjacency list. This function creates nodes and adds edges between them.\n\n```python\nclass Graph:\n    def __init__(self):\n        self.nodes = {}\n\n    def create_node(self, node_id):\n        if node_id not in self.nodes:\n            self.nodes[node_id] = set()\n            return f\"node {node_id} created\"\n        else:\n            return f\"node {node_id} already exists\"\n\n    def add_edge(self, node1, node2):\n        if node1 not in self.nodes or node2 not in self.nodes:\n            return \"One or both of the nodes do not exist\"\n\n        self.nodes[node1].add(node2)\n        return f\"{node1} has an edge to {node2}\"\n\n# Example usage:\ng = Graph()\nprint(g.create_node(1))  # Output: node 1 created\nprint(g.create_node(2))  # Output: node 2 created\nprint(g.add_edge(1, 2))  # Output: node 1 has an edge to 2\n```\n\nThis function allows you to create nodes and add edges between them. The `create_node` function checks if a node already exists before creating it, and the `add_edge` function checks if both nodes exist before adding the edge.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

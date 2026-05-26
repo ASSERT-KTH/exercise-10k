@@ -1,0 +1,9 @@
+{
+  "id": 7113,
+  "title": "Student Grades Dictionary",
+  "prompt": "Create a program that uses a dictionary to store student grades. The program should prompt the user for a student's name and their grades in three subjects: math, science, and English. The grades should be stored in a dictionary where the keys are the student's name and the values are another dictionary with the subject as the key and the grade as the value. The program should then print out the student's grades in a formatted manner.\nSample Input: John\n90\n85\n95\nSample Output: John's grades:\nMath: 90\nScience: 85\nEnglish: 95\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef get_grade(subject):\n    \"\"\"Prompts the user for a grade in a given subject.\"\"\"\n    valid_subjects = {'math', 'science', 'english'}\n    if subject.lower() not in valid_subjects:\n        print(f\"'{subject}' is not a valid subject. Please try again.\")\n        return get_grade(input(\"Enter subject: \").lower())\n    return int(input(f\"Enter grade for {subject}: \"))\n\ndef main():\n    \"\"\"Gets student information and prints their grades.\"\"\"\n    student_name = input(\"Enter student's name: \")\n    student_grades = {}\n\n    for subject in 'math science english'.split():\n        grade = get_grade(subject)\n        student_grades[subject] = grade\n\n    print(f\"{student_name}'s grades:\")\n    for subject, grade in student_grades.items():\n        print(f\"{subject.capitalize()}: {grade}\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program defines two functions: `get_grade()` to prompt the user for a grade in a given subject, and `main()` to get the student's name and their grades in the three subjects. It then prints the student's grades in a formatted manner.",
+  "error": null,
+  "elapsed_seconds": 4.91,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

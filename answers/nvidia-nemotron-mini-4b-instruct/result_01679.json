@@ -1,0 +1,9 @@
+{
+  "id": 1679,
+  "title": "Credit Card Validator",
+  "prompt": "Write a program that takes a credit card number as input and checks if it is valid based on the Luhn algorithm using if/else statements\nSample Input: 4532015112830366\nSample Output: valid\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks a credit card number for validity using the Luhn algorithm with if/else statements:\n\n```python\ndef is_luhn_valid(card_number):\n    \"\"\"\n    Check if a credit card number is valid based on the Luhn algorithm.\n\n    :param card_number: str, the credit card number to check\n    :return: str, 'valid' if the number is valid, 'invalid' otherwise\n    \"\"\"\n\n    # Double the digits at even positions (starting from the right) and add 9 if the doubled digit is greater than 9.\n    doubled_digits = [int(digit) * 2 if (i % 2) == 0 else int(digit) for i, digit in enumerate(card_number[::-1])]\n\n    # Add the original digits and the doubled digits together.\n    total = sum(int(digit) for digit in card_number + ''.join(map(str, doubled_digits)))\n\n    # Check if the total is divisible by 10.\n    return 'valid' if total % 10 == 0 else 'invalid'\n\n\n# Example usage:\ncard_number = \"4532015112830366\"\nprint(is_luhn_valid(card_number))  # Output: 'valid'\n```\n\nThis program first reverses the input card number to apply the algorithm in the correct order. Then, it doubles the digits at even positions and adds 9 to the doubled digits if they are greater than 9. Finally, it adds the original digits and the doubled digits together and checks if the total is divisible by 10, which indicates a valid credit card number.",
+  "error": null,
+  "elapsed_seconds": 3.98,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3396,
+  "title": "Find the Mode of a List",
+  "prompt": "Write a function to find the mode of a list of integers.\nSample Input: [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the mode (i.e., the most frequently occurring element) of a list of integers:\n```python\nfrom collections import Counter\n\ndef find_mode(numbers):\n    \"\"\"\n    Find the mode of a list of integers.\n\n    :param numbers: List of integers\n    :return: The mode (most frequently occurring element)\n    \"\"\"\n    # Count the occurrences of each number in the list\n    count = Counter(numbers)\n\n    # Find the number with the highest count (i.e., the mode)\n    mode = count.most_common(1)[0][0]\n\n    return mode\n```\nHere's how you can use this function:\n```python\nsample_input = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]\nprint(find_mode(sample_input))  # Output: 4\n```\nThis function uses the `Counter` class from the `collections` module to count the occurrences of each number in the list. The `most_common()` method is then used to find the number with the highest count (i.e., the mode). The function returns the mode as the most common element.",
+  "error": null,
+  "elapsed_seconds": 4.27,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

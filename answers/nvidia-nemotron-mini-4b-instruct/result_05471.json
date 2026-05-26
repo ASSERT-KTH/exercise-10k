@@ -1,0 +1,9 @@
+{
+  "id": 5471,
+  "title": "List Modification",
+  "prompt": "Write a program that takes a list and an index as input and modifies the element at the specified index.\nSample Input: [1, 2, 3, 4, 5], 2, 6\nSample Output: [1, 2, 6, 4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef modify_list_element(lst, index, new_value):\n    \"\"\"\n    Modifies the element at the specified index in the given list.\n\n    :param lst: The list to modify.\n    :param index: The index of the element to modify.\n    :param new_value: The new value to assign to the element at the specified index.\n    :return: None (the list is modified in-place)\n    \"\"\"\n    # Check if the index is within the bounds of the list\n    if index < 0 or index >= len(lst):\n        raise IndexError(\"Index out of range\")\n\n    # Modify the element at the specified index\n    lst[index] = new_value\n\n# Example usage\nmy_list = [1, 2, 3, 4, 5]\nmodify_list_element(my_list, 2, 6)\nprint(my_list)  # Output: [1, 2, 6, 4, 5]\n```\nThis function checks if the index is within the bounds of the list and raises an `IndexError` if it's not. Then, it modifies the element at the specified index using list indexing (`lst[index] = new_value`). The function returns `None` since it modifies the list in-place.",
+  "error": null,
+  "elapsed_seconds": 3.25,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

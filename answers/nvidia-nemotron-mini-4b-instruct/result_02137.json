@@ -1,0 +1,9 @@
+{
+  "id": 2137,
+  "title": "Array Transposition",
+  "prompt": "Create a function that takes a 2D array as input and returns a new 2D array containing the same elements, but with the rows and columns transposed.\nSample Input: [[1, 2], [3, 4]]\nSample Output: [[1, 3], [2, 4]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses list comprehension to create a new 2D array with the rows and columns transposed.\n\n```python\ndef transpose_2d_array(arr):\n    \"\"\"\n    Transposes a 2D array (list of lists) and returns a new 2D array.\n\n    :param arr: The input 2D array (list of lists)\n    :return: A new 2D array with rows and columns transposed\n    \"\"\"\n    return [list(row) for row in zip(*arr)]\n```\n\nHere's how you can use this function:\n\n```python\nsample_input = [[1, 2], [3, 4]]\nsample_output = transpose_2d_array(sample_input)\nprint(sample_output)  # Output: [[1, 3], [2, 4]]\n```\n\nThis function works for any 2D array, not just square arrays. If you want to ensure that the resulting array is square, you can modify the function to check the lengths of the input and output arrays before returning:\n\n```python\ndef transpose_2d_array(arr):\n    \"\"\"\n    Transposes a 2D array (list of lists) and returns a new 2D array with the same number of rows and columns.\n\n    :param arr: The input 2D array (list of lists)\n    :return: A new 2D array with rows and columns transposed\n    \"\"\"\n    if len(arr) == 0:\n        return []\n\n    num_rows, num_cols = len(arr), len(arr[0])\n    return [list(row) for row in zip(*[iter(arr)] * num_cols)]\n```\n\nThis modified function will raise a `ValueError` if the input array is empty or has different numbers of rows and columns.",
+  "error": null,
+  "elapsed_seconds": 4.46,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

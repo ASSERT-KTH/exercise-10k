@@ -1,0 +1,9 @@
+{
+  "id": 1575,
+  "title": "Map Function",
+  "prompt": "Write a function that uses the map function to apply a given function to a list of numbers and return the results.\nSample Input: double, [1, 2, 3, 4, 5]\nSample Output: [2, 4, 6, 8, 10]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses the built-in `map()` function to apply a given function to each element in a list of numbers and returns a map object. Then, it converts the map object to a list using the `list()` function.\n\n```python\ndef apply_function_to_list(func, numbers):\n    \"\"\"\n    Applies a given function to a list of numbers and returns the results.\n\n    Parameters:\n    func (callable): A function that takes one argument and returns a single value.\n    numbers (list): A list of numbers.\n\n    Returns:\n    list: A list of the results of applying the function to each number in the input list.\n    \"\"\"\n    return list(map(func, numbers))\n\n# Example usage: double the numbers in the list\nnumbers = [1, 2, 3, 4, 5]\nresult = apply_function_to_list(lambda x: x * 2, numbers)\nprint(result)  # Output: [2, 4, 6, 8, 10]\n```\n\nThis function can be used with any callable object that takes one argument and returns a single value. For example, you can use it to square the numbers in a list, cube the numbers, or perform any other mathematical operation.",
+  "error": null,
+  "elapsed_seconds": 3.11,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

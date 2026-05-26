@@ -1,0 +1,9 @@
+{
+  "id": 311,
+  "title": "Array Deletion",
+  "prompt": "Write a function that deletes an element at a specified position in a given array.\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: [1, 2, 4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef delete_element(arr, position):\n    \"\"\"\n    Deletes an element at a specified position in a given array.\n\n    :param arr: The input array\n    :param position: The position of the element to be deleted\n    :return: The modified array with the element at the given position removed\n    \"\"\"\n    # Check if the position is within the bounds of the array\n    if position < 0 or position >= len(arr):\n        raise IndexError(\"Position out of bounds\")\n\n    # Remove the element at the given position and return the modified array\n    return arr[:position] + arr[position+1:]\n```\nHere's an example of how you can use this function:\n```python\narr = [1, 2, 3, 4, 5]\nposition = 2\n\nnew_arr = delete_element(arr, position)\nprint(new_arr)  # Output: [1, 2, 4, 5]\n```\nThis function first checks if the given position is within the bounds of the array. If not, it raises an `IndexError`. Then, it removes the element at the given position using slicing (`arr[:position]` and `arr[position+1:]`) and returns the modified array.",
+  "error": null,
+  "elapsed_seconds": 4.43,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

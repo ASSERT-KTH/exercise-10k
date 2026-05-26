@@ -1,0 +1,9 @@
+{
+  "id": 5932,
+  "title": "Checking for Duplicate Elements",
+  "prompt": "Write a program that takes a list as input and checks if it contains any duplicate elements.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: False\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a list contains any duplicate elements:\n\n```python\ndef has_duplicates(lst):\n    \"\"\"\n    Check if a list contains any duplicate elements.\n\n    :param lst: The list to check\n    :return: True if the list contains duplicates, False otherwise\n    \"\"\"\n    # Set data type to 'frozenset' to ensure uniqueness\n    unique_elements = frozenset(lst)\n\n    # Check if the length of the set is less than the length of the original list\n    return len(unique_elements) != len(lst)\n\n# Test the function with your sample input\nsample_input = [1, 2, 3, 4, 5]\nprint(has_duplicates(sample_input))  # Output: False\n```\n\nThis program first converts the input list to a `frozenset`, which is a hash set in Python that cannot contain duplicate elements. It then checks if the length of the `frozenset` is less than the length of the original list, which indicates that some elements were duplicated. If the lengths are equal, it means there are no duplicates in the list.",
+  "error": null,
+  "elapsed_seconds": 13.42,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8966,
+  "title": "String Substring",
+  "prompt": "Write a function that takes a string and two integers as input and returns the substring from the start index to the end index.\nSample Input: ['Hello World', 0, 5]\nSample Output: Hello\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_substring(string, start_index, end_index):\n    \"\"\"\n    Returns the substring from the start index to the end index of the given string.\n\n    Parameters:\n    string (str): The input string.\n    start_index (int): The starting index of the substring.\n    end_index (int): The ending index of the substring (exclusive).\n\n    Returns:\n    str: The substring from the start index to the end index.\n    \"\"\"\n    # Check if the start index is within the bounds of the string\n    if start_index < 0 or start_index >= len(string):\n        raise IndexError(\"Start index is out of bounds\")\n\n    # Check if the end index is within the bounds of the substring\n    if end_index < start_index or end_index >= len(string):\n        raise IndexError(\"End index is out of bounds\")\n\n    # Return the substring\n    return string[start_index:end_index]\n```\nHere's an example of how you can use this function:\n```python\nprint(get_substring(\"Hello World\", 0, 5))  # Output: Hello\n```\nThis function checks if the start and end indices are within the bounds of the string, and raises an `IndexError` if they are not. It then returns the substring from the start index to the end index (exclusive).",
+  "error": null,
+  "elapsed_seconds": 3.59,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2991,
+  "title": "Check if List is Sorted",
+  "prompt": "Write a program that checks if a given list of numbers is sorted in ascending order.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given list of numbers is sorted in ascending order:\n```python\ndef is_sorted_ascending(numbers):\n    \"\"\"\n    Check if a given list of numbers is sorted in ascending order.\n\n    :param numbers: List of numbers\n    :return: Boolean indicating whether the list is sorted or not\n    \"\"\"\n    # Check if the list has at least two elements\n    if len(numbers) < 2:\n        return True\n\n    # Compare each element with the next one, and return False if any pair is not in ascending order\n    for i in range(len(numbers) - 1):\n        if numbers[i] > numbers[i + 1]:\n            return False\n\n    # If we reach this point, the list is sorted in ascending order\n    return True\n\n# Example usage\nsample_input = [1, 2, 3, 4, 5]\nprint(is_sorted_ascending(sample_input))  # Output: True\n```\nThis program first checks if the list has at least two elements, because an empty or single-element list is considered sorted in ascending order. Then, it iterates over the list and checks if each element is greater than or equal to the next one. If it finds a pair that is not in ascending order, it returns `False`. If the loop completes without finding any such pair, it returns `True`, indicating that the list is sorted in ascending order.",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

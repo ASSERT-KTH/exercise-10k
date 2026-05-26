@@ -1,0 +1,9 @@
+{
+  "id": 3407,
+  "title": "Dictionary Item Addition",
+  "prompt": "Create a program to add a new key-value pair to a given dictionary.\nSample Input: {'name': 'John', 'age': 25, 'city': 'New York'} and key 'country' with value 'USA'\nSample Output: {'name': 'John', 'age': 25, 'city': 'New York', 'country': 'USA'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a dictionary and a key-value pair as input, and adds the new key-value pair to the existing dictionary:\n```python\ndef add_key_value_pair(dictionary, key, value):\n    \"\"\"\n    Adds a new key-value pair to a given dictionary.\n\n    Parameters:\n    dictionary (dict): The dictionary to add the new key-value pair to.\n    key (str): The key of the new key-value pair.\n    value (any): The value of the new key-value pair.\n\n    Returns:\n    dict: The updated dictionary with the new key-value pair.\n    \"\"\"\n    # Check if the key already exists in the dictionary\n    if key in dictionary:\n        raise KeyError(f\"The key '{key}' already exists in the dictionary.\")\n\n    # Add the new key-value pair to the dictionary\n    dictionary[key] = value\n\n    return dictionary\n```\nHere's an example of how you can use this function:\n```python\nsample_dict = {'name': 'John', 'age': 25, 'city': 'New York'}\nnew_key_value_pair = ('country', 'USA')\n\nupdated_dict = add_key_value_pair(sample_dict, *new_key_value_pair)\nprint(updated_dict)  # Output: {'name': 'John', 'age': 25, 'city': 'New York', 'country': 'USA'}\n```\nThis function first checks if the key already exists in the dictionary, and raises a `KeyError` if it does. Then, it adds the new key-value pair to the dictionary using the `update()` method. The `*new_key_value_pair` syntax is used to unpack the tuple into separate arguments for the `add_key_value_pair()` function.",
+  "error": null,
+  "elapsed_seconds": 4.31,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

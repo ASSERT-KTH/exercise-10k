@@ -1,0 +1,9 @@
+{
+  "id": 7192,
+  "title": "Guessing Game",
+  "prompt": "Create a program that generates a random number between 1 and 100, and asks the user to guess it using a while loop.\nSample Input: 50\nSample Output: Higher\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\nimport random\n\n# Generate a random number between 1 and 100\nrandom_number = random.randint(1, 100)\n\n# Ask the user to guess the number\nwhile True:\n    user_guess = int(input(\"Guess a number between 1 and 100: \"))\n\n    # Check if the user guessed the correct number\n    if user_guess == random_number:\n        print(\"Congratulations! You guessed the number correctly.\")\n        break\n\n    # If the user's guess is too high, tell them to guess lower\n    elif user_guess > random_number:\n        print(\"Your guess is too high. Try again!\")\n\n    # If the user's guess is too low, tell them to guess higher\n    else:\n        print(\"Your guess is too low. Try again!\")\n```\n\nThis program generates a random number between 1 and 100, and then asks the user to guess the number using a while loop. The program checks the user's guess, and based on whether it's too high or too low, provides feedback to the user. Once the user guesses the correct number, the program breaks out of the loop and displays a congratulatory message.",
+  "error": null,
+  "elapsed_seconds": 3.1,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

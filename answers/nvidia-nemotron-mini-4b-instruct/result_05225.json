@@ -1,0 +1,9 @@
+{
+  "id": 5225,
+  "title": "Even or Odd Array",
+  "prompt": "Write a program that takes an array of integers as input and prints 'Even' if all numbers in the array are even, and 'Odd' if at least one number is odd.\nSample Input: [2, 4, 6]\nSample Output: Even\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef check_even(arr):\n    \"\"\"Check if all numbers in the array are even or not.\"\"\"\n    # Check if all elements in the array are even\n    if all(num % 2 == 0 for num in arr):\n        return 'Even'\n    else:\n        return 'Odd'\n\n# Get user input\narr = list(map(int, input(\"Enter an array of integers separated by spaces: \").split()))\n\n# Print result\nprint(check_even(arr))\n```\n\nThis program defines a function `check_even()` that checks if all numbers in the input array are even. It uses a generator expression and the built-in `all()` function to check if all numbers are divisible by 2 without actually computing the result for each number. If all numbers are even, it returns 'Even', otherwise it returns 'Odd'. The program then gets user input, converts it to a list of integers, and calls the `check_even()` function to print the result.",
+  "error": null,
+  "elapsed_seconds": 2.44,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6550,
+  "title": "Longest Common Prefix",
+  "prompt": "Create a function that finds the longest common prefix among a list of strings.\nSample Input: ['hello', 'hello world', 'hello again']\nSample Output: hello\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the longest common prefix among a list of strings using a two-pointer technique. This approach works by comparing the first characters of each string, then the second characters, and so on, until a mismatch is found. If no mismatch is found, the entire prefix is the longest common prefix.\n\n```python\ndef longest_common_prefix(strs):\n    \"\"\"\n    Find the longest common prefix among a list of strings.\n\n    :param strs: List of strings\n    :return: Longest common prefix as a string\n    \"\"\"\n    if not strs:\n        return \"\"\n\n    # Find the shortest string and use it as the base for comparison\n    shortest_str = min(strs, key=len)\n\n    # Initialize two pointers for each string\n    for i, char in enumerate(shortest_str):\n        for other_str in strs[1:]:\n            if i == len(other_str) or other_str[i] != char:\n                return shortest_str[:i]\n\n    return shortest_str\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(longest_common_prefix(['hello', 'hello world', 'hello again']))  # Output: hello\n```",
+  "error": null,
+  "elapsed_seconds": 3.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

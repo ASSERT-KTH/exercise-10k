@@ -1,0 +1,9 @@
+{
+  "id": 9137,
+  "title": "Grade Checker",
+  "prompt": "Write a program that takes a student's score as input and checks if the student has passed or failed. If the score is 50 or above, the student has passed; otherwise, the student has failed.\nSample Input: 75\nSample Output: Passed\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef check_score(score):\n    \"\"\"\n    Check if a student has passed or failed based on their score.\n\n    :param score: The student's score as an integer between 0 and 100.\n    :return: A string indicating whether the student passed or failed.\n    \"\"\"\n    if not isinstance(score, int) or score < 0 or score > 100:\n        raise ValueError(\"Score must be an integer between 0 and 100.\")\n\n    if score >= 50:\n        return \"Passed\"\n    else:\n        return \"Failed\"\n\n# Get user input\nscore = int(input(\"Enter your score: \"))\n\n# Check and display result\nresult = check_score(score)\nprint(f\"Your score of {score} is {result}.\")\n```\n\nThis program defines a function `check_score` that takes an integer score as input and returns a string indicating whether the student passed or failed. The function checks if the input is valid (between 0 and 100), and then returns \"Passed\" if the score is 50 or above, and \"Failed\" otherwise. The program then gets user input, checks the score using the `check_score` function, and displays the result.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

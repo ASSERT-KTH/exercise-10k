@@ -1,0 +1,9 @@
+{
+  "id": 4281,
+  "title": "Dictionary Initialization",
+  "prompt": "Create a dictionary with 5 key-value pairs, where keys are names and values are ages.\nSample Input: {'John': 20, 'Jane': 22, 'Bob': 25, 'Alice': 30, 'Mike': 35}\nSample Output: {'John': 20, 'Jane': 22, 'Bob': 25, 'Alice': 30, 'Mike': 35}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef create_dict(people):\n    \"\"\"\n    Create a dictionary with key-value pairs where keys are names and values are ages.\n\n    Parameters:\n    people (dict): A dictionary with names as keys and ages as values.\n\n    Returns:\n    dict: A new dictionary with the same key-value pairs as the input dictionary.\n    \"\"\"\n    # Check if the input is a dictionary\n    if not isinstance(people, dict):\n        raise ValueError(\"Input should be a dictionary.\")\n\n    # Create a new dictionary with the same key-value pairs as the input dictionary\n    new_dict = people.copy()\n\n    return new_dict\n```\nHere's an example of how to use this function:\n```python\nsample_input = {'John': 20, 'Jane': 22, 'Bob': 25, 'Alice': 30, 'Mike': 35}\nsample_output = create_dict(sample_input)\nprint(sample_output)  # Output: {'John': 20, 'Jane': 22, 'Bob': 25, 'Alice': 30, 'Mike': 35}\n```\nThis function checks if the input is a dictionary and creates a new dictionary with the same key-value pairs as the input dictionary. This ensures that the original dictionary is not modified, which is important to avoid unintended side effects.",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1378,
+  "title": "Statistics Calculator",
+  "prompt": "Create a program to calculate the mean, median, and mode of a given list of numbers.\nSample Input: 1 2 3 4 5\nSample Output: mean: 3.0, median: 3, mode: 1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the mean, median, and mode of a given list of numbers:\n\n```python\ndef calculate_stats(numbers):\n    # Calculate the mean\n    total = sum(numbers)\n    mean = total / len(numbers)\n\n    # Calculate the mode (if there's only one mode, it's the most frequent number)\n    freq = {}\n    for num in numbers:\n        if num in freq:\n            freq[num] += 1\n        else:\n            freq[num] = 1\n    mode = max(freq, key=freq.get)\n\n    # Calculate the median\n    numbers.sort()\n    n = len(numbers)\n    if n % 2 == 0:  # Even number of elements\n        median = (numbers[n//2 - 1] + numbers[n//2]) / 2\n    else:  # Odd number of elements\n        median = numbers[n//2]\n\n    return {\n        'mean': mean,\n        'median': median,\n        'mode': mode\n    }\n\n# Example usage\nnumbers = [1, 2, 3, 4, 5]\nstats = calculate_stats(numbers)\nprint(\"mean:\", stats['mean'], \", median:\", stats['median'], \", mode:\", stats['mode'])\n```\n\nThis program defines a function `calculate_stats` that takes a list of numbers as input and returns a dictionary containing the mean, median, and mode of the list. The function first calculates the mean by summing all the numbers and dividing by the number of elements. Then, it calculates the mode by counting the occurrences of each number in the list and finding the number with the highest frequency. Finally, it sorts the list and calculates the median. The example usage at the end of the program demonstrates how to use the function with a sample input list.",
+  "error": null,
+  "elapsed_seconds": 5.72,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

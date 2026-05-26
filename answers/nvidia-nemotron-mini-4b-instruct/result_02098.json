@@ -1,0 +1,9 @@
+{
+  "id": 2098,
+  "title": "Calculate Variance",
+  "prompt": "Write a program to calculate the variance of a set of numbers.\nSample Input: 1 2 3 4 5\nSample Output: Variance: 2.00\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the variance of a set of numbers:\n\n```python\ndef calculate_variance(numbers):\n    # Calculate the mean of the numbers\n    mean = sum(numbers) / len(numbers)\n\n    # Calculate the squared differences from the mean\n    squared_diffs = [pow(num - mean, 2) for num in numbers]\n\n    # Calculate the variance\n    variance = sum(squared_diffs) / len(numbers)\n\n    return \"Variance: {:.2f}\".format(variance)\n\n# Example usage\nnumbers = [1, 2, 3, 4, 5]\nprint(calculate_variance(numbers))  # Output: Variance: 2.00\n```\n\nThis program first calculates the mean of the numbers by summing them up and dividing by the length of the list. Then, it calculates the squared differences from the mean for each number in the list. Finally, it calculates the variance by taking the average of these squared differences. The output is formatted to two decimal places using the `format()` method.",
+  "error": null,
+  "elapsed_seconds": 2.67,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

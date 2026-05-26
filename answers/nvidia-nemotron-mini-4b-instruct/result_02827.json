@@ -1,0 +1,9 @@
+{
+  "id": 2827,
+  "title": "PIN Code Validator",
+  "prompt": "Develop a program to validate a PIN code. The PIN code should be 4 digits long and should not contain any repeating digits.\nSample Input: 1234\nSample Output: Valid\n",
+  "answer": "Sure, I'd be happy to help you develop a program to validate a PIN code. Here's a Python solution that meets your requirements:\n\n```python\ndef validate_pin(pin):\n    \"\"\"\n    Validate a 4-digit PIN code with no repeating digits.\n\n    :param pin: str, the PIN code to validate\n    :return: str, 'Valid' if the PIN code is valid, 'Invalid' otherwise\n    \"\"\"\n    if len(pin) != 4:\n        return 'Invalid'\n\n    # Check for repeating digits\n    unique_digits = set(pin)\n    if len(unique_digits) != 4:\n        return 'Invalid'\n\n    return 'Valid'\n\n# Sample usage\npin = input(\"Enter a 4-digit PIN code: \")\nprint(validate_pin(pin))\n```\n\nThis program defines a function `validate_pin` that takes a PIN code as input and returns 'Valid' if it's a 4-digit number with no repeating digits, and 'Invalid' otherwise. The function first checks the length of the PIN code to ensure it's 4 digits long. Then, it converts the PIN code to a set of unique digits and checks if it has 4 unique digits. If not, the function returns 'Invalid'. Otherwise, it returns 'Valid'. The sample usage at the end of the program prompts the user to enter a PIN code and prints the validation result.",
+  "error": null,
+  "elapsed_seconds": 3.32,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

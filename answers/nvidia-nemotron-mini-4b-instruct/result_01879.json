@@ -1,0 +1,9 @@
+{
+  "id": 1879,
+  "title": "Array Grouping by Multiple Attributes",
+  "prompt": "Write a program to group a list of objects by multiple attributes and print the resulting groups.\nSample Input: [{name: 'John', age: 25, city: 'New York'}, {name: 'Jane', age: 25, city: 'New York'}, {name: 'Bob', age: 30, city: 'Chicago'}]\nSample Output: {25: {New York: [{name: 'John', age: 25, city: 'New York'}, {name: 'Jane', age: 25, city: 'New York'}] and Chicago: []} and 30: {Chicago: [{name: 'Bob', age: 30, city: 'Chicago'}] and New York: []}}\n",
+  "answer": "Here's a Python solution using a dictionary to store the groups by age and city:\n\n```python\n# Sample Input\ninput_list = [{'name': 'John', 'age': 25, 'city': 'New York'}, {'name': 'Jane', 'age': 25, 'city': 'New York'}, {'name': 'Bob', 'age': 30, 'city': 'Chicago'}]\n\n# Create an empty dictionary to store the groups\ngroups = {}\n\n# Iterate through the input list\nfor item in input_list:\n    # Get the age and city from the item\n    age = item['age']\n    city = item['city']\n\n    # If the age is not already a key in the dictionary, create a new group with an empty list for that city\n    if age not in groups:\n        groups[age] = {city: []}\n\n    # Add the item to the list of items in that city for the given age\n    groups[age][city].append(item)\n\n# Print the groups\nfor age, group_by_city in groups.items():\n    print(f\"{age}: {group_by_city}\")\n```\n\nThis program first creates an empty dictionary to store the groups. Then it iterates through the input list, gets the age and city from each item, and adds that item to the list of items in that city for the given age in the dictionary. Finally, it prints out each group as a key-value pair where the key is the age and the value is a dictionary where the keys are the cities and the values are lists of items.",
+  "error": null,
+  "elapsed_seconds": 9.79,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

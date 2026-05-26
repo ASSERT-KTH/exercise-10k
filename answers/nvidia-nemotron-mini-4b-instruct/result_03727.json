@@ -1,0 +1,9 @@
+{
+  "id": 3727,
+  "title": "Read and Validate Input",
+  "prompt": "Write a program that takes a user's email as input, checks if it's valid, and prints out a success message if it is.\nSample Input: user@example.com\nSample Output: Email is valid\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given email address is valid using the `validators` library, which is a part of the standard library. If the email is valid, it prints a success message. If not, it prints an error message.\n\n```python\nimport re\nfrom validators import validate_email\n\ndef check_email(email):\n    \"\"\"Check if the given email address is valid.\"\"\"\n    if validate_email(email):\n        print(f\"Email is valid: {email}\")\n    else:\n        print(f\"Email is invalid: {email}\")\n\n# Example usage:\nemail = input(\"Enter a user's email: \")\ncheck_email(email)\n```\n\nThis program defines a function `check_email` that takes an email address as input and checks its validity using the `validate_email` function from the `validators` library. The function prints a success message if the email is valid and an error message otherwise. The example usage prompts the user to enter an email address and calls the `check_email` function with the user's input.",
+  "error": null,
+  "elapsed_seconds": 2.86,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

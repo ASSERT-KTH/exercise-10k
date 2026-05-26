@@ -1,0 +1,9 @@
+{
+  "id": 6943,
+  "title": "Function with Memoization",
+  "prompt": "Create a function that uses memoization to cache its results\nSample Input: None\nSample Output: a function with cached results\n",
+  "answer": "Sure, I'd be happy to help you create a memoized function. Here's an example implementation in Python:\n\n```python\ndef memoize(func):\n    \"\"\"\n    A decorator to memoize a function's results.\n    \"\"\"\n    cache = {}\n\n    def wrapper(*args):\n        key = str(args)\n        if key not in cache:\n            cache[key] = func(*args)\n        return cache[key]\n\n    return wrapper\n```\n\nThis decorator takes a function as an argument and returns a new function that caches the results of the original function. The cache is stored as a dictionary with the function arguments as keys. When the wrapper function is called, it first checks if the result is already in the cache. If it is, the result is returned. Otherwise, the original function is called with the arguments, and the result is stored in the cache before being returned.\n\nHere's an example of how to use the decorator:\n\n```python\n@memoize\ndef fibonacci(n):\n    \"\"\"\n    A memoized implementation of the Fibonacci sequence.\n    \"\"\"\n    if n < 2:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)\n\n# Call fibonacci(10) multiple times\nprint(fibonacci(10))  # Output: 55\nprint(fibonacci(10))  # Output: 55\nprint(fibonacci(10))  # Output: 55\n```\n\nIn this example, the `fibonacci` function is memoized, so calling it with the same argument multiple times will return the same result.",
+  "error": null,
+  "elapsed_seconds": 3.7,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

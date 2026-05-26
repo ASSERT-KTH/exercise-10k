@@ -1,0 +1,9 @@
+{
+  "id": 2226,
+  "title": "List Modification",
+  "prompt": "Write a program that takes a list and an index as input, and modifies the element at that index to a specified value.\nSample Input: [1, 2, 3, 4, 5], 2, 10\nSample Output: [1, 2, 10, 4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef modify_list_element(lst, index, value):\n    \"\"\"\n    Modifies the element at the given index in the input list to the specified value.\n\n    Parameters:\n    lst (list): The list to modify.\n    index (int): The index of the element to modify.\n    value (any): The value to replace the element at the given index with.\n\n    Returns:\n    None\n    \"\"\"\n    # Check if the index is within the bounds of the list\n    if index < 0 or index >= len(lst):\n        raise IndexError(\"Index out of range\")\n\n    # Modify the element at the given index\n    lst[index] = value\n\n# Example usage\nmy_list = [1, 2, 3, 4, 5]\nmodify_list_element(my_list, 2, 10)\nprint(my_list)  # Output: [1, 2, 10, 4, 5]\n```\nThis program defines a function `modify_list_element` that takes a list, an index, and a value as input, and modifies the element at the given index to the specified value. The function checks if the index is within the bounds of the list, and raises an `IndexError` if it's not. The function then modifies the element at the given index using list indexing and assignment. The example usage at the end of the program demonstrates how to use the function to modify an element in a list.",
+  "error": null,
+  "elapsed_seconds": 6.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

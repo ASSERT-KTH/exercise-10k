@@ -1,0 +1,9 @@
+{
+  "id": 9680,
+  "title": "Ends With Checker",
+  "prompt": "Write a program that asks for two strings and checks if the first string ends with the second string.\nSample Input: abcdef, def\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef ends_with(string1, string2):\n    \"\"\"\n    Check if the first string ends with the second string.\n\n    :param string1: The first string to check.\n    :param string2: The second string to compare against.\n    :return: True if the first string ends with the second string, False otherwise.\n    \"\"\"\n    # Ensure the inputs are strings\n    if not isinstance(string1, str) or not isinstance(string2, str):\n        raise TypeError(\"Both inputs must be strings.\")\n\n    # Check if the second string is empty (i.e., an empty substring)\n    if not string2:\n        return False\n\n    # Check if the first string ends with the second string\n    return string1.endswith(string2)\n\n# Get user input\nstring1 = input(\"Enter the first string: \")\nstring2 = input(\"Enter the second string: \")\n\n# Check if the first string ends with the second string\nresult = ends_with(string1, string2)\n\n# Print the result\nprint(f\"The first string ends with the second string: {result}\")\n```\nThis program defines a function `ends_with` that checks if the first string ends with the second string. It also includes input validation to ensure that both inputs are strings. The function uses the built-in `str.endswith` method to check if the first string ends with the second string. The program then gets user input for the two strings and calls the `ends_with` function to check if the first string ends with the second string. Finally, it prints the result.",
+  "error": null,
+  "elapsed_seconds": 4.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 569,
+  "title": "String Padding",
+  "prompt": "Write a function that pads a given string with a specified character to a specified length.\nSample Input: ['hello', 10, '*']\nSample Output: hello*****\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef pad_string(s: str, pad_char: str, length: int) -> str:\n    \"\"\"\n    Pads a given string with a specified character to a specified length.\n\n    :param s: The string to pad.\n    :param pad_char: The character to use for padding.\n    :param length: The desired length of the padded string.\n    :return: The padded string.\n    \"\"\"\n    # Ensure the input is a string and the length is a positive integer\n    if not isinstance(s, str) or not isinstance(length, int) or length <= 0:\n        raise ValueError(\"Both s and length must be strings and length must be a positive integer.\")\n\n    # Pad the string with the specified character until it reaches the desired length\n    padded_string = s.ljust(length, pad_char)\n\n    return padded_string\n```\nHere's an example of how to use this function:\n```python\nprint(pad_string('hello', '*', 10))  # Output: hello*****\n```\nThis function first checks that the input is valid (i.e., `s` is a string and `length` is a positive integer). Then, it uses the `str.ljust()` method to pad the string with the specified character until it reaches the desired length. The `ljust()` method adds leading spaces to the string until it has the specified width, and replaces any trailing spaces with the specified character.",
+  "error": null,
+  "elapsed_seconds": 3.51,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3909,
+  "title": "Gross Pay Calculator",
+  "prompt": "Write a program that calculates the gross pay of an employee given their hourly wage and hours worked.\nSample Input: 10 40\nSample Output: 400\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the gross pay of an employee given their hourly wage and hours worked:\n\n```python\ndef calculate_gross_pay():\n    \"\"\"\n    Calculates the gross pay of an employee given their hourly wage and hours worked.\n\n    Returns:\n        float: The employee's gross pay.\n    \"\"\"\n    # Get user input for hourly wage and hours worked\n    hourly_wage = float(input(\"Enter your hourly wage: $\"))\n    hours_worked = int(input(\"Enter the number of hours worked: \"))\n\n    # Validate input\n    if hourly_wage <= 0 or hours_worked < 0:\n        print(\"Error: Hourly wage must be positive and hours worked must be non-negative.\")\n        return\n\n    # Calculate gross pay\n    gross_pay = hourly_wage * hours_worked\n\n    # Output the result\n    print(f\"Your gross pay is ${gross_pay}.\")\n\n    return gross_pay\n\n# Call the function to calculate and display the gross pay\ncalculate_gross_pay()\n```\n\nThis program defines a function `calculate_gross_pay()` that prompts the user to enter their hourly wage and hours worked, validates the input to ensure it's positive, calculates the gross pay, and outputs the result. The function returns the calculated gross pay, which can be used in further calculations or displayed directly.",
+  "error": null,
+  "elapsed_seconds": 3.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

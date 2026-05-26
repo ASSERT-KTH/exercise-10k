@@ -1,0 +1,9 @@
+{
+  "id": 6373,
+  "title": "Array Contains",
+  "prompt": "Write a program that takes an array and an element as input and returns a boolean indicating whether the element is in the array\nSample Input: [1, 2, 3, 4, 5], 3\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef element_in_array(arr, element):\n    \"\"\"\n    Returns True if the given element is in the array, and False otherwise.\n\n    :param arr: The input array\n    :param element: The element to search for\n    :return: A boolean indicating whether the element is in the array\n    \"\"\"\n    # Check if the input is a list\n    if not isinstance(arr, list):\n        raise TypeError(\"The first argument must be a list.\")\n\n    # Check if the element is in the array\n    return element in arr\n```\nHere's an example of how you can use this function:\n```python\narr = [1, 2, 3, 4, 5]\nelement = 3\n\nprint(element_in_array(arr, element))  # Output: True\n\nelement = 6\nprint(element_in_array(arr, element))  # Output: False\n```\nThis function checks if the input is a list and raises a `TypeError` if it's not. Then, it uses the built-in `in` operator to check if the element is in the array. This function is case-sensitive, meaning that `3` and `3.` are considered different elements. If you want to make it case-insensitive, you can convert both the element and the array to lowercase before checking:\n```python\ndef element_in_array(arr, element):\n    # ... (same as before)\n    return element.lower() in [item.lower() for item in arr]\n```\nThis version converts both the element and the array to lowercase before checking for membership, making the comparison case-insensitive.",
+  "error": null,
+  "elapsed_seconds": 4.0,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

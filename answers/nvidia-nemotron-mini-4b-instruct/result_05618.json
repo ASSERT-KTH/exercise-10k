@@ -1,0 +1,9 @@
+{
+  "id": 5618,
+  "title": "Color Converter",
+  "prompt": "Develop a program that converts between different color representations (e.g. RGB to HEX), taking the user's input as the color to convert.\nSample Input: 255 0 0\nSample Output: #FF0000\n",
+  "answer": "Sure, I'd be happy to help you develop a program for converting between different color representations. Here's an example Python program that meets your requirements:\n```python\ndef rgb_to_hex(red, green, blue):\n    \"\"\"Converts an RGB color value to a hexadecimal string.\"\"\"\n    return \"#{:02x}{:02x}{:02x}\".format(red, green, blue)\n\ndef hex_to_rgb(hex_code):\n    \"\"\"Converts a hexadecimal color string to an RGB tuple.\"\"\"\n    return tuple(int(hex_code[i:i+2], 16) for i in (0, 2, 4))\n\ndef convert_color():\n    \"\"\"Gets user input for a color to convert and converts it to HEX.\"\"\"\n    user_input = input(\"Enter an RGB color value (e.g. 255 0 0) or a HEX color code: \")\n\n    if user_input.startswith(\"#\"):\n        # Assume user input is a HEX color code\n        return hex_to_rgb(user_input)\n    else:\n        # Assume user input is an RGB color value\n        red, green, blue = map(int, user_input.split())\n        return rgb_to_hex(red, green, blue)\n\n# Run the program\ncolor = convert_color()\nprint(f\"The converted color is: {color}\")\n```\nThis program defines two functions: `rgb_to_hex()` and `hex_to_rgb()`, which convert between RGB and HEX color representations. The `convert_color()` function gets user input, checks if it's a HEX color code, and converts it to RGB if it is, or prompts the user to enter an RGB color value and converts it to HEX. The program then prints the converted color.\n\nYou can run this program and enter an RGB color value (e.g. `255 0 0`) or a HEX color code to see the conversion.",
+  "error": null,
+  "elapsed_seconds": 4.46,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

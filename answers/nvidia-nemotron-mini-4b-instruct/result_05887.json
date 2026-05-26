@@ -1,0 +1,9 @@
+{
+  "id": 5887,
+  "title": "List Mapping",
+  "prompt": "Write a function that takes a list and a function as input and returns a new list containing the results of applying the function to each element of the original list.\nSample Input: [1, 2, 3, 4, 5], lambda x: x * 2\nSample Output: [2, 4, 6, 8, 10]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef apply_function_to_list(input_list, function):\n    \"\"\"\n    Applies a given function to each element of a list and returns a new list containing the results.\n\n    Parameters:\n    input_list (list): The list to apply the function to.\n    function (callable): A function that takes one argument and returns one value.\n\n    Returns:\n    list: A new list containing the results of applying the function to each element of the original list.\n    \"\"\"\n    # Use a list comprehension to apply the function to each element and build a new list\n    return [function(element) for element in input_list]\n```\nHere's an example of how you can use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\ndouble = lambda x: x * 2\nresult = apply_function_to_list(numbers, double)\nprint(result)  # Output: [2, 4, 6, 8, 10]\n```\nThis function takes two arguments: `input_list` and `function`. It uses a list comprehension to apply the `function` to each element of the `input_list` and builds a new list containing the results. The function is designed to work with any callable object, not just lambdas, so you can pass in any function that takes one argument and returns one value.",
+  "error": null,
+  "elapsed_seconds": 3.89,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3017,
+  "title": "String Prefix Matching",
+  "prompt": "Write a program to check whether a given string starts with a specified prefix.\nSample Input: Hello World, Hello\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given string starts with a specified prefix:\n```python\ndef starts_with_prefix(string, prefix):\n    \"\"\"\n    Check if a given string starts with a specified prefix.\n\n    Parameters:\n    string (str): The string to check.\n    prefix (str): The prefix to check for.\n\n    Returns:\n    bool: True if the string starts with the prefix, False otherwise.\n    \"\"\"\n    # Ensure the input is a string\n    if not isinstance(string, str):\n        raise TypeError(\"The 'string' parameter must be a string.\")\n\n    # Ensure the prefix is a string\n    if not isinstance(prefix, str):\n        raise TypeError(\"The 'prefix' parameter must be a string.\")\n\n    # Check if the string starts with the prefix, ignoring case\n    return string.lower().startswith(prefix.lower())\n```\nHere's an example of how to use this function:\n```python\nprint(starts_with_prefix(\"Hello World\", \"Hello\"))  # True\nprint(starts_with_prefix(\"Good day\", \"Hello\"))     # False\nprint(starts_with_prefix(\"\", \"Hello\"))              # False\nprint(starts_with_prefix(123, \"Hello\"))             # Raises TypeError\n```\nThis function checks if the input string is a string, and if the prefix is a string. It then converts both strings to lowercase and checks if the input string starts with the prefix using the `startswith()` method. If the strings are not equal (i.e., the prefix is not a prefix of the input string), the function returns `False`.",
+  "error": null,
+  "elapsed_seconds": 5.06,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

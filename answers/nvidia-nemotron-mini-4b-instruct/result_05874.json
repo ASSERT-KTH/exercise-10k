@@ -1,0 +1,9 @@
+{
+  "id": 5874,
+  "title": "Guessing Game",
+  "prompt": "Create a simple number guessing game where the user has to guess a random number.\nSample Input: 50\nSample Output: You won!\n",
+  "answer": "Sure, I'd be happy to help you create a simple number guessing game. Here's a Python solution using the `random` module for generating a random number:\n\n```python\nimport random\n\ndef play_game():\n    # Generate a random number between 1 and 100\n    random_number = random.randint(1, 100)\n\n    # Initialize the number of attempts\n    attempts = 0\n\n    while True:\n        # Get user input\n        user_guess = int(input(\"Guess a number between 1 and 100: \"))\n\n        # Increment the number of attempts\n        attempts += 1\n\n        # Check if the user guessed the correct number\n        if user_guess == random_number:\n            print(f\"You won! It took you {attempts} attempts.\")\n            break\n        elif user_guess < random_number:\n            print(\"Your guess is too low. Try again!\")\n        else:\n            print(\"Your guess is too high. Try again!\")\n\n# Play the game\nplay_game()\n```\n\nThis script generates a random number between 1 and 100, and then prompts the user to guess the number. The user's input is validated as an integer, and the script checks if the user's guess is correct, too low, or too high. If the user guesses the correct number, the script prints the number of attempts and breaks the loop. If the user doesn't guess the correct number, the script continues prompting the user for their guess until they do.",
+  "error": null,
+  "elapsed_seconds": 3.84,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

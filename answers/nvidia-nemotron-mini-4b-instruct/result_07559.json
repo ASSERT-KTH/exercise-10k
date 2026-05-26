@@ -1,0 +1,9 @@
+{
+  "id": 7559,
+  "title": "Function with Keyword Arguments",
+  "prompt": "Create a function that takes a name and age as input and prints out a greeting message, with default values for both parameters.\nSample Input: name=John, age=30\nSample Output: Hello, John! You are 30 years old.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function, `greet`, takes two parameters: `name` and `age`. It also includes default values for both parameters, so you can call the function without providing arguments for both or just one of them.\n\n```python\ndef greet(name='World', age=0):\n    \"\"\"\n    Prints a greeting message with the given name and age.\n\n    :param name: The name of the person (default: 'World')\n    :param age: The age of the person (default: 0)\n    \"\"\"\n    if age < 0:\n        raise ValueError(\"Age must be non-negative\")\n\n    greeting = f\"Hello, {name}! You are {age} years old.\"\n    print(greeting)\n```\n\nYou can call this function with or without arguments for both parameters, and it will use the default values if you don't provide any. Here are some examples:\n\n```python\ngreet()  # Output: Hello, World! You are 0 years old.\ngreet(\"John\")  # Output: Hello, John! You are 0 years old.\ngreet(\"Jane\", 30)  # Output: Hello, Jane! You are 30 years old.\ngreet(age=30)  # Output: Hello, World! You are 0 years old.\ngreet(age=-1)  # Raises ValueError: Age must be non-negative\n```",
+  "error": null,
+  "elapsed_seconds": 3.47,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

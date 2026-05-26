@@ -1,0 +1,9 @@
+{
+  "id": 8070,
+  "title": "Higher-Order Function",
+  "prompt": "Write a function that takes another function as an argument and returns the result of applying the function to a value\nSample Input: A function and a value\nSample Output: The result of applying the function to the value\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef apply_function(func, value):\n    \"\"\"\n    Applies a given function to a value and returns the result.\n\n    :param func: The function to apply.\n    :param value: The value to apply the function to.\n    :return: The result of applying the function to the value.\n    \"\"\"\n    # Check if the function is callable\n    if not callable(func):\n        raise ValueError(\"The first argument must be a callable function.\")\n\n    # Apply the function to the value and return the result\n    return func(value)\n```\nHere's an example of how you can use this function:\n```python\ndef square(x):\n    return x * x\n\nresult = apply_function(square, 5)\nprint(result)  # Output: 25\n```\nThis function checks if the first argument is callable (i.e., it can be called with arguments), and if not, raises a `ValueError`. Then, it applies the function to the second argument and returns the result.\n\nYou can modify the `square` function to any other function you like, and the `apply_function` function will work as expected.",
+  "error": null,
+  "elapsed_seconds": 3.04,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

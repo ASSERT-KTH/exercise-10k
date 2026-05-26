@@ -1,0 +1,9 @@
+{
+  "id": 6295,
+  "title": "Dictionary Copy Method",
+  "prompt": "Create a copy of a dictionary using the copy() method\nSample Input: {'name': 'John', 'age': 25}\nSample Output: {'name': 'John', 'age': 25}\n",
+  "answer": "Sure, I'd be happy to help you with that! The `copy()` method in Python is used to create a shallow copy of a dictionary, which means it creates a new dictionary object with the same keys and values as the original dictionary, but references the same objects for the values (if they are mutable, like lists or dictionaries). Here's how you can use the `copy()` method to create a copy of the given dictionary:\n\n```python\noriginal_dict = {'name': 'John', 'age': 25}\ncopied_dict = original_dict.copy()\n\nprint(original_dict)  # {'name': 'John', 'age': 25}\nprint(copied_dict)    # {'name': 'John', 'age': 25}\n```\n\nHowever, if you want to create a deep copy of the dictionary, which means it creates a new dictionary object with the same keys and values as the original dictionary, but references new objects for the values (if they are mutable), you can use the `dict()` function with the `**original_dict` syntax. This will recursively copy all mutable values in the original dictionary. Here's an example:\n\n```python\noriginal_dict = {'name': 'John', 'age': [1, 2, 3], 'address': {'city': 'New York', 'state': 'NY'}}\ndeep_copied_dict = dict(original_dict)\n\nprint(original_dict)  # {'name': 'John', 'age': [1, 2, 3], 'address': {'city': 'New York', 'state': 'NY'}}\nprint(deep_copied_dict)  # {'name': 'John', 'age': [1, 2, 3], 'address': {'city': 'New York', 'state': 'NY'}}\n```\n\nIn this example, the `deep_copied_dict` references new lists and dictionaries for the values in the original dictionary.",
+  "error": null,
+  "elapsed_seconds": 4.43,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

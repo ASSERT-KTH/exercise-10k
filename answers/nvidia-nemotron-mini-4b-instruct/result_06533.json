@@ -1,0 +1,9 @@
+{
+  "id": 6533,
+  "title": "Caesar Cipher",
+  "prompt": "Create a function that encrypts a given string using a Caesar cipher.\nSample Input: hello\nSample Output: khoor\n",
+  "answer": "Sure, I'd be happy to help you create a function for encrypting a string using a Caesar cipher. Here's an example implementation in Python:\n\n```python\ndef caesar_cipher(text, shift):\n    \"\"\"\n    Encrypts a given string using a Caesar cipher with the specified shift.\n\n    :param text: The string to encrypt.\n    :param shift: The number of positions to shift each character.\n    :return: The encrypted string.\n    \"\"\"\n\n    # Ensure shift is within the valid range (0-25)\n    shift %= 26\n\n    # Create a translation table for the Caesar cipher\n    translation_table = str.maketrans(\n        alphabet,\n        alphabet[shift:] + alphabet[:shift]\n    )\n\n    # Encrypt the input text\n    encrypted_text = text.translate(translation_table)\n\n    return encrypted_text\n\n\n# Example usage\ntext = \"hello\"\nshift = 3\nencrypted_text = caesar_cipher(text, shift)\nprint(f\"Original text: {text}\")\nprint(f\"Encrypted text (shift={shift}): {encrypted_text}\")\n```\n\nThis function first ensures that the shift value is within the valid range (0-25) using the modulus operator (`%`). Then, it creates a translation table for the Caesar cipher by shifting the characters in the alphabet. Finally, it uses the `str.translate()` method to encrypt the input text and returns the result.\n\nYou can adjust the `shift` parameter to change the amount of encryption. For example, shifting by 3 would result in the output \"khoor\".",
+  "error": null,
+  "elapsed_seconds": 3.72,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9914,
+  "title": "Bill Splitter",
+  "prompt": "Write a program that splits a bill among a group of people.\nSample Input: 100 4\nSample Output: Each person pays $25\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a bill amount and the number of people in a group as input, and outputs how much each person should pay:\n```python\ndef split_bill(bill_amount, num_people):\n    \"\"\"\n    Splits a bill among a group of people.\n\n    Parameters:\n    bill_amount (float): The total amount of the bill.\n    num_people (int): The number of people in the group.\n\n    Returns:\n    str: A string indicating how much each person should pay.\n    \"\"\"\n    if num_people <= 0:\n        raise ValueError(\"Number of people must be a positive integer.\")\n\n    # Calculate the amount each person should pay\n    per_person = bill_amount / num_people\n\n    # Format the output as a string\n    output = f\"Each person pays ${per_person:.2f}\"\n\n    return output\n\n# Example usage\nbill_amount = 100\nnum_people = 4\nprint(split_bill(bill_amount, num_people))  # Output: Each person pays $25.00\n```\nThis program checks that the number of people is a positive integer, calculates the amount each person should pay by dividing the bill amount by the number of people, and then formats the output as a string with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 3.13,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

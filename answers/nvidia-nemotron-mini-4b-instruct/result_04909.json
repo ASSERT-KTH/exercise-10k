@@ -1,0 +1,9 @@
+{
+  "id": 4909,
+  "title": "Weekday or Weekend Checker",
+  "prompt": "Write a program that takes a day of the week as input and prints whether it is a weekday or a weekend.\nSample Input: Monday\nSample Output: Weekday\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a simple Python program that meets your requirements:\n\n```python\ndef is_weekday(day):\n    \"\"\"Check if a given day is a weekday (Monday, Tuesday, Wednesday, Thursday, or Friday).\"\"\"\n    days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']\n    return day.lower() in days\n\ndef is_weekend(day):\n    \"\"\"Check if a given day is a weekend (Saturday or Sunday).\"\"\"\n    return day.lower() in ['saturday', 'sunday']\n\ndef main():\n    day = input(\"Enter a day of the week: \").lower()\n    if is_weekday(day):\n        print(f\"{day} is a weekday.\")\n    elif is_weekend(day):\n        print(f\"{day} is a weekend.\")\n    else:\n        print(f\"Sorry, I didn't understand '{day}' as a weekday or weekend.\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program defines two helper functions, `is_weekday()` and `is_weekend()`, that check if a given day is a weekday or weekend, respectively. The `main()` function gets user input, checks if it's a weekday or weekend, and prints the result. The program also includes a check to ensure the user input is in lowercase for case-insensitive comparison.",
+  "error": null,
+  "elapsed_seconds": 3.24,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

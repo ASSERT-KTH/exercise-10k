@@ -1,0 +1,9 @@
+{
+  "id": 6493,
+  "title": "To-Do List",
+  "prompt": "Write a program that allows the user to add and remove items from a to-do list. After each addition or removal, print out the updated list.\nSample Input: buy milk\nSample Output: To-do list: buy milk\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses a list to store the to-do items and allows the user to add and remove items using the `add` and `remove` functions, respectively. It also prints out the updated list after each operation.\n\n```python\ndef add_item(todo_list, item):\n    \"\"\"Add an item to the to-do list.\"\"\"\n    todo_list.append(item)\n    print(f\"To-do list: {', '.join(todo_list)}\")\n\n\ndef remove_item(todo_list, index):\n    \"\"\"Remove an item from the to-do list at the given index.\"\"\"\n    if index < len(todo_list):\n        del todo_list[index]\n        print(f\"To-do list: {', '.join(todo_list)}\")\n    else:\n        print(\"Index out of range. Please enter a valid index.\")\n\n\nif __name__ == \"__main__\":\n    todo_list = []\n\n    while True:\n        command = input(\"Enter 'add' to add an item, 'remove' to remove an item, or 'quit' to exit: \").lower()\n\n        if command == \"add\":\n            item = input(\"Enter the item to add: \")\n            add_item(todo_list, item)\n\n        elif command == \"remove\":\n            index = int(input(\"Enter the index of the item to remove (0-based): \"))\n            remove_item(todo_list, index)\n\n        elif command == \"quit\":\n            print(\"Goodbye!\")\n            break\n\n        else:\n            print(\"Invalid command. Please try again.\")\n```\n\nThis program will continue to run until the user types \"quit\". You can customize the prompt and error messages as needed.",
+  "error": null,
+  "elapsed_seconds": 4.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

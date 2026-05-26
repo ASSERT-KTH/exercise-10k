@@ -1,0 +1,9 @@
+{
+  "id": 591,
+  "title": "Find the Maximum Subarray Sum",
+  "prompt": "Write a program that takes an array of numbers as input and returns the maximum sum of a subarray.\nSample Input: [-2, -3, 4, -1, -2, 1, 5, -3]\nSample Output: 7\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes an array of numbers as input and returns the maximum sum of a subarray using a sliding window approach with Kadane's algorithm. This algorithm has a time complexity of O(n), where n is the length of the input array.\n\n```python\ndef max_subarray_sum(arr):\n    \"\"\"\n    Returns the maximum sum of a subarray in the given array.\n\n    :param arr: List[int] - The input array of numbers\n    :return: int - The maximum sum of a subarray\n    \"\"\"\n\n    # Initialize variables to keep track of the current sum and the maximum sum\n    current_sum = max_sum = arr[0]\n\n    # Iterate through the array using a sliding window approach\n    for num in arr[1:]:\n        # Update the current sum by adding the current number to the previous sum\n        current_sum = max(num, current_sum + num)\n\n        # Update the maximum sum if the current sum is greater\n        max_sum = max(max_sum, current_sum)\n\n    return max_sum\n\n# Example usage\narr = [-2, -3, 4, -1, -2, 1, 5, -3]\nprint(max_subarray_sum(arr))  # Output: 7\n```\n\nThis program first initializes the `current_sum` and `max_sum` variables to the first element of the array. Then, it iterates through the array using a sliding window approach, updating the `current_sum` by adding the current number to the previous sum or just using the current number if the previous sum is negative. Finally, it updates the `max_sum` if the `current_sum` is greater.",
+  "error": null,
+  "elapsed_seconds": 4.04,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

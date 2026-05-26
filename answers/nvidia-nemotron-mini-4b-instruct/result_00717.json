@@ -1,0 +1,9 @@
+{
+  "id": 717,
+  "title": "Dictionary Map",
+  "prompt": "Write a function to apply a function to each value in a dictionary\nSample Input: {'a': 1, 'b': 2, 'c': 3, 'd': 4}, lambda x: x ** 2\nSample Output: {'a': 1, 'b': 4, 'c': 9, 'd': 16}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that applies a given function to each value in a dictionary:\n```python\ndef apply_function_to_dict(dictionary, function):\n    \"\"\"\n    Applies a given function to each value in a dictionary.\n\n    Parameters:\n    dictionary (dict): The dictionary to apply the function to.\n    function (callable): A function that takes one argument and returns a value.\n\n    Returns:\n    dict: The dictionary with each value replaced by the result of applying the function.\n    \"\"\"\n    return {key: function(value) for key, value in dictionary.items()}\n```\nHere's an example of how to use this function:\n```python\nsample_input = {'a': 1, 'b': 2, 'c': 3, 'd': 4}\nsample_function = lambda x: x ** 2\n\nresult = apply_function_to_dict(sample_input, sample_function)\nprint(result)  # Output: {'a': 1, 'b': 4, 'c': 9, 'd': 16}\n```\nThis function uses a dictionary comprehension to create a new dictionary with each key-value pair replaced by the result of applying the given function to the corresponding value. The `items()` method is used to iterate over the key-value pairs in the input dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

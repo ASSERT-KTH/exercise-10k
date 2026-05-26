@@ -1,0 +1,9 @@
+{
+  "id": 9778,
+  "title": "Input Error Handling",
+  "prompt": "Write a program that takes an input and handles errors that may occur during input (e.g. non-integer input for an integer variable).\nSample Input: abc\nSample Output: Invalid input\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_integer_input(prompt):\n    \"\"\"\n    Prompts the user for an integer input and handles errors that may occur.\n\n    :param prompt: The prompt to display to the user.\n    :return: The integer input provided by the user.\n    \"\"\"\n    while True:\n        try:\n            user_input = int(input(prompt))\n            return user_input\n        except ValueError:\n            print(\"Invalid input. Please enter an integer.\")\n\n# Example usage:\ninteger_input = get_integer_input(\"Please enter an integer: \")\nprint(f\"You entered: {integer_input}\")\n```\nThis program defines a function `get_integer_input` that prompts the user for an integer input and handles errors that may occur during input. The function uses a `while` loop to keep prompting the user for input until they provide a valid integer. If the user enters a non-integer value, the function catches the `ValueError` exception and prints an error message to the console.\n\nThe example usage at the end of the program demonstrates how to use the `get_integer_input` function to prompt the user for an integer input and print the result. You can modify this example to use the function in other contexts as needed.",
+  "error": null,
+  "elapsed_seconds": 3.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

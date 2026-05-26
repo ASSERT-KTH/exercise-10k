@@ -1,0 +1,9 @@
+{
+  "id": 9566,
+  "title": "Data Type Debugger",
+  "prompt": "Write a program that takes in a user's input and determines the data type of the input. If the input can be converted to an integer, it should be stored as an integer. If it can be converted to a float, it should be stored as a float. Otherwise, it should be stored as a string.\nSample Input: 123\nSample Output: int: 123\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef get_data_type(input_value):\n    try:\n        int_value = int(input_value)\n        return \"int\", int_value\n    except ValueError:\n        try:\n            float_value = float(input_value)\n            return \"float\", float_value\n        except ValueError:\n            return \"str\", input_value\n\n# Get user input\nuser_input = input(\"Enter a value: \")\n\n# Determine data type and store value\ndata_type, value = get_data_type(user_input)\n\n# Print result\nprint(f\"{data_type}: {value}\")\n```\n\nThis program defines a function `get_data_type` that takes in a user's input and returns a tuple containing the data type and the value. It uses `try`-`except` blocks to handle integer and float conversions, respectively. If neither conversion is successful, it returns a string containing the original input value. The program then gets user input, calls the `get_data_type` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 2.78,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

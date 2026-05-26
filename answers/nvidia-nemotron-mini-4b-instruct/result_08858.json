@@ -1,0 +1,9 @@
+{
+  "id": 8858,
+  "title": "Function to Calculate the Sum of cubed Numbers",
+  "prompt": "Write a function to calculate the sum of cubed numbers of a list of numbers\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 225\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that calculates the sum of the cubes of numbers in a list:\n\n```python\ndef sum_of_cubes(numbers):\n    \"\"\"\n    Calculates the sum of the cubes of numbers in a list.\n\n    Parameters:\n    numbers (list): A list of numbers.\n\n    Returns:\n    int: The sum of the cubes of the numbers in the list.\n    \"\"\"\n    # Check if the input is a non-empty list\n    if not isinstance(numbers, list) or len(numbers) == 0:\n        raise ValueError(\"Input should be a non-empty list.\")\n\n    # Calculate the sum of cubes\n    sum_of_cubes = sum(num ** 3 for num in numbers)\n\n    return sum_of_cubes\n```\n\nYou can use this function as follows:\n\n```python\nprint(sum_of_cubes([1, 2, 3, 4, 5]))  # Output: 225\n```\n\nThis function first checks if the input is a non-empty list. Then, it uses a generator expression to calculate the cubes of the numbers in the list and sums them up using the built-in `sum()` function.",
+  "error": null,
+  "elapsed_seconds": 2.92,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

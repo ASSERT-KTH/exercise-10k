@@ -1,0 +1,9 @@
+{
+  "id": 7562,
+  "title": "Function withMemoization",
+  "prompt": "Write a function that calculates the Fibonacci sequence using memoization to optimize performance.\nSample Input: 10\nSample Output: 55\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that calculates the Fibonacci sequence using memoization to optimize performance. The memoization technique involves storing the results of expensive function calls and reusing them when the same inputs occur again. This way, we avoid redundant calculations and significantly improve the performance.\n\n```python\ndef fibonacci(n, memo={}):\n    \"\"\"\n    Calculate the nth Fibonacci number using memoization.\n\n    :param n: The position of the Fibonacci number to calculate.\n    :param memo: A dictionary to store previously calculated Fibonacci numbers.\n    :return: The nth Fibonacci number.\n    \"\"\"\n\n    # Base cases\n    if n == 0:\n        return 0\n    elif n == 1:\n        return 1\n\n    # Check if the value is already in the memo dictionary\n    if n in memo:\n        return memo[n]\n\n    # Calculate the Fibonacci number and store it in the memo dictionary\n    fib_num = fibonacci(n - 1, memo) + fibonacci(n - 2, memo)\n    memo[n] = fib_num\n\n    return fib_num\n```\n\nYou can use this function to calculate the nth Fibonacci number as follows:\n\n```python\nprint(fibonacci(10))  # Output: 55\n```",
+  "error": null,
+  "elapsed_seconds": 3.03,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

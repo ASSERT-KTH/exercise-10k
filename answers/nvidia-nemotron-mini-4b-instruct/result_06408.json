@@ -1,0 +1,9 @@
+{
+  "id": 6408,
+  "title": "Age Classifier",
+  "prompt": "Write a program that takes a person's age as input and classifies them as a child, teenager, adult, or senior. Use if/else statements to determine the classification.\nSample Input: 25\nSample Output: Adult\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef classify_age(age):\n    \"\"\"\n    Classifies a person's age as a child, teenager, adult, or senior.\n\n    :param age: int - The person's age\n    :return: str - The classification (e.g. 'Child', 'Teenager', 'Adult', 'Senior')\n    \"\"\"\n    if age < 13:\n        return \"Child\"\n    elif 13 <= age < 19:\n        return \"Teenager\"\n    elif 19 <= age < 65:\n        return \"Adult\"\n    else:\n        return \"Senior\"\n\n# Get user input\nage = int(input(\"Enter your age: \"))\n\n# Print the classification\nclassification = classify_age(age)\nprint(f\"You are a {classification}.\")\n```\nThis program defines a function `classify_age` that takes an age as input and returns the corresponding classification. The function uses if/else statements to determine the classification based on the age range. The program then gets user input for age, calls the function to classify the age, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 2.81,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9118,
+  "title": "Conditional Voter Eligibility Checker",
+  "prompt": "Create a program that checks if a person is eligible to vote based on their age. The program should ask for the person's age and then print out whether they are eligible to vote or not. In this country, a person is eligible to vote if they are 18 years old or more.\nSample Input: 17\nSample Output: You are not eligible to vote.\n",
+  "answer": "Sure, I'd be happy to help you create a program for that. Here's a Python solution:\n\n```python\ndef check_voting_eligibility():\n    \"\"\"\n    Asks the user for their age and checks if they are eligible to vote.\n    \"\"\"\n    while True:\n        try:\n            # Ask for the person's age\n            age = int(input(\"Please enter your age: \"))\n\n            # Check if the age is valid (must be a positive integer)\n            if age > 0:\n                break\n            else:\n                print(\"Age must be a positive integer. Please try again.\")\n        except ValueError:\n            print(\"That's not a valid number. Please try again.\")\n\n    # Check if the person is eligible to vote\n    if age >= 18:\n        print(\"You are eligible to vote.\")\n    else:\n        print(\"You are not eligible to vote.\")\n\n# Call the function to start the program\ncheck_voting_eligibility()\n```\n\nThis program will keep asking for the user's age until a valid positive integer is entered. Then, it will check if the age is greater than or equal to 18, and print out whether the person is eligible to vote or not.",
+  "error": null,
+  "elapsed_seconds": 3.0,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

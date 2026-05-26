@@ -1,0 +1,9 @@
+{
+  "id": 1808,
+  "title": "Command Line Calculator",
+  "prompt": "Create a program that performs basic arithmetic operations based on user input, using conditional statements to determine the operation\nSample Input: 2 + 2\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you create a program for basic arithmetic operations based on user input using conditional statements. Here's an example Python program that meets your requirements:\n\n```python\ndef perform_arithmetic():\n    \"\"\"Perform basic arithmetic operations based on user input.\"\"\"\n\n    while True:\n        # Get user input and split it into operands and operation\n        input_str = input(\"Enter an arithmetic expression (e.g., 2 + 2): \")\n        if \"=\" not in input_str:\n            print(\"Invalid input. Please enter an arithmetic expression with an equal sign.\")\n            continue\n\n        operands, operation = input_str.split(\"=\")\n        operands = operands.strip().split()\n\n        # Perform the arithmetic operation based on the user input\n        try:\n            result = eval(f\"{' '.join(operands)} {operation}\")\n            print(f\"{' '.join(operands)} {operation} equals {result}.\")\n        except (NameError, ZeroDivisionError) as e:\n            print(f\"Error: {e}. Please check your input and try again.\")\n\n        # Ask user if they want to continue\n        user_input = input(\"Do you want to perform another operation? (yes/no): \").lower()\n        if user_input != \"yes\":\n            break\n\n# Call the function to start the program\nperform_arithmetic()\n```\n\nThis program will continuously ask the user for arithmetic expressions until the user enters \"no\" or \"n\" as their response. The program will then perform the arithmetic operation based on the user input and display the result.",
+  "error": null,
+  "elapsed_seconds": 3.64,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

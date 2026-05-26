@@ -1,0 +1,9 @@
+{
+  "id": 35,
+  "title": "Function to Generate a List of Numbers in a Range",
+  "prompt": "Create a function that takes two integers as input and returns a list of numbers in the range from the first number to the second number (inclusive).\nSample Input: 1, 10\nSample Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef generate_range(start, end):\n    \"\"\"\n    Generate a list of numbers in the range from start to end (inclusive).\n\n    Parameters:\n    start (int): The starting number in the range.\n    end (int): The ending number in the range.\n\n    Returns:\n    list: A list of integers in the range [start, end] (inclusive).\n    \"\"\"\n    if start > end:\n        raise ValueError(\"Start number must be less than or equal to end number.\")\n    return list(range(start, end + 1))\n```\nHere's an example of how to use this function:\n```python\nprint(generate_range(1, 10))  # Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n```\nThis function uses the built-in `range()` function to generate a sequence of numbers from `start` to `end` (inclusive), and then converts it to a list before returning it. The function also checks that the `start` number is less than or equal to the `end` number, and raises a `ValueError` if it's not.",
+  "error": null,
+  "elapsed_seconds": 3.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

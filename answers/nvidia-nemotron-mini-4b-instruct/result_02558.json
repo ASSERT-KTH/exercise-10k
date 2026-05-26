@@ -1,0 +1,9 @@
+{
+  "id": 2558,
+  "title": "Async Functions",
+  "prompt": "Create an async function to perform a concurrent operation and use it to calculate the sum.\nSample Input: async_function(5)\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example of an async function in JavaScript that performs a concurrent operation (in this case, calculating the sum of a given array) using the `async/await` syntax. We'll use the `async` function to create an async generator, which allows us to perform a concurrent operation and then await the result.\n\n```javascript\n// async function to calculate the sum of an array\nasync function calculateSum(arr) {\n  // Use async/await to perform a concurrent operation\n  // (in this case, calculating the sum of the array)\n const sum = await arr.reduce((acc, curr) => acc + curr, 0);\n\n  return sum;\n}\n\n// Example usage: calculate the sum of an array with 5 elements\nconst input = [1, 2, 3, 4, 5];\nconst result = await calculateSum(input);\n\nconsole.log(result); // Output: 15\n```\n\nIn this example, the `calculateSum` function takes an array as input and returns the sum of its elements. The `reduce` method is used to calculate the sum in a concurrent manner, as it allows us to perform the reduction operation on a generator (in this case, the array elements). The `async/await` syntax is used to await the result of the `reduce` method, which is then returned as the final result.",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9550,
+  "title": "Student Grades Dictionary",
+  "prompt": "Create a program that stores student grades in a dictionary. The dictionary should have student names as keys and lists of grades as values. The program should prompt the user to input a student's name and a grade, then add the grade to the student's list of grades. If the student is not in the dictionary, the program should add the student with the given grade. The program should continue prompting the user until the user decides to stop. Finally, the program should print out the dictionary of student grades.\nSample Input: John 90\nJane 80\nJohn 95\nstop\nSample Output: {'John': [90, 95], 'Jane': [80]}\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\n# Initialize an empty dictionary to store student grades\nstudent_grades = {}\n\n# Keep prompting the user until they enter 'stop'\nwhile True:\n    # Prompt the user for a student name and grade\n    name = input(\"Enter a student name and grade (or 'stop' to finish): \").strip()\n\n    # Check if the user entered 'stop'\n    if name.lower() == 'stop':\n        break\n\n    # Split the input into name and grade\n    name, grade = name.split()\n\n    # Add the grade to the student's list of grades (or create a new student)\n    if name not in student_grades:\n        student_grades[name] = [int(grade)]\n    else:\n        student_grades[name].append(int(grade))\n\n# Print the dictionary of student grades\nprint(student_grades)\n```\n\nThis program initializes an empty dictionary to store student grades. It then prompts the user for a student name and grade until the user enters 'stop'. For each input, it splits the input into name and grade, and adds the grade to the student's list of grades (or creates a new student) in the dictionary. Finally, it prints out the dictionary of student grades.",
+  "error": null,
+  "elapsed_seconds": 2.95,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

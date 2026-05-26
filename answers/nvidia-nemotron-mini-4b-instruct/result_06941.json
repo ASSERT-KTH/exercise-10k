@@ -1,0 +1,9 @@
+{
+  "id": 6941,
+  "title": "Function with Closure",
+  "prompt": "Create a function that returns a closure that captures a variable from the surrounding scope\nSample Input: None\nSample Output: a function that captures a variable\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example of a function that returns a closure that captures a variable from the surrounding scope in Python:\n\n```python\ndef create_counter():\n    \"\"\"\n    Returns a closure that captures a variable from the surrounding scope.\n    \"\"\"\n    # The variable 'count' is captured by the closure\n    count = 0\n\n    def increment_count():\n        \"\"\"\n        Increments the captured variable 'count' by 1.\n        \"\"\"\n        nonlocal count  # Use 'nonlocal' to modify the captured variable\n        count += 1\n        return count\n\n    return increment_count\n\n# Create a closure that captures the 'count' variable\ncounter = create_counter()\n\n# Call the closure multiple times to observe the captured variable\nprint(counter())  # Output: 1\nprint(counter())  # Output: 2\nprint(counter())  # Output: 3\n```\n\nIn this example, the `create_counter` function returns a closure (`increment_count`) that captures the `count` variable from the surrounding scope. The `nonlocal` keyword is used to modify the captured variable (`count`). When the closure is called, it increments the captured variable and returns its new value.",
+  "error": null,
+  "elapsed_seconds": 2.88,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

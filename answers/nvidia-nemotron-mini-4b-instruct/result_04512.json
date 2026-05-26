@@ -1,0 +1,9 @@
+{
+  "id": 4512,
+  "title": "Weather Forecast",
+  "prompt": "Create a program that displays the weather forecast for a given city. The user can choose to view the current weather, tomorrow's weather, or the weather for the next 5 days.\nSample Input: London\nSample Output: Current Weather: Sunny, Tomorrow: Cloudy\n",
+  "answer": "Sure, I'd be happy to help you create a program that displays the weather forecast for a given city. Here's a Python solution using the OpenWeatherMap API, which provides free access to weather data. You'll need to sign up for a free API key on their website.\n\n```python\nimport requests\n\ndef get_weather_forecast(city, days):\n    # Replace 'your_api_key' with your actual API key\n    api_key = 'your_api_key'\n\n    url = f'http://api.openweathermap.org/data/2.5/forecast?q={city}&appid={api_key}&units=metric'\n\n    response = requests.get(url)\n\n    if response.status_code == 200:\n        data = response.json()\n\n        forecast = []\n        for i in range(days):\n            forecast_day = data['list'][i]\n            weather_description = forecast_day['weather'][0]['description']\n            forecast.append(f'Day {i+1}: {weather_description}')\n\n        return '\\n'.join(forecast)\n    else:\n        print(f'Error {response.status_code}: Unable to fetch weather data for {city}')\n        return ''\n\n# Example usage\ncity = input('Enter a city: ')\ndays = int(input('Enter the number of days to forecast (1-5): '))\n\nprint(get_weather_forecast(city, days))\n```\n\nThis program defines a function `get_weather_forecast` that takes a city name and the number of days to forecast as input. It uses the OpenWeatherMap API to fetch the weather data and returns a string containing the forecast for the given city and days. The example usage at the end of the program demonstrates how to use the function.",
+  "error": null,
+  "elapsed_seconds": 4.16,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

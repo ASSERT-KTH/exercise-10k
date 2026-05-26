@@ -1,0 +1,9 @@
+{
+  "id": 1295,
+  "title": "Dictionary Mapping",
+  "prompt": "Create a function that takes a dictionary and a function, and returns a new dictionary where each value is the result of applying the function to the corresponding value in the original dictionary.\nSample Input: {'a': 1, 'b': 2}, lambda x: x * 2\nSample Output: {'a': 2, 'b': 4}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef apply_function_to_dict(dictionary, function):\n    \"\"\"\n    Applies a given function to each value in a dictionary,\n    returning a new dictionary with the updated values.\n\n    Parameters:\n    dictionary (dict): The original dictionary to modify.\n    function (callable): A function that takes a single argument and returns a value.\n\n    Returns:\n    dict: A new dictionary with updated values.\n    \"\"\"\n    # Use a dictionary comprehension to create a new dictionary with updated values\n    return {key: function(value) for key, value in dictionary.items()}\n```\nHere's an example of how you can use this function:\n```python\noriginal_dict = {'a': 1, 'b': 2}\ndouble_function = lambda x: x * 2\n\nupdated_dict = apply_function_to_dict(original_dict, double_function)\nprint(updated_dict)  # Output: {'a': 2, 'b': 4}\n```\nThis function uses a dictionary comprehension to create a new dictionary with updated values. The dictionary comprehension iterates over the items of the original dictionary (`key, value`) and applies the given function (`function(value)`) to each value, storing the result in a new dictionary. The resulting dictionary is then returned.",
+  "error": null,
+  "elapsed_seconds": 3.18,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

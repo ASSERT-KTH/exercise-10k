@@ -1,0 +1,9 @@
+{
+  "id": 4537,
+  "title": "Array Zip",
+  "prompt": "Write a program that takes two arrays as input and returns a new array containing the elements from the first array paired with the corresponding elements from the second array.\nSample Input: [1, 2, 3], [a, b, c]\nSample Output: [(1, a), (2, b), (3, c)]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes two arrays as input and returns a new array containing the elements from the first array paired with the corresponding elements from the second array:\n```python\ndef pair_arrays(arr1, arr2):\n    \"\"\"\n    Pairs elements from two input arrays and returns a new array.\n\n    Parameters:\n    arr1 (list): The first input array.\n    arr2 (list): The second input array.\n\n    Returns:\n    list: A new array containing pairs of elements from arr1 and arr2.\n    \"\"\"\n    # Check if the lengths of the arrays are equal\n    if len(arr1) != len(arr2):\n        raise ValueError(\"The lengths of the input arrays must be equal.\")\n\n    # Pair the elements and return the new array\n    return list(zip(arr1, arr2))\n```\nHere's an example of how you can use this function:\n```python\narr1 = [1, 2, 3]\narr2 = ['a', 'b', 'c']\n\nresult = pair_arrays(arr1, arr2)\nprint(result)  # Output: [(1, 'a'), (2, 'b'), (3, 'c')]\n```\nThis function first checks if the lengths of the input arrays are equal, and raises a `ValueError` if they are not. Then, it uses the built-in `zip()` function to pair the elements from the two arrays and returns the new array as a list.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

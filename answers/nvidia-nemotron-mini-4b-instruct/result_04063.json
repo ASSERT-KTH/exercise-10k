@@ -1,0 +1,9 @@
+{
+  "id": 4063,
+  "title": "Substring Extraction",
+  "prompt": "Write a program that takes a string and two indices as input and returns the substring between the indices.\nSample Input: ['hello world', 0, 5]\nSample Output: hello\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef get_substring(string, start_index, end_index):\n    \"\"\"\n    Returns the substring between the given start and end indices in the input string.\n\n    :param string: The input string.\n    :param start_index: The starting index of the substring.\n    :param end_index: The ending index of the substring (exclusive).\n    :return: The substring between the start and end indices.\n    \"\"\"\n\n    # Check if the indices are valid\n    if start_index < 0 or start_index >= len(string):\n        raise IndexError(\"Start index is out of range.\")\n\n    if end_index < 0 or end_index > len(string) or end_index < start_index:\n        raise IndexError(\"End index is out of range or not valid.\")\n\n    # Return the substring\n    return string[start_index:end_index]\n\n# Sample usage\ninput_string = 'hello world'\nstart_index = 0\nend_index = 5\n\nresult = get_substring(input_string, start_index, end_index)\nprint(result)  # Output: hello\n```\n\nThis program defines a function `get_substring` that takes a string and two indices as input and returns the substring between the indices. It also includes error handling to ensure that the indices are valid. The function is then used in a sample usage to print the substring between indices `0` and `5` in the string 'hello world'.",
+  "error": null,
+  "elapsed_seconds": 3.47,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

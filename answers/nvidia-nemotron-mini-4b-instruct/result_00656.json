@@ -1,0 +1,9 @@
+{
+  "id": 656,
+  "title": "Guessing Game",
+  "prompt": "Create a program that generates a random number and asks the user to guess it.\nSample Input: guess 50\nSample Output: Too high! Try again.\n",
+  "answer": "Sure, I'd be happy to help you create a program that generates a random number and prompts the user to guess it. Here's a Python solution using the `random` module for generating a random number:\n\n```python\nimport random\n\n# Generate a random number between 1 and 100\nrandom_number = random.randint(1, 100)\n\n# Initialize the number of attempts\nnum_attempts = 0\n\n# Keep asking the user to guess until they get it right\nwhile True:\n    # Prompt the user to guess\n    guess = int(input(\"Guess a number between 1 and 100: \"))\n\n    # Increment the number of attempts\n    num_attempts += 1\n\n    # Check if the user guessed correctly\n    if guess == random_number:\n        print(f\"Congratulations! You guessed the number in {num_attempts} attempts.\")\n        break\n    else:\n        # Inform the user if their guess is too high or too low\n        if guess < random_number:\n            print(\"Too low! Try again.\")\n        else:\n            print(\"Too high! Try again.\")\n```\n\nThis program generates a random number between 1 and 100, prompts the user to guess, and keeps asking until the user guesses correctly. It also keeps track of the number of attempts and provides feedback on whether the user's guess is too high or too low.",
+  "error": null,
+  "elapsed_seconds": 4.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7070,
+  "title": "Input/Output Streams",
+  "prompt": "Write a program that takes input from a file and prints out the output to another file.\nSample Input: input.txt\nSample Output: output.txt\n",
+  "answer": "Sure, I can help you with that. Here's a Python program that reads input from a file (`input.txt`) and writes the output to another file (`output.txt`). The program uses the `open()` function to open the files and the `read()` and `write()` functions to read and write data, respectively.\n\n```python\n# Open the input file for reading\nwith open('input.txt', 'r') as infile:\n    # Read the input data\n    input_data = infile.read()\n\n# Open the output file for writing\nwith open('output.txt', 'w') as outfile:\n    # Write the output data to the output file\n    outfile.write(input_data)\n```\n\nThis program will create the `output.txt` file if it doesn't exist, and overwrite its contents if it already exists. If you want to append the output to an existing file, you can modify the `'w'` mode to `'a'` (append). Here's the modified version:\n\n```python\n# Open the input file for reading\nwith open('input.txt', 'r') as infile:\n    # Read the input data\n    input_data = infile.read()\n\n# Open the output file for appending\nwith open('output.txt', 'a') as outfile:\n    # Write the output data to the output file\n    outfile.write(input_data)\n```\n\nThis program will append the output data to the end of the `output.txt` file, without creating a new file.",
+  "error": null,
+  "elapsed_seconds": 3.57,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 18,
+  "title": "Database Interactions",
+  "prompt": "Write a program to interact with a database using a database library.\nSample Input: create a database and insert data\nSample Output: database created and data inserted\n",
+  "answer": "Sure, I can help you with that. Here's an example Python program that interacts with a SQLite database using the `sqlite3` library. This program creates a new database and inserts some sample data. Make sure you have the `sqlite3` library installed by running `pip install sqlite3`.\n\n```python\nimport sqlite3\n\ndef create_database_and_insert_data():\n    # Connect to the database\n    conn = sqlite3.connect('my_database.db')\n\n    # Create a cursor object\n    cursor = conn.cursor()\n\n    # Create the table if it doesn't exist\n    cursor.execute('''CREATE TABLE IF NOT EXISTS users (\n                        id INTEGER PRIMARY KEY AUTOINCREMENT,\n                        name TEXT NOT NULL,\n                        email TEXT UNIQUE NOT NULL\n                    )''')\n\n    # Insert sample data\n    cursor.execute(\"INSERT INTO users (name, email) VALUES (?, ?)\", ['John Doe', 'john.doe@example.com'])\n    cursor.execute(\"INSERT INTO users (name, email) VALUES (?, ?)\", ['Jane Doe', 'jane.doe@example.com'])\n\n    # Commit the changes and close the connection\n    conn.commit()\n    conn.close()\n\n    print(\"Database created and data inserted.\")\n\n# Call the function\ncreate_database_and_insert_data()\n```\n\nThis program creates a new SQLite database named `my_database.db` and inserts two rows of data with unique email addresses. You can modify the `create_table` and `insert_data` functions to interact with other database libraries or modify the data structure as needed.",
+  "error": null,
+  "elapsed_seconds": 3.66,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

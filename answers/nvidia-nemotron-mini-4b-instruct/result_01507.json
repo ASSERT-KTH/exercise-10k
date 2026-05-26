@@ -1,0 +1,9 @@
+{
+  "id": 1507,
+  "title": "String Formatter",
+  "prompt": "Write a program that formats a given string by replacing specified placeholders with actual values.\nSample Input: Hello {name}, {age}\nSample Output: Hello John, 30\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses string formatting with placeholders `{}` and actual values passed as arguments to the function.\n\n```python\ndef format_string(template, *values):\n    \"\"\"\n    Formats a given string by replacing specified placeholders with actual values.\n\n    :param template: The string template containing placeholders.\n    :param values: Variable number of arguments to replace placeholders with.\n    :return: The formatted string.\n    \"\"\"\n    # Ensure the number of arguments matches the number of placeholders\n    if len(values) != len(template.format(*values).count('{}')):\n        raise ValueError(\"Incorrect number of arguments provided.\")\n\n    return template.format(*values)\n\n\n# Example usage\nsample_input = \"Hello {name}, {age}\"\nsample_output = \"Hello John, 30\"\n\nprint(format_string(sample_input, name=\"John\", age=30))  # Output: Hello John, 30\n```\n\nThis program checks if the number of arguments provided matches the number of placeholders in the template, and raises a `ValueError` if they don't. The `format()` method is used to format the string with placeholders replaced by actual values.",
+  "error": null,
+  "elapsed_seconds": 2.98,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

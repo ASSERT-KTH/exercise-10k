@@ -1,0 +1,9 @@
+{
+  "id": 9473,
+  "title": "Student Grades Dictionary",
+  "prompt": "Create a program that takes a dictionary of student names and their respective grades as input. The program should then calculate the average grade and print out the student names with their grades, along with the average grade. If a student's grade is above the average, mark it as 'Above Average', if it's below the average, mark it as 'Below Average', and if it's equal to the average, mark it as 'Average'.\nSample Input: {\"John\": 85, \"Alice\": 90, \"Bob\": 78}\nSample Output: John: 85 - Below Average\nAlice: 90 - Above Average\nBob: 78 - Below Average\nAverage Grade: 84.33\n",
+  "answer": "Here's a Python solution for the problem:\n\n```python\ndef calculate_average_and_mark(students):\n    total_grade = sum(students.values())\n    num_students = len(students)\n    average_grade = total_grade / num_students\n\n    for name, grade in students.items():\n        if grade > average_grade:\n            print(f\"{name}: {grade} - Above Average\")\n        elif grade < average_grade:\n            print(f\"{name}: {grade} - Below Average\")\n        else:\n            print(f\"{name}: {grade} - Average\")\n\n    print(f\"Average Grade: {average_grade:.2f}\")\n\n# Test the function with the sample input\nstudents = {\"John\": 85, \"Alice\": 90, \"Bob\": 78}\ncalculate_average_and_mark(students)\n```\n\nThis program first calculates the total and number of grades, then calculates the average. It then iterates over the student names in the dictionary, checking if each grade is above, below, or equal to the average. If it's above, it prints \"Above Average\", if it's below, it prints \"Below Average\", and if it's equal, it prints \"Average\". Finally, it prints the average grade with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 3.01,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

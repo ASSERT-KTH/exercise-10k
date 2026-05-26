@@ -1,0 +1,9 @@
+{
+  "id": 9672,
+  "title": "Word Reverser",
+  "prompt": "Write a program that asks for a sentence and reverses the order of characters in each word.\nSample Input: hello world\nSample Output: olleh dlrow\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef reverse_words(sentence):\n    \"\"\"Reverses the order of characters in each word of a given sentence.\n\n    Args:\n    sentence (str): The sentence to reverse the words in.\n\n    Returns:\n    str: The sentence with reversed word order.\n    \"\"\"\n    # Split the sentence into words, reverse each word, and then join them back together\n    return ' '.join(word[::-1] for word in sentence.split())\n\n# Get user input\nuser_input = input(\"Enter a sentence: \")\n\n# Print the result\nprint(reverse_words(user_input))\n```\nThis program defines a function `reverse_words` that takes a sentence as input and returns a new sentence with reversed word order. It works by first splitting the sentence into words using the `split()` method, then using a list comprehension to reverse each word using slicing (`[::-1]`), and finally joining the reversed words back together into a single sentence using the `join()` method. The program then prompts the user to enter a sentence, calls the function with the user input, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 2.71,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9971,
+  "title": "Escape Sequences",
+  "prompt": "Write a program that uses escape sequences to insert special characters into a string.\nSample Input: string = 'Hello\\nWorld'\nSample Output: Hello\nWorld\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses escape sequences to insert special characters into a string:\n\n```python\ndef insert_special_chars(string):\n    \"\"\"\n    Inserts special characters (newline, tab, and backspace) into a string using escape sequences.\n\n    :param string: The string to modify.\n    :return: The modified string with special characters inserted.\n    \"\"\"\n    # Escape sequences for newline, tab, and backspace\n    escape_sequences = {\n        '\\n': '\\r\\n',  # Windows-style newline\n        '\\t': '    ',  # Tab character with 4 spaces\n        '\\b': '\\\\b'    # Backspace character (used for line editing)\n    }\n\n    # Insert special characters into the string\n    modified_string = string.replace('\\r', escape_sequences['\\n'])\n    modified_string = modified_string.replace('\\t', escape_sequences['\\t'])\n    modified_string = modified_string.replace('\\b', escape_sequences['\\b'])\n\n    return modified_string\n\n# Test the function with the given sample input\nstring = 'Hello\\nWorld'\nprint(insert_special_chars(string))\n```\n\nWhen you run this program with the given sample input `'Hello\\nWorld'`, it will output:\n\n```\nHello\nWorld\n```\n\nThis is because the escape sequences `'\\n'`, `'\\t'`, and `'\\b'` are replaced with their corresponding characters (`'\\r\\n'`, `'    '`, and `'\\\\b'`, respectively). The `replace()` method is used to replace all occurrences of the escape sequences in the input string with their corresponding characters.",
+  "error": null,
+  "elapsed_seconds": 4.04,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

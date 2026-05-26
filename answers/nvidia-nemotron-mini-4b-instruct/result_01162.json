@@ -1,0 +1,9 @@
+{
+  "id": 1162,
+  "title": "Longest Common Prefix",
+  "prompt": "Given an array of strings, find the longest common prefix\nSample Input: ['hello', 'helmet', 'hell']\nSample Output: hel\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the longest common prefix for an array of strings:\n\n```python\ndef longest_common_prefix(strs):\n    if not strs:\n        return \"\"\n\n    shortest_str = min(strs, key=len)\n\n    for i, char in enumerate(shortest_str):\n        for other_str in strs[1:]:\n            if other_str[i] != char:\n                return shortest_str[:i]\n\n    return shortest_str\n```\n\nThis function first finds the shortest string in the array using the `min()` function with a key that returns the length of each string. It then iterates over each character in the shortest string and checks if it matches with the corresponding character in all the other strings. If any character doesn't match, it returns the common prefix up to that point. If all characters match, it returns the entire shortest string as the longest common prefix.\n\nHere's an example usage of the function:\n\n```python\nprint(longest_common_prefix(['hello', 'helmet', 'hell']))  # Output: 'hel'\n```",
+  "error": null,
+  "elapsed_seconds": 3.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3423,
+  "title": "Caesar Cipher",
+  "prompt": "Write a function that takes a string and an integer as input and returns the Caesar cipher-encrypted string\nSample Input: Hello World, 3\nSample Output: Khoor Zruog\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that implements the Caesar cipher encryption for the given input. The function takes a string and an integer as input and returns the encrypted string.\n\n```python\ndef caesar_cipher(plaintext: str, shift: int) -> str:\n    \"\"\"\n    Encrypts a given plaintext string using the Caesar cipher with the given shift.\n\n    :param plaintext: The plaintext string to encrypt.\n    :param shift: The number of positions to shift each character in the plaintext.\n    :return: The encrypted string.\n    \"\"\"\n\n    # Ensure the shift is within the valid range (0-25)\n    shift %= 26\n\n    # Create a translation table for the Caesar cipher\n    translation_table = str.maketrans(\n        alphabet[:-1], alphabet[-shift-1:] + alphabet[-shift:] + alphabet[:-shift]\n    )\n\n    # Encrypt the plaintext using the translation table\n    encrypted_text = plaintext.translate(translation_table)\n\n    return encrypted_text\n\n\n# Define the alphabet for Caesar cipher encryption\nalphabet = \"abcdefghijklmnopqrstuvwxyz\"\n\n# Test the function with the given sample input\nplaintext = \"Hello World\"\nshift = 3\nencrypted_text = caesar_cipher(plaintext, shift)\nprint(f\"Sample Input: {plaintext}, {shift}\")\nprint(f\"Sample Output: {encrypted_text}\")\n```\n\nThis function uses the `str.maketrans()` method to create a translation table for the Caesar cipher, which shifts each character in the plaintext by the given number of positions. The function then translates the plaintext using this translation table and returns the encrypted string.",
+  "error": null,
+  "elapsed_seconds": 4.04,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

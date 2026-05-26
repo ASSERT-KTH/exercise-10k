@@ -1,0 +1,9 @@
+{
+  "id": 1542,
+  "title": "Array Indexing",
+  "prompt": "Given an array of strings, write a function to return the element at a specified index.\nSample Input: ['apple', 'banana', 'cherry'], 1\nSample Output: banana\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_element_at_index(arr, index):\n    \"\"\"\n    Given an array of strings and an index, return the element at that index.\n\n    :param arr: The array of strings\n    :param index: The index of the element to return\n    :return: The string at the specified index\n    \"\"\"\n    if not isinstance(arr, list) or not all(isinstance(s, str) for s in arr):\n        raise ValueError(\"Input array must be a list of strings.\")\n\n    if not isinstance(index, int) or index < 0 or index >= len(arr):\n        raise IndexError(\"Index must be a non-negative integer less than the length of the array.\")\n\n    return arr[index]\n```\nThis function checks if the input is valid (i.e., an array of strings and a non-negative integer index), and then returns the string at the specified index. Here's an example of how to use this function:\n```python\nfruits = ['apple', 'banana', 'cherry']\nprint(get_element_at_index(fruits, 1))  # Output: banana\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

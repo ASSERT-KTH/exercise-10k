@@ -1,0 +1,9 @@
+{
+  "id": 6046,
+  "title": "Guessing Game",
+  "prompt": "Write a program that generates a random number and asks the user to guess it, providing hints using conditional statements.\nSample Input: 50\nSample Output: Too high! Guess again\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program generates a random number between 1 and 100 (inclusive) and asks the user to guess it, providing hints using conditional statements.\n\n```python\nimport random\n\n# Generate a random number between 1 and 100 (inclusive)\ntarget_number = random.randint(1, 100)\n\n# Initialize the number of attempts and the user's guess\nnum_attempts = 0\nuser_guess = int(input(\"Guess a number between 1 and 100: \"))\n\n# Continue asking for guesses until the user guesses correctly\nwhile user_guess != target_number:\n    num_attempts += 1\n\n    # Provide a hint based on the user's guess\n    if user_guess < target_number:\n        print(f\"Too low! Try again. You've made {num_attempts} attempts so far.\")\n    elif user_guess > target_number:\n        print(f\"Too high! Guess again. You've made {num_attempts} attempts so far.\")\n    else:\n        print(f\"Congratulations! You guessed the number in {num_attempts} attempts.\")\n\n    # Get the user's new guess\n    user_guess = int(input(\"Guess a number between 1 and 100: \"))\n```\n\nThis program generates a random number, keeps track of the number of attempts, and provides hints to the user based on their guess. The user can continue guessing until they guess the correct number.",
+  "error": null,
+  "elapsed_seconds": 3.66,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

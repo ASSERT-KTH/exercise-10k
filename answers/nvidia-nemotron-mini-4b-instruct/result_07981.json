@@ -1,0 +1,9 @@
+{
+  "id": 7981,
+  "title": "Number of Vowels",
+  "prompt": "Write a program that counts the number of vowels in a given string.\nSample Input: hello world\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that counts the number of vowels in a given string:\n\n```python\ndef count_vowels(s):\n    \"\"\"\n    Count the number of vowels in a given string.\n\n    :param s: str - The input string.\n    :return: int - The number of vowels in the string.\n    \"\"\"\n    vowels = set('aeiouAEIOU')\n    return sum(1 for char in s if char in vowels)\n\n# Example usage:\ninput_string = 'hello world'\nnum_vowels = count_vowels(input_string)\nprint(f'The number of vowels in \"{input_string}\" is {num_vowels}.')\n```\n\nWhen you run this program with the sample input 'hello world', it will output:\n\n```\nThe number of vowels in \"hello world\" is 3.\n```\n\nThis program defines a function `count_vowels` that takes a string as input and returns the number of vowels in that string. It does this by converting the string to lowercase to ensure that both lowercase and uppercase vowels are counted, and then using a set of vowels to check if each character in the string is a vowel. The `sum` function is used to count the number of vowels by iterating over the characters in the string and incrementing a counter for each vowel.",
+  "error": null,
+  "elapsed_seconds": 3.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

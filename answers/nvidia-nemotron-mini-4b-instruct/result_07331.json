@@ -1,0 +1,9 @@
+{
+  "id": 7331,
+  "title": "Input from URL",
+  "prompt": "Write a program that reads input from a URL and prints out the contents.\nSample Input: https://example.com\nSample Output: This is an example web page.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses the `requests` library to read the contents of a URL and print them out. If you don't have the `requests` library installed, you can install it using pip:\n\n```bash\npip install requests\n```\n\nHere's the Python code:\n\n```python\nimport requests\n\ndef read_url_contents(url):\n    \"\"\"\n    Reads the contents of a URL and prints them out.\n\n    :param url: The URL to read the contents of.\n    \"\"\"\n    try:\n        response = requests.get(url, timeout=10)  # Set timeout to 10 seconds\n\n        if response.status_code == 200:\n            print(response.text)\n        else:\n            print(f\"Error: Unable to retrieve contents of {url} (status code {response.status_code}).\")\n\n    except requests.exceptions.RequestException as e:\n        print(f\"Error: Unable to read contents of {url}. Reason: {str(e)}\")\n\n# Example usage:\nread_url_contents(\"https://example.com\")\n```\n\nThis program defines a function `read_url_contents` that takes a URL as input, sends a GET request to the URL, and prints out the contents of the response if the request is successful. If there's an error, it prints an error message. The example usage at the end of the code calls this function with the URL `https://example.com`.",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

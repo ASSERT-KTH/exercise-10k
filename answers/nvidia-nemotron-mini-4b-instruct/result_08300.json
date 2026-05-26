@@ -1,0 +1,9 @@
+{
+  "id": 8300,
+  "title": "Trigonometric Calculator",
+  "prompt": "Create a program that calculates the sine, cosine, and tangent of an angle.\nSample Input: 30\nSample Output: Sine: 0.5, Cosine: 0.866, Tangent: 0.577\n",
+  "answer": "Sure, I'd be happy to help you create a program that calculates the sine, cosine, and tangent of an angle. Here's an example Python program that does that:\n\n```python\nimport math\n\ndef calculate_trigonometric_values(angle):\n    \"\"\"\n    Calculates the sine, cosine, and tangent of a given angle.\n\n    :param angle: The angle in degrees (0 to 360)\n    :return: A dictionary containing the sine, cosine, and tangent values\n    \"\"\"\n\n    # Convert the angle from degrees to radians\n    radians = math.radians(angle)\n\n    # Calculate the sine, cosine, and tangent values\n    sine = math.sin(radians)\n    cosine = math.cos(radians)\n    tangent = math.tan(radians)\n\n    # Return the results as a dictionary\n    return {\n        \"Sine\": round(sine, 4),\n        \"Cosine\": round(cosine, 4),\n        \"Tangent\": round(tangent, 4)\n    }\n\n# Get user input for the angle\nangle = int(input(\"Enter the angle in degrees (0 to 360): \"))\n\n# Calculate and print the trigonometric values\ntrigonometric_values = calculate_trigonometric_values(angle)\nprint(f\"Sine: {trigonometric_values['Sine']}, Cosine: {trigonometric_values['Cosine']}, Tangent: {trigonometric_values['Tangent']}\")\n```\n\nThis program defines a function `calculate_trigonometric_values` that takes an angle in degrees as input and returns a dictionary containing the sine, cosine, and tangent values. The program then prompts the user to enter an angle, calculates the trigonometric values using the `calculate_trigonometric_values` function, and prints the results.",
+  "error": null,
+  "elapsed_seconds": 4.3,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

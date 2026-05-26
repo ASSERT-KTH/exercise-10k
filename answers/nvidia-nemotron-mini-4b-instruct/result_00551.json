@@ -1,0 +1,9 @@
+{
+  "id": 551,
+  "title": "Longest Common Prefix",
+  "prompt": "Write a program that takes a list of strings as input and returns the longest common prefix among all the strings.\nSample Input: ['hello', 'hell', 'hel']\nSample Output: hel\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a list of strings as input and returns the longest common prefix among all the strings using a recursive approach with a base case. The base case is when the lengths of the current string and the remaining strings are equal, in which case the current string is the longest common prefix. Otherwise, the function recursively calls itself with the substring from the start of the current string to the length of the remaining shortest string.\n\n```python\ndef longest_common_prefix(strings):\n    if not strings:\n        return \"\"\n\n    shortest_string = min(strings, key=len)\n\n    for char in shortest_string:\n        for other_string in strings:\n            if char not in other_string:\n                return other_string[:other_string.index(char)]\n\n    return shortest_string\n```\n\nHere's an example of how to use the function:\n\n```python\nstrings = ['hello', 'hell', 'hel']\nprint(longest_common_prefix(strings))  # Output: hel\n```\n\nThis function has a time complexity of O(n \\* m), where n is the number of strings and m is the length of the shortest string, because it iterates through each character of the shortest string and each string in the list. The space complexity is O(1) because it only uses a constant amount of additional memory.",
+  "error": null,
+  "elapsed_seconds": 3.15,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

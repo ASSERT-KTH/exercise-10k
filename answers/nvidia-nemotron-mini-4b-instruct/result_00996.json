@@ -1,0 +1,9 @@
+{
+  "id": 996,
+  "title": "BMI Calculator",
+  "prompt": "Create a program that calculates the Body Mass Index (BMI) based on the user's weight and height. The program uses if-else statements to determine the BMI category.\nSample Input: 70 175\nSample Output: BMI: 22.9 (normal weight)\n",
+  "answer": "Sure, I'd be happy to help you create a program that calculates the Body Mass Index (BMI) based on the user's weight and height using if-else statements. Here's an example Python program that meets your requirements:\n\n```python\ndef calculate_bmi():\n    \"\"\"\n    Calculates the Body Mass Index (BMI) based on the user's weight and height.\n    \"\"\"\n\n    # Get user input for weight and height\n    weight = float(input(\"Enter your weight in kilograms: \"))\n    height = float(input(\"Enter your height in meters: \"))\n\n    # Calculate BMI\n    bmi = weight / (height ** 2)\n\n    # Determine BMI category using if-else statements\n    if bmi < 18.5:\n        bmi_category = \"Underweight\"\n    elif bmi < 25:\n        bmi_category = \"Normal weight\"\n    elif bmi < 30:\n        bmi_category = \"Overweight\"\n    else:\n        bmi_category = \"Obesity\"\n\n    # Print the result\n    print(f\"BMI: {bmi:.1f} ({bmi_category})\")\n\n# Call the function\ncalculate_bmi()\n```\n\nThis program prompts the user to enter their weight and height, calculates the BMI, and then determines the BMI category using if-else statements. The output is formatted as a string with the BMI value, category, and a space between the two.",
+  "error": null,
+  "elapsed_seconds": 3.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

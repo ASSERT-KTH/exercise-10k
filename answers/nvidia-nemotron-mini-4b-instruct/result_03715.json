@@ -1,0 +1,9 @@
+{
+  "id": 3715,
+  "title": "Function to Generate Random Matrix",
+  "prompt": "Create a function that generates a random matrix of a specified size.\nSample Input: 3, 3\nSample Output: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that generates a random matrix of a specified size using the `numpy` library, which provides efficient and accurate linear algebra operations. If you don't have it installed, you can install it using pip:\n\n```bash\npip install numpy\n```\n\nHere's the function:\n\n```python\nimport numpy as np\n\ndef generate_random_matrix(size):\n    \"\"\"\n    Generates a random matrix of the specified size.\n\n    Parameters:\n    size (tuple): A tuple of two integers representing the dimensions of the matrix.\n\n    Returns:\n    numpy.ndarray: A 2D numpy array representing the random matrix.\n    \"\"\"\n    if not isinstance(size, tuple) or len(size) != 2 or not all(isinstance(s, int) for s in size):\n        raise ValueError(\"Size must be a tuple of two integers.\")\n\n    return np.random.randint(low=0, high=10, size=size)  # Generate random integers between 0 and 9\n```\n\nHere's an example of how to use the function:\n\n```python\nmatrix = generate_random_matrix((3, 3))\nprint(matrix)\n```\n\nThis will output a random 3x3 matrix as a 2D numpy array.",
+  "error": null,
+  "elapsed_seconds": 3.18,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

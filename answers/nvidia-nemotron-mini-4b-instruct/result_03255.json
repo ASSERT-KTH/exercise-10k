@@ -1,0 +1,9 @@
+{
+  "id": 3255,
+  "title": "GCD and LCM",
+  "prompt": "Write a program that calculates the greatest common divisor (GCD) and least common multiple (LCM) of two numbers.\nSample Input: 12 15\nSample Output: 3 60\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the greatest common divisor (GCD) and least common multiple (LCM) of two numbers using the Euclidean algorithm and the formula for LCM:\n\n```python\ndef gcd(a, b):\n    \"\"\"\n    Calculate the greatest common divisor of two numbers using the Euclidean algorithm.\n    \"\"\"\n    while b:\n        a, b = b, a % b\n    return abs(a)\n\ndef lcm(a, b):\n    \"\"\"\n    Calculate the least common multiple of two numbers using the formula:\n        lcm(a, b) = |a*b| / gcd(a, b)\n    \"\"\"\n    return abs(a * b) // gcd(a, b)\n\n# Get sample input from the user\nsample_input = input(\"Enter two numbers separated by a space: \")\nnumbers = sample_input.split()\n\n# Convert the input to integers and calculate GCD and LCM\nnum1, num2 = int(numbers[0]), int(numbers[1])\ngcd_value = gcd(num1, num2)\nlcm_value = lcm(num1, num2)\n\n# Print the results\nprint(f\"GCD: {gcd_value}\")\nprint(f\"LCM: {lcm_value}\")\n```\n\nWhen you run this program and enter `12 15` as the sample input, it will output:\n\n```\nGCD: 3\nLCM: 60\n```",
+  "error": null,
+  "elapsed_seconds": 3.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

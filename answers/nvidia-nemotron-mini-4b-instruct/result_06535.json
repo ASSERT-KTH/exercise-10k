@@ -1,0 +1,9 @@
+{
+  "id": 6535,
+  "title": "Students Grades",
+  "prompt": "Create a function that calculates the average grade of a list of students.\nSample Input: [{'name': 'student1', 'grade': 80}, {'name': 'student2', 'grade': 90}]\nSample Output: 85\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that calculates the average grade of a list of students:\n```python\ndef calculate_average_grade(students):\n    \"\"\"\n    Calculates the average grade of a list of students.\n\n    Parameters:\n    students (list): A list of dictionaries, where each dictionary represents a student and contains a 'name' key and an 'grade' key.\n\n    Returns:\n    int: The average grade of all students.\n    \"\"\"\n    # Check that the input is a non-empty list\n    if not students or not isinstance(students, list):\n        raise ValueError(\"Input should be a non-empty list of dictionaries.\")\n\n    # Calculate the total grade and the number of students\n    total_grade = sum(student['grade'] for student in students)\n    num_students = len(students)\n\n    # Calculate and return the average grade\n    return total_grade // num_students\n```\nHere's an example of how to use this function:\n```python\nstudents = [{'name': 'student1', 'grade': 80}, {'name': 'student2', 'grade': 90}]\naverage_grade = calculate_average_grade(students)\nprint(average_grade)  # Output: 85\n```\nThis function first checks that the input is a non-empty list. Then, it calculates the total grade and the number of students by summing the grades and getting the length of the list, respectively. Finally, it calculates the average grade by dividing the total grade by the number of students and returns the result.",
+  "error": null,
+  "elapsed_seconds": 3.61,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

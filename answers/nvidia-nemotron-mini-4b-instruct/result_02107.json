@@ -1,0 +1,9 @@
+{
+  "id": 2107,
+  "title": "Dictionary Copying",
+  "prompt": "Write a function to create a copy of a dictionary\nSample Input: {'name': 'John', 'age': 30}\nSample Output: {'name': 'John', 'age': 30}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that creates a deep copy of a dictionary, ensuring that any nested dictionaries or lists are also copied:\n```python\nimport copy\n\ndef copy_dict(input_dict):\n    \"\"\"\n    Create a deep copy of a dictionary.\n\n    :param input_dict: The dictionary to copy.\n    :return: A deep copy of the input dictionary.\n    \"\"\"\n    return copy.deepcopy(input_dict)\n```\nHere's how you can use this function:\n```python\ninput_dict = {'name': 'John', 'age': 30}\ncopied_dict = copy_dict(input_dict)\n\n# You can modify the original dictionary\ninput_dict['name'] = 'Jane'\n\n# The copied dictionary will not be affected\nprint(copied_dict)  # Output: {'name': 'John', 'age': 30}\n```\nThis function uses the `copy.deepcopy()` function from the `copy` module, which recursively copies all elements of a dictionary, including nested dictionaries and lists. If you only need a shallow copy (copying the keys and values but not the nested structures), you can use the `dict()` constructor:\n```python\ninput_dict = {'name': 'John', 'age': 30}\ncopied_dict = dict(input_dict)\n\n# You can modify the original dictionary\ninput_dict['name'] = 'Jane'\n\n# The copied dictionary will be updated as well\nprint(copied_dict)  # Output: {'name': 'Jane', 'age': 30}\n```\nHowever, this shallow copy is not suitable for most use cases, as it only copies the keys and values but not the nested structures.",
+  "error": null,
+  "elapsed_seconds": 4.1,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

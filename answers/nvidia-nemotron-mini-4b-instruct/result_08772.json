@@ -1,0 +1,9 @@
+{
+  "id": 8772,
+  "title": "Last Non-Repeated Character",
+  "prompt": "Create a function to find the last non-repeated character in a given string.\nSample Input: hello world\nSample Output: d\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function uses a dictionary to keep track of the characters and their last occurrence, and then iterates through the string to find the last non-repeated character. If no non-repeated character exists, it returns an empty string.\n\n```python\ndef last_non_repeated(s: str) -> str:\n    \"\"\"\n    Find the last non-repeated character in a given string.\n\n    :param s: The input string.\n    :return: The last non-repeated character in the string, or an empty string if no such character exists.\n    \"\"\"\n    if not s:\n        return \"\"\n\n    char_last_occurrence = {}\n\n    for char in s:\n        if char in char_last_occurrence:\n            char_last_occurrence[char] = s.index(char) + 1\n        else:\n            char_last_occurrence[char] = s.index(char) + 1\n\n    for i in range(len(s) - 1, -1, -1):\n        if char_last_occurrence[s[i]] == len(s):\n            return s[i]\n\n    return \"\"\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(last_non_repeated(\"hello world\"))  # Output: d\nprint(last_non_repeated(\"abcabc\"))       # Output: ''\n```",
+  "error": null,
+  "elapsed_seconds": 3.44,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7215,
+  "title": "Bubble Sort",
+  "prompt": "Write a program that implements a bubble sort algorithm using a while loop.\nSample Input: [5, 2, 8, 1, 9]\nSample Output: [1, 2, 5, 8, 9]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that implements a bubble sort algorithm using a while loop:\n\n```python\ndef bubble_sort(arr):\n    \"\"\"\n    Sort the input array using the bubble sort algorithm with a while loop.\n\n    :param arr: The input array to be sorted\n    :return: The sorted array\n    \"\"\"\n\n    # Keep swapping elements until the array is sorted\n    while True:\n        # Set a flag to keep track of whether at least one swap occurred\n        swapped = False\n\n        # Iterate through the array, comparing adjacent elements\n        for i in range(len(arr) - 1):\n            # If the current element is greater than the next element, swap them\n            if arr[i] > arr[i + 1]:\n                arr[i], arr[i + 1] = arr[i + 1], arr[i]\n                swapped = True\n\n        # If no swaps occurred, the array is sorted and we can break the loop\n        if not swapped:\n            break\n\n    return arr\n\n\n# Example usage\narr = [5, 2, 8, 1, 9]\nsorted_arr = bubble_sort(arr)\nprint(sorted_arr)  # Output: [1, 2, 5, 8, 9]\n```\n\nThis program defines a `bubble_sort` function that takes an array as input and returns the sorted array. The function uses a while loop to keep swapping elements until the array is sorted. The loop continues as long as at least one swap occurred in the previous iteration. Once no swaps occur, the array is sorted and the loop is broken.",
+  "error": null,
+  "elapsed_seconds": 4.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

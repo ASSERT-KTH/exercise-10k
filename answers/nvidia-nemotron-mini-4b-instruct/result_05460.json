@@ -1,0 +1,9 @@
+{
+  "id": 5460,
+  "title": "Hangman",
+  "prompt": "Write a program that generates a random word and lets the user guess it by inputting individual letters\nSample Input: e\nSample Output: The word contains the letter 'e' in the first position\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program generates a random word and allows the user to guess individual letters. It keeps track of the number of times each letter appears in the word and provides feedback to the user based on their input.\n\n```python\nimport random\nimport string\n\n# Function to generate a random word\ndef generate_random_word():\n    alphabet = string.ascii_lowercase\n    return ''.join(random.choice(alphabet) for _ in range(6))\n\n# Function to check user input and provide feedback\ndef check_user_input(user_input, word):\n    count = [0] * 26\n    for char in word:\n        index = alphabet.index(char.lower())\n        count[index] += 1\n\n    for i, char in enumerate(user_input):\n        index = alphabet.index(char.lower())\n        if count[index] > 0:\n            print(f\"The word contains the letter '{char}' in the {count[index]} position(s).\")\n            count[index] -= 1\n        else:\n            print(f\"The word does not contain the letter '{char}'.\")\n\n# Main program\nif __name__ == \"__main__\":\n    # Generate a random word\n    word = generate_random_word()\n\n    # Get user input\n    user_input = input(\"Enter a letter: \").lower()\n\n    # Check user input and provide feedback\n    check_user_input(user_input, word)\n```\n\nThis program generates a random 6-letter word and checks the user's input against it. It provides feedback on each letter input, indicating how many times the letter appears in the correct position in the word.",
+  "error": null,
+  "elapsed_seconds": 4.11,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

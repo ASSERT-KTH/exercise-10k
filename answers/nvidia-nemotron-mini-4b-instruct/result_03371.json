@@ -1,0 +1,9 @@
+{
+  "id": 3371,
+  "title": "Check if a String is a Palindrome",
+  "prompt": "Use a while loop to check if a given string is a palindrome\nSample Input: madam\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses a while loop to check if a given string is a palindrome:\n\n```python\ndef is_palindrome(s):\n    \"\"\"Check if a given string is a palindrome using a while loop.\"\"\"\n    left, right = 0, len(s) - 1\n\n    while left < right:\n        if s[left].lower() != s[right].lower():\n            return False\n        left += 1\n        right -= 1\n\n    return True\n```\n\nThis function first converts all characters in the string to lowercase using the `lower()` method to ensure that the function is case-insensitive. Then, it uses two pointers, `left` and `right`, to iterate through the string from both ends. If at any point the characters at the `left` and `right` indices are not equal (i.e., they are not the same), the function returns `False`. If the loop completes without returning `False`, the function returns `True`, indicating that the string is a palindrome.\n\nHere's an example of how to use this function:\n\n```python\nprint(is_palindrome(\"madam\"))  # Output: True\nprint(is_palindrome(\"hello\"))  # Output: False\n```",
+  "error": null,
+  "elapsed_seconds": 3.01,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

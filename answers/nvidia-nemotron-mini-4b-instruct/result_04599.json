@@ -1,0 +1,9 @@
+{
+  "id": 4599,
+  "title": "Function to Check for Valid Parentheses",
+  "prompt": "Create a function that takes a string of parentheses as input and returns True if they are valid, False otherwise\nSample Input: \"((()))\"\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a given string of parentheses is valid:\n\n```python\ndef is_valid_parentheses(parentheses: str) -> bool:\n    \"\"\"\n    Check if a string of parentheses is valid.\n\n    :param parentheses: The string of parentheses to check.\n    :return: True if the parentheses are valid, False otherwise.\n    \"\"\"\n    # Initialize a stack to store the opening parentheses\n    stack = []\n\n    # Mapping of opening parentheses to their corresponding closing parentheses\n    opening_parentheses = \"([{\"\n    closing_parentheses = \")]}\"\n\n    for char in parentheses:\n        if char in opening_parentheses:\n            stack.append(char)\n        elif char in closing_parentheses:\n            # If the stack is empty or the top of the stack does not match the opening parentheses,\n            # the parentheses are not valid\n            if not stack or opening_parentheses.index(stack.pop()) != closing_parentheses.index(char):\n                return False\n\n    # If the stack is empty, the parentheses are valid\n    return not stack\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(is_valid_parentheses(\"((()))\"))  # True\nprint(is_valid_parentheses(\")(()))\"))  # False\nprint(is_valid_parentheses(\"([)]\"))    # False\nprint(is_valid_parentheses(\"{[]}\"))    # True\n```",
+  "error": null,
+  "elapsed_seconds": 3.54,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8704,
+  "title": "Simple Chatbot",
+  "prompt": "Create a simple chatbot that responds to basic user input.\nSample Input: hello\nSample Output: Hi! How can I help you?\n",
+  "answer": "Sure, I'd be happy to help you create a simple chatbot that responds to basic user input. Here's a Python code using the ChatterBot library, which is a popular open-source chatbot framework. First, you need to install the library by running:\n\n```bash\npip install chatterbot chatterbot-corpus\n```\n\nNow, you can create the chatbot as follows:\n\n```python\n# Import necessary libraries\nfrom chatterbot import ChatBot\nfrom chatterbot.trainers import ChatterBotCorpusTrainer\n\n# Initialize the chatbot\nbot = ChatBot(\n    \"SimpleChatBot\",\n    storage_adapter=\"chatterbot.storage.SQLStorageAdapter\",\n    logic_adapters=[\n        \"chatterbot.logic.BestMatch\",\n        \"chatterbot.logic.TimeLogicAdapter\"\n    ],\n    database_uri=\"sqlite:///database.sqlite3\"\n)\n\n# Train the chatbot with a corpus of responses\ntrainer = ChatterBotCorpusTrainer(bot)\ntrainer.train(\"chatterbot.corpus.english\")\n\n# Function to handle user input\ndef chat(user_input):\n    response = bot.get_response(user_input)\n    return response\n\n# Example usage\nuser_input = \"hello\"\nprint(chat(user_input))\n```\n\nThis chatbot will respond with a greeting and ask how it can help you. You can further customize the responses by adding more responses to the `chatterbot.corpus.english` corpus or by modifying the `logic_adapters` list.",
+  "error": null,
+  "elapsed_seconds": 3.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

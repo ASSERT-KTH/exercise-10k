@@ -1,0 +1,9 @@
+{
+  "id": 3952,
+  "title": "Bill Calculator",
+  "prompt": "Write a program to calculate the total bill for a customer based on their purchases.\nSample Input: 10\n20\n30\nSample Output: Total bill: 60.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the total bill for a customer based on their purchases:\n\n```python\ndef calculate_bill(num_purchases):\n    \"\"\"\n    Calculates the total bill for a customer based on their purchases.\n\n    :param num_purchases: The number of items purchased by the customer.\n    :return: The total bill as a float.\n    \"\"\"\n\n    # Replace these prices with the actual prices of the items the customer purchased\n    prices = {\n        10: 20.0,\n        20: 30.0,\n        30: 40.0,\n    }\n\n    # Calculate the total bill by summing up the prices of the purchases\n    total_bill = sum(prices.get(item, 0) for item in range(1, num_purchases + 1))\n\n    return total_bill\n\n\n# Example usage\nnum_purchases = 10\ntotal_bill = calculate_bill(num_purchases)\nprint(f\"Total bill: {total_bill:.2f}\")\n```\n\nThis program defines a function `calculate_bill` that takes the number of purchases as an argument and returns the total bill as a float. The function uses a dictionary to store the prices of the items, and calculates the total bill by summing up the prices of the purchases. The example usage at the end of the program demonstrates how to use the function to calculate the total bill for a customer who made 10 purchases.",
+  "error": null,
+  "elapsed_seconds": 3.62,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

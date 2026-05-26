@@ -1,0 +1,9 @@
+{
+  "id": 266,
+  "title": "Currency Converter",
+  "prompt": "Write a program that converts a given amount of money from one currency to another.\nSample Input: 100 USD EUR\nSample Output: 100 USD is equal to 88.72 EUR\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that converts a given amount of money from one currency to another using the current exchange rates. You can replace the `API_KEY` variable with your own API key if you're using a different currency exchange API. For this example, I'll use the Google Finance API.\n\n```python\nimport requests\n\n# Replace with your own API key\nAPI_KEY = \"YOUR_API_KEY\"\n\ndef convert_currency(amount, from_currency, to_currency):\n    url = f\"https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE&from_currency={from_currency}&to_currency={to_currency}&apikey={API_KEY}&amount={amount}\"\n    response = requests.get(url)\n\n    if response.status_code == 200:\n        data = response.json()\n        return f\"{amount} {from_currency} is equal to {data['Realtime Currency Exchange'][0]['Value']} {to_currency}.\"\n    else:\n        print(f\"Error: Unable to fetch exchange rates. Status code: {response.status_code}\")\n        return None\n\n# Example usage\namount = 100\nfrom_currency = \"USD\"\nto_currency = \"EUR\"\n\nresult = convert_currency(amount, from_currency, to_currency)\nif result:\n    print(result)\n```\n\nThis program fetches the current exchange rate from the Google Finance API and converts the given amount of money from one currency to another. You can replace the `API_KEY` variable with your own API key if you're using a different currency exchange API.",
+  "error": null,
+  "elapsed_seconds": 5.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

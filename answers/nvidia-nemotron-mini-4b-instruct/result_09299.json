@@ -1,0 +1,9 @@
+{
+  "id": 9299,
+  "title": "Unique Character Checker",
+  "prompt": "Write a function that takes a string as input and returns True if all characters in the string are unique, False otherwise.\nSample Input: abcdefg\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef all_unique(s: str) -> bool:\n    \"\"\"\n    Returns True if all characters in the input string are unique, False otherwise.\n\n    :param s: The input string.\n    :return: True if all characters are unique, False otherwise.\n    \"\"\"\n    # Use a set to store the unique characters in the string\n    unique_chars = set(s)\n\n    # Check if the number of characters in the set is equal to the length of the string\n    # (which means all characters are unique)\n    return len(unique_chars) == len(s)\n```\nHere's how you can use this function:\n```python\nprint(all_unique(\"abcdefg\"))  # Output: True\nprint(all_unique(\"hello world\"))  # Output: False\n```\nThis function works by converting the input string to a set of unique characters. The length of the set (which is the number of unique characters) is then compared to the length of the original string. If they are equal, it means that all characters in the string are unique, so the function returns `True`. Otherwise, it returns `False`.",
+  "error": null,
+  "elapsed_seconds": 2.91,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

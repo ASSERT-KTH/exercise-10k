@@ -1,0 +1,9 @@
+{
+  "id": 8754,
+  "title": "Substring Extraction",
+  "prompt": "Create a function to extract a substring from a given string.\nSample Input: ['hello world', 6, 11]\nSample Output: world\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function takes a string and two indices as input, and returns the substring between the given indices. If the second index is less than or equal to the first index, an empty string is returned.\n\n```python\ndef extract_substring(s: str, start: int, end: int) -> str:\n    \"\"\"\n    Extract a substring from a given string.\n\n    :param s: The string to extract the substring from.\n    :param start: The index of the start of the substring.\n    :param end: The index of the end of the substring (exclusive).\n    :return: The substring between the given indices.\n    \"\"\"\n    if start < 0 or end > len(s) or start >= end:\n        return \"\"\n\n    return s[start:end]\n```\n\nHere's an example of how to use this function:\n\n```python\nsample_input = ['hello world', 6, 11]\nprint(extract_substring(*sample_input))  # Output: world\n```",
+  "error": null,
+  "elapsed_seconds": 2.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

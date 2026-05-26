@@ -1,0 +1,9 @@
+{
+  "id": 1759,
+  "title": "List Symmetric Difference",
+  "prompt": "Given two lists of integers, write a program to find their symmetric difference.\nSample Input: [1, 2, 3], [3, 4, 5]\nSample Output: [1, 2, 4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the symmetric difference between two lists of integers:\n\n```python\ndef symmetric_difference(list1, list2):\n    # Convert the lists to sets for faster lookup\n    set1 = set(list1)\n    set2 = set(list2)\n\n    # Find the symmetric difference using the ^ operator\n    symmetric_diff = set1 ^ set2\n\n    # Convert the result back to a list and return it\n    return list(symmetric_diff)\n\n# Test the function with your sample input\nlist1 = [1, 2, 3]\nlist2 = [3, 4, 5]\nprint(symmetric_difference(list1, list2))  # Output: [1, 2, 4, 5]\n```\n\nThis program first converts the input lists to sets, which allows for faster lookup of elements. Then, it finds the symmetric difference between the two sets using the `^` operator, which returns a new set containing all elements that are in either set1 but not in set2, or in set2 but not in set1. Finally, it converts the result back to a list and returns it.\n\nYou can use this function with any two lists of integers to find their symmetric difference.",
+  "error": null,
+  "elapsed_seconds": 4.09,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

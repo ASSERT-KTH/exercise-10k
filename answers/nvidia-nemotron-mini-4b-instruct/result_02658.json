@@ -1,0 +1,9 @@
+{
+  "id": 2658,
+  "title": "Dictionary Comprehension",
+  "prompt": "Write a function to create a new dictionary using dictionary comprehension\nSample Input: [1, 2, 3] ['a', 'b', 'c']\nSample Output: {1: 'a', 2: 'b', 3: 'c'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that creates a new dictionary using dictionary comprehension:\n```python\ndef create_dict_from_lists(list1, list2):\n    \"\"\"\n    Create a new dictionary using dictionary comprehension.\n\n    Parameters:\n    list1 (list): A list of keys.\n    list2 (list): A list of corresponding values.\n\n    Returns:\n    dict: A new dictionary with keys from list1 and values from list2.\n    \"\"\"\n    return {key: value for key, value in zip(list1, list2)}\n```\nHere's an example of how to use this function:\n```python\nkeys = [1, 2, 3]\nvalues = ['a', 'b', 'c']\n\nnew_dict = create_dict_from_lists(keys, values)\nprint(new_dict)  # Output: {1: 'a', 2: 'b', 3: 'c'}\n```\nThis function uses the `zip()` function to pair the keys and values from the input lists, and then creates a new dictionary using dictionary comprehension. The keys and values are paired using the `zip()` function, and the resulting pairs are then used to create the new dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.04,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

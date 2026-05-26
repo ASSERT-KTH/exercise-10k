@@ -1,0 +1,9 @@
+{
+  "id": 6028,
+  "title": " Higher-Order Function",
+  "prompt": "Write a higher-order function that takes another function as an argument and applies it to a given number. Use the function to double a number.\nSample Input: 5\nSample Output: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a higher-order function in JavaScript that meets your requirements. This function, `applyFunctionToNumber`, takes another function as an argument and applies it to a given number. In this example, I've used the `double` function as the function to be applied, but you can replace it with any other function that takes a single argument and returns a value.\n\n```javascript\nfunction applyFunctionToNumber(func, num) {\n  return func(num);\n}\n\n// Example usage: double a number\nconst double = num => num * 2;\n\nconst result = applyFunctionToNumber(double, 5);\nconsole.log(result); // Output: 10\n```\n\nIf you want to make the function more flexible and allow it to accept a different function signature (e.g., a function that takes two arguments), you can modify the function as follows:\n\n```javascript\nfunction applyFunctionToNumber(func, ...args) {\n  return func(...args);\n}\n\n// Example usage: double a number with a different function signature\nconst doubleWithTwoArgs = (a, b) => a * b;\n\nconst result = applyFunctionToNumber(doubleWithTwoArgs, 5, 10);\nconsole.log(result); // Output: 50\n```",
+  "error": null,
+  "elapsed_seconds": 3.32,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

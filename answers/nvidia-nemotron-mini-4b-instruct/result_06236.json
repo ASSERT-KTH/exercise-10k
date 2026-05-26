@@ -1,0 +1,9 @@
+{
+  "id": 6236,
+  "title": "Check if List is a Subset of Another List",
+  "prompt": "Write a function that checks if a given list is a subset of another list.\nSample Input: [1, 2, 3], [1, 2, 3, 4, 5]\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a given list is a subset of another list:\n\n```python\ndef is_subset(subset, superlist):\n    \"\"\"\n    Check if subset is a subset of superlist.\n\n    :param subset: The list to check for being a subset.\n    :param superlist: The list to check against.\n    :return: True if subset is a subset of superlist, False otherwise.\n    \"\"\"\n    # Check if subset is a subset of superlist by comparing their elements\n    # in order. If any element in subset is not in superlist, the function\n    # returns False immediately.\n    for element in subset:\n        if element not in superlist:\n            return False\n\n    # If all elements in subset are in superlist, the function returns True\n    return True\n```\n\nYou can use this function as follows:\n\n```python\nprint(is_subset([1, 2, 3], [1, 2, 3, 4, 5]))  # Output: True\nprint(is_subset([1, 2], [1, 2, 3]))  # Output: True\nprint(is_subset([1, 2], [1, 2, 4]))  # Output: False\n```\n\nThis function has a time complexity of O(n), where n is the length of the `superlist`, because it iterates through all elements of the `superlist` exactly once.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

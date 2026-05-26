@@ -1,0 +1,9 @@
+{
+  "id": 8797,
+  "title": "Triangle Perimeter",
+  "prompt": "Write a program that takes the sides of a triangle as input and returns its perimeter.\nSample Input: 3 4 5\nSample Output: 12\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes the sides of a triangle as input and returns its perimeter:\n```python\ndef calculate_perimeter(side1, side2, side3):\n    \"\"\"\n    Calculates the perimeter of a triangle given three sides.\n\n    :param side1: The length of the first side of the triangle.\n    :param side2: The length of the second side of the triangle.\n    :param side3: The length of the third side of the triangle.\n    :return: The perimeter of the triangle.\n    \"\"\"\n\n    # Check if the sides form a valid triangle (i.e., the sum of any two sides is greater than the third side)\n    if side1 + side2 > side3 and side1 + side3 > side2 and side2 + side3 > side1:\n        return side1 + side2 + side3\n    else:\n        print(\"The given sides do not form a valid triangle.\")\n        return None\n\n# Get user input for the sides of the triangle\nside1 = float(input(\"Enter the length of the first side: \"))\nside2 = float(input(\"Enter the length of the second side: \"))\nside3 = float(input(\"Enter the length of the third side: \"))\n\n# Calculate and print the perimeter\nperimeter = calculate_perimeter(side1, side2, side3)\nif perimeter is not None:\n    print(f\"The perimeter of the triangle is {perimeter}.\")\n```\nThis program defines a function `calculate_perimeter` that checks if the given sides form a valid triangle and returns its perimeter. The function then prompts the user to enter the lengths of the three sides and calls the function to calculate the perimeter. The program checks if the perimeter was calculated successfully and prints the result accordingly.",
+  "error": null,
+  "elapsed_seconds": 10.59,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

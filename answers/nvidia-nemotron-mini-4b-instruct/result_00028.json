@@ -1,0 +1,9 @@
+{
+  "id": 28,
+  "title": "Function to Check for Anagrams",
+  "prompt": "Write a function that takes two strings as input and returns True if they are anagrams, False otherwise.\nSample Input: listen, silent\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if two strings are anagrams:\n\n```python\ndef are_anagrams(str1, str2):\n    \"\"\"\n    Returns True if str1 and str2 are anagrams, False otherwise.\n    Anagrams are words or phrases that contain the same letters,\n    regardless of order.\n    \"\"\"\n    # Convert both strings to lowercase and remove any non-alphanumeric characters\n    str1 = ''.join(c.lower() for c in str1 if c.isalnum())\n    str2 = ''.join(c.lower() for c in str2 if c.isalnum())\n\n    # Check if the lengths of the strings are equal\n    if len(str1) != len(str2):\n        return False\n\n    # Sort the characters in both strings and compare them\n    return sorted(str1) == sorted(str2)\n```\n\nHere's how you can use this function:\n\n```python\nprint(are_anagrams(\"listen\", \"silent\"))  # Output: True\nprint(are_anagrams(\"hello\", \"world\"))    # Output: False\n```\n\nThis function first converts both input strings to lowercase and removes any non-alphanumeric characters. Then, it checks if the lengths of the strings are equal, since anagrams must have the same number of characters. Finally, it sorts the characters in both strings and compares them to determine if they are anagrams.",
+  "error": null,
+  "elapsed_seconds": 3.62,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

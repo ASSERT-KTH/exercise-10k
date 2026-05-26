@@ -1,0 +1,9 @@
+{
+  "id": 4273,
+  "title": "Dictionary Pop Item Method",
+  "prompt": "Write a function that takes a dictionary as input and removes and returns an arbitrary key-value pair using the popitem() method\nSample Input: {\"name\": \"John\", \"age\": 25}\nSample Output: ['name', 'John']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef remove_key_value_pair(input_dict):\n    \"\"\"\n    Removes and returns an arbitrary key-value pair from the given dictionary using the popitem() method.\n\n    :param input_dict: The dictionary to modify.\n    :return: A tuple containing the removed key and the remaining dictionary.\n    \"\"\"\n    if not isinstance(input_dict, dict):\n        raise TypeError(\"Input must be a dictionary.\")\n\n    # Remove and return a random key-value pair using popitem()\n    key_value_pair = input_dict.popitem()\n\n    return key_value_pair\n```\nHere's an example of how you can use this function:\n```python\ninput_dict = {\"name\": \"John\", \"age\": 25}\nkey_value_pair = remove_key_value_pair(input_dict)\nprint(key_value_pair)  # Output: ('name', {'age': 25})\nprint(input_dict)  # Output: {'age': 25}\n```\nThis function first checks if the input is a dictionary. If not, it raises a `TypeError`. Then, it uses the `popitem()` method to remove and return a random key-value pair from the dictionary. The remaining dictionary is returned as a tuple containing only the `key` attribute of the removed item.",
+  "error": null,
+  "elapsed_seconds": 3.3,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

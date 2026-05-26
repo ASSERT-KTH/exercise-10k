@@ -1,0 +1,9 @@
+{
+  "id": 8267,
+  "title": "Phone Number Validator",
+  "prompt": "Create a program that validates a phone number using if/else statements.\nSample Input: 123-456-7890\nSample Output: Valid\n",
+  "answer": "Sure, I'd be happy to help you create a program that validates a phone number using if/else statements. Here's an example Python program that meets your requirements:\n\n```python\ndef validate_phone_number(phone_number):\n    \"\"\"\n    Validates a phone number using if/else statements.\n\n    :param phone_number: str, the phone number to validate\n    :return: str, \"Valid\" if the phone number is valid, \"Invalid\" otherwise\n    \"\"\"\n\n    # Regular expression pattern for a US phone number (10 digits)\n    pattern = r'\\d{3}-\\d{3}-\\d{4}'\n\n    # Check if the phone number matches the pattern\n    if re.match(pattern, phone_number):\n        # The phone number is valid, return \"Valid\"\n        return \"Valid\"\n    else:\n        # The phone number is invalid, return \"Invalid\"\n        return \"Invalid\"\n\n# Example usage\nphone_number = \"123-456-7890\"\nprint(validate_phone_number(phone_number))  # Output: Valid\n\nphone_number = \"123-456-789\"\nprint(validate_phone_number(phone_number))  # Output: Invalid\n```\n\nThis program uses the `re` module to check if the phone number matches a regular expression pattern for a US phone number (10 digits). If the phone number matches the pattern, the function returns \"Valid\". Otherwise, it returns \"Invalid\".",
+  "error": null,
+  "elapsed_seconds": 3.47,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

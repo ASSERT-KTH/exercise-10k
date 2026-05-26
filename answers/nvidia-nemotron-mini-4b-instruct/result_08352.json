@@ -1,0 +1,9 @@
+{
+  "id": 8352,
+  "title": "Advanced Bubble Sort with Flags",
+  "prompt": "Create an optimized version of the bubble sort algorithm that includes a flag to track if any swaps were made in a pass. If no swaps were made, the algorithm should terminate early. The input will be a list of integers, and the output should be the sorted list.\nSample Input: [5, 2, 8, 3, 1, 6, 4]\nSample Output: [1, 2, 3, 4, 5, 6, 8]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an optimized version of the bubble sort algorithm that includes a flag to track if any swaps were made in a pass. If no swaps were made, the algorithm terminates early.\n\n```python\ndef optimized_bubble_sort(arr):\n    \"\"\"\n    Optimized bubble sort algorithm that terminates early if no swaps were made in a pass.\n\n    :param arr: List of integers to be sorted\n    :return: Sorted list of integers\n    \"\"\"\n    n = len(arr)\n\n    # Continue the loop until no swaps are made in a pass\n    while True:\n        # Set flag to False initially\n        swapped = False\n\n        # Traverse through all array elements\n        for i in range(n-1):\n            # If the element found is greater than the next element, swap them\n            if arr[i] > arr[i+1]:\n                # Swap the elements\n                arr[i], arr[i+1] = arr[i+1], arr[i]\n                swapped = True\n\n        # If no swaps were made in this pass, break the loop\n        if not swapped:\n            break\n\n    return arr\n```\n\nHere's an example of how to use the function:\n\n```python\narr = [5, 2, 8, 3, 1, 6, 4]\nsorted_arr = optimized_bubble_sort(arr)\nprint(sorted_arr)  # Output: [1, 2, 3, 4, 5, 6, 8]\n```",
+  "error": null,
+  "elapsed_seconds": 3.6,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

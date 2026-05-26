@@ -1,0 +1,9 @@
+{
+  "id": 9771,
+  "title": "Input Validation",
+  "prompt": "Write a program that takes an integer as input and checks if it is within the range of 1 to 100. If the input is valid, print 'Valid input'. If not, print 'Invalid input'.\nSample Input: 50\nSample Output: Valid input\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef check_input():\n    \"\"\"\n    This function takes an integer as input and checks if it is within the range of 1 to 100.\n    If the input is valid, it prints 'Valid input'. If not, it prints 'Invalid input'.\n    \"\"\"\n    while True:\n        try:\n            user_input = int(input(\"Enter an integer between 1 and 100: \"))\n            if 1 <= user_input <= 100:\n                print(\"Valid input\")\n                break\n            else:\n                print(\"Invalid input. Please enter an integer between 1 and 100.\")\n        except ValueError:\n            print(\"Invalid input. Please enter an integer.\")\n\n# Call the function to start the program\ncheck_input()\n```\n\nThis program uses a `while` loop to keep asking the user for input until they enter a valid integer. It checks if the input is an integer using the `int()` function and if it's within the range of 1 to 100 using the `>=` and `<=` operators. If the input is valid, the program prints 'Valid input' and breaks out of the loop. If the input is invalid, the program prints an error message and continues to ask for input.",
+  "error": null,
+  "elapsed_seconds": 3.13,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

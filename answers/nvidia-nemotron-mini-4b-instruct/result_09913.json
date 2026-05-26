@@ -1,0 +1,9 @@
+{
+  "id": 9913,
+  "title": "Simple Chatbot",
+  "prompt": "Write a program that responds to basic user queries (e.g. hello, goodbye, thanks).\nSample Input: hello\nSample Output: Hello! How can I assist you?\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a simple Python program that responds to basic user queries with a friendly greeting and an invitation to ask a question:\n\n```python\ndef respond_to_query():\n    \"\"\"Responds to basic user queries with a friendly greeting and an invitation to ask a question.\"\"\"\n\n    # Get user input\n    user_query = input(\"You: \").strip().lower()\n\n    # Handle different user inputs\n    if user_query in [\"hello\", \"hi\", \"hey\"]:\n        print(\"Hello! How can I assist you?\")\n    elif user_query in [\"goodbye\", \"bye\"]:\n        print(\"Goodbye! Have a great day!\")\n    elif user_query in [\"thanks\", \"thank you\"]:\n        print(\"You're welcome! Is there anything else I can help you with?\")\n    else:\n        print(\"I'm sorry, I didn't understand that. Could you please rephrase your query?\")\n\n# Run the function repeatedly until the user wants to exit\nwhile True:\n    respond_to_query()\n    user_query = input(\"Do you want to ask another question? (yes/no): \").strip().lower()\n    if user_query != \"yes\":\n        break\n\nprint(\"Thank you for using my service! Have a great day!\")\n```\n\nThis program defines a function `respond_to_query()` that gets user input, checks for common user queries, and responds appropriately. The function is then called repeatedly until the user decides to exit. The program also includes a greeting and a thank-you message at the end to provide a more personalized experience.",
+  "error": null,
+  "elapsed_seconds": 3.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

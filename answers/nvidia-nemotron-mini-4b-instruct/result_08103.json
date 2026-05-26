@@ -1,0 +1,9 @@
+{
+  "id": 8103,
+  "title": "String Search",
+  "prompt": "Write a program that takes a string and a substring as input and returns the index of the first occurrence of the substring in the string.\nSample Input: Hello World, World\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef find_substring(string, substring):\n    \"\"\"\n    Returns the index of the first occurrence of the substring in the string.\n\n    :param string: The string to search in.\n    :param substring: The substring to search for.\n    :return: The index of the first occurrence of the substring in the string, or -1 if not found.\n    \"\"\"\n    # Check that the inputs are non-empty strings\n    if not isinstance(string, str) or not string:\n        raise ValueError(\"The 'string' parameter must be a non-empty string.\")\n    if not isinstance(substring, str) or not substring:\n        raise ValueError(\"The 'substring' parameter must be a non-empty string.\")\n\n    # Use the built-in str.find() method to find the index of the first occurrence of the substring\n    return string.find(substring)\n```\nHere's an example of how you can use this function:\n```python\nprint(find_substring(\"Hello World, World\", \"World\"))  # Output: 6\n```\nThis function checks that the inputs are non-empty strings and raises a `ValueError` if they are not. Then, it uses the built-in `str.find()` method to find the index of the first occurrence of the substring in the string. If the substring is not found, the method returns -1.",
+  "error": null,
+  "elapsed_seconds": 3.31,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

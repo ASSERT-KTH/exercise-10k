@@ -1,0 +1,9 @@
+{
+  "id": 8356,
+  "title": "Input/Output Master",
+  "prompt": "Create a program that takes in a user's name and age as input, then outputs a greeting message with the user's name and tells them how old they will be in 5 years. The program should also handle invalid age inputs and prompt the user to enter a valid age.\nSample Input: John\n25\nSample Output: Hello, John! You will be 30 years old in 5 years.\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef get_age():\n    while True:\n        try:\n            age = int(input(\"Please enter your age: \"))\n            if age < 0:\n                print(\"Age cannot be negative. Please try again.\")\n            else:\n                return age\n        except ValueError:\n            print(\"Invalid input. Please enter a valid integer.\")\n\ndef main():\n    user_name = input(\"Please enter your name: \")\n    valid_age = get_age()\n\n    # Calculate the age in 5 years\n    in_five_years = valid_age + 5\n\n    greeting = f\"Hello, {user_name}! You will be {in_five_years} years old in 5 years.\"\n    print(greeting)\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program defines two functions: `get_age()` and `main()`. The `get_age()` function prompts the user for an integer input, validates it, and returns the age. The `main()` function gets the user's name, calls `get_age()` to get the age, calculates the age in 5 years, and prints the greeting message. The program handles invalid age inputs by prompting the user to enter a valid integer.",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

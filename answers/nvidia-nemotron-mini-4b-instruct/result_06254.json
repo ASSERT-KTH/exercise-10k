@@ -1,0 +1,9 @@
+{
+  "id": 6254,
+  "title": "Dictionary From Keys",
+  "prompt": "Write a function that takes a list of keys and a value as input and returns a dictionary with the keys and the given value\nSample Input: (['a', 'b', 'c'], 1)\nSample Output: {'a': 1, 'b': 1, 'c': 1}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef create_dict_from_keys_and_value(keys, value):\n    \"\"\"\n    Create a dictionary with the given keys and value.\n\n    Parameters:\n    keys (list): A list of keys to include in the dictionary.\n    value (any): The value to assign to the keys in the dictionary.\n\n    Returns:\n    dict: A dictionary with the given keys and value.\n    \"\"\"\n    # Check that the input is valid\n    if not isinstance(keys, list) or not all(isinstance(key, str) for key in keys):\n        raise ValueError(\"keys must be a list of strings\")\n    if not isinstance(value, (int, float, str)):\n        raise ValueError(\"value must be a number or a string\")\n\n    # Create the dictionary and return it\n    return {key: value for key in keys}\n```\nHere's an example of how you can use this function:\n```python\nkeys = ['a', 'b', 'c']\nvalue = 1\n\nresult = create_dict_from_keys_and_value(keys, value)\nprint(result)  # Output: {'a': 1, 'b': 1, 'c': 1}\n```\nThis function checks that the input is valid (i.e., that `keys` is a list of strings and `value` is a number or a string), and then uses a dictionary comprehension to create the desired dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.65,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

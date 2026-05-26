@@ -1,0 +1,9 @@
+{
+  "id": 4429,
+  "title": "Number Sequence",
+  "prompt": "Write a program that generates a sequence of numbers where each number is twice the previous number using a for loop.\nSample Input: 10\nSample Output: [1, 2, 4, 8, 16, 32, 64, 128, 256, 512]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates the sequence of numbers as described in your sample input:\n\n```python\ndef generate_sequence(n):\n    \"\"\"\n    Generates a sequence of numbers where each number is twice the previous number.\n\n    :param n: The number of elements in the sequence.\n    :return: A list of the generated numbers.\n    \"\"\"\n    if n < 1:\n        raise ValueError(\"Number of elements must be at least 1.\")\n\n    sequence = [1]\n\n    for _ in range(1, n):\n        sequence.append(2 * sequence[-1])\n\n    return sequence\n\n# Example usage:\nn = 10\nprint(generate_sequence(n))\n```\n\nWhen you run this program with `n = 10`, it will output:\n\n```\n[1, 2, 4, 8, 16, 32, 64, 128, 256, 512]\n```",
+  "error": null,
+  "elapsed_seconds": 2.46,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1526,
+  "title": "Coin Change Problem",
+  "prompt": "Write a program that calculates the minimum number of coins needed to make change for a given amount.\nSample Input: 10\nSample Output: 1 10-cent coin\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the minimum number of coins needed to make change for a given amount:\n\n```python\ndef make_change(amount):\n    # Define the denominations of coins\n    denominations = [10, 5, 1]\n\n    # Initialize the number of coins needed to 0\n    num_coins = 0\n\n    # Loop through each denomination and subtract it from the amount\n    for coin in denominations:\n        while amount >= coin:\n            amount -= coin\n            num_coins += 1\n\n    # Return the number of coins needed\n    return num_coins\n\n# Get user input for the amount to make change for\namount = int(input(\"Enter the amount to make change for: \"))\n\n# Calculate and print the minimum number of coins needed\nnum_coins = make_change(amount)\nprint(f\"{num_coins} {denominations[-1]:.0f}-cent coin(s)\")\n```\n\nThis program defines a function `make_change` that takes an amount as input and returns the minimum number of coins needed to make change for that amount using the denominations of coins defined in the `denominations` list. The function loops through each denomination and subtracts it from the amount until the amount is 0. The number of times the loop iterates is the number of coins needed. The program then gets user input for the amount to make change for, calls the `make_change` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

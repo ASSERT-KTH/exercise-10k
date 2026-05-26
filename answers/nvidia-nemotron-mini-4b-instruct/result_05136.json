@@ -1,0 +1,9 @@
+{
+  "id": 5136,
+  "title": "Check Symmetry",
+  "prompt": "Write a program to check if a given string is symmetric.\nSample Input: abcba\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given string is symmetric:\n\n```python\ndef is_symmetric(s: str) -> bool:\n    \"\"\"\n    Check if a given string is symmetric.\n\n    :param s: The string to check.\n    :return: True if the string is symmetric, False otherwise.\n    \"\"\"\n    if len(s) <= 1:\n        return True\n\n    left, right = 0, len(s) - 1\n\n    while left < right:\n        if s[left] != s[right]:\n            return False\n        left += 1\n        right -= 1\n\n    return True\n```\n\nThis function works by comparing the characters at the beginning and end of the string, then moving the pointers towards the middle until they meet. If the strings are not equal at any point, the function returns False. If the pointers meet without finding a mismatch, the function returns True, indicating that the string is symmetric.\n\nHere's an example of how you can use this function:\n\n```python\nprint(is_symmetric(\"abcba\"))  # Output: True\nprint(is_symmetric(\"abcd\"))   # Output: False\n```",
+  "error": null,
+  "elapsed_seconds": 2.85,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

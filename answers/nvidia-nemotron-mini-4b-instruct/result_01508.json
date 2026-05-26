@@ -1,0 +1,9 @@
+{
+  "id": 1508,
+  "title": "Duplicate Remover",
+  "prompt": "Write a program that removes duplicate characters from a given string.\nSample Input: Hello World\nSample Output: Helo Wrd\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that removes duplicate characters from a given string:\n\n```python\ndef remove_duplicates(input_string):\n    \"\"\"\n    Remove duplicate characters from a given string.\n\n    :param input_string: The string to remove duplicates from.\n    :return: The string with duplicate characters removed.\n    \"\"\"\n    unique_chars = set()  # Create a set to store unique characters\n    result = \"\"\n\n    for char in input_string:\n        if char not in unique_chars:\n            unique_chars.add(char)\n            result += char\n\n    return result\n\n# Example usage:\ninput_string = \"Hello World\"\noutput_string = remove_duplicates(input_string)\nprint(output_string)  # Output: \"Helo Wrd\"\n```\n\nThis program works by iterating over each character in the input string. If the character is not already in the set of unique characters, it is added to the set and then added to the result string. This ensures that each character appears only once in the output string.",
+  "error": null,
+  "elapsed_seconds": 2.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

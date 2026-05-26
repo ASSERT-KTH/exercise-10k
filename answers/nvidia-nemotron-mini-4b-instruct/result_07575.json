@@ -1,0 +1,9 @@
+{
+  "id": 7575,
+  "title": "Function with Type Checking",
+  "prompt": "Create a function that uses type checking to verify the types of its parameters and return value.\nSample Input: 5\nSample Output: 10\n",
+  "answer": "Sure, I'd be happy to help you create a function that uses type checking to verify the types of its parameters and return value. Here's an example implementation in Python:\n```python\ndef verify_types(input_value: int) -> int:\n    \"\"\"\n    A function that verifies the types of its parameters and return value.\n\n    :param input_value: The value to be checked.\n    :return: The result of the type checking, which should be an integer.\n    \"\"\"\n    # Check that the input value is an integer\n    if not isinstance(input_value, int):\n        raise TypeError(\"The input value must be an integer.\")\n\n    # Perform the type checking here, for example, to double the input value\n    result = input_value * 2\n\n    # Check that the result is also an integer\n    if not isinstance(result, int):\n        raise TypeError(\"The result of the type checking must be an integer.\")\n\n    return result\n```\nThis function takes an integer `input_value` as its parameter and returns an integer as its result. It first checks that the input value is an integer using the `isinstance()` function. If the input value is not an integer, it raises a `TypeError`. Then, it performs the type checking (in this case, doubling the input value) and checks that the result is also an integer before returning it.\n\nHere's an example usage of the function:\n```python\nprint(verify_types(5))  # Output: 10\n```\nThis will output `10` because the input value `5` is an integer, and the type checking correctly doubles it to `10`.",
+  "error": null,
+  "elapsed_seconds": 3.83,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

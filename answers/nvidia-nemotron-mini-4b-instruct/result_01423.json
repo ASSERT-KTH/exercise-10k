@@ -1,0 +1,9 @@
+{
+  "id": 1423,
+  "title": "Array Filter",
+  "prompt": "Create a function that takes an array and a predicate function as input and returns a new array containing only the elements for which the predicate function returns True.\nSample Input: [1, 2, 3, 4, 5], lambda x: x % 2 == 0\nSample Output: [2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses the `filter()` function to create an iterator yielding only the elements for which the predicate function returns `True`, and then converts the iterator to a list using the `list()` function.\n\n```python\ndef filter_array(arr, predicate):\n    \"\"\"\n    Filters an array using a predicate function.\n\n    Parameters:\n    arr (list): The input array.\n    predicate (callable): A function that takes an element as input and returns a boolean.\n\n    Returns:\n    list: A new array containing only the elements for which the predicate function returns True.\n    \"\"\"\n    return list(filter(predicate, arr))\n```\n\nHere's an example of how to use this function:\n\n```python\nnumbers = [1, 2, 3, 4, 5]\neven_numbers = filter_array(numbers, lambda x: x % 2 == 0)\nprint(even_numbers)  # Output: [2, 4]\n```\n\nThis function is flexible and can be used with any iterable and predicate function.",
+  "error": null,
+  "elapsed_seconds": 3.98,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

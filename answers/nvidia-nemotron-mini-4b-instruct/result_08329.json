@@ -1,0 +1,9 @@
+{
+  "id": 8329,
+  "title": "Input/Output Manipulation",
+  "prompt": "Write a program that reads a string from the user, reverses the order of its characters, and then prints the reversed string. Additionally, the program should count the number of vowels in the original string and print this count.\nSample Input: Hello World\nSample Output: dlroW olleH\nVowel count: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef count_vowels(s):\n    \"\"\"Count the number of vowels in a string.\"\"\"\n    vowels = set('aeiouAEIOU')\n    return sum(1 for char in s if char in vowels)\n\ndef reverse_string(s):\n    \"\"\"Reverse the order of characters in a string.\"\"\"\n    return s[::-1]\n\n# Get user input\nuser_input = input(\"Enter a string: \")\n\n# Reverse the string and count vowels\nreversed_string = reverse_string(user_input)\nvowel_count = count_vowels(user_input)\n\n# Print the results\nprint(f\"Reversed string: {reversed_string}\")\nprint(f\"Vowel count: {vowel_count}\")\n```\nThis program defines two functions: `count_vowels` to count the number of vowels in a string, and `reverse_string` to reverse the order of characters in a string. The program then prompts the user to enter a string, reverses it, counts the vowels, and prints the results.\n\nHere's an example of how the program might work:\n```\nEnter a string: Hello World\nReversed string: dlroW olleH\nVowel count: 3\n```",
+  "error": null,
+  "elapsed_seconds": 3.13,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

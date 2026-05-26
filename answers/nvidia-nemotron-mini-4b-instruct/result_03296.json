@@ -1,0 +1,9 @@
+{
+  "id": 3296,
+  "title": "Calculate the GCD",
+  "prompt": "Write a program that calculates the greatest common divisor (GCD) of two numbers using a for loop.\nSample Input: 48 18\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the greatest common divisor (GCD) of two numbers using a for loop:\n\n```python\ndef gcd_using_for_loop(a, b):\n    \"\"\"\n    Calculate the greatest common divisor (GCD) of two numbers using a for loop.\n\n    :param a: The first number.\n    :param b: The second number.\n    :return: The greatest common divisor of a and b.\n    \"\"\"\n\n    # Ensure a and b are non-negative\n    a, b = abs(a), abs(b)\n\n    # Use a for loop to iterate from the larger number to 1\n    for i in range(max(a, b), 0, -1):\n        if (a % i == 0) and (b % i == 0):\n            gcd = i\n            break\n\n    return gcd\n\n# Example usage\nsample_input = 48, 18\nprint(f\"The GCD of {sample_input[0]} and {sample_input[1]} is {gcd_using_for_loop(*sample_input)}.\")\n```\n\nWhen you run this program with the sample input `(48, 18)`, it will output:\n\n```\nThe GCD of 48 and 18 is 6.\n```",
+  "error": null,
+  "elapsed_seconds": 3.27,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

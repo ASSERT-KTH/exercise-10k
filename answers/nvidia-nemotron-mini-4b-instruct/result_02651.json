@@ -1,0 +1,9 @@
+{
+  "id": 2651,
+  "title": "Dictionary Get",
+  "prompt": "Write a function to get a value from a dictionary using the get() method\nSample Input: {'name': 'John', 'age': 25} 'name'\nSample Output: John\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_value(dictionary, key):\n    \"\"\"\n    Retrieves a value from a dictionary using the get() method.\n\n    Parameters:\n    dictionary (dict): The dictionary to search in.\n    key (str): The key to look up in the dictionary.\n\n    Returns:\n    str or any: The value associated with the given key, or None if the key is not found.\n    \"\"\"\n    return dictionary.get(key)\n```\nHere's an example of how you can use this function:\n```python\nmy_dict = {'name': 'John', 'age': 25}\n\n# Get the value for 'name'\nname = get_value(my_dict, 'name')\nprint(name)  # Output: John\n\n# Get the value for 'job' (which doesn't exist)\njob = get_value(my_dict, 'job')\nprint(job)  # Output: None\n```\nThis function checks if the given key exists in the dictionary before returning its value. If the key is not found, it returns `None` instead of raising a `KeyError`. This makes the function more user-friendly and less likely to cause unexpected errors.",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 530,
+  "title": "Minimum Spanning Tree",
+  "prompt": "Implement a function to find the minimum spanning tree of a weighted graph.\nSample Input: [(1, 2, 3), (2, 3, 2), (1, 3, 1)]\nSample Output: [(1, 3, 1), (2, 3, 2)]\n",
+  "answer": "To find the minimum spanning tree (MST) of a weighted graph, you can use the Kruskal's algorithm. Here's a Python implementation of the algorithm:\n\n```python\nimport heapq\n\ndef find_mst(edges):\n    # Sort edges based on weight\n    edges.sort(key=lambda x: x[2])\n\n    # Initialize disjoint set data structure\n    parent = {node: node for node in edges}\n    rank = {node: 0 for node in edges}\n\n    # Initialize priority queue (min-heap) to store edges\n    pq = [(0, edges[0][0], edges[0][1])]\n\n    # Process edges in non-decreasing order of weight\n    mst = []\n    while pq:\n        weight, u, v = heapq.heappop(pq)\n\n        # Check if the union of two sets is valid (no cycles)\n        if find(u, parent) != find(v, parent):\n            # Add edge to MST and union sets\n            mst.append((u, v, weight))\n            union(u, v, parent, rank)\n\n    return mst\n\ndef find(node, parent):\n    if parent[node] != node:\n        parent[node] = find(parent[node], parent)\n    return parent[node]\n\ndef union(u, v, parent, rank):\n    root_u = find(u, parent)\n    root_v = find(v, parent)\n\n    if root_u == root_v:\n        return\n\n    if rank[root_u] > rank[root_v]:\n        parent[root_v] = root_u\n    elif rank[root_u] < rank[root_v]:\n        parent[root_u] = root_v\n    else:\n        parent[root_v] = root_u\n        rank[root_u] += 1\n```\n\nYou can use the `find_mst` function as follows:\n\n```python\nedges = [(1, 2, 3), (2, 3, 2), (1, 3, 1)]\nprint(find_mst(edges))  # Output: [(1, 3, 1), (2, 3, 2)]\n```",
+  "error": null,
+  "elapsed_seconds": 31.73,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

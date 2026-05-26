@@ -1,0 +1,9 @@
+{
+  "id": 5690,
+  "title": "Time Checker",
+  "prompt": "Write a program that takes the time as input and checks if it's morning, afternoon, or evening using conditional statements.\nSample Input: 10:00\nSample Output: Morning\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes the time as input and checks if it's morning, afternoon, or evening using conditional statements:\n```python\ndef check_time_of_day(time):\n    # Split the time string into hour and minute components\n    hour, minute = map(int, time.split(\":\"))\n\n    # Define the start and end times for morning, afternoon, and evening\n    morning_start = 6\n    morning_end = 12\n    afternoon_start = 12\n    afternoon_end = 18\n    evening_start = 18\n    evening_end = 24\n\n    # Check if the hour is within the specified range for each time of day\n    if morning_start <= hour <= morning_end:\n        return \"Morning\"\n    elif afternoon_start <= hour <= afternoon_end:\n        return \"Afternoon\"\n    elif evening_start <= hour <= evening_end:\n        return \"Evening\"\n    else:\n        return \"Invalid time. Please enter a time between 6 AM and 11:59 PM.\"\n\n# Get user input\ntime_input = input(\"Enter a time (e.g., 10:00): \")\n\n# Call the function and print the result\nprint(check_time_of_day(time_input))\n```\nThis program defines three ranges for morning, afternoon, and evening, and checks if the hour component of the input time is within one of those ranges. If the hour is within a range, the program returns the corresponding string. If the hour is not within any of the ranges, the program returns an error message.",
+  "error": null,
+  "elapsed_seconds": 3.79,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

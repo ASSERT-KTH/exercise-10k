@@ -1,0 +1,9 @@
+{
+  "id": 8921,
+  "title": "Find the First Missing Positive",
+  "prompt": "Write a program to find the first missing positive integer in a given list of integers.\nSample Input: [3, 4, -1, 1]\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the first missing positive integer in a given list of integers:\n```python\ndef first_missing_positive(nums):\n    \"\"\"\n    Find the first missing positive integer in a given list of integers.\n\n    :param nums: List[int] - The list of integers to search through.\n    :return: int - The first missing positive integer.\n    \"\"\"\n    # Initialize a set to store the elements in the list\n    elements = set(nums)\n\n    # Iterate through the range of positive integers and check if each one is in the set\n    for i in range(1, len(nums) + 1):\n        if i not in elements:\n            return i\n\n    # If no missing positive integer is found, return the last element + 1\n    return len(nums) + 1\n```\nHere's an example of how to use this function:\n```python\nprint(first_missing_positive([3, 4, -1, 1]))  # Output: 2\n```\nThis function works by first converting the input list to a set, which automatically removes any duplicate elements. Then, it iterates through the range of positive integers and checks if each one is in the set. If a missing positive integer is found, it immediately returns that value. If no missing positive integer is found, it returns the last element + 1, since the last element is guaranteed to be a positive integer.\n\nThis function has a time complexity of O(n), where n is the length of the input list, because it only needs to iterate through the list once. This makes it more efficient than some other solutions that have a time complexity of O(n^2), such as using a nested loop to check for missing positive integers.",
+  "error": null,
+  "elapsed_seconds": 4.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

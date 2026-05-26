@@ -1,0 +1,9 @@
+{
+  "id": 8423,
+  "title": "Grade Checker",
+  "prompt": "Create a program that takes in a student's score and checks if they passed or failed using conditional statements.\nSample Input: 80\nSample Output: PASSED\n",
+  "answer": "Sure, I'd be happy to help you create a program that checks a student's score and determines if they passed or failed. Here's an example Python program that does this using conditional statements:\n\n```python\ndef check_score(score):\n    \"\"\"\n    Check a student's score and determine if they passed or failed.\n\n    :param score: The student's score as an integer between 0 and 100.\n    :return: A string indicating whether the student passed or failed.\n    \"\"\"\n\n    # Define the passing score and message\n    passing_score = 60\n    passing_message = \"PASSED\"\n    failing_message = \"FAILED\"\n\n    # Check if the score is within the valid range\n    if not (0 <= score <= 100):\n        return f\"Invalid score. Score must be an integer between 0 and 100.\"\n\n    # Check if the score is above the passing score\n    if score >= passing_score:\n        return passing_message\n    else:\n        return failing_message\n\n\n# Get user input and call the function\ntry:\n    score = int(input(\"Enter a student's score: \"))\n    print(check_score(score))\nexcept ValueError:\n    print(\"Invalid input. Please enter an integer between 0 and 100.\")\n```\n\nThis program defines a function `check_score` that takes a student's score as an integer and returns a string indicating whether they passed or failed. The function checks if the score is within the valid range (0-100), and if it is, it checks if the score is above the passing score (60). The program then gets user input, calls the function, and displays the result.",
+  "error": null,
+  "elapsed_seconds": 4.24,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

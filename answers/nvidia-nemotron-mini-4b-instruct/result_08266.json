@@ -1,0 +1,9 @@
+{
+  "id": 8266,
+  "title": "Email Validator",
+  "prompt": "Develop a program that validates an email address using if/else statements.\nSample Input: example@example.com\nSample Output: Valid\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that validates an email address using if/else statements. This program checks for a valid email format (local-part, domain-part, and optional top-level domain) and ensures that the '@' symbol is present. It also checks for the presence of a dot in the domain-part.\n\n```python\nimport re\n\ndef validate_email(email):\n    # Regular expression pattern for a valid email address\n    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$'\n\n    # Check if the input is a valid email address\n    if re.match(pattern, email):\n        # Remove the '@' symbol from the email address for better readability\n        clean_email = email.split('@')[0]\n\n        # Check if the local-part (before the '@') is valid\n        if re.match(r'^[a-zA-Z0-9._%+-]+$', clean_email):\n            return f'Valid: {email}'\n        else:\n            return f'Invalid local-part: {email}'\n    else:\n        return f'Invalid email format: {email}'\n\n# Test the function with a sample input\nsample_input = 'example@example.com'\nprint(validate_email(sample_input))\n```\n\nThis program will output:\n\n```\nValid: example@example.com\n```",
+  "error": null,
+  "elapsed_seconds": 3.53,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

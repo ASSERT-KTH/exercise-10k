@@ -1,0 +1,9 @@
+{
+  "id": 3416,
+  "title": "Dictionary Validation",
+  "prompt": "Write a program to validate if a given dictionary contains all required keys.\nSample Input: {'name': 'John', 'age': 25, 'city': 'New York'} and required keys ['name', 'age']\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that validates if a given dictionary contains all required keys:\n```python\ndef validate_required_keys(dictionary, required_keys):\n    \"\"\"\n    Validates if a given dictionary contains all required keys.\n\n    :param dictionary: The dictionary to validate.\n    :param required_keys: The list of required keys.\n    :return: True if all required keys are present, False otherwise.\n    \"\"\"\n    # Check if all required keys are present in the dictionary\n    return set(required_keys).issubset(dictionary.keys())\n\n# Example usage\nrequired_keys = ['name', 'age']\ndictionary = {'name': 'John', 'age': 25, 'city': 'New York'}\n\nprint(validate_required_keys(dictionary, required_keys))  # Output: True\n```\nThis program defines a function `validate_required_keys` that takes a dictionary and a list of required keys as input. It returns `True` if all required keys are present in the dictionary as keys, and `False` otherwise. The function uses the `set` data type to efficiently check if all required keys are present in the dictionary. The example usage demonstrates how to use the function with a sample dictionary and required keys.",
+  "error": null,
+  "elapsed_seconds": 3.06,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

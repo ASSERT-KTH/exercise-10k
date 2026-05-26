@@ -1,0 +1,9 @@
+{
+  "id": 59,
+  "title": "Find the Median of Two Sorted Arrays",
+  "prompt": "Find the median of two sorted arrays\nSample Input: [1, 3, 5, 7], [2, 4, 6, 8]\nSample Output: 4.5\n",
+  "answer": "To find the median of two sorted arrays, you can follow these steps:\n\n1. Determine the size of the combined array. If the combined array has an odd number of elements, the median is the middle element. If the combined array has an even number of elements, the median is the average of the two middle elements.\n\n2. Combine the two arrays. You can do this by iterating through both arrays simultaneously and adding the smaller element to the combined array. This will result in a single sorted array containing all the elements from both input arrays.\n\n3. Calculate the median. If the combined array has an odd number of elements, the median is the middle element. If the combined array has an even number of elements, the median is the average of the two middle elements.\n\nHere's a Python function that implements these steps:\n\n```python\ndef find_median(arr1, arr2):\n    # Combine the arrays\n    combined = arr1 + arr2\n\n    # Calculate the size of the combined array\n    n = len(combined)\n\n    # Calculate the median\n    if n % 2 == 0:  # Even number of elements\n        mid1 = n // 2\n        mid2 = mid1 - 1\n        return (combined[mid1] + combined[mid2]) / 2\n    else:  # Odd number of elements\n        return combined[n // 2]\n```\n\nYou can use this function to find the median of two sorted arrays as follows:\n\n```python\narr1 = [1, 3, 5, 7]\narr2 = [2, 4, 6, 8]\n\nmedian = find_median(arr1, arr2)\nprint(median)  # Output: 4.5\n```",
+  "error": null,
+  "elapsed_seconds": 4.0,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 923,
+  "title": "Grade Calculation",
+  "prompt": "Write a program that calculates the grade of a student based on their score using if/else statement\nSample Input: 80\nSample Output: The grade is A\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the grade of a student based on their score using an `if` statement:\n\n```python\ndef calculate_grade(score):\n    \"\"\"\n    Calculates the grade of a student based on their score.\n\n    :param score: The score of the student as an integer between 0 and 100.\n    :return: A string representing the student's grade.\n    \"\"\"\n\n    # Define the grade boundaries\n    grade_boundaries = [0, 30, 60, 80, 100]\n    grade_names = ['F', 'D', 'C', 'B', 'A']\n\n    # Check if the score is within the boundaries\n    for boundary, name in zip(grade_boundaries, grade_names):\n        if score >= boundary:\n            return f\"The grade is {name}.\"\n\n    # If the score is not within any of the boundaries, return an error message\n    return \"Error: The score must be between 0 and 100.\"\n\n# Example usage\nscore = 80\nprint(calculate_grade(score))\n```\n\nThis program defines a function `calculate_grade` that takes a score as input and returns a string representing the student's grade based on the given boundaries. The function uses a `for` loop to check if the score is within any of the boundaries, and returns the corresponding grade name. If the score is not within any of the boundaries, the function returns an error message.",
+  "error": null,
+  "elapsed_seconds": 3.71,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

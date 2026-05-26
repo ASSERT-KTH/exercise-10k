@@ -1,0 +1,9 @@
+{
+  "id": 3099,
+  "title": "Function to Find the Longest Common Prefix",
+  "prompt": "Create a function to find the longest common prefix among a list of strings.\nSample Input: [\"hello\", \"hello world\", \"hello python\"]\nSample Output: \"hello\"\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the longest common prefix among a list of strings:\n\n```python\ndef longest_common_prefix(strs):\n    \"\"\"\n    Find the longest common prefix among a list of strings.\n\n    :param strs: List of strings\n    :return: Longest common prefix\n    \"\"\"\n    if not strs:\n        return \"\"\n\n    shortest_str = min(strs, key=len)\n\n    for i, char in enumerate(shortest_str):\n        for other_str in strs[1:]:\n            if i == len(other_str) or other_str[i] != char:\n                return shortest_str[:i]\n\n    return shortest_str\n```\n\nThis function first finds the shortest string in the list using the `min()` function with a custom key function that returns the length of each string. Then, it iterates through each character of the shortest string and checks if the corresponding character in each other string is the same. If not, it returns the common prefix up to that point. If all characters match, it returns the shortest string, which is the longest common prefix.\n\nHere's an example usage of the function:\n\n```python\nprint(longest_common_prefix([\"hello\", \"hello world\", \"hello python\"]))  # Output: \"hello\"\n```",
+  "error": null,
+  "elapsed_seconds": 3.36,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

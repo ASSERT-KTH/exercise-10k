@@ -1,0 +1,9 @@
+{
+  "id": 4882,
+  "title": "Dictionary Access",
+  "prompt": "Given a dictionary, write a function to access a specific key and return its corresponding value.\nSample Input: { 'name': 'Jane', 'age': 30 }\nSample Output: Jane\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_value_by_key(dictionary, key):\n    \"\"\"\n    Given a dictionary and a key, return the corresponding value.\n\n    :param dictionary: The dictionary to search in.\n    :param key: The key to look up in the dictionary.\n    :return: The value corresponding to the given key, or None if the key is not found.\n    \"\"\"\n    # Check if the key exists in the dictionary\n    if key in dictionary:\n        return dictionary[key]\n    else:\n        print(f\"The key '{key}' was not found in the dictionary.\")\n        return None\n```\nHere's an example of how you can use this function:\n```python\nsample_dict = {'name': 'Jane', 'age': 30}\n\n# Access the value for the 'name' key\nvalue = get_value_by_key(sample_dict, 'name')\nprint(value)  # Output: Jane\n\n# Access the value for a non-existent key\nget_value_by_key(sample_dict, 'job')\n```\nThis function checks if the given key exists in the dictionary before returning its value. If the key is not found, it prints a message indicating that, and returns `None`.",
+  "error": null,
+  "elapsed_seconds": 3.65,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

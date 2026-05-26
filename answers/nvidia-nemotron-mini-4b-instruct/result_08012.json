@@ -1,0 +1,9 @@
+{
+  "id": 8012,
+  "title": "Basic Arithmetic Operations",
+  "prompt": "Write a program that takes two numbers as input and performs basic arithmetic operations such as addition, subtraction, multiplication, and division. The program should then print the results of these operations.\nSample Input: 10 5\nSample Output: 10 + 5 = 15\n10 - 5 = 5\n10 * 5 = 50\n10 / 5 = 2.0\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef perform_operation(num1, num2, operation):\n    \"\"\"Perform arithmetic operation on two numbers.\"\"\"\n    if operation == '+':\n        result = num1 + num2\n    elif operation == '-':\n        result = num1 - num2\n    elif operation == '*':\n        result = num1 * num2\n    elif operation == '/':\n        if num2 == 0:\n            print(\"Error: Division by zero is not allowed.\")\n            return\n        result = num1 / num2\n    else:\n        print(\"Error: Invalid operation. Please use +, -, *, or /.\")\n        return\n\n    print(f\"{num1} {operation} {num2} = {result}\")\n\n# Get user input\nnum1 = float(input(\"Enter first number: \"))\nnum2 = float(input(\"Enter second number: \"))\n\n# Perform operations\nperform_operation(num1, num2, input(\"Enter operation (+, -, *, /): \"))\n```\n\nThis program defines a function `perform_operation()` that takes two numbers and an operation as arguments. It performs the specified operation and prints the result. The program then gets user input for the two numbers and the operation, calls the `perform_operation()` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

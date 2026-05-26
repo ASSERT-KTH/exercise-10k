@@ -1,0 +1,9 @@
+{
+  "id": 5678,
+  "title": "Calculating the Number of Digits",
+  "prompt": "Write a program that takes a number as input and outputs the number of digits it has.\nSample Input: 1234\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef count_digits(number):\n    \"\"\"\n    Given a non-negative integer, return the number of digits it has.\n\n    :param number: int - The non-negative integer to count the digits of.\n    :return: int - The number of digits in the input integer.\n    \"\"\"\n    # Use the built-in len() function to count the number of digits\n    return len(str(number))\n\n# Get user input and convert it to an integer\nuser_input = input(\"Enter a non-negative integer: \")\ntry:\n    user_number = int(user_input)\nexcept ValueError:\n    print(\"That's not a valid integer. Please try again.\")\n    exit()\n\n# Call the function to get the number of digits\nnum_digits = count_digits(user_number)\n\n# Print the result\nprint(f\"The number {user_number} has {num_digits} digits.\")\n```\nThis program defines a function `count_digits()` that takes an integer as input and returns the number of digits it has. The main part of the program gets user input, converts it to an integer, and then calls the `count_digits()` function to get the number of digits. Finally, it prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.2,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

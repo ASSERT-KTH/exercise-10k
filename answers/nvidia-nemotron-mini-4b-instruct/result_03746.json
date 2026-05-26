@@ -1,0 +1,9 @@
+{
+  "id": 3746,
+  "title": "Generating Fibonacci Sequence",
+  "prompt": "Create a program to generate the Fibonacci sequence up to a given number using a basic algorithm\nSample Input: 10\nSample Output: [0, 1, 1, 2, 3, 5, 8]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates the Fibonacci sequence up to a given number using a basic algorithm:\n\n```python\ndef generate_fibonacci(limit):\n    \"\"\"Generate the Fibonacci sequence up to a given limit.\"\"\"\n    sequence = [0, 1]\n\n    # Generate the remaining Fibonacci numbers up to the limit\n    while sequence[-1] + sequence[-2] <= limit:\n        sequence.append(sequence[-1] + sequence[-2])\n\n    return sequence\n\n# Get user input for the limit\nlimit = int(input(\"Enter the limit for the Fibonacci sequence: \"))\n\n# Generate and print the Fibonacci sequence\nfibonacci_sequence = generate_fibonacci(limit)\nprint(fibonacci_sequence)\n```\n\nWhen you run this program and enter a number as the input, it will print the Fibonacci sequence up to that number. For example, if you enter 10 as the input, the program will print:\n\n```\n[0, 1, 1, 2, 3, 5, 8]\n```",
+  "error": null,
+  "elapsed_seconds": 2.54,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

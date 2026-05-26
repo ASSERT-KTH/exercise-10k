@@ -1,0 +1,9 @@
+{
+  "id": 1054,
+  "title": "List Modification",
+  "prompt": "Write a program that takes a list and a modification function as input, and returns the modified list.\nSample Input: [1, 2, 3, 4, 5], x * 2\nSample Output: [2, 4, 6, 8, 10]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef modify_list(lst, func):\n    \"\"\"\n    Modifies a list in-place using a given modification function.\n\n    Parameters:\n    lst (list): The list to modify.\n    func (callable): A function that takes a single argument (the element of the list) and returns the modified value.\n\n    Returns:\n    list: The modified list.\n    \"\"\"\n    # Use a list comprehension to apply the modification function to each element of the list\n    modified_lst = [func(item) for item in lst]\n\n    return modified_lst\n\n# Example usage:\noriginal_list = [1, 2, 3, 4, 5]\ndouble_list = modify_list(original_list, lambda x: x * 2)\nprint(double_list)  # Output: [2, 4, 6, 8, 10]\n```\nThis program defines a function `modify_list` that takes a list `lst` and a modification function `func` as input. It then uses a list comprehension to apply the modification function to each element of the list, creating a new list that is the result of the modifications. Finally, it returns the modified list.\n\nThe example usage shows how to use the `modify_list` function to double the elements of a list using a lambda function. You can replace the lambda function with any other modification function that takes a single argument and returns a modified value.",
+  "error": null,
+  "elapsed_seconds": 3.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

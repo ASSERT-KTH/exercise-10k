@@ -1,0 +1,9 @@
+{
+  "id": 2210,
+  "title": "Phone Number Formatter",
+  "prompt": "Write a program that takes a phone number as input and formats it to a standard format (XXX-XXX-XXXX). Print the formatted phone number to the console.\nSample Input: 1234567890\nSample Output: 123-456-7890\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a phone number as input and formats it to the standard format (XXX-XXX-XXXX). The program also checks if the input is in the correct format and prints an error message if it's not.\n\n```python\ndef format_phone_number(phone_number):\n    \"\"\"\n    Formats a phone number to the standard format (XXX-XXX-XXXX).\n\n    :param phone_number: str, the phone number to format\n    :return: str, the formatted phone number\n    \"\"\"\n    if not phone_number or len(phone_number) != 10:\n        print(\"Error: Please enter a 10-digit phone number.\")\n        return None\n\n    formatted_number = phone_number[0:3] + \"-\" + phone_number[3:6] + \"-\" + phone_number[6:]\n    return formatted_number\n\n\nif __name__ == \"__main__\":\n    phone_number = input(\"Enter a phone number (10 digits only): \")\n    formatted_number = format_phone_number(phone_number)\n\n    if formatted_number:\n        print(formatted_number)\n```\n\nThis program defines a function `format_phone_number` that takes a phone number as input and returns the formatted version. The function checks if the input is a string of length 10 and prints an error message if it's not. The main part of the program prompts the user to enter a phone number, calls the function with the user input, and prints the formatted number if it's not None.",
+  "error": null,
+  "elapsed_seconds": 3.73,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

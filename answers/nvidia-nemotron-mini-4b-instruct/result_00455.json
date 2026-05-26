@@ -1,0 +1,9 @@
+{
+  "id": 455,
+  "title": "Word Scramble",
+  "prompt": "Write a program that scrambles a word, then asks the user to unscramble it.\nSample Input: sgnid\nSample Output: Unscrambled word: digns\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses the `random.shuffle()` function to scramble the word, and then prompts the user to unscramble it. It also checks if the user's input matches the scrambled word, and provides feedback if it doesn't.\n\n```python\nimport random\n\ndef scramble_word(word):\n    \"\"\"Scramble a word by randomly swapping characters.\"\"\"\n    return ''.join(random.sample(word, len(word)))\n\ndef unscramble_word(scrambled_word):\n    \"\"\"Unscramble a word by finding the original characters in order.\"\"\"\n    word = ''\n    for char in scrambled_word:\n        if char not in word:\n            word += char\n    return word\n\n# Get user input\nuser_input = input(\"Enter a scrambled word: \")\n\n# Scramble the word\nscrambled_word = scramble_word(user_input)\n\n# Prompt the user to unscramble the word\nwhile True:\n    user_guess = input(\"Unscrambled word: \")\n    if unscramble_word(user_guess) == scrambled_word:\n        print(\"Correct!\")\n        break\n    else:\n        print(\"Incorrect. Try again.\")\n```\n\nThis program will keep prompting the user to unscramble the word until they get it correct. You can modify the `scrambled_word` variable to use a different word for each iteration of the loop.",
+  "error": null,
+  "elapsed_seconds": 53.75,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2122,
+  "title": "List Indexing",
+  "prompt": "Write a function that takes a list and an index as input and returns the element at that index.\nSample Input: ([1, 2, 3], 1)\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_element_at_index(lst, index):\n    \"\"\"\n    Returns the element at the given index in the input list.\n\n    Parameters:\n    lst (list): The list to get an element from.\n    index (int): The index of the element to get.\n\n    Returns:\n    any: The element at the given index in the input list.\n    \"\"\"\n    # Check if the index is within the valid range\n    if not isinstance(index, int) or index < 0 or index >= len(lst):\n        raise IndexError(\"Index out of range\")\n\n    return lst[index]\n```\nHere's an example of how you can use this function:\n```python\nsample_input = [1, 2, 3]\nindex = 1\n\nresult = get_element_at_index(sample_input, index)\nprint(result)  # Output: 2\n```\nThis function checks if the input is a list and if the index is within the valid range (i.e., non-negative and less than the length of the list). If the index is invalid, it raises an `IndexError`. Otherwise, it returns the element at the given index.",
+  "error": null,
+  "elapsed_seconds": 4.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

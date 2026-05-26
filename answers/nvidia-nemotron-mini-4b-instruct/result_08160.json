@@ -1,0 +1,9 @@
+{
+  "id": 8160,
+  "title": "List Insert",
+  "prompt": "Create a list of 3 integers and insert a new element at a specific index.\nSample Input: [1, 2, 3], 1, 4\nSample Output: [1, 4, 2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution using list indexing to insert a new element at a specific index:\n\n```python\ndef insert_element(lst, index, new_element):\n    # Check if the index is within the range of the list\n    if index >= len(lst):\n        raise IndexError(\"Index out of range\")\n\n    # Create a new list by copying the elements from the original list up to the index,\n    # then inserting the new element at the given index, and finally copying the rest of the elements\n    new_lst = lst[:index] + [new_element] + lst[index:]\n\n    return new_lst\n\n# Sample input and output\nlst = [1, 2, 3]\nindex = 1\nnew_element = 4\nprint(insert_element(lst, index, new_element))  # Output: [1, 4, 2, 3]\n```\n\nThis function first checks if the given index is within the range of the list. If it is, the function creates a new list by copying the elements from the original list up to the index (using slicing), inserting the new element at the given index, and finally copying the rest of the elements (also using slicing). The function then returns the new list.",
+  "error": null,
+  "elapsed_seconds": 3.16,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

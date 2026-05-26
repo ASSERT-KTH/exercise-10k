@@ -1,0 +1,9 @@
+{
+  "id": 1155,
+  "title": "Random Art",
+  "prompt": "Write a program that generates random art using Turtle graphics.\nSample Output: A random art piece\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses Turtle graphics to generate random art pieces. This program uses the `turtle` module, which you can install using pip:\n\n```bash\npip install turtle\n```\n\nHere's the code:\n\n```python\nimport turtle\nimport random\n\n# Function to draw a random art piece\ndef generate_art():\n    # Set up the turtle\n    turtle.speed(0)  # Set speed to maximum\n    turtle.hideturtle()  # Hide the turtle\n    turtle.penup()  # Raise the pen\n\n    # Draw the art piece\n    turtle.goto(random.uniform(-300, 300), random.uniform(-200, 200))  # Set random position\n    turtle.pendown()  # Lower the pen\n\n    # Draw random shapes\n    for _ in range(random.randint(10, 30)):  # Draw between 10 and 30 shapes\n        turtle.color(random.uniform(0, 1), random.uniform(0, 1), random.uniform(0, 1))  # Set random color\n        turtle.begin_fill()  # Start filling the shape\n        for _ in range(random.randint(3, 10)):  # Draw between 3 and 10 sides\n            turtle.forward(random.randint(10, 50))  # Draw random distance\n            turtle.right(random.randint(0, 90))  # Turn random angle\n        turtle.end_fill()  # Stop filling the shape\n\n    # Hide the turtle and quit\n    turtle.hideturtle()\n    turtle.done()\n\n# Call the function to generate the art\ngenerate_art()\n```\n\nThis program generates a random art piece by setting the turtle to a random position, drawing random shapes with random colors, and angles. The number of shapes drawn and the distance between them are also randomly determined. The resulting art piece is unique every time you run the program.",
+  "error": null,
+  "elapsed_seconds": 4.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

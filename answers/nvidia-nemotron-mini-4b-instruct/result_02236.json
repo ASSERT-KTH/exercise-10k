@@ -1,0 +1,9 @@
+{
+  "id": 2236,
+  "title": "List Intersection",
+  "prompt": "Write a program that finds the intersection of two lists.\nSample Input: [1, 2, 3], [2, 3, 4]\nSample Output: [2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the intersection of two lists using the built-in `set` data structure, which allows for efficient lookup and removal of elements. This approach has a time complexity of O(m + n), where m and n are the lengths of the input lists.\n\n```python\ndef find_intersection(list1, list2):\n    \"\"\"\n    Find the intersection of two lists.\n\n    :param list1: The first list\n    :param list2: The second list\n    :return: A list containing the common elements between the two lists\n    \"\"\"\n    # Convert the lists to sets to remove duplicates and enable fast lookup\n    set1 = set(list1)\n    set2 = set(list2)\n\n    # Find the intersection of the sets\n    intersection = set1 & set2\n\n    # Convert the intersection back to a list and return it\n    return list(intersection)\n\n# Example usage\ninput_list1 = [1, 2, 3]\ninput_list2 = [2, 3, 4]\n\nprint(find_intersection(input_list1, input_list2))  # Output: [2, 3]\n```\n\nIf you prefer a solution using list comprehension, here's an alternative implementation:\n\n```python\ndef find_intersection(list1, list2):\n    \"\"\"\n    Find the intersection of two lists.\n\n    :param list1: The first list\n    :param list2: The second list\n    :return: A list containing the common elements between the two lists\n    \"\"\"\n    # Find the intersection of the lists\n    intersection = [value for value in list1 if value in list2]\n\n    return intersection\n\n# Example usage\ninput_list1 = [1, 2, 3]\ninput_list2 = [2, 3, 4]\n\nprint(find_intersection(input_list1, input_list2))  # Output: [2, 3]\n```",
+  "error": null,
+  "elapsed_seconds": 4.93,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8411,
+  "title": "Conditional Student Grades",
+  "prompt": "Write a program that takes a student's grade as input and outputs whether the student has passed or failed. The passing grade is 60. If the student's grade is 90 or above, output 'A', between 80 and 89, output 'B', between 70 and 79, output 'C', between 60 and 69, output 'D', and below 60, output 'F'. Use conditional statements to solve this problem.\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef grade_to_letter(grade):\n    \"\"\"\n    Converts a student's grade to a letter grade based on the passing grade of 60.\n\n    :param grade: int or float representing the student's grade\n    :return: str representing the letter grade (A, B, C, D, or F)\n    \"\"\"\n    if grade >= 90:\n        return 'A'\n    elif grade >= 80:\n        return 'B'\n    elif grade >= 70:\n        return 'C'\n    elif grade >= 60:\n        return 'D'\n    else:\n        return 'F'\n\n# Get user input\nstudent_grade = float(input(\"Enter a student's grade: \"))\n\n# Output the letter grade\nletter_grade = grade_to_letter(student_grade)\nprint(f\"The student has received a {letter_grade}.\")\n```\n\nThis program defines a function `grade_to_letter` that takes a student's grade as input and returns the corresponding letter grade. The main part of the program gets user input, converts it to a float, and then calls the `grade_to_letter` function to get the letter grade. The output is then printed to the console.",
+  "error": null,
+  "elapsed_seconds": 3.16,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

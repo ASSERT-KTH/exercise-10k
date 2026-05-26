@@ -1,0 +1,9 @@
+{
+  "id": 1544,
+  "title": "Array Sorting",
+  "prompt": "Given an array of integers, write a function to sort the elements in ascending order.\nSample Input: [5, 2, 8, 1, 9]\nSample Output: [1, 2, 5, 8, 9]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that sorts the elements in an array (or list) of integers in ascending order using the built-in `sort()` method:\n\n```python\ndef sort_array(arr):\n    \"\"\"\n    Sort the elements in the given array in ascending order.\n\n    :param arr: The input array of integers\n    :return: The sorted array of integers\n    \"\"\"\n    # Check if the input is a list and contains only integers\n    if not isinstance(arr, list) or not all(isinstance(num, int) for num in arr):\n        raise ValueError(\"Input should be a list of integers.\")\n\n    # Sort the array in ascending order using the built-in sort() method\n    arr.sort()\n\n    return arr\n```\n\nHere's an example of how to use this function:\n\n```python\narr = [5, 2, 8, 1, 9]\nsorted_arr = sort_array(arr)\nprint(sorted_arr)  # Output: [1, 2, 5, 8, 9]\n```\n\nIf you want to sort the array in-place (i.e., without creating a new array), you can use the `sort()` method directly on the input array:\n\n```python\narr = [5, 2, 8, 1, 9]\narr.sort()\nprint(arr)  # Output: [1, 2, 5, 8, 9]\n```",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

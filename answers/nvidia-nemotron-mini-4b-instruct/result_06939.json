@@ -1,0 +1,9 @@
+{
+  "id": 6939,
+  "title": "Reduce Function",
+  "prompt": "Create a function that uses the reduce() function to apply a given function to a list of numbers\nSample Input: [1, 2, 3, 4, 5], add(x, y)\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a JavaScript function that meets your requirements. It uses the `reduce()` function to apply a given `add(x, y)` function to a list of numbers, which in this case is represented as an array. The function returns the sum of all the numbers in the array.\n\n```javascript\nfunction add(...numbers) {\n  return numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);\n}\n\n// Sample usage:\nconsole.log(add(1, 2, 3, 4, 5)); // Output: 15\n```\n\nIn this function, the first argument `accumulator` is the initial value of the accumulator, which is set to 0 in this case. The second argument `currentValue` is the current element in the array being processed. The `reduce()` function accumulates these values and returns the final result.\n\nYou can replace the `add(x, y)` function with any other function that takes two arguments and returns their sum, like this:\n\n```javascript\nfunction multiply(...numbers) {\n  return numbers.reduce((accumulator, currentValue) => accumulator * currentValue, 1); // Set the initial value to 1 for multiplication\n}\n\nconsole.log(multiply(1, 2, 3, 4, 5)); // Output: 120\n```",
+  "error": null,
+  "elapsed_seconds": 3.12,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

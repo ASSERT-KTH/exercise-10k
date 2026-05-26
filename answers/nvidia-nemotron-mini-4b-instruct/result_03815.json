@@ -1,0 +1,9 @@
+{
+  "id": 3815,
+  "title": "Binary Search",
+  "prompt": "Write a program to implement a binary search algorithm using a while loop.\nSample Input: [1, 2, 3, 4, 5, 6, 7, 8, 9] 5\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that implements a binary search algorithm using a while loop:\n\n```python\ndef binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n\n    while left <= right:\n        mid = (left + right) // 2\n\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n\n    return -1\n\n# Test the function with your sample input\narr = [1, 2, 3, 4, 5, 6, 7, 8, 9]\ntarget = 5\nresult = binary_search(arr, target)\n\nif result != -1:\n    print(f\"The element {target} is at index {result}.\")\nelse:\n    print(f\"The element {target} is not in the array.\")\n```\n\nWhen you run this program with your sample input, it will output:\n\n```\nThe element 5 is at index 4.\n```\n\nThis is because the element 5 is at index 4 in the array [1, 2, 3, 4, 5, 6, 7, 8, 9].",
+  "error": null,
+  "elapsed_seconds": 3.18,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

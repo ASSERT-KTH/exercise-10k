@@ -1,0 +1,9 @@
+{
+  "id": 6539,
+  "title": "Weather Forecast",
+  "prompt": "Create a function that returns the weather forecast for a given location.\nSample Input: New York\nSample Output: Sunny\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses the OpenWeatherMap API to fetch the weather forecast for a given location. Make sure to replace `'your_api_key'` with your actual OpenWeatherMap API key. You can sign up for a free API key at <https://openweathermap.org/appid>.\n\n```python\nimport requests\n\ndef get_weather_forecast(location):\n    \"\"\"\n    Returns the weather forecast for the given location.\n\n    :param location: The name of the city or zip code.\n    :return: A string containing the weather forecast (e.g., \"Sunny\").\n    \"\"\"\n    # Replace 'your_api_key' with your actual OpenWeatherMap API key\n    API_KEY = 'your_api_key'\n\n    # Construct the API request URL\n    url = f'http://api.openweathermap.org/data/2.5/weather?q={location}&appid={API_KEY}&units=metric'\n\n    # Send the API request and parse the response\n    response = requests.get(url)\n    data = response.json()\n\n    if 'message' in data:\n        raise Exception(f'Error fetching weather forecast: {data[\"message\"]}')\n\n    weather_description = data['weather'][0]['description']\n\n    return weather_description.capitalize()\n```\n\nHere's an example of how to use the function:\n\n```python\nprint(get_weather_forecast('New York'))  # Output: Sunny\n```",
+  "error": null,
+  "elapsed_seconds": 3.65,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

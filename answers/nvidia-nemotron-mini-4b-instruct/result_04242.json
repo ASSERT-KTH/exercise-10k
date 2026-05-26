@@ -1,0 +1,9 @@
+{
+  "id": 4242,
+  "title": "Grade Checker",
+  "prompt": "Create a program that takes a student's score as input and prints the corresponding grade (A, B, C, D, F) based on the following criteria: 90-100 (A), 80-89 (B), 70-79 (C), 60-69 (D), below 60 (F).\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef get_grade(score):\n    \"\"\"\n    Takes a student's score as input and prints the corresponding grade (A, B, C, D, F) based on the given criteria.\n\n    :param score: int - The student's score as an integer.\n    :return: None\n    \"\"\"\n\n    # Check if the score is within the valid range (60-100)\n    if not (60 <= score <= 100):\n        print(\"Invalid score. Please enter a score between 60 and 100.\")\n        return\n\n    # Calculate the grade based on the given criteria\n    if score >= 90:\n        grade = \"A\"\n    elif score >= 80:\n        grade = \"B\"\n    elif score >= 70:\n        grade = \"C\"\n    elif score >= 60:\n        grade = \"D\"\n    else:\n        grade = \"F\"\n\n    # Print the grade\n    print(f\"The grade is {grade}.\")\n\n# Get user input and call the function\nuser_score = int(input(\"Enter a score between 60 and 100: \"))\nget_grade(user_score)\n```\n\nThis program defines a function `get_grade` that takes a student's score as input and prints the corresponding grade. The function checks if the score is within the valid range (60-100) and calculates the grade based on the given criteria. Finally, the program gets user input, calls the `get_grade` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.89,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

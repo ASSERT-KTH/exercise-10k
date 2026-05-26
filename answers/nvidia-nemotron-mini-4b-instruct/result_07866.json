@@ -1,0 +1,9 @@
+{
+  "id": 7866,
+  "title": "Factorial Calculator",
+  "prompt": "Create a program that calculates the factorial of a number using conditional statements.\nSample Input: 5\nSample Output: 120\n",
+  "answer": "Sure, I'd be happy to help you create a program that calculates the factorial of a number using conditional statements. Here's an example Python program that does this:\n\n```python\ndef factorial(n):\n    \"\"\"\n    Calculates the factorial of a given number using conditional statements.\n\n    :param n: The number for which to calculate the factorial.\n    :return: The factorial of n.\n    \"\"\"\n\n    # Check for invalid input\n    if n < 0:\n        raise ValueError(\"Input must be non-negative\")\n\n    # Initialize the factorial to 1\n    factorial = 1\n\n    # Iterate from 1 to n, multiplying the factorial by each number\n    for i in range(1, n + 1):\n        factorial *= i\n\n    return factorial\n\n# Get user input\nn = int(input(\"Enter a positive integer: \"))\n\n# Calculate and print the factorial\ntry:\n    factorial_value = factorial(n)\n    print(f\"{n}! = {factorial_value}\")\nexcept ValueError as e:\n    print(e)\n```\n\nThis program defines a function `factorial(n)` that calculates the factorial of a given number using a loop and conditional statements. The function checks for invalid input (negative numbers) and raises a `ValueError` if the input is invalid. The program then prompts the user to enter a positive integer, calculates the factorial using the `factorial(n)` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7985,
+  "title": "Prime Number",
+  "prompt": "Write a program that checks if a given number is a prime number.\nSample Input: 5\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given number is a prime number:\n\n```python\ndef is_prime(n):\n    \"\"\"Check if a given number is prime.\"\"\"\n    if n < 2:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\n# Get user input\nnum = int(input(\"Enter a number to check if it's prime: \"))\n\n# Check if the number is prime\nif is_prime(num):\n    print(f\"{num} is a prime number.\")\nelse:\n    print(f\"{num} is not a prime number.\")\n```\n\nThis program defines a function `is_prime(n)` that checks if a given number `n` is prime. It first checks if the number is less than 2, in which case it's not prime. Then, it checks if the number is divisible by any integer between 2 and its square root (inclusive). If it finds a divisor, it returns `False`, indicating that the number is not prime. If it goes through all possible divisors without finding any, it returns `True`, indicating that the number is prime.\n\nThe program then gets user input for a number to check, calls the `is_prime()` function with that number, and prints whether the number is prime or not.",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

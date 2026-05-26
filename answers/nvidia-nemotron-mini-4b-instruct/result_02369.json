@@ -1,0 +1,9 @@
+{
+  "id": 2369,
+  "title": "Geometric Sequence",
+  "prompt": "Create a program that generates a geometric sequence up to a given term.\nSample Input: 2 3 10\nSample Output: 2, 6, 18, 54, 162, 486, 1458, 4374, 13122, 39366\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates a geometric sequence up to a given term, based on the sample input you provided:\n```python\ndef generate_geometric_sequence(first_term, common_ratio, term_count):\n    \"\"\"\n    Generates a geometric sequence up to a given term.\n\n    Parameters:\n    first_term (float): The first term of the sequence.\n    common_ratio (float): The common ratio between terms in the sequence.\n    term_count (int): The number of terms to generate in the sequence.\n\n    Returns:\n    list: A list of the generated terms in the sequence.\n    \"\"\"\n    if term_count < 1:\n        raise ValueError(\"Term count must be a positive integer.\")\n\n    # Generate the sequence up to the given term\n    sequence = [first_term]\n    for _ in range(term_count - 1):\n        sequence.append(sequence[-1] * common_ratio)\n\n    return sequence\n\n# Example usage: generate a geometric sequence up to term 10\nfirst_term, common_ratio, term_count = 2, 3, 10\nprint(generate_geometric_sequence(first_term, common_ratio, term_count))\n```\nWhen you run this program with the sample input `2 3 10`, it will output:\n```\n[2, 6, 18, 54, 162, 486, 1458, 4374, 13122, 39366]\n```\nThis program checks that the input term count is a positive integer, and generates the sequence recursively by multiplying the last term by the common ratio until the desired term count is reached.",
+  "error": null,
+  "elapsed_seconds": 4.2,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

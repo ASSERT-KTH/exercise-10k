@@ -1,0 +1,9 @@
+{
+  "id": 4216,
+  "title": "Duplicate Removal",
+  "prompt": "Remove duplicates from an array while preserving the original order.\nSample Input: [1, 2, 2, 3, 4, 4, 5]\nSample Output: [1, 2, 3, 4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution using the built-in `set` data structure, which automatically removes duplicates while preserving the original order (since sets in Python are unordered). We can then convert the set back to a list.\n\n```python\ndef remove_duplicates(arr):\n    return list(set(arr))\n\nsample_input = [1, 2, 2, 3, 4, 4, 5]\nsample_output = remove_duplicates(sample_input)\nprint(sample_output)  # Output: [1, 2, 3, 4, 5]\n```\n\nIf you prefer not to use a set, you can also use a list comprehension with a `while` loop to remove duplicates while preserving the original order. Here's an example:\n\n```python\ndef remove_duplicates(arr):\n    result = []\n    i = 0\n    while i < len(arr):\n        if arr[i] not in result:\n            result.append(arr[i])\n        i += 1\n    return result\n\nsample_input = [1, 2, 2, 3, 4, 4, 5]\nsample_output = remove_duplicates(sample_input)\nprint(sample_output)  # Output: [1, 2, 3, 4, 5]\n```",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

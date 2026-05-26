@@ -1,0 +1,9 @@
+{
+  "id": 3468,
+  "title": "Quiz Program",
+  "prompt": "Write a program that asks the user a series of questions and keeps track of the score.\nSample Input: answer1, answer2, answer3\nSample Output: You scored 2 out of 3.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_user_answers():\n    \"\"\"Ask the user a series of questions and get their answers.\"\"\"\n    answers = []\n    for question_number in range(1, 4):\n        prompt = f\"Question {question_number}: \"\n        answer = input(prompt)\n        answers.append(answer)\n    return answers\n\ndef check_answers(answers):\n    \"\"\"Check if the user's answers are correct and calculate the score.\"\"\"\n    correct_answers = [\"correct_answer1\", \"correct_answer2\", \"correct_answer3\"]\n    score = sum(1 for answer in answers if answer.lower() == correct_answers[answers.index(answer)].lower())\n    return score\n\ndef main():\n    answers = get_user_answers()\n    score = check_answers(answers)\n    print(f\"You scored {score} out of 3.\")\n\nif __name__ == \"__main__\":\n    main()\n```\nThis program defines three functions:\n\n1. `get_user_answers()` asks the user a series of questions and gets their answers.\n2. `check_answers()` checks if the user's answers are correct and calculates the score.\n3. `main()` calls the other two functions to get the user's answers, calculate the score, and display the result.\n\nYou can replace the `correct_answer` variables with the correct answers for each question. When you run the program, it will ask you three questions, and then display your score out of 3.",
+  "error": null,
+  "elapsed_seconds": 3.66,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

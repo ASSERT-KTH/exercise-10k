@@ -1,0 +1,9 @@
+{
+  "id": 6530,
+  "title": "Prime Numbers",
+  "prompt": "Write a function that generates a list of prime numbers up to a given number.\nSample Input: 10\nSample Output: [2, 3, 5, 7]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that generates a list of prime numbers up to a given number:\n\n```python\ndef generate_primes(limit):\n    \"\"\"\n    Generates a list of prime numbers up to a given limit.\n\n    :param limit: The upper limit for prime numbers.\n    :return: A list of prime numbers up to the given limit.\n    \"\"\"\n    if limit < 2:\n        return []\n\n    # Initialize a boolean array to keep track of prime numbers\n    is_prime = [True] * (limit + 1)\n    is_prime[0], is_prime[1] = False, False\n\n    # Iterate through numbers from 2 to the square root of the limit\n    for num in range(2, int(limit**0.5) + 1):\n        if is_prime[num]:\n            # Mark multiples of num as not prime\n            for multiple in range(num*num, limit+1, num):\n                is_prime[multiple] = False\n\n    # Return the list of prime numbers\n    return [num for num in range(2, limit+1) if is_prime[num]]\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(generate_primes(10))  # Output: [2, 3, 5, 7]\n```\n\nThis function first initializes a boolean array to keep track of prime numbers. It then iterates through numbers from 2 to the square root of the limit, marking their multiples as not prime. Finally, it returns the list of prime numbers up to the given limit.",
+  "error": null,
+  "elapsed_seconds": 15.31,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

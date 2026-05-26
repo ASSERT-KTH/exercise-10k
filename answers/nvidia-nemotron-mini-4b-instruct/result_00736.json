@@ -1,0 +1,9 @@
+{
+  "id": 736,
+  "title": "Fuel Efficiency",
+  "prompt": "Write a program that takes the distance traveled and fuel consumed of a vehicle as input and outputs its fuel efficiency.\nSample Input: 250 10\nSample Output: 25\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_fuel_efficiency(distance, fuel_consumed):\n    \"\"\"\n    Calculates the fuel efficiency of a vehicle.\n\n    Parameters:\n    distance (float): The distance traveled by the vehicle.\n    fuel_consumed (float): The amount of fuel consumed by the vehicle.\n\n    Returns:\n    float: The fuel efficiency of the vehicle in miles per gallon (mpg).\n    \"\"\"\n\n    # Ensure the inputs are non-negative\n    if distance < 0 or fuel_consumed < 0:\n        raise ValueError(\"Both distance and fuel_consumed must be non-negative.\")\n\n    # Calculate fuel efficiency\n    mpg = distance / fuel_consumed\n\n    return mpg\n\n# Get user input\ndistance = float(input(\"Enter the distance traveled: \"))\nfuel_consumed = float(input(\"Enter the amount of fuel consumed: \"))\n\n# Calculate and print fuel efficiency\nfuel_efficiency = calculate_fuel_efficiency(distance, fuel_consumed)\nprint(f\"The fuel efficiency is {fuel_efficiency:.1f} mpg.\")\n```\nThis program defines a function `calculate_fuel_efficiency` that takes the distance and fuel consumed as input and returns the fuel efficiency in miles per gallon. The function checks that the inputs are non-negative and raises a `ValueError` if they are not. The program then gets user input for the distance and fuel consumed, calls the function to calculate the fuel efficiency, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.52,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

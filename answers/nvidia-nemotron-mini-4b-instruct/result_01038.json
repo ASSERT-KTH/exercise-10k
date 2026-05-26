@@ -1,0 +1,9 @@
+{
+  "id": 1038,
+  "title": "Coin Change Problem",
+  "prompt": "Create a program to find the minimum number of coins needed to make change for a given amount.\nSample Input: amount, denominations\nSample Output: minimum number of coins\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses dynamic programming to find the minimum number of coins needed to make change for a given amount. This program supports any number of denominations.\n\n```python\ndef min_coins(amount, denominations):\n    # Initialize a table to store the minimum number of coins needed for each amount\n    min_coins_table = [float('inf')] * (amount + 1)\n    min_coins_table[0] = 0\n\n    # Iterate through each denomination and update the table\n    for coin in denominations:\n        for i in range(coin, amount + 1):\n            min_coins_table[i] = min(min_coins_table[i], min_coins_table[i - coin] + 1)\n\n    # Return the minimum number of coins needed for the given amount\n    return min_coins_table[amount] if min_coins_table[amount] != float('inf') else -1\n\n# Example usage\namount = 10\ndenominations = [1, 5, 10, 25]\nprint(min_coins(amount, denominations))  # Output: 3 (using 1 coin of 10 cents and 2 coins of 5 cents)\n```\n\nThis program first initializes a table to store the minimum number of coins needed for each amount. Then, it iterates through each denomination and updates the table by considering each coin value up to the given amount. Finally, it returns the minimum number of coins needed for the given amount. If the given amount cannot be made using any combination of the denominations, the function returns -1.",
+  "error": null,
+  "elapsed_seconds": 3.72,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

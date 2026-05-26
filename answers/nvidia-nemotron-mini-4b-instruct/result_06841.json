@@ -1,0 +1,9 @@
+{
+  "id": 6841,
+  "title": "Data Type Checker",
+  "prompt": "Write a program that checks the data type of a given variable and prints out whether it is an integer, float, string, or boolean. Use the given sample input to test your program.\nSample Input: 10\nSample Output: Integer\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks the data type of a given variable and prints out whether it is an integer, float, string, or boolean:\n```python\ndef check_data_type(variable):\n    try:\n        if isinstance(variable, int):\n            return \"Integer\"\n        elif isinstance(variable, float):\n            return \"Float\"\n        elif isinstance(variable, str):\n            return \"String\"\n        elif isinstance(variable, bool):\n            return \"Boolean\"\n        else:\n            return \"Unknown\"\n    except Exception as e:\n        return \"Error: \" + str(e)\n\nsample_input = 10\nresult = check_data_type(sample_input)\nprint(f\"Sample Input: {sample_input}\")\nprint(f\"Sample Output: {result}\")\n```\nWhen you run this program with the sample input `10`, it will output:\n```yaml\nSample Input: 10\nSample Output: Integer\n```\nThis program uses the built-in `isinstance()` function to check the data type of the variable. If the variable is an integer, it returns `\"Integer\"`. If it's a float, it returns `\"Float\"`. If it's a string, it returns `\"String\"`. If it's a boolean, it returns `\"Boolean\"`. If the variable is not of any of these types, it returns `\"Unknown\"`. If an exception occurs (which should not happen with the given sample input), it returns an error message.",
+  "error": null,
+  "elapsed_seconds": 3.52,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

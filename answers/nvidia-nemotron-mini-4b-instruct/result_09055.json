@@ -1,0 +1,9 @@
+{
+  "id": 9055,
+  "title": "Guessing Game",
+  "prompt": "Write a program that lets the user guess a random number and provides hints using if statements\nSample Input: 50\nSample Output: Too high\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program generates a random number between 1 and 100 (inclusive) and allows the user to guess it. It provides hints using if statements based on whether the user's guess is too high, too low, or correct.\n\n```python\nimport random\n\ndef get_user_guess():\n    \"\"\"Get a valid integer user guess.\"\"\"\n    while True:\n        try:\n            guess = int(input(\"Guess a number between 1 and 100: \"))\n            if 1 <= guess <= 100:\n                return guess\n            else:\n                print(\"Your guess must be between 1 and 100. Please try again.\")\n        except ValueError:\n            print(\"That's not a valid integer. Please try again.\")\n\ndef play_game():\n    \"\"\"Play the number guessing game.\"\"\"\n    random_number = random.randint(1, 100)\n    user_guess = get_user_guess()\n\n    while user_guess != random_number:\n        if user_guess < random_number:\n            print(\"Too high!\")\n        elif user_guess > random_number:\n            print(\"Too low!\")\n        user_guess = get_user_guess()\n\n    print(f\"Congratulations! You guessed the number {random_number} correctly.\")\n\nif __name__ == \"__main__\":\n    play_game()\n```\n\nThis program will generate a random number and prompt the user to guess it. The user will receive hints based on whether their guess is too high, too low, or correct.",
+  "error": null,
+  "elapsed_seconds": 3.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

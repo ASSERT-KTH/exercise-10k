@@ -1,0 +1,9 @@
+{
+  "id": 1332,
+  "title": "Morse Code Converter",
+  "prompt": "Write a function that takes a string as input and returns the Morse code representation of the string.\nSample Input: hello\nSample Output: .... . .-.. .-.. ---\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that converts a given string to its Morse code representation:\n\n```python\nmorse_code = {\n    \"a\": \"-.-\", \"b\": \"-...\", \"c\": \"-.-.\", \"d\": \"-..\", \"e\": \".\",\n    \"f\": \"..-.\", \"g\": \"--.\", \"h\": \"....\", \"i\": \"..\", \"j\": \".---\",\n    \"k\": \"-.-\", \"l\": \".-..\", \"m\": \"--\", \"n\": \"-.\", \"o\": \"---\",\n    \"p\": \".--.\", \"q\": \"--.-\", \"r\": \".-.\", \"s\": \"...\", \"t\": \"-\",\n    \"u\": \"..-\", \"v\": \"...-\", \"w\": \".--\", \"x\": \"-..-\", \"y\": \"-.--\",\n    \"z\": \"--..\", \" \": \"   \", \".\": \".-.-.-\", \",\": \"--..--\", \"?\": \"..--..\",\n    \"!\": \"-.-.--\"\n}\n\ndef string_to_morse(s: str) -> str:\n    \"\"\"\n    Converts a given string to its Morse code representation.\n\n    :param s: The string to convert to Morse code.\n    :return: The Morse code representation of the input string.\n    \"\"\"\n    return ' '.join(morse_code.get(c, '.') for c in s)\n```\n\nThis function uses a dictionary to map each character to its corresponding Morse code sequence. The `join()` method is used to concatenate all the Morse code sequences into a single string with spaces between them for readability.\n\nHere's an example of how to use this function:\n\n```python\nprint(string_to_morse(\"hello\"))  # Output: .... . .-.. .-.. ---\n```",
+  "error": null,
+  "elapsed_seconds": 5.55,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

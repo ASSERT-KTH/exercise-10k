@@ -1,0 +1,9 @@
+{
+  "id": 6947,
+  "title": "Function with Type Hints",
+  "prompt": "Create a function that uses type hints to specify the types of its arguments and return value\nSample Input: None\nSample Output: a function with type hints\n",
+  "answer": "Sure, I'd be happy to help you create a function with type hints. Here's an example Python function that calculates the factorial of a given number using type hints:\n\n```python\ndef calculate_factorial(n: int) -> int:\n    \"\"\"\n    Calculates the factorial of a given number.\n\n    :param n: The number for which the factorial is to be calculated.\n    :return: The factorial of the given number.\n    \"\"\"\n    if n < 0:\n        raise ValueError(\"Input must be non-negative\")\n    elif n == 0:\n        return 1\n    else:\n        return n * calculate_factorial(n - 1)\n```\n\nIn this function, we use type hints to specify the types of the arguments (`n: int`) and the return value (`-> int`). The `: int` part specifies that `n` is an integer, and the `-> int` part specifies that the function will return an integer.\n\nHere's an example of how you can use this function:\n\n```python\n>>> calculate_factorial(5)\n120\n>>> calculate_factorial(-1)\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\n  File \"<stdin>\", line 5, in calculate_factorial\nValueError: Input must be non-negative\n```\n\nThis demonstrates that the function raises a `ValueError` when the input is negative, as specified in the docstring.",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

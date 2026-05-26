@@ -1,0 +1,9 @@
+{
+  "id": 3473,
+  "title": "Number Guessing Game",
+  "prompt": "Create a program that thinks of a number and asks the user to guess it.\nSample Input: guess a number\nSample Output: You won! The number was {number}.\n",
+  "answer": "Sure, I'd be happy to help you create a program that thinks of a number and asks the user to guess it. Here's an example Python program that follows your specifications:\n\n```python\nimport random\n\n# Function to get a random number between min and max (inclusive)\ndef get_random_number(min, max):\n    return random.randint(min, max)\n\n# Function to play the guessing game\ndef play_guessing_game():\n    # Think of a number between 1 and 100\n    target_number = get_random_number(1, 100)\n\n    # Ask the user to guess the number\n    user_guess = int(input(\"Guess a number between 1 and 100: \"))\n\n    # Keep asking the user to guess until they get it right\n    while user_guess != target_number:\n        if user_guess < target_number:\n            print(\"Your guess is too low. Try again!\")\n        else:\n            print(\"Your guess is too high. Try again!\")\n\n        # Get the user's new guess\n        user_guess = int(input(\"Guess a number between 1 and 100: \"))\n\n    # Reveal the target number and congratulate the user\n    print(f\"You won! The number was {target_number}.\")\n\n# Play the guessing game\nplay_guessing_game()\n```\n\nThis program defines two functions: `get_random_number` to generate a random number between two given limits, and `play_guessing_game` to play the guessing game. The program then calls the `play_guessing_game` function to start the game.",
+  "error": null,
+  "elapsed_seconds": 3.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

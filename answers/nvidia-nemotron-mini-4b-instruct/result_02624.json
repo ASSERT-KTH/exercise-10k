@@ -1,0 +1,9 @@
+{
+  "id": 2624,
+  "title": "Personalized Greeting",
+  "prompt": "Create a program that takes a person's name and age as input and generates a personalized greeting.\nSample Input: Alice 25\nSample Output: Hello Alice, you are 25 years old.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef generate_greeting(name, age):\n    \"\"\"\n    Generates a personalized greeting based on a person's name and age.\n\n    Parameters:\n    name (str): The person's name.\n    age (int): The person's age.\n\n    Returns:\n    str: A personalized greeting in the format \"Hello [name], you are [age] years old.\".\n    \"\"\"\n    # Validate input\n    if not isinstance(name, str) or not isinstance(age, int):\n        raise TypeError(\"Both name and age must be strings or integers.\")\n    if age < 0:\n        raise ValueError(\"Age must be a non-negative integer.\")\n\n    # Generate the greeting\n    greeting = f\"Hello {name}, you are {age} years old.\"\n\n    return greeting\n\n# Example usage\nname = input(\"Enter your name: \")\nage = int(input(\"Enter your age: \"))\ngreeting = generate_greeting(name, age)\nprint(greeting)\n```\nThis program defines a function `generate_greeting` that takes a person's name and age as input and returns a personalized greeting in the specified format. The function validates the input to ensure it's in the correct format and raises appropriate exceptions if it's not. The example usage prompts the user to enter their name and age, generates a personalized greeting, and prints it to the console.",
+  "error": null,
+  "elapsed_seconds": 3.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

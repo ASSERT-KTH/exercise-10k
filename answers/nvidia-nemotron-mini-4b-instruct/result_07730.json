@@ -1,0 +1,9 @@
+{
+  "id": 7730,
+  "title": "Longest Substring with At Most K Distinct Characters",
+  "prompt": "Find the longest substring with at most k distinct characters in a given string.\nSample Input: araaci, 2\nSample Output: araaci\n",
+  "answer": "To solve this problem, you can follow these steps:\n\n1. Initialize a variable `result` to store the longest substring with at most `k` distinct characters. Initialize another variable `current_distinct_chars` to keep track of the number of distinct characters in the current substring.\n\n2. Iterate through the characters in the given string. For each character, check if its index is greater than the index of the last character in the current substring. If it is, update the current substring by removing the last character and adding the new character. Increment `current_distinct_chars` by 1.\n\n3. After iterating through all characters, check if the length of the current substring is greater than the length of the `result`. If it is, update `result` with the new substring.\n\nHere's a Python solution for the problem:\n\n```python\ndef longest_substring(s, k):\n    result = \"\"\n    current_distinct_chars = 0\n    start = 0\n\n    for i, char in enumerate(s):\n        if i > start:\n            current_distinct_chars -= len(s[start:i])\n            current_distinct_chars += 1\n\n        while current_distinct_chars > k:\n            current_distinct_chars -= s[start]\n            start += 1\n\n        result = max(result, s[start:i+1], key=len)\n\n    return result\n```\n\nYou can test the function with the sample input as follows:\n\n```python\nprint(longest_substring(\"araaci\", 2))  # Output: \"araaci\"\n```",
+  "error": null,
+  "elapsed_seconds": 3.74,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

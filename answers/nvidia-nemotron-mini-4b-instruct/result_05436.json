@@ -1,0 +1,9 @@
+{
+  "id": 5436,
+  "title": "Phone Number Validator",
+  "prompt": "Write a program that checks if a phone number is valid or not. If the phone number contains 10 digits and is in the format (XXX) XXX-XXXX, it is valid. If the phone number does not meet these conditions, it is invalid.\nSample Input: (123) 456-7890\nSample Output: Valid phone number\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given phone number is valid or not. This program assumes that the phone number is in the format \"(XXX) XXX-XXXX\".\n\n```python\nimport re\n\ndef is_valid_phone_number(phone_number):\n    \"\"\"\n    Check if a given phone number is valid or not.\n\n    :param phone_number: str, the phone number to check\n    :return: bool, True if the phone number is valid, False otherwise\n    \"\"\"\n    # Regular expression pattern for a valid phone number\n    pattern = r'\\(\\d{3}\\) \\d{3}-\\d{4}'\n\n    # Check if the phone number matches the pattern\n    if re.match(pattern, phone_number):\n        return True\n    else:\n        return False\n\n# Example usage\nphone_number = \"(123) 456-7890\"\nprint(f\"{phone_number} is a valid phone number: {is_valid_phone_number(phone_number)}\")\n```\n\nThis program defines a function `is_valid_phone_number` that takes a phone number as input and checks if it matches the regular expression pattern for a valid phone number. The example usage demonstrates how to use this function to check if a sample phone number is valid or not.",
+  "error": null,
+  "elapsed_seconds": 3.22,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

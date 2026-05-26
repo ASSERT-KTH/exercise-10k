@@ -1,0 +1,9 @@
+{
+  "id": 9334,
+  "title": "Variable Scope",
+  "prompt": "Write a program to demonstrate the concept of variable scope.\nSample Input: None\nSample Output: Variable values\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that demonstrates the concept of variable scope using nested functions. The output will be \"Variable values\".\n\n```python\ndef outer_function():\n    # Local variables have a limited scope, they can only be accessed within the function they are defined in\n    # and any nested functions.\n    local_var = \"Local variable\"\n\n    def inner_function():\n        # Global variables can be accessed from any function, regardless of their scope\n        global_var = \"Global variable\"\n\n        # Nested variables have a scope that is limited to the function they are defined in\n        nested_var = \"Nested variable\"\n\n        print(f\"Inside inner_function: local_var = {local_var}, global_var = {global_var}, nested_var = {nested_var}\")\n\n    # Call the inner function\n    inner_function()\n\n    # The following line will raise an identifier error because the variable 'local_var' is not defined in the outer scope\n    # print(local_var)\n\nouter_function()\nprint(\"Variable values\")\n```\n\nWhen you run this program, it will output:\n\n```\nInside inner_function: local_var = Local variable, global_var = Global variable, nested_var = Nested variable\nVariable values\n```",
+  "error": null,
+  "elapsed_seconds": 3.11,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

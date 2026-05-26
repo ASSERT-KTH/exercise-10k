@@ -1,0 +1,9 @@
+{
+  "id": 5161,
+  "title": "Dictionary Lookup",
+  "prompt": "Create a dictionary with names as keys and ages as values. Write a function to look up the age of a person given their name.\nSample Input: {\"name\": \"John\"}\nSample Output: 25\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution for your problem:\n\n```python\n# Create a dictionary with names as keys and ages as values\nnames_ages = {\n    \"John\": 25,\n    \"Jane\": 30,\n    \"Bob\": 20,\n    \"Alice\": 28\n}\n\n# Function to look up the age of a person given their name\ndef get_age(name):\n    if name in names_ages:\n        return names_ages[name]\n    else:\n        print(f\"Sorry, I don't have information about {name}.\")\n        return None\n\n# Sample input and output\nprint(get_age(\"John\"))  # Output: 25\nprint(get_age(\"Kara\"))  # Output: Sorry, I don't have information about Kara.\n```\n\nThis script first defines a dictionary `names_ages` with names as keys and ages as values. Then, it defines a function `get_age(name)` that checks if the given name is a key in the dictionary. If it is, the function returns the corresponding age value. If the name is not found, the function prints a message and returns `None`. The function is then called with sample inputs to demonstrate its usage.",
+  "error": null,
+  "elapsed_seconds": 3.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

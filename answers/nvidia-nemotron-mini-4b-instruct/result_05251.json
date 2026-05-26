@@ -1,0 +1,9 @@
+{
+  "id": 5251,
+  "title": "Root Calculation",
+  "prompt": "Write a program to calculate the square root or cube root of a given number.\nSample Input: 16\nSample Output: 4.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the square root or cube root of a given number, depending on the user's input.\n\n```python\nimport math\n\ndef calculate_root(number, root_type):\n    \"\"\"\n    Calculates the square root or cube root of a given number.\n\n    :param number: The number to calculate the root of.\n    :param root_type: The type of root to calculate (either 'square' or 'cube').\n    :return: The calculated root.\n    \"\"\"\n    if root_type not in ['square', 'cube']:\n        raise ValueError(\"Root type must be either 'square' or 'cube'.\")\n\n    if root_type == 'square':\n        return math.sqrt(number)\n    else:\n        return number ** (1/3)\n\n# Get user input\nnumber = float(input(\"Enter a number: \"))\nroot_type = input(\"Enter 'square' or 'cube' to calculate the square root or cube root: \").lower()\n\n# Calculate and print the result\ntry:\n    result = calculate_root(number, root_type)\n    print(f\"{number} raised to the {root_type} power is {result}.\")\nexcept ValueError as e:\n    print(e)\n```\n\nThis program defines a function `calculate_root` that takes a number and a root type as arguments, and returns the calculated root. The program then gets user input for the number and root type, calculates the result, and prints it. If the user enters an invalid root type, the program catches the `ValueError` exception and prints an error message.",
+  "error": null,
+  "elapsed_seconds": 3.92,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

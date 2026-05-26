@@ -1,0 +1,9 @@
+{
+  "id": 4411,
+  "title": "Power Function",
+  "prompt": "Write a program that calculates the power of a number using a for loop.\nSample Input: 2 3\nSample Output: 8\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the power of a number using a for loop:\n\n```python\ndef calculate_power(base, exponent):\n    \"\"\"\n    Calculates the power of a number using a for loop.\n\n    :param base: The base number.\n    :param exponent: The exponent to raise the base to.\n    :return: The result of the power calculation.\n    \"\"\"\n\n    # Check if the exponent is negative\n    if exponent < 0:\n        raise ValueError(\"Exponent must be non-negative\")\n\n    # Initialize the result to 1\n    result = 1\n\n    # Use a for loop to iterate the exponent times\n    for _ in range(exponent):\n        # Multiply the result by the base\n        result *= base\n\n    return result\n\n# Get user input\nbase = int(input(\"Enter the base number: \"))\nexponent = int(input(\"Enter the exponent: \"))\n\n# Calculate and print the result\npower = calculate_power(base, exponent)\nprint(f\"{base} raised to the power of {exponent} is {power}.\")\n```\n\nThis program defines a function `calculate_power` that takes two arguments, `base` and `exponent`, and calculates the power of the base number using a for loop. The function checks if the exponent is negative and raises a `ValueError` if it is. The program then gets user input for the base and exponent, calls the function with those values, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.57,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2055,
+  "title": "Dictionary Grouping",
+  "prompt": "Create a function to group a dictionary by a common key (e.g., group by 'category').\nSample Input: [{'name': 'John', 'age': 25, 'category': 'A'}, {'name': 'Jane', 'age': 25, 'category': 'B'}], 'category'\nSample Output: {'A': [{'name': 'John', 'age': 25, 'category': 'A'}], 'B': [{'name': 'Jane', 'age': 25, 'category': 'B'}]}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that groups a dictionary by a common key (in this case, 'category'):\n\n```python\ndef group_by_key(data, key):\n    \"\"\"\n    Groups a list of dictionaries by a common key.\n\n    Parameters:\n    data (list): A list of dictionaries.\n    key (str): The key to group by.\n\n    Returns:\n    dict: A dictionary where the keys are the unique values of the given key,\n          and the values are lists of dictionaries with the given key.\n    \"\"\"\n    return {key: [d for d in data if d[key] == k] for k in set(d[key] for d in data)}\n```\n\nHere's an example of how to use this function:\n\n```python\ndata = [{'name': 'John', 'age': 25, 'category': 'A'}, {'name': 'Jane', 'age': 25, 'category': 'B'}, {'name': 'Bob', 'age': 20, 'category': 'A'}]\nresult = group_by_key(data, 'category')\nprint(result)  # Output: {'A': [{'name': 'John', 'age': 25, 'category': 'A'}, {'name': 'Bob', 'age': 20, 'category': 'A'}], 'B': [{'name': 'Jane', 'age': 25, 'category': 'B'}]}\n```\n\nThis function first converts the data list into a set of unique values for the given key, and then uses a dictionary comprehension to create a new dictionary with the grouped values. The keys in the resulting dictionary are the unique values of the given key, and the values are lists of dictionaries with the given key.",
+  "error": null,
+  "elapsed_seconds": 4.09,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

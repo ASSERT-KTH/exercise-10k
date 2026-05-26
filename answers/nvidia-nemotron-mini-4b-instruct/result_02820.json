@@ -1,0 +1,9 @@
+{
+  "id": 2820,
+  "title": "Generator of Random Passwords",
+  "prompt": "Write a program to generate a random password of a given length.\nSample Input: 10\nSample Output: G4jR8dLpM2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates a random password of a given length using the `secrets` module, which provides cryptographically secure random numbers. Make sure to install the `cryptography` library if you haven't already, as it's required for the `secrets` module. You can install it using pip:\n\n```bash\npip install cryptography\n```\n\nHere's the Python code:\n\n```python\nimport secrets\nimport string\n\ndef generate_password(length):\n    \"\"\"\n    Generate a random password of the given length.\n\n    :param length: The desired length of the password.\n    :return: A random password as a string.\n    \"\"\"\n    # Define the character set for the password\n    char_set = string.ascii_letters + string.digits + string.punctuation\n\n    # Generate the password using secrets.choice()\n    password = ''.join(secrets.choice(char_set) for _ in range(length))\n\n    return password\n\n# Get user input for the desired length\nlength = int(input(\"Enter the desired length of the password: \"))\n\n# Generate and print the password\npassword = generate_password(length)\nprint(f\"Your random password is: {password}\")\n```\n\nThis program will prompt the user to enter the desired length of the password and then generate and print a random password of that length.",
+  "error": null,
+  "elapsed_seconds": 3.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

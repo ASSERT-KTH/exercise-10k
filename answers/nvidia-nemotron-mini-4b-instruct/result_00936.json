@@ -1,0 +1,9 @@
+{
+  "id": 936,
+  "title": "Simple Game",
+  "prompt": "Write a program that creates a simple game using if/else statement\nSample Input: play\nSample Output: You won! Your score is 100\n",
+  "answer": "Sure, I'd be happy to help you create a simple game using an `if`/`else` statement. Here's an example Python program that plays a game where the user has to guess a number between 1 and 100. The computer thinks of a random number and the user has to guess it. If the user guesses correctly, they win and their score is displayed. Here's the code:\n\n```python\nimport random\n\ndef play_game():\n    \"\"\"Plays a simple guessing game.\"\"\"\n\n    # Generate a random number between 1 and 100\n    target = random.randint(1, 100)\n\n    # Initialize the user's score\n    score = 0\n\n    print(\"Welcome to the guessing game!\")\n    print(f\"I'm thinking of a number between 1 and 100. Can you guess it?\")\n\n    while True:\n        # Get the user's guess\n        guess = int(input(\"Enter your guess: \"))\n\n        # Check if the user wins\n        if guess == target:\n            print(\"You won!\")\n            score = 100\n            break\n        elif guess < target:\n            print(\"Your guess is too low. Try again!\")\n        else:\n            print(\"Your guess is too high. Try again!\")\n\n    # Display the user's score\n    print(f\"Your score is {score}.\")\n\n# Play the game\nplay_game()\n```\n\nThis program generates a random number between 1 and 100, and then enters a loop where the user enters a guess and the program checks if the user wins. If the user wins, their score is displayed, and the program terminates. Otherwise, the program prompts the user to enter a new guess.",
+  "error": null,
+  "elapsed_seconds": 3.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

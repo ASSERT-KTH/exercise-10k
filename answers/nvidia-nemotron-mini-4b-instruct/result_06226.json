@@ -1,0 +1,9 @@
+{
+  "id": 6226,
+  "title": "Remove Duplicates from List",
+  "prompt": "Write a function that removes duplicates from a given list, preserving the original order.\nSample Input: [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]\nSample Output: [1, 2, 3, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that removes duplicates from a given list while preserving the original order using the `dict` data structure:\n\n```python\ndef remove_duplicates(input_list):\n    \"\"\"\n    Remove duplicates from a given list while preserving the original order.\n\n    :param input_list: The list to remove duplicates from.\n    :return: A new list with unique elements in the same order as the input list.\n    \"\"\"\n    # Create an empty dictionary to store unique elements\n    unique_list = []\n\n    # Iterate over the input list and add unique elements to the dictionary\n    for element in input_list:\n        if element not in unique_list:\n            unique_list.append(element)\n\n    return unique_list\n```\n\nHere's an example of how to use this function:\n\n```python\nsample_input = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]\nsample_output = remove_duplicates(sample_input)\nprint(sample_output)  # Output: [1, 2, 3, 4]\n```\n\nThis function has a time complexity of O(n), where n is the length of the input list, as it iterates over the list only once.",
+  "error": null,
+  "elapsed_seconds": 3.12,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

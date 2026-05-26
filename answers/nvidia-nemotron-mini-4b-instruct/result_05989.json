@@ -1,0 +1,9 @@
+{
+  "id": 5989,
+  "title": "Function with Keyword Arguments",
+  "prompt": "Create a function that takes a name and age, with age defaulting to 25 if not provided, using keyword arguments\nSample Input: name='John', age=30\nSample Output: 'John is 30 years old'\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses keyword arguments to allow the user to provide both the name and age, or just the name if the age is not provided. The function will default the age to 25 if not provided.\n\n```python\ndef describe_person(name, age=25):\n    \"\"\"\n    Describes a person with a given name and age, or defaults to 25 if age is not provided.\n\n    :param name: The name of the person (str)\n    :param age: The age of the person (int, optional)\n    :return: A string describing the person\n    \"\"\"\n    if age < 0:\n        raise ValueError(\"Age must be a non-negative integer.\")\n\n    return f\"{name} is {age} years old.\"\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(describe_person('John'))  # Output: John is 25 years old.\nprint(describe_person('Jane', 30))  # Output: Jane is 30 years old.\n```",
+  "error": null,
+  "elapsed_seconds": 2.87,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

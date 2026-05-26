@@ -1,0 +1,9 @@
+{
+  "id": 4548,
+  "title": "Character Frequency Counter",
+  "prompt": "Write a program that counts the frequency of each character in a given string.\nSample Input: Hello World\nSample Output: {'H': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'W': 1, 'r': 1, 'd': 1}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that counts the frequency of each character in a given string:\n```python\ndef char_frequency(input_string):\n    # Create an empty dictionary to store the character frequencies\n    char_freq = {}\n\n    # Iterate over each character in the input string\n    for char in input_string:\n        # If the character is already a key in the dictionary, increment its value\n        if char in char_freq:\n            char_freq[char] += 1\n        # Otherwise, add the character as a new key with a value of 1\n        else:\n            char_freq[char] = 1\n\n    # Return the dictionary of character frequencies\n    return char_freq\n\n# Test the function with the sample input\ninput_string = \"Hello World\"\nprint(char_frequency(input_string))\n```\nWhen you run this program with the sample input \"Hello World\", it will output:\n```python\n{'H': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'W': 1, 'r': 1, 'd': 1}\n```\nThis program works by iterating over each character in the input string and checking if it's already a key in the dictionary. If it is, the value associated with that key is incremented by 1. If it's not, the character is added as a new key with a value of 1. Finally, the program returns the dictionary of character frequencies.",
+  "error": null,
+  "elapsed_seconds": 3.76,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

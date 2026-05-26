@@ -1,0 +1,9 @@
+{
+  "id": 5697,
+  "title": "Phone Number Validator",
+  "prompt": "Create a program that takes a phone number as input and checks if it's valid using conditional statements.\nSample Input: 123-456-7890\nSample Output: Valid\n",
+  "answer": "Sure, I'd be happy to help you create a program that checks if a given phone number is valid. Here's a Python solution using conditional statements:\n\n```python\ndef is_valid_phone_number(phone_number):\n    # Regular expression pattern for US phone numbers\n    pattern = r'\\d{3}[-\\.\\s]?\\d{3}[-\\.\\s]?\\d{4}'\n\n    # Check if the input matches the pattern\n    if re.match(pattern, phone_number):\n        # Phone numbers in the format '123-456-7890' have 10 digits, so we can check if it's exactly 10 digits long\n        if len(phone_number) == 10:\n            return 'Valid'\n        else:\n            return 'Invalid (too short or long)'\n    else:\n        return 'Invalid (incorrect format)'\n\n# Get user input\nuser_input = input(\"Enter a phone number: \")\n\n# Call the function and print the result\nprint(is_valid_phone_number(user_input))\n```\n\nThis program uses the `re` module to check if the input matches a regular expression pattern for US phone numbers. The pattern is defined as `\\d{3}[-\\.\\s]?\\d{3}[-\\.\\s]?\\d{4}`, which matches three digits followed by an optional separator (hyphen, dot, or space), followed by another three digits, another optional separator, and finally four digits.\n\nThe function checks if the input matches the pattern and if it's exactly 10 digits long. If it's valid, the function returns 'Valid'. If it's invalid due to incorrect format, the function returns 'Invalid (incorrect format)'. If it's too short or long, the function returns 'Invalid (too short or long)'.",
+  "error": null,
+  "elapsed_seconds": 4.14,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

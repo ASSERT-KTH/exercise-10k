@@ -1,0 +1,9 @@
+{
+  "id": 3774,
+  "title": "Dictionary Key Sorting",
+  "prompt": "Sort a dictionary by its keys.\nSample Input: {'name': 'John', 'age': 30, 'city': 'New York'}\nSample Output: {'age': 30, 'city': 'New York', 'name': 'John'}\n",
+  "answer": "You can use the built-in `dict.items()` method to get a list of tuples containing key-value pairs, and then sort this list based on the keys. Here's how you can do it:\n\n```python\ndef sort_dict(d):\n    return dict(sorted(d.items()))\n\n# Sample Input\nsample_input = {'name': 'John', 'age': 30, 'city': 'New York'}\n\n# Sample Output\nprint(sort_dict(sample_input))  # Output: {'age': 30, 'city': 'New York', 'name': 'John'}\n```\n\nThis function first converts the dictionary to a list of tuples using `dict.items()`. Then, it sorts this list based on the keys using the `sorted()` function. Finally, it converts the sorted list back to a dictionary using `dict(sorted(d.items()))`.",
+  "error": null,
+  "elapsed_seconds": 2.04,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

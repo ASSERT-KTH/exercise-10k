@@ -1,0 +1,9 @@
+{
+  "id": 9640,
+  "title": "Function with configparser",
+  "prompt": "Create a function that uses configparser to read configuration files.\nSample Input: config.ini\nSample Output: Configuration values\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses the `configparser` module to read configuration files. This function takes a filename as an argument and returns a dictionary containing the configuration values.\n\n```python\nimport configparser\n\ndef read_config(config_file):\n    \"\"\"\n    Reads configuration values from a file using configparser.\n\n    Parameters:\n    config_file (str): The name of the configuration file.\n\n    Returns:\n    dict: A dictionary containing the configuration values.\n    \"\"\"\n\n    # Create a ConfigParser object\n    config = configparser.ConfigParser()\n\n    # Read the configuration file\n    config.read(config_file)\n\n    # Extract the configuration values into a dictionary\n    config_dict = {}\n    for section in config.sections():\n        config_dict[section] = {}\n        for option, value in config.items(section):\n            config_dict[section][option] = value\n\n    return config_dict\n```\n\nHere's an example of how to use this function:\n\n```python\nconfig_values = read_config('config.ini')\nprint(config_values)\n```\n\nThis will print a dictionary containing the configuration values from the `config.ini` file. The keys of the dictionary are the sections in the file, and the values are dictionaries containing the options and their corresponding values for each section.\n\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.37,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

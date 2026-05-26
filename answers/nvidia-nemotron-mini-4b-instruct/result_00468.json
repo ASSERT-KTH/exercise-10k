@@ -1,0 +1,9 @@
+{
+  "id": 468,
+  "title": "Caesar Cipher",
+  "prompt": "Write a program that takes a string and a shift value as input and encrypts the string using a Caesar cipher\nSample Input: hello, 3\nSample Output: khoor\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a string and a shift value as input, encrypts the string using a Caesar cipher, and prints the result:\n```python\ndef caesar_cipher(text, shift):\n    \"\"\"\n    Encrypts a given text using a Caesar cipher with the given shift value.\n\n    :param text: The text to encrypt.\n    :param shift: The shift value to apply to each character.\n    :return: The encrypted text.\n    \"\"\"\n    # Ensure the shift value is within the valid range (0-25)\n    shift %= 26\n\n    # Create a translation table for the Caesar cipher\n    translation_table = str.maketrans(\n        alphabet,\n        alphabet[shift:] + alphabet[:shift]\n    )\n\n    # Encrypt the text using the translation table\n    encrypted_text = text.translate(translation_table)\n\n    return encrypted_text\n\n# Get user input\ntext = input(\"Enter the text to encrypt: \")\nshift = int(input(\"Enter the shift value: \"))\n\n# Encrypt the text and print the result\nencrypted_text = caesar_cipher(text, shift)\nprint(f\"Encrypted text: {encrypted_text}\")\n```\nThis program defines a function `caesar_cipher` that takes a text and a shift value as input, creates a translation table for the Caesar cipher, and encrypts the text using the translation table. The program then gets user input for the text and shift value, encrypts the text using the function, and prints the result. The `str.maketrans` function is used to create the translation table, which maps each character in the original alphabet to its shifted counterpart in the encrypted alphabet.",
+  "error": null,
+  "elapsed_seconds": 4.01,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

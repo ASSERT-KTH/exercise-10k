@@ -1,0 +1,9 @@
+{
+  "id": 1519,
+  "title": "Anagram Generator",
+  "prompt": "Write a program that generates all possible anagrams of a given string.\nSample Input: abc\nSample Output: ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']\n",
+  "answer": "Here's a Python solution using the `itertools` module for generating all permutations of a given string:\n\n```python\nfrom itertools import permutations\n\ndef generate_anagrams(s):\n    return [''.join(p) for p in permutations(s)]\n\n# Test the function\nprint(generate_anagrams('abc'))  # Output: ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']\n```\n\nThis program works by using the `permutations()` function from the `itertools` module to generate all possible permutations of the input string. Then, it converts each permutation into a string and returns a list of all unique anagrams.",
+  "error": null,
+  "elapsed_seconds": 1.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

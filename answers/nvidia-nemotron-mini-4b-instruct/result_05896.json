@@ -1,0 +1,9 @@
+{
+  "id": 5896,
+  "title": "Array Unzipping",
+  "prompt": "Write a function that takes a list of pairs as input and returns two lists: one containing the first elements of each pair and one containing the second elements of each pair.\nSample Input: [(1, 4), (2, 5), (3, 6)]\nSample Output: ([1, 2, 3], [4, 5, 6])\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef split_pairs(pairs):\n    \"\"\"\n    Takes a list of pairs as input and returns two lists: one containing the first elements of each pair and one containing the second elements of each pair.\n\n    :param pairs: List of tuples, where each tuple contains two elements\n    :return: Tuple of two lists, where the first list contains the first elements of each pair and the second list contains the second elements of each pair\n    \"\"\"\n    # Use list comprehension to create two lists based on the pairs\n    first_elements = [pair[0] for pair in pairs]\n    second_elements = [pair[1] for pair in pairs]\n\n    return first_elements, second_elements\n```\nHere's an example of how you can use this function:\n```python\npairs = [(1, 4), (2, 5), (3, 6)]\nfirst_elements, second_elements = split_pairs(pairs)\nprint(first_elements)  # Output: [1, 2, 3]\nprint(second_elements)  # Output: [4, 5, 6]\n```\nThis function first uses a list comprehension to create two lists based on the input pairs. The `first_elements` list contains the first elements of each pair, and the `second_elements` list contains the second elements of each pair. The function then returns a tuple containing both lists.",
+  "error": null,
+  "elapsed_seconds": 3.89,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

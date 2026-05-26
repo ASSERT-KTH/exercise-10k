@@ -1,0 +1,9 @@
+{
+  "id": 5528,
+  "title": "Variable Scope",
+  "prompt": "Write a program to demonstrate the scope of variables in different blocks of code.\nSample Input: None\nSample Output: 10 20\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that demonstrates the scope of variables in different blocks of code:\n\n```python\n# Global variable\nglobal_var = 10\n\ndef block_1():\n    # Local variable\n    local_var = 20\n\n    # Accessing global variable\n    print(global_var)  # Output: 10\n\n    # Modifying global variable\n    global global_var\n    global_var += 1\n    print(global_var)  # Output: 11\n\ndef block_2():\n    # Local variable\n    local_var = 30\n\n    # Accessing local variable\n    print(local_var)  # Output: 30\n\n    # Accessing global variable\n    print(global_var)  # Output: 11 (still 11 because it's a global variable)\n\n    # Modifying global variable (this won't work because it's a global variable)\n    # global global_var\n    # global_var += 1\n    # print(global_var)  # Output: NameError: name 'global_var' is not defined\n\n# Calling block_1\nblock_1()\n\n# Calling block_2\nblock_2()\n```\n\nIn this program, we define a global variable `global_var` with an initial value of 10. We then define two functions, `block_1` and `block_2`, which have their own local variables. When we call `block_1`, we print the value of `global_var` and modify it. When we call `block_2`, we print the value of `local_var` and `global_var` but since `global_var` is a global variable, it remains unchanged even though we try to modify it in the function.",
+  "error": null,
+  "elapsed_seconds": 4.22,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

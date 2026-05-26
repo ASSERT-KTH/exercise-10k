@@ -1,0 +1,9 @@
+{
+  "id": 4072,
+  "title": "String Search",
+  "prompt": "Write a program that takes a string and a pattern as input and returns the index of the first occurrence of the pattern in the string.\nSample Input: ['hello world', 'world']\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef find_pattern(string, pattern):\n    \"\"\"\n    Returns the index of the first occurrence of the pattern in the string.\n\n    :param string: The string to search in.\n    :param pattern: The pattern to search for.\n    :return: The index of the first occurrence of the pattern in the string, or -1 if not found.\n    \"\"\"\n    # Ensure the inputs are strings\n    if not isinstance(string, str) or not isinstance(pattern, str):\n        raise TypeError(\"Both inputs must be strings.\")\n\n    # Use the built-in str.find() method to find the index of the pattern\n    index = string.find(pattern)\n\n    # If the pattern was not found, return -1\n    return index if index != -1 else -1\n```\nHere's an example of how you can use this function:\n```python\nsample_input = ['hello world', 'world']\nsample_output = 6\n\nprint(find_pattern(''.join(sample_input), 'world'))  # Output: 6\n```\nThis program first checks if the inputs are strings, and then uses the built-in `str.find()` method to find the index of the pattern in the string. If the pattern is not found, the function returns -1.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

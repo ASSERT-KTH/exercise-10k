@@ -1,0 +1,9 @@
+{
+  "id": 8419,
+  "title": "Student Grades Dictionary",
+  "prompt": "Create a function that takes a dictionary of student names and their corresponding grades as input. The function should return a new dictionary with the students' names as keys and their grades as values, but only include students with grades above 80.\nSample Input: {\"John\": 90, \"Alice\": 70, \"Bob\": 85}\nSample Output: {\"John\": 90, \"Bob\": 85}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef filter_students(students):\n    \"\"\"\n    Given a dictionary of student names and their corresponding grades,\n    return a new dictionary with the students' names as keys and their grades as values,\n    but only include students with grades above 80.\n\n    :param students: A dictionary of student names and their corresponding grades\n    :return: A new dictionary with the students' names as keys and their grades as values\n    \"\"\"\n    # Filter the students based on the grade threshold\n    filtered_students = {name: grade for name, grade in students.items() if grade > 80}\n\n    return filtered_students\n```\nHere's an example of how you can use this function:\n```python\nstudents = {\"John\": 90, \"Alice\": 70, \"Bob\": 85}\nfiltered_students = filter_students(students)\nprint(filtered_students)  # Output: {'John': 90, 'Bob': 85}\n```\nThis function uses a dictionary comprehension to create a new dictionary with the filtered students. The condition `grade > 80` ensures that only students with grades above 80 are included in the output.",
+  "error": null,
+  "elapsed_seconds": 2.92,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

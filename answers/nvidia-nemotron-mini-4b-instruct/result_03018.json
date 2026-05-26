@@ -1,0 +1,9 @@
+{
+  "id": 3018,
+  "title": "String Suffix Matching",
+  "prompt": "Write a program to check whether a given string ends with a specified suffix.\nSample Input: Hello World, World\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks whether a given string ends with a specified suffix:\n\n```python\ndef ends_with_suffix(s, suffix):\n    \"\"\"\n    Check if a given string ends with a specified suffix.\n\n    :param s: The string to check.\n    :param suffix: The suffix to check for.\n    :return: True if the string ends with the suffix, False otherwise.\n    \"\"\"\n    # Remove any whitespace from the beginning and end of the string\n    s = s.strip()\n\n    # Check if the suffix is equal to the last characters of the string\n    return s.endswith(suffix)\n\n# Example usage:\ns = \"Hello World\"\nsuffix = \"World\"\nprint(ends_with_suffix(s, suffix))  # Output: True\n\ns = \"Hello\"\nsuffix = \"World\"\nprint(ends_with_suffix(s, suffix))  # Output: False\n```\n\nThis program defines a function `ends_with_suffix` that takes a string `s` and a suffix `suffix` as input, and returns `True` if the string ends with the specified suffix, and `False` otherwise. The function first removes any whitespace from the beginning and end of the string using the `strip()` method, to ensure that the comparison is case-insensitive. Then, it checks if the suffix is equal to the last characters of the string using the `endswith()` method, and returns the result.",
+  "error": null,
+  "elapsed_seconds": 3.52,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

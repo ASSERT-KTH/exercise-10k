@@ -1,0 +1,9 @@
+{
+  "id": 2550,
+  "title": "Reduce Function",
+  "prompt": "Use the reduce function to apply a given function to all elements of a list.\nSample Input: [1, 2, 3, 4, 5], add(x, y)\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's how you can use the `reduce` function in Python to apply a given function to all elements of a list:\n\nThe `reduce` function in Python is a higher-order function that applies a binary function (a function that takes two arguments) to an iterable (like a list) from left to right, reducing it to a single value. In your case, you want to apply the `add` function (which adds two numbers together) to all elements of a list. Here's how you can do it:\n\n```python\ndef add(x, y):\n    \"\"\"A simple addition function.\"\"\"\n    return x + y\n\n# Sample input: [1, 2, 3, 4, 5]\nsample_list = [1, 2, 3, 4, 5]\n\n# Use reduce to apply the add function to all elements of the list\nresult = reduce(add, sample_list)\n\n# Print the result\nprint(result)  # Output: 15\n```\n\nIn this example, we first define the `add` function, which takes two arguments `x` and `y` and returns their sum. Then, we create a list `sample_list` with some sample numbers. Finally, we use the `reduce` function to apply the `add` function to all elements of the `sample_list`, which results in the sum of all numbers in the list (i.e., `1 + 2 + 3 + 4 + 5 = 15`).",
+  "error": null,
+  "elapsed_seconds": 4.76,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

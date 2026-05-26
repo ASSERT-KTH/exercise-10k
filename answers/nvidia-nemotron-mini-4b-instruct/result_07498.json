@@ -1,0 +1,9 @@
+{
+  "id": 7498,
+  "title": "Set Operations",
+  "prompt": "Perform basic set operations (add, remove, union, intersection) and print out the resulting set.\nSample Input: {1, 2, 3}, {3, 4, 5}\nSample Output: {1, 2, 3, 4, 5}, {3}, {1, 2}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution for performing basic set operations (add, remove, union, intersection) and printing out the resulting set:\n\n```python\ndef perform_set_operation(set1, set2, operation):\n    \"\"\"\n    Perform a set operation (add, remove, union, intersection) and return the resulting set.\n\n    :param set1: The first set\n    :param set2: The second set\n    :param operation: The operation to perform ('add', 'remove', 'union', 'intersection')\n    :return: The resulting set\n    \"\"\"\n    if operation not in ['add', 'remove', 'union', 'intersection']:\n        raise ValueError(\"Invalid operation. Choose from 'add', 'remove', 'union', 'intersection'.\")\n\n    result = set1.copy()\n\n    if operation == 'add':\n        result.update(set2)\n    elif operation == 'remove':\n        result.difference_update(set2)\n    elif operation == 'union':\n        result.update(set2)\n    elif operation == 'intersection':\n        result &= set2\n\n    return result\n\n\n# Get sample input\nset1 = {1, 2, 3}\nset2 = {3, 4, 5}\n\n# Perform set operations and print results\nprint(f\"Set 1: {set1}\")\nprint(f\"Set 2: {set2}\")\n\nset_operations = ['union', 'intersection']\nfor operation in set_operations:\n    print(f\"Result of {operation}: {perform_set_operation(set1, set2, operation)}\")\n```\n\nThis script defines a function `perform_set_operation` that takes two sets and a set operation as input, and returns the resulting set. The script then gets sample input, performs the union and intersection operations, and prints the resulting sets.",
+  "error": null,
+  "elapsed_seconds": 4.36,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

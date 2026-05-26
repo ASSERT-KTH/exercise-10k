@@ -1,0 +1,9 @@
+{
+  "id": 9920,
+  "title": "Personal Finance Tracker",
+  "prompt": "Write a program that allows users to track their expenses and income.\nSample Input: add income, 1000\nSample Output: Balance: $1000\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that allows users to track their expenses and income using a simple command-line interface. This program uses a dictionary to store the balance and performs basic arithmetic operations to update the balance based on user inputs.\n\n```python\ndef main():\n    balance = 0\n\n    while True:\n        command = input(\"Enter a command (add, sub, bal, quit): \").lower()\n\n        if command == \"quit\":\n            print(f\"Balance: ${balance:.2f}\")\n            break\n\n        elif command == \"add\":\n            amount = float(input(\"Enter the amount: \"))\n            balance += amount\n            print(f\"Balance: ${balance:.2f}\")\n\n        elif command == \"sub\":\n            expense = float(input(\"Enter the expense amount: \"))\n            if expense > balance:\n                print(\"Insufficient funds. Current balance: ${balance:.2f}\")\n            else:\n                balance -= expense\n                print(f\"Balance: ${balance:.2f}\")\n\n        elif command == \"bal\":\n            print(f\"Balance: ${balance:.2f}\")\n\n        else:\n            print(\"Invalid command. Please try again.\")\n\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program allows users to add income, subtract expenses, view the current balance, and quit the program. The output will always display the balance with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 3.32,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

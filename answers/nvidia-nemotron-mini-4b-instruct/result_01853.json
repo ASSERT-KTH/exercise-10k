@@ -1,0 +1,9 @@
+{
+  "id": 1853,
+  "title": "Array Symmetric Difference",
+  "prompt": "Write a program that takes two arrays of integers as input, and returns a new array containing only the elements that are in exactly one of the two arrays.\nSample Input: [1, 2, 3, 4, 5], [4, 5, 6, 7, 8]\nSample Output: [1, 2, 3, 6, 7, 8]\n",
+  "answer": "Here's a Python program that solves the problem:\n\n```python\ndef unique_elements(arr1, arr2):\n    # Convert input arrays to sets for faster lookup\n    set1 = set(arr1)\n    set2 = set(arr2)\n\n    # Find elements in exactly one of the sets\n    unique_elements = set1.symmetric_difference(set2)\n\n    # Convert the result back to a list and return it\n    return list(unique_elements)\n```\n\nYou can use this function as follows:\n\n```python\nprint(unique_elements([1, 2, 3, 4, 5], [4, 5, 6, 7, 8]))  # Output: [1, 2, 3, 6, 7, 8]\n```\n\nThis program works by converting the input arrays to sets, which allows for faster lookup of elements. The `symmetric_difference()` method is used to find elements that are in exactly one of the sets. Finally, the result is converted back to a list and returned.",
+  "error": null,
+  "elapsed_seconds": 2.46,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

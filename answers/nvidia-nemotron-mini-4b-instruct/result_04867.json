@@ -1,0 +1,9 @@
+{
+  "id": 4867,
+  "title": "Counting Vowels with While Loop",
+  "prompt": "Write a program that counts the number of vowels in a given string using a while loop.\nSample Input: hello world\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that counts the number of vowels in a given string using a while loop:\n\n```python\ndef count_vowels(s):\n    \"\"\"\n    Count the number of vowels in a given string.\n\n    :param s: str - The string to count vowels in.\n    :return: int - The number of vowels in the string.\n    \"\"\"\n    vowels = set('aeiouAEIOU')\n    count = 0\n\n    # Use a while loop to iterate over each character in the string\n    # and increment the count if it's a vowel\n    while s:\n        char = s[0]\n        s = s[1:]\n        if char in vowels:\n            count += 1\n\n    return count\n\n# Example usage\ninput_string = \"hello world\"\nnum_vowels = count_vowels(input_string)\nprint(f\"The number of vowels in '{input_string}' is {num_vowels}.\")\n```\n\nThis program defines a function `count_vowels` that takes a string `s` as input and returns the number of vowels in the string. The function uses a set of vowels to check if each character in the string is a vowel, and increments a counter if it is. The while loop continues until the string is empty, at which point the function returns the final count. The example usage at the end of the program demonstrates how to use the function with a sample input string.",
+  "error": null,
+  "elapsed_seconds": 3.6,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

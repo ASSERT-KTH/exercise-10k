@@ -1,0 +1,9 @@
+{
+  "id": 5550,
+  "title": "Count the Number of Consonants",
+  "prompt": "Write a program that counts the number of consonants in a given string using a for loop.\nSample Input: Hello World\nSample Output: 7\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that counts the number of consonants in a given string using a for loop:\n\n```python\ndef count_consonants(s):\n    \"\"\"\n    Count the number of consonants in a given string.\n\n    :param s: str - The string to count consonants in.\n    :return: int - The number of consonants in the string.\n    \"\"\"\n    consonants = set(\"bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ\")\n    count = 0\n\n    for char in s:\n        if char.lower() in consonants:\n            count += 1\n\n    return count\n\n# Example usage\ninput_string = \"Hello World\"\nnum_consonants = count_consonants(input_string)\nprint(f\"The number of consonants in '{input_string}' is {num_consonants}.\")\n```\n\nThis program defines a function `count_consonants` that takes a string as input and returns the number of consonants in that string. The function uses a set of consonants to check if each character in the string is a consonant. The `count` variable keeps track of the number of consonants found, and the function returns this value at the end. The example usage at the end of the program demonstrates how to use the function with a sample input string.",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

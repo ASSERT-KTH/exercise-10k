@@ -1,0 +1,9 @@
+{
+  "id": 758,
+  "title": "Story Generator",
+  "prompt": "Write a program that takes a few words as input and generates a short story\nSample Input: space pirate\nSample Output: In a distant galaxy, a space pirate sailed the cosmos...\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program using the `textgenrnn` library to generate a short story based on the input words. First, you need to install the library if you haven't already. You can do this by running:\n\n```bash\npip install textgenrnn\n```\n\nNow, you can use the following code:\n\n```python\nimport textgenrnn\n\ndef generate_story(input_words):\n    # Load the model\n    model = textgenrnn.textgenerative.TextGenerative(\n        \"https://storage.googleapis.com/textgenrnn/models/model_1.tar.gz\",\n        temperature=0.9,\n        top_p=0.9,\n        num_beams=5,\n        length=50,\n    )\n\n    # Generate the story\n    story = model.generate(input_words)\n\n    # Print the story\n    print(story)\n\n# Example usage\ninput_words = \"space pirate\"\ngenerate_story(input_words)\n```\n\nThis program loads a pre-trained model and generates a short story based on the input words. You can replace `\"space pirate\"` with any other words to generate different stories. The generated stories might not always be coherent or interesting, but they can serve as a starting point for creating your own stories.",
+  "error": null,
+  "elapsed_seconds": 3.37,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

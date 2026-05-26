@@ -1,0 +1,9 @@
+{
+  "id": 4047,
+  "title": "Dictionary Pop Method",
+  "prompt": "Write a function that takes a dictionary and a key as input and removes the key-value pair for the given key from the dictionary if it exists. If the key does not exist, return 'Key not found'.\nSample Input: { 'a': 1, 'b': 2, 'c': 3 }, 'a'\nSample Output: { 'b': 2, 'c': 3 }\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef remove_key_value(dictionary, key):\n    \"\"\"\n    Remove the key-value pair for the given key from the dictionary if it exists.\n    If the key does not exist, return 'Key not found'.\n\n    :param dictionary: The dictionary to modify.\n    :param key: The key to remove.\n    :return: The modified dictionary.\n    \"\"\"\n    if key in dictionary:\n        del dictionary[key]\n        return dictionary\n    else:\n        return 'Key not found'\n```\nHere's an example of how you can use this function:\n```python\nmy_dict = {'a': 1, 'b': 2, 'c': 3}\nprint(remove_key_value(my_dict, 'a'))  # Output: { 'b': 2, 'c': 3 }\nprint(remove_key_value(my_dict, 'd'))  # Output: Key not found\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.87,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

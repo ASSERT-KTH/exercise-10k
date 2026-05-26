@@ -1,0 +1,9 @@
+{
+  "id": 7508,
+  "title": "Rock, Paper, Scissors Game",
+  "prompt": "Create a Rock, Paper, Scissors game using variables and conditional statements.\nSample Input: rock, paper\nSample Output: Paper wins!\n",
+  "answer": "Sure, I'd be happy to help you create a Rock, Paper, Scissors game using variables and conditional statements. Here's a Python solution:\n\n```python\nimport random\n\n# Define the game options\noptions = [\"rock\", \"paper\", \"scissors\"]\n\n# Function to get user input\ndef get_user_choice():\n    user_choice = input(\"Enter your choice (rock, paper, scissors): \").lower()\n    while user_choice not in options:\n        print(\"Invalid input. Please enter a valid option.\")\n        user_choice = input(\"Enter your choice (rock, paper, scissors): \").lower()\n    return user_choice\n\n# Function to determine the winner\ndef determine_winner(user_choice, computer_choice):\n    if user_choice == computer_choice:\n        return \"It's a tie!\"\n    elif (user_choice == \"rock\" and computer_choice == \"scissors\") or \\\n         (user_choice == \"paper\" and computer_choice == \"rock\") or \\\n         (user_choice == \"scissors\" and computer_choice == \"paper\"):\n        return f\"{user_choice.capitalize()} wins!\"\n    else:\n        return f\"{computer_choice.capitalize()} wins!\"\n\n# Main game loop\nwhile True:\n    user_choice = get_user_choice()\n    computer_choice = random.choice(options)\n    print(f\"Computer chose {computer_choice.capitalize()}.\")\n    print(determine_winner(user_choice, computer_choice))\n    repeat = input(\"Do you want to play again? (yes/no): \").lower()\n    if repeat != \"yes\":\n        break\n```\n\nThis program defines the game options, gets user input, determines the winner, and displays the result. It also includes a main game loop that allows the user to play multiple rounds.",
+  "error": null,
+  "elapsed_seconds": 4.26,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

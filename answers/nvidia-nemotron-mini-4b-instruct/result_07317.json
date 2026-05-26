@@ -1,0 +1,9 @@
+{
+  "id": 7317,
+  "title": "Input from File",
+  "prompt": "Write a program that reads input from a file and prints out the contents.\nSample Input: example.txt\nSample Output: This is an example file.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that reads input from a file and prints out its contents:\n\n```python\n# Open the file for reading\nwith open('example.txt', 'r') as file:\n    # Read the entire file into a string\n    file_contents = file.read()\n\n# Print the contents of the file\nprint(file_contents)\n```\n\nThis program uses a `with` statement to open the file, which automatically closes the file when the block of code is exited, even if an exception occurs. The `read()` method is then used to read the entire contents of the file into a single string. Finally, the contents of the file are printed to the console using the `print()` function.\n\nIf you want to print the file contents line by line, you can modify the program as follows:\n\n```python\n# Open the file for reading\nwith open('example.txt', 'r') as file:\n    # Read each line of the file\n    for line in file:\n        # Print each line\n        print(line.strip())  # Remove any trailing newline characters\n```\n\nThis program reads each line of the file using a `for` loop and prints it to the console, stripping any trailing newline characters using the `strip()` method.",
+  "error": null,
+  "elapsed_seconds": 3.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

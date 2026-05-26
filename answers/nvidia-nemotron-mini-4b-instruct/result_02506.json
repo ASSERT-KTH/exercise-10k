@@ -1,0 +1,9 @@
+{
+  "id": 2506,
+  "title": "Exponentiation Calculation",
+  "prompt": "Create a program that takes two numbers as input and returns the result of the first number raised to the power of the second.\nSample Input: 2 3\nSample Output: 8\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef power(base, exponent):\n    \"\"\"\n    Returns the result of base raised to the power of exponent.\n\n    :param base: The base number (float or int).\n    :param exponent: The exponent (int).\n    :return: The result of base raised to the power of exponent.\n    \"\"\"\n    # Check that the exponent is a non-negative integer\n    if not isinstance(exponent, int) or exponent < 0:\n        raise ValueError(\"Exponent must be a non-negative integer.\")\n\n    # Calculate the result and return it\n    return base ** exponent\n\n# Get user input\ntry:\n    base = float(input(\"Enter the base number: \"))\n    exponent = int(input(\"Enter the exponent (as an integer): \"))\n    result = power(base, exponent)\n    print(f\"The result of {base} raised to the power of {exponent} is {result}.\")\nexcept ValueError as e:\n    print(e)\n```\nThis program defines a function `power` that takes two arguments, `base` and `exponent`, and returns the result of raising `base` to the power of `exponent`. The program then prompts the user to enter two numbers, checks that they are valid inputs, and calls the `power` function to calculate the result. If the user enters invalid input, the program prints an error message.",
+  "error": null,
+  "elapsed_seconds": 3.37,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4464,
+  "title": "Print the First N Fibonacci Numbers",
+  "prompt": "Write a program to print the first N Fibonacci numbers using a while loop\nSample Input: 5\nSample Output: 0\n1\n1\n2\n3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that prints the first N Fibonacci numbers using a while loop:\n\n```python\ndef print_fibonacci(n):\n    \"\"\"Print the first N Fibonacci numbers using a while loop.\"\"\"\n\n    # Initialize the first two Fibonacci numbers\n    a, b = 0, 1\n\n    # Print the first two numbers\n    print(a)\n    print(b)\n\n    # Print the remaining Fibonacci numbers using a while loop\n    i = 2\n    while i < n:\n        # Calculate the next Fibonacci number\n        c = a + b\n\n        # Print the next number\n        print(c)\n\n        # Update the previous two numbers for the next iteration\n        a, b = b, c\n        i += 1\n\n# Get user input for N\nn = int(input(\"Enter the value of N: \"))\n\n# Call the function to print the Fibonacci numbers\nprint_fibonacci(n)\n```\n\nWhen you run this program and enter `5` as the value of `n`, it will output:\n\n```\nEnter the value of N: 5\n0\n1\n1\n2\n3\n```\n\nThis program first initializes the first two Fibonacci numbers, `a` and `b`, to 0 and 1, respectively. Then it prints the first two numbers using a `print()` statement. After that, it enters a while loop that continues until it has printed `n-2` more Fibonacci numbers. In each iteration of the loop, it calculates the next Fibonacci number (`c`) by adding the previous two numbers (`a` and `b`). It then prints the next number and updates the previous two numbers for the next iteration. Finally, it increments the counter (`i`) and continues the loop until it has printed `n` numbers.",
+  "error": null,
+  "elapsed_seconds": 4.26,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

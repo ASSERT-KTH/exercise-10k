@@ -1,0 +1,9 @@
+{
+  "id": 8498,
+  "title": "Data Type Debugger",
+  "prompt": "Write a program that takes an input string, attempts to convert it into an integer, a float, and a boolean, and then prints out the type of the input string along with its converted value if possible. If the conversion fails, print an error message for that specific data type.\nSample Input: 123.45\nSample Output: Input string: 123.45, Integer: Error, Float: 123.45, Boolean: Error\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef convert_input(input_string):\n    try:\n        integer = int(input_string)\n        float_value = float(input_string)\n        boolean = bool(input_string)\n\n        print(f\"Input string: {input_string}, Integer: {integer}, Float: {float_value}, Boolean: {boolean}\")\n\n    except ValueError as e:\n        print(f\"Error converting {input_string} to {type(e).__name__}: {e}\")\n\n    except Exception as e:\n        print(f\"Error converting {input_string} to any type: {e}\")\n\n# Call the function with a sample input\nconvert_input(\"123.45\")\n```\n\nThis program defines a function `convert_input()` that takes an input string as a parameter. It attempts to convert the input string into an integer, a float, and a boolean using the `int()`, `float()` and `bool()` functions, respectively. If any conversion fails, it catches the `ValueError` or any other exception and prints an error message for that specific data type. If all conversions are successful, it prints out the type of the input string along with its converted values.",
+  "error": null,
+  "elapsed_seconds": 2.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

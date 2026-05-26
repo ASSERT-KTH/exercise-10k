@@ -1,0 +1,9 @@
+{
+  "id": 8925,
+  "title": "Find the Maximum Gap",
+  "prompt": "Write a program to find the maximum gap between two elements in a given sorted list of integers.\nSample Input: [1, 3, 5, 7, 9]\nSample Output: 2\n",
+  "answer": "Here's a Python program that finds the maximum gap between two elements in a given sorted list of integers:\n\n```python\ndef max_gap(lst):\n    if len(lst) < 2:\n        return 0\n\n    max_gap = 0\n    for i in range(len(lst) - 1):\n        current_gap = lst[i+1] - lst[i]\n        max_gap = max(max_gap, current_gap)\n\n    return max_gap\n\n# Test the function with the given sample input\nprint(max_gap([1, 3, 5, 7, 9]))  # Output: 2\n```\n\nThis program first checks if the list has at least two elements. If not, it returns 0 as the maximum gap. Then it iterates over the list and calculates the gap between each pair of adjacent elements. It keeps track of the maximum gap found so far and updates it whenever a larger gap is encountered. Finally, it returns the maximum gap.",
+  "error": null,
+  "elapsed_seconds": 2.35,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

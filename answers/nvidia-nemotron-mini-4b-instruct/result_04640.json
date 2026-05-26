@@ -1,0 +1,9 @@
+{
+  "id": 4640,
+  "title": "List Permutations",
+  "prompt": "Write a program that takes a list as input, and returns all possible permutations of the list.\nSample Input: [1, 2, 3]\nSample Output: [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses recursion to generate all possible permutations of a given list:\n\n```python\ndef permute(lst):\n    if len(lst) == 1:\n        return [lst]\n    else:\n        result = []\n        for i in range(len(lst)):\n            smaller_list = lst[:i] + lst[i+1:]\n            for perm in permute(smaller_list):\n                result.append([lst[i]] + perm)\n        return result\n\n# Test the function with your sample input\ninput_list = [1, 2, 3]\nprint(permute(input_list))\n```\n\nWhen you run this program with your sample input `[1, 2, 3]`, it will output:\n\n```python\n[[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]\n```\n\nThis program works by recursively breaking down the input list into two parts: the first element and the rest of the list (`lst[:i] + lst[i+1:]`). It then generates all possible permutations of the smaller list and appends the first element from the original list to each of those permutations. The result is a list of all possible permutations of the original list.",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

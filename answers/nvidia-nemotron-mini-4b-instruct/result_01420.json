@@ -1,0 +1,9 @@
+{
+  "id": 1420,
+  "title": "superhard Color converter",
+  "prompt": "Create a program that converts a color from RGB to HEX or vice versa. If the user inputs 'rgb', convert to HEX, if 'hex', convert to RGB.\nSample Input: rgb 255 0 0\nSample Output: #ff0000\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef rgb_to_hex(r, g, b):\n    return '#%02x%02x%02x' % (r, g, b)\n\ndef hex_to_rgb(hex_code):\n    return tuple(int(hex_code[i:i+2], 16) for i in (0, 2, 4))\n\ndef main():\n    while True:\n        user_input = input(\"Enter 'rgb' to convert RGB to HEX or 'hex' to convert HEX to RGB: \").lower()\n        if user_input in ['rgb', 'hex']:\n            break\n        else:\n            print(\"Invalid input. Please enter either 'rgb' or 'hex'.\")\n\n    if user_input == 'rgb':\n        r, g, b = map(int, input(\"Enter RGB values (e.g., 255 0 0): \").split())\n        print(rgb_to_hex(r, g, b))\n    elif user_input == 'hex':\n        hex_code = input(\"Enter HEX code: \")\n        print(hex_to_rgb(hex_code))\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program defines three functions: `rgb_to_hex`, `hex_to_rgb`, and `main`. The `main` function handles user input, calls the appropriate function based on the user's input, and prints the result. The other two functions convert between RGB and HEX color codes.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

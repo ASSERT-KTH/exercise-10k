@@ -1,0 +1,9 @@
+{
+  "id": 5535,
+  "title": "Regular Expressions",
+  "prompt": "Write a program to use regular expressions for pattern matching in strings.\nSample Input: hello world\nSample Output: hello\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses the `re` module for pattern matching with regular expressions:\n\n```python\nimport re\n\n# Sample input: hello world\ninput_string = \"hello world\"\n\n# Define the pattern to match (case-insensitive)\npattern = re.compile(r'(?i)hello', re.IGNORECASE)\n\n# Search for the pattern in the input string and print the result\nmatch = pattern.search(input_string)\n\nif match:\n    print(match.group())  # Print the matched string\nelse:\n    print(\"No match found.\")\n```\n\nWhen you run this program with the sample input \"hello world\", it will output \"hello\". The regular expression `(?i)hello` is a case-insensitive pattern that matches the string \"hello\" anywhere in the input string. The `re.IGNORECASE` flag is used to enable case-insensitive matching.\n\nYou can modify the pattern to match other strings or patterns as needed. For example, to match \"world\" instead of \"hello\", you could use the pattern `(?i)world`.",
+  "error": null,
+  "elapsed_seconds": 2.62,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

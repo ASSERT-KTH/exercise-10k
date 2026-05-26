@@ -1,0 +1,9 @@
+{
+  "id": 1682,
+  "title": "ogg to mp3 Converter Function",
+  "prompt": "Write a function to convert ogg files to mp3 using a given conversion tool.\nSample Input: input.ogg\nSample Output: input.mp3\n",
+  "answer": "Sure, I can help you with that. Here's a Python function that uses the `subprocess` module to convert an OGG file to MP3 using a given conversion tool. Make sure to install the `ffmpeg` package if you haven't already. You can install it using pip:\n\n```bash\npip install ffmpeg\n```\n\nHere's the Python function:\n\n```python\nimport subprocess\n\ndef convert_ogg_to_mp3(input_ogg, output_mp3, conversion_tool='ffmpeg'):\n    \"\"\"\n    Converts an OGG file to MP3 using a given conversion tool.\n\n    :param input_ogg: The input OGG file path\n    :param output_mp3: The output MP3 file path\n    :param conversion_tool: The conversion tool to use. Default is ffmpeg.\n    \"\"\"\n\n    # Ensure the conversion tool is installed\n    if not subprocess.check_call([conversion_tool, '-version']):\n        raise ValueError(f\"The conversion tool '{conversion_tool}' is not installed.\")\n\n    # Run the conversion command\n    command = [conversion_tool, '-i', input_ogg, '-c:a', 'libmp3lame', '-b:a', '128k', output_mp3]\n    subprocess.check_call(command)\n\n# Example usage\nconvert_ogg_to_mp3('input.ogg', 'output.mp3')\n```\n\nThis function checks if the conversion tool is installed and then runs the conversion command using the `subprocess` module. The `-c:a` and `-b:a` options are used to set the audio codec and bitrate for the MP3 output, respectively. You can adjust these options based on your needs.",
+  "error": null,
+  "elapsed_seconds": 5.44,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6769,
+  "title": "Game Leaderboard",
+  "prompt": "Write a program to create a game leaderboard that displays the top scores and allows users to add new scores.\nSample Input: Add score: John Doe, 1000\nSample Output: Score added: John Doe, Score: 1000\n",
+  "answer": "Sure, I'd be happy to help you create a simple game leaderboard program. Here's a Python solution using a dictionary to store the scores and a list to maintain the order of scores. We'll also use a function to add a new score and display the leaderboard.\n\n```python\ndef add_score(scores, name, score):\n    \"\"\"Add a new score to the leaderboard and update the scores dictionary.\"\"\"\n    if name not in scores:\n        scores[name] = score\n    else:\n        scores[name] = max(scores[name], score)\n\n    # Sort the scores dictionary by value (score) in descending order\n    scores = {k: v for k, v in sorted(scores.items(), key=lambda item: item[1], reverse=True)}\n\n    return \"Score added: {}\".format(name)\n\n\ndef display_leaderboard(scores):\n    \"\"\"Display the leaderboard with the top scores.\"\"\"\n    print(\"Leaderboard:\")\n    for name, score in scores.items():\n        print(\"{}: {}\".format(name, score))\n\n\n# Example usage\nscores = {}\nprint(add_score(scores, \"John Doe\", 1000))\ndisplay_leaderboard(scores)\n```\n\nThis program will output:\n\n```\nLeaderboard:\nJohn Doe: 1000\n```\n\nYou can add more scores and the leaderboard will be updated accordingly.",
+  "error": null,
+  "elapsed_seconds": 3.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

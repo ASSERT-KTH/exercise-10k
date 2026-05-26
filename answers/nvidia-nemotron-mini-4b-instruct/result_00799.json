@@ -1,0 +1,9 @@
+{
+  "id": 799,
+  "title": "Calculate Histogram",
+  "prompt": "Write a program to calculate the histogram given a list of numbers.\nSample Input: numbers = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]\nSample Output: Histogram: {1: 1, 2: 2, 3: 3, 4: 4}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the histogram given a list of numbers:\n\n```python\ndef calculate_histogram(numbers):\n    \"\"\"\n    Calculates the histogram given a list of numbers.\n\n    :param numbers: List of numbers\n    :return: Dictionary representing the histogram\n    \"\"\"\n    # Initialize an empty dictionary to store the histogram\n    histogram = {}\n\n    # Iterate over each number in the list\n    for num in numbers:\n        # If the number is already a key in the dictionary, increment its value by 1\n        if num in histogram:\n            histogram[num] += 1\n        # Otherwise, add the number as a key with a value of 1\n        else:\n            histogram[num] = 1\n\n    return histogram\n\n# Example usage\nnumbers = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]\nhistogram = calculate_histogram(numbers)\nprint(\"Histogram:\", histogram)\n```\n\nWhen you run this program with the sample input `[1, 2, 2, 3, 3, 3, 4, 4, 4, 4]`, it will output:\n\n```\nHistogram: {1: 1, 2: 2, 3: 3, 4: 4}\n```",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

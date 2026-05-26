@@ -1,0 +1,9 @@
+{
+  "id": 9725,
+  "title": "Octal Arithmetic",
+  "prompt": "Write a program that takes two octal numbers as input and returns their sum.\nSample Input: 10 5\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes two octal numbers as input and returns their sum:\n\n```python\ndef octal_sum(octal1, octal2):\n    \"\"\"\n    Takes two octal numbers as input and returns their sum.\n\n    :param octal1: The first octal number as a string.\n    :param octal2: The second octal number as a string.\n    :return: The sum of the two octal numbers as an integer.\n    \"\"\"\n\n    # Convert the octal numbers to integers\n    octal1_int = int(octal1, 8)\n    octal2_int = int(octal2, 8)\n\n    # Calculate the sum of the integers\n    sum_int = octal1_int + octal2_int\n\n    # Convert the sum back to an octal string\n    octal_sum_str = oct(sum_int).replace(\"0o\", \"\")\n\n    return octal_sum_str\n\n# Get user input\noctal1 = input(\"Enter the first octal number: \")\noctal2 = input(\"Enter the second octal number: \")\n\n# Call the function and print the result\noctal_sum_result = octal_sum(octal1, octal2)\nprint(f\"The sum of {octal1} and {octal2} is {octal_sum_result}.\")\n```\n\nThis program defines a function `octal_sum` that takes two octal numbers as input, converts them to integers, calculates their sum, and then converts the sum back to an octal string before returning it. The main part of the program gets user input for the two octal numbers, calls the `octal_sum` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 4.37,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

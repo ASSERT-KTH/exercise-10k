@@ -1,0 +1,9 @@
+{
+  "id": 6410,
+  "title": "Day of the Week",
+  "prompt": "Write a program that takes a day of the week as input and prints out the corresponding day of the week. Use if/else statements to determine the day.\nSample Input: monday\nSample Output: Monday\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_day_of_week(day):\n    \"\"\"\n    Given a day of the week as input, returns the corresponding day of the week.\n\n    :param day: str, one of 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'\n    :return: str, the corresponding day of the week\n    \"\"\"\n    if day.lower() not in ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:\n        raise ValueError(\"Invalid day of the week. Please use one of 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', or 'Sunday'.\")\n\n    days_of_week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']\n    return days_of_week[days_of_week.index(day.capitalize())]\n\n# Example usage:\nday = input(\"Enter a day of the week: \")\nprint(get_day_of_week(day))\n```\nThis program defines a function `get_day_of_week` that takes a day of the week as input and returns the corresponding day of the week as a string. The function checks if the input is valid and raises a `ValueError` if it's not. The example usage at the end of the program prompts the user to enter a day of the week and prints out the corresponding day of the week using the `get_day_of_week` function.",
+  "error": null,
+  "elapsed_seconds": 3.93,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

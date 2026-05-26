@@ -1,0 +1,9 @@
+{
+  "id": 2412,
+  "title": "Function with Map-Reduce",
+  "prompt": "Create a function that uses map-reduce to calculate the sum of squares of a list of numbers. Then, call this function with a list of input numbers and print the result.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 55\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses map-reduce to calculate the sum of squares of a list of numbers. We'll use the `functools.reduce` function, which is a built-in Python function that performs a fold operation over an iterable, similar to a map-reduce operation.\n\n```python\nimport functools\n\ndef map_reduce_sum_of_squares(numbers):\n    \"\"\"\n    Calculate the sum of squares of a list of numbers using map-reduce.\n\n    :param numbers: List of numbers\n    :return: Sum of squares\n    \"\"\"\n\n    # Define the map function that squares each number\n    map_func = lambda x: x ** 2\n\n    # Define the reduce function that adds the squares of all numbers\n    reduce_func = lambda acc, x: acc + x\n\n    # Use map-reduce to calculate the sum of squares\n    return functools.reduce(reduce_func, map(map_func, numbers))\n\n# Call the function with a sample input\ninput_numbers = [1, 2, 3, 4, 5]\nresult = map_reduce_sum_of_squares(input_numbers)\nprint(result)  # Output: 55\n```\n\nThis function first defines two functions, `map_func` and `reduce_func`, that perform the map and reduce operations, respectively. Then, it uses `functools.reduce` to perform the map-reduce operation on the input list of numbers. The result is returned as the sum of squares.",
+  "error": null,
+  "elapsed_seconds": 3.78,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

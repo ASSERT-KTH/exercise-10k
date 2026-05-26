@@ -1,0 +1,9 @@
+{
+  "id": 8033,
+  "title": "Grade Checker",
+  "prompt": "Write a program that uses an if/else statement to determine a student's grade based on their score.\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses an `if` statement to determine a student's grade based on their score:\n\n```python\ndef determine_grade(score):\n    \"\"\"\n    Determines a student's grade based on their score.\n\n    :param score: The student's score as an integer between 0 and 100.\n    :return: The student's letter grade as a string.\n    \"\"\"\n\n    # Define the grade boundaries\n    low_passing = 60\n    high_passing = 70\n    low_b = 80\n    high_b = 89\n    low_c = 70\n    high_c = 79\n    low_d = 60\n    high_d = 59\n\n    # Determine the grade based on the score\n    if score >= high_passing:\n        grade = \"A\"\n    elif score >= high_b:\n        grade = \"B\"\n    elif score >= high_c:\n        grade = \"C\"\n    elif score >= high_d:\n        grade = \"D\"\n    else:\n        grade = \"F\"\n\n    return grade\n\n# Get user input\nscore = int(input(\"Enter a score between 0 and 100: \"))\n\n# Print the result\nprint(f\"The student's grade is {determine_grade(score)}.\")\n```\n\nThis program defines a function `determine_grade` that takes a score as input and returns the corresponding letter grade. The function uses an `if` statement to determine the grade based on the score's position relative to the grade boundaries. The function is then called with user input to determine the student's grade and print it to the console.",
+  "error": null,
+  "elapsed_seconds": 11.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

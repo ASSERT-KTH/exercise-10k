@@ -1,0 +1,9 @@
+{
+  "id": 4734,
+  "title": "Map Function",
+  "prompt": "Write a function that uses the map function to apply a given function to each element of a list.\nSample Input: double, [1, 2, 3, 4, 5]\nSample Output: [2, 4, 6, 8, 10]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses the `map()` function to apply a given function to each element of a list. In this case, the function doubles each element of the list.\n\n```python\ndef double_list(numbers, double_func):\n    \"\"\"\n    Applies a given function to each element of a list using the map function.\n\n    Parameters:\n    numbers (list): The list of numbers to apply the function to.\n    double_func (callable): A function that takes a single argument (the number) and returns its double.\n\n    Returns:\n    list: A new list containing the results of applying the double_func to each number in the input list.\n    \"\"\"\n    return list(map(double_func, numbers))\n\n# Example usage:\nnumbers = [1, 2, 3, 4, 5]\ndouble_func = lambda x: x * 2\nresult = double_list(numbers, double_func)\nprint(result)  # Output: [2, 4, 6, 8, 10]\n```\n\nThis function takes two arguments: `numbers` (the list of numbers to apply the function to) and `double_func` (the function to apply to each number). It then uses the `map()` function to apply the `double_func` to each element of the `numbers` list, and returns the resulting list as a new list using the `list()` constructor.",
+  "error": null,
+  "elapsed_seconds": 3.61,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

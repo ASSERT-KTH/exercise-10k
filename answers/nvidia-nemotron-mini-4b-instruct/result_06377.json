@@ -1,0 +1,9 @@
+{
+  "id": 6377,
+  "title": "Array Intersect",
+  "prompt": "Write a program that takes two arrays as input and returns a new array containing the elements that are common to both arrays\nSample Input: [1, 2, 3, 4, 5], [4, 5, 6, 7, 8]\nSample Output: [4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes two arrays as input and returns a new array containing the elements that are common to both arrays:\n```python\ndef common_elements(arr1, arr2):\n    \"\"\"\n    Returns a new array containing the elements that are common to both input arrays.\n\n    :param arr1: The first input array\n    :param arr2: The second input array\n    :return: A new array containing the common elements\n    \"\"\"\n    # Convert the input arrays to sets to remove duplicates and enable faster lookup\n    set1 = set(arr1)\n    set2 = set(arr2)\n\n    # Find the intersection of the two sets (i.e., the common elements)\n    common = set1 & set2\n\n    # Convert the result back to a list and return it\n    return list(common)\n```\nHere's an example of how you can use this function:\n```python\narr1 = [1, 2, 3, 4, 5]\narr2 = [4, 5, 6, 7, 8]\n\ncommon = common_elements(arr1, arr2)\nprint(common)  # Output: [4, 5]\n```\nThis program first converts the input arrays to sets, which allows for faster lookup of elements since sets only allow for constant-time lookups. The intersection of the two sets (i.e., the common elements) is then found using the `&` operator, and the result is converted back to a list before being returned.",
+  "error": null,
+  "elapsed_seconds": 3.57,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

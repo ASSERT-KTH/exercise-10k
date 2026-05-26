@@ -1,0 +1,9 @@
+{
+  "id": 954,
+  "title": "Calculate Maximum",
+  "prompt": "Write a program that calculates the maximum of a list of numbers using a while loop.\nSample Input: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nSample Output: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the maximum of a list of numbers using a while loop:\n```python\ndef max_in_list(numbers):\n    \"\"\"\n    Calculates the maximum of a list of numbers using a while loop.\n\n    :param numbers: List of numbers\n    :return: Maximum number in the list\n    \"\"\"\n    if not numbers:  # Check if the list is empty\n        raise ValueError(\"Input list cannot be empty\")\n\n    max_value = numbers[0]  # Initialize the maximum value to the first element of the list\n\n    # Use a while loop to iterate through the remaining elements in the list\n    i = 1\n    while i < len(numbers):\n        if numbers[i] > max_value:\n            max_value = numbers[i]  # Update the maximum value if a larger number is found\n        i += 1\n\n    return max_value\n\n# Example usage\nsample_input = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nprint(max_in_list(sample_input))  # Output: 10\n```\nThis function first checks if the input list is empty and raises a `ValueError` if it is. Then, it initializes the maximum value to the first element of the list. The while loop iterates through the remaining elements in the list, updating the maximum value if a larger number is found. Finally, the function returns the maximum value.",
+  "error": null,
+  "elapsed_seconds": 3.63,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

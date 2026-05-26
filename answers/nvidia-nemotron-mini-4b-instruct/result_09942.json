@@ -1,0 +1,9 @@
+{
+  "id": 9942,
+  "title": "Array Element Replacement",
+  "prompt": "Write a program that replaces all occurrences of a specified element in an array with a new element. The program should take as input the array, the element to be replaced, and the new element. The program should output the modified array.\nSample Input: [1, 2, 3, 2, 4], 2, 5\nSample Output: [1, 5, 3, 5, 4]\n",
+  "answer": "Here's a Python solution for the problem:\n\n```python\ndef replace_element(arr, old_element, new_element):\n    # Create a copy of the array to avoid modifying the original\n    arr_copy = arr.copy()\n\n    # Iterate through each element in the array\n    for i, element in enumerate(arr_copy):\n        # If the current element is equal to the old element, replace it with the new element\n        if element == old_element:\n            arr_copy[i] = new_element\n\n    return arr_copy\n\n# Test the function with the provided sample input\narr = [1, 2, 3, 2, 4]\nold_element = 2\nnew_element = 5\nprint(replace_element(arr, old_element, new_element))  # Output: [1, 5, 3, 5, 4]\n```\n\nThis program first creates a copy of the input array to avoid modifying the original. Then it iterates through each element in the copy, replacing any elements that match the old element with the new element. Finally, it returns the modified array.",
+  "error": null,
+  "elapsed_seconds": 2.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

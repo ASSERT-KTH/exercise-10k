@@ -1,0 +1,9 @@
+{
+  "id": 981,
+  "title": "Conditional Student Grades",
+  "prompt": "Write a program that determines a student's grade based on their score. If the score is above 90, the grade is A. If the score is between 80 and 90, the grade is B. If the score is between 70 and 80, the grade is C. If the score is between 60 and 70, the grade is D. If the score is below 60, the grade is F.\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef determine_grade(score):\n    \"\"\"Determines a student's grade based on their score.\"\"\"\n\n    # Check if the score is above 90\n    if score >= 90:\n        return \"A\"\n\n    # Check if the score is between 80 and 90\n    elif 80 <= score < 90:\n        return \"B\"\n\n    # Check if the score is between 70 and 80\n    elif 70 <= score < 80:\n        return \"C\"\n\n    # Check if the score is between 60 and 70\n    elif 60 <= score < 70:\n        return \"D\"\n\n    # If the score is below 60, return \"F\"\n    else:\n        return \"F\"\n\n# Get user input\nscore = int(input(\"Enter a score between 0 and 100: \"))\n\n# Determine and print the grade\ngrade = determine_grade(score)\nprint(f\"Your grade is {grade}.\")\n```\n\nThis program defines a function `determine_grade` that takes a score as input and returns the corresponding letter grade. The function checks each range of scores (above 90, between 80 and 90, etc.) and returns the appropriate grade based on the score. The program then prompts the user to enter a score, calls the function to determine the grade, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.59,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2749,
+  "title": "Speed Calculator",
+  "prompt": "Write a program that calculates an object's speed given its distance and time.\nSample Input: 100 10\nSample Output: 10.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates an object's speed given its distance and time:\n\n```python\ndef calculate_speed(distance, time):\n    \"\"\"\n    Calculates an object's speed given its distance and time.\n\n    :param distance: The distance traveled by the object.\n    :param time: The time it took for the object to travel the distance.\n    :return: The speed of the object as a float.\n    \"\"\"\n\n    # Check if the inputs are non-negative\n    if distance < 0 or time < 0:\n        raise ValueError(\"Both distance and time must be non-negative.\")\n\n    # Calculate the speed\n    speed = distance / time\n\n    return speed\n\n# Example usage\nsample_input = 100, 10\nsample_output = 10.0\n\ntry:\n    speed = calculate_speed(*sample_input)\n    print(f\"The speed of the object is {speed}.\")\nexcept ValueError as e:\n    print(e)\n```\n\nThis program defines a function `calculate_speed` that takes two arguments, `distance` and `time`, and returns the object's speed as a float. The function checks if the inputs are non-negative and raises a `ValueError` if they are not. The example usage demonstrates how to call the function with a sample input and print the calculated speed.",
+  "error": null,
+  "elapsed_seconds": 3.29,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

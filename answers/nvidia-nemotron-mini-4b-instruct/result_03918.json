@@ -1,0 +1,9 @@
+{
+  "id": 3918,
+  "title": "Simple Statistics",
+  "prompt": "Create a program that calculates the mean, median, and mode of a list of numbers.\nSample Input: 1 2 3 4 5\nSample Output: Mean: 3.0, Median: 3, Mode: 1\n",
+  "answer": "Sure, I'd be happy to help you create a program that calculates the mean, median, and mode of a list of numbers. Here's an example Python program that does this:\n\n```python\ndef calculate_stats(numbers):\n    \"\"\"\n    Calculates the mean, median, and mode of a list of numbers.\n\n    :param numbers: List of numbers\n    :return: Tuple containing mean, median, and mode\n    \"\"\"\n\n    # Calculate the mean\n    total = sum(numbers)\n    mean = total / len(numbers)\n\n    # Calculate the median\n    numbers.sort()\n    n = len(numbers)\n    if n % 2 == 0:  # Even number of elements\n        median = (numbers[n // 2 - 1] + numbers[n // 2]) / 2\n    else:  # Odd number of elements\n        median = numbers[n // 2]\n\n    # Calculate the mode\n    mode = max(set(numbers), key=numbers.count)\n\n    return mean, median, mode\n\n\n# Example usage\nnumbers = [1, 2, 3, 4, 5]\nmean, median, mode = calculate_stats(numbers)\nprint(f\"Mean: {mean:.2f}, Median: {median}, Mode: {mode}\")\n```\n\nThis program defines a function `calculate_stats` that takes a list of numbers as input and returns a tuple containing the mean, median, and mode of the list. The function first calculates the mean by summing all the numbers and dividing by the length of the list. Then, it sorts the list and calculates the median using the formula for the median of an even and odd number of elements. Finally, it finds the mode by counting the occurrences of each number in the list and selecting the most common number. The example usage at the end of the program demonstrates how to use the function with a sample input list.",
+  "error": null,
+  "elapsed_seconds": 4.3,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

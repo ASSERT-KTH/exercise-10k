@@ -1,0 +1,9 @@
+{
+  "id": 241,
+  "title": "Array Indexing",
+  "prompt": "Write a program that takes an array and an index as input, and returns the element at that index. Handle out-of-bounds errors.\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_element(arr, index):\n    \"\"\"\n    Returns the element at the given index in the input array.\n    Handles out-of-bounds errors.\n\n    :param arr: The input array\n    :param index: The index of the element to retrieve\n    :return: The element at the given index\n    \"\"\"\n    # Check if the index is within the bounds of the array\n    if 0 <= index < len(arr):\n        return arr[index]\n    else:\n        # If the index is out of bounds, raise a ValueError with an appropriate message\n        raise ValueError(f\"Index {index} is out of bounds for array {arr}.\")\n```\nHere's an example of how you can use this function:\n```python\narr = [1, 2, 3, 4, 5]\nindex = 2\n\ntry:\n    element = get_element(arr, index)\n    print(f\"The element at index {index} is {element}.\")\nexcept ValueError as e:\n    print(e)\n```\nThis will output:\n```yaml\nThe element at index 2 is 3.\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 4.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

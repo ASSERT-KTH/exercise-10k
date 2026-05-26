@@ -1,0 +1,9 @@
+{
+  "id": 2374,
+  "title": "Distance Calculator",
+  "prompt": "Write a program that calculates the distance between two points in a 2D or 3D space.\nSample Input: 2 3 4 5\nSample Output: Distance: 2.8284271247461903\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the Euclidean distance between two points in a 2D or 3D space, given their x, y, and z coordinates as input. The program uses the `math` module to calculate the square root of the sum of squared differences between the coordinates.\n\n```python\nimport math\n\ndef calculate_distance(point1, point2):\n    \"\"\"\n    Calculates the Euclidean distance between two points in a 2D or 3D space.\n\n    :param point1: A list or tuple of length 2 or 3 representing the first point (x, y, z or x, y)\n    :param point2: A list or tuple of length 2 or 3 representing the second point (x, y, z or x, y)\n    :return: The Euclidean distance between the two points\n    \"\"\"\n\n    # Ensure input points have the same number of dimensions\n    num_dimensions = len(point1)\n    if num_dimensions != len(point2):\n        raise ValueError(\"Both points must have the same number of dimensions.\")\n\n    # Calculate the Euclidean distance\n    distance = 0\n    for i in range(num_dimensions):\n        distance += (point1[i] - point2[i]) ** 2\n\n    # Return the distance\n    return math.sqrt(distance)\n\n\n# Example usage\npoint1 = [2, 3, 4]  # 2D point\npoint2 = [5, 6, 7]  # 3D point\n\ndistance = calculate_distance(point1, point2)\nprint(f\"Distance: {distance:.6f}\")\n```\n\nThis program can handle both 2D and 3D points, as long as they have the same number of dimensions. The example usage demonstrates how to use the function with 2D and 3D points.",
+  "error": null,
+  "elapsed_seconds": 4.32,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

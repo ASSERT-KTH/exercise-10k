@@ -1,0 +1,9 @@
+{
+  "id": 8117,
+  "title": "Word Frequency Counter",
+  "prompt": "Write a program that takes a string as input and returns a dictionary with the frequency of each word in the string.\nSample Input: Hello World Hello this is a test\nSample Output: {'Hello': 2, 'World': 1, 'this': 1, 'is': 1, 'a': 1, 'test': 1}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\nfrom collections import Counter\n\ndef word_frequency(input_string: str) -> dict:\n    \"\"\"\n    Takes a string as input and returns a dictionary with the frequency of each word in the string.\n\n    :param input_string: The input string.\n    :return: A dictionary where keys are words and values are their frequencies.\n    \"\"\"\n    # Split the input string into words, convert to lowercase, and remove any punctuation\n    words = [word.lower() for word in input_string.lower().split() if word.isalnum()]\n\n    # Use the Counter class from the collections module to count the frequency of each word\n    word_counts = Counter(words)\n\n    return dict(word_counts)\n```\nHere's an example of how you can use this function:\n```python\ninput_string = \"Hello World Hello this is a test\"\nresult = word_frequency(input_string)\nprint(result)  # Output: {'hello': 2, 'world': 1, 'this': 1, 'is': 1, 'a': 1, 'test': 1}\n```\nThis program first splits the input string into words, converts them to lowercase, and removes any punctuation. Then, it uses the `Counter` class to count the frequency of each word. Finally, it converts the `Counter` object to a regular dictionary and returns it.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

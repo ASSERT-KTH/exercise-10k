@@ -1,0 +1,9 @@
+{
+  "id": 9932,
+  "title": "Input/Output Master",
+  "prompt": "Create a program that takes in a user's name and age as input, then outputs a greeting message with the name and age. The twist is that the program should handle invalid inputs, such as non-integer values for age or empty strings for name. The program should continue to prompt the user for input until valid inputs are provided.\nSample Input: John\n25\nSample Output: Hello, John! You are 25 years old.\n",
+  "answer": "Here's a Python solution for the problem:\n\n```python\ndef get_valid_input():\n    while True:\n        name = input(\"Please enter your name: \")\n        if name.strip():  # Check if the input is not empty\n            break\n        else:\n            print(\"Invalid input. Please enter your name.\")\n\n    while True:\n        age = input(\"Please enter your age: \")\n        try:\n            age = int(age)\n            if age >= 0:  # Check if the age is non-negative\n                break\n            else:\n                print(\"Invalid input. Age must be a non-negative integer.\")\n        except ValueError:\n            print(\"Invalid input. Please enter a valid integer for age.\")\n\n    return name, age\n\nname, age = get_valid_input()\ngreeting = f\"Hello, {name}! You are {age} years old.\"\nprint(greeting)\n```\n\nThis program defines a function `get_valid_input()` that prompts the user for input until valid inputs are provided. It checks if the input is not empty for the name and validates the age input as a non-negative integer. The function returns the name and age as a tuple. The program then calls this function and prints the greeting message based on the received inputs.",
+  "error": null,
+  "elapsed_seconds": 3.06,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

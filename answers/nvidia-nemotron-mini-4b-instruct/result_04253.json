@@ -1,0 +1,9 @@
+{
+  "id": 4253,
+  "title": "Hotel Reservation System",
+  "prompt": "Develop a program that allows users to reserve hotel rooms. The program should take the room type, check-in date, and check-out date as input, and print the reservation details.\nSample Input: Single 2024-01-01 2024-01-03\nSample Output: Reservation confirmed\n",
+  "answer": "Sure, I'd be happy to help you develop a program for hotel room reservation. Here's a Python solution using functions to keep the code organized and reusable. This solution assumes that the room type is always a string, and the check-in and check-out dates are in the format 'YYYY-MM-DD'.\n\n```python\ndef get_user_input():\n    \"\"\"Get user input for room type, check-in date, and check-out date.\"\"\"\n    room_type = input(\"Enter room type (e.g., Single): \")\n    check_in_date = input(\"Enter check-in date (YYYY-MM-DD): \")\n    check_out_date = input(\"Enter check-out date (YYYY-MM-DD): \")\n    return room_type, check_in_date, check_out_date\n\n\ndef reserve_room(room_type, check_in_date, check_out_date):\n    \"\"\"Print the reservation details.\"\"\"\n    reservation_details = f\"Reservation confirmed for {room_type} room from {check_in_date} to {check_out_date}\"\n    print(reservation_details)\n\n\nif __name__ == \"__main__\":\n    room_type, check_in_date, check_out_date = get_user_input()\n    reserve_room(room_type, check_in_date, check_out_date)\n```\n\nThis program defines three functions: `get_user_input()` to get user input, `reserve_room()` to print the reservation details, and `main()` to call the other two functions and handle the program execution.",
+  "error": null,
+  "elapsed_seconds": 3.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

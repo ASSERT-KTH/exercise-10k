@@ -1,0 +1,9 @@
+{
+  "id": 8736,
+  "title": "Variable Serialization",
+  "prompt": "Serialize and deserialize variables to and from a string representation.\nSample Input: {name: 'John', age: 30}\nSample Output: {name: 'John', age: 30} (string representation)\n",
+  "answer": "To serialize and deserialize variables to and from a string representation, you can use JSON (JavaScript Object Notation) for the serialization and deserialization. Here's how you can do it in JavaScript:\n\n**Serialization:**\n\nTo serialize a JavaScript object to a string, you can use the `JSON.stringify()` method. This method converts a JavaScript object or array into a JSON string. Here's an example:\n\n```javascript\nfunction serialize(data) {\n  return JSON.stringify(data);\n}\n```\n\n**Deserialization:**\n\nTo deserialize a JSON string back to a JavaScript object, you can use the `JSON.parse()` method. This method converts a JSON string into a JavaScript object or array. Here's an example:\n\n```javascript\nfunction deserialize(jsonString) {\n  return JSON.parse(jsonString);\n}\n```\n\n**Sample Input and Output:**\n\nNow, let's see how to use these functions with your sample input and output:\n\n```javascript\nconst sampleInput = {name: 'John', age: 30};\nconst serializedString = serialize(sampleInput);\nconsole.log(serializedString); // Output: {\"name\": \"John\", \"age\": 30}\n\nconst deserializedObject = deserialize(serializedString);\nconsole.log(deserializedObject); // Output: {name: 'John', age: 30}\n```\n\nThis way, you can serialize and deserialize variables to and from a string representation using JSON in JavaScript.",
+  "error": null,
+  "elapsed_seconds": 3.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

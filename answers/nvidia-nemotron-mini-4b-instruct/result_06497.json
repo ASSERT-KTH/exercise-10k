@@ -1,0 +1,9 @@
+{
+  "id": 6497,
+  "title": "Word Scramble",
+  "prompt": "Write a program that asks the user for a word and then prints out a scrambled version of the word.\nSample Input: hello\nSample Output: lloeh\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef scramble_word(word):\n    \"\"\"\n    Scramble a given word by swapping the positions of its characters.\n\n    :param word: str - The word to scramble.\n    :return: str - The scrambled version of the word.\n    \"\"\"\n    # Ensure the input is a string\n    if not isinstance(word, str):\n        raise TypeError(\"Input must be a string.\")\n\n    # Reverse the string and join it with the original string\n    scrambled = word[::-1] + word\n\n    return scrambled\n\n# Get user input\nuser_word = input(\"Enter a word to scramble: \")\n\n# Print the scrambled version\nscrambled_word = scramble_word(user_word)\nprint(f\"The scrambled version of '{user_word}' is: {scrambled_word}\")\n```\nThis program defines a function `scramble_word` that takes a word as input and returns its scrambled version by swapping the positions of its characters. The program then prompts the user to enter a word, calls the function with the user input, and prints the scrambled version.",
+  "error": null,
+  "elapsed_seconds": 2.71,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

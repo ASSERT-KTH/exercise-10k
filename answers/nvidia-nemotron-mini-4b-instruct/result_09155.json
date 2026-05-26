@@ -1,0 +1,9 @@
+{
+  "id": 9155,
+  "title": "Regular Expressions",
+  "prompt": "Create a regular expression pattern and match it against a string, then print out the matches.\nSample Input: hello world\nSample Output: ['hello', 'world']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution using the `re` module for regular expressions:\n\n```python\nimport re\n\ndef find_matches(input_string):\n    # Define the regular expression pattern\n    pattern = r'\\b\\w+\\b'  # Match one or more word characters (letters, digits, or underscores) surrounded by word boundaries\n\n    # Find all matches in the input string\n    matches = re.findall(pattern, input_string)\n\n    # Print the matches\n    print(matches)\n\n# Call the function with your sample input\nfind_matches(\"hello world\")\n```\n\nThis regular expression pattern `\\b\\w+\\b` matches any sequence of one or more word characters (`\\w+`) surrounded by word boundaries (`\\b`). Word boundaries are special characters that match the position between a word character (`\\w`) and a non-word character (`\\W`).\n\nWhen you run this code with the sample input \"hello world\", it will output:\n\n```\n['hello', 'world']\n```\n\nThis means that the regular expression pattern matched the words \"hello\" and \"world\" in the input string.",
+  "error": null,
+  "elapsed_seconds": 2.77,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

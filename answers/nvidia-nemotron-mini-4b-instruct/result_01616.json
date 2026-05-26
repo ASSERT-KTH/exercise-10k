@@ -1,0 +1,9 @@
+{
+  "id": 1616,
+  "title": "Least Common Multiple (LCM)",
+  "prompt": "Create a program that takes two integers as input and outputs their LCM.\nSample Input: 12 15\nSample Output: 60\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes two integers as input and outputs their Least Common Multiple (LCM):\n\n```python\ndef lcm(a, b):\n    \"\"\"\n    Calculate the Least Common Multiple (LCM) of two integers.\n\n    :param a: The first integer.\n    :param b: The second integer.\n    :return: The LCM of a and b.\n    \"\"\"\n    # Ensure a and b are non-negative\n    a, b = abs(a), abs(b)\n\n    # Calculate the LCM using the Euclidean algorithm\n    while b:\n        a, b = b, a % b\n\n    return a\n\n\n# Get user input\ntry:\n    num1 = int(input(\"Enter the first integer: \"))\n    num2 = int(input(\"Enter the second integer: \"))\n\n    # Calculate and print the LCM\n    lcm_value = lcm(num1, num2)\n    print(f\"The LCM of {num1} and {num2} is {lcm_value}.\")\n\nexcept ValueError:\n    print(\"Error: Please enter valid integers.\")\n```\n\nThis program defines a function `lcm()` that calculates the LCM of two integers using the Euclidean algorithm. The program then prompts the user to enter two integers, calculates their LCM, and prints the result. If the user enters non-integer values, the program catches the `ValueError` exception and prints an error message.",
+  "error": null,
+  "elapsed_seconds": 3.59,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

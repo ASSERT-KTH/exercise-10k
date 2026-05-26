@@ -1,0 +1,9 @@
+{
+  "id": 8924,
+  "title": "Check for Ugly Number",
+  "prompt": "Write a program to check if a given number is an ugly number, where an ugly number is a positive integer whose prime factors are limited to 2, 3, and 5.\nSample Input: 6\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given number is an ugly number:\n\n```python\ndef isUgly(num):\n    \"\"\"Check if a given number is an ugly number.\"\"\"\n    if num <= 0:\n        return False\n    \n    while num % 2 == 0:\n        num //= 2\n    while num % 3 == 0:\n        num //= 3\n    while num % 5 == 0:\n        num //= 5\n    \n    return num == 1\n\n# Test the function with sample input\nsample_input = 6\nprint(f\"{sample_input} is an ugly number: {IsUgly(sample_input)}\")\n```\n\nWhen you run this program with the sample input 6, it will output:\n\n```\n6 is an ugly number: True\n```\n\nThis program works by repeatedly dividing the given number by 2, 3, or 5 until it reaches 1. If the number is not divisible by any of these factors after the loop, then it is an ugly number.",
+  "error": null,
+  "elapsed_seconds": 2.74,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

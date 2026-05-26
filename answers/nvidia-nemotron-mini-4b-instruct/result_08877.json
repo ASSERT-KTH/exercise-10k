@@ -1,0 +1,9 @@
+{
+  "id": 8877,
+  "title": "_root Calculator",
+  "prompt": "Write a program that takes a number as input and returns its square root.\nSample Input: 16\nSample Output: 4.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a number as input and returns its square root:\n\n```python\ndef get_square_root(number):\n    \"\"\"\n    This function takes a number as input and returns its square root.\n\n    :param number: The number for which the square root is to be calculated.\n    :return: The square root of the given number.\n    \"\"\"\n\n    # Check if the input is a non-negative number\n    if number < 0:\n        raise ValueError(\"Input number must be non-negative.\")\n\n    # Calculate the square root using the math.isqrt function\n    sqrt = math.isqrt(number)\n\n    # If the square root is an integer, return it\n    if sqrt * sqrt == number:\n        return sqrt\n\n    # Otherwise, calculate the square root using the math.sqrt function\n    return math.sqrt(number)\n```\n\nYou can use this function by calling it with a number as an argument, like this:\n\n```python\nnumber = float(input(\"Enter a number: \"))\nsquare_root = get_square_root(number)\nprint(f\"{number} has a square root of {square_root}.\")\n```\n\nThis program checks if the input number is non-negative and raises a `ValueError` if it's not. Then, it calculates the square root using the `math.isqrt` function (which returns the largest integer less than or equal to the square root) or the `math.sqrt` function, depending on whether the square root is an integer or not.",
+  "error": null,
+  "elapsed_seconds": 3.71,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

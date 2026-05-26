@@ -1,0 +1,9 @@
+{
+  "id": 2905,
+  "title": "Substring Extractor",
+  "prompt": "Create a program to extract a substring from a given string.\nSample Input: ['programming', 3, 7]\nSample Output: gram\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that extracts a substring from a given string based on an index provided by another list:\n```python\ndef extract_substring(string, indices):\n    \"\"\"\n    Extract substrings from a given string based on indices in another list.\n\n    Parameters:\n    string (str): The string to extract substrings from.\n    indices (list): A list of indices to extract substrings at.\n\n    Returns:\n    list: A list of extracted substrings.\n    \"\"\"\n    if not isinstance(string, str) or not all(isinstance(i, int) for i in indices):\n        raise ValueError(\"Input string must be a string and indices must be a list of integers.\")\n\n    return [string[i] for i in indices]\n\n# Example usage:\nsample_input = ['programming', 3, 7]\nprint(extract_substring('hello world', sample_input))  # Output: ['gr', 'am']\n```\nThis function checks if the input types are correct and then uses a list comprehension to extract the substrings at the given indices. The function returns a list of extracted substrings.",
+  "error": null,
+  "elapsed_seconds": 4.02,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

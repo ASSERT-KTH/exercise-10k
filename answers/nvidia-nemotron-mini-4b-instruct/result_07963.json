@@ -1,0 +1,9 @@
+{
+  "id": 7963,
+  "title": "File Input/Output",
+  "prompt": "Write a program to read and write files using file input/output operations.\nSample Input: None\nSample Output: The file I/O operations are performed successfully.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that demonstrates reading and writing files using file input/output operations. This program will create a new file, read its contents, and then write some new content to the file.\n\n```python\n# Open the file for writing ('w') and create it if it doesn't exist\nwith open('example.txt', 'w') as file:\n    file.write(\"This is a sample file created using file I/O operations.\")\n\n# Open the file for reading ('r') and read its contents\nwith open('example.txt', 'r') as file:\n    content = file.read()\n\n# Print the contents of the file\nprint(f\"The file I/O operations are performed successfully.\\n{content}\")\n\n# Open the file for appending ('a') and write some new content\nwith open('example.txt', 'a') as file:\n    file.write(\"\\nThis is new content added using file I/O operations.\")\n\n# Print the updated contents of the file\nwith open('example.txt', 'r') as file:\n    print(f\"Updated contents of the file: {file.read()}\")\n```\n\nWhen you run this program, it will create a new file named `example.txt` with the given content. Then, it will read the contents of the file and print them. After that, it will append some new content to the file and print the updated contents. The output will look similar to the sample output provided.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

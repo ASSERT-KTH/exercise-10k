@@ -1,0 +1,9 @@
+{
+  "id": 4609,
+  "title": "Greatest Common Divisor",
+  "prompt": "Write a program to calculate the greatest common divisor (GCD) of two numbers.\nSample Input: 12 18\nSample Output: GCD: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the greatest common divisor (GCD) of two numbers using the Euclidean algorithm:\n\n```python\ndef gcd(a, b):\n    \"\"\"\n    Calculate the greatest common divisor of two numbers using the Euclidean algorithm.\n\n    :param a: The first number.\n    :param b: The second number.\n    :return: The greatest common divisor of a and b.\n    \"\"\"\n    while b:\n        a, b = b, a % b\n    return abs(a)\n\n# Get sample input from the user\nsample_input = input(\"Enter two numbers separated by a space: \")\nnumbers = sample_input.split()\n\n# Convert the input to integers and calculate the GCD\na, b = int(numbers[0]), int(numbers[1])\ngcd_value = gcd(a, b)\n\n# Print the result\nprint(f\"GCD: {gcd_value}\")\n```\n\nWhen you run this program and enter `12 18` as input, it will output:\n\n```\nEnter two numbers separated by a space: 12 18\nGCD: 6\n```",
+  "error": null,
+  "elapsed_seconds": 2.89,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

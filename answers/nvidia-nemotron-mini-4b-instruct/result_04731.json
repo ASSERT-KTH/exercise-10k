@@ -1,0 +1,9 @@
+{
+  "id": 4731,
+  "title": "Function with Type Hints",
+  "prompt": "Create a function that takes a string as an argument and returns its length. The function should have type hints for the input and output types.\nSample Input: 'hello'\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n\n```python\ndef string_length(s: str) -> int:\n    \"\"\"\n    This function takes a string as an argument and returns its length.\n\n    :param s: The input string.\n    :return: The length of the input string.\n    \"\"\"\n    if not isinstance(s, str):\n        raise TypeError(\"The input must be a string.\")\n\n    return len(s)\n```\n\nThis function checks if the input is a string and raises a `TypeError` if it's not. Then, it uses the built-in `len()` function to get the length of the string. The function is annotated with type hints, indicating that it expects a string as input and returns an integer as output.\n\nHere's an example of how you can use this function:\n\n```python\nprint(string_length('hello'))  # Output: 5\n```",
+  "error": null,
+  "elapsed_seconds": 2.37,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7038,
+  "title": "Conditional Student Grades",
+  "prompt": "Write a program that takes a student's score as input and outputs their corresponding grade based on the following conditions: score >= 90 (A), score >= 80 (B), score >= 70 (C), score >= 60 (D), score < 60 (F). Handle cases where the input score is not within the valid range of 0 to 100.\nSample Input: 85\nSample Output: B\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef get_grade(score):\n    \"\"\"\n    Converts a student's score to a corresponding grade.\n\n    :param score: The student's score as an integer between 0 and 100.\n    :return: The corresponding grade as a string (A, B, C, D, or F).\n    \"\"\"\n    if not isinstance(score, int) or score < 0 or score > 100:\n        return \"Invalid score. Please enter a score between 0 and 100.\"\n\n    if score >= 90:\n        return \"A\"\n    elif score >= 80:\n        return \"B\"\n    elif score >= 70:\n        return \"C\"\n    elif score >= 60:\n        return \"D\"\n    else:\n        return \"F\"\n\n# Get user input and convert it to a score\nwhile True:\n    try:\n        score = int(input(\"Enter a score between 0 and 100: \"))\n        break\n    except ValueError:\n        print(\"That's not a valid score. Please try again.\")\n\n# Output the corresponding grade\nprint(get_grade(score))\n```\n\nThis program defines a function `get_grade` that checks if the input is a valid score and then returns the corresponding grade. The main part of the program gets user input, converts it to an integer, and calls the `get_grade` function to output the corresponding grade.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

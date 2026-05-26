@@ -1,0 +1,9 @@
+{
+  "id": 3568,
+  "title": "Dictionary Sorting",
+  "prompt": "Write a function that sorts a dictionary by keys or values\nSample Input: {\"a\": 3, \"b\": 1, \"c\": 2} and sorting (by values)\nSample Output: {\"b\": 1, \"c\": 2, \"a\": 3}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that sorts a dictionary by its keys or values, depending on the sorting_type parameter:\n```python\ndef sort_dict(d, sorting_type='keys'):\n    \"\"\"\n    Sort a dictionary by keys or values.\n\n    Parameters:\n    d (dict): The dictionary to sort.\n    sorting_type (str): The type of sorting to perform. Can be 'keys' or 'values'.\n\n    Returns:\n    dict: The sorted dictionary.\n    \"\"\"\n    if sorting_type not in ['keys', 'values']:\n        raise ValueError(\"Invalid sorting type. Choose either 'keys' or 'values'.\")\n\n    if sorting_type == 'keys':\n        return dict(sorted(d.items()))\n    else:\n        return dict(sorted(d.items(), key=lambda item: item[1]))\n```\nHere's an example of how to use this function:\n```python\nd = {\"a\": 3, \"b\": 1, \"c\": 2}\nsorted_d = sort_dict(d, sorting_type='values')\nprint(sorted_d)  # Output: {'b': 1, 'c': 2, 'a': 3}\n```\nThis function first checks if the `sorting_type` parameter is valid (either 'keys' or 'values'). Then, it sorts the dictionary items based on the specified type using the built-in `sorted()` function. The `key` argument is set to a lambda function that extracts the value from each item, allowing us to sort by values.",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6387,
+  "title": "Password Validator",
+  "prompt": "Create a program that takes in a password and checks if it's valid. If the password is at least 8 characters long and contains at least one uppercase letter, one lowercase letter, and one digit, then it's valid\nSample Input: Password123\nSample Output: Valid password\n",
+  "answer": "Sure, I'd be happy to help you create a program that checks if a password is valid. Here's an example Python program that meets your requirements:\n\n```python\nimport re\n\ndef is_valid_password(password):\n    \"\"\"Check if the given password is valid.\n\n    A password is valid if it is at least 8 characters long and contains at least one uppercase letter,\n    one lowercase letter, and one digit.\n\n    Args:\n    password (str): The password to check.\n\n    Returns:\n    bool: True if the password is valid, False otherwise.\n    \"\"\"\n\n    # Check if the password is at least 8 characters long\n    if len(password) < 8:\n        return False\n\n    # Check if the password contains at least one uppercase letter, one lowercase letter, and one digit\n    if not re.search(r'[A-Z]', password) or not re.search(r'[a-z]', password) or not re.search(r'\\d', password):\n        return False\n\n    return True\n\n# Example usage\npassword = input(\"Enter a password: \")\nif is_valid_password(password):\n    print(f\"Valid password: {password}\")\nelse:\n    print(\"Invalid password\")\n```\n\nThis program defines a function `is_valid_password` that checks if a given password is valid. It first checks if the password is at least 8 characters long, and then checks if it contains at least one uppercase letter, one lowercase letter, and one digit using a regular expression. The example usage prompts the user to enter a password and prints a message indicating whether the password is valid or not.",
+  "error": null,
+  "elapsed_seconds": 3.74,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

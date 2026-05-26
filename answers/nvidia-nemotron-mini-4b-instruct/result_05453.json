@@ -1,0 +1,9 @@
+{
+  "id": 5453,
+  "title": "Email Extractor",
+  "prompt": "Write a program that takes a string as input and prints out all the email addresses found in the string\nSample Input: Contact me at john.doe@example.com or jane.doe@example.com\nSample Output: ['john.doe@example.com', 'jane.doe@example.com']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a string as input and prints out all the email addresses found in the string, using a regular expression to match email addresses in a standard format. The program also handles case-insensitivity and allows for optional domain names.\n\n```python\nimport re\n\ndef find_emails(text):\n    \"\"\"\n    Find all email addresses in the given text and return them as a list.\n\n    :param text: The input text to search for email addresses.\n    :return: A list of email addresses found in the text.\n    \"\"\"\n    # Regular expression pattern for matching email addresses\n    pattern = r\"(?i)\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b\"\n\n    # Find all matches in the text and return them as a list\n    return [match.group() for match in re.finditer(pattern, text)]\n\n# Example usage\ninput_text = \"Contact me at john.doe@example.com or jane.doe@example.com\"\nemails = find_emails(input_text)\nprint(emails)  # Output: ['john.doe@example.com', 'jane.doe@example.com']\n```\n\nThis program defines a function `find_emails` that takes a string as input and returns a list of email addresses found in the text. The regular expression pattern used in the function matches email addresses in a standard format, allowing for optional domain names and case-insensitivity. The example usage at the end of the program demonstrates how to use the function to find email addresses in a sample input string.",
+  "error": null,
+  "elapsed_seconds": 3.86,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

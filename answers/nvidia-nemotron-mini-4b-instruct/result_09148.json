@@ -1,0 +1,9 @@
+{
+  "id": 9148,
+  "title": "Variable Scope",
+  "prompt": "Create a variable inside a function and access it outside the function, then print out the variable's value.\nSample Input: None\nSample Output: Hello World\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example Python function that demonstrates how to create a variable inside the function and access it outside the function:\n\n```python\ndef create_variable():\n    \"\"\"\n    This function creates a variable and returns its value.\n    \"\"\"\n    global my_variable  # Declare that we're modifying a global variable\n    my_variable = \"Hello World\"\n    return my_variable\n\n# Access the variable outside the function\nprint(create_variable())  # Output: Hello World\n```\n\nIn this example, we define a function `create_variable()` that creates a global variable `my_variable` with the value \"Hello World\". We use the `global` keyword to indicate that we're modifying a global variable. Then, we call the function and print its return value.\n\nIf you want to create a variable inside the function but not make it global, you can create a local variable and return its value instead:\n\n```python\ndef create_variable():\n    \"\"\"\n    This function creates a variable and returns its value.\n    \"\"\"\n    my_variable = \"Hello World\"\n    return my_variable\n\n# Access the variable outside the function\nprint(create_variable())  # Output: Hello World\n```\n\nIn this example, we create a local variable `my_variable` inside the function and return its value.",
+  "error": null,
+  "elapsed_seconds": 3.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

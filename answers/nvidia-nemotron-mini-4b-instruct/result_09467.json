@@ -1,0 +1,9 @@
+{
+  "id": 9467,
+  "title": "Morse Code Translator",
+  "prompt": "Write a program that translates English text into Morse code and vice versa.\nSample Input: hello\nSample Output: .... . .-.. .-.. ---\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that translates English text into Morse code and vice versa using the following mappings:\n\nEnglish letters: A-.-, B-...-, C-.-., D-..., E-., F-..-.-, G-.---, H..-, I..-.-, J-.--, K-.-., L.-..-, M---, N-.-., O-----, P.-.-., Q--.-., R-.-, S.-..., T-., U-..-, V-...-, W-.-., X-..-.-, Y-.---, Z-.----\n\nAnd the Morse code alphabet: .- . - .. --- -- .. - . -.. --- .. --- .\n\n```python\ndef english_to_morse(text):\n    morse = \"\"\n    for char in text:\n        if char.isalpha():\n            morse += morse_alphabet[char.upper()]\n        else:\n            morse += char\n    return morse\n\ndef morse_to_english(morse):\n    english = \"\"\n    for char in morse:\n        if char in morse_alphabet:\n            english += morse_alphabet[char]\n        elif char == \"-\":\n            english += \" \"\n    return english\n\n# Test the functions\nenglish_text = \"hello\"\nmorse_text = english_to_morse(english_text)\nprint(f\"English text: {english_text}\")\nprint(f\"Morse code: {morse_text}\")\n\nmorse_text = \".... . .-.. .-.. ---\"\nenglish_text = morse_to_english(morse_text)\nprint(f\"Morse code: {morse_text}\")\nprint(f\"English text: {english_text}\")\n```\n\nThis program defines two functions: `english_to_morse()` and `morse_to_english()`. The first function takes an English text as input and returns its corresponding Morse code, while the second function takes a Morse code string as input and returns its corresponding English text. The program then tests these functions with sample inputs and outputs.",
+  "error": null,
+  "elapsed_seconds": 5.01,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

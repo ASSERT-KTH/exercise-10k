@@ -1,0 +1,9 @@
+{
+  "id": 908,
+  "title": "Variable(Vector) Operations",
+  "prompt": "Write a program that performs basic vector operations (e.g., addition, subtraction, scalar multiplication) on a list of variables.\nSample Input: vector1 = [1, 2, 3], vector2 = [4, 5, 6], scalar = 2\nSample Output: vector1 + vector2 = [5, 7, 9], 2 * vector1 = [2, 4, 6]\n",
+  "answer": "Here's a Python program that performs basic vector operations on a list of variables. This program assumes that the input list is a list of numbers and the scalar is also a number.\n\n```python\ndef vector_operations(vector1, vector2, scalar):\n    # Addition\n    result1 = [num1 + num2 for num1, num2 in zip(vector1, vector2)]\n    result2 = [scalar * num for num in vector1]\n\n    # Subtraction\n    result3 = [num1 - num2 for num1, num2 in zip(vector1, vector2)]\n\n    return result1, result2, result3\n\n# Sample Input\nvector1 = [1, 2, 3]\nvector2 = [4, 5, 6]\nscalar = 2\n\n# Call the function\nresult1, result2, result3 = vector_operations(vector1, vector2, scalar)\n\n# Print the results\nprint(\"vector1 + vector2 =\", result1)\nprint(\"2 * vector1 =\", result2)\nprint(\"vector1 - vector2 =\", result3)\n```\n\nWhen you run this program with the sample input, it will output:\n\n```\nvector1 + vector2 = [5, 7, 9]\n2 * vector1 = [2, 4, 6]\nvector1 - vector2 = [-3, -3, -3]\n```",
+  "error": null,
+  "elapsed_seconds": 3.31,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

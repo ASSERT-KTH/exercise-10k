@@ -1,0 +1,9 @@
+{
+  "id": 2213,
+  "title": "Password Strength Checker",
+  "prompt": "Write a program that takes a password as input and checks its strength. Print 'Strong password' if the password contains at least 8 characters, 1 uppercase letter, 1 lowercase letter, and 1 digit, otherwise print 'Weak password'\nSample Input: P@ssw0rd\nSample Output: Strong password\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\nimport re\n\ndef check_password_strength(password):\n    \"\"\"\n    Check the strength of a given password.\n\n    :param password: str, the password to check\n    :return: str, 'Strong password' if the password meets the requirements, 'Weak password' otherwise\n    \"\"\"\n    # Check if the password is at least 8 characters long\n    if len(password) < 8:\n        return \"Weak password\"\n\n    # Check for at least one uppercase letter\n    if not re.search(r'[A-Z]', password):\n        return \"Weak password\"\n\n    # Check for at least one lowercase letter\n    if not re.search(r'[a-z]', password):\n        return \"Weak password\"\n\n    # Check for at least one digit\n    if not re.search(r'\\d', password):\n        return \"Weak password\"\n\n    # If all checks pass, the password is strong\n    return \"Strong password\"\n\n# Example usage\npassword = input(\"Enter a password: \")\nprint(check_password_strength(password))\n```\n\nThis program uses the `re` module to check for specific patterns in the password. The `re.search()` function is used to check for the presence of uppercase, lowercase, and digit characters. If any of these checks fail, the function returns \"Weak password\". Otherwise, it returns \"Strong password\".",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

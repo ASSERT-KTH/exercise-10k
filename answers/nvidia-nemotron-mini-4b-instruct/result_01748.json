@@ -1,0 +1,9 @@
+{
+  "id": 1748,
+  "title": "Array Statistics",
+  "prompt": "Write a program to calculate the mean, median, and mode of an array of integers.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: mean: 3, median: 3, mode: 1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the mean, median, and mode of an array of integers:\n\n```python\ndef calculate_stats(arr):\n    # Calculate the mean\n    total = sum(arr)\n    n = len(arr)\n    mean = total / n\n\n    # Calculate the median\n    arr.sort()\n    n = len(arr)\n    if n % 2 == 0:  # Even number of elements\n        median = (arr[n//2 - 1] + arr[n//2]) / 2\n    else:  # Odd number of elements\n        median = arr[n//2]\n\n    # Calculate the mode (if there is only one mode, we can simply check if the element exists in the array)\n    mode = max(set(arr), key=arr.count)\n\n    return {\n        'mean': mean,\n        'median': median,\n        'mode': mode\n    }\n\n# Sample input\narr = [1, 2, 3, 4, 5]\nresult = calculate_stats(arr)\n\n# Print the results\nprint(\"mean:\", result['mean'])\nprint(\"median:\", result['median'])\nprint(\"mode:\", result['mode'])\n```\n\nWhen you run this program with the sample input `[1, 2, 3, 4, 5]`, it will output:\n\n```\nmean: 3\nmedian: 3\nmode: 1\n```",
+  "error": null,
+  "elapsed_seconds": 3.5,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

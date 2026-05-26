@@ -1,0 +1,9 @@
+{
+  "id": 8107,
+  "title": "Letter Counter",
+  "prompt": "Write a program that takes a string as input and returns the number of letters in the string.\nSample Input: Hello World\nSample Output: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef count_letters(input_string: str) -> int:\n    \"\"\"\n    This function takes a string as input and returns the number of letters in the string.\n\n    :param input_string: The string to count the letters of.\n    :return: The number of letters in the input string.\n    \"\"\"\n    # Use the built-in len() function to count the number of characters in the string,\n    # excluding any whitespace or non-letter characters.\n    return len([char for char in input_string.lower() if char.isalpha()])\n```\nHere's how this program works:\n\n* The function takes an input string as a parameter and returns an integer representing the number of letters in the string.\n* We use a list comprehension to iterate over each character in the input string, converting it to lowercase using the `lower()` method to ensure case-insensitive comparison.\n* We then use the `isalpha()` method to check if each character is a letter (i.e., not whitespace or punctuation).\n* Finally, we use the `len()` function to count the number of characters that pass the letter check.\n\nHere are some examples of how you can use this function:\n```python\nprint(count_letters(\"Hello World\"))  # Output: 10\nprint(count_letters(\"Hello, World!\"))  # Output: 11\nprint(count_letters(\"123 abc\"))  # Output: 3\nprint(count_letters(\"   ABC   \"))  # Output: 3\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 4.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

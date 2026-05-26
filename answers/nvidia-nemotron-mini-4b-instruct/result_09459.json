@@ -1,0 +1,9 @@
+{
+  "id": 9459,
+  "title": "Random Number Generator",
+  "prompt": "Write a program that generates a random number within a given range.\nSample Input: 1 10\nSample Output: 7\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates a random integer within a given range:\n\n```python\nimport random\n\ndef generate_random_number(min_value, max_value):\n    \"\"\"\n    Generates a random integer within the given range [min_value, max_value].\n\n    :param min_value: The minimum value of the range.\n    :param max_value: The maximum value of the range.\n    :return: A random integer within the given range.\n    \"\"\"\n    # Ensure the input values are integers\n    min_value = int(min_value)\n    max_value = int(max_value)\n\n    # If the minimum value is greater than the maximum value, swap them\n    if min_value > max_value:\n        min_value, max_value = max_value, min_value\n\n    # Generate a random integer within the valid range\n    random_number = random.randint(min_value, max_value)\n\n    return random_number\n\n# Example usage\nmin_value = 1\nmax_value = 10\nprint(generate_random_number(min_value, max_value))  # Output: A random integer between 1 and 10\n```\n\nThis program defines a function `generate_random_number` that takes two integer arguments, `min_value` and `max_value`, and returns a random integer within the given range. The function first ensures that the input values are integers and then generates a random integer using the `random.randint()` function. The example usage at the end of the program demonstrates how to use the function to generate a random integer between 1 and 10.",
+  "error": null,
+  "elapsed_seconds": 4.15,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

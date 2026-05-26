@@ -1,0 +1,9 @@
+{
+  "id": 5229,
+  "title": "Student Eligibility Checker",
+  "prompt": "Write a program that takes a student's age and grade level as input, and prints 'Eligible' if the student is eligible to participate in a program (ages 13-19, grades 7-12), and 'Not Eligible' otherwise.\nSample Input: 15 10\nSample Output: Eligible\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef is_eligible(age, grade):\n    \"\"\"\n    Determines if a student is eligible to participate in a program.\n\n    :param age: The student's age.\n    :param grade: The student's grade level (integer between 7 and 12).\n    :return: A string indicating whether the student is eligible ('Eligible' or 'Not Eligible').\n    \"\"\"\n    # Check if the age and grade are valid\n    if not (13 <= age <= 19) or not (7 <= grade <= 12):\n        return \"Invalid input. Please enter an age between 13 and 19 and a grade level between 7 and 12.\"\n\n    # Determine eligibility based on age and grade\n    if 7 <= grade <= 9:\n        return \"Eligible\" if 13 <= age <= 15 else \"Not Eligible\"\n    elif 10 <= grade <= 12:\n        return \"Eligible\" if 16 <= age <= 19 else \"Not Eligible\"\n\n# Get user input\nage = int(input(\"Enter the student's age: \"))\ngrade = int(input(\"Enter the student's grade level (7-12): \"))\n\n# Print the result\nprint(is_eligible(age, grade))\n```\nThis program defines a function `is_eligible` that takes a student's age and grade as input and returns a string indicating whether they are eligible to participate in the program. The function checks if the age and grade are valid, and then determines eligibility based on the grade level. The program then gets user input for age and grade, calls the `is_eligible` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 4.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

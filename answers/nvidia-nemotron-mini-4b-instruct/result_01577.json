@@ -1,0 +1,9 @@
+{
+  "id": 1577,
+  "title": "Filter Function",
+  "prompt": "Write a function that uses the filter function to filter a list of numbers and return the numbers that satisfy a given condition.\nSample Input: [1, 2, 3, 4, 5], is_even\nSample Output: [2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef filter_numbers(numbers, condition):\n    \"\"\"\n    Filters a list of numbers using the filter function and returns the numbers that satisfy a given condition.\n\n    Parameters:\n    numbers (list): A list of numbers.\n    condition (callable): A function that takes a single argument (a number) and returns a boolean value.\n                          The function should return True if the number satisfies the condition, and False otherwise.\n\n    Returns:\n    list: A list of numbers that satisfy the condition.\n    \"\"\"\n    # Use the filter function to apply the condition to each number in the list\n    filtered_numbers = list(filter(condition, numbers))\n\n    return filtered_numbers\n```\nHere's an example of how you can use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\n\ndef is_even(num):\n    return num % 2 == 0\n\nfiltered_numbers = filter_numbers(numbers, is_even)\nprint(filtered_numbers)  # Output: [2, 4]\n```\nThis function first defines a helper function `is_even` that checks if a number is even by checking if the remainder of dividing it by 2 is 0. Then, it uses the `filter` function to apply this condition to each number in the input list, and returns the resulting list of even numbers.",
+  "error": null,
+  "elapsed_seconds": 4.62,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2208,
+  "title": "Name Validator",
+  "prompt": "Write a program that takes a user's name as input and checks if it contains only letters and spaces. Print 'Valid name' if valid, otherwise print 'Invalid name'\nSample Input: John Doe\nSample Output: Valid name\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef is_valid_name(name):\n    \"\"\"Check if a given name contains only letters and spaces.\"\"\"\n    # Use a regular expression to match only letters and spaces\n    regex = r'^[a-zA-Z ]+$'\n    return bool(re.match(regex, name))\n\n# Get user input\nuser_name = input(\"Please enter your name: \")\n\n# Check if the name is valid\nif is_valid_name(user_name):\n    print(\"Valid name\")\nelse:\n    print(\"Invalid name\")\n```\nThis program defines a function `is_valid_name` that checks if a given string contains only letters and spaces using a regular expression. The main part of the program gets user input, calls the function to check if the name is valid, and prints the appropriate message.\n\nHere's an example of how the program might work:\n```\nPlease enter your name: John Doe\nValid name\n```",
+  "error": null,
+  "elapsed_seconds": 9.14,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

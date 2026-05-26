@@ -1,0 +1,9 @@
+{
+  "id": 483,
+  "title": "Array Reduction",
+  "prompt": "Write a program that takes an array and a reduction function as input, and returns the result of applying the reduction function to all elements in the array.\nSample Input: [1, 2, 3, 4, 5], lambda x, y: x + y\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. It uses the built-in `reduce` function from the `functools` module, which applies a binary function (in this case, a lambda function) to an iterable (in this case, an array) from left to right, reducing it to a single value.\n\n```python\nfrom functools import reduce\n\ndef array_reduction(arr, func):\n    \"\"\"\n    Applies the given reduction function to all elements in the array.\n\n    Parameters:\n    arr (list): The array to apply the reduction function to.\n    func (callable): The binary function to apply to the array elements.\n\n    Returns:\n    int: The result of applying the reduction function to all elements in the array.\n    \"\"\"\n\n    # Check if the input is a list and the function is callable\n    if not isinstance(arr, list) or not callable(func):\n        raise ValueError(\"Input should be a list and the function should be callable.\")\n\n    # Apply the reduction function to all elements in the array\n    result = reduce(func, arr)\n\n    return result\n\n# Sample usage\narr = [1, 2, 3, 4, 5]\nfunc = lambda x, y: x + y\nprint(array_reduction(arr, func))  # Output: 15\n```\n\nThis program checks if the input is valid and then applies the reduction function to all elements in the array using the `reduce` function. The result is returned as an integer.",
+  "error": null,
+  "elapsed_seconds": 3.55,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

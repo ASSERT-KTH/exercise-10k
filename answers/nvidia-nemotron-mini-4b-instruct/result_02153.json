@@ -1,0 +1,9 @@
+{
+  "id": 2153,
+  "title": "Csv Input and Output",
+  "prompt": "Write a program that reads a CSV file and prints out the file's contents.\nSample Input: name,age\nJohn Doe,25\nSample Output: name,age\nJohn Doe,25\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that reads a CSV file and prints out its contents:\n```python\nimport csv\n\ndef print_csv_file(file_path):\n    \"\"\"Print the contents of a CSV file.\"\"\"\n    with open(file_path, newline='') as csvfile:\n        reader = csv.reader(csvfile)\n        for row in reader:\n            print(', '.join(row))\n\n# Replace 'your_file.csv' with the path to your CSV file\nprint_csv_file('your_file.csv')\n```\nThis program defines a function `print_csv_file` that takes a file path as an argument and prints out each row of the CSV file, separated by commas and spaces. The `csv` module is used to read the CSV file using a `reader` object, which allows us to iterate over each row in the file.\n\nWhen you run this program, replace `'your_file.csv'` with the path to your CSV file. The program will then print out each row of the CSV file, separated by commas and spaces, just like the sample output you provided.",
+  "error": null,
+  "elapsed_seconds": 2.6,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

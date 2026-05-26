@@ -1,0 +1,9 @@
+{
+  "id": 8738,
+  "title": "Basic Variable Validation",
+  "prompt": "Validate variables against a set of rules to ensure they are correct.\nSample Input: 123\nSample Output: valid integer\n",
+  "answer": "Sure, I'd be happy to help you validate variables against a set of rules. Here's a Python function that meets your requirements:\n```python\ndef validate_integer(value):\n    \"\"\"\n    Validate a given value against the rules:\n    - The value must be a string.\n    - The string must only contain digits (0-9).\n    - The string must represent a non-negative integer.\n\n    :param value: The value to validate.\n    :return: A string indicating whether the value is valid or not.\n    \"\"\"\n    # Check if the value is a string\n    if not isinstance(value, str):\n        return \"Not a string.\"\n\n    # Check if the string contains only digits\n    if not value.isdigit():\n        return \"Not a valid integer.\"\n\n    # Check if the string represents a non-negative integer\n    try:\n        int(value)\n    except ValueError:\n        return \"Not a valid integer.\"\n\n    return \"valid integer\"\n```\nHere's an example of how to use this function:\n```python\nprint(validate_integer(\"123\"))  # Output: valid integer\nprint(validate_integer(\"abc\"))  # Output: Not a string.\nprint(validate_integer(\"123a\"))  # Output: Not a valid integer.\nprint(validate_integer(\"0\"))     # Output: valid integer\nprint(validate_integer(\"-1\"))    # Output: Not a valid integer.\n```\nI hope this helps! Let me know if you have any questions or need further clarification.",
+  "error": null,
+  "elapsed_seconds": 3.73,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

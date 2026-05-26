@@ -1,0 +1,9 @@
+{
+  "id": 8989,
+  "title": "String Permutation",
+  "prompt": "Write a function that takes a string as input and returns all possible permutations of the string.\nSample Input: ['abc']\nSample Output: ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses recursion to generate all possible permutations of a given string. This function assumes that the input string contains only lowercase letters.\n\n```python\ndef generate_permutations(s):\n    \"\"\"\n    Generate all possible permutations of a given string.\n\n    :param s: The input string.\n    :return: A list of all possible permutations of the input string.\n    \"\"\"\n    if len(s) == 1:\n        return [s]\n\n    result = []\n    for i in range(len(s)):\n        for perm in generate_permutations(s[:i] + s[i+1:]):\n            result.append(s[i] + perm)\n\n    return result\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(generate_permutations('abc'))  # Output: ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']\n```\n\nThis function works by recursively generating permutations of the first `n-1` characters of the input string, and then appending each of these permutations to the end of the current character. This process is repeated for each character in the input string, resulting in all possible permutations.",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

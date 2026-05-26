@@ -1,0 +1,9 @@
+{
+  "id": 3314,
+  "title": "Array Zip",
+  "prompt": "Write a program that takes two arrays as input, and returns a new array containing the elements of the two arrays, but paired together.\nSample Input: [1, 2, 3], [4, 5, 6]\nSample Output: [(1, 4), (2, 5), (3, 6)]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes two arrays as input and returns a new array containing the elements of the two arrays, paired together:\n```python\ndef pair_arrays(arr1, arr2):\n    \"\"\"\n    Takes two arrays as input and returns a new array containing the elements of the two arrays,\n    paired together.\n\n    :param arr1: The first array\n    :param arr2: The second array\n    :return: A new array containing the paired elements of arr1 and arr2\n    \"\"\"\n    # Check if the lengths of the arrays are equal\n    if len(arr1) != len(arr2):\n        raise ValueError(\"The lengths of the input arrays must be equal.\")\n\n    # Create a new array to store the paired elements\n    paired_arr = []\n\n    # Iterate over both arrays simultaneously and add the paired elements to the new array\n    for i in range(len(arr1)):\n        paired_arr.append((arr1[i], arr2[i]))\n\n    return paired_arr\n```\nHere's an example of how to use this function:\n```python\narr1 = [1, 2, 3]\narr2 = [4, 5, 6]\n\npaired_arr = pair_arrays(arr1, arr2)\nprint(paired_arr)  # Output: [(1, 4), (2, 5), (3, 6)]\n```\nThis function first checks if the lengths of the input arrays are equal, and raises a `ValueError` if they are not. Then, it creates a new array to store the paired elements, and iterates over both arrays simultaneously, adding each pair to the new array. Finally, it returns the new array containing the paired elements.",
+  "error": null,
+  "elapsed_seconds": 5.43,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

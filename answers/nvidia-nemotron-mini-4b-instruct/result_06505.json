@@ -1,0 +1,9 @@
+{
+  "id": 6505,
+  "title": "Float Operations",
+  "prompt": "Write a program to perform basic float operations (addition, subtraction, multiplication, division).\nSample Input: 2.5 + 3.7\nSample Output: 6.2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that performs basic float operations (addition, subtraction, multiplication, and division) based on the user's input:\n\n```python\ndef perform_float_operation():\n    \"\"\"Perform basic float operations based on user input.\"\"\"\n\n    # Get user input\n    while True:\n        user_input = input(\"Enter a mathematical expression with float operands (e.g., 2.5 + 3.7): \")\n\n        # Check if the input is a valid mathematical expression\n        try:\n            result = eval(user_input)\n            break\n        except ValueError:\n            print(\"Invalid input. Please enter a valid mathematical expression.\")\n\n    # Perform the operation and print the result\n    operation = user_input.split()[0]\n    if operation == \"+\":\n        print(f\"{float(user_input.split()[1])} + {float(user_input.split()[-1])} = {result}\")\n    elif operation == \"-\":\n        print(f\"{float(user_input.split()[1])} - {float(user_input.split()[-1])} = {result}\")\n    elif operation == \"*\":\n        print(f\"{float(user_input.split()[1])} * {float(user_input.split()[-1])} = {result}\")\n    elif operation == \"/\":\n        print(f\"{float(user_input.split()[1])} / {float(user_input.split()[-1])} = {result}\")\n    else:\n        print(\"Invalid operation. Please enter a valid mathematical expression.\")\n\n\n# Call the function\nperform_float_operation()\n```\n\nThis program prompts the user to enter a mathematical expression with float operands, validates the input, and performs the corresponding operation before printing the result.",
+  "error": null,
+  "elapsed_seconds": 4.3,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

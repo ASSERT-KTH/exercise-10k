@@ -1,0 +1,9 @@
+{
+  "id": 2078,
+  "title": "Generating Random Permutations",
+  "prompt": "Write a program that generates a random permutation of a given list of numbers.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [3, 5, 1, 2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates a random permutation of a given list of numbers using the Fisher-Yates shuffle algorithm. This algorithm is a simple and efficient way to generate a random permutation of a given list.\n\n```python\nimport random\n\ndef generate_random_permutation(numbers):\n    \"\"\"\n    Generates a random permutation of the given list of numbers.\n\n    :param numbers: The list of numbers to generate a permutation for.\n    :return: A new list containing the random permutation of the input list.\n    \"\"\"\n    # Create a copy of the input list to avoid modifying the original list\n    n = len(numbers)\n    shuffled_numbers = numbers.copy()\n\n    # Fisher-Yates shuffle algorithm\n    for i in range(n, 0, -1):\n        j = random.randint(0, i)\n        shuffled_numbers[i], shuffled_numbers[j] = shuffled_numbers[j], shuffled_numbers[i]\n\n    return shuffled_numbers\n\n# Sample input\nnumbers = [1, 2, 3, 4, 5]\nrandom_permutation = generate_random_permutation(numbers)\n\n# Sample output\nprint(f\"Sample Input: {numbers}\")\nprint(f\"Sample Output: {random_permutation}\")\n```\n\nWhen you run this program with the sample input `[1, 2, 3, 4, 5]`, it will output a random permutation of the list, such as `[3, 5, 1, 2, 4]`.",
+  "error": null,
+  "elapsed_seconds": 3.67,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

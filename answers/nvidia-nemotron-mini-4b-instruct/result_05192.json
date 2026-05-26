@@ -1,0 +1,9 @@
+{
+  "id": 5192,
+  "title": "Calendar Event Scheduler",
+  "prompt": "Write a program that asks the user for a list of events with their start and end times, and then prints out a schedule of the events for the day.\nSample Input: ['Event 1: 9:00 AM - 10:00 AM', 'Event 2: 10:30 AM - 12:00 PM']\nSample Output: ['9:00 AM - 10:00 AM: Event 1', '10:30 AM - 12:00 PM: Event 2']\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef schedule_events(event_list):\n    \"\"\"\n    Prints a schedule of the given events for the day.\n\n    :param event_list: List of strings, where each string represents an event with its start and end times.\n    \"\"\"\n\n    # Initialize an empty list to store the formatted event strings\n    schedule = []\n\n    # Iterate over the event list\n    for event in event_list:\n        # Split the event string into start and end times\n        start_time, end_time = event.split(' - ')\n\n        # Format the event string and add it to the schedule\n        schedule.append(f'{start_time}: {event[len(start_time) + 2:-2]}: {event}')\n\n    # Print the schedule\n    print('\\n'.join(schedule))\n\n\n# Example usage\nevent_list = ['Event 1: 9:00 AM - 10:00 AM', 'Event 2: 10:30 AM - 12:00 PM']\nschedule_events(event_list)\n```\n\nThis program defines a function `schedule_events` that takes a list of event strings as input and prints out a schedule of the events for the day. The function splits each event string into start and end times, formats the event string with the start and end times, and adds it to a list. Finally, it prints out the formatted event strings using the `print` function and the `join` method.",
+  "error": null,
+  "elapsed_seconds": 3.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

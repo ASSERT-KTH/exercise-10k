@@ -1,0 +1,9 @@
+{
+  "id": 4250,
+  "title": "Movie Rating System",
+  "prompt": "Create a program that allows users to rate movies based on their genre. The program should take the movie title, genre, and rating as input, and print the average rating for the genre.\nSample Input: Movie1 Action 5\nSample Output: 5.0\n",
+  "answer": "Here's a Python program that meets your requirements. This program uses a dictionary to store the movie ratings by genre. After receiving user input, it calculates the average rating for each genre and prints the results.\n\n```python\n# Initialize an empty dictionary to store movie ratings\nmovie_ratings = {}\n\n# Function to get user input and add it to the dictionary\ndef get_rating():\n    movie_title = input(\"Enter movie title: \")\n    genre = input(\"Enter genre: \")\n    rating = float(input(\"Enter rating: \"))\n\n    if genre not in movie_ratings:\n        movie_ratings[genre] = []\n\n    movie_ratings[genre].append(rating)\n\n# Function to calculate the average rating for each genre\ndef calculate_averages():\n    for genre, ratings in movie_ratings.items():\n        total_ratings = sum(ratings)\n        num_ratings = len(ratings)\n        avg_rating = total_ratings / num_ratings\n        print(f\"{genre}: {avg_rating:.1f}\")\n\n# Get user input and calculate averages\nwhile True:\n    get_rating()\n    user_input = input(\"Do you want to add more ratings? (yes/no): \").lower()\n    if user_input == \"no\":\n        break\n\ncalculate_averages()\n```\n\nThis program will continue to ask for user input until the user decides to stop. The average rating for each genre will be printed after all the ratings have been added.",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

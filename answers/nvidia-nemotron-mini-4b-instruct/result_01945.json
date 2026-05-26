@@ -1,0 +1,9 @@
+{
+  "id": 1945,
+  "title": "Array Element Replacement",
+  "prompt": "Write a program that takes an array, an index, and a value as input and replaces the element at that index with the given value.\nSample Input: [1, 2, 3, 4, 5], 2, 10\nSample Output: [1, 2, 10, 4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef replace_array_element(arr, index, value):\n    \"\"\"\n    Replaces the element at the given index with the given value.\n\n    :param arr: The input array\n    :param index: The index of the element to replace\n    :param value: The value to replace the element with\n    :return: The modified array\n    \"\"\"\n    # Check if the index is within the bounds of the array\n    if index < 0 or index >= len(arr):\n        raise IndexError(\"Index out of bounds\")\n\n    # Replace the element at the given index with the new value\n    arr[index] = value\n\n    return arr\n```\nHere's an example of how you can use this function:\n```python\narr = [1, 2, 3, 4, 5]\nindex = 2\nvalue = 10\n\nmodified_arr = replace_array_element(arr, index, value)\nprint(modified_arr)  # Output: [1, 2, 10, 4, 5]\n```\nThis function checks if the index is within the bounds of the array and raises an `IndexError` if it's not. Then, it replaces the element at the given index with the new value and returns the modified array.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6908,
+  "title": "GRADE CLASSIFIER",
+  "prompt": "Write a program to classify a student's grade based on their score. The program should use conditional statements to determine the grade. If the score is 90 or above, the grade is 'A'. If the score is between 80 and 89, the grade is 'B'. If the score is between 70 and 79, the grade is 'C'. If the score is between 60 and 69, the grade is 'D'. If the score is below 60, the grade is 'F'.\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef classify_grade(score):\n    \"\"\"\n    Classifies a student's grade based on their score.\n\n    :param score: The student's score as an integer between 0 and 100.\n    :return: A string representing the student's grade ('A', 'B', 'C', 'D', or 'F').\n    \"\"\"\n    # Check if the score is valid (between 0 and 100)\n    if not 0 <= score <= 100:\n        raise ValueError(\"Score must be an integer between 0 and 100.\")\n\n    # Determine the grade based on the score\n    if score >= 90:\n        grade = 'A'\n    elif 80 <= score < 90:\n        grade = 'B'\n    elif 70 <= score < 80:\n        grade = 'C'\n    elif 60 <= score < 70:\n        grade = 'D'\n    else:\n        grade = 'F'\n\n    return grade\n\n# Example usage\nscore = 85\ngrade = classify_grade(score)\nprint(f\"The grade for a score of {score} is {grade}.\")\n```\n\nThis program defines a function `classify_grade` that takes a score as input and returns a string representing the student's grade. The function checks if the score is valid (between 0 and 100) and then uses conditional statements to determine the grade based on the score. The example usage at the end of the program demonstrates how to use the function to classify a student's grade based on a given score.",
+  "error": null,
+  "elapsed_seconds": 4.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

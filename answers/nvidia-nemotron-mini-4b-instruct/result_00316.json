@@ -1,0 +1,9 @@
+{
+  "id": 316,
+  "title": "List Mapping",
+  "prompt": "Write a function that applies a specified transformation to each element of a given list.\nSample Input: [1, 2, 3, 4, 5], double\nSample Output: [2, 4, 6, 8, 10]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that applies a specified transformation (in this case, doubling each element) to each element of a given list:\n```python\ndef apply_transformation(lst, transformation):\n    \"\"\"\n    Applies a specified transformation to each element of a given list.\n\n    Parameters:\n    lst (list): The list to apply the transformation to.\n    transformation (callable): A function that takes a single argument (the element) and returns the transformed value.\n\n    Returns:\n    list: The list with each element transformed by the given function.\n    \"\"\"\n    return [transformation(element) for element in lst]\n```\nYou can use this function by passing in a list and a transformation function as arguments. For example:\n```python\n>>> apply_transformation([1, 2, 3, 4, 5], double)\n[2, 4, 6, 8, 10]\n```\nThis function uses a list comprehension to apply the transformation to each element in the input list. The `transformation` function should take a single argument (the element) and return the transformed value. In the example above, the `double` function simply doubles its input. You can modify this function to apply any transformation you like, such as adding 10, multiplying by 2, or applying a custom function.",
+  "error": null,
+  "elapsed_seconds": 4.54,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

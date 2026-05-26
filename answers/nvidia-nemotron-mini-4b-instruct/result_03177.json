@@ -1,0 +1,9 @@
+{
+  "id": 3177,
+  "title": "Binary Search",
+  "prompt": "Create a function that performs a binary search on a sorted array to find a target value.\nSample Input: [1, 2, 3, 4, 5, 6, 7, 8, 9], 5\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that performs a binary search on a sorted array to find a target value:\n\n```python\ndef binary_search(arr, target):\n    \"\"\"\n    Performs a binary search on a sorted array to find a target value.\n\n    :param arr: The sorted array to search in.\n    :param target: The target value to find.\n    :return: The index of the target value if found, otherwise -1.\n    \"\"\"\n    left, right = 0, len(arr) - 1\n\n    while left <= right:\n        mid = (left + right) // 2\n\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n\n    return -1\n```\n\nThis function works by repeatedly dividing the search interval in half until the target value is found or the interval is empty. If the target value is found, the function returns its index. Otherwise, it returns -1.\n\nHere's an example of how to use this function:\n\n```python\narr = [1, 2, 3, 4, 5, 6, 7, 8, 9]\ntarget = 5\nindex = binary_search(arr, target)\nprint(index)  # Output: 4\n```",
+  "error": null,
+  "elapsed_seconds": 3.47,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

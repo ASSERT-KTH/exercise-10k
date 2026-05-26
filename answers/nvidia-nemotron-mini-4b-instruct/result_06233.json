@@ -1,0 +1,9 @@
+{
+  "id": 6233,
+  "title": "Find First Duplicate in List",
+  "prompt": "Write a program that finds the first duplicate in a given list, i.e., the first element that appears more than once.\nSample Input: [1, 2, 3, 2, 4, 5]\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the first duplicate in a given list:\n```python\ndef find_first_duplicate(lst):\n    \"\"\"\n    Find the first duplicate in a given list.\n\n    :param lst: The list to search in\n    :return: The first duplicate element, or None if there are no duplicates\n    \"\"\"\n    # Create a set to store the elements we've seen so far\n    elements_seen = set()\n\n    # Iterate over each element in the list\n    for element in lst:\n        # If the element has been seen before, it's a duplicate\n        if element in elements_seen:\n            return element\n        # Otherwise, mark it as seen and continue\n        elements_seen.add(element)\n\n    # If we get here, there are no duplicates in the list\n    return None\n```\nHere's an example of how you can use this function:\n```python\nsample_input = [1, 2, 3, 2, 4, 5]\nprint(find_first_duplicate(sample_input))  # Output: 2\n```\nThis function works by iterating over each element in the list and checking if it has been seen before. If an element is a duplicate, the function immediately returns it. If the function finishes iterating over the entire list without finding a duplicate, it returns `None`.\n\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.43,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

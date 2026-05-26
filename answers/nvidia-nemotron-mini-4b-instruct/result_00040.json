@@ -1,0 +1,9 @@
+{
+  "id": 40,
+  "title": "Function to Generate a List of Factorials",
+  "prompt": "Write a function that takes an integer as input and returns a list of factorials from 1 to the given number.\nSample Input: 5\nSample Output: [1, 2, 6, 24, 120]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef factorials(n):\n    \"\"\"\n    Returns a list of factorials from 1 to the given number n.\n\n    :param n: integer\n    :return: list of integers\n    \"\"\"\n    if not isinstance(n, int) or n < 1:\n        raise ValueError(\"Input must be a positive integer\")\n\n    return [i * factorial(i - 1) for i in range(1, n + 1)]\n\ndef factorial(n):\n    \"\"\"\n    Returns the factorial of a given number n.\n\n    :param n: integer\n    :return: integer\n    \"\"\"\n    if not isinstance(n, int) or n < 0:\n        raise ValueError(\"Input must be a non-negative integer\")\n\n    if n == 0:\n        return 1\n    else:\n        return n * factorial(n - 1)\n```\nThis function first checks if the input is a positive integer. If not, it raises a `ValueError`. Then, it uses a list comprehension to create a list of factorials from 1 to the given number. The helper function `factorial()` calculates the factorial of a given number using recursion. It also checks if the input is a non-negative integer and raises a `ValueError` if it's not.\n\nHere's an example of how to use the function:\n```python\nprint(factorials(5))  # Output: [1, 2, 6, 24, 120]\n```",
+  "error": null,
+  "elapsed_seconds": 3.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

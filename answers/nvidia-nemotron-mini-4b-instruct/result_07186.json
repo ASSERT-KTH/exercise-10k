@@ -1,0 +1,9 @@
+{
+  "id": 7186,
+  "title": "Basic Binary Search",
+  "prompt": "Write a program that performs a binary search on a sorted array to find a target element\nSample Input: [1, 2, 3, 4, 5, 6, 7, 8, 9], 5\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that performs a binary search on a sorted array to find a target element:\n```python\ndef binary_search(arr, target):\n    \"\"\"\n    Performs a binary search on a sorted array to find a target element.\n\n    :param arr: The sorted array to search in.\n    :param target: The target element to find.\n    :return: The index of the target element if found, otherwise -1.\n    \"\"\"\n    left, right = 0, len(arr) - 1\n\n    while left <= right:\n        mid = (left + right) // 2\n\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n\n    return -1\n\n# Example usage:\narr = [1, 2, 3, 4, 5, 6, 7, 8, 9]\ntarget = 5\nindex = binary_search(arr, target)\n\nif index != -1:\n    print(f\"The target element {target} is at index {index}.\")\nelse:\n    print(f\"The target element {target} is not in the array.\")\n```\nThis program defines a function `binary_search` that takes a sorted array and a target element as input, and returns the index of the target element if found, or -1 otherwise. The function uses a binary search algorithm to efficiently search for the target element in the sorted array. The example usage at the end of the program demonstrates how to use the function to find the index of a target element in a sorted array.",
+  "error": null,
+  "elapsed_seconds": 4.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6219,
+  "title": "Array of Cumulative Products",
+  "prompt": "Write a function that takes an array of integers as input, and returns a new array where each element is the cumulative product of the elements up to that point in the input array.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [1, 2, 6, 24, 120]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function uses a loop to iterate over the input array and calculates the cumulative product for each element by multiplying it with the previous cumulative product.\n\n```python\ndef cumulative_products(arr):\n    \"\"\"\n    Calculates the cumulative product of an array of integers.\n\n    :param arr: List[int] - The input array of integers.\n    :return: List[int] - The output array of cumulative products.\n    \"\"\"\n    if not arr:\n        return []\n\n    cumulative = [arr[0]]\n    for num in arr[1:]:\n        cumulative.append(cumulative[-1] * num)\n\n    return cumulative\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(cumulative_products([1, 2, 3, 4, 5]))  # Output: [1, 2, 6, 24, 120]\n```\n\nThis function handles the edge case of an empty input array correctly and returns an empty list.",
+  "error": null,
+  "elapsed_seconds": 2.6,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

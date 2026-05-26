@@ -1,0 +1,9 @@
+{
+  "id": 9319,
+  "title": "Single Quote Remover",
+  "prompt": "Write a function that takes a string as input and returns the string with all single quotes removed.\nSample Input: Hello 'World' this 'is' a test\nSample Output: Hello World this is a test\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\nimport re\n\ndef remove_single_quotes(input_string: str) -> str:\n    \"\"\"\n    Takes a string as input and returns the string with all single quotes removed.\n\n    :param input_string: The input string containing single quotes.\n    :return: The output string with all single quotes removed.\n    \"\"\"\n    # Use a regular expression to replace single quotes with nothing,\n    # ensuring that we don't accidentally remove any other types of quotes.\n    return re.sub(r\"\\'\", \"\", input_string)\n```\nHere's an example of how you can use this function:\n```python\nsample_input = \"Hello 'World' this 'is' a test\"\nsample_output = remove_single_quotes(sample_input)\nprint(sample_output)  # Output: Hello World this is a test\n```\nThis function uses the `re` module to perform a regular expression search and replace operation. The regular expression `r\"\\'\"` matches any single quote character, and the replacement string `\"\"` replaces it with nothing, effectively removing the single quote. The `re.sub()` function returns the modified string, and the function returns the modified string as well.",
+  "error": null,
+  "elapsed_seconds": 2.93,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

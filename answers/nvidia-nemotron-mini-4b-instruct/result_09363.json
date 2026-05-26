@@ -1,0 +1,9 @@
+{
+  "id": 9363,
+  "title": "Data Type Checking",
+  "prompt": "Write a program that checks the data type of a variable.\nSample Input: 10\nSample Output: number\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks the data type of a variable and outputs the corresponding type name:\n```python\ndef get_data_type(value):\n    \"\"\"\n    Check the data type of a variable and return its name.\n\n    :param value: The variable to check the data type of.\n    :return: The name of the data type (e.g., \"number\", \"string\", \"boolean\").\n    \"\"\"\n    # Check the data type of the input value\n    if isinstance(value, (int, float)):\n        return \"number\"\n    elif isinstance(value, str):\n        return \"string\"\n    elif isinstance(value, bool):\n        return \"boolean\"\n    else:\n        return \"unknown\"\n\n# Example usage\nsample_input = 10\nprint(f\"The data type of {sample_input} is {get_data_type(sample_input)}.\")\n```\nWhen you run this program with the sample input `10`, it will output:\n```yaml\nThe data type of 10 is number.\n```\nYou can modify the function to check for other data types as needed. For example, to check for lists or tuples, you can add the following lines to the function:\n```python\nelif isinstance(value, (list, tuple)):\n    return \"collection\"\n```\nThis will return \"collection\" for lists and tuples, and \"unknown\" for any other data types.",
+  "error": null,
+  "elapsed_seconds": 3.42,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

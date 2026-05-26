@@ -1,0 +1,9 @@
+{
+  "id": 2362,
+  "title": "Multiplication Table",
+  "prompt": "Create a program that generates a multiplication table for a given number up to 10.\nSample Input: 5\nSample Output: 5 * 1 = 5\n5 * 2 = 10\n5 * 3 = 15\n5 * 4 = 20\n5 * 5 = 25\n5 * 6 = 30\n5 * 7 = 35\n5 * 8 = 40\n5 * 9 = 45\n5 * 10 = 50\n",
+  "answer": "Sure, I'd be happy to help you create a program that generates a multiplication table for a given number up to 10. Here's an example Python program that does that:\n\n```python\ndef generate_multiplication_table(number):\n    \"\"\"\n    Generates a multiplication table for the given number up to 10.\n\n    :param number: The number for which to generate the multiplication table.\n    :return: A string containing the multiplication table.\n    \"\"\"\n    # Ensure the input is a positive integer\n    number = int(number)\n    if number < 1:\n        raise ValueError(\"Input must be a positive integer.\")\n\n    # Format the output as a string\n    output = f\"{number} * 1 = {number}\\n\"\n    for i in range(2, 11):\n        output += f\"{number} * {i} = {number * i}\\n\"\n\n    return output\n\n# Get user input\nuser_input = input(\"Enter a number (up to 10): \")\n\n# Generate and print the multiplication table\ntry:\n    multiplication_table = generate_multiplication_table(user_input)\n    print(multiplication_table)\nexcept ValueError as e:\n    print(e)\n```\n\nWhen you run this program and enter a number (up to 10), it will generate and print the multiplication table for that number. For example, if you enter `5`, the output will be:\n\n```\nEnter a number (up to 10): 5\n5 * 1 = 5\n5 * 2 = 10\n5 * 3 = 15\n5 * 4 = 20\n5 * 5 = 25\n5 * 6 = 30\n5 * 7 = 35\n5 * 8 = 40\n5 * 9 = 45\n5 * 10 = 50\n```",
+  "error": null,
+  "elapsed_seconds": 4.45,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

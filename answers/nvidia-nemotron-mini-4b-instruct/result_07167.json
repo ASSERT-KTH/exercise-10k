@@ -1,0 +1,9 @@
+{
+  "id": 7167,
+  "title": "Basic Searching",
+  "prompt": "Write a program that searches for a specific element in an array\nSample Input: [1, 2, 3, 4, 5], 3\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that searches for a specific element in an array (or list, as it's called in Python). The program will return the index of the element if it's found, or -1 if it's not.\n\n```python\ndef search_element(arr, element):\n    \"\"\"\n    Searches for a specific element in an array.\n\n    :param arr: The array to search in\n    :param element: The element to search for\n    :return: The index of the element if found, -1 otherwise\n    \"\"\"\n\n    # Check if the input is valid\n    if not isinstance(arr, list) or not all(isinstance(i, (int, float)) for i in arr):\n        raise ValueError(\"Input array must be a list of numbers.\")\n\n    if not isinstance(element, (int, float)):\n        raise ValueError(\"Element to search for must be a number.\")\n\n    # Search for the element in the array\n    for i, num in enumerate(arr):\n        if num == element:\n            return i\n\n    # If the element is not found, return -1\n    return -1\n\n\n# Sample input and output\narr = [1, 2, 3, 4, 5]\nelement = 3\nindex = search_element(arr, element)\nprint(f\"The element {element} is at index {index}.\")\n```\n\nThis program checks if the input is valid (i.e., the array is a list of numbers and the element to search for is a number), and then searches for the element in the array using a simple loop. If the element is found, the function returns its index; otherwise, it returns -1.",
+  "error": null,
+  "elapsed_seconds": 3.98,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

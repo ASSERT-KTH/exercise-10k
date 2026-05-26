@@ -1,0 +1,9 @@
+{
+  "id": 3433,
+  "title": "KMP String Matching",
+  "prompt": "Write a function that takes two strings as input and returns the index of the first occurrence of the second string in the first string using the KMP algorithm\nSample Input: hello world, world\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that implements the Knuth-Morris-Pratt (KMP) algorithm to find the index of the first occurrence of a substring in a larger string. This function returns -1 if the substring is not found.\n\n```python\ndef kmp_search(text, pattern):\n    m, n = len(text), len(pattern)\n\n    # Create the failure function table for the pattern\n    failure = [0] * n\n    j = 0\n    for i in range(1, n):\n        while j > 0 and pattern[i] != pattern[j]:\n            j = failure[j - 1]\n        if pattern[i] == pattern[j]:\n            j += 1\n        failure[i] = j\n\n    # Perform KMP search\n    i = j = 0\n    while i < m:\n        if pattern[j] == text[i]:\n            j += 1\n            i += 1\n        elif j == 0:\n            i += 1\n        else:\n            j = failure[j - 1]\n\n    # Return the index of the first occurrence if found, -1 otherwise\n    return i - n if j == n else -1\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(kmp_search(\"hello world\", \"world\"))  # Output: 6\n```",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7946,
+  "title": "Variable Scope",
+  "prompt": "Write a program to demonstrate the concept of variable scope in programming.\nSample Input: None\nSample Output: The variable 'x' is accessible in the outer scope.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a simple Python program that demonstrates the concept of variable scope using nested functions. In Python, variables defined within a function are local to that function and cannot be accessed directly from outside the function. However, variables defined at a higher scope (outside a function) can be accessed within nested functions.\n\n```python\ndef outer_function():\n    x = 10  # Variable 'x' is accessible in the outer scope\n\n    def inner_function():\n        nonlocal x  # Use 'nonlocal' keyword to modify a variable in an enclosing scope\n        x += 1\n        print(f\"The variable 'x' is accessible in the inner scope: {x}\")\n\n    inner_function()\n    print(f\"The variable 'x' is accessible in the outer scope: {x}\")\n\nouter_function()\n```\n\nWhen you run this program, it will output:\n\n```\nThe variable 'x' is accessible in the inner scope: 11\nThe variable 'x' is accessible in the outer scope: 10\n```\n\nThis demonstrates that the variable `x` is accessible in the inner function because it is defined at a higher scope (in the outer function). The `nonlocal` keyword is used to modify a variable in an enclosing scope, which is not allowed in Python by default. However, it is a feature of Python's dynamic scoping rules.",
+  "error": null,
+  "elapsed_seconds": 3.22,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

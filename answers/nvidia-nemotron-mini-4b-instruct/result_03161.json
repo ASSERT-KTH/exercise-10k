@@ -1,0 +1,9 @@
+{
+  "id": 3161,
+  "title": "Function Basics",
+  "prompt": "Create a function that takes a name as input and returns a greeting message.\nSample Input: John\nSample Output: Hello, John!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef greet(name):\n    \"\"\"\n    This function takes a name as input and returns a greeting message.\n\n    :param name: str - The name of the person to greet.\n    :return: str - A greeting message for the given name.\n    \"\"\"\n    if not isinstance(name, str):\n        raise TypeError(\"The 'name' parameter must be a string.\")\n\n    greeting = f\"Hello, {name.capitalize()}!\"\n    return greeting\n```\nThis function checks if the input is a string, and if so, it capitalizes the first letter of the name and constructs a greeting message using an f-string. Here are some examples of how you can use this function:\n```python\n>>> greet(\"John\")\n'Hello, John!'\n\n>>> greet(\"Alice\")\n'Hello, Alice!'\n\n>>> greet(123)\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\n  File \"<stdin>\", line 5, in greet\nTypeError: The 'name' parameter must be a string.\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

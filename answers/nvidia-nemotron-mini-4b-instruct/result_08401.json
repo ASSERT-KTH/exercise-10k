@@ -1,0 +1,9 @@
+{
+  "id": 8401,
+  "title": "Student Grades Dictionary",
+  "prompt": "Create a function that takes a dictionary of student names and their corresponding grades as input. The function should calculate the average grade for each student and return a new dictionary with the student names as keys and their average grades as values.\nSample Input: {\"John\": [90, 85, 95], \"Alice\": [88, 92, 89]}\nSample Output: {\"John\": 90.0, \"Alice\": 89.66666666666667}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef calculate_average_grade(student_grades):\n    \"\"\"\n    Calculates the average grade for each student in the given dictionary.\n\n    Parameters:\n    student_grades (dict): A dictionary where keys are student names and values are lists of their grades.\n\n    Returns:\n    dict: A new dictionary with student names as keys and their average grades as values.\n    \"\"\"\n    # Calculate the average grade for each student\n    average_grades = {}\n    for student, grades in student_grades.items():\n        total_grade = sum(grades)\n        average_grade = total_grade / len(grades)\n        average_grades[student] = average_grade\n\n    return average_grades\n```\nHere's an example of how to use this function:\n```python\nstudent_grades = {\"John\": [90, 85, 95], \"Alice\": [88, 92, 89]}\naverage_grades = calculate_average_grade(student_grades)\nprint(average_grades)  # Output: {'John': 90.0, 'Alice': 89.66666666666667}\n```\nThis function first calculates the total grade for each student by summing up all their grades. Then, it calculates the average grade by dividing the total grade by the number of grades. Finally, it adds the student name and average grade to a new dictionary and returns it.",
+  "error": null,
+  "elapsed_seconds": 3.73,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

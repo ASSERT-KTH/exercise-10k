@@ -1,0 +1,9 @@
+{
+  "id": 2257,
+  "title": "Check if a String Contains a Substring",
+  "prompt": "Write a program that takes a string and a substring as input and returns whether the string contains the substring.\nSample Input: hello world\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef contains_substring(string, substring):\n    \"\"\"\n    Returns True if the given string contains the given substring, and False otherwise.\n\n    :param string: The string to search in.\n    :param substring: The substring to search for.\n    :return: A boolean indicating whether the substring is found in the string.\n    \"\"\"\n    # Check if the substring is empty, in which case it can't be found in any string\n    if not substring:\n        return True\n\n    # Check if the string is empty, in which case it can't contain any substring\n    if not string:\n        return False\n\n    # Use the in operator to check if the substring is a substring of the string\n    return substring in string\n```\nHere's an example of how you can use this function:\n```python\n>>> contains_substring(\"hello world\", \"world\")\nTrue\n>>> contains_substring(\"hello world\", \"universe\")\nFalse\n>>> contains_substring(\"\", \"hello\")\nFalse\n>>> contains_substring(\"hello\", \"\")\nTrue\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 4.18,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

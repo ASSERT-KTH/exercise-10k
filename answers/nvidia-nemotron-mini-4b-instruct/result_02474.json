@@ -1,0 +1,9 @@
+{
+  "id": 2474,
+  "title": "Password Strength Checker",
+  "prompt": "Write a function that checks the strength of a given password.\nSample Input: P@ssw0rd\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks the strength of a given password based on a set of rules. This function considers the following criteria:\n\n1. Minimum length of 8 characters.\n2. At least one uppercase letter.\n3. At least one lowercase letter.\n4. At least one digit.\n5. At least one special character (excluding spaces).\n\nPlease note that the special characters used in this example are just a few common ones. You can add more to your specific requirements.\n\n```python\nimport re\n\ndef is_password_strong(password: str) -> bool:\n    \"\"\"\n    Check the strength of a given password.\n\n    :param password: The password to check.\n    :return: True if the password is strong, False otherwise.\n    \"\"\"\n\n    # Regular expression pattern for checking special characters\n    pattern = r'[!@#$%^&*(),.?\":{}|<>]+'\n\n    # Check if the password meets the criteria\n    if not re.search(pattern, password):\n        return False\n\n    # Check minimum length and other criteria\n    if len(password) < 8:\n        return False\n\n    uppercase_count = password.count(password.upper())\n    lowercase_count = password.count(password.lower())\n    digit_count = password.count('0' + '1' + '2' + '3' + '4' + '5' + '6' + '7' + '8' + '9')\n\n    return (uppercase_count > 0 and\n            lowercase_count > 0 and\n            digit_count > 0)\n```\n\nYou can call this function with a string as an argument, and it will return `True` if the password is strong and `False` otherwise.",
+  "error": null,
+  "elapsed_seconds": 4.13,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

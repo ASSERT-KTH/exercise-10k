@@ -1,0 +1,9 @@
+{
+  "id": 6417,
+  "title": "Simple Museum Tour",
+  "prompt": "Write a program that takes the user on a tour of a museum. Use if/else statements to determine the exhibits.\nSample Input: next exhibit\nSample Output: You are now viewing the ancient Egyptian exhibit\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses a simple dictionary to store the exhibits and their corresponding descriptions. You can easily extend it to include more exhibits by adding new entries to the `exhibits` dictionary.\n\n```python\nexhibits = {\n    \"ancient_egyptian\": \"You are now viewing the ancient Egyptian exhibit.\",\n    \"modern_art\": \"You are now viewing the modern art exhibit.\",\n    \"natural_history\": \"You are now viewing the natural history exhibit.\",\n    # Add more exhibits here\n}\n\ndef tour_museum():\n    current_exhibit = \"ancient_egyptian\"\n\n    while True:\n        print(f\"You are now viewing the {current_exhibit} exhibit.\")\n\n        user_input = input(\"Next exhibit (or 'quit' to exit): \").lower()\n\n        if user_input == \"quit\":\n            break\n        elif user_input == \"next\":\n            current_exhibit = list(exhibits.keys())[list(exhibits.values()).index(exhibits[current_exhibit]) + 1]\n        else:\n            print(\"I didn't understand that. Please try again.\")\n\ntour_museum()\n```\n\nThis program will continue to loop until the user types \"quit\". When the user types \"next\", it will move to the next exhibit in the dictionary. If the user types anything else, it will print an error message and prompt the user to try again.",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

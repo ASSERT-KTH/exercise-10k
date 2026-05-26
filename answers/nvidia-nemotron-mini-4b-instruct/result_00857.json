@@ -1,0 +1,9 @@
+{
+  "id": 857,
+  "title": "Function Pipeline",
+  "prompt": "Create a function that creates a pipeline of functions, applying each function in sequence to the input data.\nSample Input: [def add(a): return a + 1, def multiply(a): return a * 2]\nSample Output: function that applies each function in sequence\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function, `pipeline`, takes a list of functions and an input value, and returns a new function that applies each function in sequence to the input data.\n\n```python\ndef pipeline(*functions):\n    \"\"\"\n    Create a pipeline of functions, applying each function in sequence to the input data.\n\n    Parameters:\n    *functions (list): A list of functions to apply in sequence.\n\n    Returns:\n    function: A new function that applies each function in sequence to the input data.\n    \"\"\"\n\n    # Check if there are at least two functions in the list\n    if len(functions) < 2:\n        raise ValueError(\"At least two functions are required to create a pipeline.\")\n\n    # Define the pipeline function that applies each function in sequence\n    def pipeline_func(input_value):\n        for func in functions:\n            input_value = func(input_value)\n        return input_value\n\n    return pipeline_func\n```\n\nHere's an example of how to use this function:\n\n```python\nadd_one = lambda x: x + 1\nmultiply_by_two = lambda x: x * 2\n\nadd_one_and_multiply_by_two = pipeline(add_one, multiply_by_two)\n\nprint(add_one_and_multiply_by_two(5))  # Output: 11\n```\n\nThis function checks if there are at least two functions in the list, which is a reasonable requirement for creating a pipeline. The pipeline function itself applies each function in sequence to the input data, returning the final result.",
+  "error": null,
+  "elapsed_seconds": 3.79,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

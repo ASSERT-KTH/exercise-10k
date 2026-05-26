@@ -1,0 +1,9 @@
+{
+  "id": 8573,
+  "title": "Updating Dictionary Values",
+  "prompt": "Write a function to update a dictionary value by its key\nSample Input: {'name': 'John', 'age': 25, 'city': 'New York'}\nSample Output: {'name': 'Jane', 'age': 25, 'city': 'New York'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that updates the value associated with a given key in a dictionary:\n```python\ndef update_dict_value(dictionary, key, new_value):\n    \"\"\"\n    Updates the value associated with a given key in a dictionary.\n\n    Parameters:\n    dictionary (dict): The dictionary to update.\n    key (str): The key of the value to update.\n    new_value (any): The new value to assign to the key.\n\n    Returns:\n    dict: The updated dictionary.\n    \"\"\"\n    # Check if the key exists in the dictionary\n    if key in dictionary:\n        # Update the value and return the updated dictionary\n        dictionary[key] = new_value\n        return dictionary\n    else:\n        # If the key does not exist, raise a KeyError\n        raise KeyError(f\"The key '{key}' does not exist in the dictionary.\")\n```\nHere's an example of how to use this function:\n```python\nupdated_dict = update_dict_value({'name': 'John', 'age': 25, 'city': 'New York'}, 'name', 'Jane')\nprint(updated_dict)  # Output: {'name': 'Jane', 'age': 25, 'city': 'New York'}\n```\nThis function checks if the key exists in the dictionary before updating its value, and raises a `KeyError` if the key does not exist. This ensures that the function behaves as expected and provides a clear error message when an attempt is made to update a non-existent key.",
+  "error": null,
+  "elapsed_seconds": 3.67,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

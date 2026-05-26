@@ -1,0 +1,9 @@
+{
+  "id": 5996,
+  "title": "Finding the First Occurrence",
+  "prompt": "Write a function that takes a list and a value as input, and returns the index of the first occurrence of the value in the list if it exists\nSample Input: [1, 2, 3, 4, 2, 5], 2\nSample Output: 1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef find_index(lst, value):\n    \"\"\"\n    Returns the index of the first occurrence of the value in the list if it exists.\n\n    Parameters:\n    lst (list): The list to search in.\n    value (any): The value to search for.\n\n    Returns:\n    int: The index of the first occurrence of the value in the list, or -1 if not found.\n    \"\"\"\n    for i, item in enumerate(lst):\n        if item == value:\n            return i\n    return -1\n```\nHere's how you can use this function:\n```python\nprint(find_index([1, 2, 3, 4, 2, 5], 2))  # Output: 1\nprint(find_index([1, 2, 3, 4, 2, 5], 6))  # Output: -1\n```\nThis function uses a `for` loop to iterate over the list and compare each item with the given value. If a match is found, the function returns the index of the first occurrence. If no match is found, the function returns -1. The `enumerate` function is used to get both the index and the value of each item in the list at the same time.",
+  "error": null,
+  "elapsed_seconds": 3.42,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

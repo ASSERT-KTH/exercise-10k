@@ -1,0 +1,9 @@
+{
+  "id": 5974,
+  "title": "List Transformation",
+  "prompt": "Write a program that takes a list and a transformation function as input, and applies the transformation function to each element of the list.\nSample Input: [1, 2, 3, 4, 5], square\nSample Output: [1, 4, 9, 16, 25]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses the built-in `map()` function to apply the transformation function (in this case, `square`) to each element of the list. The result is then stored in a new list.\n\n```python\ndef apply_transformation(lst, func):\n    \"\"\"\n    Applies a transformation function to each element of a list.\n\n    Parameters:\n    lst (list): The list to apply the transformation to.\n    func (callable): The transformation function to apply to each element.\n\n    Returns:\n    list: A new list containing the results of applying the transformation function.\n    \"\"\"\n    return list(map(func, lst))\n\n# Example usage:\nsample_input = [1, 2, 3, 4, 5]\nsample_output = apply_transformation(sample_input, square)\nprint(sample_output)  # Output: [1, 4, 9, 16, 25]\n```\n\nThe `square` function is defined below for demonstration purposes. You can replace it with any other transformation function you need.\n\n```python\ndef square(x):\n    \"\"\"Returns the square of a number.\"\"\"\n    return x ** 2\n```",
+  "error": null,
+  "elapsed_seconds": 2.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

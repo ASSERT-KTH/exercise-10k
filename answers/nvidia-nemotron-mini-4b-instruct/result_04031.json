@@ -1,0 +1,9 @@
+{
+  "id": 4031,
+  "title": "Move Zeroes",
+  "prompt": "Write a function to move all zeroes to the end of an array\nSample Input: [0, 1, 0, 3, 12]\nSample Output: [1, 3, 12, 0, 0]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function uses two pointers, one to traverse the array and another to keep track of the non-zero elements. It then swaps the non-zero element at the current position of the first pointer with the last zero in the array. Finally, it moves the first pointer one step forward and repeats the process until the first pointer reaches the end of the array.\n\n```python\ndef move_zeros(arr):\n    \"\"\"\n    Move all zeroes to the end of an array.\n\n    :param arr: The input array\n    :return: None (the function modifies the input array in-place)\n    \"\"\"\n    # Initialize two pointers, one for non-zero elements and another for zeroes\n    i, j = 0, 0\n\n    # Traverse the array and move non-zero elements to the right\n    while j < len(arr):\n        if arr[j] != 0:\n            arr[i], arr[j] = arr[j], arr[i]  # Swap non-zero element and current zero\n            i += 1\n        j += 1\n```\n\nYou can call this function with your sample input as follows:\n\n```python\narr = [0, 1, 0, 3, 12]\nmove_zeros(arr)\nprint(arr)  # Output: [1, 3, 12, 0, 0]\n```",
+  "error": null,
+  "elapsed_seconds": 3.6,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

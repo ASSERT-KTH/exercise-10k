@@ -1,0 +1,9 @@
+{
+  "id": 1343,
+  "title": "Variable Scope",
+  "prompt": "Write a program to demonstrate the difference between local and global variables\nSample Input: None\nSample Output: Global variable: 10, Local variable: 20\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a simple Python program that demonstrates the difference between local and global variables:\n\n```python\n# Global variable\nglobal_var = 10\n\ndef local_function():\n    # Local variable\n    local_var = 20\n\n    # Print the local variable\n    print(f\"Local variable: {local_var}\")\n\n    # Print the global variable (this will change the value of global_var)\n    print(f\"Global variable: {global_var}\")\n\n# Call the local function\nlocal_function()\n\n# Print the global variable again to show it hasn't changed\nprint(f\"Global variable: {global_var}\")\n```\n\nWhen you run this program, you'll see the following output:\n\n```\nLocal variable: 20\nGlobal variable: 10\nGlobal variable: 10\n```\n\nIn this program, we define a global variable `global_var` with an initial value of 10. We then define a local variable `local_var` inside the `local_function()` function. When the function is called, it prints the local variable and then attempts to print the global variable, which changes its value to 20. However, when we print the global variable outside the function, its value remains 10.\n\nThis is because local variables are only accessible within the function they are defined in, while global variables can be accessed from anywhere in the program.",
+  "error": null,
+  "elapsed_seconds": 3.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

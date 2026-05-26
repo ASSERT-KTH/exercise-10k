@@ -1,0 +1,9 @@
+{
+  "id": 7983,
+  "title": "Counting Digits",
+  "prompt": "Write a program that counts the number of digits in a given integer.\nSample Input: 12345\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that counts the number of digits in a given integer:\n\n```python\ndef count_digits(n):\n    \"\"\"\n    Count the number of digits in a given integer.\n\n    :param n: The integer to count the digits of.\n    :return: The number of digits in the integer.\n    \"\"\"\n    if n == 0:\n        return 1\n    else:\n        return 1 + count_digits(n // 10)\n\n# Get user input\nuser_input = int(input(\"Enter an integer: \"))\n\n# Count the digits and print the result\nnum_digits = count_digits(user_input)\nprint(f\"The number of digits in {user_input} is {num_digits}.\")\n```\n\nThis program defines a helper function `count_digits` that recursively counts the number of digits in a given integer. The base case is when the integer is zero, in which case it has one digit. Otherwise, it recursively calls itself with the integer divided by 10, which effectively removes the last digit and counts the remaining digits. The function returns the total number of digits plus one for the last digit. The program then gets user input, calls the `count_digits` function with the user's input, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

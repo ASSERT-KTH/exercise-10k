@@ -1,0 +1,9 @@
+{
+  "id": 752,
+  "title": "Hangman",
+  "prompt": "Write a program that plays a game of Hangman with the user\nSample Input: a\nSample Output: You got one letter right!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that plays a simple version of Hangman with the user. This version only allows the user to guess one letter at a time and checks for correct guesses. You can extend this program to include more features like multiple guesses per turn, a larger word list, or a more sophisticated guessing mechanism.\n\n```python\nimport random\n\n# Define a list of words to use for the game\nwords = [\n    \"python\",\n    \"javascript\",\n    \"kotlin\",\n    \"ruby\",\n    \"csharp\",\n    \"swift\",\n    \"go\",\n    \"javascript\",  # For testing purposes\n]\n\n# Choose a random word from the list\nword = random.choice(words)\n\n# Initialize the game board and the user's guess\ngame_board = [\"_\"] * len(word)\nguess = \"\"\n\nwhile \"_\" in game_board:\n    print(f\"\\nCurrent game board: {''.join(game_board)}\")\n\n    if guess in word:\n        print(\"You got one letter right!\")\n    else:\n        print(\"Sorry, that's not in the word. Try again!\")\n\n    guess = input(\"Enter a letter: \").lower()\n\n    if guess in word:\n        for i, char in enumerate(word):\n            if char == guess:\n                game_board[i] = char\n\n    if \"_\" not in game_board:\n        print(f\"Congratulations! You guessed the word: {word}!\")\n```\n\nThis program will randomly select a word from the `words` list, create a game board with underscores for each letter, and then prompt the user to guess a letter. The program checks if the user's guess is in the word, updates the game board accordingly, and continues until the user guesses the entire word.",
+  "error": null,
+  "elapsed_seconds": 4.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

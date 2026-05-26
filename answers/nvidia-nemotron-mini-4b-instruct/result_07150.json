@@ -1,0 +1,9 @@
+{
+  "id": 7150,
+  "title": "Input/Output Validation",
+  "prompt": "Create a program that takes a string input from the user and validates if it contains only alphanumeric characters and spaces. If the input is valid, print out the input string. Otherwise, print an error message.\nSample Input: Hello World\nSample Output: Hello World\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef validate_string(input_string):\n    \"\"\"\n    Validates if the input string contains only alphanumeric characters and spaces.\n\n    :param input_string: The string to validate.\n    :return: None if the input is valid, otherwise prints an error message.\n    \"\"\"\n    # Check if the input string is empty\n    if not input_string:\n        print(\"Error: Input string cannot be empty.\")\n        return\n\n    # Check if the input string contains only alphanumeric characters and spaces\n    if not input_string.isalnum() or ' ' not in input_string:\n        print(\"Error: Input string must contain only alphanumeric characters and spaces.\")\n        return\n\n    # If the input is valid, print it out\n    print(input_string)\n\n# Get user input\nuser_input = input(\"Please enter a string: \")\n\n# Validate and print the input\nvalidate_string(user_input)\n```\nThis program defines a function `validate_string` that checks if the input string contains only alphanumeric characters and spaces. If the input is valid, it prints the input string. Otherwise, it prints an error message. The program then gets user input, validates it, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

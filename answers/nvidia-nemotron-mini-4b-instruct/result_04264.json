@@ -1,0 +1,9 @@
+{
+  "id": 4264,
+  "title": "Dictionary Deletion",
+  "prompt": "Write a function that takes a dictionary and a key as input and removes the key-value pair from the dictionary\nSample Input: {\"name\": \"John\", \"age\": 25}, \"age\"\nSample Output: {\"name\": \"John\"}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef remove_key_value_pair(dictionary, key):\n    \"\"\"\n    Removes the key-value pair with the given key from the input dictionary.\n\n    Parameters:\n    dictionary (dict): The input dictionary.\n    key (any): The key to remove from the dictionary.\n\n    Returns:\n    dict: The modified dictionary with the key-value pair removed.\n    \"\"\"\n    # Check if the key exists in the dictionary\n    if key in dictionary:\n        # Remove the key-value pair using the pop() method\n        dictionary.pop(key)\n\n    return dictionary\n```\nHere's an example of how you can use this function:\n```python\nsample_dict = {\"name\": \"John\", \"age\": 25}\nkey_to_remove = \"age\"\n\nresult = remove_key_value_pair(sample_dict, key_to_remove)\nprint(result)  # Output: {'name': 'John'}\n```\nThis function first checks if the given key exists in the input dictionary using the `in` keyword. If the key exists, the function uses the `pop()` method to remove the key-value pair from the dictionary. If the key does not exist, the function simply returns the original dictionary without modifying it.",
+  "error": null,
+  "elapsed_seconds": 3.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

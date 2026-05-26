@@ -1,0 +1,9 @@
+{
+  "id": 1803,
+  "title": "Leap Year Checker",
+  "prompt": "Write a program that determines whether a given year is a leap year, using conditional statements to check the year's divisibility\nSample Input: 2020\nSample Output: Leap year\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that determines whether a given year is a leap year using conditional statements to check the year's divisibility by 4, but not by 100, and then by 400:\n\n```python\ndef is_leap_year(year):\n    \"\"\"\n    Determines whether a given year is a leap year.\n\n    :param year: The year to check.\n    :return: A string indicating whether the year is a leap year or not.\n    \"\"\"\n\n    # Check divisibility by 4\n    if year % 4 != 0:\n        return f\"{year} is not a leap year.\"\n\n    # Check divisibility by 100\n    if year % 100 == 0:\n        # If the year is also divisible by 400, it's a leap year\n        if year % 400 == 0:\n            return f\"{year} is a leap year.\"\n        else:\n            return f\"{year} is not a leap year.\"\n\n    # If the year is divisible by 4 and not by 100, it's a leap year\n    return f\"{year} is a leap year.\"\n\n\n# Get user input for the year\nyear = int(input(\"Enter a year: \"))\n\n# Call the function to determine if the year is a leap year\nresult = is_leap_year(year)\n\n# Print the result\nprint(result)\n```\n\nThis program defines a function `is_leap_year` that takes a year as input and returns a string indicating whether the year is a leap year or not. The function checks divisibility by 4, then by 100, and finally by 400. The program then prompts the user to enter a year, calls the function with the user's input, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 4.35,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

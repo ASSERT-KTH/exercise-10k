@@ -1,0 +1,9 @@
+{
+  "id": 2458,
+  "title": "List Subset",
+  "prompt": "Write a program that takes two lists as input and returns a new list containing all elements that are common to both lists.\nSample Input: [1, 2, 3], [2, 3, 4]\nSample Output: [2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef common_elements(list1, list2):\n    \"\"\"\n    Returns a new list containing all elements that are common to both input lists.\n\n    :param list1: The first input list\n    :param list2: The second input list\n    :return: A new list containing common elements\n    \"\"\"\n    # Convert input lists to sets for faster lookup\n    set1 = set(list1)\n    set2 = set(list2)\n\n    # Find common elements by intersecting the two sets\n    common = set1 & set2\n\n    # Convert the result back to a list and return it\n    return list(common)\n```\nHere's an example of how you can use this function:\n```python\nlist1 = [1, 2, 3]\nlist2 = [2, 3, 4]\n\ncommon = common_elements(list1, list2)\nprint(common)  # Output: [2, 3]\n```\nThis function first converts the input lists to sets, which allows for faster lookup of elements. It then finds the intersection of the two sets (i.e., the common elements) using the `&` operator. Finally, it converts the result back to a list and returns it.",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

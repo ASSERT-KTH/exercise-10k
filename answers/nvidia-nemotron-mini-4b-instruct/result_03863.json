@@ -1,0 +1,9 @@
+{
+  "id": 3863,
+  "title": "Updating Dictionary Values",
+  "prompt": "Create a dictionary with names of countries as keys and their capitals as values. Update the capital of a specific country and print the updated dictionary.\nSample Input: {'USA': 'Washington', 'Canada': 'Ottawa', 'Mexico': 'Mexico City'}\nSample Output: {'USA': 'Washington', 'Canada': 'Ottawa', 'Mexico': 'Nuevo Laredo'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution that meets your requirements:\n\n```python\ndef update_capital(country_dict):\n    \"\"\"\n    Updates the capital of a specific country in the given dictionary.\n\n    :param country_dict: A dictionary with names of countries as keys and their capitals as values.\n    :return: None\n    \"\"\"\n    new_capital = input(\"Enter the new capital of the country: \")\n    country_to_update = input(\"Enter the name of the country whose capital you want to update: \")\n\n    # Check if the country exists in the dictionary\n    if country_to_update in country_dict:\n        country_dict[country_to_update] = new_capital\n        print(f\"The capital of {country_to_update} has been updated to {new_capital}.\")\n    else:\n        print(f\"The country '{country_to_update}' does not exist in the dictionary.\")\n\n# Example usage\ncountry_dict = {'USA': 'Washington', 'Canada': 'Ottawa', 'Mexico': 'Mexico City'}\nupdate_capital(country_dict)\nprint(country_dict)\n```\n\nThis script prompts the user to enter the new capital and the name of the country to update. It then checks if the country exists in the dictionary before updating its capital. Finally, it prints the updated dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

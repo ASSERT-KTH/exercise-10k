@@ -1,0 +1,9 @@
+{
+  "id": 3007,
+  "title": "String Searching",
+  "prompt": "Write a program to search for a substring within a given string.\nSample Input: Hello World, World\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that searches for a substring within a given string and returns the index of the first occurrence:\n```python\ndef search_substring(string, substring):\n    \"\"\"\n    Searches for a substring within a given string and returns the index of the first occurrence.\n\n    :param string: The string to search in.\n    :param substring: The substring to search for.\n    :return: The index of the first occurrence of the substring in the string, or -1 if not found.\n    \"\"\"\n    # Ensure the input is a string\n    if not isinstance(string, str):\n        raise TypeError(\"The 'string' parameter must be a string.\")\n\n    if not isinstance(substring, str):\n        raise TypeError(\"The 'substring' parameter must be a string.\")\n\n    # Search for the substring and return the index of the first occurrence\n    index = string.find(substring)\n    return index if index != -1 else -1\n\n# Example usage\ninput_string = \"Hello World, World\"\nsubstring = \"World\"\nresult = search_substring(input_string, substring)\nprint(result)  # Output: 6\n```\nThis program checks if the input parameters are of the correct type, and then uses the built-in `str.find()` method to search for the substring in the string. If the substring is not found, it returns -1.",
+  "error": null,
+  "elapsed_seconds": 4.65,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

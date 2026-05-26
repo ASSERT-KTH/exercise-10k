@@ -1,0 +1,9 @@
+{
+  "id": 1258,
+  "title": "Higher-Order Function Filter",
+  "prompt": "Write a higher-order function that filters a list based on a given predicate function.\nSample Input: [1, 2, 3, 4, 5], is_even\nSample Output: [2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function, `filter_list`, takes two arguments: a list and a predicate function. It returns a new list containing only the elements from the input list that satisfy the predicate function.\n\n```python\ndef filter_list(input_list, predicate):\n    \"\"\"\n    Filters a list based on a given predicate function.\n\n    :param input_list: The list to filter.\n    :param predicate: A function that takes one argument and returns a boolean.\n    :return: A new list containing only the elements from the input list that satisfy the predicate function.\n    \"\"\"\n    return [element for element in input_list if predicate(element)]\n\n# Example usage:\nsample_input = [1, 2, 3, 4, 5]\nsample_predicate = lambda x: x % 2 == 0  # is even\n\nfiltered_list = filter_list(sample_input, sample_predicate)\nprint(filtered_list)  # Output: [2, 4]\n```\n\nThis function uses a list comprehension to iterate over the input list and apply the predicate function to each element. If the predicate function returns `True`, the element is included in the new list.",
+  "error": null,
+  "elapsed_seconds": 2.9,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

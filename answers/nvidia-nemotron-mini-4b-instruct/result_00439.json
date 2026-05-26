@@ -1,0 +1,9 @@
+{
+  "id": 439,
+  "title": "Password Generator",
+  "prompt": "Ask the user for a length and generate a random password of that length.\nSample Input: 10\nSample Output: G4j#8dLpM2\n",
+  "answer": "Sure, I can help you with that. Here's a Python function that meets your requirements:\n```python\nimport string\nimport random\n\ndef generate_password(length):\n    \"\"\"\n    Generate a random password of the given length.\n\n    :param length: The desired length of the password.\n    :return: A random string of the specified length containing only lowercase letters, uppercase letters, digits, and special characters.\n    \"\"\"\n    if length < 8:\n        raise ValueError(\"Password length must be at least 8 characters.\")\n\n    # Define the set of characters to use for the password\n    char_set = string.ascii_letters + string.digits + string.punctuation\n\n    # Generate the password using random.choices\n    password = ''.join(random.choices(char_set, k=length))\n\n    return password\n```\nHere's an example of how to use this function:\n```python\npassword_length = 10\npassword = generate_password(password_length)\nprint(f\"Your new password is: {password}\")\n```\nThis will output a random password of the specified length, like this:\n```yaml\nYour new password is: G4j#8dLpM2\n```\nYou can adjust the `char_set` variable to include or exclude specific characters from the password. For example, to include only lowercase letters and digits, you could change the line to:\n```python\nchar_set = string.ascii_letters + string.digits\n```",
+  "error": null,
+  "elapsed_seconds": 3.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

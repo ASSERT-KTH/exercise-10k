@@ -1,0 +1,9 @@
+{
+  "id": 1127,
+  "title": "Number Sequence",
+  "prompt": "Create a program that generates a sequence of numbers based on a given formula\nSample Input: 10\nSample Output: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34\n",
+  "answer": "Sure, I'd be happy to help you create a program that generates a sequence of numbers based on a given formula. Here's an example Python program that generates the Fibonacci sequence up to a given number of terms. You can modify this program to use any other formula you like.\n\n```python\ndef generate_sequence(n: int, formula: str) -> list:\n    \"\"\"\n    Generate a sequence of numbers based on a given formula.\n\n    :param n: The number of terms in the sequence.\n    :param formula: A string representing the formula for generating the sequence.\n                    Each term in the sequence should be a function of the previous term(s).\n    :return: A list of the first n terms in the sequence.\n    \"\"\"\n    if n < 1:\n        raise ValueError(\"Number of terms must be at least 1.\")\n\n    # Initialize the first two terms of the sequence\n    sequence = [0, 1]\n\n    # Generate the remaining terms using the given formula\n    for i in range(2, n):\n        term = eval(formula, {\"__builtins__\": {\"range\": range}})\n        sequence.append(term)\n\n    return sequence\n\n\n# Example usage: Generate the Fibonacci sequence up to 10 terms\nfib_sequence = generate_sequence(10, \"a[i] = a[i-1] + a[i-2]\")\nprint(fib_sequence)\n```\n\nThis program defines a function `generate_sequence` that takes two arguments: `n`, the number of terms in the sequence, and `formula`, a string representing the formula for generating the sequence. The function initializes the first two terms of the sequence, then generates the remaining terms using the given formula. The example usage generates the Fibonacci sequence up to 10 terms.",
+  "error": null,
+  "elapsed_seconds": 3.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

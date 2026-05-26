@@ -1,0 +1,9 @@
+{
+  "id": 5753,
+  "title": "Variable Scope",
+  "prompt": "Declare variables with different scopes and print their values\nSample Input: x = 5 (global), x = 10 (local)\nSample Output: global x = 5, local x = 10\n",
+  "answer": "Sure, I'd be happy to help with that! Here's a Python code snippet that demonstrates variable scopes and prints their values:\n\n```python\n# Global variable\nglobal_x = 5\n\ndef local_function():\n    # Local variable\n    local_x = 10\n\n    # Print the global variable's value\n    print(f\"global x = {global_x}\")\n\n    # Print the local variable's value\n    print(f\"local x = {local_x}\")\n\n# Call the local function\nlocal_function()\n\n# Print the global variable's value again\nprint(f\"global x = {global_x}\")\n```\n\nWhen you run this code, it will output:\n\n```\nglobal x = 5\nlocal x = 10\nglobal x = 5\n```\n\nThis demonstrates that the `global_x` variable has a global scope, meaning it can be accessed and modified from any function or part of the code. The `local_x` variable, on the other hand, has a local scope, meaning it can only be accessed and modified within the `local_function` definition. When the local function is called, its local variable `local_x` is assigned the value 10, and when the function finishes executing, its local variable is no longer accessible outside of the function. The global variable `global_x` remains unchanged throughout the program.",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4235,
+  "title": "Score Calculator",
+  "prompt": "Write a program to calculate the score of a student based on their grades.\nSample Input: 90 80 70\nSample Output: Score: 80.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the average score of a student based on their grades:\n\n```python\ndef calculate_score(grades):\n    \"\"\"\n    Calculates the average score of a student based on their grades.\n\n    Parameters:\n    grades (list): A list of integers representing the student's grades.\n\n    Returns:\n    float: The average score of the student.\n    \"\"\"\n\n    # Check that the input is a non-empty list of integers\n    if not isinstance(grades, list) or len(grades) == 0 or not all(isinstance(grade, int) for grade in grades):\n        raise ValueError(\"Input should be a non-empty list of integers representing grades.\")\n\n    # Calculate the average score\n    total_score = sum(grades)\n    num_grades = len(grades)\n    average_score = total_score / num_grades\n\n    return average_score\n\n# Example usage\ngrades = [90, 80, 70]\nprint(f\"Score: {calculate_score(grades):.2f}\")\n```\n\nThis program defines a function `calculate_score` that takes a list of grades as input and returns the average score. The function checks that the input is valid (non-empty, contains only integers), calculates the total score and the number of grades, and then returns the average score. The example usage at the end of the program demonstrates how to use the function to calculate the average score of a student based on their grades.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

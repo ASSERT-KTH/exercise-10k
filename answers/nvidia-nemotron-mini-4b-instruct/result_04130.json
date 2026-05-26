@@ -1,0 +1,9 @@
+{
+  "id": 4130,
+  "title": "Variable Scope",
+  "prompt": "Demonstrate the concept of variable scope by declaring variables in different scopes\nSample Input: x = 10, y = 20\nSample Output: x: 10, y: 20\n",
+  "answer": "Sure, I'd be happy to help demonstrate the concept of variable scope with an example. \n\nIn programming languages like Python, variable scope refers to the region of code where a variable can be accessed and used. There are three main scopes in Python: global, local, and nested. \n\nLet's consider the following code:\n\n```python\n# Global scope\nx = 10\ny = 20\n\ndef my_function():\n    # Local scope\n    x = 30\n    y = 40\n\n# Call the function\nmy_function()\n\nprint(\"x: \", x)  # Output: x:  30\nprint(\"y: \", y)  # Output: y:  40\n```\n\nIn this example, `x` and `y` are global variables, meaning they can be accessed and used anywhere in the script. When we define a function, the variables inside the function (like `x` and `y` in the `my_function()` block) are local variables. They are only accessible within the function and not outside it. \n\nWhen we call the `my_function()`, the local variables `x` and `y` are created and assigned values. However, the global variables `x` and `y` remain unchanged. This is because the local variables are created in a new scope, and the global variables remain in the original scope.\n\nThe output of the code above is:\n\n```\nx:  30\ny:  40\n```\n\nThis demonstrates how variable scope works in Python and how local variables can be used within a function while global variables remain accessible outside the function.",
+  "error": null,
+  "elapsed_seconds": 3.79,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

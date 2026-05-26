@@ -1,0 +1,9 @@
+{
+  "id": 9435,
+  "title": "Function with Memoization",
+  "prompt": "Create a function that uses memoization to cache its results and avoid redundant computations\nSample Input: 5\nSample Output: 120\n",
+  "answer": "Sure, I'd be happy to help you create a function that uses memoization to cache its results and avoid redundant computations. Here's an example Python function that calculates the factorial of a given number using memoization:\n\n```python\ndef factorial_memoized(n, memo={}):\n    \"\"\"\n    Calculate the factorial of a given number using memoization.\n\n    :param n: The number to calculate the factorial of.\n    :param memo: A dictionary to store previously calculated factorials (memoization cache).\n    :return: The factorial of n.\n    \"\"\"\n\n    # Base case: factorial of 0 is 1\n    if n == 0:\n        return 1\n\n    # Check if the factorial has already been calculated and stored in the memo dictionary\n    if n in memo:\n        return memo[n]\n\n    # Calculate the factorial and store it in the memo dictionary for future use\n    memo[n] = n * factorial_memoized(n - 1, memo)\n\n    return memo[n]\n```\n\nYou can use this function to calculate the factorial of a number, like this:\n\n```python\nprint(factorial_memoized(5))  # Output: 120\n```\n\nThis function uses a dictionary `memo` to store previously calculated factorials, which allows it to avoid redundant computations and significantly speed up the calculation of large factorials.",
+  "error": null,
+  "elapsed_seconds": 3.13,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

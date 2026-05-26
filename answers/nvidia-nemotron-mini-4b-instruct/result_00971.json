@@ -1,0 +1,9 @@
+{
+  "id": 971,
+  "title": "Dictionary Validation",
+  "prompt": "Given a dictionary and a set of required keys, write a function to check if the dictionary contains all the required keys.\nSample Input: dict = {'name': 'Isaac', 'age': 65, 'city': 'New York'}, required_keys = ['name', 'age']\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef has_all_required_keys(dictionary, required_keys):\n    \"\"\"\n    Check if a dictionary contains all the required keys.\n\n    Parameters:\n    dictionary (dict): The dictionary to check.\n    required_keys (set): A set of required keys.\n\n    Returns:\n    bool: True if all required keys are present in the dictionary, False otherwise.\n    \"\"\"\n    # Check if the required keys are present as keys in the dictionary\n    return set(required_keys).issubset(dictionary.keys())\n```\nHere's an example of how to use this function:\n```python\ndict_sample = {'name': 'Isaac', 'age': 65, 'city': 'New York'}\nrequired_keys_sample = {'name', 'age'}\n\nprint(has_all_required_keys(dict_sample, required_keys_sample))  # Output: True\n```\nThis function first converts the `required_keys` parameter to a set, which allows for efficient membership testing. Then, it checks if the set of required keys is a subset of the keys in the dictionary using the `issubset()` method. If all required keys are present, the function returns `True`; otherwise, it returns `False`.",
+  "error": null,
+  "elapsed_seconds": 3.15,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

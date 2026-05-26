@@ -1,0 +1,9 @@
+{
+  "id": 5856,
+  "title": "Color Mixer",
+  "prompt": "Create a program that asks the user for two colors and then prints out the color that results from mixing them. Use the following mixing rules: red + blue = purple, blue + yellow = green, red + yellow = orange\nSample Input: red blue\nSample Output: The resulting color is purple\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef mix_colors(color1, color2):\n    \"\"\"\n    Mixes two colors according to the given rules.\n\n    :param color1: The first color (red, blue, or yellow).\n    :param color2: The second color (red, blue, or yellow).\n    :return: The resulting color (purple, green, or orange).\n    \"\"\"\n    if color1.lower() == 'red' and color2.lower() == 'blue':\n        return 'purple'\n    elif color1.lower() == 'blue' and color2.lower() == 'yellow':\n        return 'green'\n    elif color1.lower() == 'red' and color2.lower() == 'yellow':\n        return 'orange'\n    else:\n        raise ValueError(f\"Invalid color combination: {color1} + {color2}\")\n\n# Get user input\ncolor1 = input(\"Enter the first color (red, blue, or yellow): \").lower()\ncolor2 = input(\"Enter the second color (red, blue, or yellow): \").lower()\n\n# Print the resulting color\nresult = mix_colors(color1, color2)\nprint(f\"The resulting color is {result}.\")\n```\n\nThis program defines a function `mix_colors` that takes two color names as input and returns the resulting color based on the given rules. The function checks for invalid color combinations and raises a `ValueError` if any are provided. The program then gets user input for the two colors and prints the resulting color using the `mix_colors` function.",
+  "error": null,
+  "elapsed_seconds": 3.95,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

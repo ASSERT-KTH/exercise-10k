@@ -1,0 +1,9 @@
+{
+  "id": 9964,
+  "title": "Set Operations",
+  "prompt": "Write a program that performs basic set operations such as union, intersection, and difference.\nSample Input: set1 = {1, 2, 3}, set2 = {3, 4, 5}\nSample Output: The union of the sets is: {1, 2, 3, 4, 5}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that performs basic set operations such as union, intersection, and difference. We'll use the `set` data type in Python for this purpose.\n\n```python\ndef set_operations(set1, set2):\n    \"\"\"\n    Performs union, intersection, and difference of two sets.\n\n    :param set1: The first set\n    :param set2: The second set\n    :return: A tuple containing the union, intersection, and difference of the two sets\n    \"\"\"\n\n    # Check if the inputs are sets\n    if not isinstance(set1, set) or not isinstance(set2, set):\n        raise ValueError(\"Both inputs should be sets.\")\n\n    # Perform union, intersection, and difference\n    union = set1.union(set2)\n    intersection = set1.intersection(set2)\n    difference = set1.difference(set2)\n\n    return (union, intersection, difference)\n\n\n# Sample input\nset1 = {1, 2, 3}\nset2 = {3, 4, 5}\n\n# Perform set operations\nresult = set_operations(set1, set2)\n\n# Print the results\nprint(f\"The union of the sets is: {result[0]}\")\nprint(f\"The intersection of the sets is: {result[1]}\")\nprint(f\"The difference of set1 from set2 is: {result[2]}\")\n```\n\nThis program defines a function `set_operations` that takes two sets as input and returns a tuple containing the union, intersection, and difference of the two sets. The function checks if the inputs are sets and raises a `ValueError` if they are not. The sample input and output demonstrate the usage of the function.",
+  "error": null,
+  "elapsed_seconds": 4.51,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

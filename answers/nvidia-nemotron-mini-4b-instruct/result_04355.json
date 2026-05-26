@@ -1,0 +1,9 @@
+{
+  "id": 4355,
+  "title": "Letter Grade Converter",
+  "prompt": "Write a program that converts a numerical grade to a letter grade (e.g., A, B, C, etc.) based on a simple grading system\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that converts a numerical grade to a letter grade based on a simple grading system:\n\n```python\ndef numerical_grade_to_letter(grade):\n    \"\"\"\n    Converts a numerical grade to a letter grade based on a simple grading system.\n\n    :param grade: The numerical grade (integer between 0 and 100).\n    :return: The corresponding letter grade (str).\n    \"\"\"\n\n    # Define the grading system\n    grading_system = {\n        90: 'A',\n        80: 'B',\n        70: 'C',\n        60: 'D',\n        0: 'F'\n    }\n\n    # Check if the grade is within the valid range\n    if 0 <= grade <= 100:\n        # Find the corresponding letter grade in the grading system\n        letter_grade = grading_system.get(grade, 'Invalid grade')\n\n        # Return the letter grade\n        return letter_grade\n    else:\n        # Return an error message if the grade is not within the valid range\n        return 'Invalid grade. Please enter an integer between 0 and 100.'\n\n# Example usage\ngrade = 85\nletter_grade = numerical_grade_to_letter(grade)\nprint(f'The letter grade for {grade} is {letter_grade}.')\n```\n\nThis program defines a function `numerical_grade_to_letter` that takes a numerical grade as input and returns the corresponding letter grade based on the given grading system. The function checks if the grade is within the valid range (0 to 100) and returns an error message if it's not. Then, it finds the corresponding letter grade in the grading system and returns it.",
+  "error": null,
+  "elapsed_seconds": 4.04,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

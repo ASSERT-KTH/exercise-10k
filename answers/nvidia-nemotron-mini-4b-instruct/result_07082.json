@@ -1,0 +1,9 @@
+{
+  "id": 7082,
+  "title": "Leap Year Checker",
+  "prompt": "Read a year from the user and check if it is a leap year\nSample Input: 2020\nSample Output: Yes\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a given year is a leap year:\n\n```python\ndef is_leap_year(year):\n    \"\"\"\n    Check if a given year is a leap year.\n\n    :param year: int - The year to check.\n    :return: bool - True if the year is a leap year, False otherwise.\n    \"\"\"\n    # A year is a leap year if it is evenly divisible by 4,\n    # but not if it is also evenly divisible by 100,\n    # unless it is also evenly divisible by 400.\n    return (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\n```\n\nYou can use this function as follows:\n\n```python\nyear = int(input(\"Enter a year: \"))\nif is_leap_year(year):\n    print(f\"{year} is a leap year.\")\nelse:\n    print(f\"{year} is not a leap year.\")\n```\n\nThis will prompt the user to enter a year, check if it's a leap year using the `is_leap_year` function, and print a message accordingly.",
+  "error": null,
+  "elapsed_seconds": 3.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

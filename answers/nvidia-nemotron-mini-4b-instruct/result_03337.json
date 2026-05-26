@@ -1,0 +1,9 @@
+{
+  "id": 3337,
+  "title": "List Searching (Binary Search)",
+  "prompt": "Write a program that takes a sorted list of integers and a target value as input and returns the index of the target value in the list using binary search.\nSample Input: [1, 2, 3, 4, 5], 3\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that implements binary search to find the index of a target value in a sorted list of integers:\n\n```python\ndef binary_search(sorted_list, target):\n    \"\"\"\n    Performs binary search on a sorted list of integers to find the index of a target value.\n\n    :param sorted_list: A sorted list of integers\n    :param target: The target value to search for\n    :return: The index of the target value in the list if found, otherwise -1\n    \"\"\"\n\n    # Check if the list is empty\n    if not sorted_list:\n        return -1\n\n    left, right = 0, len(sorted_list) - 1\n\n    # Continue searching until the left index is greater than the right index\n    while left <= right:\n        mid = (left + right) // 2\n\n        # Check if the middle element is the target value\n        if sorted_list[mid] == target:\n            return mid\n\n        # If the target value is less than the middle element, search in the left half\n        elif sorted_list[mid] > target:\n            right = mid - 1\n\n        # If the target value is greater than the middle element, search in the right half\n        else:\n            left = mid + 1\n\n    # If the target value is not found, return -1\n    return -1\n```\n\nYou can use this function as follows:\n\n```python\nsorted_list = [1, 2, 3, 4, 5]\ntarget = 3\nindex = binary_search(sorted_list, target)\nprint(index)  # Output: 2\n```",
+  "error": null,
+  "elapsed_seconds": 5.01,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

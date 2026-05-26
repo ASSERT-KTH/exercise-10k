@@ -1,0 +1,9 @@
+{
+  "id": 2626,
+  "title": "Word Scramble",
+  "prompt": "Create a program that takes a word as input and generates a scrambled version of it.\nSample Input: hello\nSample Output: lloeh\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a word as input and generates a scrambled version of it using a simple random permutation algorithm. This program ensures that the scrambled word is a valid English word by checking if it's a substring of a list of common English words.\n\n```python\nimport random\n\n# List of common English words\nwords = set(open('words.txt', 'r').read().lower().split())\n\ndef scramble_word(word):\n    \"\"\"\n    Scramble a word by randomly permuting its characters.\n    Ensure the scrambled word is a valid English word.\n    \"\"\"\n    # Shuffle the characters of the word\n    scrambled_word = ''.join(random.sample(word, len(word)))\n\n    # Check if the scrambled word is a valid English word\n    while scrambled_word not in words:\n        scrambled_word = ''.join(random.sample(word, len(word)))\n\n    return scrambled_word\n\n# Get user input\nuser_input = input(\"Enter a word to scramble: \")\n\n# Generate and print the scrambled word\nscrambled_word = scramble_word(user_input)\nprint(f\"Scrambled word: {scrambled_word}\")\n```\n\nThis program uses a list of common English words (`words.txt`) as the set of valid words. You can replace this file with a different list of words or even create your own list to suit your needs. The `scramble_word` function randomly shuffles the characters of the input word and checks if the scrambled word is a valid English word before returning it.",
+  "error": null,
+  "elapsed_seconds": 3.96,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

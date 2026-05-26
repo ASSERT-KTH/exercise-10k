@@ -1,0 +1,9 @@
+{
+  "id": 9221,
+  "title": "Pattern Printer",
+  "prompt": "Write a program that prints a pattern of numbers using loops. The pattern should consist of a series of rows where each row contains a sequence of numbers from 1 to the row number. For example, if the input is 5, the pattern should be: 1, 2 1, 3 2 1, 4 3 2 1, 5 4 3 2 1\nSample Input: 5\nSample Output: 1\n2 1\n3 2 1\n4 3 2 1\n5 4 3 2 1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that prints the pattern you described for a given input number of rows:\n```python\ndef print_pattern(n):\n    # Ensure the input is a positive integer\n    if not isinstance(n, int) or n < 1:\n        raise ValueError(\"Input must be a positive integer\")\n\n    # Print the pattern for each row from 1 to n\n    for i in range(1, n+1):\n        row = []\n        for j in range(i):\n            row.append(j+1)\n        print(\" \".join(str(num) for num in row))\n\n# Get user input and call the function\ntry:\n    n = int(input(\"Enter the number of rows: \"))\n    print_pattern(n)\nexcept ValueError as e:\n    print(e)\n```\nThis program defines a function `print_pattern` that takes an integer `n` as input and prints the pattern for each row from 1 to `n`. The function first checks if the input is a positive integer, and raises a `ValueError` if it's not. Then, it initializes an empty list `row` for each row, and appends the row number plus 1 to the list for each number in the row. Finally, it prints the row numbers separated by spaces using the `join` method and a generator expression. The program then gets user input and calls the function with the input value.",
+  "error": null,
+  "elapsed_seconds": 3.51,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

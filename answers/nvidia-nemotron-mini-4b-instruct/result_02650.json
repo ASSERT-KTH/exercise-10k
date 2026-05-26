@@ -1,0 +1,9 @@
+{
+  "id": 2650,
+  "title": "Dictionary Items",
+  "prompt": "Write a function to get a list of key-value pairs from a dictionary\nSample Input: {'name': 'John', 'age': 25}\nSample Output: [('name', 'John'), ('age', 25)]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_key_value_pairs(dictionary):\n    \"\"\"\n    Given a dictionary, return a list of tuples where each tuple contains a key and its corresponding value.\n\n    :param dictionary: The dictionary to extract key-value pairs from\n    :return: A list of tuples, where each tuple contains a key and its corresponding value\n    \"\"\"\n    if not isinstance(dictionary, dict):\n        raise TypeError(\"The input must be a dictionary.\")\n\n    return [(key, value) for key, value in dictionary.items()]\n```\nHere's how you can use this function:\n```python\nsample_input = {'name': 'John', 'age': 25}\nsample_output = get_key_value_pairs(sample_input)\nprint(sample_output)  # Output: [('name', 'John'), ('age', 25)]\n```\nThis function first checks if the input is a dictionary. If not, it raises a `TypeError`. Then, it uses a list comprehension to create a list of tuples, where each tuple contains a key and its corresponding value from the dictionary.",
+  "error": null,
+  "elapsed_seconds": 2.84,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

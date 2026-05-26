@@ -1,0 +1,9 @@
+{
+  "id": 3745,
+  "title": "Finding the Minimum",
+  "prompt": "Write a program to find the minimum number in a list of integers using a basic algorithm\nSample Input: [3, 1, 4, 1, 5, 9, 2)\nSample Output: 1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the minimum number in a list of integers using a basic algorithm:\n\n```python\ndef find_min(numbers):\n    \"\"\"\n    Find the minimum number in a list of integers.\n\n    :param numbers: List of integers\n    :return: Minimum integer in the list\n    \"\"\"\n    if not numbers:  # Check if the list is empty\n        raise ValueError(\"Input list cannot be empty\")\n\n    min_value = numbers[0]  # Initialize the minimum value to the first element\n\n    for num in numbers[1:]:  # Iterate through the remaining elements\n        if num < min_value:  # If the current number is smaller than the minimum value so far\n            min_value = num  # Update the minimum value\n\n    return min_value\n\n# Sample input\nnumbers = [3, 1, 4, 1, 5, 9, 2]\nprint(find_min(numbers))  # Output: 1\n```\n\nThis program defines a function `find_min` that takes a list of integers as input and returns the minimum number in the list. It first checks if the input list is empty and raises a `ValueError` if it is. Then, it initializes the minimum value to the first element of the list and iterates through the remaining elements, updating the minimum value if a smaller number is found. Finally, it returns the minimum value.",
+  "error": null,
+  "elapsed_seconds": 3.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7225,
+  "title": "Counting Fruits",
+  "prompt": "Write a program to count the number of fruits in a basket. The program will receive a list of fruits as input and output the total count. Use a for loop to iterate over the list.\nSample Input: [\"apple\", \"banana\", \"orange\", \"apple\"]\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef count_fruits(fruits):\n    \"\"\"\n    Count the number of fruits in a basket.\n\n    :param fruits: List of fruits\n    :return: Total count of fruits\n    \"\"\"\n    # Use a for loop to iterate over the list\n    fruit_count = 0\n    for fruit in fruits:\n        # Increment the count for each unique fruit\n        if fruit not in fruit_count:\n            fruit_count[fruit] = 1\n        else:\n            fruit_count[fruit] += 1\n\n    # Return the total count of fruits\n    return sum(fruit_count.values())\n\n# Example usage\nfruits = [\"apple\", \"banana\", \"orange\", \"apple\"]\nprint(count_fruits(fruits))  # Output: 4\n```\nThis program defines a function `count_fruits` that takes a list of fruits as input and returns the total count of unique fruits. It uses a dictionary to keep track of the count of each unique fruit, and then sums up the values in the dictionary to get the total count. The for loop iterates over each fruit in the input list, checking if it's already in the dictionary and incrementing its count accordingly.",
+  "error": null,
+  "elapsed_seconds": 2.92,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

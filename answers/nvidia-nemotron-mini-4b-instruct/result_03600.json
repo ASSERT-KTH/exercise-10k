@@ -1,0 +1,9 @@
+{
+  "id": 3600,
+  "title": "Calculate Time",
+  "prompt": "Create a program that calculates the time given the distance and speed.\nSample Input: 100 50\nSample Output: 2.0\n",
+  "answer": "Sure, I'd be happy to help you create a program that calculates the time given the distance and speed. Here's an example Python program that does this:\n\n```python\ndef calculate_time(distance, speed):\n    \"\"\"\n    Calculates the time it takes to travel a given distance at a given speed.\n\n    :param distance: The distance to travel (in meters).\n    :param speed: The speed at which to travel (in meters per second).\n    :return: The time it takes to travel the distance (in seconds).\n    \"\"\"\n\n    # Check that the inputs are positive numbers\n    if distance <= 0 or speed <= 0:\n        raise ValueError(\"Both distance and speed must be positive numbers.\")\n\n    # Calculate the time\n    time = distance / speed\n\n    return time\n\n# Example usage\ndistance = 100  # meters\nspeed = 50  # meters per second\n\ntime = calculate_time(distance, speed)\nprint(f\"{distance} meters at {speed} meters per second is {time} seconds.\")\n```\n\nThis program defines a function `calculate_time` that takes two arguments, `distance` and `speed`, and returns the time it takes to travel the given distance at the given speed. The function checks that the inputs are positive numbers and calculates the time by dividing the distance by the speed. The example usage at the end of the program demonstrates how to use the function to calculate the time for a given distance and speed.",
+  "error": null,
+  "elapsed_seconds": 3.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

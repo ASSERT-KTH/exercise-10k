@@ -1,0 +1,9 @@
+{
+  "id": 5306,
+  "title": "Function Composition",
+  "prompt": "Write a function that takes two functions as input and returns their composition\nSample Input: f(x) = x^2, g(x) = x + 1\nSample Output: f(g(x)) = (x + 1)^2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that takes two functions as input and returns their composition:\n\n```python\ndef compose_functions(f, g):\n    \"\"\"\n    Returns the composition of functions f and g.\n\n    Parameters:\n    f (callable): The first function to compose.\n    g (callable): The second function to compose.\n\n    Returns:\n    callable: The composition of f and g.\n    \"\"\"\n\n    # Check if the input functions are callable\n    if not callable(f) or not callable(g):\n        raise ValueError(\"Both inputs must be callable functions.\")\n\n    # Define the composition function\n    def composition(x):\n        return f(g(x))\n\n    return composition\n```\n\nYou can use this function to compose the functions `f(x) = x^2` and `g(x) = x + 1` as follows:\n\n```python\nf = lambda x: x**2\ng = lambda x: x + 1\n\ncomposition_f_g = compose_functions(f, g)\n\nprint(composition_f_g(3))  # Output: 14\n```\n\nThis function checks if the input functions are callable and raises a `ValueError` if they are not. It then defines the composition function as a new function that takes an input `x` and returns the result of applying `f` to the result of applying `g` to `x`.",
+  "error": null,
+  "elapsed_seconds": 3.43,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

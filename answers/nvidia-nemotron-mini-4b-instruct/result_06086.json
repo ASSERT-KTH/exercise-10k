@@ -1,0 +1,9 @@
+{
+  "id": 6086,
+  "title": "Grade Calculator",
+  "prompt": "Write a program that uses a while loop to keep asking the user for input until they enter a valid grade.\nSample Input: 90\nSample Output: Grade: A\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses a while loop to keep asking the user for input until they enter a valid grade (a letter grade between 'A' and 'F'). The program will then display the grade along with a message indicating that it is a valid grade.\n\n```python\ndef get_valid_grade():\n    \"\"\"Get a valid letter grade from the user.\"\"\"\n    while True:\n        grade = input(\"Enter a letter grade (A-F): \").upper()\n        if grade in 'A B C D E F'.split():\n            return grade\n        else:\n            print(\"That's not a valid letter grade. Please try again.\")\n\n# Call the function to get a valid grade\nvalid_grade = get_valid_grade()\n\n# Display the grade and a message indicating it is a valid grade\nprint(f\"Grade: {valid_grade}\")\n```\n\nThis program defines a function `get_valid_grade()` that prompts the user for input, checks if it is a valid letter grade, and continues to ask for input if it is not. Once a valid grade is entered, the function returns the grade and the program calls this function to get a valid grade. The program then displays the grade along with a message indicating that it is a valid grade.",
+  "error": null,
+  "elapsed_seconds": 3.01,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

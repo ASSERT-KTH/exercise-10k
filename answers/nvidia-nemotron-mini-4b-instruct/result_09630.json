@@ -1,0 +1,9 @@
+{
+  "id": 9630,
+  "title": "Function with Closure",
+  "prompt": "Create a function that returns another function with access to its own scope.\nSample Input: None\nSample Output: A function with access to its own scope\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example implementation in JavaScript that meets your requirements:\n```javascript\nfunction createScopeFunction() {\n  // Create a new function with a private variable\n const privateVar = 'private scope';\n\n  // Create a new function that has access to the private variable\n  return function() {\n    // Access the private variable within the nested function\n    console.log(`Accessing private scope: ${privateVar}`);\n  };\n}\n\n// Call the function to create a new scope function\nconst scopeFunction = createScopeFunction();\n\n// Call the scope function to demonstrate its behavior\nscopeFunction(); // Output: Accessing private scope: private scope\n```\nIn this example, the `createScopeFunction` function creates a new function with a private variable (`privateVar`) that is only accessible within the scope of the `createScopeFunction` function. The `createScopeFunction` function then returns this new function, which has access to the private variable. When we call the `scopeFunction`, it logs the value of the private variable to the console, demonstrating that it has access to its own scope.\n\nYou can modify this example to suit your specific needs, such as changing the type of the returned function or adding additional parameters to the `createScopeFunction`.",
+  "error": null,
+  "elapsed_seconds": 3.09,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

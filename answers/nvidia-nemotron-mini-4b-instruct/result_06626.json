@@ -1,0 +1,9 @@
+{
+  "id": 6626,
+  "title": "Function with Lambda Expression",
+  "prompt": "Create a function that uses a lambda expression to filter out even numbers from a list\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [1, 3, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses a lambda expression to filter out even numbers from a list:\n```python\ndef filter_odd(numbers):\n    \"\"\"\n    Filters out even numbers from a list using a lambda expression.\n\n    :param numbers: The list of numbers to filter.\n    :return: A new list containing only the odd numbers from the input list.\n    \"\"\"\n    return list(filter(lambda x: x % 2 != 0, numbers))\n```\nHere's how you can use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\nodd_numbers = filter_odd(numbers)\nprint(odd_numbers)  # Output: [1, 3, 5]\n```\nThis function uses the `filter()` function from Python's built-in `functools` module to apply the lambda expression to each number in the input list. The lambda expression checks if the remainder of dividing the number by 2 is not equal to 0, which means the number is odd. The `list()` function is used to convert the filter object to a list, which is then returned by the function.",
+  "error": null,
+  "elapsed_seconds": 3.11,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

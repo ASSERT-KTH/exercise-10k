@@ -1,0 +1,9 @@
+{
+  "id": 2022,
+  "title": "Grade Calculator",
+  "prompt": "Develop a program that calculates a student's grade based on their score. The program should use if/else statements to determine the grade.\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_grade(score):\n    \"\"\"\n    Calculates a student's grade based on their score.\n\n    :param score: The student's score as an integer between 0 and 100.\n    :return: The student's letter grade as a string.\n    \"\"\"\n\n    # Define the grade boundaries\n    a_min, b_min, c_min, d_min, f_min = 90, 80, 70, 60, 0\n    a_max, b_max, c_max, d_max, f_max = 100, 89, 79, 69, 0\n\n    # Determine the grade based on the score\n    if score >= a_max:\n        grade = \"A\"\n    elif score >= b_max:\n        grade = \"B\"\n    elif score >= c_max:\n        grade = \"C\"\n    elif score >= d_min:\n        grade = \"D\"\n    else:\n        grade = \"F\"\n\n    return grade\n\n# Example usage\nscore = 85\ngrade = calculate_grade(score)\nprint(f\"The student's letter grade is {grade}.\")\n```\nThis program defines a function `calculate_grade` that takes a student's score as an integer between 0 and 100 and returns their letter grade as a string. The function uses if/else statements to determine the grade based on the score and the defined grade boundaries. The example usage at the end of the program demonstrates how to use the function with a sample input score of 85.",
+  "error": null,
+  "elapsed_seconds": 5.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

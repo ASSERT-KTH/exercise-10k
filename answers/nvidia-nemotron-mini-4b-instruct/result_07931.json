@@ -1,0 +1,9 @@
+{
+  "id": 7931,
+  "title": "Currency Converter",
+  "prompt": "Write a program to convert a currency given the exchange rate.\nSample Input: 100 1.5\nSample Output: 150.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes in the amount of currency and the exchange rate as input, and outputs the converted amount:\n```python\ndef convert_currency(amount, exchange_rate):\n    \"\"\"\n    Converts a given amount of currency based on the given exchange rate.\n\n    Parameters:\n    amount (float): The amount of currency to convert.\n    exchange_rate (float): The current exchange rate.\n\n    Returns:\n    float: The converted amount of currency.\n    \"\"\"\n    # Ensure the input is a float\n    amount = float(amount)\n    exchange_rate = float(exchange_rate)\n\n    # Perform the conversion\n    converted_amount = amount * exchange_rate\n\n    # Return the result\n    return converted_amount\n\n# Get user input\namount_str = input(\"Enter the amount of currency: \")\nexchange_rate_str = input(\"Enter the current exchange rate: \")\n\n# Convert the input to floats\namount = convert_currency(amount_str, exchange_rate_str)\n\n# Print the result\nprint(f\"{amount_str} {amount_str.upper()} is equal to {amount:.2f} {exchange_rate_str.upper()}.\")\n```\nThis program defines a function `convert_currency` that takes in the amount and exchange rate as input, performs the conversion, and returns the result. The program then gets user input for the amount and exchange rate, converts them to floats, calls the `convert_currency` function, and prints the result. The output will be in the format \"X Y is equal to Z Z\".",
+  "error": null,
+  "elapsed_seconds": 3.66,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

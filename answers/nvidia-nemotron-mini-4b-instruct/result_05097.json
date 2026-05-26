@@ -1,0 +1,9 @@
+{
+  "id": 5097,
+  "title": "Password Generator",
+  "prompt": "Write a program that generates a random password based on the user's input.\nSample Input: 10\nSample Output: Generated password: 4S$eJ#8dLp\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates a random password based on the user's input of the desired length. The password will contain uppercase and lowercase letters, digits, and special characters.\n\n```python\nimport string\nimport random\n\ndef generate_password(length):\n    \"\"\"Generate a random password of the given length.\"\"\"\n    characters = string.ascii_letters + string.digits + string.punctuation\n    return ''.join(random.choice(characters) for _ in range(length))\n\n# Get user input for desired password length\ntry:\n    length = int(input(\"Enter the desired password length (minimum 8): \"))\n    if length < 8:\n        raise ValueError(\"Password length must be at least 8 characters.\")\nexcept ValueError as e:\n    print(e)\n    exit()\n\n# Generate and print the password\npassword = generate_password(length)\nprint(f\"Generated password: {password}\")\n```\n\nThis program defines a function `generate_password` that generates a random password of the given length using the `random` module. The function combines characters from the ASCII alphabet, digits, and punctuation symbols to create the password. The user is prompted to enter the desired password length, and the program checks if the input is valid (minimum length is 8 characters). If the input is valid, the program generates and prints the password.",
+  "error": null,
+  "elapsed_seconds": 3.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

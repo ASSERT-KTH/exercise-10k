@@ -1,0 +1,9 @@
+{
+  "id": 2143,
+  "title": "Formatting Output",
+  "prompt": "Write a program that formats a given number as a currency value, with two decimal places and a dollar sign.\nSample Input: 123.456\nSample Output: $123.46\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that formats a given number as a currency value with two decimal places and a dollar sign:\n```python\ndef format_currency(amount):\n    \"\"\"\n    Formats a given number as a currency value with two decimal places and a dollar sign.\n\n    :param amount: The number to format as currency.\n    :return: The formatted currency value as a string.\n    \"\"\"\n    # Ensure the input is a number (float or int)\n    amount = float(amount)\n\n    # Format the number as currency with two decimal places and a dollar sign\n    formatted_amount = \"${:.2f}\".format(amount)\n\n    return formatted_amount\n```\nHere's an example of how to use this function:\n```python\nprint(format_currency(123.456))  # Output: $123.46\n```\nThis program first converts the input to a float to ensure it can handle decimal numbers. Then, it uses the `format()` method with the `{:.2f}` format specifier to format the number as currency with two decimal places and a dollar sign. The `{}` placeholders are replaced with the number itself, and the `.2f` format specifier specifies that the number should be formatted with two decimal places. Finally, the formatted currency value is returned as a string.",
+  "error": null,
+  "elapsed_seconds": 3.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

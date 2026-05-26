@@ -1,0 +1,9 @@
+{
+  "id": 614,
+  "title": "Sales Tax Calculator",
+  "prompt": "Write a program to calculate the sales tax on a given purchase amount and tax rate.\nSample Input: 100 8\nSample Output: 8.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the sales tax on a given purchase amount and tax rate:\n\n```python\ndef calculate_sales_tax(purchase_amount, tax_rate):\n    \"\"\"\n    Calculates the sales tax on a given purchase amount and tax rate.\n\n    :param purchase_amount: The amount of the purchase before tax.\n    :param tax_rate: The tax rate as a decimal (e.g., 0.08 for 8%).\n    :return: The sales tax amount as a float.\n    \"\"\"\n\n    # Validate input\n    if not isinstance(purchase_amount, (float, int)) or purchase_amount < 0:\n        raise ValueError(\"Purchase amount must be a non-negative number.\")\n\n    if not isinstance(tax_rate, (float, int)) or tax_rate < 0 or tax_rate > 1:\n        raise ValueError(\"Tax rate must be a number between 0 and 1 (exclusive).\")\n\n    # Calculate sales tax\n    sales_tax = purchase_amount * tax_rate\n\n    return sales_tax\n\n\n# Sample input and output\npurchase_amount = 100\ntax_rate = 0.08\n\nsales_tax = calculate_sales_tax(purchase_amount, tax_rate)\nprint(f\"{purchase_amount} * {tax_rate * 100:.0f}% = {sales_tax:.2f}\")\n```\n\nThis program defines a function `calculate_sales_tax` that takes a purchase amount and tax rate as input and returns the sales tax amount. The function validates the input to ensure it's valid, and then calculates the sales tax using the given tax rate. The sample input and output demonstrate how to use the function.",
+  "error": null,
+  "elapsed_seconds": 4.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

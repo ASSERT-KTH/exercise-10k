@@ -1,0 +1,9 @@
+{
+  "id": 4073,
+  "title": "String Comparison",
+  "prompt": "Write a program that takes two strings as input and returns -1 if the first string is less than the second string, 0 if the strings are equal, and 1 if the first string is greater than the second string.\nSample Input: ['apple', 'banana']\nSample Output: -1\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef compare_strings(str1, str2):\n    \"\"\"\n    Compares two strings and returns -1, 0, or 1 based on their order.\n\n    :param str1: The first string to compare.\n    :param str2: The second string to compare.\n    :return: -1, 0, or 1 depending on whether str1 is less than, equal to, or greater than str2.\n    \"\"\"\n    # Ensure both inputs are strings\n    if not isinstance(str1, str) or not isinstance(str2, str):\n        raise TypeError(\"Both inputs must be strings.\")\n\n    # Compare the strings using their natural order (lexicographical order)\n    return -1 if str1 < str2 else 0 if str1 == str2 else 1\n\n# Example usage\nprint(compare_strings('apple', 'banana'))  # Output: -1\nprint(compare_strings('banana', 'apple'))  # Output: 1\nprint(compare_strings('banana', 'banana'))  # Output: 0\n```\n\nThis program defines a function `compare_strings` that takes two strings as input and returns -1, 0, or 1 based on their order. The function first checks if both inputs are strings, and then compares them using their natural order (lexicographical order).",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

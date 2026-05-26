@@ -1,0 +1,9 @@
+{
+  "id": 8928,
+  "title": "Check for Cyclic Linked List",
+  "prompt": "Write a program to check if a given linked list has a cycle.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: False\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given linked list has a cycle using the Floyd's Cycle-Finding Algorithm. This algorithm has a time complexity of O(V + E), where V is the number of nodes and E is the number of edges in the graph represented by the linked list.\n\n```python\nclass ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef has_cycle(head: ListNode) -> bool:\n    \"\"\"\n    Check if a given linked list has a cycle.\n\n    :param head: The head node of the linked list.\n    :return: True if the linked list has a cycle, False otherwise.\n    \"\"\"\n    slow, fast = head, head\n\n    while fast and fast.next:\n        slow = slow.next\n        fast = fast.next.next\n\n        if slow == fast:\n            # If the slow and fast pointers meet, there's a cycle\n            slow, fast = head, head\n            while slow != fast:\n                slow, fast = slow.next, fast.next\n\n            return True\n\n    return False\n```\n\nHere's an example of how to use the function:\n\n```python\n# Create a linked list with a cycle\nhead = ListNode(1)\nhead.next = ListNode(2)\nhead.next.next = ListNode(3)\nhead.next.next.next = ListNode(4)\nhead.next.next.next.next = head.next  # Create a cycle\n\nprint(has_cycle(head))  # Output: True\n```",
+  "error": null,
+  "elapsed_seconds": 3.96,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6112,
+  "title": "List Scanning",
+  "prompt": "Write a program that takes a list of integers as input, and returns the index of the first occurrence of a specified value in the list.\nSample Input: [1, 2, 3, 4, 5], 3\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef find_index(lst, value):\n    \"\"\"\n    Given a list of integers and a value to search for, return the index of the first occurrence of that value in the list.\n\n    :param lst: List of integers\n    :param value: Integer to search for\n    :return: Index of the first occurrence of the value in the list, or -1 if not found\n    \"\"\"\n    for i, num in enumerate(lst):\n        if num == value:\n            return i\n    return -1\n```\nThis function uses a `for` loop to iterate over the list and check each element (`num`) against the specified value (`value`). If a match is found, the function returns the index (`i`) of the first occurrence. If no match is found after checking all elements, the function returns -1.\n\nHere's an example of how to use this function:\n```python\nprint(find_index([1, 2, 3, 4, 5], 3))  # Output: 2\nprint(find_index([1, 2, 3, 4, 5], 6))  # Output: -1\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

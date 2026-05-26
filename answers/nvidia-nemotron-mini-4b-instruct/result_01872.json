@@ -1,0 +1,9 @@
+{
+  "id": 1872,
+  "title": "List Grouping",
+  "prompt": "Write a program to group a list of objects by a common attribute and print the resulting groups.\nSample Input: [{name: 'John', age: 25}, {name: 'Jane', age: 25}, {name: 'Bob', age: 30}]\nSample Output: {25: [{name: 'John', age: 25}, {name: 'Jane', age: 25}] and 30: [{name: 'Bob', age: 30}]}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that groups a list of objects by a common attribute (in this case, the 'age' attribute) and prints the resulting groups:\n```python\ndef group_by_age(objects):\n    \"\"\"Groups a list of objects by a common attribute (age) and returns a dictionary.\"\"\"\n    grouped_objects = {}\n    for obj in objects:\n        age = obj['age']\n        if age not in grouped_objects:\n            grouped_objects[age] = []\n        grouped_objects[age].append(obj)\n    return grouped_objects\n\n# Example usage:\nobjects = [{'name': 'John', 'age': 25}, {'name': 'Jane', 'age': 25}, {'name': 'Bob', 'age': 30}]\nresult = group_by_age(objects)\nprint(result)\n```\nWhen you run this program with the sample input, it will output:\n```python\n{25: [{'name': 'John', 'age': 25}, {'name': 'Jane', 'age': 25}], 30: [{'name': 'Bob', 'age': 30}]}\n```\nThis program first initializes an empty dictionary `grouped_objects` to store the grouped objects. Then, it iterates over each object in the input list, gets its 'age' attribute, and checks if that age is already a key in the `grouped_objects` dictionary. If not, it adds a new key-value pair to the dictionary with an empty list as the value. Finally, it appends the current object to the corresponding list in the dictionary.\n\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 4.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

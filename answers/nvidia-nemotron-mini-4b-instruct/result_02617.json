@@ -1,0 +1,9 @@
+{
+  "id": 2617,
+  "title": "Find Keys with Common Values",
+  "prompt": "Write a program that finds all keys in a dictionary that have a common value\nSample Input: {'a': 1, 'b': 2, 'c': 1, 'd': 3}, 1\nSample Output: ['a', 'c']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds all keys in a dictionary that have a common value:\n```python\ndef find_common_keys(dictionary, value):\n    \"\"\"\n    Find all keys in a dictionary that have a common value.\n\n    :param dictionary: The dictionary to search in\n    :param value: The value to find common keys for\n    :return: A list of keys that have the common value\n    \"\"\"\n    # Use a set to store the keys that have the common value\n    common_keys = set()\n\n    # Iterate over the keys in the dictionary\n    for key in dictionary.keys():\n        # If the value associated with the key is equal to the target value, add the key to the set\n        if dictionary[key] == value:\n            common_keys.add(key)\n\n    # Convert the set back to a list and return it\n    return list(common_keys)\n```\nHere's an example of how you can use this function:\n```python\nsample_dict = {'a': 1, 'b': 2, 'c': 1, 'd': 3}\nsample_value = 1\n\ncommon_keys = find_common_keys(sample_dict, sample_value)\nprint(common_keys)  # Output: ['a', 'c']\n```\nThis function first creates an empty set to store the keys that have the common value. Then, it iterates over the keys in the dictionary and checks if the value associated with each key is equal to the target value. If it is, the key is added to the set. Finally, the function converts the set back to a list and returns it.",
+  "error": null,
+  "elapsed_seconds": 3.96,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

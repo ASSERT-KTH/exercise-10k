@@ -1,0 +1,9 @@
+{
+  "id": 9880,
+  "title": "Simple Web Scraper",
+  "prompt": "Write a program that takes a URL as input and prints out the HTML content.\nSample Input: https://www.example.com\nSample Output: <html>...</html>\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses the `requests` library to fetch the HTML content from a given URL and then prints it out:\n\n```python\nimport requests\n\ndef get_html_content(url):\n    \"\"\"\n    Fetch the HTML content from a given URL and print it out.\n\n    :param url: The URL to fetch the HTML content from.\n    \"\"\"\n    # Send a GET request to the URL and store the response\n    response = requests.get(url)\n\n    # Check if the request was successful (status code 200)\n    if response.status_code == 200:\n        # Print the HTML content\n        print(response.text)\n    else:\n        print(f\"Error fetching the HTML content from {url}. Status code: {response.status_code}\")\n\n# Example usage\nurl = \"https://www.example.com\"\nget_html_content(url)\n```\n\nThis program defines a function `get_html_content` that takes a URL as input, sends a GET request to the URL using the `requests` library, and prints out the HTML content if the request was successful. The function also checks for any errors and prints an error message if the request was not successful.\n\nYou can replace the `url` variable with any valid URL you want to fetch the HTML content from.",
+  "error": null,
+  "elapsed_seconds": 3.3,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6378,
+  "title": "List Union",
+  "prompt": "Write a program that takes two lists as input and returns a new list containing all elements from both lists, without duplicates\nSample Input: [1, 2, 3], [3, 4, 5]\nSample Output: [1, 2, 3, 4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef combine_lists(list1, list2):\n    \"\"\"\n    Combines two lists into a new list, removing duplicates.\n\n    Parameters:\n    list1 (list): The first input list.\n    list2 (list): The second input list.\n\n    Returns:\n    list: A new list containing all elements from both input lists, without duplicates.\n    \"\"\"\n    # Use a set to store unique elements from both lists, then convert it back to a list\n    unique_elements = list(set(list1 + list2))\n\n    return unique_elements\n```\nHere's an example of how you can use this function:\n```python\nlist1 = [1, 2, 3]\nlist2 = [3, 4, 5]\n\ncombined_list = combine_lists(list1, list2)\nprint(combined_list)  # Output: [1, 2, 3, 4, 5]\n```\nThis program works by first combining the elements of both input lists into a single list using the `+` operator. It then converts this list to a set, which automatically removes any duplicate elements since sets only allow unique elements. Finally, it converts the set back to a list and returns it as the result.",
+  "error": null,
+  "elapsed_seconds": 3.24,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

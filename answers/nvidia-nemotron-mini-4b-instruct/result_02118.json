@@ -1,0 +1,9 @@
+{
+  "id": 2118,
+  "title": "Dictionary Fromkeys",
+  "prompt": "Write a function to create a new dictionary with the given keys and a default value\nSample Input: ['name', 'age', 'country'], 'Unknown'\nSample Output: {'name': 'Unknown', 'age': 'Unknown', 'country': 'Unknown'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef create_default_dict(keys, default_value):\n    \"\"\"\n    Create a new dictionary with the given keys and a default value.\n\n    Parameters:\n    keys (list): A list of keys to include in the new dictionary.\n    default_value (any): The default value to use for any missing keys.\n\n    Returns:\n    dict: A new dictionary with the given keys and the default value.\n    \"\"\"\n    return {key: default_value if key not in keys else None for key in keys}\n```\nHere's an example of how you can use this function:\n```python\nkeys = ['name', 'age', 'country']\ndefault_value = 'Unknown'\n\nnew_dict = create_default_dict(keys, default_value)\nprint(new_dict)  # Output: {'name': None, 'age': None, 'country': 'Unknown'}\n```\nThis function uses a dictionary comprehension to create the new dictionary. For each key in the `keys` list, it checks if the key already exists in the dictionary. If it does, it returns the existing value. If it doesn't, it returns the `default_value`. The `None` value is used as the default value for the keys that are not in the `keys` list, since `None` is a valid key in a dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

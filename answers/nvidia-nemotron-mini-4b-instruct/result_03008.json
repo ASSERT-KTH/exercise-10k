@@ -1,0 +1,9 @@
+{
+  "id": 3008,
+  "title": "String Replacement",
+  "prompt": "Write a program to replace a substring within a given string with another string.\nSample Input: Hello World, World, Universe\nSample Output: Hello Universe\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef replace_substring(input_string, substring, replacement):\n    \"\"\"\n    Replaces all occurrences of a substring within a given string with another string.\n\n    :param input_string: The string to modify.\n    :param substring: The substring to replace.\n    :param replacement: The string to replace the substring with.\n    :return: The modified string.\n    \"\"\"\n    # Ensure the replacement string is not empty\n    if not replacement:\n        raise ValueError(\"The replacement string cannot be empty.\")\n\n    # Use the string method replace to replace all occurrences of the substring\n    return input_string.replace(substring, replacement)\n\n# Example usage\ninput_string = \"Hello World, World, Universe\"\nsubstring = \"World\"\nreplacement = \"Universe\"\n\noutput_string = replace_substring(input_string, substring, replacement)\nprint(output_string)  # Output: Hello Universe, Universe, Universe\n```\nThis program defines a function `replace_substring` that takes three arguments: the input string, the substring to replace, and the replacement string. It first checks if the replacement string is empty and raises a `ValueError` if it is. Then, it uses the `str.replace` method to replace all occurrences of the substring with the replacement string and returns the modified string. The example usage at the end of the program demonstrates how to use this function to replace the substring \"World\" with \"Universe\" in the given input string.",
+  "error": null,
+  "elapsed_seconds": 3.54,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

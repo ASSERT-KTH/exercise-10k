@@ -1,0 +1,9 @@
+{
+  "id": 6498,
+  "title": "Password Validator",
+  "prompt": "Write a program that asks the user for a password and then checks if the password meets certain criteria (such as length and complexity). If the password is valid, print out a success message. Otherwise, print out an error message.\nSample Input: password123\nSample Output: Password is valid\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\nimport re\n\ndef get_password():\n    \"\"\"Asks the user for a password and validates it.\"\"\"\n    while True:\n        password = input(\"Please enter a password: \")\n        if len(password) >= 8 and not re.search(r'\\d', password) or not re.search(r'[a-z]', password) or not re.search(r'[A-Z]', password):\n            print(\"Password is invalid. Please use a combination of uppercase, lowercase, and numeric characters, and ensure it's at least 8 characters long.\")\n        else:\n            print(\"Password is valid.\")\n            return password\n\n# Call the function to get the password\nget_password()\n```\nThis program defines a function `get_password()` that prompts the user for a password, validates it based on length and character complexity, and prints a success or error message accordingly. The validation checks for the presence of at least one digit, lowercase letter, and uppercase letter in the password. If the password meets these criteria, the function returns the password. The program then calls this function to get the password from the user.",
+  "error": null,
+  "elapsed_seconds": 2.82,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 867,
+  "title": "String Reverser",
+  "prompt": "Create a program that takes in a string and outputs the reversed string based on the following conditions: if the string is empty, output an error message, if the string has an odd length, reverse the string, if the string has an even length, output the original string.\nSample Input: Hello\nSample Output: olleH\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef reverse_string(input_str):\n    \"\"\"\n    Reverses a string based on its length.\n\n    :param input_str: The string to reverse.\n    :return: The reversed string.\n    \"\"\"\n    if not input_str:  # Check for empty string\n        return \"Error: Input string cannot be empty.\"\n\n    if len(input_str) % 2 == 1:  # Check for odd length\n        return input_str[::-1]  # Reverse the string\n    else:\n        return input_str\n\n# Get user input\nuser_input = input(\"Enter a string: \")\n\n# Call the function and print the result\nresult = reverse_string(user_input)\nprint(result)\n```\nThis program defines a function `reverse_string` that takes an input string and returns the reversed string based on its length. The function first checks if the input string is empty and returns an error message if it is. Then, it checks if the length of the string is odd or even, and reverses the string accordingly. Finally, the program gets user input, calls the function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 4.09,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

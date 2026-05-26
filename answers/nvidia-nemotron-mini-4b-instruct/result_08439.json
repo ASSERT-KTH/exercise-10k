@@ -1,0 +1,9 @@
+{
+  "id": 8439,
+  "title": "Seasonal Checker",
+  "prompt": "Create a program that takes in a month and outputs the corresponding season using conditional statements.\nSample Input: 12\nSample Output: WINTER\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_season(month):\n    \"\"\"\n    Given a month (as an integer), return the corresponding season.\n\n    :param month: int, the month number (1-12)\n    :return: str, the season name (e.g., \"WINTER\")\n    \"\"\"\n    # Define the seasons\n    seasons = [\"WINTER\", \"SPRING\", \"SUMMER\", \"AUTUMN\"]\n\n    # Check if the month is within the valid range (1-12)\n    if not 1 <= month <= 12:\n        raise ValueError(\"Month must be between 1 and 12.\")\n\n    # Determine the season based on the month\n    season = seasons[month - 1]\n\n    return season\n\n# Get user input for the month\nuser_month = int(input(\"Enter a month (1-12): \"))\n\n# Output the season\nseason = get_season(user_month)\nprint(f\"The corresponding season is {season}.\")\n```\nThis program defines a function `get_season` that takes in a month as an integer and returns the corresponding season as a string. The function checks if the input month is within the valid range (1-12) and raises a `ValueError` if it's not. The function then determines the season based on the month and returns it. The program then gets user input for the month, calls the `get_season` function, and outputs the corresponding season.",
+  "error": null,
+  "elapsed_seconds": 3.67,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

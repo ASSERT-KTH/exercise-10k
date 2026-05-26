@@ -1,0 +1,9 @@
+{
+  "id": 8857,
+  "title": "Function to Check if a Number is a Perfect Cube",
+  "prompt": "Create a function to check if a given number is a perfect cube or not\nSample Input: 27\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a given number is a perfect cube:\n\n```python\nimport math\n\ndef is_perfect_cube(n):\n    \"\"\"\n    Check if a given number is a perfect cube.\n\n    :param n: The number to check.\n    :return: True if n is a perfect cube, False otherwise.\n    \"\"\"\n    if n < 0:\n        return False\n    root = int(math.cbrt(n))  # Calculate the integer cube root\n    return root ** 3 == n  # Check if the cube of the root equals the input number\n```\n\nThis function first checks if the input number is negative, in which case it cannot be a perfect cube. Then, it calculates the integer cube root of the number using the `math.cbrt()` function, which returns the cube root of a number. Finally, it checks if the cube of the root equals the input number. If they are equal, the function returns `True`, indicating that the number is a perfect cube. Otherwise, it returns `False`.\n\nHere's an example of how to use the function:\n\n```python\nprint(is_perfect_cube(27))  # Output: True\nprint(is_perfect_cube(125))  # Output: True\nprint(is_perfect_cube(126))  # Output: False\n```",
+  "error": null,
+  "elapsed_seconds": 3.25,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

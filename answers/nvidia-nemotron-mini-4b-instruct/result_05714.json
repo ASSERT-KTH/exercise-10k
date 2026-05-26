@@ -1,0 +1,9 @@
+{
+  "id": 5714,
+  "title": "Simple Chatbot",
+  "prompt": "Create a simple chatbot that responds to basic user input.\nSample Input: Hello\nSample Output: Hi! How can I help you?\n",
+  "answer": "Sure, I'd be happy to help you create a simple chatbot. Here's a basic implementation using Python and the ChatterBot library, which provides a simple and flexible framework for building chatbots. First, you need to install the library if you haven't already:\n\n```bash\npip install chatterbot chatterbot-corpus\n```\n\nNow, let's create the chatbot:\n\n```python\nimport os\nfrom chatterbot import ChatBot\nfrom chatterbot.trainers import ChatterBotCorpusTrainer\n\n# Initialize the chatbot\nbot = ChatBot(\"Simple Chatbot\")\n\n# Add a trainer to train the chatbot with English corpus\ntrainer = ChatterBotCorpusTrainer(bot)\ntrainer.train(\"chatterbot.corpus.english\")\n\n# Function to handle user input\ndef handle_input(user_input):\n    response = bot.get_response(user_input)\n    return response\n\n# Main loop\nwhile True:\n    user_input = input(\"You: \").strip()\n    if not user_input:\n        continue\n\n    response = handle_input(user_input)\n    print(\"Chatbot:\", response)\n```\n\nThis chatbot will respond to basic user input with a friendly greeting and a question. You can customize the chatbot by adding more intents, entities, and responses in the `chatterbot.corpus.english` directory or by training the chatbot with your own data.\n\nTo make the chatbot more interactive, you can add more functions to handle specific user inputs or use a more advanced chatbot framework like Rasa or Dialogflow.",
+  "error": null,
+  "elapsed_seconds": 3.46,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

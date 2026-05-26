@@ -1,0 +1,9 @@
+{
+  "id": 9481,
+  "title": "Grade Calculator",
+  "prompt": "Create a program that calculates a student's grade based on their score. The program should take an integer score as input and output the corresponding grade. If the score is 90 or above, the grade is 'A'. If the score is between 80 and 89, the grade is 'B'. If the score is between 70 and 79, the grade is 'C'. If the score is between 60 and 69, the grade is 'D'. If the score is below 60, the grade is 'F'.\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you create a program for that. Here's a Python solution that meets your requirements:\n\n```python\ndef calculate_grade(score):\n    \"\"\"\n    Calculates a student's grade based on their score.\n\n    :param score: An integer score between 0 and 100.\n    :return: A string representing the corresponding grade ('A', 'B', 'C', 'D', or 'F').\n    \"\"\"\n    if score < 0 or score > 100:\n        raise ValueError(\"Score must be an integer between 0 and 100.\")\n\n    if score >= 90:\n        return 'A'\n    elif score >= 80:\n        return 'B'\n    elif score >= 70:\n        return 'C'\n    elif score >= 60:\n        return 'D'\n    else:\n        return 'F'\n\n# Example usage:\nscore = int(input(\"Enter a score between 0 and 100: \"))\ngrade = calculate_grade(score)\nprint(f\"Your grade is {grade}.\")\n```\n\nThis program defines a function `calculate_grade` that takes an integer score as input and returns the corresponding grade as a string. The function checks if the input is valid (between 0 and 100) and raises a `ValueError` if it's not. The function then uses an `if-elif-elif-elif-else` structure to determine the grade based on the score. The example usage at the end of the program prompts the user to enter a score and prints the corresponding grade.",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

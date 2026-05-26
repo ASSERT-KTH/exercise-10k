@@ -1,0 +1,9 @@
+{
+  "id": 5387,
+  "title": " Caesar Cipher",
+  "prompt": "Create a function that implements a Caesar cipher, shifting each letter in a string by a given number of positions.\nSample Input: text = 'hello', shift = 3\nSample Output: khoor\n",
+  "answer": "Sure, I'd be happy to help you create a function for the Caesar cipher. Here's an implementation in Python that meets your requirements:\n\n```python\ndef caesar_cipher(text, shift):\n    \"\"\"\n    Implements a Caesar cipher, shifting each letter in a string by a given number of positions.\n\n    :param text: The input string.\n    :param shift: The number of positions to shift each letter.\n    :return: The ciphertext string.\n    \"\"\"\n\n    # Define a translation table for the Caesar cipher\n    translation_table = str.maketrans(\n        alphabet,\n        alphabet[shift:] + alphabet[:shift]\n    )\n\n    # Apply the Caesar cipher to the input text\n    ciphertext = text.translate(translation_table)\n\n    return ciphertext\n```\n\nHere's how you can use this function:\n\n```python\ntext = 'hello'\nshift = 3\nciphertext = caesar_cipher(text, shift)\nprint(ciphertext)  # Output: khoor\n```\n\nThis function works by creating a translation table that shifts each letter in the alphabet by the given number of positions. Then, it applies this table to the input text using the `str.translate()` method, which returns a new string with the translations applied.",
+  "error": null,
+  "elapsed_seconds": 2.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

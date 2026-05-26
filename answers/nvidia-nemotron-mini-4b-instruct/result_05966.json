@@ -1,0 +1,9 @@
+{
+  "id": 5966,
+  "title": "List Filtering",
+  "prompt": "Write a program that takes a list and a predicate function as input, and returns a new list that contains only the elements that satisfy the predicate function.\nSample Input: [1, 2, 3, 4, 5], is_even\nSample Output: [2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses a list comprehension to filter the input list based on the given predicate function.\n\n```python\ndef filter_list(input_list, predicate):\n    \"\"\"\n    Filters a list based on a given predicate function.\n\n    Parameters:\n    input_list (list): The list to filter.\n    predicate (function): A function that takes an element as input and returns a boolean value.\n\n    Returns:\n    list: A new list containing only the elements that satisfy the predicate function.\n    \"\"\"\n    return [element for element in input_list if predicate(element)]\n\n# Example usage:\ninput_list = [1, 2, 3, 4, 5]\npredicate = lambda x: x % 2 == 0  # is even\nfiltered_list = filter_list(input_list, predicate)\nprint(filtered_list)  # Output: [2, 4]\n```\n\nThis program defines a `filter_list` function that takes an input list and a predicate function as arguments. The function uses a list comprehension to create a new list containing only the elements that satisfy the predicate function. The predicate function can be any function that takes an element as input and returns a boolean value. In the example usage, we define a predicate function that checks if a number is even by checking if the remainder of dividing it by 2 is equal to 0.",
+  "error": null,
+  "elapsed_seconds": 3.3,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

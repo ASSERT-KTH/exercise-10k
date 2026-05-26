@@ -1,0 +1,9 @@
+{
+  "id": 6434,
+  "title": " interesse Compound Calculator",
+  "prompt": "Write a program to calculate the future value of an investment using compound interest. Use a for loop to iterate over the years and calculate the interest for each year.\nSample Input: 1000 5 0.05\nSample Output: 1276.28\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the future value of an investment using compound interest. The program uses a for loop to iterate over the years and calculates the interest for each year.\n\n```python\ndef calculate_future_value(initial_amount, years, interest_rate):\n    \"\"\"\n    Calculates the future value of an investment using compound interest.\n\n    Parameters:\n    initial_amount (float): The initial amount of the investment.\n    years (int): The number of years to calculate the future value for.\n    interest_rate (float): The annual interest rate as a decimal (e.g., 0.05 for 5%).\n\n    Returns:\n    float: The future value of the investment.\n    \"\"\"\n\n    # Calculate the interest for each year using a for loop\n    future_value = initial_amount\n    for year in range(1, years + 1):\n        interest = initial_amount * interest_rate\n        future_value += interest\n        initial_amount = future_value\n\n    return future_value\n\n# Sample input and output\ninitial_amount = 1000\nyears = 5\ninterest_rate = 0.05\n\nfuture_value = calculate_future_value(initial_amount, years, interest_rate)\nprint(f\"The future value of the investment is ${future_value:.2f}.\")\n```\n\nWhen you run this program with the sample input `1000 5 0.05`, it will output:\n\n```\nThe future value of the investment is $1276.28.\n```",
+  "error": null,
+  "elapsed_seconds": 3.73,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

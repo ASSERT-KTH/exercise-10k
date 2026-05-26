@@ -1,0 +1,9 @@
+{
+  "id": 2154,
+  "title": "Excel Input and Output",
+  "prompt": "Write a program that reads an Excel file and prints out the file's contents.\nSample Input: name,age\nJohn Doe,25\nSample Output: name,age\nJohn Doe,25\n",
+  "answer": "Sure, I can help you with that. Here's a Python program that reads an Excel file and prints out its contents using the `openpyxl` library. If you don't have it installed, you can install it using pip:\n\n```bash\npip install openpyxl\n```\n\nHere's the Python code:\n\n```python\nimport openpyxl\n\ndef read_excel_file(file_path):\n    \"\"\"\n    Reads an Excel file and prints out its contents.\n\n    :param file_path: The path to the Excel file.\n    \"\"\"\n    wb = openpyxl.load_workbook(file_path)\n    sheet = wb.active  # Get the first sheet (usually 'Sheet1')\n\n    for row in sheet.iter_rows():\n        print(f\"{', '.join(cell.value for cell in row)}\")\n\n    wb.close()\n\n# Replace 'your_file.xlsx' with the path to your Excel file\nread_excel_file('your_file.xlsx')\n```\n\nThis program defines a function `read_excel_file` that takes a file path as an argument and prints out the contents of the Excel file. It uses the `openpyxl` library to read the file and iterate over its rows. The rows are then printed out with the values of each cell separated by a comma and a space.\n\nMake sure to replace `'your_file.xlsx'` with the path to your Excel file.",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

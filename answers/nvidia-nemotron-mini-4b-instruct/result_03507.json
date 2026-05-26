@@ -1,0 +1,9 @@
+{
+  "id": 3507,
+  "title": "Float Operations",
+  "prompt": "Write a program that performs basic arithmetic operations (addition, subtraction, multiplication, division) using floating-point numbers.\nSample Input: None\nSample Output: Addition: 3.14, Subtraction: 1.0, Multiplication: 4.0, Division: 2.0\n",
+  "answer": "Here's a Python program that performs basic arithmetic operations using floating-point numbers:\n\n```python\nimport math\n\ndef perform_operation(operation, num1, num2):\n    if operation == '+':\n        result = num1 + num2\n    elif operation == '-':\n        result = num1 - num2\n    elif operation == '*':\n        result = num1 * num2\n    elif operation == '/':\n        result = num1 / num2\n    else:\n        print(\"Invalid operation. Please enter '+' for addition, '-' for subtraction, '*' for multiplication, or '/' for division.\")\n        return\n\n    return result\n\nwhile True:\n    operation = input(\"Enter the operation (+, -, *, /): \").strip()\n\n    if operation == 'q':\n        break\n\n    try:\n        num1 = float(input(\"Enter the first number: \"))\n        num2 = float(input(\"Enter the second number: \"))\n\n        result = perform_operation(operation, num1, num2)\n\n        print(f\"{operation}: {result}\")\n\n    except ValueError:\n        print(\"Invalid input. Please enter numbers only.\")\n```\n\nThis program will keep asking for user input until the user enters 'q' to quit. It will then perform the requested operation and display the result.",
+  "error": null,
+  "elapsed_seconds": 4.25,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

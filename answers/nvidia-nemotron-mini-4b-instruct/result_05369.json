@@ -1,0 +1,9 @@
+{
+  "id": 5369,
+  "title": "Array Reduction",
+  "prompt": "Write a program to reduce an array to a single value using a reduction function.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses the built-in `reduce` function to reduce an array (list) to a single value using a custom reduction function. In this case, the reduction function adds all the elements in the array.\n\n```python\ndef add_all(arr):\n    \"\"\"\n    A custom reduction function that adds all elements in an array.\n    \"\"\"\n    return sum(arr)\n\n# Sample Input: [1, 2, 3, 4, 5]\narr = [1, 2, 3, 4, 5]\n\n# Use reduce to reduce the array to a single value\nresult = reduce(add_all, arr)\n\n# Print the result\nprint(result)  # Output: 15\n```\n\nIf you don't have the `reduce` function available (e.g., in a language without built-in support for it), you can implement it yourself using a loop:\n\n```python\ndef add_all(arr):\n    \"\"\"\n    A custom reduction function that adds all elements in an array.\n    \"\"\"\n    total = 0\n    for num in arr:\n        total += num\n    return total\n\n# Sample Input: [1, 2, 3, 4, 5]\narr = [1, 2, 3, 4, 5]\n\n# Use a loop to reduce the array to a single value\nresult = add_all(arr)\n\n# Print the result\nprint(result)  # Output: 15\n```",
+  "error": null,
+  "elapsed_seconds": 4.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

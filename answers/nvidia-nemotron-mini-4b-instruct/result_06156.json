@@ -1,0 +1,9 @@
+{
+  "id": 6156,
+  "title": "String Isalpha",
+  "prompt": "Write a function to check if a string consists only of letters.\nSample Input: hello\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a given string consists only of letters (both lowercase and uppercase):\n```python\nimport re\n\ndef is_string_letters(s: str) -> bool:\n    \"\"\"\n    Check if a string consists only of letters (both lowercase and uppercase).\n\n    :param s: The string to check.\n    :return: True if the string consists only of letters, False otherwise.\n    \"\"\"\n    # Use a regular expression to match any character that is a letter (either lowercase or uppercase)\n    pattern = r'^[a-zA-Z]*$'\n    return bool(re.match(pattern, s))\n```\nHere's how you can use this function:\n```python\nprint(is_string_letters(\"hello\"))  # Output: True\nprint(is_string_letters(\"123\"))    # Output: False\nprint(is_string_letters(\"HelloWorld\"))  # Output: True\n```\nThis function uses a regular expression to match any string that consists only of letters (both lowercase and uppercase). The regular expression `^[a-zA-Z]*$` matches any string that starts and ends with zero or more letters (both lowercase and uppercase). The `bool()` function is used to convert the result of the regular expression match to a boolean value.",
+  "error": null,
+  "elapsed_seconds": 3.13,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

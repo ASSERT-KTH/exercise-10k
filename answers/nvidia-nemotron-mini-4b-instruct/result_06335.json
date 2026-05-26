@@ -1,0 +1,9 @@
+{
+  "id": 6335,
+  "title": "Array Rotation",
+  "prompt": "Write a program that takes an array and a number of positions as input, rotates the array by the specified number of positions, and returns the rotated array.\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: [4, 5, 1, 2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef rotate_array(arr, positions):\n    \"\"\"\n    Rotates the input array by the specified number of positions.\n\n    Parameters:\n    arr (list): The input array to be rotated.\n    positions (int): The number of positions to rotate the array.\n\n    Returns:\n    list: The rotated array.\n    \"\"\"\n    # Ensure the input is a non-negative integer\n    positions %= len(arr)\n\n    # Rotate the array by shifting elements to the left\n    return arr[-positions:] + arr[:-positions]\n\n# Example usage\narr = [1, 2, 3, 4, 5]\npositions = 2\nrotated_arr = rotate_array(arr, positions)\nprint(rotated_arr)  # Output: [4, 5, 1, 2, 3]\n```\nThis program defines a function `rotate_array` that takes an array and a number of positions as input, and returns the rotated array. The function first ensures that the input number of positions is non-negative by taking the modulus of the positions with the length of the array. Then, it rotates the array by shifting elements to the left by the specified number of positions. Finally, it returns the rotated array. The example usage demonstrates how to use the function to rotate an array by 2 positions.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

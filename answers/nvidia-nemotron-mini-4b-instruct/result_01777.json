@@ -1,0 +1,9 @@
+{
+  "id": 1777,
+  "title": "Checking for Cycles in Graphs",
+  "prompt": "Write a function to check if a given graph has a cycle.\nSample Input: [[0, 1, 1], [1, 0, 1], [1, 1, 0]]\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses Depth-First Search (DFS) to check if a given graph has a cycle. The function takes a 2D list representing the graph as input, where each inner list represents an edge between two nodes. The function returns `True` if there's a cycle in the graph, and `False` otherwise.\n\n```python\ndef has_cycle(graph):\n    n = len(graph)\n    visited = [False] * n\n    stack = []\n\n    def dfs(node):\n        visited[node] = True\n        stack.append(node)\n\n        for neighbor in graph[node]:\n            if not visited[neighbor]:\n                if dfs(neighbor):\n                    return True\n            elif neighbor in stack:\n                return True\n\n        stack.pop()\n        return False\n\n    for node in range(n):\n        if not visited[node] and dfs(node):\n            return True\n\n    return False\n```\n\nHere's how you can use the function with your sample input:\n\n```python\ngraph = [[0, 1, 1], [1, 0, 1], [1, 1, 0]]\nprint(has_cycle(graph))  # Output: True\n```\n\nThis function works by recursively traversing the graph using DFS. If the function encounters a node that has already been visited (i.e., a back edge), it returns `True`, indicating that there's a cycle in the graph. If the function completes traversing the graph without encountering any back edges, it returns `False`, indicating that there's no cycle in the graph.",
+  "error": null,
+  "elapsed_seconds": 3.81,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

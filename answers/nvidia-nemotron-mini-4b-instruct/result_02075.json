@@ -1,0 +1,9 @@
+{
+  "id": 2075,
+  "title": "Finding the Maximum Subarray",
+  "prompt": "Write a program that finds the maximum subarray of a given list of numbers.\nSample Input: [-2, 1, -3, 4, -1, 2, 1, -5, 4]\nSample Output: [4, -1, 2, 1]\n",
+  "answer": "Here's a Python solution using Kadane's algorithm which finds the maximum subarray in O(n) time complexity.\n\n```python\ndef max_subarray(arr):\n    current_max = global_max = arr[0]\n    for num in arr[1:]:\n        current_max = max(num, current_max + num)\n        global_max = max(global_max, current_max)\n    return global_max\n\nprint(max_subarray([-2, 1, -3, 4, -1, 2, 1, -5, 4]))\n```\n\nThis program works by iterating over the array and maintaining two variables: `current_max` which keeps track of the maximum subarray ending at the current index, and `global_max` which keeps track of the maximum subarray found so far. \n\nFor each number in the array, it updates `current_max` to be either the current number or the sum of the previous maximum subarray plus the current number. This ensures that we always have the maximum subarray ending at the current index.\n\nFinally, it returns `global_max`, which is the maximum subarray found so far.",
+  "error": null,
+  "elapsed_seconds": 2.76,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2283,
+  "title": "Simple Calculator",
+  "prompt": "Develop a program that takes a basic arithmetic operation (+, -, *, /) and two numbers as input from the user, and then performs the specified operation.\nSample Input: + 10 5\nSample Output: 10 + 5 = 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef perform_arithmetic(operator, num1, num2):\n    \"\"\"Perform a basic arithmetic operation on two numbers.\"\"\"\n    if operator == '+':\n        result = num1 + num2\n    elif operator == '-':\n        result = num1 - num2\n    elif operator == '*':\n        result = num1 * num2\n    elif operator == '/':\n        if num2 == 0:\n            raise ValueError(\"Cannot divide by zero.\")\n        result = num1 / num2\n    else:\n        raise ValueError(f\"Invalid operator '{operator}'. Please use +, -, *, or /.\")\n\n    return result\n\n# Get user input\nwhile True:\n    try:\n        operator = input(\"Enter the arithmetic operator (+, -, *, /): \").strip()\n        num1 = float(input(\"Enter the first number: \"))\n        num2 = float(input(\"Enter the second number: \"))\n\n        # Perform the operation and print the result\n        result = perform_arithmetic(operator, num1, num2)\n        print(f\"{num1} {operator} {num2} = {result}\")\n\n        break\n\n    except ValueError as e:\n        print(e)\n```\n\nThis program defines a function `perform_arithmetic` that takes an operator and two numbers as input, performs the specified operation, and returns the result. The main part of the program gets user input for the operator and two numbers, calls the `perform_arithmetic` function, and prints the result. The program also includes error handling for invalid input (e.g., division by zero).",
+  "error": null,
+  "elapsed_seconds": 19.73,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

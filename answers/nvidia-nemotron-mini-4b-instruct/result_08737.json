@@ -1,0 +1,9 @@
+{
+  "id": 8737,
+  "title": "Variable Encryption",
+  "prompt": "Encrypt and decrypt variables to and from a secure representation.\nSample Input: {name: 'John', age: 30}\nSample Output: encrypted string\n",
+  "answer": "To encrypt and decrypt variables to and from a secure representation, we can use a symmetric encryption algorithm like AES (Advanced Encryption Standard). Here's a Python implementation using the `cryptography` library, which provides a simple API for working with various encryption algorithms. First, install the library if you haven't already:\n\n```bash\npip install cryptography\n```\n\nNow, let's create a function to encrypt and decrypt the sample input:\n\n```python\nfrom cryptography.fernet import Fernet\n\ndef encrypt_decrypt(data, key):\n    # Generate a Fernet key\n    f = Fernet(key)\n\n    # Encrypt the data\n    encrypted_data = f.encrypt(str(data).encode())\n\n    # Decrypt the data\n    decrypted_data = f.decrypt(encrypted_data).decode()\n\n    return decrypted_data\n\n# Sample input\nsample_input = {\n    \"name\": \"John\",\n    \"age\": 30\n}\n\n# Generate a random key\nkey = Fernet.generate_key()\n\n# Encrypt the sample input\nencrypted_data = encrypt_decrypt(sample_input, key)\nprint(\"Encrypted string:\", encrypted_data)\n\n# Decrypt the encrypted data\ndecrypted_data = encrypt_decrypt(encrypted_data, key)\nprint(\"Decrypted data:\", decrypted_data)\n```\n\nThis implementation generates a random key for encryption and decryption, ensuring that the key is unique for each encryption/decryption process. You can replace the key with a secure key from a trusted source if needed.",
+  "error": null,
+  "elapsed_seconds": 3.62,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

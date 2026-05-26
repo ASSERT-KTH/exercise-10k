@@ -1,0 +1,9 @@
+{
+  "id": 5620,
+  "title": "BMI Calculator",
+  "prompt": "Create a program that calculates the Body Mass Index (BMI) based on user input (e.g. weight, height), taking the user's input as parameters.\nSample Input: 70 kg\n1.75 m\nSample Output: Your BMI is 22.86\n",
+  "answer": "Sure, I'd be happy to help you create a program that calculates the Body Mass Index (BMI) based on user input. Here's a Python program that meets your requirements:\n\n```python\ndef calculate_bmi():\n    \"\"\"\n    Calculates the Body Mass Index (BMI) based on user input.\n    \"\"\"\n\n    # Get user input for weight and height\n    weight = float(input(\"Enter your weight in kg: \"))\n    height = float(input(\"Enter your height in meters: \"))\n\n    # Validate input to ensure it's positive\n    if weight <= 0 or height <= 0:\n        print(\"Weight and height must be positive numbers. Please try again.\")\n        return\n\n    # Calculate BMI\n    bmi = weight / (height ** 2)\n\n    # Format and print the result\n    bmi_result = f\"Your BMI is {bmi:.2f}\"\n    print(bmi_result)\n\n# Call the function to start the program\ncalculate_bmi()\n```\n\nThis program defines a function `calculate_bmi()` that prompts the user for weight and height, validates the input to ensure it's positive, calculates the BMI, and prints the result with two decimal places. The function is then called to start the program.",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

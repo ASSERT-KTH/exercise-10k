@@ -1,0 +1,9 @@
+{
+  "id": 8669,
+  "title": "Input Validation",
+  "prompt": "Write a program that asks the user for a number and checks if it is a valid integer.\nSample Input: abc\nSample Output: Invalid input. Please enter a number.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_valid_integer():\n    \"\"\"\n    Asks the user for a number and checks if it is a valid integer.\n    :return: The valid integer input from the user.\n    \"\"\"\n    while True:\n        user_input = input(\"Please enter a number: \")\n\n        # Check if the input is an integer and not empty\n        if user_input.isdigit() and user_input.strip():\n            return int(user_input)\n        else:\n            print(\"Invalid input. Please enter a number.\")\n\n# Call the function to get a valid integer input\nvalid_number = get_valid_integer()\nprint(f\"You entered: {valid_number}\")\n```\nThis program defines a function `get_valid_integer()` that prompts the user for input, checks if it's an integer and not empty, and returns the integer value if valid. If the input is invalid, it prints an error message and continues to prompt the user for input until a valid integer is entered. The function is then called to get a valid integer input from the user.",
+  "error": null,
+  "elapsed_seconds": 2.81,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

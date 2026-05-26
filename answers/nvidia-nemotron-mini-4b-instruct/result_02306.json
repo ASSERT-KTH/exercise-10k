@@ -1,0 +1,9 @@
+{
+  "id": 2306,
+  "title": "Simple Chatbot",
+  "prompt": "Write a program that responds to basic user queries. The program should print out a greeting message and then repeatedly ask the user for input and respond accordingly.\nSample Input: hello\nSample Output: Hello! How can I assist you today?\n",
+  "answer": "Sure, I'd be happy to help you create a program that responds to basic user queries. Here's an example Python program that meets your requirements:\n\n```python\ndef respond_to_user():\n    \"\"\"Respond to user queries by printing a greeting message and asking for input.\"\"\"\n\n    # Greet the user\n    print(\"Hello!\")\n    print(\"How can I assist you today?\")\n\n    # Keep asking for input until the user enters 'quit'\n    while True:\n        user_input = input(\"You: \").lower()\n\n        # Respond to 'hello' with a greeting message\n        if user_input == \"hello\":\n            print(\"Hello! How can I assist you today?\")\n\n        # Respond to 'quit' by exiting the loop\n        elif user_input == \"quit\":\n            print(\"Goodbye!\")\n            break\n\n        # Respond to any other input with a generic message\n        else:\n            print(f\"I'm sorry, I didn't understand '{user_input}'. Please try again.\")\n\n# Call the function to start the interaction\nrespond_to_user()\n```\n\nThis program defines a function `respond_to_user()` that repeatedly asks the user for input and responds accordingly. When the user enters 'hello', the program greets them back. When the user enters 'quit', the program prints a goodbye message and exits the loop. For any other input, the program responds with a generic message asking the user to try again.",
+  "error": null,
+  "elapsed_seconds": 4.2,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

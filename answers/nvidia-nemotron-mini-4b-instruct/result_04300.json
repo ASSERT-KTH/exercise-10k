@@ -1,0 +1,9 @@
+{
+  "id": 4300,
+  "title": "Dictionary Chaining",
+  "prompt": "Write a function to chain multiple dictionaries together to form a new dictionary.\nSample Input: [{'a': 1}, {'b': 2}, {'c': 3}]\nSample Output: {'a': 1, 'b': 2, 'c': 3}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that chains multiple dictionaries together to form a new dictionary:\n```python\ndef chain_dicts(*dicts):\n    \"\"\"\n    Chain multiple dictionaries together to form a new dictionary.\n\n    Parameters:\n    *dicts (tuple): Variable number of dictionaries to chain.\n\n    Returns:\n    dict: A new dictionary containing the keys and values from all input dictionaries.\n    \"\"\"\n    result = {}\n    for d in dicts:\n        result.update(d)\n    return result\n```\nHere's an example of how you can use this function:\n```python\ndicts = [{'a': 1}, {'b': 2}, {'c': 3}]\nnew_dict = chain_dicts(*dicts)\nprint(new_dict)  # Output: {'a': 1, 'b': 2, 'c': 3}\n```\nThis function uses the `update()` method of the `dict` class to add the keys and values from each input dictionary to the `result` dictionary. The `*dicts` syntax allows the function to accept an arbitrary number of input dictionaries.",
+  "error": null,
+  "elapsed_seconds": 2.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

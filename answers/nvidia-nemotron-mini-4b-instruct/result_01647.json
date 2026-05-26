@@ -1,0 +1,9 @@
+{
+  "id": 1647,
+  "title": "Character Encoding",
+  "prompt": "Determine the ASCII value of a given character.\nSample Input: A\nSample Output: 65\n",
+  "answer": "Sure, I'd be happy to help you with that! The ASCII (American Standard Code for Information Interchange) value of a character is its unique numerical representation in a character set. In the case of the English alphabet, ASCII assigns a unique number to each character, including uppercase and lowercase letters, digits, and various punctuation marks.\n\nHere's a Python function that takes a character as input and returns its ASCII value:\n\n```python\ndef get_ascii_value(char):\n    \"\"\"\n    Returns the ASCII value of a given character.\n\n    :param char: The character to get the ASCII value of.\n    :return: The ASCII value of the character.\n    \"\"\"\n    if not isinstance(char, str) or len(char) != 1:\n        raise ValueError(\"Input must be a single character string.\")\n\n    return ord(char)\n```\n\nYou can use this function like this:\n\n```python\nprint(get_ascii_value('A'))  # Output: 65\nprint(get_ascii_value('1'))  # Output: 49\nprint(get_ascii_value('!'))  # Output: 33\n```\n\nThis function first checks if the input is a single character string. If not, it raises a `ValueError`. Then, it uses the `ord()` function to convert the character to its Unicode integer representation, which is the ASCII value for ASCII characters.",
+  "error": null,
+  "elapsed_seconds": 4.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

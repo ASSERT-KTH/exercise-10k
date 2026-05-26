@@ -1,0 +1,9 @@
+{
+  "id": 141,
+  "title": "Dictionary Creation",
+  "prompt": "Create a function that takes in a list of keys and a list of values, and returns a dictionary where each key is mapped to its corresponding value\nSample Input: keys = ['name', 'age', 'city'], values = ['John', 30, 'New York']\nSample Output: {'name': 'John', 'age': 30, 'city': 'New York'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef map_keys_to_values(keys, values):\n    \"\"\"\n    Maps each key in keys to its corresponding value in values.\n\n    Parameters:\n    keys (list): A list of keys to map.\n    values (list): A list of values to map the keys to.\n\n    Returns:\n    dict: A dictionary where each key in keys is mapped to its corresponding value in values.\n    \"\"\"\n    if len(keys) != len(values):\n        raise ValueError(\"The lengths of keys and values must be equal.\")\n\n    return dict(zip(keys, values))\n```\nHere's an example of how to use this function:\n```python\nkeys = ['name', 'age', 'city']\nvalues = ['John', 30, 'New York']\n\nmapped_dict = map_keys_to_values(keys, values)\nprint(mapped_dict)  # Output: {'name': 'John', 'age': 30, 'city': 'New York'}\n```\nThis function first checks if the lengths of the input lists are equal, and raises a `ValueError` if they are not. Then, it uses the `zip` function to pair each key and value, and creates a new dictionary using the `dict` constructor with the `zip` object as the argument.",
+  "error": null,
+  "elapsed_seconds": 3.22,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4144,
+  "title": "Dictionary Deletion",
+  "prompt": "Write a function to delete a key-value pair from a dictionary.\nSample Input: {'name': 'John', 'age': 30}, 'age'\nSample Output: {'name': 'John'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that deletes a key-value pair from a dictionary:\n\n```python\ndef delete_key_value(dictionary, key):\n    \"\"\"\n    Deletes a key-value pair from a dictionary.\n\n    :param dictionary: The dictionary to modify.\n    :param key: The key of the key-value pair to delete.\n    :return: The modified dictionary.\n    \"\"\"\n    # Check if the key exists in the dictionary\n    if key in dictionary:\n        # Remove the key-value pair from the dictionary\n        del dictionary[key]\n        return dictionary\n    else:\n        # If the key does not exist, raise a KeyError\n        raise KeyError(f\"The key '{key}' does not exist in the dictionary.\")\n```\n\nHere's an example of how to use this function:\n\n```python\nmy_dict = {'name': 'John', 'age': 30}\nprint(delete_key_value(my_dict, 'age'))  # Output: {'name': 'John'}\n```\n\nThis function first checks if the key exists in the dictionary using the `in` keyword. If the key exists, it removes the key-value pair using the `del` statement and returns the modified dictionary. If the key does not exist, it raises a `KeyError` with an appropriate message.",
+  "error": null,
+  "elapsed_seconds": 3.13,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

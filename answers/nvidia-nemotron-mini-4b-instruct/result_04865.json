@@ -1,0 +1,9 @@
+{
+  "id": 4865,
+  "title": "Calculating Factorial with While Loop",
+  "prompt": "Write a program that calculates the factorial of a number using a while loop.\nSample Input: 5\nSample Output: 120\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the factorial of a number using a while loop:\n\n```python\ndef factorial(n):\n    \"\"\"\n    Calculates the factorial of a number using a while loop.\n\n    :param n: The number for which to calculate the factorial.\n    :return: The factorial of n.\n    \"\"\"\n\n    # Initialize the result to 1 (the base case)\n    result = 1\n\n    # Loop while n is greater than 1 (the inductive step)\n    while n > 1:\n        # Multiply the result by n (the recursive step)\n        result *= n\n\n        # Decrement n by 1 (to move to the next iteration)\n        n -= 1\n\n    # Return the final result\n    return result\n\n# Get user input\nn = int(input(\"Enter a positive integer: \"))\n\n# Validate input\nwhile n <= 0:\n    print(\"Error: Input must be a positive integer. Please try again.\")\n    n = int(input(\"Enter a positive integer: \"))\n\n# Calculate and print the factorial\nprint(f\"The factorial of {n} is {factorial(n)}.\")\n```\n\nThis program defines a function `factorial()` that takes an integer `n` as input and returns its factorial. The function uses a while loop to calculate the factorial iteratively, multiplying the result by `n` in each iteration until `n` reaches 1. The function also includes input validation to ensure that the user enters a positive integer.",
+  "error": null,
+  "elapsed_seconds": 3.55,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

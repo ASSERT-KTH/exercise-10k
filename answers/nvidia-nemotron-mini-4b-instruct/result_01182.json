@@ -1,0 +1,9 @@
+{
+  "id": 1182,
+  "title": "Grade Calculator",
+  "prompt": "Create a program that calculates a student's grade based on their score. If the score is 90 or above, print 'A', if it's between 80 and 89, print 'B', and so on.\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_grade(score):\n    \"\"\"\n    Calculates a student's grade based on their score.\n\n    :param score: The student's score as an integer between 0 and 100.\n    :return: A string indicating the student's grade ('A', 'B', 'C', 'D', or 'F').\n    \"\"\"\n    # Define the grade boundaries\n    grade_boundaries = [90, 89, 88, 87, 86, 85, 84, 83, 82, 81, 80]\n    grade_labels = ['A', 'B', 'C', 'D', 'F']\n\n    # Find the index of the lowest boundary that is greater than or equal to the score\n    for i in range(len(grade_boundaries) - 1, 0, -1):\n        if score >= grade_boundaries[i]:\n            break\n\n    # Return the corresponding grade label\n    return grade_labels[i]\n\n# Example usage\nscore = 85\ngrade = calculate_grade(score)\nprint(f\"The grade for a score of {score} is {grade}.\")\n```\nThis program defines a function `calculate_grade` that takes a student's score as an integer between 0 and 100, and returns a string indicating their grade using the specified boundaries. The example usage at the end of the program demonstrates how to use the function to calculate a grade for a given score.",
+  "error": null,
+  "elapsed_seconds": 3.74,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

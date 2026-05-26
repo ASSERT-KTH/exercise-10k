@@ -1,0 +1,9 @@
+{
+  "id": 825,
+  "title": "Word Frequency",
+  "prompt": "Given a string, count the frequency of each word and return a dictionary with the words as keys and their frequencies as values.\nSample Input: this is a test this test\nSample Output: {'this': 2, 'is': 1, 'a': 1, 'test': 2}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\nfrom collections import Counter\n\ndef count_word_frequencies(text):\n    \"\"\"\n    Given a string, count the frequency of each word and return a dictionary with the words as keys and their frequencies as values.\n\n    :param text: str - The input text as a string\n    :return: dict - A dictionary containing the word frequencies\n    \"\"\"\n    # Split the text into words, convert to lowercase, and remove punctuation\n    words = [word.lower() for word in text.lower().split() if word.isalnum()]\n\n    # Count the frequency of each word using Counter\n    word_counts = Counter(words)\n\n    return dict(word_counts)\n```\nHere's an example of how you can use this function:\n```python\ntext = \"this is a test this test\"\nword_freqs = count_word_frequencies(text)\nprint(word_freqs)  # Output: {'this': 2, 'is': 1, 'a': 1, 'test': 2}\n```\nThis function first splits the input text into words, converts them to lowercase, and removes any punctuation. Then, it uses the `Counter` class from the `collections` module to count the frequency of each word. Finally, it converts the `Counter` object to a regular dictionary and returns it.",
+  "error": null,
+  "elapsed_seconds": 3.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

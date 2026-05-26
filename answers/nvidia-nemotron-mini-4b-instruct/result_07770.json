@@ -1,0 +1,9 @@
+{
+  "id": 7770,
+  "title": "Array Element Counter",
+  "prompt": "Write a program that takes an array of integers and a target integer as input, and returns the number of times the target integer appears in the array.\nSample Input: [1, 2, 3, 2, 4], 2\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef count_target(arr, target):\n    \"\"\"\n    Given an array of integers and a target integer, return the number of times the target integer appears in the array.\n\n    :param arr: List[int] - The input array of integers\n    :param target: int - The target integer to count\n    :return: int - The number of times the target integer appears in the array\n    \"\"\"\n    # Count the occurrences of the target integer in the array\n    count = arr.count(target)\n\n    return count\n```\nHere's an example of how you can use this function:\n```python\narr = [1, 2, 3, 2, 4]\ntarget = 2\n\nresult = count_target(arr, target)\nprint(result)  # Output: 2\n```\nThis program uses the built-in `count()` method of Python lists to count the occurrences of a given element in the list. If you prefer a more explicit loop, you can implement the function as follows:\n```python\ndef count_target(arr, target):\n    \"\"\"\n    Given an array of integers and a target integer, return the number of times the target integer appears in the array.\n\n    :param arr: List[int] - The input array of integers\n    :param target: int - The target integer to count\n    :return: int - The number of times the target integer appears in the array\n    \"\"\"\n    count = 0\n    for num in arr:\n        if num == target:\n            count += 1\n\n    return count\n```\nBoth implementations should give you the same output for the sample input and output you provided.",
+  "error": null,
+  "elapsed_seconds": 3.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7104,
+  "title": "Sorting a List of Integers",
+  "prompt": "Write a program that takes a list of integers as input, sorts the list in ascending order using a basic algorithm (such as bubble sort or selection sort), and then prints the sorted list.\nSample Input: [64, 34, 25, 12, 22, 11, 90]\nSample Output: [11, 12, 22, 25, 34, 64, 90]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a list of integers as input, sorts it in ascending order using bubble sort, and then prints the sorted list:\n```python\ndef bubble_sort(arr):\n    n = len(arr)\n\n    # Traverse through all array elements\n    for i in range(n):\n\n        # Last i elements are already in place\n        for j in range(0, n-i-1):\n\n            # Traverse the array from 0 to n-i-1\n            # Swap if the element found is greater\n            # than the next element\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n\n# Get input list\ninput_list = [64, 34, 25, 12, 22, 11, 90]\n\n# Sort the list using bubble sort\nbubble_sort(input_list)\n\n# Print the sorted list\nprint(input_list)\n```\nWhen you run this program with the sample input `[64, 34, 25, 12, 22, 11, 90]`, it will output:\n```\n[11, 12, 22, 25, 34, 64, 90]\n```\nNote that bubble sort is not the most efficient sorting algorithm for large lists, but it's a simple and easy-to-understand algorithm that can be used for educational purposes or small datasets. For larger datasets, more efficient algorithms like quicksort, mergesort, or heapsort should be used.",
+  "error": null,
+  "elapsed_seconds": 4.09,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

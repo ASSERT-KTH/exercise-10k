@@ -1,0 +1,9 @@
+{
+  "id": 913,
+  "title": "Data Type Inspector",
+  "prompt": "Create a program that inspects a given variable and prints out its data type, value, and other relevant information.\nSample Input: variable = 10\nSample Output: Data type: int, Value: 10, Typecode: i\n",
+  "answer": "Sure, I'd be happy to help you create a program that inspects a given variable and prints out its data type, value, and other relevant information. Here's an example Python program that does this:\n\n```python\ndef inspect_variable(variable):\n    \"\"\"\n    Inspects a given variable and prints out its data type, value, and other relevant information.\n\n    :param variable: The variable to inspect\n    :return: None\n    \"\"\"\n\n    # Get the data type and value of the variable\n    data_type = type(variable).__name__\n    value = variable\n\n    # Determine the typecode based on the data type\n    if data_type in ['int', 'float', 'bool']:\n        typecode = 'i'\n    elif data_type == 'str':\n        typecode = 's'\n    elif data_type == 'list' or data_type == 'tuple':\n        typecode = 'a'\n    else:\n        typecode = 'u'\n\n    # Print the result\n    print(f\"Data type: {data_type}, Value: {value}, Typecode: {typecode}\")\n\n# Example usage\nvariable = 10\ninspect_variable(variable)\n```\n\nWhen you run this program with the sample input `variable = 10`, it will output:\n\n```\nData type: int, Value: 10, Typecode: i\n```\n\nYou can replace `variable = 10` with any other variable to inspect its data type and value. The program will determine the typecode based on the data type, and print it along with the data type and value of the variable.",
+  "error": null,
+  "elapsed_seconds": 3.76,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

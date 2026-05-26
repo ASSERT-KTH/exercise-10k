@@ -1,0 +1,9 @@
+{
+  "id": 7519,
+  "title": "Vowel Counter",
+  "prompt": "Create a Vowel Counter program using variables and string manipulation.\nSample Input: hello\nSample Output: The number of vowels is 2.\n",
+  "answer": "Sure, I'd be happy to help you create a Vowel Counter program using variables and string manipulation. Here's a Python solution:\n\n```python\ndef count_vowels(text):\n    \"\"\"\n    Count the number of vowels in a given text.\n\n    :param text: str - The text to count vowels in.\n    :return: int - The number of vowels in the text.\n    \"\"\"\n    vowels = set('aeiouAEIOU')\n    return sum(1 for char in text if char in vowels)\n\n\n# Get user input\nuser_input = input(\"Enter a string: \")\n\n# Count vowels and display result\nnum_vowels = count_vowels(user_input)\nprint(f\"The number of vowels is {num_vowels}.\")\n```\n\nThis program defines a function `count_vowels` that takes a string as input and returns the number of vowels it contains. The function uses a set of vowels to check if each character in the input string is a vowel. The `sum` function with a generator expression is used to count the number of vowels.\n\nThe program then gets user input, calls the `count_vowels` function, and displays the result. The output will be:\n\n```\nEnter a string: hello\nThe number of vowels is 2.\n```",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

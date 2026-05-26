@@ -1,0 +1,9 @@
+{
+  "id": 6555,
+  "title": "Word Count",
+  "prompt": "Create a function that counts the number of words in a given string.\nSample Input: Hello World\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that counts the number of words in a given string:\n\n```python\ndef count_words(text: str) -> int:\n    \"\"\"\n    Count the number of words in a given string.\n\n    :param text: The input string.\n    :return: The number of words in the input string.\n    \"\"\"\n    # Split the text into words, remove any empty strings, and convert to lowercase\n    words = [word.lower() for word in text.split()]\n\n    # Return the length of the list of words\n    return len(words)\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(count_words(\"Hello World\"))  # Output: 2\nprint(count_words(\"   This is a test   \"))  # Output: 3\nprint(count_words(\"   A   B   C   D   E   F   G   H   I   J   K   L   M   N   O   P   Q   R   S   T   U   V   W   X   Y   Z  \"))  # Output: 26\n```\n\nThis function first splits the input string into words using the `split()` method, then removes any empty strings using a list comprehension. Finally, it returns the length of the list of words, which is the number of words in the input string.",
+  "error": null,
+  "elapsed_seconds": 3.23,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

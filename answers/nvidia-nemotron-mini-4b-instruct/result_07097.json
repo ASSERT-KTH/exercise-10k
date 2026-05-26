@@ -1,0 +1,9 @@
+{
+  "id": 7097,
+  "title": "Greatest Common Divisor",
+  "prompt": "Read two positive integers from the user and calculate their greatest common divisor\nSample Input: 12 15\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution that calculates the greatest common divisor (GCD) of two positive integers using the Euclidean algorithm:\n\n```python\ndef gcd(a, b):\n    \"\"\"\n    Calculate the greatest common divisor of two positive integers.\n\n    :param a: The first positive integer.\n    :param b: The second positive integer.\n    :return: The greatest common divisor of a and b.\n    \"\"\"\n    while b:\n        a, b = b, a % b\n    return abs(a)\n\n# Read two positive integers from the user\nnum1 = int(input(\"Enter the first positive integer: \"))\nnum2 = int(input(\"Enter the second positive integer: \"))\n\n# Calculate and print the GCD\ngcd_value = gcd(num1, num2)\nprint(f\"The greatest common divisor of {num1} and {num2} is {gcd_value}.\")\n```\n\nThis program defines a function `gcd(a, b)` that calculates the GCD of two positive integers `a` and `b` using the Euclidean algorithm. The function ensures that the result is always positive by taking the absolute value of the final value of `a`. The program then reads two positive integers from the user and calls the `gcd()` function to calculate and print their GCD.",
+  "error": null,
+  "elapsed_seconds": 3.23,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

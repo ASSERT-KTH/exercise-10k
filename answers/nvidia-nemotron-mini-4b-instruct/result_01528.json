@@ -1,0 +1,9 @@
+{
+  "id": 1528,
+  "title": "Selection Sort",
+  "prompt": "Write a program that implements the selection sort algorithm to sort an array of integers.\nSample Input: [5 2 8 3 1]\nSample Output: [1 2 3 5 8]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that implements the selection sort algorithm to sort an array of integers:\n\n```python\ndef selection_sort(arr):\n    \"\"\"\n    Sort the given array of integers using the selection sort algorithm.\n\n    :param arr: The array of integers to be sorted.\n    :return: The sorted array of integers.\n    \"\"\"\n    n = len(arr)\n\n    # Iterate through all elements of the array\n    for i in range(n):\n\n        # Find the minimum element in remaining unsorted array\n        min_index = i\n        for j in range(i+1, n):\n            if arr[j] < arr[min_index]:\n                min_index = j\n\n        # Swap the found minimum element with the first element\n        arr[i], arr[min_index] = arr[min_index], arr[i]\n\n    return arr\n\n# Test the function with a sample input\nsample_input = [5, 2, 8, 3, 1]\nsorted_sample_input = selection_sort(sample_input)\nprint(sorted_sample_input)  # Output: [1, 2, 3, 5, 8]\n```\n\nThis program defines a function `selection_sort` that takes an array of integers as input and returns the sorted array. The function works by iterating through all elements of the array, finding the minimum element in the remaining unsorted array, and swapping it with the first element. This process is repeated for each element in the array until all elements are sorted.",
+  "error": null,
+  "elapsed_seconds": 4.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

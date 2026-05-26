@@ -1,0 +1,9 @@
+{
+  "id": 6662,
+  "title": "Mode of Numbers",
+  "prompt": "Write a program to calculate the mode of a list of numbers\nSample Input: 1 2 2 3 3 3\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the mode (i.e., the most frequently occurring number) of a list of numbers:\n```python\ndef find_mode(numbers):\n    # Create a dictionary to store the count of each number\n    number_counts = {}\n    for num in numbers:\n        if num in number_counts:\n            number_counts[num] += 1\n        else:\n            number_counts[num] = 1\n\n    # Find the number with the highest count\n    max_count = max(number_counts.values())\n    mode = [num for num, count in number_counts.items() if count == max_count]\n\n    # If there's only one mode, return it as a string\n    if len(mode) == 1:\n        return str(mode[0])\n    # Otherwise, return the list of modes\n    else:\n        return mode\n\n# Test the function with the sample input\nsample_input = [1, 2, 2, 3, 3, 3]\nprint(find_mode(sample_input))  # Output: 3\n```\nThis program first creates a dictionary to store the count of each number in the list. Then, it finds the number with the highest count (i.e., the mode) and returns it as a string if there's only one mode, or as a list if there are multiple modes. The function can be easily modified to return the mode as an integer if that's more appropriate for your use case.",
+  "error": null,
+  "elapsed_seconds": 3.57,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 706,
+  "title": "Dictionary Items",
+  "prompt": "Write a function to return a list of dictionary's key-value pairs as tuples\nSample Input: {'name': 'John', 'age': 30}\nSample Output: [('name', 'John'), ('age', 30)]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef dict_to_tuples(d):\n    \"\"\"\n    Converts a dictionary to a list of tuples, where each tuple contains a key-value pair.\n\n    :param d: The dictionary to convert to tuples\n    :return: A list of tuples representing the key-value pairs in the dictionary\n    \"\"\"\n    return [(k, v) for k, v in d.items()]\n```\nHere's an example of how you can use this function:\n```python\nsample_input = {'name': 'John', 'age': 30}\nsample_output = dict_to_tuples(sample_input)\nprint(sample_output)  # Output: [('name', 'John'), ('age', 30)]\n```\nThis function uses a list comprehension to iterate over the items() method of the input dictionary, which returns a list of tuples containing the key and value of each item in the dictionary. The `items()` method returns a view object that provides a mapping from keys to values, allowing us to iterate over the key-value pairs without having to explicitly convert the dictionary to a list of key-value pairs first.",
+  "error": null,
+  "elapsed_seconds": 2.82,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

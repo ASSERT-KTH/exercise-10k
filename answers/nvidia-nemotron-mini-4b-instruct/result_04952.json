@@ -1,0 +1,9 @@
+{
+  "id": 4952,
+  "title": "Time of Day",
+  "prompt": "Create a program that determines the time of day (morning, afternoon, evening) based on a given hour (0-23) using conditional statements.\nSample Input: 14\nSample Output: Afternoon\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef determine_time_of_day(hour):\n    \"\"\"Determines the time of day based on a given hour (0-23).\n\n    Args:\n    hour (int): The hour of the day (0-23).\n\n    Returns:\n    str: The time of day (morning, afternoon, evening).\n    \"\"\"\n    # Ensure the input is within the valid range\n    if not 0 <= hour <= 23:\n        raise ValueError(\"Hour must be between 0 and 23.\")\n\n    # Determine the time of day based on the hour\n    if hour < 12:\n        time_of_day = \"Morning\"\n    elif 12 <= hour < 17:\n        time_of_day = \"Afternoon\"\n    else:\n        time_of_day = \"Evening\"\n\n    return time_of_day\n\n# Example usage\nhour = 14\ntime_of_day = determine_time_of_day(hour)\nprint(f\"The time of day is {time_of_day}.\")\n```\nThis program defines a function `determine_time_of_day` that takes an hour as input and returns the corresponding time of day as a string. The function checks if the input hour is within the valid range (0-23) and then uses conditional statements to determine the time of day based on the hour. The example usage at the end of the program demonstrates how to use the function with a sample input of 14.",
+  "error": null,
+  "elapsed_seconds": 3.73,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

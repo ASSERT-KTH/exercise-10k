@@ -1,0 +1,9 @@
+{
+  "id": 4449,
+  "title": "Password Validator",
+  "prompt": "Create a program that takes a password as input and checks if it is valid. A valid password should be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one digit.\nSample Input: Password123\nSample Output: Password is valid\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\nimport re\n\ndef check_password(password):\n    \"\"\"Check if the given password is valid.\"\"\"\n    # Check if the password is at least 8 characters long\n    if len(password) < 8:\n        return \"Password must be at least 8 characters long.\"\n\n    # Check if the password contains at least one uppercase letter, one lowercase letter, and one digit\n    if not re.search(r'[A-Z]', password) or not re.search(r'[a-z]', password) or not re.search(r'\\d', password):\n        return \"Password must contain at least one uppercase letter, one lowercase letter, and one digit.\"\n\n    return \"Password is valid.\"\n\n# Get user input\npassword = input(\"Enter a password: \")\n\n# Check if the password is valid\nresult = check_password(password)\n\n# Print the result\nprint(result)\n```\n\nThis program defines a function `check_password` that checks if a given password is valid. It first checks if the password is at least 8 characters long, and then checks if it contains at least one uppercase letter, one lowercase letter, and one digit using a regular expression. If the password is valid, the function returns a message indicating that the password is valid. Otherwise, it returns an error message. The program then gets user input, calls the `check_password` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.5,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

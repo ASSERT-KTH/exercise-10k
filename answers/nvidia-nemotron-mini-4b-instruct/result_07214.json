@@ -1,0 +1,9 @@
+{
+  "id": 7214,
+  "title": "String Reversal",
+  "prompt": "Create a program that reverses a string using a for loop.\nSample Input: hello\nSample Output: olleh\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that reverses a string using a for loop:\n\n```python\ndef reverse_string(input_str):\n    \"\"\"\n    Reverses a given string using a for loop.\n\n    :param input_str: The string to be reversed.\n    :return: The reversed string.\n    \"\"\"\n    # Check if the input is a string\n    if not isinstance(input_str, str):\n        raise TypeError(\"The input must be a string.\")\n\n    # Initialize an empty string to store the reversed string\n    reversed_str = \"\"\n\n    # Use a for loop to iterate over each character in the input string\n    # and append it to the reversed string in reverse order\n    for char in input_str[::-1]:\n        reversed_str += char\n\n    return reversed_str\n\n# Example usage\ninput_str = \"hello\"\noutput_str = reverse_string(input_str)\nprint(output_str)  # Output: olleh\n```\n\nThis program defines a function `reverse_string` that takes an input string and returns its reverse using a for loop. The function checks if the input is a string and raises a `TypeError` if it's not. Then, it initializes an empty string to store the reversed string and iterates over each character in the input string in reverse order using slicing (`input_str[::-1]`). Finally, it appends each character to the reversed string and returns it.",
+  "error": null,
+  "elapsed_seconds": 3.52,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

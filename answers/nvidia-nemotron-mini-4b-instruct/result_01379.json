@@ -1,0 +1,9 @@
+{
+  "id": 1379,
+  "title": "Algebraic Expression Evaluator",
+  "prompt": "Write a program to evaluate a given algebraic expression.\nSample Input: 2x + 3\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that evaluates a given algebraic expression using the `sympy` library, which provides symbolic mathematics functions. If you don't have it installed, you can install it using pip:\n\n```bash\npip install sympy\n```\n\nHere's the Python code:\n\n```python\nimport sympy\n\ndef evaluate_expression(expression):\n    \"\"\"\n    Evaluates a given algebraic expression.\n\n    :param expression: str, the algebraic expression as a string\n    :return: int or float, the value of the expression\n    \"\"\"\n    # Define variables and constants\n    variables = sympy.symbols('x')\n    constants = [int(c) for c in expression.split() if c.isdigit()]\n\n    # Evaluate the expression\n    result = sympy.sympify(expression).evalf(subs={variables[0]: constants[0]})\n\n    return result\n\n# Example usage\nexpression = input(\"Enter an algebraic expression: \")\nprint(evaluate_expression(expression))\n```\n\nThis program defines a function `evaluate_expression` that takes an algebraic expression as a string and returns its value. The function first splits the input string into tokens (numbers and variables), defines variables using the `sympy.symbols` function, and then evaluates the expression using the `sympy.sympify` function and the `evalf` method to get the numerical value.\n\nYou can modify the `input` statement to accept a different input format, such as a string with spaces between numbers and variables, or a string with variables separated by commas.",
+  "error": null,
+  "elapsed_seconds": 3.62,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

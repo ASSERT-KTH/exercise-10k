@@ -1,0 +1,9 @@
+{
+  "id": 2176,
+  "title": "Sales Tax Calculator",
+  "prompt": "Ask the user for the total bill and the sales tax percentage, and print the total amount to pay.\nSample Input: 100 8\nSample Output: 108.0\n",
+  "answer": "Sure, I can help you with that. Here's a Python solution that follows your specifications:\n\n```python\ndef calculate_amount_to_pay(total_bill, sales_tax_percentage):\n    \"\"\"\n    Asks the user for the total bill and the sales tax percentage, and prints the total amount to pay.\n\n    :param total_bill: The total bill amount.\n    :param sales_tax_percentage: The sales tax percentage as a decimal (e.g., 0.08 for 8%).\n    \"\"\"\n\n    # Validate input\n    if not isinstance(total_bill, (int, float)) or total_bill <= 0:\n        raise ValueError(\"Total bill must be a positive number.\")\n\n    if not isinstance(sales_tax_percentage, (float, int)) or sales_tax_percentage < 0 or sales_tax_percentage > 1:\n        raise ValueError(\"Sales tax percentage must be a number between 0 and 1.\")\n\n    # Calculate and print the total amount to pay\n    sales_tax = total_bill * sales_tax_percentage\n    total_amount_to_pay = total_bill + sales_tax\n\n    print(f\"{total_bill:.2f} {sales_tax_percentage * 100:.0f}% sales tax = {total_amount_to_pay:.2f}\")\n\n\n# Example usage\ncalculate_amount_to_pay(100, 8)\n```\n\nThis function validates the input, calculates the sales tax, and prints the total amount to pay. The output format is customizable by changing the format specifiers in the `print` statement.",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

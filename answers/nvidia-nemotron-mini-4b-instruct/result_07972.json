@@ -1,0 +1,9 @@
+{
+  "id": 7972,
+  "title": "Maximum Value",
+  "prompt": "Write a program that finds the maximum value in a list of numbers.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the maximum value in a list of numbers:\n\n```python\ndef find_max(numbers):\n    \"\"\"\n    Find the maximum value in a list of numbers.\n\n    :param numbers: List of numbers\n    :return: Maximum value in the list\n    \"\"\"\n    if not numbers:  # Check if the list is empty\n        raise ValueError(\"Input list cannot be empty\")\n\n    max_value = numbers[0]  # Assume the first element as the maximum\n\n    for num in numbers[1:]:  # Iterate through the rest of the elements\n        if num > max_value:  # Update the maximum if a larger number is found\n            max_value = num\n\n    return max_value\n```\n\nYou can use this function by passing a list of numbers as an argument, like this:\n\n```python\nnumbers = [1, 2, 3, 4, 5]\nmax_value = find_max(numbers)\nprint(max_value)  # Output: 5\n```\n\nThis function checks if the input list is empty and raises a `ValueError` if it is. Then, it initializes the `max_value` to the first element of the list. Finally, it iterates through the rest of the elements, updating the `max_value` if a larger number is found.",
+  "error": null,
+  "elapsed_seconds": 3.51,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

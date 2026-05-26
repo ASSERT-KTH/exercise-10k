@@ -1,0 +1,9 @@
+{
+  "id": 1256,
+  "title": "Callback Functions",
+  "prompt": "Write a function that takes a callback function as an argument and executes it.\nSample Input: None\nSample Output: The callback function executed successfully\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function, `execute_callback`, takes a callback function as an argument and executes it with a message indicating that the execution was successful.\n\n```python\ndef execute_callback(callback_func, message=\"The callback function executed successfully\"):\n    \"\"\"\n    Executes a callback function and prints a message indicating success.\n\n    :param callback_func: The callback function to execute.\n    :param message: The message to print after executing the callback function.\n    \"\"\"\n\n    try:\n        # Call the callback function and store its return value\n        result = callback_func()\n\n        # Print the message indicating success\n        print(message)\n\n    except Exception as e:\n        # Print an error message if the callback function raises an exception\n        print(f\"An error occurred while executing the callback function: {e}\")\n```\n\nHere's an example of how to use this function:\n\n```python\ndef my_callback_function():\n    \"\"\"A simple callback function that returns a message.\"\"\"\n    return \"Hello, world!\"\n\nexecute_callback(my_callback_function)\n```\n\nThis will output:\n\n```\nThe callback function executed successfully\n```",
+  "error": null,
+  "elapsed_seconds": 4.18,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

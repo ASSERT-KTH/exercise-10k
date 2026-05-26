@@ -1,0 +1,9 @@
+{
+  "id": 4488,
+  "title": "Caesar Cipher",
+  "prompt": "Create a function that encrypts a message using a Caesar Cipher. The function takes in a message and a shift value, and returns the encrypted message.\nSample Input: hello 3\nSample Output: khoor\n",
+  "answer": "Sure, I'd be happy to help you create a Caesar Cipher encryption function. Here's an example implementation in Python:\n\n```python\ndef caesar_cipher(message, shift):\n    \"\"\"\n    Encrypts a message using a Caesar Cipher with the given shift value.\n\n    :param message: The message to encrypt as a string.\n    :param shift: The number of positions to shift each character in the message.\n    :return: The encrypted message as a string.\n    \"\"\"\n\n    # Ensure the shift value is within the valid range (0-25)\n    shift %= 26\n\n    # Define the mapping from characters to their shifted equivalents\n    alphabet = 'abcdefghijklmnopqrstuvwxyz'\n    shifted_alphabet = alphabet[shift:] + alphabet[:shift]\n\n    # Encrypt the message by shifting each character in the alphabet\n    encrypted_message = ''.join(shifted_alphabet[ord(c) - ord('a')] if c.isalpha() else c for c in message)\n\n    return encrypted_message\n```\n\nHere's an example usage of the function:\n\n```python\nprint(caesar_cipher('hello', 3))  # Output: khoor\n```\n\nThis function first ensures that the shift value is within the valid range (0-25) by taking the modulus of the shift value with 26. Then, it defines a mapping from the original alphabet to the shifted alphabet. Finally, it iterates over each character in the message, shifting it to its equivalent in the shifted alphabet using the ASCII value of the character. Non-alphabetic characters are left unchanged.",
+  "error": null,
+  "elapsed_seconds": 3.85,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

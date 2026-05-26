@@ -1,0 +1,9 @@
+{
+  "id": 7506,
+  "title": "Grade Calculator",
+  "prompt": "Create a grade calculator program using variables and conditional statements.\nSample Input: 90, 80, 70\nSample Output: A\n",
+  "answer": "Sure, I'd be happy to help you create a grade calculator program using variables and conditional statements. Here's an example Python code that meets your requirements:\n\n```python\ndef calculate_grade():\n    \"\"\"\n    Calculates a letter grade based on a given set of scores.\n    \"\"\"\n\n    # Get user input for scores\n    scores = [float(score) for score in input(\"Enter scores separated by spaces: \").split()]\n\n    # Validate input (ensure all scores are positive numbers)\n    if not all(score > 0 for score in scores):\n        print(\"Error: All scores must be positive numbers.\")\n        return\n\n    # Calculate and print the letter grade\n    total_score = sum(scores)\n    average_score = total_score / len(scores)\n\n    if average_score >= 90:\n        grade = \"A\"\n    elif average_score >= 80:\n        grade = \"B\"\n    elif average_score >= 70:\n        grade = \"C\"\n    else:\n        grade = \"F\"\n\n    print(f\"Your average score is {average_score} and your letter grade is {grade}.\")\n\n# Call the function\ncalculate_grade()\n```\n\nThis program defines a function `calculate_grade()` that prompts the user for a list of scores, validates the input, calculates the average score, and prints the corresponding letter grade. The function uses variables and conditional statements to perform the calculations and make decisions.",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

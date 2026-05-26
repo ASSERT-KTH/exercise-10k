@@ -1,0 +1,9 @@
+{
+  "id": 9979,
+  "title": "Variable Shadowing",
+  "prompt": "Write a program that demonstrates the concept of variable shadowing.\nSample Input: variable = 10\nSample Output: The value of the variable is: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Variable shadowing is a concept in programming where a variable with the same name as an existing variable in the same scope hides the original variable. Here's a Python program that demonstrates this concept:\n\n```python\n# Define a global variable\nglobal_variable = 10\n\ndef function_with_shadowing():\n    # Define a local variable with the same name as the global variable\n    local_variable = 10\n\n    # Print the value of the local variable\n    print(f\"The value of the local variable is: {local_variable}\")\n\n    # Print the value of the global variable, which is now hidden by the local variable\n    print(f\"The value of the global variable is: {global_variable}\")\n\n# Call the function\nfunction_with_shadowing()\n\n# Print the value of the global variable again to see that it has not changed\nprint(f\"The value of the global variable is: {global_variable}\")\n```\n\nWhen you run this program, you'll see the following output:\n\n```\nThe value of the local variable is: 10\nThe value of the global variable is: 10\nThe value of the global variable is: 10\n```\n\nThis demonstrates that the local variable shadows the global variable, so the value of the global variable is not affected by the local variable assignment.",
+  "error": null,
+  "elapsed_seconds": 3.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

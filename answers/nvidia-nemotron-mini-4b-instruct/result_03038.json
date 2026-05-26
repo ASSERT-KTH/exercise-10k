@@ -1,0 +1,9 @@
+{
+  "id": 3038,
+  "title": "Pluralizer",
+  "prompt": "Write a program that takes a string as input and returns the pluralized form of the string.\nSample Input: cat\nSample Output: cats\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a string as input and returns the pluralized form of the string based on the English language rules for nouns ending in \"s\":\n\n```python\ndef pluralize(word):\n    \"\"\"\n    Pluralizes a given word by adding 's' if the last character is not 's' or 'x',\n    and adding 'es' if the last character is 's' or 'x'.\n    \"\"\"\n    if word[-1] != 's' and word[-1] != 'x':\n        return word + 's'\n    else:\n        return word + 'es'\n\n# Example usage:\ninput_word = input(\"Enter a word: \")\npluralized_word = pluralize(input_word)\nprint(f\"'{input_word}' becomes '{pluralized_word}'.\")\n```\n\nThis program defines a function `pluralize` that takes a word as input and returns the pluralized form of the word. The function checks the last character of the word and adds 's' or 'es' accordingly. The example usage at the end of the program prompts the user to enter a word and prints the pluralized form of the word.",
+  "error": null,
+  "elapsed_seconds": 4.09,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

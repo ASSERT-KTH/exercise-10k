@@ -1,0 +1,9 @@
+{
+  "id": 2788,
+  "title": "Array Deletion",
+  "prompt": "Write a program that removes a specified element from a given array.\nSample Input: [1, 2, 3, 4, 5], 3\nSample Output: [1, 2, 4, 5]\n",
+  "answer": "Here's a Python solution for your problem:\n\n```python\ndef remove_element(arr, element):\n    return [x for i, x in enumerate(arr) if i != arr.index(element)]\n\n# Test the function\nprint(remove_element([1, 2, 3, 4, 5], 3))  # Output: [1, 2, 4, 5]\n```\n\nThis function uses list comprehension to create a new list with all elements except the one specified by `element`. The `enumerate()` function is used to get both the index and value of each element in the original list. The `index()` method is then used to find the index of the specified element, and the list comprehension filters out all elements with an index different from this one.",
+  "error": null,
+  "elapsed_seconds": 1.79,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

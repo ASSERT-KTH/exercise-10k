@@ -1,0 +1,9 @@
+{
+  "id": 212,
+  "title": "GetCurrentTime",
+  "prompt": "Write a function that returns the current time in hours, minutes, and seconds.\nSample Input: None\nSample Output: 14:30:00\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that returns the current time in hours, minutes, and seconds using the `datetime` module:\n\n```python\nfrom datetime import datetime\n\ndef get_current_time():\n    \"\"\"\n    Returns the current time in hours, minutes, and seconds as a string.\n\n    :return: A string in the format 'HH:MM:SS'\n    \"\"\"\n    # Get the current date and time\n    current_time = datetime.now()\n\n    # Format the time as a string with leading zeros for minutes and seconds\n    hours, remainder = divmod(current_time.hour, 10)\n    minutes, seconds = divmod(remainder * 60, 60)\n    return f\"{hours:02d}:{minutes:02d}:{seconds:02d}\"\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(get_current_time())  # Output: 14:30:00\n```\n\nThis function first imports the `datetime` module, which provides a way of working with dates and times in Python. It then uses the `datetime.now()` method to get the current date and time. The `divmod()` function is used to extract the hours, minutes, and seconds from the time object, and leading zeros are added to the minutes and seconds to ensure that they are always two digits long. Finally, the time is formatted as a string in the desired format and returned.",
+  "error": null,
+  "elapsed_seconds": 5.22,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

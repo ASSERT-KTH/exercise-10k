@@ -1,0 +1,9 @@
+{
+  "id": 1312,
+  "title": "Converting a List to a Dictionary",
+  "prompt": "Write a function to convert a list of tuples to a dictionary\nSample Input: data = [('a', 1), ('b', 2), ('c', 3)]\nSample Output: {'a': 1, 'b': 2, 'c': 3}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that converts a list of tuples to a dictionary:\n```python\ndef list_of_tuples_to_dict(data):\n    \"\"\"\n    Converts a list of tuples to a dictionary.\n\n    Parameters:\n    data (list of tuples): A list of tuples, where each tuple contains a key and a value.\n\n    Returns:\n    dict: A dictionary with the same keys and values as the input list of tuples.\n    \"\"\"\n    # Check if the input is a non-empty list\n    if not data or not all(isinstance(item, tuple) for item in data):\n        raise ValueError(\"Input should be a non-empty list of tuples.\")\n\n    # Convert the list of tuples to a dictionary\n    return dict(data)\n```\nHere's an example of how to use this function:\n```python\ndata = [('a', 1), ('b', 2), ('c', 3)]\nresult = list_of_tuples_to_dict(data)\nprint(result)  # Output: {'a': 1, 'b': 2, 'c': 3}\n```\nThis function first checks if the input is a non-empty list of tuples. If not, it raises a `ValueError`. Then, it converts the list of tuples to a dictionary using the `dict()` function with the `key` parameter set to the first element of each tuple.",
+  "error": null,
+  "elapsed_seconds": 3.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

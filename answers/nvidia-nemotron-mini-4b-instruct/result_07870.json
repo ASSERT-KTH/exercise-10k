@@ -1,0 +1,9 @@
+{
+  "id": 7870,
+  "title": " alphabetical Order",
+  "prompt": "Create a program that checks if a list of words is in alphabetical order using conditional statements.\nSample Input: apple banana cat\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a list of words is in alphabetical order using conditional statements:\n```python\ndef is_alphabetically_sorted(word_list):\n    \"\"\"\n    Check if a list of words is in alphabetical order.\n\n    :param word_list: List of words\n    :return: Boolean indicating if the list is sorted alphabetically\n    \"\"\"\n    # Check if the list has at least two elements\n    if len(word_list) < 2:\n        return True\n\n    # Compare each pair of adjacent words\n    for i in range(len(word_list) - 1):\n        if word_list[i] > word_list[i + 1]:\n            return False\n\n    # If no pair of adjacent words is out of order, the list is sorted alphabetically\n    return True\n\n# Example usage\nword_list = ['apple', 'banana', 'cat']\nprint(is_alphabetically_sorted(word_list))  # Output: True\n```\nThis program first checks if the list has at least two elements, because a list with one or zero elements is considered sorted alphabetically. Then, it iterates over each pair of adjacent words in the list, comparing them to determine if they are out of order. If any pair is out of order, the function returns `False`. If all pairs are in order, the function returns `True`.",
+  "error": null,
+  "elapsed_seconds": 3.26,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

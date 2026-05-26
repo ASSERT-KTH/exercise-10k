@@ -1,0 +1,9 @@
+{
+  "id": 3069,
+  "title": "Discount Calculator",
+  "prompt": "Create a program that calculates the discount for a given price and discount percentage. The program should print out the discounted price.\nSample Input: 100, 10\nSample Output: 90.0\n",
+  "answer": "Sure, I'd be happy to help you create a program for that. Here's an example Python program that meets your requirements:\n```python\ndef calculate_discount(price, discount_percentage):\n    \"\"\"\n    Calculates the discount for a given price and discount percentage.\n\n    :param price: The original price.\n    :param discount_percentage: The discount percentage as a decimal (e.g., 0.1 for 10%).\n    :return: The discounted price.\n    \"\"\"\n    # Ensure the discount percentage is a decimal\n    discount_percentage = float(discount_percentage)\n\n    # Calculate the discount amount\n    discount_amount = price * discount_percentage\n\n    # Calculate the discounted price\n    discounted_price = price - discount_amount\n\n    return discounted_price\n\n# Get user input\nprice = float(input(\"Enter the original price: \"))\ndiscount_percentage = float(input(\"Enter the discount percentage as a decimal (e.g., 0.1 for 10%): \"))\n\n# Calculate and print the discounted price\ndiscounted_price = calculate_discount(price, discount_percentage)\nprint(f\"The discounted price is {discounted_price:.2f}.\")\n```\nThis program defines a function `calculate_discount` that takes the original price and discount percentage as arguments, calculates the discount amount and discounted price, and returns the discounted price. The program then gets user input for the original price and discount percentage, calls the `calculate_discount` function, and prints the discounted price with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 4.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8540,
+  "title": "Surface Area of a Cone",
+  "prompt": "Create a program to calculate the surface area of a cone given its radius and height.\nSample Input: 5 10\nSample Output: 282.7\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the surface area of a cone given its radius and height:\n\n```python\nimport math\n\ndef calculate_cone_surface_area(radius, height):\n    \"\"\"\n    Calculates the surface area of a cone given its radius and height.\n\n    :param radius: The radius of the base of the cone.\n    :param height: The height of the cone.\n    :return: The surface area of the cone.\n    \"\"\"\n\n    # Calculate the slant height of the cone using the Pythagorean theorem\n    slant_height = math.sqrt(radius**2 + (height/2)**2)\n\n    # Calculate the surface area using the formula:\n    # Surface Area = πr(r + h)\n    surface_area = math.pi * radius * (radius + height/2)\n\n    return surface_area\n\n# Get user input for the radius and height\nradius = float(input(\"Enter the radius of the base: \"))\nheight = float(input(\"Enter the height of the cone: \"))\n\n# Calculate and print the surface area\nsurface_area = calculate_cone_surface_area(radius, height)\nprint(f\"The surface area of the cone is {surface_area:.2f}.\")\n```\n\nThis program defines a function `calculate_cone_surface_area` that takes the radius and height as input and returns the surface area. The function uses the Pythagorean theorem to calculate the slant height of the cone, which is used in the formula for the surface area. The program then prompts the user to enter the radius and height, calculates the surface area using the function, and prints the result with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 3.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

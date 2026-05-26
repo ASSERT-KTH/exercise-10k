@@ -1,0 +1,9 @@
+{
+  "id": 6394,
+  "title": "Rock, Paper, Scissors Game",
+  "prompt": "Develop a program that takes in the user's choice and the computer's choice, then determines the winner. Use if/else statements to compare the choices and determine the winner\nSample Input: rock paper\nSample Output: Paper wins!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses a simple dictionary to map user choices to computer choices, and then uses if/else statements to determine the winner.\n\n```python\n# Define the choices and their corresponding winners\nchoices = {\n    \"rock\": \"scissors\",\n    \"paper\": \"rock\",\n    \"scissors\": \"paper\"\n}\n\ndef play_game():\n    # Get user and computer choices\n    user_choice = input(\"Enter your choice (rock, paper, scissors): \").lower()\n    computer_choice = choices[random.choice([\"rock\", \"paper\", \"scissors\"])]\n\n    # Determine the winner\n    if user_choice == computer_choice:\n        print(\"It's a tie!\")\n    elif user_choice in choices.values():\n        print(f\"{user_choice} wins!\")\n    else:\n        print(\"Invalid choice. Please enter rock, paper, or scissors.\")\n\n# Call the function to play the game\nplay_game()\n```\n\nThis program uses the `random` module to select a random computer choice among \"rock\", \"paper\", and \"scissors\". The `play_game` function gets the user's choice, converts it to lowercase to ensure case-insensitivity, and then determines the winner by comparing the user's choice to the computer's choice. If the choices are equal, it prints \"It's a tie!\". If the user's choice is not in the dictionary of valid choices, it prints an error message and exits the function.",
+  "error": null,
+  "elapsed_seconds": 3.66,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

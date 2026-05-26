@@ -1,0 +1,9 @@
+{
+  "id": 5496,
+  "title": "Check Cycle in Graph",
+  "prompt": "Write a program to check if a given graph contains a cycle.\nSample Input: [[1, 2], [2, 3], [3, 1]]\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given graph (represented as a list of edges) contains a cycle using Depth-First Search (DFS). This program assumes that the graph is undirected and does not contain self-loops (edges from a node to itself). If the graph contains a cycle, the function will return `True`, otherwise it will return `False`.\n\n```python\ndef contains_cycle(edges):\n    # Create a dictionary to store the adjacency list of the graph\n    graph = {node: set() for node in range(len(edges))}\n    for edge in edges:\n        graph[edge[0]].add(edge[1])\n        graph[edge[1]].add(edge[0])\n\n    # Perform DFS and keep track of visited nodes\n    visited = [False] * len(edges)\n    def dfs(node):\n        visited[node] = True\n        for neighbor in graph[node]:\n            if not visited[neighbor]:\n                if dfs(neighbor):\n                    return True\n            elif visited[neighbor]:\n                return True\n        return False\n\n    # Check if there's a cycle in the graph\n    for node in range(len(edges)):\n        if not visited[node] and dfs(node):\n            return True\n    return False\n\n# Test the function with the given sample input\nedges = [[1, 2], [2, 3], [3, 1]]\nprint(contains_cycle(edges))  # Output: true\n```\n\nThis program first creates an adjacency list representation of the graph. Then, it performs DFS on each node, keeping track of visited nodes. If a node is visited again after it has been marked as unvisited, it means there's a cycle in the graph. The function returns `True` in such cases and `False` otherwise.",
+  "error": null,
+  "elapsed_seconds": 4.51,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

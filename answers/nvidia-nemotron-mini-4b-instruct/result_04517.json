@@ -1,0 +1,9 @@
+{
+  "id": 4517,
+  "title": "Morse Code Translator",
+  "prompt": "Create a program that translates English text to Morse code and vice versa.\nSample Input: Hello World\nSample Output: .... . .-.. .-.. --- / .-- --- .-. .-.. -..\n",
+  "answer": "To create a program that translates English text to Morse code and vice versa, you can use the following Python code. This program uses a dictionary to map English characters to Morse code and vice versa.\n\n```python\n# English to Morse code dictionary\nmorse_to_english = {\n    '.-': 'A', '-...': 'B', '-.-.': 'C', '-..': 'D', '.': 'E', '..-.': 'F',\n    '--.': 'G', '....': 'H', '..': 'I', '.---': 'J', '-.-': 'K', '.-..': 'L',\n    '--': 'M', '-.': 'N', '---': 'O', '.__': 'P', '..---': 'Q', '--.-': 'R',\n    '.-..': 'S', '---.': 'T', '.-.': 'U', '...': 'V', '-': 'W', '..-': 'X',\n    '.--': 'Y', '-..-': 'Z', ' ': ' '\n}\n\n# Morse code to English dictionary\nenglish_to_morse = {v: k for k, v in morse_to_english.items()}\n\ndef translate(text, to_morse=False):\n    result = ''\n    for char in text:\n        if char.isalpha():\n            result += morse_to_english.get(char, '').upper()\n        else:\n            result += char\n\n    if to_morse:\n        return ' '.join(english_to_morse.get(char, ' ') for char in result)\n    else:\n        return ''.join(english_to_morse.get(char, ' ') for char in result)\n\n# Sample Input: Hello World\nprint(translate('Hello World', to_morse=True))\n```\n\nThis program will output the Morse code equivalent of the given English text.",
+  "error": null,
+  "elapsed_seconds": 4.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

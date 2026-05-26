@@ -1,0 +1,9 @@
+{
+  "id": 2551,
+  "title": "Function Composition",
+  "prompt": "Create two functions and compose them to create a new function.\nSample Input: double, triple\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example of how you can create two functions and compose them to create a new function in Python. \n\nLet's define the two functions:\n\n```python\ndef double(x):\n    \"\"\"Double a number.\"\"\"\n    return x * 2\n\ndef triple(x):\n    \"\"\"Triple a number.\"\"\"\n    return x * 3\n```\n\nNow, let's compose these functions to create a new function that takes a number and returns its triple plus double. Here's how you can do that:\n\n```python\ndef compose(f, g):\n    \"\"\"Compose two functions f and g.\"\"\"\n    return lambda x: f(g(x))\n\ntriple_plus_double = compose(triple, double)\n```\n\nNow, you can use the `triple_plus_double` function to get the result you're looking for:\n\n```python\nprint(triple_plus_double(3))  # Output: 18\n```\n\nThis demonstrates how you can create two functions, compose them using the `compose` function, and then use the composed function to create a new function that takes a number and returns its triple plus double.",
+  "error": null,
+  "elapsed_seconds": 2.89,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

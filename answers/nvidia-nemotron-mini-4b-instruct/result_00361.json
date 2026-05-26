@@ -1,0 +1,9 @@
+{
+  "id": 361,
+  "title": "Input/Output Master",
+  "prompt": "Create a program that takes a string input from the user, reverses it, and then prints out the reversed string. The program should also handle cases where the input string is empty or contains only spaces.\nSample Input: Hello World\nSample Output: dlroW olleH\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef reverse_string(input_string):\n    \"\"\"\n    Reverses a given string and returns the reversed string.\n    Handles cases where the input string is empty or contains only spaces.\n    \"\"\"\n    # Remove any leading or trailing spaces and convert to lowercase\n    input_string = input_string.strip().lower()\n\n    # Check if the input string is empty or contains only spaces\n    if not input_string or input_string.isspace():\n        return input_string\n\n    # Reverse the string and return the result\n    return input_string[::-1]\n\n# Get user input\nuser_input = input(\"Enter a string: \")\n\n# Print the reversed string\nreversed_string = reverse_string(user_input)\nprint(f\"Reversed string: {reversed_string}\")\n```\n\nThis program defines a function `reverse_string` that takes an input string, removes any leading or trailing spaces, converts it to lowercase, and checks if the string is empty or contains only spaces. If the string is not empty, it reverses the string and returns the result. The program then gets user input, calls the `reverse_string` function with the user input, and prints the reversed string.",
+  "error": null,
+  "elapsed_seconds": 11.35,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

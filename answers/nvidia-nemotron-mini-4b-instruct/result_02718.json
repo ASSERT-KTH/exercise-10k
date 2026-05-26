@@ -1,0 +1,9 @@
+{
+  "id": 2718,
+  "title": "Date Formatter",
+  "prompt": "Write a program to format a given date in a specific format (e.g. DD/MM/YYYY).\nSample Input: 2022-01-01\nSample Output: 01/01/2022\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that formats a given date in the specified format (e.g. DD/MM/YYYY):\n```python\nfrom datetime import datetime\n\ndef format_date(date_str, format_str):\n    \"\"\"\n    Formats a given date string in the specified format.\n\n    Parameters:\n    date_str (str): The date string to be formatted.\n    format_str (str): The format string for the output date.\n\n    Returns:\n    str: The formatted date string.\n    \"\"\"\n    # Parse the input date string into a datetime object\n    try:\n        date = datetime.strptime(date_str, \"%Y-%m-%d\")\n    except ValueError:\n        raise ValueError(f\"Invalid date format. Expected format: YYYY-MM-DD\")\n\n    # Format the datetime object into the desired format\n    formatted_date = date.strftime(format_str)\n\n    return formatted_date\n\n# Example usage\ndate_str = \"2022-01-01\"\nformat_str = \"%d/%m/%Y\"  # Format string for DD/MM/YYYY\n\nformatted_date = format_date(date_str, format_str)\nprint(formatted_date)  # Output: 01/01/2022\n```\nThis program defines a function `format_date` that takes a date string and a format string as input, and returns the formatted date string in the specified format. The function first attempts to parse the input date string into a `datetime` object using the `strptime` method, and then formats the `datetime` object into the desired format using the `strftime` method. The example usage at the end of the program demonstrates how to use the function to format a given date string in the desired format.",
+  "error": null,
+  "elapsed_seconds": 4.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

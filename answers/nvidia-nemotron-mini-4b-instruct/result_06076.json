@@ -1,0 +1,9 @@
+{
+  "id": 6076,
+  "title": "Finding the Index",
+  "prompt": "Create a program that finds the index of a given element in an array using a for loop.\nSample Input: [1, 2, 3, 4, 5], 3\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the index of a given element in an array (or list) using a for loop:\n\n```python\ndef find_index(arr, element):\n    \"\"\"\n    Finds the index of a given element in an array using a for loop.\n\n    Parameters:\n    arr (list): The array to search in.\n    element (any): The element to find the index of.\n\n    Returns:\n    int: The index of the element in the array, or -1 if not found.\n    \"\"\"\n\n    # Check if the input is valid\n    if not isinstance(arr, list) or not all(isinstance(i, (int, float)) for i in arr):\n        raise ValueError(\"Input array must be a list of numbers.\")\n\n    for i, value in enumerate(arr):\n        if value == element:\n            return i\n\n    # If the element is not found, return -1\n    return -1\n\n\n# Example usage\narr = [1, 2, 3, 4, 5]\nelement = 3\nindex = find_index(arr, element)\n\nif index != -1:\n    print(f\"The index of {element} in the array is {index}.\")\nelse:\n    print(f\"{element} is not in the array.\")\n```\n\nThis program defines a function `find_index` that takes an array and an element as input, and returns the index of the element in the array using a for loop. The function checks if the input is valid and raises a `ValueError` if it's not. The example usage demonstrates how to use the function to find the index of a given element in an array.",
+  "error": null,
+  "elapsed_seconds": 4.1,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

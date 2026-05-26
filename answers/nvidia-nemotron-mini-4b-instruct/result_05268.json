@@ -1,0 +1,9 @@
+{
+  "id": 5268,
+  "title": "Discount Calculator",
+  "prompt": "Develop a program to calculate the discount amount based on the price and discount percentage using conditional statements\nSample Input: 100 10\nSample Output: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the discount amount based on the given price and discount percentage using conditional statements (if-else statements).\n\n```python\ndef calculate_discount(price, discount_percentage):\n    \"\"\"\n    Calculates the discount amount based on the given price and discount percentage.\n\n    :param price: The original price of the item.\n    :param discount_percentage: The discount percentage as a decimal (e.g., 0.1 for 10%).\n    :return: The discount amount.\n    \"\"\"\n\n    # Validate input\n    if not isinstance(price, (int, float)) or price < 0:\n        raise ValueError(\"Price must be a non-negative number.\")\n\n    if not isinstance(discount_percentage, (float, int)) or discount_percentage < 0:\n        raise ValueError(\"Discount percentage must be a non-negative number.\")\n\n    # Calculate the discount amount\n    discount_amount = price * (1 - discount_percentage)\n\n    return int(discount_amount)  # Round the discount amount to the nearest integer\n\n\n# Example usage\nprice = 100\ndiscount_percentage = 10\n\ndiscount_amount = calculate_discount(price, discount_percentage)\nprint(f\"The discount amount is {discount_amount}.\")\n```\n\nThis program defines a function `calculate_discount` that takes the price and discount percentage as input, validates them, calculates the discount amount, and returns it as an integer. The example usage at the end of the program demonstrates how to use the function to calculate the discount for a given price and discount percentage.",
+  "error": null,
+  "elapsed_seconds": 3.79,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

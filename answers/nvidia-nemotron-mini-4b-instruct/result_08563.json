@@ -1,0 +1,9 @@
+{
+  "id": 8563,
+  "title": "Dictionary from Keys and Values",
+  "prompt": "Create a dictionary from two lists of keys and values.\nSample Input: keys, values\nSample Output: dict\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that takes two lists (keys and values) as input and returns a dictionary containing the key-value pairs:\n```python\ndef create_dict(keys, values):\n    \"\"\"\n    Create a dictionary from two lists of keys and values.\n\n    Parameters:\n    keys (list): A list of keys for the dictionary.\n    values (list): A list of corresponding values for the keys.\n\n    Returns:\n    dict: A dictionary containing the key-value pairs.\n    \"\"\"\n    if len(keys) != len(values):\n        raise ValueError(\"The lengths of keys and values lists must be equal.\")\n\n    return dict(zip(keys, values))\n```\nHere's an example of how to use this function:\n```python\nkeys = ['a', 'b', 'c']\nvalues = [1, 2, 3]\n\ndict_result = create_dict(keys, values)\nprint(dict_result)  # Output: {'a': 1, 'b': 2, 'c': 3}\n```\nThis function first checks if the lengths of the keys and values lists are equal. If they are not, it raises a `ValueError`. Then, it uses the `zip` function to pair up the keys and values and creates a dictionary from the resulting tuples.",
+  "error": null,
+  "elapsed_seconds": 3.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

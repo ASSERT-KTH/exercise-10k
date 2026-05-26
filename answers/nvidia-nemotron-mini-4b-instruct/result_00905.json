@@ -1,0 +1,9 @@
+{
+  "id": 905,
+  "title": "Data Type Counter",
+  "prompt": "Create a program that counts the number of variables of each data type in a given list.\nSample Input: variables = [1, 2.5, 'hello', 3, 4.5, 'world']\nSample Output: Integers: 2, Floats: 2, Strings: 2\n",
+  "answer": "Here's a Python program that counts the number of variables of each data type in a given list:\n\n```python\ndef count_variables(variables):\n    # Initialize counters for each data type\n    integer_count = 0\n    float_count = 0\n    string_count = 0\n\n    # Iterate through each element in the list\n    for var in variables:\n        # Check the type of each variable\n        if isinstance(var, int):\n            integer_count += 1\n        elif isinstance(var, float):\n            float_count += 1\n        elif isinstance(var, str):\n            string_count += 1\n\n    # Return the counts for each data type\n    return {\"Integer\": integer_count, \"Float\": float_count, \"String\": string_count}\n\n# Test the function with the given sample input\nvariables = [1, 2.5, 'hello', 3, 4.5, 'world']\nprint(count_variables(variables))  # Output: {'Integer': 2, 'Float': 2, 'String': 2}\n```\n\nThis program defines a function `count_variables()` that takes a list of variables as input. It initializes counters for each data type (integer, float, and string) and then iterates through each element in the list. For each element, it checks its type using the `isinstance()` function and increments the corresponding counter. Finally, it returns a dictionary containing the counts for each data type. The test at the end of the program demonstrates how to use this function with the given sample input.",
+  "error": null,
+  "elapsed_seconds": 3.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1830,
+  "title": "Check if Array is Sorted",
+  "prompt": "Write a program to check if a given array is sorted in ascending or descending order.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given array (or list in Python) is sorted in ascending or descending order:\n\n```python\ndef is_sorted(arr):\n    \"\"\"Check if the given array is sorted in ascending or descending order.\n\n    Args:\n        arr (list): The array to check.\n\n    Returns:\n        bool: True if the array is sorted, False otherwise.\n    \"\"\"\n\n    # Check for ascending order\n    if all(arr[i] <= arr[i+1] for i in range(len(arr) - 1)):\n        return True\n\n    # Check for descending order\n    return all(arr[i] >= arr[i+1] for i in range(len(arr) - 1))\n\n# Test the function with a sample input\nsample_input = [1, 2, 3, 4, 5]\nprint(is_sorted(sample_input))  # Output: True\n```\n\nThis program defines a function `is_sorted()` that takes an array as input and checks if it's sorted in ascending or descending order. The function first checks for ascending order by iterating through the array and comparing each element with its successor. If all elements are less than or equal to their successors, then the array is sorted in ascending order. If not, the function checks for descending order by comparing each element with its predecessor. If all elements are greater than or equal to their predecessors, then the array is sorted in descending order. The function returns `True` if the array is sorted and `False` otherwise. The test at the end of the program demonstrates how to use the function with a sample input.",
+  "error": null,
+  "elapsed_seconds": 6.85,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

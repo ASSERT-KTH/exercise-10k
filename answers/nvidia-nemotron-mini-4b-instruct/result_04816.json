@@ -1,0 +1,9 @@
+{
+  "id": 4816,
+  "title": "Top K Frequent Elements",
+  "prompt": "Given an array of integers and a number k, find the top k frequent elements in the array. The function should take in an array of integers and a number k as input and return the top k frequent elements.\nSample Input: [1, 1, 1, 2, 2, 3], 2\nSample Output: [1, 2]\n",
+  "answer": "Here's a Python solution using a dictionary to count the frequency of each element and then sorting the keys (frequencies) in descending order. We can then extract the top k elements by slicing the sorted list.\n\n```python\nfrom collections import Counter\n\ndef topKFrequent(nums, k):\n    count = Counter(nums)\n    top_k = count.most_common(k)\n    return [num for freq, num in top_k]\n```\n\nYou can use this function as follows:\n\n```python\nprint(topKFrequent([1, 1, 1, 2, 2, 3], 2))  # Output: [1, 2]\n```",
+  "error": null,
+  "elapsed_seconds": 1.64,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8743,
+  "title": "Advanced Data Hiding",
+  "prompt": "Hide complex data within a variable to prevent unauthorized access.\nSample Input: {name: 'John', age: 30}\nSample Output: hidden object\n",
+  "answer": "Sure, I can help you with that. Here's a Python function that can hide a complex data structure (like a dictionary) within a variable to prevent unauthorized access. This function uses a custom class to encapsulate the complex data and provides a simple way to access it.\n\n```python\nclass HiddenObject:\n    def __init__(self, data):\n        self.data = data\n\n    def get_data(self):\n        return self.data\n\n# Example usage:\ncomplex_data = HiddenObject({\n    \"name\": \"John\",\n    \"age\": 30\n})\n\n# Now you can access the complex data as if it were a simple variable:\nprint(complex_data.get_data()[\"name\"])  # Output: John\n```\n\nThis approach ensures that the complex data is hidden within the `HiddenObject` class, and only the `get_data` method is exposed to the outside world. This way, unauthorized access to the complex data is prevented.",
+  "error": null,
+  "elapsed_seconds": 8.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

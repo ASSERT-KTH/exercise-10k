@@ -1,0 +1,9 @@
+{
+  "id": 24,
+  "title": "Calculator Function",
+  "prompt": "Write a function that takes two numbers and an operator as input and returns the result of the operation.\nSample Input: 2, 3, '+'\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef perform_operation(num1, num2, operator):\n    \"\"\"\n    Performs a mathematical operation on two numbers based on the given operator.\n\n    Parameters:\n    num1 (int): The first number to perform the operation on.\n    num2 (int): The second number to perform the operation on.\n    operator (str): The mathematical operator to use for the calculation.\n\n    Returns:\n    int: The result of the operation.\n    \"\"\"\n    if operator == '+':\n        return num1 + num2\n    elif operator == '-':\n        return num1 - num2\n    elif operator == '*':\n        return num1 * num2\n    elif operator == '/':\n        return num1 / num2\n    else:\n        raise ValueError(f\"Invalid operator '{operator}'. Supported operators are '+' for addition, '-' for subtraction, '*' for multiplication, and '/' for division.\")\n```\nHere's an example of how to use this function:\n```python\nresult = perform_operation(2, 3, '+')\nprint(result)  # Output: 5\n```\nThis function checks if the given operator is one of the supported operators (`'+'`, `'-'`, `'*'`, or `/'`). If the operator is invalid, it raises a `ValueError` with an appropriate error message. Otherwise, it performs the operation and returns the result.",
+  "error": null,
+  "elapsed_seconds": 4.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

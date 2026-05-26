@@ -1,0 +1,9 @@
+{
+  "id": 2507,
+  "title": "Combined Operations",
+  "prompt": "Write a program that takes three numbers as input and returns the result of the first number multiplied by the second, then added to the third.\nSample Input: 2 3 4\nSample Output: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef multiply_add(num1, num2, num3):\n    \"\"\"\n    This function takes three numbers as input and returns the result of the first number multiplied by the second,\n    then added to the third.\n\n    :param num1: The first number to be multiplied and added.\n    :param num2: The second number to be multiplied.\n    :param num3: The third number to be added to the result of the first two numbers.\n    :return: The final result of the calculation.\n    \"\"\"\n    # Check if the inputs are numbers\n    if not all(isinstance(num, (int, float)) for num in (num1, num2, num3)):\n        raise ValueError(\"All inputs must be numbers.\")\n\n    # Perform the calculation and return the result\n    result = num1 * num2 + num3\n    return result\n```\nYou can use this function by calling it with three numbers as arguments, like this:\n```python\nresult = multiply_add(2, 3, 4)\nprint(result)  # Output: 10\n```\nThis program checks if the inputs are numbers and raises a `ValueError` if any of them are not. It then performs the calculation and returns the result.",
+  "error": null,
+  "elapsed_seconds": 4.26,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5975,
+  "title": "Array Rotation",
+  "prompt": "Write a program that takes an array and a rotation amount as input, and returns a new array that is the result of rotating the input array by the specified amount.\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: [4, 5, 1, 2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef rotate_array(arr, rotation_amount):\n    \"\"\"\n    Rotates an array by the specified amount.\n\n    Parameters:\n    arr (list): The input array.\n    rotation_amount (int): The amount to rotate the array by.\n\n    Returns:\n    list: A new array that is the result of rotating the input array by the specified amount.\n    \"\"\"\n\n    # Ensure rotation_amount is non-negative\n    rotation_amount %= len(arr)\n\n    # Rotate the array using slicing\n    return arr[-rotation_amount:] + arr[:-rotation_amount]\n\n# Example usage\ninput_array = [1, 2, 3, 4, 5]\nrotation_amount = 2\noutput_array = rotate_array(input_array, rotation_amount)\nprint(output_array)  # Output: [4, 5, 1, 2, 3]\n```\nThis program defines a function `rotate_array` that takes an array and a rotation amount as input, and returns a new array that is the result of rotating the input array by the specified amount. The function first ensures that the rotation amount is non-negative, and then uses slicing to rotate the array. The example usage at the end of the program demonstrates how to use the function to rotate an array by a specified amount.",
+  "error": null,
+  "elapsed_seconds": 3.84,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

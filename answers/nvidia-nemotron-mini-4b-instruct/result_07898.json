@@ -1,0 +1,9 @@
+{
+  "id": 7898,
+  "title": "Array Rotation",
+  "prompt": "Write a program that rotates the elements of a given array to the right by a specified number of steps. For example, if the array is [1, 2, 3, 4, 5] and the number of steps is 2, the output should be [4, 5, 1, 2, 3].\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: [4, 5, 1, 2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that rotates the elements of a given array (list) to the right by a specified number of steps:\n\n```python\ndef rotate_array(arr, steps):\n    \"\"\"\n    Rotates the elements of a given array to the right by a specified number of steps.\n\n    :param arr: The input array\n    :param steps: The number of steps to rotate the array\n    :return: The rotated array\n    \"\"\"\n\n    # Ensure the input is a non-empty list\n    if not arr or len(arr) == 0:\n        raise ValueError(\"Input array cannot be empty\")\n\n    # Calculate the number of elements to shift\n    shift_count = steps % len(arr)\n\n    # Rotate the array by shifting elements to the left\n    rotated_arr = arr[-shift_count:] + arr[:-shift_count]\n\n    return rotated_arr\n\n# Example usage\narr = [1, 2, 3, 4, 5]\nsteps = 2\nprint(rotate_array(arr, steps))  # Output: [4, 5, 1, 2, 3]\n```\n\nThis program first checks if the input array is empty and raises a `ValueError` if it is. Then, it calculates the number of elements to shift by taking the modulus of the number of steps with the length of the array. Finally, it shifts the elements to the left by concatenating the elements to be shifted to the end of the array and slicing off the first `shift_count` elements.",
+  "error": null,
+  "elapsed_seconds": 3.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

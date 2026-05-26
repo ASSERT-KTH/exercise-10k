@@ -1,0 +1,9 @@
+{
+  "id": 8675,
+  "title": "Mad Libs",
+  "prompt": "Write a program that asks the user for a noun, verb, and adjective, and uses them to fill in the blanks in a story.\nSample Input: cat, jump, happy\nSample Output: Yesterday, I saw a happy cat jump over a fence.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses user input to fill in the blanks in a story template, ensuring that the noun, verb, and adjective provided by the user are used in the correct context.\n\n```python\ndef fill_story_template(noun, verb, adjective):\n    \"\"\"\n    Fills in the blanks in a story template with the given noun, verb, and adjective.\n\n    :param noun: The noun to use in the story.\n    :param verb: The verb to use in the story.\n    :param adjective: The adjective to use in the story.\n    :return: A string containing the filled-in story template.\n    \"\"\"\n    story_template = \"\"\"Yesterday, I saw a {adjective} {noun} {verb} over a fence.\"\"\"\n\n    return story_template.format(adjective=adjective, noun=noun, verb=verb)\n\n\nif __name__ == \"__main__\":\n    # Ask the user for a noun, verb, and adjective\n    noun = input(\"Please enter a noun: \")\n    verb = input(\"Please enter a verb: \")\n    adjective = input(\"Please enter an adjective: \")\n\n    # Fill in the story template with the user's input\n    filled_story = fill_story_template(noun, verb, adjective)\n\n    # Print the filled-in story\n    print(filled_story)\n```\n\nWhen you run this program, it will prompt you to enter a noun, verb, and adjective, and then print a story based on those inputs. For example, if you enter \"cat\", \"jump\", and \"happy\" as the user inputs, the program will output:\n\n```\nYesterday, I saw a happy cat jump over a fence.\n```",
+  "error": null,
+  "elapsed_seconds": 4.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

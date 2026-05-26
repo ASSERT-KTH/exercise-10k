@@ -1,0 +1,9 @@
+{
+  "id": 1151,
+  "title": "Grade Calculator",
+  "prompt": "Write a program that calculates a student's grade based on their scores on several assignments.\nSample Input: [90, 80, 70]\nSample Output: 80.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates a student's grade based on their scores on several assignments:\n```python\ndef calculate_grade(scores):\n    \"\"\"\n    Calculates a student's grade based on their scores on several assignments.\n\n    Parameters:\n    scores (list): A list of integers representing the scores on each assignment.\n\n    Returns:\n    float: The calculated grade as a floating point number.\n    \"\"\"\n\n    # Check that the input is a non-empty list of integers\n    if not isinstance(scores, list) or not all(isinstance(score, int) for score in scores):\n        raise ValueError(\"Input should be a non-empty list of integers.\")\n\n    # Calculate the total score and the number of assignments\n    total_score = sum(scores)\n    num_assignments = len(scores)\n\n    # Calculate the grade as the total score divided by the number of assignments\n    grade = total_score / num_assignments\n\n    return grade\n\n# Example usage\nscores = [90, 80, 70]\nprint(calculate_grade(scores))  # Output: 80.0\n```\nThis program defines a function `calculate_grade` that takes a list of scores as input and returns the calculated grade as a floating point number. The function checks that the input is a non-empty list of integers, calculates the total score and the number of assignments, and then calculates the grade as the total score divided by the number of assignments. The example usage at the end of the program demonstrates how to use the function with a sample input.",
+  "error": null,
+  "elapsed_seconds": 3.84,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

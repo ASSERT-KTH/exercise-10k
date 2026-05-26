@@ -1,0 +1,9 @@
+{
+  "id": 294,
+  "title": "Exponentiation Calculator",
+  "prompt": "Create a program that calculates the result of a given exponentiation operation.\nSample Input: 2 3\nSample Output: 8\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the result of a given exponentiation operation:\n\n```python\ndef calculate_exponentiation(base, exponent):\n    \"\"\"\n    Calculates the result of a given exponentiation operation.\n\n    :param base: The base of the exponentiation.\n    :param exponent: The exponent of the exponentiation.\n    :return: The result of the exponentiation operation.\n    \"\"\"\n\n    # Check if the exponent is negative\n    if exponent < 0:\n        return 1 / calculate_exponentiation(base, -exponent)\n\n    # Calculate the result of the exponentiation operation\n    result = 1\n    for _ in range(abs(exponent)):\n        result *= base\n\n    return result\n\n\n# Get user input\nbase = int(input(\"Enter the base of the exponentiation: \"))\nexponent = int(input(\"Enter the exponent of the exponentiation: \"))\n\n# Calculate and print the result\nresult = calculate_exponentiation(base, exponent)\nprint(f\"The result of {base} ^ {exponent} is {result}.\")\n```\n\nThis program defines a function `calculate_exponentiation` that takes the base and exponent as arguments and calculates the result of the exponentiation operation. The function checks if the exponent is negative and calculates the reciprocal if it is. The program then gets user input for the base and exponent, calls the function with those values, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.54,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

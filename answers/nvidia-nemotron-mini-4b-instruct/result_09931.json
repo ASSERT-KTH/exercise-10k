@@ -1,0 +1,9 @@
+{
+  "id": 9931,
+  "title": "Input Validation and Output Formatting",
+  "prompt": "Create a program that takes a user's name, age, and favorite color as input, validates that the age is a positive integer, and then prints out a formatted greeting message including the user's name, age, and favorite color. If the age is not a positive integer, print an error message.\nSample Input: John Doe\n25\nBlue\nSample Output: Hello, John Doe! You are 25 years old and your favorite color is Blue.\n",
+  "answer": "Here's a Python solution for the problem:\n\n```python\ndef greet_user():\n    # get user input\n    name = input(\"Enter your name: \")\n    age = int(input(\"Enter your age: \"))\n    color = input(\"Enter your favorite color: \")\n\n    # validate age\n    if age < 1:\n        print(\"Error: Age must be a positive integer. Please try again.\")\n    else:\n        # print greeting message\n        print(f\"Hello, {name}! You are {age} years old and your favorite color is {color}.\")\n\n# call the function\ngreet_user()\n```\n\nThis program defines a function `greet_user()` that prompts the user for their name, age, and favorite color, validates the age to ensure it's a positive integer, and then prints a formatted greeting message. If the age is not a positive integer, it prints an error message and exits the function.",
+  "error": null,
+  "elapsed_seconds": 2.15,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

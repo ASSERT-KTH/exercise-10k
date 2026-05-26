@@ -1,0 +1,9 @@
+{
+  "id": 9891,
+  "title": "Sum of Two Numbers",
+  "prompt": "Write a program that takes two numbers as input and returns their sum.\nSample Input: 2 3\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a simple Python program that meets your requirements:\n\n```python\ndef add_two_numbers(num1, num2):\n    \"\"\"\n    This function takes two numbers as input and returns their sum.\n\n    :param num1: The first number to be added.\n    :param num2: The second number to be added.\n    :return: The sum of the two input numbers.\n    \"\"\"\n\n    # Validate that the inputs are numbers (integers or floats)\n    if not isinstance(num1, (int, float)) or not isinstance(num2, (int, float)):\n        raise TypeError(\"Both inputs must be numbers.\")\n\n    # Calculate and return the sum\n    return num1 + num2\n\n# Get user input\ntry:\n    num1 = float(input(\"Enter the first number: \"))\n    num2 = float(input(\"Enter the second number: \"))\n\n    # Call the function and print the result\n    sum_ = add_two_numbers(num1, num2)\n    print(f\"The sum of {num1} and {num2} is {sum_}.\")\n\nexcept ValueError:\n    print(\"Invalid input. Please enter numbers only.\")\n```\n\nThis program defines a function `add_two_numbers` that checks if the inputs are numbers and then calculates and returns their sum. The program then prompts the user to enter two numbers, validates the input, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

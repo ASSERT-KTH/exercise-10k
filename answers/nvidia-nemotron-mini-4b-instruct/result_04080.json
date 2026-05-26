@@ -1,0 +1,9 @@
+{
+  "id": 4080,
+  "title": "String Partitioning",
+  "prompt": "Write a program that takes a string and a partition size as input and returns a list of substrings of the specified size.\nSample Input: ['hello world', 3]\nSample Output: ['hel', 'lo ', 'wor', 'ld ']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef partition_string(s, partition_size):\n    \"\"\"\n    Partitions a string into substrings of a specified size.\n\n    Parameters:\n    s (str): The input string.\n    partition_size (int): The size of each substring.\n\n    Returns:\n    list: A list of substrings of the specified size.\n    \"\"\"\n    # Pad the string with spaces to ensure the last substring has the correct size\n    padded_s = s + ' ' * (partition_size - len(s) % partition_size)\n\n    # Yield each substring of the specified size\n    for i in range(0, len(padded_s), partition_size):\n        yield padded_s[i:i + partition_size]\n\n# Example usage\ninput_string = 'hello world'\npartition_size = 3\nprint(list(partition_string(input_string, partition_size)))\n```\nWhen you run this program with the sample input `['hello world', 3]`, it will output:\n```python\n['hel', 'lo ', 'wor', 'ld ']\n```\nThis program first pads the input string with spaces to ensure that each substring has the same number of characters. Then, it uses a generator expression to yield each substring of the specified size. The `list()` function is used to convert the generator to a list.",
+  "error": null,
+  "elapsed_seconds": 3.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

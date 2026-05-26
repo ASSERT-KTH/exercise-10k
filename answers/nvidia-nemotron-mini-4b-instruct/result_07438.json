@@ -1,0 +1,9 @@
+{
+  "id": 7438,
+  "title": "Grade Classification",
+  "prompt": "Write a program that takes a student's grade as input and outputs whether the student passed or failed based on a conditional statement. The passing grade is 50.\nSample Input: 60\nSample Output: Passed\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a simple Python program that meets your requirements:\n\n```python\ndef grade_to_status(grade):\n    \"\"\"\n    Converts a student's grade to a passing or failing status.\n\n    :param grade: The student's grade as an integer between 0 and 100.\n    :return: A string indicating whether the student passed or failed.\n    \"\"\"\n    if 0 <= grade <= 49:\n        return \"Failed\"\n    elif 50 <= grade <= 100:\n        return \"Passed\"\n    else:\n        raise ValueError(\"Grade must be an integer between 0 and 100.\")\n\n# Get user input\nuser_grade = int(input(\"Enter a student's grade: \"))\n\n# Output the passing or failing status\nprint(grade_to_status(user_grade))\n```\n\nThis program defines a function `grade_to_status` that takes a student's grade as input and returns a string indicating whether they passed or failed. The function checks if the grade is between 0 and 49, in which case it returns \"Failed\". If the grade is between 50 and 100, it returns \"Passed\". If the grade is not within the valid range, it raises a `ValueError`. The program then gets user input, calls the function with the user's grade, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

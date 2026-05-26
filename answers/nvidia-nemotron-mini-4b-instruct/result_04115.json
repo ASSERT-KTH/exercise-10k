@@ -1,0 +1,9 @@
+{
+  "id": 4115,
+  "title": "User Input Validation",
+  "prompt": "Write a program that asks the user for input, validates the input to ensure it is of the correct data type, and prints out an error message if the input is invalid.\nSample Input: '123', 'hello'\nSample Output: Invalid input: 'hello' is not a number\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_valid_input(prompt, expected_type):\n    \"\"\"\n    Asks the user for input, validates the input to ensure it is of the correct data type,\n    and prints out an error message if the input is invalid.\n\n    :param prompt: The prompt to display to the user.\n    :param expected_type: The expected data type of the input.\n    :return: The validated input.\n    \"\"\"\n    while True:\n        user_input = input(prompt)\n        try:\n            validated_input = expected_type(user_input)\n            return validated_input\n        except ValueError:\n            print(f\"Invalid input: '{user_input}' is not of type {expected_type.__name__}.\")\n\n# Example usage:\nnumber = get_valid_input(\"Enter a number: \", int)\nprint(f\"The number you entered is: {number}\")\n```\nThis program defines a function `get_valid_input` that prompts the user for input, validates the input to ensure it's of the correct data type, and prints an error message if the input is invalid. The example usage shows how to use this function to get a number from the user.",
+  "error": null,
+  "elapsed_seconds": 3.03,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

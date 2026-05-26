@@ -1,0 +1,9 @@
+{
+  "id": 6118,
+  "title": "List Merging with Key Function",
+  "prompt": "Write a program that takes two lists of integers and a key function as input, and returns a new list containing all the integers from both lists, merged according to the key function.\nSample Input: [1, 2, 3], [4, 5, 6], double(x)\nSample Output: [2, 4, 6, 8, 10, 12]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. The `double(x)` function is a simple example key function that doubles its input. You can replace it with any other function that takes an integer and returns another integer.\n\n```python\ndef merge_lists_by_key(list1, list2, key_func):\n    \"\"\"\n    Merges two lists of integers into a new list, merging them according to a key function.\n\n    Parameters:\n    list1 (list): The first list of integers.\n    list2 (list): The second list of integers.\n    key_func (callable): A function that takes an integer as input and returns another integer.\n\n    Returns:\n    list: A new list containing all the integers from both input lists, merged according to the key function.\n    \"\"\"\n\n    # Ensure both inputs are lists and the key function is callable\n    if not isinstance(list1, list) or not isinstance(list2, list):\n        raise ValueError(\"Both inputs must be lists.\")\n    if not callable(key_func):\n        raise ValueError(\"The key function must be callable.\")\n\n    # Merge the lists using the key function\n    merged_list = [key_func(item) for item in list1 + list2]\n\n    return merged_list\n\n\n# Example usage\nlist1 = [1, 2, 3]\nlist2 = [4, 5, 6]\nkey_func = double\nresult = merge_lists_by_key(list1, list2, key_func)\nprint(result)  # Output: [2, 4, 6, 8, 10, 12]\n```",
+  "error": null,
+  "elapsed_seconds": 4.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

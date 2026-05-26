@@ -1,0 +1,9 @@
+{
+  "id": 5197,
+  "title": "Weather Forecast",
+  "prompt": "Write a program that asks the user for their location and then prints out the weather forecast for the next 5 days.\nSample Input: New York\nSample Output: ['Day 1: Sunny, 75°F', 'Day 2: Cloudy, 60°F', 'Day 3: Rainy, 50°F', 'Day 4: Sunny, 70°F', 'Day 5: Cloudy, 65°F']\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef get_weather_forecast(city):\n    # Replace this with your actual weather API endpoint\n    weather_api_url = \"https://api.weatherapi.com/v1/forecast.json?q={}&days=5\".format(city)\n\n    # Make a request to the API and parse the response\n    import requests\n    response = requests.get(weather_api_url)\n    data = response.json()\n\n    forecast = []\n    for day in data[\"forecast\"]:\n        forecast.append(\"Day {}: {}{}\".format(day[\"day\"], day[\"condition\"][\"text\"], day[\"temperature\"] + \"°F\"))\n\n    return forecast\n\n# Get user input\ncity = input(\"Enter your city: \")\n\n# Print the weather forecast\nprint(get_weather_forecast(city))\n```\n\nThis program defines a function `get_weather_forecast` that takes a city name as input, makes an API request to get the weather forecast for the next 5 days, and returns a list of weather descriptions. The function uses the `requests` library to make the API request, and the `json` library to parse the response. The function then prints out the forecast for the given city.\n\nYou can replace the `weather_api_url` variable with the actual URL of your weather API endpoint, and customize the function to fit your specific needs.",
+  "error": null,
+  "elapsed_seconds": 7.98,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

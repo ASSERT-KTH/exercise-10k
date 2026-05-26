@@ -1,0 +1,9 @@
+{
+  "id": 9229,
+  "title": "Sum of Even Numbers",
+  "prompt": "Write a program that calculates the sum of all even numbers from 1 to a given number (inclusive) using a for loop. The program should ask the user for the input number and then print the sum.\nSample Input: 10\nSample Output: 30\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef calculate_sum_of_evens():\n    \"\"\"\n    Asks the user for an input number and calculates the sum of all even numbers from 1 to that number.\n    \"\"\"\n\n    # Ask the user for the input number\n    while True:\n        try:\n            input_number = int(input(\"Please enter a positive integer: \"))\n            if input_number >= 1:\n                break\n            else:\n                print(\"The input number must be a positive integer. Please try again.\")\n        except ValueError:\n            print(\"That's not a valid integer. Please try again.\")\n\n    # Calculate the sum of all even numbers from 1 to the input number\n    sum_of_evens = 0\n    for num in range(1, input_number + 1):\n        if num % 2 == 0:\n            sum_of_evens += num\n\n    # Print the result\n    print(f\"The sum of all even numbers from 1 to {input_number} is {sum_of_evens}.\")\n\n# Call the function\ncalculate_sum_of_evens()\n```\n\nThis program defines a function `calculate_sum_of_evens()` that prompts the user for a positive integer input, calculates the sum of all even numbers from 1 to that input using a `for` loop, and prints the result. The function also includes input validation to ensure the user enters a valid integer.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

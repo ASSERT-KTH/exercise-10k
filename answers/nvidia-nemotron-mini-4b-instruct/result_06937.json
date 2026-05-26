@@ -1,0 +1,9 @@
+{
+  "id": 6937,
+  "title": "Map Function",
+  "prompt": "Create a function that uses the map() function to apply a given function to a list of numbers\nSample Input: [1, 2, 3, 4, 5], double(x)\nSample Output: [2, 4, 6, 8, 10]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef apply_function_to_list(numbers, func):\n    \"\"\"\n    Applies a given function to a list of numbers using the map() function.\n\n    Parameters:\n    numbers (list): A list of numbers.\n    func (callable): A function that takes one argument and returns a single value.\n\n    Returns:\n    list: A new list containing the results of applying the given function to each number in the input list.\n    \"\"\"\n    return list(map(func, numbers))\n```\nHere's an example of how to use this function:\n```python\ndef double(x):\n    \"\"\"Returns the double of a number.\"\"\"\n    return x * 2\n\nnumbers = [1, 2, 3, 4, 5]\nresult = apply_function_to_list(numbers, double)\nprint(result)  # Output: [2, 4, 6, 8, 10]\n```\nThis function takes a list of numbers and a callable function as input, and returns a new list containing the results of applying the given function to each number in the input list using the `map()` function. The function also ensures that the output is a list by converting the `map()` object to a list using the `list()` function.",
+  "error": null,
+  "elapsed_seconds": 3.18,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

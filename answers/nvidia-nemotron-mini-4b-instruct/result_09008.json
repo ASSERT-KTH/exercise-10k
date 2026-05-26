@@ -1,0 +1,9 @@
+{
+  "id": 9008,
+  "title": ".Abstract Data Types",
+  "prompt": "Write a function that implements a stack using a list.\nSample Input: push(1), push(2), pop()\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that implements a stack using a list, along with sample input and output as per your requirements:\n\n```python\ndef push(stack, item):\n    \"\"\"Push an item onto the top of the stack.\"\"\"\n    stack.append(item)\n\ndef pop(stack):\n    \"\"\"Remove and return the top item from the stack.\"\"\"\n    if not stack:\n        raise IndexError(\"Pop from an empty stack\")\n    return stack.pop()\n\n# Sample input: push(stack, 1), push(stack, 2), pop(stack)\nstack = []\npush(stack, 1)\npush(stack, 2)\nprint(pop(stack))  # Output: 2\n```\n\nThis function defines two methods: `push` to add an item to the top of the stack, and `pop` to remove and return the top item. The `push` method appends the item to the end of the list, while the `pop` method checks if the stack is empty before removing and returning the top item. The sample input and output demonstrate how to use these methods to create and manipulate a stack.",
+  "error": null,
+  "elapsed_seconds": 2.66,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

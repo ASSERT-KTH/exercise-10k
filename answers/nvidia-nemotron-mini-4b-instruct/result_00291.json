@@ -1,0 +1,9 @@
+{
+  "id": 291,
+  "title": "Time Calculator",
+  "prompt": "Write a program that calculates the time given the hours, minutes, and seconds.\nSample Input: 2 30 45\nSample Output: 2:30:45\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the time given the hours, minutes, and seconds:\n```python\ndef calculate_time(hours, minutes, seconds):\n    \"\"\"\n    Calculates the time given the hours, minutes, and seconds.\n\n    :param hours: The number of hours (integer)\n    :param minutes: The number of minutes (integer)\n    :param seconds: The number of seconds (integer)\n    :return: A string representing the time in the format HH:MM:SS\n    \"\"\"\n\n    # Ensure all inputs are integers\n    hours = int(hours)\n    minutes = int(minutes)\n    seconds = int(seconds)\n\n    # Calculate the total time\n    total_seconds = hours * 3600 + minutes * 60 + seconds\n\n    # Format the time as a string\n    hours, minutes, seconds = divmod(total_seconds, 3600)\n    minutes, seconds = divmod(minutes, 60)\n\n    return f\"{hours:02d}:{minutes:02d}:{seconds:02d}\"\n\n# Example usage\ntime_input = \"2 30 45\"\nprint(calculate_time(*time_input.strip().split()))\n```\nThis program defines a function `calculate_time` that takes three arguments representing the hours, minutes, and seconds. It first ensures that all inputs are integers, then calculates the total time in seconds, and finally formats the time as a string in the desired format (HH:MM:SS). The example usage at the end of the program demonstrates how to use the function with a sample input.",
+  "error": null,
+  "elapsed_seconds": 3.77,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

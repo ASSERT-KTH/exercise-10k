@@ -1,0 +1,9 @@
+{
+  "id": 1186,
+  "title": "Time of Day Greeting",
+  "prompt": "Create a program that takes the current time as input and prints out a greeting based on the time of day.\nSample Input: 10:00\nSample Output: Good morning!\n",
+  "answer": "Sure, I'd be happy to help you create a program that greets users based on the current time of day. Here's a Python solution using the `datetime` module to get the current time:\n\n```python\nimport datetime\n\ndef greet_user():\n    \"\"\"Greet the user based on the current time of day.\"\"\"\n\n    # Get the current time\n    current_time = datetime.datetime.now().time()\n\n    # Define greeting times\n    greeting_times = {\n        (8, 0, 0): \"Good morning!\",\n        (12, 0, 0): \"Good afternoon!\",\n        (18, 0, 0): \"Good evening!\",\n        (24, 0, 0): \"Good night!\"\n    }\n\n    # Find the greeting time based on the current time\n    for start, end in greeting_times.items():\n        if start <= current_time <= end:\n            greeting = greeting_times[(start, end)]\n            break\n    else:\n        greeting = \"Hello! It's currently unknown time.\"\n\n    # Print the greeting\n    print(greeting)\n\n# Call the function\ngreet_user()\n```\n\nThis program defines greeting times as tuples of hour, minute, and second values. It then iterates through these times to find the first one that the current time falls within. If no matching time is found, it prints a generic greeting.",
+  "error": null,
+  "elapsed_seconds": 3.26,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

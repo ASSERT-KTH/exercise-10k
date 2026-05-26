@@ -1,0 +1,9 @@
+{
+  "id": 7974,
+  "title": "Coin Change",
+  "prompt": "Write a program that calculates the number of coins needed to make change for a given amount.\nSample Input: 36\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the number of coins needed to make change for a given amount:\n```python\ndef make_change(amount, coins):\n    \"\"\"\n    Calculates the number of coins needed to make change for a given amount.\n\n    :param amount: The amount of money to make change for.\n    :param coins: A list of coin denominations in descending order.\n    :return: The minimum number of coins needed to make change.\n    \"\"\"\n    # Initialize the number of coins needed to 0\n    num_coins = 0\n\n    # Loop through the coin denominations in descending order\n    for coin in coins[::-1]:\n        # Calculate the number of coins needed for the current denomination\n        num_coins += amount // coin\n\n        # Update the amount to be changed for the next iteration\n        amount %= coin\n\n    return num_coins\n\n# Test the function with the given sample input\nprint(make_change(36, [1, 5, 10, 25]))  # Output: 3\n```\nThis program defines a function `make_change` that takes an amount and a list of coin denominations as input, and returns the minimum number of coins needed to make change for that amount. The function uses a loop to iterate through the coin denominations in descending order, and calculates the number of coins needed for each denomination by dividing the remaining amount by the denomination and updating the amount for the next iteration. The function returns the total number of coins needed to make change.\n\nThe test at the end of the program calls the `make_change` function with the given sample input and prints the result.",
+  "error": null,
+  "elapsed_seconds": 4.06,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

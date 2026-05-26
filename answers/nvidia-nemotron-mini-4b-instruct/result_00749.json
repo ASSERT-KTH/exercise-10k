@@ -1,0 +1,9 @@
+{
+  "id": 749,
+  "title": "Grade Calculator",
+  "prompt": "Write a program that takes a student's grades as input and calculates their average grade\nSample Input: 90 80 70\nSample Output: Average grade: 80.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a list of student grades as input and calculates their average grade:\n```python\ndef calculate_average_grade(grades):\n    \"\"\"\n    Calculates the average grade of a list of student grades.\n\n    Parameters:\n    grades (list): A list of student grades as integers.\n\n    Returns:\n    float: The average grade as a float.\n    \"\"\"\n\n    # Check if the input is a non-empty list\n    if not isinstance(grades, list) or len(grades) == 0:\n        raise ValueError(\"Input should be a non-empty list of integers.\")\n\n    # Calculate the sum of the grades and the count of grades\n    total_grade = sum(grades)\n    grade_count = len(grades)\n\n    # Calculate the average grade\n    average_grade = total_grade / grade_count\n\n    return average_grade\n\n# Get user input\ngrades_str = input(\"Enter a space-separated list of student grades: \")\ngrades = [int(grade) for grade in grades_str.split()]\n\n# Calculate and print the average grade\naverage_grade = calculate_average_grade(grades)\nprint(f\"Average grade: {average_grade:.1f}\")\n```\nThis program defines a function `calculate_average_grade` that takes a list of student grades as input and returns their average grade as a float. The main part of the program gets user input, converts it to a list of integers, and then calls the function to calculate the average grade and print it with one decimal place.",
+  "error": null,
+  "elapsed_seconds": 3.64,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2050,
+  "title": "Dictionary Validation",
+  "prompt": "Write a function to validate a dictionary against a set of rules (e.g., required keys, value types).\nSample Input: {'name': 'John', 'age': 25}, ['name', 'age']\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that validates a dictionary against a set of rules (required keys and value types). The function takes two arguments: the dictionary to validate and a list of rules (required keys and value types).\n\n```python\ndef validate_dict(data, rules):\n    \"\"\"\n    Validates a dictionary against a set of rules.\n\n    :param data: The dictionary to validate.\n    :param rules: A list of tuples, where each tuple contains a key and a value type.\n                  The value type should be a string representing a Python built-in type.\n    :return: True if the dictionary is valid, False otherwise.\n    \"\"\"\n\n    # Check if all required keys are present\n    required_keys = set(rules)\n    if not required_keys.issubset(data.keys()):\n        return False\n\n    # Check if all values have the correct type\n    for key, rule in rules:\n        value = data.get(key)\n        if value is None:\n            return False\n        if not isinstance(value, eval(rule)):\n            return False\n\n    return True\n```\n\nHere's an example of how to use this function:\n\n```python\nrules = [('name', 'str'), ('age', 'int')]\ndata = {'name': 'John', 'age': 25}\n\nprint(validate_dict(data, rules))  # Output: True\n```\n\nThis function first checks if all required keys are present in the dictionary. Then, it iterates through the rules and checks if each value has the correct type. The `eval()` function is used to evaluate the value type string, which allows us to check for various built-in types (e.g., `int`, `str`, `bool`, etc.).",
+  "error": null,
+  "elapsed_seconds": 4.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

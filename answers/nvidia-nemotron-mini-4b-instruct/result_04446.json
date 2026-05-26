@@ -1,0 +1,9 @@
+{
+  "id": 4446,
+  "title": "BMI Calculator",
+  "prompt": "Write a program that takes a person's weight and height as input and prints out their BMI.\nSample Input: 70\n1.75\nSample Output: 22.86\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a person's weight and height as input, calculates their Body Mass Index (BMI), and prints the result with two decimal places:\n\n```python\ndef calculate_bmi(weight, height):\n    \"\"\"Calculate a person's BMI based on their weight and height.\"\"\"\n    # Convert height from meters to centimeters\n    cm_height = height * 100\n\n    # Calculate BMI\n    bmi = weight / (cm_height / 100) ** 2\n\n    return bmi\n\n# Get user input for weight and height\nweight = float(input(\"Enter your weight in kilograms: \"))\nheight = float(input(\"Enter your height in meters: \"))\n\n# Calculate and print BMI\nbmi = calculate_bmi(weight, height)\nprint(f\"Your BMI is {bmi:.2f}.\")\n```\n\nThis program defines a function `calculate_bmi` that takes a person's weight and height as input, converts the height to centimeters, calculates the BMI, and returns the result. The program then prompts the user to enter their weight and height, calls the `calculate_bmi` function, and prints the result with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 2.85,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

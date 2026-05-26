@@ -1,0 +1,9 @@
+{
+  "id": 2080,
+  "title": "Checking for Connected Components",
+  "prompt": "Write a program that takes a graph as input and returns the number of connected components.\nSample Input: [(1, 2), (2, 3), (4, 5)]\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses Depth-First Search (DFS) to find the number of connected components in a given graph. The graph is represented as a list of edges, where each edge is a tuple of two nodes.\n\n```python\nfrom collections import defaultdict\n\ndef dfs(graph, node, visited):\n    visited.add(node)\n    for neighbor in graph[node]:\n        if neighbor not in visited:\n            dfs(graph, neighbor, visited)\n\ndef count_connected_components(edges):\n    graph = defaultdict(list)\n    for edge in edges:\n        graph[edge[0]].append(edge[1])\n        graph[edge[1]].append(edge[0])\n\n    num_components = 0\n    visited = set()\n\n    for node in graph:\n        if node not in visited:\n            dfs(graph, node, visited)\n            num_components += 1\n\n    return num_components\n\n# Example usage\nedges = [(1, 2), (2, 3), (4, 5)]\nprint(count_connected_components(edges))  # Output: 2\n```\n\nThis program first creates a graph data structure using a dictionary with nodes as keys and lists of neighbors as values. Then, it performs a DFS on each unvisited node, incrementing the number of connected components by 1. Finally, it returns the total number of connected components.",
+  "error": null,
+  "elapsed_seconds": 3.35,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

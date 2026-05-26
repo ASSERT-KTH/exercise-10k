@@ -1,0 +1,9 @@
+{
+  "id": 2774,
+  "title": "Text Analyzer",
+  "prompt": "Write a program that takes a text as input and prints out statistics about the text (e.g. word count, character count, most frequent word).\nSample Input: This is a sample text.\nSample Output: Word count: 5\nCharacter count: 20\nMost frequent word: 'is'\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\nimport string\n\ndef get_statistics(text):\n    # Remove punctuation and convert to lowercase\n    text = ''.join(c for c in text if c not in string.punctuation).lower()\n\n    # Split the text into words and count occurrences\n    word_count = len(text.split())\n    char_count = len(text)\n    word_freq = {}\n    for word in text.split():\n        if word in word_freq:\n            word_freq[word] += 1\n        else:\n            word_freq[word] = 1\n\n    # Find the most frequent word\n    most_freq_word = max(word_freq, key=word_freq.get)\n\n    return {\n        'word_count': word_count,\n        'char_count': char_count,\n        'most_freq_word': most_freq_word\n    }\n\n# Get user input and print statistics\ntext = input(\"Enter a text: \")\nstats = get_statistics(text)\nprint(f\"Word count: {stats['word_count']}\")\nprint(f\"Character count: {stats['char_count']}\")\nprint(f\"Most frequent word: {stats['most_freq_word']}\")\n```\nThis program first removes punctuation and converts the text to lowercase to make the word count and frequency calculations more accurate. Then, it splits the text into words, counts the occurrences of each word, and finds the most frequent word. Finally, it prints out the statistics for the input text.",
+  "error": null,
+  "elapsed_seconds": 3.81,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

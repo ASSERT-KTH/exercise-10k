@@ -1,0 +1,9 @@
+{
+  "id": 5725,
+  "title": "Function with Default Argument",
+  "prompt": "Write a function that takes a name and an age, with the age defaulting to 25 if not provided.\nSample Input: John\nSample Output: John is 25 years old\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef describe_person(name, age=25):\n    \"\"\"\n    Describes a person with a given name and age. If age is not provided,\n    the default age is 25.\n\n    :param name: str - The name of the person.\n    :param age: int - The age of the person. If not provided, defaults to 25.\n    :return: str - A string describing the person.\n    \"\"\"\n    if not isinstance(name, str) or not isinstance(age, int):\n        raise TypeError(\"Both name and age must be of type str and int, respectively.\")\n\n    return f\"{name} is {age} years old.\"\n```\nHere's an example of how you can use this function:\n```python\nprint(describe_person(\"John\"))  # Output: John is 25 years old\nprint(describe_person(\"Jane\", 30))  # Output: Jane is 30 years old\n```\nThis function checks if the input types are correct, and if not, raises a `TypeError`. If the `age` parameter is not provided, it defaults to 25.",
+  "error": null,
+  "elapsed_seconds": 2.87,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

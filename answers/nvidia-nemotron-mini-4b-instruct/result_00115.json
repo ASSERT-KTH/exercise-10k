@@ -1,0 +1,9 @@
+{
+  "id": 115,
+  "title": "Find Min and Max",
+  "prompt": "Write a program to find the minimum and maximum values in an array.\nSample Input: [10, 20, 30, 40, 50]\nSample Output: [10, 50]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the minimum and maximum values in an array (or list, as it's called in Python):\n\n```python\ndef find_min_max(arr):\n    \"\"\"\n    Find the minimum and maximum values in an array.\n\n    :param arr: The input array\n    :return: A tuple containing the minimum and maximum values\n    \"\"\"\n\n    # Check if the input is a non-empty list\n    if not isinstance(arr, list) or len(arr) == 0:\n        raise ValueError(\"Input should be a non-empty list\")\n\n    # Initialize minimum and maximum values to the first element\n    min_val = max_val = arr[0]\n\n    # Iterate through the array to find the minimum and maximum values\n    for num in arr:\n        if num < min_val:\n            min_val = num\n        elif num > max_val:\n            max_val = num\n\n    return min_val, max_val\n\n# Example usage\narr = [10, 20, 30, 40, 50]\nmin_val, max_val = find_min_max(arr)\nprint(f\"[min: {min_val}, max: {max_val}]\")\n```\n\nWhen you run this program with the sample input `[10, 20, 30, 40, 50]`, it will output:\n\n```\n[min: 10, max: 50]\n```",
+  "error": null,
+  "elapsed_seconds": 3.63,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

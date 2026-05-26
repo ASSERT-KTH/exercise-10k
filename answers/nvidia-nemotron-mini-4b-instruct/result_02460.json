@@ -1,0 +1,9 @@
+{
+  "id": 2460,
+  "title": "List Difference",
+  "prompt": "Write a program that takes two lists as input and returns a new list containing all elements that are in the first list but not in the second.\nSample Input: [1, 2, 3], [2, 3, 4]\nSample Output: [1]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef list_difference(list1, list2):\n    \"\"\"\n    This function takes two lists as input and returns a new list containing all elements that are in the first list but not in the second.\n\n    :param list1: The first list\n    :param list2: The second list\n    :return: A new list containing elements from list1 that are not in list2\n    \"\"\"\n    # Use set operations to find the difference between the two lists\n    # and then convert the result back to a list\n    return list(set(list1) - set(list2))\n```\nHere's an example of how you can use this function:\n```python\nprint(list_difference([1, 2, 3], [2, 3, 4]))  # Output: [1]\n```\nThis function works by converting both input lists to sets, which allows us to use set operations to find the difference between them. The `set()` function converts a list to a set, which removes any duplicate elements. The `-` operator is used for set subtraction, which returns a new set containing all elements from the first set that are not in the second set. Finally, we convert the resulting set back to a list using the `list()` function.",
+  "error": null,
+  "elapsed_seconds": 4.47,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

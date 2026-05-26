@@ -1,0 +1,9 @@
+{
+  "id": 9102,
+  "title": "Data Type Debugger",
+  "prompt": "Write a program that takes a user's input and determines the data type of the input. The input can be either an integer, a float, or a string. The program should then print out the data type of the input.\nSample Input: 123\nSample Output: Input is of type: int\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef get_input():\n    \"\"\"Get user input and determine its data type.\"\"\"\n    while True:\n        try:\n            user_input = input(\"Please enter a number (integer or float): \")\n            if user_input.isdigit():\n                # If the input is a string of digits, it's an integer\n                user_data_type = \"int\"\n            elif '.' in user_input:\n                # If the input contains a decimal point, it's a float\n                user_data_type = \"float\"\n            else:\n                print(\"Invalid input. Please enter a number (integer or float).\")\n                continue\n            break\n        except ValueError:\n            print(\"Invalid input. Please enter a number (integer or float).\")\n\n    return user_data_type\n\n\ndef main():\n    user_data_type = get_input()\n    print(f\"Input is of type: {user_data_type}\")\n\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program defines a function `get_input()` that prompts the user for input, checks if it's a valid number (integer or float), and returns its data type. The `main()` function calls `get_input()` and prints the result. The program handles invalid inputs by prompting the user to enter a valid number again.",
+  "error": null,
+  "elapsed_seconds": 3.36,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

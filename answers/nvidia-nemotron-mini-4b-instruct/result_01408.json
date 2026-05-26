@@ -1,0 +1,9 @@
+{
+  "id": 1408,
+  "title": "String checker",
+  "prompt": "Create a program that checks if a given string is a palindrome. If the string is equal to its reverse, print 'Palindrome', otherwise print 'Not a palindrome'.\nSample Input: madam\nSample Output: Palindrome\n",
+  "answer": "Sure, I'd be happy to help you create a program that checks if a given string is a palindrome. Here's an example Python program that does that:\n\n```python\ndef is_palindrome(s):\n    \"\"\"Check if a given string is a palindrome.\n\n    Args:\n        s (str): The string to check.\n\n    Returns:\n        str: 'Palindrome' if the string is equal to its reverse, 'Not a palindrome' otherwise.\n    \"\"\"\n    # Remove any non-alphanumeric characters and convert to lowercase\n    s = ''.join(c.lower() for c in s if c.isalnum())\n\n    # Check if the string is equal to its reverse\n    return s == s[::-1]\n\n# Get user input\nuser_input = input(\"Enter a string to check if it's a palindrome: \")\n\n# Check if the string is a palindrome\nif is_palindrome(user_input):\n    print(\"Palindrome\")\nelse:\n    print(\"Not a palindrome\")\n```\n\nThis program first removes any non-alphanumeric characters from the input string and converts it to lowercase. Then, it checks if the string is equal to its reverse (which can be obtained using slicing with a step of -1). If the string is equal to its reverse, it prints \"Palindrome\", otherwise it prints \"Not a palindrome\".",
+  "error": null,
+  "elapsed_seconds": 3.27,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

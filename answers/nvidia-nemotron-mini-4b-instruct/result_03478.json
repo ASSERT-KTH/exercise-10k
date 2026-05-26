@@ -1,0 +1,9 @@
+{
+  "id": 3478,
+  "title": "Weather Program",
+  "prompt": "Write a program that asks for the user's location and prints out the current weather.\nSample Input: city, country\nSample Output: The current weather in {city} is {weather}.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses the OpenWeatherMap API to get the current weather for a given location. Make sure to replace `'your_api_key'` with your actual OpenWeatherMap API key. You can sign up for a free API key at https://openweathermap.org/appid.\n\n```python\nimport requests\n\ndef get_weather(city, country, api_key='your_api_key'):\n    \"\"\"Get the current weather for a given location.\"\"\"\n    url = f'http://api.openweathermap.org/data/2.5/weather?q={city},{country}&appid={api_key}&units=metric'\n    response = requests.get(url)\n\n    if response.status_code == 200:\n        data = response.json()\n        weather = data['weather'][0]['description']\n        temperature = data['main']['temp']\n\n        return f'The current weather in {city}, {country} is {weather}. The temperature is {temperature}°C.'\n    else:\n        print(f'Error: Could not retrieve weather data for {city}, {country}. Status code: {response.status_code}')\n        return None\n\n# Get user input\ncity = input('Enter city: ')\ncountry = input('Enter country (e.g., \"US\" for USA): ')\n\n# Get weather data\nweather_data = get_weather(city, country)\n\n# Print the result\nif weather_data:\n    print(weather_data)\n```\n\nThis program will prompt the user for a city and country, then use the OpenWeatherMap API to get the current weather for that location. If the request is successful, it will print the weather description and temperature. If there's an error, it will print an error message.",
+  "error": null,
+  "elapsed_seconds": 4.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

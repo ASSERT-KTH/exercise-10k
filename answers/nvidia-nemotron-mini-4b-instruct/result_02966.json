@@ -1,0 +1,9 @@
+{
+  "id": 2966,
+  "title": "Number Sequence",
+  "prompt": "Create a program that generates a sequence of numbers based on a given formula. The formula should be: sequence[n] = 2 * sequence[n-1] + 1, where sequence[0] = 1.\nSample Input: 10\nSample Output: 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023\n",
+  "answer": "Here's a Python program that generates the sequence based on the given formula:\n\n```python\ndef generate_sequence(n):\n    sequence = [1]\n    for i in range(1, n):\n        sequence.append(2 * sequence[i-1] + 1)\n    return sequence\n\n# Get the sample input from the user\nsample_input = int(input(\"Enter the number of terms in the sequence: \"))\n\n# Generate and print the sequence\nsequence = generate_sequence(sample_input)\nprint(sequence)\n```\n\nWhen you run this program and enter `10` as the sample input, it will output:\n\n```\n[1, 3, 7, 15, 31, 63, 127, 255, 511, 1023]\n```",
+  "error": null,
+  "elapsed_seconds": 2.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

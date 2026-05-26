@@ -1,0 +1,9 @@
+{
+  "id": 9582,
+  "title": "Maximum Subarray Sum",
+  "prompt": "Write a program to find the maximum contiguous subarray of an array of integers. The subarray must have at least one element. If the array is empty, return 0.\nSample Input: [-2, -3, 4, -1, -2, 1, 5, -3]\nSample Output: 7\n",
+  "answer": "Here's a Python solution using Kadane's algorithm. This algorithm finds the maximum sum of a contiguous subarray in a given one-dimensional array or list of numbers.\n\n```python\ndef max_subarray(arr):\n    if not arr:  # Check if the array is empty\n        return 0\n\n    max_so_far = arr[0]  # Initialize max_so_far with the first element of the array\n    max_ending_here = arr[0]  # Initialize max_ending_here with the first element of the array\n\n    for i in range(1, len(arr)):\n        max_ending_here = max(arr[i], max_ending_here + arr[i])  # Update max_ending_here with the maximum of the current element and the sum of the current element and the previous max_ending_here\n        max_so_far = max(max_so_far, max_ending_here)  # Update max_so_far with the maximum between the current max_ending_here and the previous max_so_far\n\n    return max_so_far\n\n# Test the function with the given sample input\nprint(max_subarray([-2, -3, 4, -1, -2, 1, 5, -3]))  # Output: 7\n```\n\nThis function works by iterating through the array and updating `max_ending_here` with the maximum of the current element and the sum of the current element and the previous `max_ending_here`. It also updates `max_so_far` with the maximum between the current `max_ending_here` and the previous `max_so_far`. This ensures that the maximum contiguous subarray is always found.",
+  "error": null,
+  "elapsed_seconds": 3.92,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

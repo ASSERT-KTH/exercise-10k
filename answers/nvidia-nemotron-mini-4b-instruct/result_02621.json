@@ -1,0 +1,9 @@
+{
+  "id": 2621,
+  "title": "Input Validation",
+  "prompt": "Write a program to validate user input for a username. It should be between 5 and 15 characters long and only contain letters and numbers.\nSample Input: user123\nSample Output: Username is valid\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that validates user input for a username:\n\n```python\nimport re\n\ndef validate_username(username):\n    \"\"\"\n    Validates a username by checking if it's between 5 and 15 characters long,\n    and only contains letters and numbers.\n\n    :param username: str, the username to validate\n    :return: str, a message indicating whether the username is valid or not\n    \"\"\"\n    # Regular expression pattern to match usernames\n    pattern = r'^[a-zA-Z0-9]{5,15}$'\n\n    # Check if the username matches the pattern\n    if re.match(pattern, username):\n        return \"Username is valid\"\n    else:\n        return \"Username is invalid. Please use a username between 5 and 15 characters long, containing only letters and numbers.\"\n\n# Example usage\nusername = input(\"Enter a username: \")\nprint(validate_username(username))\n```\n\nThis program defines a function `validate_username` that takes a username as input and checks if it matches the specified pattern using the `re` module. If the username is valid, the function returns a message indicating that it's valid. Otherwise, it returns an error message. The example usage at the end of the program prompts the user to enter a username and prints the validation result.",
+  "error": null,
+  "elapsed_seconds": 3.25,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

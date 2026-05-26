@@ -1,0 +1,9 @@
+{
+  "id": 9646,
+  "title": "Function with/Multiprocessing",
+  "prompt": "Create a function that uses the multiprocessing module to run tasks in parallel.\nSample Input: None\nSample Output: Parallel results\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example Python function that uses the `multiprocessing` module to run tasks in parallel. This function takes a list of tasks as input and returns a list of results. In this example, I'll simulate some tasks that take a while to complete.\n\n```python\nimport multiprocessing\nimport time\n\ndef simulate_task(task_id):\n    \"\"\"Simulate a task that takes some time to complete.\"\"\"\n    time.sleep(task_id * 0.1)  # Simulate a task that takes 0.1 seconds per task ID\n    return f\"Task {task_id} completed.\"\n\ndef run_tasks_parallel(tasks):\n    \"\"\"Run tasks in parallel using the multiprocessing module.\"\"\"\n    # Create a pool of worker processes\n    with multiprocessing.Pool() as pool:\n        # Run tasks in parallel and collect results\n        results = pool.map(simulate_task, range(len(tasks)))\n\n    return results\n\n# Example usage\ntasks = [i for i in range(10)]\nparallel_results = run_tasks_parallel(tasks)\n\nprint(\"Parallel results:\")\nfor result in parallel_results:\n    print(result)\n```\n\nWhen you run this code, you'll see that the tasks are completed much faster when run in parallel compared to when they are run sequentially. The `multiprocessing` module allows you to take advantage of multiple CPU cores to speed up your computations.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6304,
+  "title": "Dictionary Key Deletion",
+  "prompt": "Delete a specific key from a dictionary\nSample Input: {\"name\": \"John\", \"age\": 30}\nSample Output: {\"name\": \"John\"}\n",
+  "answer": "Sure, I'd be happy to help you with that! To delete a specific key from a dictionary in Python, you can use the `pop()` method. Here's how you can modify your sample input to delete the \"age\" key:\n\n```python\nsample_dict = {\"name\": \"John\", \"age\": 30}\n\n# Delete the \"age\" key\nsample_dict.pop(\"age\")\n\nprint(sample_dict)  # Output: {'name': 'John'}\n```\n\nIf you want to delete a key by its value, you can use a for loop to iterate over the items of the dictionary and check the value of each item. Here's an example:\n\n```python\nsample_dict = {\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}\n\n# Delete the \"age\" key by its value\nto_delete = 30\nfor key, value in sample_dict.items():\n    if value == to_delete:\n        del sample_dict[key]\n        break\n\nprint(sample_dict)  # Output: {'name': 'John', 'city': 'New York'}\n```\n\nI hope this helps! Let me know if you have any further questions.",
+  "error": null,
+  "elapsed_seconds": 2.82,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

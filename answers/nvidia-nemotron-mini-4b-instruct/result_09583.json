@@ -1,0 +1,9 @@
+{
+  "id": 9583,
+  "title": "Calculating Student Grades",
+  "prompt": "Create a function called calculate_grade that takes in a student's score as an integer and returns their corresponding grade as a string. The grade is determined by the following ranges: 90-100 (A), 80-89 (B), 70-79 (C), 60-69 (D), and below 60 (F).\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you create the `calculate_grade` function. Here's a Python solution that meets your requirements:\n\n```python\ndef calculate_grade(score: int) -> str:\n    \"\"\"\n    Calculates a student's grade based on their score.\n\n    :param score: The student's score as an integer.\n    :return: The corresponding grade as a string (A, B, C, D, or F).\n    \"\"\"\n    if score < 0 or score > 100:\n        raise ValueError(\"Score must be an integer between 0 and 100.\")\n\n    if score >= 90:\n        return \"A\"\n    elif score >= 80:\n        return \"B\"\n    elif score >= 70:\n        return \"C\"\n    elif score >= 60:\n        return \"D\"\n    else:\n        return \"F\"\n```\n\nThis function checks if the input score is within the valid range (0-100) and raises a `ValueError` if it's not. Then, it uses an `if-elif-elif-else` statement to determine the corresponding grade based on the score. The function returns the grade as a string.\n\nHere are some examples of how you can use this function:\n\n```python\n>>> calculate_grade(85)\n'B'\n>>> calculate_grade(65)\n'D'\n>>> calculate_grade(105)\nValueError: Score must be an integer between 0 and 100.\n```",
+  "error": null,
+  "elapsed_seconds": 3.59,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

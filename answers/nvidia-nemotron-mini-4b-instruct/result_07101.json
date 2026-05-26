@@ -1,0 +1,9 @@
+{
+  "id": 7101,
+  "title": "String Reversal and Validation",
+  "prompt": "Write a program that takes a string input from the user and checks if it is a palindrome. If the string is a palindrome, the program should print 'Valid palindrome' along with the reversed string. If not, it should print 'Not a palindrome' and the reversed string. Assume the input string will only contain alphanumeric characters and spaces.\nSample Input: Madam\nSample Output: Valid palindrome: madam\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef is_palindrome(s):\n    \"\"\"Check if a string is a palindrome.\"\"\"\n    # Remove non-alphanumeric characters and convert to lowercase\n    s = ''.join(c.lower() for c in s if c.isalnum())\n\n    # Check if the string is equal to its reverse\n    return s == s[::-1]\n\ndef main():\n    while True:\n        input_str = input(\"Enter a string to check if it's a palindrome: \")\n\n        if input_str.strip() == \"\":\n            print(\"Please enter a non-empty string.\")\n            continue\n\n        is_palindrome_result = is_palindrome(input_str)\n\n        if is_palindrome_result:\n            print(\"Valid palindrome:\", input_str[::-1])\n        else:\n            print(\"Not a palindrome:\", input_str[::-1])\n\n        again = input(\"Do you want to check another string? (yes/no): \").lower()\n        if again != \"yes\":\n            break\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program defines a helper function `is_palindrome()` that checks if a string is a palindrome. The `main()` function gets user input, checks if it's a valid palindrome, and prints the result with the reversed string. The program continues to ask for user input until the user enters \"no\".",
+  "error": null,
+  "elapsed_seconds": 3.65,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

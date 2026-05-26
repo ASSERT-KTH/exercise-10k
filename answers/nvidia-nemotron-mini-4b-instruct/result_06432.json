@@ -1,0 +1,9 @@
+{
+  "id": 6432,
+  "title": "Square Root Calculator",
+  "prompt": "Write a program to calculate the square root of a number using a while loop.\nSample Input: 16\nSample Output: 4.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the square root of a number using a while loop:\n\n```python\ndef calculate_square_root(number):\n    \"\"\"\n    Calculates the square root of a number using a while loop.\n\n    :param number: The number to find the square root of.\n    :return: The square root of the number as a float.\n    \"\"\"\n\n    # Initialize the guess to be the number divided by 2\n    guess = number / 2\n\n    # Continue the loop as long as the guess is not an integer\n    while guess != int(guess):\n        # Update the guess as the average of the current guess and the number divided by the guess\n        new_guess = (guess + number / guess) / 2\n\n        # Update the guess to be the new_guess\n        guess = new_guess\n\n    return guess\n\n# Get user input\nnumber = float(input(\"Enter a number: \"))\n\n# Calculate and print the square root\nsquare_root = calculate_square_root(number)\nprint(f\"{number} has a square root of {square_root}.\")\n```\n\nThis program first defines a function `calculate_square_root` that takes a number as input and returns its square root using a while loop. The loop continues as long as the guess is not an integer, and updates the guess as the average of the current guess and the number divided by the guess. Once the guess is an integer, the function returns it as the square root of the input number.\n\nThe program then prompts the user to enter a number, calculates its square root using the `calculate_square_root` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.83,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

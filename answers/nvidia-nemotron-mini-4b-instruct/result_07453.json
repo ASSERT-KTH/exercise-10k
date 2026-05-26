@@ -1,0 +1,9 @@
+{
+  "id": 7453,
+  "title": "Grade Classifier",
+  "prompt": "Write a program that classifies a student's grade based on their score. The program should accept a score as input and output the corresponding grade. The grading scale is as follows: A (90-100), B (80-89), C (70-79), D (60-69), and F (below 60). Use conditional statements to determine the grade.\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef classify_grade(score):\n    \"\"\"\n    Classifies a student's grade based on their score.\n\n    :param score: The score as an integer between 0 and 100.\n    :return: The corresponding grade as a string ('A', 'B', 'C', 'D', or 'F').\n    \"\"\"\n\n    # Define the grading scale\n    grades = ['F', 'D', 'C', 'B', 'A']\n\n    # Check if the score is within the range for each grade\n    if score >= 90:\n        grade = 'A'\n    elif score >= 80:\n        grade = 'B'\n    elif score >= 70:\n        grade = 'C'\n    elif score >= 60:\n        grade = 'D'\n    else:\n        grade = 'F'\n\n    # Return the grade\n    return grades[grades.index(grade)]\n\n# Get user input\nscore = int(input(\"Enter a score between 0 and 100: \"))\n\n# Print the grade\nprint(f\"The corresponding grade is {classify_grade(score)}.\")\n```\n\nThis program defines a function `classify_grade` that takes a score as input and returns the corresponding grade as a string. The function uses conditional statements to check if the score is within the range for each grade, and then returns the corresponding grade from the `grades` list. The program then prompts the user to enter a score, calls the function with the user input, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.83,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

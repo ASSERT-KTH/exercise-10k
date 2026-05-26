@@ -1,0 +1,9 @@
+{
+  "id": 6138,
+  "title": "Anagram Checker",
+  "prompt": "Ask the user for two words and check if they are anagrams of each other.\nSample Input: listen, silent\nSample Output: The words 'listen' and 'silent' are anagrams.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef are_anagrams(word1, word2):\n    \"\"\"Check if two words are anagrams of each other.\n\n    Args:\n        word1 (str): The first word.\n        word2 (str): The second word.\n\n    Returns:\n        bool: True if the words are anagrams, False otherwise.\n    \"\"\"\n    # Ensure both inputs are strings and have the same length\n    if not isinstance(word1, str) or not isinstance(word2, str) or len(word1) != len(word2):\n        return False\n\n    # Convert both words to lowercase and sort their characters\n    sorted_word1 = ''.join(sorted(word1.lower()))\n    sorted_word2 = ''.join(sorted(word2.lower()))\n\n    # Check if the sorted words are equal\n    return sorted_word1 == sorted_word2\n```\nHere's an example of how to use this function:\n```python\nprint(are_anagrams('listen', 'silent'))  # Output: True\nprint(are_anagrams('hello', 'world'))   # Output: False\n```\nThis function first checks if both inputs are strings and have the same length. Then, it converts both words to lowercase and sorts their characters using the `sorted()` function. Finally, it checks if the sorted words are equal, which would indicate that the original words are anagrams of each other.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

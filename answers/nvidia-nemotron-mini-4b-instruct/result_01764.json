@@ -1,0 +1,9 @@
+{
+  "id": 1764,
+  "title": "Finding the First Duplicate",
+  "prompt": "Write a function to find the first duplicate in an array of integers.\nSample Input: [1, 2, 3, 2, 4]\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the first duplicate in an array (or list) of integers using a dictionary to keep track of the numbers we've seen so far. The time complexity of this solution is O(n), where n is the length of the input array.\n\n```python\ndef find_first_duplicate(arr):\n    \"\"\"\n    Find the first duplicate in an array of integers.\n\n    :param arr: List of integers\n    :return: First duplicate integer or None if no duplicates exist\n    \"\"\"\n    if not arr:\n        return None\n\n    # Create a dictionary to store the numbers we've seen so far\n    seen = {}\n\n    # Iterate through the array and check if each number is a duplicate\n    for num in arr:\n        if num in seen:\n            return num\n        else:\n            seen[num] = True\n\n    # If we didn't find any duplicates, return None\n    return None\n```\n\nHere's an example of how to use this function:\n\n```python\narr = [1, 2, 3, 2, 4]\nprint(find_first_duplicate(arr))  # Output: 2\n```",
+  "error": null,
+  "elapsed_seconds": 2.85,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5190,
+  "title": "Shipping Cost Calculator",
+  "prompt": "Write a program that asks the user for the weight of a package and calculates the shipping cost based on the following rates: $2.50 per pound for packages up to 2 pounds, $2.00 per pound for packages between 2 and 6 pounds, and $1.50 per pound for packages over 6 pounds.\nSample Input: 5\nSample Output: The shipping cost is $10.00.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_shipping_cost(weight):\n    \"\"\"\n    Calculates the shipping cost based on the given weight.\n\n    :param weight: The weight of the package in pounds.\n    :return: The shipping cost in dollars.\n    \"\"\"\n    if weight <= 2:\n        return 2.50 * weight\n    elif 2 < weight <= 6:\n        return 2.00 * (weight - 2) + 2.50 * 2\n    else:\n        return 1.50 * (weight - 6) + 2.50 * 2 + 2.00 * 4\n\n# Get user input\nweight = float(input(\"Enter the weight of the package in pounds: \"))\n\n# Calculate and display the shipping cost\nshipping_cost = calculate_shipping_cost(weight)\nprint(f\"The shipping cost is ${shipping_cost:.2f}.\")\n```\nThis program defines a function `calculate_shipping_cost` that takes the weight of the package as input and returns the corresponding shipping cost. The function handles the different weight ranges and applies the appropriate rate for each range. The program then gets user input for the package weight, calls the function to calculate the shipping cost, and displays the result with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 3.2,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

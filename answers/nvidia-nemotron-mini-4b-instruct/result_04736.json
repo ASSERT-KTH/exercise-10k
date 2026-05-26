@@ -1,0 +1,9 @@
+{
+  "id": 4736,
+  "title": "Reduce Function",
+  "prompt": "Write a function that uses the reduce function to apply a given function to all elements of a list.\nSample Input: add, [1, 2, 3, 4, 5]\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses the built-in `reduce` function from the `functools` module, which applies a given function to all elements of an iterable in a left-to-right associative manner. In this case, the function adds all the elements in the list.\n\n```python\nfrom functools import reduce\n\ndef apply_function_to_list(func, lst):\n    \"\"\"\n    Applies a given function to all elements of a list using the reduce function.\n\n    Parameters:\n    func (callable): The function to apply to each element of the list.\n    lst (list): The list of elements to apply the function to.\n\n    Returns:\n    int: The result of applying the function to all elements in the list.\n    \"\"\"\n    return reduce(func, lst, 0)\n\n# Example usage:\nadd = lambda x, y: x + y\nprint(apply_function_to_list(add, [1, 2, 3, 4, 5]))  # Output: 15\n```\n\nThis function works for any callable object that can be passed as an argument to the `reduce` function. It initializes the accumulator to 0 and applies the given function to each element in the list, accumulating the results.",
+  "error": null,
+  "elapsed_seconds": 3.25,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

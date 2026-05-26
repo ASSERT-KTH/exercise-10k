@@ -1,0 +1,9 @@
+{
+  "id": 4511,
+  "title": "phonebook",
+  "prompt": "Create a program that manages a phonebook. The user can add, remove, and search for contacts.\nSample Input: add John 123-456-7890\nSample Output: John: 123-456-7890\n",
+  "answer": "Sure, I'd be happy to help you create a simple phonebook program. Here's a Python solution using a dictionary to store the contacts:\n\n```python\n# Initialize an empty phonebook dictionary\nphonebook = {}\n\ndef add_contact(name, number):\n    \"\"\"Add a contact to the phonebook.\"\"\"\n    if name in phonebook:\n        print(f\"{name}: {number} already exists in the phonebook.\")\n    else:\n        phonebook[name] = number\n        print(f\"{name}: {number} has been added to the phonebook.\")\n\ndef remove_contact(name):\n    \"\"\"Remove a contact from the phonebook.\"\"\"\n    if name in phonebook:\n        del phonebook[name]\n        print(f\"{name} has been removed from the phonebook.\")\n    else:\n        print(f\"{name} is not in the phonebook.\")\n\ndef search_contact(name):\n    \"\"\"Search for a contact in the phonebook.\"\"\"\n    if name in phonebook:\n        print(f\"{name}: {phonebook[name]}\")\n    else:\n        print(f\"{name} is not in the phonebook.\")\n\n# Example usage\nadd_contact(\"John\", \"123-456-7890\")\nadd_contact(\"Jane\", \"543-210-9876\")\nremove_contact(\"John\")\nsearch_contact(\"Jane\")\n```\n\nThis program defines three functions: `add_contact`, `remove_contact`, and `search_contact`. The `add_contact` function adds a contact to the phonebook, the `remove_contact` function removes a contact from the phonebook, and the `search_contact` function searches for a contact in the phonebook. The program also includes example usage to demonstrate the functionality.",
+  "error": null,
+  "elapsed_seconds": 4.1,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

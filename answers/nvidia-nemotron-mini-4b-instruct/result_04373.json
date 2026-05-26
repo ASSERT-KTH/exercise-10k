@@ -1,0 +1,9 @@
+{
+  "id": 4373,
+  "title": "Dictionary Reduction",
+  "prompt": "Write a program that reduces a dictionary to a single value by applying a reduction function to its values.\nSample Input: {'a': 1, 'b': 2, 'c': 3}, lambda x, y: x + y\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. It uses the `functools.reduce` function, which applies a binary function (in this case, `lambda x, y: x + y`) to an iterable (in this case, the values of the dictionary) to reduce it to a single value.\n\n```python\nfrom functools import reduce\n\ndef reduce_dict_values(dictionary, reduction_function):\n    \"\"\"\n    Reduces a dictionary to a single value by applying a reduction function to its values.\n\n    Parameters:\n    dictionary (dict): The dictionary to reduce.\n    reduction_function (callable): A function that takes two arguments and returns a single value.\n\n    Returns:\n    int or float: The reduced value.\n    \"\"\"\n    return reduce(reduction_function, dictionary.values())\n\n# Example usage:\nsample_input = {'a': 1, 'b': 2, 'c': 3}\nsample_output = reduce_dict_values(sample_input, lambda x, y: x + y)\nprint(sample_output)  # Output: 6\n```\n\nThis program defines a function `reduce_dict_values` that takes a dictionary and a reduction function as input, and returns the reduced value. The example usage demonstrates how to use this function with a lambda function that adds two numbers.",
+  "error": null,
+  "elapsed_seconds": 3.22,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

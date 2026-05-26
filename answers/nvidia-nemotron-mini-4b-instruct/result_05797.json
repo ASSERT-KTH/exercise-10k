@@ -1,0 +1,9 @@
+{
+  "id": 5797,
+  "title": "Function to Calculate Sum of Squares",
+  "prompt": "Create a function that calculates the sum of the squares of a list of numbers.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 55\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that calculates the sum of the squares of a list of numbers:\n\n```python\ndef sum_of_squares(numbers):\n    \"\"\"\n    Calculates the sum of the squares of a list of numbers.\n\n    Parameters:\n    numbers (list): A list of numbers.\n\n    Returns:\n    int: The sum of the squares of the numbers in the list.\n    \"\"\"\n    # Check if the input is a non-empty list\n    if not isinstance(numbers, list) or len(numbers) == 0:\n        raise ValueError(\"Input should be a non-empty list.\")\n\n    # Calculate the sum of the squares and return it\n    return sum(num**2 for num in numbers)\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(sum_of_squares([1, 2, 3, 4, 5]))  # Output: 55\n```\n\nThis function first checks if the input is a non-empty list. If not, it raises a `ValueError`. Then, it uses a generator expression to calculate the squares of each number in the list and returns the sum using the built-in `sum()` function.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

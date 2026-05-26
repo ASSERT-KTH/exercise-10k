@@ -1,0 +1,9 @@
+{
+  "id": 4999,
+  "title": "Explicit Type Conversion",
+  "prompt": "Demonstrate explicit type conversion with an example.\nSample Input: None\nSample Output: Example code demonstrating explicit type conversion\n",
+  "answer": "Sure, I'd be happy to help with that! Here's an example of explicit type conversion in Python:\n\nSuppose we have a function `convert_to_string` that converts a number to its string representation. However, it only accepts integers as input. We want to make it more versatile and allow it to accept both integers and floats. To do this, we can use explicit type conversion using the `int()` and `str()` functions. Here's how we can modify the function:\n\n```python\ndef convert_to_string(value):\n    \"\"\"\n    Converts a number to its string representation.\n\n    :param value: The number to convert.\n    :return: The string representation of the number.\n    \"\"\"\n    # Explicit type conversion to ensure the function only accepts integers\n    if not isinstance(value, (int, float)):\n        raise TypeError(\"The function only accepts integers and floats.\")\n\n    # Explicit type conversion to convert the number to a string\n    return str(value)\n```\n\nNow, we can call this function with both integers and floats:\n\n```python\nprint(convert_to_string(123))  # Output: 123\nprint(convert_to_string(123.45))  # Output: 123.45\n```\n\nIn this example, the explicit type conversion is done using the `isinstance()` function to check if the input is an integer or a float, and then converting it to a string using the `str()` function. This ensures that the function only accepts the expected types and raises a `TypeError` if it encounters any other types.",
+  "error": null,
+  "elapsed_seconds": 3.76,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

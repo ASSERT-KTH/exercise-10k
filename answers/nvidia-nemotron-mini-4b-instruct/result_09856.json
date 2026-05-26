@@ -1,0 +1,9 @@
+{
+  "id": 9856,
+  "title": "Validating User Input",
+  "prompt": "Create a program that takes user input and checks if it is a valid integer. If the input is valid, print the integer. If not, print an error message and ask for input again. Continue this process until a valid integer is entered.\nSample Input: 123\nabc\n456\nSample Output: 123\nError: Invalid input. Please enter a valid integer.\n456\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef get_valid_integer():\n    while True:\n        try:\n            user_input = int(input(\"Enter an integer: \"))\n            return user_input\n        except ValueError:\n            print(\"Error: Invalid input. Please enter a valid integer.\")\n\n# Call the function to get a valid integer\nvalid_integer = get_valid_integer()\nprint(f\"You entered: {valid_integer}\")\n```\n\nThis program defines a function `get_valid_integer()` that repeatedly prompts the user for input until a valid integer is entered. It uses a `try`-`except` block to handle `ValueError` exceptions, which are raised when the `int()` function cannot convert a string to an integer. If an exception is raised, the program prints an error message and asks the user to enter a valid integer again. Once a valid integer is entered, the function returns it. The program then calls this function and prints the user's input.",
+  "error": null,
+  "elapsed_seconds": 2.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

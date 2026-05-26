@@ -1,0 +1,9 @@
+{
+  "id": 1260,
+  "title": "Function Memoization",
+  "prompt": "Write a function that demonstrates memoization.\nSample Input: None\nSample Output: The function executed successfully with memoization\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example Python function that demonstrates memoization using a dictionary to store previously computed results. The function calculates the Fibonacci number for a given index, which can be time-consuming for large inputs. Memoization helps to significantly reduce the computation time by caching the results of previously computed Fibonacci numbers.\n\n```python\ndef fibonacci(n, memo={}):\n    \"\"\"\n    Calculate the nth Fibonacci number using memoization.\n\n    :param n: The index of the Fibonacci number to compute.\n    :param memo: A dictionary to store previously computed results.\n    :return: The nth Fibonacci number.\n    \"\"\"\n\n    # Base cases\n    if n == 0:\n        return 0\n    elif n == 1:\n        return 1\n\n    # Check if the result is already in the memo dictionary\n    if n in memo:\n        return memo[n]\n\n    # Compute the Fibonacci number and store the result in the memo dictionary\n    result = fibonacci(n - 1, memo) + fibonacci(n - 2, memo)\n    memo[n] = result\n\n    return result\n```\n\nHere's an example of how to use the function:\n\n```python\nprint(fibonacci(10))  # Output: 55\n```\n\nYou can verify that the function is working correctly by checking the time it takes to compute the Fibonacci numbers for different inputs. Without memoization, the function will take a long time to compute for large inputs, while with memoization, the function will be much faster.",
+  "error": null,
+  "elapsed_seconds": 3.53,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

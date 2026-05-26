@@ -1,0 +1,9 @@
+{
+  "id": 2180,
+  "title": "Inflation Rate Calculator",
+  "prompt": "Ask the user for the current price and the previous price of an item, and print the inflation rate.\nSample Input: 100 80\nSample Output: 25.0%\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution that meets your requirements:\n\n```python\ndef calculate_inflation_rate(current_price, previous_price):\n    \"\"\"\n    Calculates the inflation rate based on the current and previous prices of an item.\n\n    :param current_price: The current price of the item.\n    :param previous_price: The previous price of the item.\n    :return: A string representing the inflation rate as a percentage.\n    \"\"\"\n    if current_price <= previous_price:\n        raise ValueError(\"Current price cannot be less than or equal to the previous price.\")\n\n    inflation_rate = (current_price - previous_price) / previous_price * 100\n    return f\"{inflation_rate:.2f}%\"\n\n# Get user input\ncurrent_price = float(input(\"Enter the current price: \"))\nprevious_price = float(input(\"Enter the previous price: \"))\n\n# Calculate and print the inflation rate\ninflation_rate = calculate_inflation_rate(current_price, previous_price)\nprint(inflation_rate)\n```\n\nThis script defines a function `calculate_inflation_rate` that checks for invalid input (current price less than or equal to previous price) and calculates the inflation rate as the difference between the current and previous prices divided by the previous price, multiplied by 100. The function returns a string representation of the inflation rate with two decimal places. The script then prompts the user for the current and previous prices, calls the function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 5.32,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6100,
+  "title": "Radix Sort",
+  "prompt": "Write a program that uses a for loop to sort a list of integers using the radix sort algorithm.\nSample Input: [170, 45, 75, 90, 802, 24, 2, 66]\nSample Output: [2, 24, 45, 66, 75, 90, 170, 802]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses a for loop to sort a list of integers using the radix sort algorithm. The radix sort algorithm works by counting the occurrences of each digit in the input numbers, and then constructing the sorted list based on these counts.\n\n```python\ndef radix_sort(numbers, digit):\n    \"\"\"\n    Sort a list of integers using the radix sort algorithm for a given digit.\n\n    :param numbers: The list of integers to sort\n    :param digit: The digit to sort by (0-based)\n    :return: The sorted list of integers\n    \"\"\"\n    max_value = max(numbers, key=lambda x: x // (10**digit)) // (10**digit)\n    buckets = [[] for _ in range(max_value + 1)]\n\n    for num in numbers:\n        buckets[num // (10**digit) % (max_value + 1)].append(num)\n\n    sorted_numbers = []\n    for bucket in buckets:\n        sorted_numbers.extend(bucket)\n\n    return sorted_numbers\n\n\n# Example usage:\nnumbers = [170, 45, 75, 90, 802, 24, 2, 66]\nsorted_numbers = radix_sort(numbers, 0)\nprint(sorted_numbers)  # Output: [2, 24, 45, 66, 75, 90, 170, 802]\n```\n\nThis program defines a function `radix_sort` that takes a list of integers and a digit as input, and returns the sorted list of integers based on that digit. The example usage at the end of the program demonstrates how to use this function to sort a list of integers using the radix sort algorithm for the first digit (0-based).",
+  "error": null,
+  "elapsed_seconds": 4.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2185,
+  "title": "String Case Converter",
+  "prompt": "Write a function to convert a given string to uppercase or lowercase. The function should take a string and a case conversion option as input, and return the converted string.\nSample Input: ['hello', 'uppercase']\nSample Output: HELLO\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef convert_case(input_string: str, case_conversion: str) -> str:\n    \"\"\"\n    Converts a given string to uppercase or lowercase based on the specified case conversion option.\n\n    :param input_string: The string to be converted.\n    :param case_conversion: The case conversion option ('uppercase' or 'lowercase').\n    :return: The converted string.\n    \"\"\"\n    if case_conversion not in ['uppercase', 'lowercase']:\n        raise ValueError(\"Invalid case conversion option. Choose either 'uppercase' or 'lowercase'.\")\n\n    return input_string.upper() if case_conversion == 'uppercase' else input_string.lower()\n```\nHere's an example of how to use this function:\n```python\nprint(convert_case('hello', 'uppercase'))  # Output: HELLO\nprint(convert_case('world', 'lowercase'))  # Output: world\n```\nThis function checks if the input case conversion option is valid, and then converts the input string to the specified case using the built-in `upper()` or `lower()` methods.",
+  "error": null,
+  "elapsed_seconds": 2.77,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

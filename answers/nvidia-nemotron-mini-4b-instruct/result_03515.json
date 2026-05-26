@@ -1,0 +1,9 @@
+{
+  "id": 3515,
+  "title": "Data Type Errors",
+  "prompt": "Write a program that demonstrates how to handle data type errors using try-except blocks.\nSample Input: None\nSample Output: Data type error: cannot convert string to integer\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that demonstrates how to handle data type errors using `try-except` blocks:\n\n```python\ndef get_integer(prompt):\n    \"\"\"Prompts the user for an integer and returns it.\n\n    If the user enters a non-integer value, the function will raise a ValueError.\n    \"\"\"\n    while True:\n        try:\n            value = int(input(prompt))\n            return value\n        except ValueError:\n            print(\"That's not a valid integer. Please try again.\")\n\n# Example usage:\ntry:\n    age = get_integer(\"Please enter your age: \")\n    print(f\"You are {age} years old.\")\nexcept ValueError as e:\n    print(f\"Data type error: {e}. Please enter a valid integer.\")\n```\n\nIn this program, the `get_integer` function prompts the user for an integer and returns it. If the user enters a non-integer value, the function raises a `ValueError`. The example usage demonstrates how to handle this error using a `try-except` block. If the user enters a valid integer, the program prints a message indicating the user's age. If the user enters an invalid value, the program prints an error message and prompts the user to enter a valid integer again.\n\nYou can replace the `get_integer` function with any other function that may raise a `ValueError` or any other data type error, and use a `try-except` block to handle it gracefully.",
+  "error": null,
+  "elapsed_seconds": 3.67,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

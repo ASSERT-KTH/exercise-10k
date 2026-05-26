@@ -1,0 +1,9 @@
+{
+  "id": 4077,
+  "title": "String Compression",
+  "prompt": "Write a program that takes a string as input and returns the string compressed using a specified algorithm (e.g. Run-Length Encoding, Huffman coding).\nSample Input: aaabbbccc\nSample Output: a3b3c3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a string as input and compresses it using Run-Length Encoding (RLE). This algorithm works by replacing consecutive identical characters with a single character and the number of repetitions.\n\n```python\ndef compress_rle(s: str) -> str:\n    \"\"\"\n    Compresses a string using Run-Length Encoding.\n\n    :param s: The input string.\n    :return: The compressed string.\n    \"\"\"\n    compressed = \"\"\n    char, count = s[0], 1\n\n    for i in range(1, len(s)):\n        if s[i] != char:\n            compressed += char + str(count)\n            char, count = s[i], 1\n        else:\n            count += 1\n\n    compressed += char + str(count)\n\n    return compressed\n\n\n# Example usage\ninput_str = \"aaabbbccc\"\ncompressed_str = compress_rle(input_str)\nprint(f\"Input string: {input_str}\")\nprint(f\"Compressed string: {compressed_str}\")\n```\n\nThis program defines a function `compress_rle` that takes an input string and returns the compressed string using RLE. The function iterates through the input string, keeping track of the current character and its count. When a new character is encountered, it adds the current character and its count to the compressed string. Finally, it adds the last character and its count to the compressed string.\n\nYou can modify this program to use other compression algorithms, such as Huffman coding, by replacing the `compress_rle` function with a new function that performs the appropriate encoding.",
+  "error": null,
+  "elapsed_seconds": 3.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

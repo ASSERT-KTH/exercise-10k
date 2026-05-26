@@ -1,0 +1,9 @@
+{
+  "id": 4544,
+  "title": "Substring Extractor",
+  "prompt": "Write a program that extracts a substring from a given string based on a start and end index.\nSample Input: Hello World, 0, 5\nSample Output: Hello\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that extracts a substring from a given string based on a start and end index:\n```python\ndef extract_substring(string, start_index, end_index):\n    \"\"\"\n    Extracts a substring from a given string based on a start and end index.\n\n    Parameters:\n    string (str): The input string.\n    start_index (int): The starting index of the substring.\n    end_index (int): The ending index of the substring (exclusive).\n\n    Returns:\n    str: The extracted substring.\n    \"\"\"\n\n    # Check if the start index is within the bounds of the string\n    if start_index < 0 or start_index >= len(string):\n        raise IndexError(\"Start index is out of bounds\")\n\n    # Check if the end index is within the bounds of the string\n    if end_index < 0 or end_index > len(string):\n        raise IndexError(\"End index is out of bounds\")\n\n    # Extract the substring\n    substring = string[start_index:end_index]\n\n    return substring\n```\nHere's an example of how to use this function:\n```python\ninput_string = \"Hello World\"\nstart_index = 0\nend_index = 5\n\nextracted_substring = extract_substring(input_string, start_index, end_index)\nprint(extracted_substring)  # Output: Hello\n```\nThis function checks if the start and end indices are within the bounds of the string, and raises an `IndexError` if they are not. It then extracts the substring using Python's slicing syntax (`string[start_index:end_index]`) and returns it.",
+  "error": null,
+  "elapsed_seconds": 4.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

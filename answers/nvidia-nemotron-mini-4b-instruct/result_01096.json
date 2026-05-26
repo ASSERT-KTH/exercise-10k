@@ -1,0 +1,9 @@
+{
+  "id": 1096,
+  "title": "Volume Calculator",
+  "prompt": "Write a program that takes the length, width, and height of a rectangular prism as input and outputs the volume.\nSample Input: 5 3 2\nSample Output: 30\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef calculate_volume(length, width, height):\n    \"\"\"\n    Calculates the volume of a rectangular prism given its length, width, and height.\n\n    :param length: The length of the rectangular prism.\n    :param width: The width of the rectangular prism.\n    :param height: The height of the rectangular prism.\n    :return: The volume of the rectangular prism.\n    \"\"\"\n\n    # Validate input to ensure it's positive\n    if length <= 0 or width <= 0 or height <= 0:\n        raise ValueError(\"All dimensions must be positive.\")\n\n    # Calculate and return the volume\n    return length * width * height\n\n\n# Get user input and calculate the volume\nlength = int(input(\"Enter the length of the rectangular prism: \"))\nwidth = int(input(\"Enter the width of the rectangular prism: \"))\nheight = int(input(\"Enter the height of the rectangular prism: \"))\n\nvolume = calculate_volume(length, width, height)\n\n# Output the result\nprint(f\"The volume of the rectangular prism is {volume}.\")\n```\n\nThis program defines a function `calculate_volume` that takes the length, width, and height as arguments and returns the volume. It then prompts the user to enter the dimensions and calls the function to calculate the volume. Finally, it outputs the result to the user.",
+  "error": null,
+  "elapsed_seconds": 3.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

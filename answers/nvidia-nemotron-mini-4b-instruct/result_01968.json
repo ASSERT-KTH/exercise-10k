@@ -1,0 +1,9 @@
+{
+  "id": 1968,
+  "title": "Quadratic Formula",
+  "prompt": "Create a function that calculates the solutions to a quadratic equation using the quadratic formula. The function should take the coefficients of the quadratic equation as arguments and return the solutions.\nSample Input: a = 1, b = -3, c = 2\nSample Output: x = 2 or x = 1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that calculates the solutions to a quadratic equation using the quadratic formula. The function takes the coefficients `a`, `b`, and `c` as arguments and returns a list of the solutions. If there are no real solutions, it returns `None`.\n\n```python\nimport cmath  # for handling complex solutions\n\ndef quadratic_formula(a, b, c):\n    \"\"\"\n    Calculates the solutions to a quadratic equation using the quadratic formula.\n\n    Parameters:\n    a (float): The coefficient of x^2.\n    b (float): The coefficient of x.\n    c (float): The constant term.\n\n    Returns:\n    list: A list of the solutions to the quadratic equation.\n        If there are no real solutions, returns None.\n    \"\"\"\n\n    # Calculate the discriminant (b^2 - 4ac)\n    discriminant = b**2 - 4*a*c\n\n    # Calculate the solutions using the quadratic formula\n    x1 = (-b + cmath.sqrt(discriminant)) / (2*a)\n    x2 = (-b - cmath.sqrt(discriminant)) / (2*a)\n\n    # Return the solutions as a list\n    return [x1, x2] if discriminant >= 0 else None\n```\n\nHere's an example of how to use the function:\n\n```python\nprint(quadratic_formula(1, -3, 2))  # Output: x = 2 or x = 1\nprint(quadratic_formula(1, -1, 1))  # Output: None\n```",
+  "error": null,
+  "elapsed_seconds": 3.88,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

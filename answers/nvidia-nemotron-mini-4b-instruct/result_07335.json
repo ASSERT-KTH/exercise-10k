@@ -1,0 +1,9 @@
+{
+  "id": 7335,
+  "title": "Input from Database",
+  "prompt": "Write a program that reads input from a database and prints out the contents.\nSample Input: example.db\nSample Output: This is an example database.\n",
+  "answer": "Sure, I can help you with that. Here's an example Python program that reads data from a SQLite database (which is a common choice for small-scale databases like this one) and prints it out. Make sure you have the `sqlite3` module installed, which comes with Python. You can install it using pip:\n\n```bash\npip install sqlite3\n```\n\nHere's the Python code:\n\n```python\nimport sqlite3\n\ndef read_database(database_file):\n    \"\"\"Reads data from a SQLite database and prints it out.\"\"\"\n    conn = sqlite3.connect(database_file)\n    cursor = conn.cursor()\n\n    try:\n        # Execute a SELECT statement to get all rows in the table\n        cursor.execute(\"SELECT * FROM data\")\n\n        # Fetch all rows and print them out\n        for row in cursor.fetchall():\n            print(row)\n\n    except sqlite3.Error as e:\n        print(f\"An error occurred: {e}\")\n\n    finally:\n        # Close the connection\n        conn.close()\n\nif __name__ == \"__main__\":\n    database_file = \"example.db\"\n    read_database(database_file)\n```\n\nReplace `example.db` with the name of your actual database file. The program will print out each row in the table, one row per line. If there are no rows, it will print an empty string.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

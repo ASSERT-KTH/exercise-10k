@@ -1,0 +1,9 @@
+{
+  "id": 4737,
+  "title": "Function Closure",
+  "prompt": "Create a function that returns a closure that has access to its own scope.\nSample Input: None\nSample Output: A closure function\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a function in JavaScript that creates a closure with access to its own scope:\n\n```javascript\nfunction createClosure(initialValue) {\n  // The closure function has access to the initialValue variable in its scope\n function getValue() {\n    return initialValue;\n  }\n\n  // The closure function can also modify the initialValue variable\n  getValue.value = function(newValue) {\n    initialValue = newValue;\n    return getValue();\n  };\n\n  return getValue;\n}\n\n// Example usage:\nconst myClosure = createClosure(42);\nconsole.log(myClosure()); // Output: 42\nmyClosure.value(100);\nconsole.log(myClosure()); // Output: 100\n```\n\nIn this example, the `createClosure` function takes an initial value as an argument and returns a closure function that has access to that initial value in its scope. The closure function can also modify the initial value by calling its `value` method, which returns a new closure function that updates the initial value when called.\n\nYou can use this closure function in any scope, and it will maintain its own scope and access to the initial value.",
+  "error": null,
+  "elapsed_seconds": 3.09,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7086,
+  "title": "Array Average",
+  "prompt": "Read an array of numbers from the user and calculate the average of the array\nSample Input: 10 20 30\nSample Output: 20.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that reads an array of numbers from the user, calculates the average, and prints the result:\n```python\ndef calculate_average():\n    \"\"\"\n    Reads an array of numbers from the user and calculates the average.\n    \"\"\"\n    # Initialize an empty list to store the numbers\n    numbers = []\n\n    # Keep prompting the user for numbers until they enter a non-numeric value\n    while True:\n        try:\n            # Read a single number from the user\n            number = float(input(\"Enter a number: \"))\n\n            # Add the number to the list\n            numbers.append(number)\n\n            # Check if the user wants to enter more numbers\n            if number != 0:\n                print(\"Enter 0 to finish entering numbers.\")\n            else:\n                break\n\n        except ValueError:\n            print(\"Invalid input. Please enter a number.\")\n\n    # Calculate the average of the numbers\n    total = sum(numbers)\n    average = total / len(numbers)\n\n    # Print the result\n    print(f\"The average of the numbers is {average}.\")\n\n# Call the function\ncalculate_average()\n```\nThis function uses a `while` loop to keep prompting the user for numbers until they enter a non-numeric value. It then calculates the average by summing up all the numbers and dividing by the number of numbers in the list. Finally, it prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

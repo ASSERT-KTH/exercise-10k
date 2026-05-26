@@ -1,0 +1,9 @@
+{
+  "id": 497,
+  "title": "Array Chunking",
+  "prompt": "Write a program that takes an array and a chunk size as input, and returns a new array containing chunks of the specified size.\nSample Input: [1, 2, 3, 4, 5, 6], 2\nSample Output: [[1, 2], [3, 4], [5, 6]]\n",
+  "answer": "Here's a Python solution using list comprehension:\n\n```python\ndef chunk_array(arr, chunk_size):\n    return [arr[i:i+chunk_size] for i in range(0, len(arr), chunk_size)]\n\n# Test the function\nprint(chunk_array([1, 2, 3, 4, 5, 6], 2))  # Output: [[1, 2], [3, 4], [5, 6]]\n```\n\nThis function works by using a list comprehension to iterate over the array with step size equal to the chunk size. It creates a new list for each iteration, containing the elements from the original array starting from the current index up to (but not including) the next index that would be out of bounds if added to the list. The resulting lists are then returned as a new array.",
+  "error": null,
+  "elapsed_seconds": 2.91,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

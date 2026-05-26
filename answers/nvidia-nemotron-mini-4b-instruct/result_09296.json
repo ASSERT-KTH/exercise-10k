@@ -1,0 +1,9 @@
+{
+  "id": 9296,
+  "title": "Character Frequency Calculator",
+  "prompt": "Create a function that takes a string as input and returns a dictionary with the frequency of each character in the string.\nSample Input: Hello World\nSample Output: {'H': 1, 'e': 1, 'l': 3, 'o': 2, 'W': 1, 'r': 1, 'd': 1}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef char_frequency(input_string: str) -> dict:\n    \"\"\"\n    Given a string, return a dictionary with the frequency of each character in the string.\n\n    :param input_string: The input string to analyze.\n    :return: A dictionary where keys are characters and values are their frequencies.\n    \"\"\"\n    # Use a dictionary to store the character frequencies\n    char_freq = {}\n\n    # Iterate over each character in the input string\n    for char in input_string:\n        # If the character is not a whitespace character, increment its frequency in the dictionary\n        if not char.isspace():\n            if char in char_freq:\n                char_freq[char] += 1\n            else:\n                char_freq[char] = 1\n\n    return char_freq\n```\nHere's an example of how you can use this function:\n```python\nprint(char_frequency(\"Hello World\"))  # Output: {'H': 1, 'e': 1, 'l': 3, 'o': 2, 'W': 1, 'r': 1, 'd': 1}\n```\nThis function first initializes an empty dictionary to store the character frequencies. It then iterates over each character in the input string, checking if it's not a whitespace character. If it's not, the function increments the frequency of that character in the dictionary. Finally, it returns the dictionary of character frequencies.",
+  "error": null,
+  "elapsed_seconds": 3.61,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

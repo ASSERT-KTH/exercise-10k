@@ -1,0 +1,9 @@
+{
+  "id": 4374,
+  "title": "Dictionary Validation",
+  "prompt": "Write a program that validates a dictionary against a set of rules and returns True if it is valid, False otherwise.\nSample Input: {'name': 'John', 'age': 25, 'city': 'New York'}, ['name', 'age']\nSample Output: True\n",
+  "answer": "Here's a Python program that validates a dictionary against a given set of rules:\n\n```python\ndef validate_dict(dictionary, rules):\n    \"\"\"\n    Validates a dictionary against a set of rules.\n\n    :param dictionary: The dictionary to validate.\n    :param rules: A list of keys to check for in the dictionary.\n    :return: True if the dictionary is valid, False otherwise.\n    \"\"\"\n\n    # Check if the input is valid\n    if not isinstance(dictionary, dict) or not all(isinstance(key, str) for key in rules):\n        return False\n\n    # Check if all required keys are present in the dictionary\n    required_keys = set(rules)\n    if required_keys - set(dictionary.keys()) != set():\n        return False\n\n    # Check if all values corresponding to required keys are valid\n    for key in required_keys:\n        if key not in dictionary:\n            continue\n        if not isinstance(dictionary[key], str):\n            return False\n\n    return True\n\n# Example usage\ninput_dict = {'name': 'John', 'age': 25, 'city': 'New York'}\nrules = ['name', 'age']\nprint(validate_dict(input_dict, rules))  # Output: True\n```\n\nThis program first checks if the input is a dictionary and if all keys in the rules list are strings. Then, it checks if all required keys are present in the dictionary and if their corresponding values are strings. If all checks pass, the function returns `True`, otherwise it returns `False`.",
+  "error": null,
+  "elapsed_seconds": 3.55,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

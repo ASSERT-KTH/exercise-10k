@@ -1,0 +1,9 @@
+{
+  "id": 8786,
+  "title": "Greatest Common Divisor",
+  "prompt": "Write a program that takes two numbers as input and returns their greatest common divisor.\nSample Input: 48 18\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes two numbers as input and returns their greatest common divisor (GCD) using the Euclidean algorithm:\n\n```python\ndef gcd(a, b):\n    \"\"\"\n    Returns the greatest common divisor of two numbers using the Euclidean algorithm.\n\n    :param a: The first integer.\n    :param b: The second integer.\n    :return: The greatest common divisor of a and b.\n    \"\"\"\n    while b:\n        a, b = b, a % b\n    return abs(a)\n\n# Get user input\nnum1 = int(input(\"Enter the first integer: \"))\nnum2 = int(input(\"Enter the second integer: \"))\n\n# Calculate and print the GCD\ngcd_value = gcd(num1, num2)\nprint(f\"The greatest common divisor of {num1} and {num2} is {gcd_value}.\")\n```\n\nThis program defines a function `gcd(a, b)` that implements the Euclidean algorithm to find the GCD of two numbers. The function keeps track of the remainder of the larger number divided by the smaller one, and repeats this process until the remainder is zero. At that point, the larger number is the GCD. The program then prompts the user to enter two integers, calculates their GCD using the `gcd()` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

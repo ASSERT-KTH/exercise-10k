@@ -1,0 +1,9 @@
+{
+  "id": 3834,
+  "title": "Day of the Week",
+  "prompt": "Write a program that takes a date as input and determines the day of the week.\nSample Input: 2022-07-25\nSample Output: Monday\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a date as input in the format 'YYYY-MM-DD' and returns the day of the week as a string:\n\n```python\nfrom datetime import datetime\n\ndef get_day_of_week(date_str):\n    \"\"\"\n    Determines the day of the week for a given date.\n\n    :param date_str: str, date in the format 'YYYY-MM-DD'\n    :return: str, day of the week as a string (e.g., 'Monday', 'Tuesday', etc.)\n    \"\"\"\n    try:\n        date = datetime.strptime(date_str, '%Y-%m-%d')\n        return date.strftime('%A')\n    except ValueError:\n        print(f\"Invalid date format. Please use 'YYYY-MM-DD' format.\")\n        return None\n\n# Get user input\ndate_str = input(\"Enter a date in 'YYYY-MM-DD' format: \")\n\n# Call the function and print the result\nday_of_week = get_day_of_week(date_str)\nif day_of_week:\n    print(f\"The day of the week is {day_of_week}.\")\n```\n\nThis program first tries to convert the user input to a `datetime` object using the `strptime` method. If the conversion is successful, it prints the day of the week as a string using the `strftime` method. If the conversion fails (e.g., if the user enters an invalid date format), it prints an error message and returns `None`.",
+  "error": null,
+  "elapsed_seconds": 3.71,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

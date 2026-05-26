@@ -1,0 +1,9 @@
+{
+  "id": 7561,
+  "title": "Function with Closure",
+  "prompt": "Create a function that returns another function, which has access to the outer function's scope.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example of how you can create a function that returns another function with access to the outer function's scope in JavaScript:\n\n```javascript\n// Outer function\nfunction outerFunction() {\n let counter = 0;\n\n  // Inner function\n function innerFunction() {\n    counter++;\n    return counter;\n  }\n\n  // Return the inner function\n  return innerFunction;\n}\n\n// Call the outer function to get the inner function\nconst incrementCounter = outerFunction();\n\n// Use the inner function\nconsole.log(incrementCounter()); // Output: 1\nconsole.log(incrementCounter()); // Output: 2\n```\n\nIn this example, the `outerFunction` defines an inner function `innerFunction` that has access to the `counter` variable defined in the outer function. The outer function returns the inner function, which can be used to increment the counter. When we call `incrementCounter()`, it returns the value of the counter, which is initially 0. Each time we call `incrementCounter()`, the counter value increases by 1.\n\nThis is a common pattern in JavaScript to create a function that manages state or has access to other functions or variables in the outer scope. By returning the inner function, we can encapsulate its behavior and reuse it in different contexts.",
+  "error": null,
+  "elapsed_seconds": 3.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

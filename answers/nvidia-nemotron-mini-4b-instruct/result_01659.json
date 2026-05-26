@@ -1,0 +1,9 @@
+{
+  "id": 1659,
+  "title": "Date and Time",
+  "prompt": "Work with date and time objects to perform basic operations.\nSample Input: 2022-01-01\nSample Output: 2022-01-01 00:00:00\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution using the `datetime` module to perform the basic operation of converting a given date string to a datetime object with a time of 00:00:00:\n\n```python\nfrom datetime import datetime\n\ndef convert_date_to_datetime(date_str):\n    \"\"\"\n    Converts a given date string to a datetime object with a time of 00:00:00.\n\n    :param date_str: The date string in the format 'YYYY-MM-DD'\n    :return: A datetime object\n    \"\"\"\n    # Parse the date string into a datetime object\n    date_time = datetime.strptime(date_str, \"%Y-%m-%d\")\n\n    # Set the time to 00:00:00\n    date_time = date_time.replace(hour=0, minute=0, second=0, microsecond=0)\n\n    return date_time\n\n# Example usage\ndate_str = \"2022-01-01\"\ndate_time = convert_date_to_datetime(date_str)\nprint(date_time)  # Output: 2022-01-01 00:00:00\n```\n\nThis function first uses the `strptime` method to parse the given date string into a `datetime` object. Then, it modifies the `datetime` object by setting the hour, minute, second, and microsecond to 0, effectively setting the time to 00:00:00. The resulting `datetime` object is then returned.",
+  "error": null,
+  "elapsed_seconds": 5.1,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5402,
+  "title": "Sum of Even Numbers",
+  "prompt": "Write a function called 'sum_even_numbers' that calculates the sum of all even numbers in a given list of integers.\nSample Input: [1, 2, 3, 4, 5, 6]\nSample Output: 12\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function called `sum_even_numbers` that meets your requirements:\n\n```python\ndef sum_even_numbers(numbers):\n    \"\"\"\n    Calculates the sum of all even numbers in a given list of integers.\n\n    :param numbers: List of integers\n    :return: Sum of even numbers\n    \"\"\"\n    if not isinstance(numbers, list):\n        raise TypeError(\"Input should be a list\")\n\n    even_sum = 0\n    for num in numbers:\n        if not isinstance(num, int):\n            raise TypeError(\"All elements in the list should be integers\")\n        if num % 2 == 0:\n            even_sum += num\n\n    return even_sum\n```\n\nThis function checks if the input is a list and if all its elements are integers. Then, it iterates through the list and adds only the even numbers to the `even_sum` variable. Finally, it returns the sum.\n\nHere's an example of how to use this function:\n\n```python\nprint(sum_even_numbers([1, 2, 3, 4, 5, 6]))  # Output: 12\nprint(sum_even_numbers([1, 'a', 3, 4, 5, 6]))  # Raises TypeError\n```",
+  "error": null,
+  "elapsed_seconds": 3.15,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

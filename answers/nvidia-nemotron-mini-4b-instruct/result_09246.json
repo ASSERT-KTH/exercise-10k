@@ -1,0 +1,9 @@
+{
+  "id": 9246,
+  "title": "Data Type Validation",
+  "prompt": "Write a program that checks the data type of a variable and prints an error message if it's not the expected type.\nSample Input: var = 'hello'\nSample Output: Error: Variable is not an integer\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks the data type of a variable and prints an error message if it's not the expected type:\n```python\ndef check_data_type(var, expected_type):\n    \"\"\"\n    Check if a variable has the expected data type.\n\n    :param var: The variable to check.\n    :param expected_type: The expected data type.\n    :return: None\n    \"\"\"\n    if type(var) != expected_type:\n        print(f\"Error: Variable {var} is not of type {expected_type.__name__}.\")\n    else:\n        print(f\"Variable {var} is of type {expected_type.__name__}.\")\n\n# Example usage:\nvar = 'hello'\ncheck_data_type(var, int)\n```\nIn this program, we define a function `check_data_type` that takes a variable and an expected data type as arguments. The function checks if the variable has the expected data type using the `type()` function. If the types are not equal, it prints an error message. If the types are equal, it prints a confirmation message.\n\nIn the example usage, we call the function with a string variable (`var`) and an integer data type (`int`). Since the variable is not an integer, the function prints the error message.",
+  "error": null,
+  "elapsed_seconds": 3.15,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

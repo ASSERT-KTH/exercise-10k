@@ -1,0 +1,9 @@
+{
+  "id": 9078,
+  "title": "Simple Survey",
+  "prompt": "Create a program that asks the user a series of survey questions and prints out the results using if statements\nSample Input: A, B, C\nSample Output: Results: A=2, B=1, C=1\n",
+  "answer": "Sure, I'd be happy to help you create a program that asks the user a series of survey questions and prints out the results using if statements. Here's an example Python program that does this:\n```python\n# Initialize a dictionary to store the results\nresults = {}\n\n# Ask the user for their answers to each question\nquestion_answers = input(\"Enter your answers (A, B, or C) separated by spaces: \").upper().split()\n\n# Loop through each answer and increment the count for that letter\nfor answer in question_answers:\n    if answer not in results:\n        results[answer] = 1\n    else:\n        results[answer] += 1\n\n# Print out the results\nprint(\"Results:\")\nfor letter, count in results.items():\n    print(f\"{letter}=\", count)\n```\nHere's how the program works:\n\n1. We initialize an empty dictionary `results` to store the survey results.\n2. We ask the user for their answers to each question, and store them in a list called `question_answers`.\n3. We loop through each answer in `question_answers`, and check if the answer is already a key in the `results` dictionary. If it's not, we add it as a new key with a value of 1. If it is, we increment its value by 1.\n4. Finally, we print out the results using a loop that iterates over each key-value pair in the `results` dictionary.\n\nHere's an example of how the program would work with the sample input \"A B C\":\n```\nEnter your answers (A, B, or C) separated by spaces: A B C\nResults:\nA=3\nB=1\nC=1\n```",
+  "error": null,
+  "elapsed_seconds": 3.96,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

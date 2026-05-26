@@ -1,0 +1,9 @@
+{
+  "id": 3426,
+  "title": "Anagram Detection",
+  "prompt": "Write a function that takes two strings as input and returns True if they are anagrams of each other\nSample Input: listen, silent\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if two strings are anagrams of each other. An anagram is a word, phrase, or sequence that can be formed by rearranging the letters of another, such as \"listen\" and \"silent\". The function converts both strings to lowercase and removes any non-alphabetic characters, then checks if the sorted lists of characters are equal.\n\n```python\nimport re\n\ndef are_anagrams(str1, str2):\n    \"\"\"\n    Returns True if str1 and str2 are anagrams of each other, False otherwise.\n    \"\"\"\n    # Remove non-alphabetic characters and convert to lowercase\n    str1 = re.sub(r'\\W+', '', str1).lower()\n    str2 = re.sub(r'\\W+', '', str2).lower()\n\n    # Check if the sorted lists of characters are equal\n    return sorted(str1) == sorted(str2)\n```\n\nHere are some examples of using the function:\n\n```python\nprint(are_anagrams(\"listen\", \"silent\"))  # True\nprint(are_anagrams(\"hello\", \"world\"))    # False\nprint(are_anagrams(\"\", \"\"))              # True\nprint(are_anagrams(\"a\", \"a\"))            # True\nprint(are_anagrams(\"listen\", \"silent\"))  # True (even case-sensitive)\n```",
+  "error": null,
+  "elapsed_seconds": 4.47,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2527,
+  "title": "Fibonacci Sequence Generator",
+  "prompt": "Write a program to generate the Fibonacci sequence up to a given number of terms\nSample Input: 10\nSample Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates the Fibonacci sequence up to a given number of terms:\n```python\ndef fibonacci(n):\n    \"\"\"Generate the Fibonacci sequence up to n terms.\"\"\"\n    sequence = [0, 1]\n    while len(sequence) < n:\n        sequence.append(sequence[-1] + sequence[-2])\n    return sequence\n\n# Get user input for the number of terms\nnum_terms = int(input(\"Enter the number of Fibonacci sequence terms to generate: \"))\n\n# Generate and print the sequence\nprint(fibonacci(num_terms))\n```\nThis program defines a function `fibonacci(n)` that generates the Fibonacci sequence up to `n` terms. The function starts with the first two terms of the sequence (0 and 1) and then iteratively adds the last two terms to the sequence until it has `n` terms. The function returns the generated sequence.\n\nThe program then prompts the user to enter the number of terms they want to generate, converts the user input to an integer, and calls the `fibonacci()` function with the user input as the argument. Finally, the program prints the generated sequence.\n\nHere's an example run of the program:\n```\nEnter the number of Fibonacci sequence terms to generate: 10\n[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

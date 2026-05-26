@@ -1,0 +1,9 @@
+{
+  "id": 9757,
+  "title": "fuel Efficiency",
+  "prompt": "Write a program to calculate the fuel efficiency of a vehicle\nSample Input: 25 500\nSample Output: 20.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the fuel efficiency of a vehicle based on the input you provided:\n\n```python\ndef calculate_fuel_efficiency(distance, fuel_capacity):\n    \"\"\"\n    Calculates the fuel efficiency of a vehicle.\n\n    :param distance: The distance traveled by the vehicle.\n    :param fuel_capacity: The fuel capacity of the vehicle.\n    :return: The fuel efficiency in miles per gallon (mpg).\n    \"\"\"\n\n    # Ensure the input is valid\n    if distance <= 0 or fuel_capacity <= 0:\n        raise ValueError(\"Distance and fuel capacity must be positive numbers.\")\n\n    # Calculate fuel efficiency\n    mpg = distance / fuel_capacity\n\n    return mpg\n\n\n# Get user input\ndistance = float(input(\"Enter the distance traveled: \"))\nfuel_capacity = float(input(\"Enter the fuel capacity of the vehicle: \"))\n\n# Calculate and print fuel efficiency\nfuel_efficiency = calculate_fuel_efficiency(distance, fuel_capacity)\nprint(f\"The fuel efficiency of the vehicle is {fuel_efficiency:.2f} mpg.\")\n```\n\nThis program defines a function `calculate_fuel_efficiency` that takes the distance and fuel capacity as input and returns the fuel efficiency in miles per gallon. The program then prompts the user for the distance and fuel capacity, validates the input, calculates the fuel efficiency, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.43,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5213,
+  "title": "Calculate Tip",
+  "prompt": "Write a program that calculates the tip amount based on the total bill and tip percentage provided by the user.\nSample Input: 50 0.15\nSample Output: 7.5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the tip amount based on the total bill and tip percentage provided by the user:\n\n```python\ndef calculate_tip():\n    \"\"\"\n    Calculates the tip amount based on the total bill and tip percentage provided by the user.\n\n    Returns:\n        float: The tip amount.\n    \"\"\"\n\n    # Get user input\n    total_bill = float(input(\"Enter the total bill: \"))\n    tip_percentage = float(input(\"Enter the tip percentage (as a decimal): \"))\n\n    # Validate input\n    if total_bill <= 0:\n        print(\"The total bill must be a positive number.\")\n        return\n\n    if tip_percentage < 0 or tip_percentage > 1:\n        print(\"The tip percentage must be between 0 and 1.\")\n        return\n\n    # Calculate the tip amount\n    tip_amount = total_bill * tip_percentage\n\n    # Print the result\n    print(f\"The tip amount is: ${tip_amount:.2f}\")\n\n# Call the function\ncalculate_tip()\n```\n\nThis program defines a function `calculate_tip()` that prompts the user for the total bill and tip percentage, validates the input to ensure it's positive and between 0 and 1, calculates the tip amount, and prints the result. The function is then called at the end of the program.",
+  "error": null,
+  "elapsed_seconds": 3.35,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5309,
+  "title": "Higher-Order Function",
+  "prompt": "Create a function that takes another function as input and applies it to a list of numbers\nSample Input: [1, 2, 3, 4, 5], f(x) = x^2\nSample Output: [1, 4, 9, 16, 25]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function, `apply_function_to_list`, takes another function `f` and a list of numbers as input, and applies the function `f` to each element in the list.\n\n```python\ndef apply_function_to_list(numbers, f):\n    \"\"\"\n    Applies a given function to a list of numbers.\n\n    Parameters:\n    numbers (list): A list of numbers.\n    f (callable): A function that takes one argument and returns a single value.\n\n    Returns:\n    list: A new list containing the results of applying the function `f` to each element in the input list.\n    \"\"\"\n    return [f(num) for num in numbers]\n```\n\nHere's an example of how to use this function:\n\n```python\nnumbers = [1, 2, 3, 4, 5]\n\ndef f(x):\n    return x**2\n\nresult = apply_function_to_list(numbers, f)\nprint(result)  # Output: [1, 4, 9, 16, 25]\n```\n\nThis function uses a list comprehension to apply the function `f` to each element in the input list. The resulting list is then returned.",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

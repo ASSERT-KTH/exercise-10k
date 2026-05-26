@@ -1,0 +1,9 @@
+{
+  "id": 2497,
+  "title": "Finding the Minimum in a Rotated List",
+  "prompt": "Write a program to find the minimum element in a rotated sorted list of numbers\nSample Input: [4, 5, 6, 7, 0, 1, 2]\nSample Output: 0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the minimum element in a rotated sorted list of numbers:\n\n```python\ndef find_min(arr):\n    # Check if the list is empty\n    if len(arr) == 0:\n        return None\n\n    # Find the pivot index, which is the index of the element that is smaller than all elements to its right\n    left, right = 0, len(arr) - 1\n    while left < right:\n        mid = (left + right) // 2\n        if arr[mid] > arr[right]:\n            left = mid + 1\n        else:\n            right = mid\n\n    # The pivot element is the minimum element in the rotated list\n    return arr[left]\n\n# Test the function with the given sample input\nsample_input = [4, 5, 6, 7, 0, 1, 2]\nprint(find_min(sample_input))  # Output: 0\n```\n\nThis program uses a binary search-like approach to find the minimum element in the rotated sorted list. The function first checks if the list is empty and returns `None` if it is. Then, it iterates through the list using two pointers, `left` and `right`, to find the pivot index. If the middle element is greater than the rightmost element, it means that the list is sorted in ascending order, so the minimum element is on the left of the pivot index. Otherwise, it means that the list is sorted in descending order, so the minimum element is on the right of the pivot index. The function continues to narrow down the search range until it finds the pivot index. Finally, it returns the pivot element, which is the minimum element in the rotated list.",
+  "error": null,
+  "elapsed_seconds": 3.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

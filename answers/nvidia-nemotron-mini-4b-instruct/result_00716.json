@@ -1,0 +1,9 @@
+{
+  "id": 716,
+  "title": "Dictionary Filter",
+  "prompt": "Write a function to filter a dictionary based on a condition\nSample Input: {'a': 1, 'b': 2, 'c': 3, 'd': 4}, lambda x: x > 2\nSample Output: {'c': 3, 'd': 4}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef filter_dict(dictionary, condition):\n    \"\"\"\n    Filters a dictionary based on a given condition.\n\n    Parameters:\n    dictionary (dict): The dictionary to filter.\n    condition (callable): A function that takes a single argument (the dictionary item) and returns a boolean.\n                          The function should be applied to each item in the dictionary to determine whether to keep it.\n\n    Returns:\n    dict: A new dictionary containing only the items from the original dictionary that satisfy the condition.\n    \"\"\"\n    return {k: v for k, v in dictionary.items() if condition(v)}\n```\nHere's an example of how to use this function:\n```python\nfiltered_dict = filter_dict({'a': 1, 'b': 2, 'c': 3, 'd': 4}, lambda x: x > 2)\nprint(filtered_dict)  # Output: {'c': 3, 'd': 4}\n```\nThis function uses a dictionary comprehension to create a new dictionary that only contains the items from the original dictionary that satisfy the condition. The condition is applied to each value in the dictionary using the `lambda` function you provided.",
+  "error": null,
+  "elapsed_seconds": 2.9,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

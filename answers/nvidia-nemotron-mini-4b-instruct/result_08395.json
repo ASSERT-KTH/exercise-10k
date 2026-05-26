@@ -1,0 +1,9 @@
+{
+  "id": 8395,
+  "title": "Grade Checker",
+  "prompt": "Write a program that takes an exam score as input and prints out the corresponding grade based on the following criteria: A (90-100), B (80-89), C (70-79), D (60-69), F (below 60). Use conditional statements to determine the grade.\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef get_grade(score):\n    \"\"\"\n    Determines the corresponding grade based on an exam score.\n\n    :param score: The exam score as an integer between 0 and 100.\n    :return: A string representing the grade (A, B, C, D, or F).\n    \"\"\"\n    if score < 0 or score > 100:\n        raise ValueError(\"Score must be an integer between 0 and 100.\")\n\n    if score >= 90:\n        grade = \"A\"\n    elif score >= 80:\n        grade = \"B\"\n    elif score >= 70:\n        grade = \"C\"\n    elif score >= 60:\n        grade = \"D\"\n    else:\n        grade = \"F\"\n\n    return grade\n\n# Get user input and print the result\ntry:\n    user_score = int(input(\"Enter your exam score: \"))\n    grade = get_grade(user_score)\n    print(f\"Your grade is: {grade}\")\nexcept ValueError as e:\n    print(e)\n```\n\nThis program defines a function `get_grade` that takes an exam score as input and returns the corresponding grade. The function checks if the score is within the valid range (0-100) and raises a `ValueError` if it's not. The function then uses conditional statements to determine the grade based on the score. The program then gets user input, calls the `get_grade` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 4.09,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

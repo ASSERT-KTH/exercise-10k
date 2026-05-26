@@ -1,0 +1,9 @@
+{
+  "id": 3609,
+  "title": "Memoization",
+  "prompt": "Create a function that uses memoization to optimize the calculation of the factorial of a number\nSample Input: 5\nSample Output: 120\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses memoization to optimize the calculation of the factorial of a number. Memoization is a technique where we store the results of expensive function calls and reuse them when the same inputs occur again. This way, we avoid redundant calculations and significantly improve the performance of the function.\n\n```python\ndef factorial_memo(n, memo={}):\n    \"\"\"\n    Calculate the factorial of a number using memoization.\n\n    :param n: The number for which to calculate the factorial.\n    :param memo: A dictionary to store previously calculated factorials.\n    :return: The factorial of n.\n    \"\"\"\n\n    # Base cases\n    if n == 0:\n        return 1\n    elif n < 0:\n        raise ValueError(\"Input must be non-negative\")\n\n    # Check if the factorial has already been calculated and stored in the memo dictionary\n    if n in memo:\n        return memo[n]\n\n    # Calculate the factorial and store it in the memo dictionary\n    memo[n] = n * factorial_memo(n - 1, memo)\n    return memo[n]\n```\n\nHere's an example of how to use the function:\n\n```python\nprint(factorial_memo(5))  # Output: 120\nprint(factorial_memo(10))  # Output: 3628800\n```\n\nThis implementation uses a dictionary `memo` to store previously calculated factorials. The function checks if the factorial of the given number is already in the `memo` dictionary before calculating it again. This way, we avoid redundant calculations and significantly improve the performance of the function.",
+  "error": null,
+  "elapsed_seconds": 3.89,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

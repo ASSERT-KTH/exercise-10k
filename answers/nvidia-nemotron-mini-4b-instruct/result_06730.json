@@ -1,0 +1,9 @@
+{
+  "id": 6730,
+  "title": "Input Buffering",
+  "prompt": "Write a program that handles input buffering and flushing\nSample Input: Hello, world!\nSample Output: HELLO, WORLD!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that demonstrates handling input buffering and flushing using the `input()` function and the `sys` module. The `sys.stdout.flush()` method is used to force the output to be immediately written to the console, even if the buffer is not full.\n\n```python\nimport sys\n\n# Function to handle input buffering and flushing\ndef handle_input_buffering():\n    # Get user input\n    user_input = input(\"Enter some text: \")\n\n    # Flush the output buffer to ensure immediate output\n    sys.stdout.flush()\n\n    # Print the input with buffering disabled\n    print(f\"Sample Output: {user_input.upper()}\")\n\n# Call the function\nhandle_input_buffering()\n```\n\nWhen you run this program, you'll see the following output:\n\n```\nEnter some text: Hello, world!\nSample Output: HELLO, WORLD!\n```\n\nThis demonstrates that the input is immediately displayed in uppercase, even though the user input is still being buffered in memory.",
+  "error": null,
+  "elapsed_seconds": 2.5,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

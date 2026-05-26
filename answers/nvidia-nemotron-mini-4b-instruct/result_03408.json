@@ -1,0 +1,9 @@
+{
+  "id": 3408,
+  "title": "Dictionary Item Removal",
+  "prompt": "Write a program to remove the last inserted key-value pair from a given dictionary.\nSample Input: {'name': 'John', 'age': 25, 'city': 'New York', 'country': 'USA'}\nSample Output: {'name': 'John', 'age': 25, 'city': 'New York'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that removes the last inserted key-value pair from a given dictionary:\n```python\ndef remove_last_pair(dictionary):\n    \"\"\"\n    Remove the last inserted key-value pair from a given dictionary.\n\n    :param dictionary: The dictionary to modify.\n    :return: None (the dictionary is modified in-place)\n    \"\"\"\n    # Check if the dictionary is not empty\n    if not dictionary:\n        return\n\n    # Get the last key-value pair (which is the last inserted pair)\n    last_pair = next((k, v) for k, v in dictionary.items()[-1::-1], None)\n\n    # If the last pair exists, remove it\n    if last_pair:\n        del dictionary[last_pair[0]]\n\n# Example usage\nsample_input = {'name': 'John', 'age': 25, 'city': 'New York', 'country': 'USA'}\nremove_last_pair(sample_input)\nprint(sample_input)  # Output: {'name': 'John', 'age': 25, 'city': 'New York'}\n```\nThis program first checks if the dictionary is not empty, and then iterates over the dictionary's items in reverse order to get the last key-value pair. If the last pair exists, it is removed using the `del` statement. The example usage demonstrates how to use this function with a sample input dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.37,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

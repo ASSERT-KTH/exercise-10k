@@ -1,0 +1,9 @@
+{
+  "id": 3547,
+  "title": "Array Modification",
+  "prompt": "Write a program that takes an array and a modification function as input, and returns the modified array.\nSample Input: [1, 2, 3, 4, 5], x * 2\nSample Output: [2, 4, 6, 8, 10]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef modify_array(arr, func):\n    \"\"\"\n    Modifies an array in-place using a given function.\n\n    Parameters:\n    arr (list): The input array to modify.\n    func (callable): A function that takes one argument (the element of the array) and returns the modified value.\n\n    Returns:\n    list: The modified array.\n    \"\"\"\n    # Use a list comprehension to apply the function to each element of the array\n    return [func(x) for x in arr]\n\n# Example usage:\narr = [1, 2, 3, 4, 5]\ndouble = lambda x: x * 2\nmodified_arr = modify_array(arr, double)\nprint(modified_arr)  # Output: [2, 4, 6, 8, 10]\n```\nThis program defines a function `modify_array` that takes an array and a modification function as input, and returns the modified array. The modification function is applied to each element of the array using a list comprehension. The example usage shows how to use this function with a lambda function that doubles each element of the input array.",
+  "error": null,
+  "elapsed_seconds": 2.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

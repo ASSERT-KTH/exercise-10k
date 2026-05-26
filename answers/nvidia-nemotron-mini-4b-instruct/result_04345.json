@@ -1,0 +1,9 @@
+{
+  "id": 4345,
+  "title": "Day of the Week",
+  "prompt": "Write a program that checks the day of the week (1-7) and prints the corresponding day name (e.g., Monday, Tuesday, etc.)\nSample Input: 3\nSample Output: Tuesday\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_day_name(day_of_week):\n    \"\"\"\n    Returns the corresponding day name for a given day of the week.\n\n    :param day_of_week: An integer representing the day of the week (1-7)\n    :return: A string representing the day name (e.g., Monday, Tuesday, etc.)\n    \"\"\"\n    if not isinstance(day_of_week, int) or day_of_week < 1 or day_of_week > 7:\n        raise ValueError(\"day_of_week must be an integer between 1 and 7\")\n\n    day_names = [\"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\", \"Sunday\"]\n    return day_names[day_of_week - 1]\n\n# Get user input\nuser_input = int(input(\"Enter the day of the week (1-7): \"))\n\n# Print the corresponding day name\nday_name = get_day_name(user_input)\nprint(f\"The {user_input}th day of the week is a {day_name}.\")\n```\nThis program defines a function `get_day_name` that takes an integer representing the day of the week and returns the corresponding day name. The program then prompts the user to enter a day of the week, validates the input, and prints the corresponding day name using the `get_day_name` function.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

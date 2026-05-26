@@ -1,0 +1,9 @@
+{
+  "id": 4797,
+  "title": "Password Generator",
+  "prompt": "Write a program that generates a random password for the user.\nSample Input: 10\nSample Output: G4j#8dLpM2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates a random password of a specified length for the user. This program uses the `secrets` module, which is a built-in module for generating cryptographically secure random numbers in Python. Make sure to install it if you haven't already by running `pip install secrets`.\n\n```python\nimport secrets\n\ndef generate_password(length):\n    \"\"\"\n    Generate a random password of the specified length.\n\n    :param length: The desired length of the password.\n    :return: A random password as a string.\n    \"\"\"\n    # Define the character set for the password\n    char_set = \"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+[]{}|;:,.<>?\"\n\n    # Generate the password using the secrets module\n    password = ''.join(secrets.choice(char_set) for _ in range(length))\n\n    return password\n\nif __name__ == \"__main__\":\n    # Get the desired length of the password from the user\n    length = int(input(\"Enter the desired length of the password: \"))\n\n    # Generate and print the password\n    password = generate_password(length)\n    print(f\"Your random password is: {password}\")\n```\n\nThis program will prompt the user to enter the desired length of the password and then generate a random password of that length. The generated password will contain a mix of uppercase and lowercase letters, numbers, and special characters.",
+  "error": null,
+  "elapsed_seconds": 3.72,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

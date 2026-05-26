@@ -1,0 +1,9 @@
+{
+  "id": 5315,
+  "title": "Function Chaining",
+  "prompt": "Create a function that returns another function, allowing for function chaining\nSample Input: f(x) = x^2, g(x) = x + 1\nSample Output: A function chain\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that returns another function, allowing for function chaining. In this example, we'll define two functions `f` and `g` as you provided, and then create a function `chain` that takes any number of functions and returns their composition.\n\n```python\ndef compose(*functions):\n    \"\"\"\n    Returns a function that composes the given functions in order.\n    \"\"\"\n\n    def compose_helper(value):\n        \"\"\"\n        Recursively applies the given functions to the input value.\n        \"\"\"\n        for func in reversed(functions):\n            value = func(value)\n        return value\n\n    return compose_helper\n\n\n# Define functions f and g\ndef f(x):\n    return x ** 2\n\n\ndef g(x):\n    return x + 1\n\n\n# Create a function chain\nchain_func = compose(f, g)\n\n# Example usage\nprint(chain_func(2))  # Output: 9\n```\n\nIn this example, `compose` takes any number of functions as arguments and returns a new function that applies them in order. The `compose_helper` function is a helper function that recursively applies the functions to the input value.",
+  "error": null,
+  "elapsed_seconds": 3.06,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

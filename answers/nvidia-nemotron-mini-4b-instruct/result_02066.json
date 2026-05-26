@@ -1,0 +1,9 @@
+{
+  "id": 2066,
+  "title": "Finding the First Duplicate",
+  "prompt": "Write a program that finds the first duplicate in a list of numbers.\nSample Input: [2, 1, 3, 5, 3, 2]\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the first duplicate in a list of numbers:\n```python\ndef find_first_duplicate(numbers):\n    \"\"\"\n    Find the first duplicate in a list of numbers.\n\n    :param numbers: List of numbers\n    :return: First duplicate number or None if no duplicates found\n    \"\"\"\n    # Create a set to store the numbers we've seen so far\n    seen = set()\n\n    # Iterate through the list of numbers\n    for num in numbers:\n        # If the number has been seen before, it's a duplicate\n        if num in seen:\n            return num\n        # Otherwise, mark it as seen\n        seen.add(num)\n\n    # If we get here, no duplicates were found\n    return None\n```\nHere's how you can use this function:\n```python\nnumbers = [2, 1, 3, 5, 3, 2]\nresult = find_first_duplicate(numbers)\nprint(result)  # Output: 3\n```\nThis program works by iterating through the list of numbers and checking if each number has been seen before. If it has, that means it's a duplicate, so we return it. If we get through the entire list without finding any duplicates, we return `None`.",
+  "error": null,
+  "elapsed_seconds": 3.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

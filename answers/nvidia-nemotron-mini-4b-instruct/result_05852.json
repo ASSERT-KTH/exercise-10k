@@ -1,0 +1,9 @@
+{
+  "id": 5852,
+  "title": "Palindromic Number Checker",
+  "prompt": "Create a program that asks the user for a number and then checks if it is a palindrome (i.e., it reads the same forwards and backwards). Print out a message indicating whether the number is a palindrome or not\nSample Input: 12321\nSample Output: The number is a palindrome\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef is_palindrome(num):\n    \"\"\"Check if a number is a palindrome.\"\"\"\n    # Convert the number to a string, reverse it, and compare to the original string\n    return str(num) == str(num)[::-1]\n\ndef main():\n    while True:\n        try:\n            user_input = int(input(\"Please enter a number: \"))\n            if is_palindrome(user_input):\n                print(f\"The number {user_input} is a palindrome.\")\n            else:\n                print(f\"{user_input} is not a palindrome.\")\n            break\n        except ValueError:\n            print(\"That's not a valid number. Please try again.\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program defines a helper function `is_palindrome` that checks if a number is a palindrome by comparing its string representation to its reverse. The `main` function repeatedly prompts the user for input, converts it to an integer, and checks if it's a palindrome using the helper function. If the input is not a valid number, it prints an error message and prompts the user to try again.",
+  "error": null,
+  "elapsed_seconds": 3.12,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5204,
+  "title": "Calculate Average of Numbers",
+  "prompt": "Write a program that calculates the average of a list of numbers provided by the user.\nSample Input: 1 2 3 4 5\nSample Output: 3.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the average of a list of numbers provided by the user:\n```python\ndef get_average():\n    \"\"\"\n    Prompts the user to enter a list of numbers, then calculates and returns the average.\n    \"\"\"\n    # Initialize the sum and count variables\n    total = 0\n    count = 0\n\n    # Prompt the user to enter numbers until they enter a non-numeric value\n    while True:\n        try:\n            # Get a single number from the user\n            number = float(input(\"Enter a number (or type 'done' to finish): \"))\n\n            # If the user types 'done', break the loop\n            if number == 'done':\n                break\n\n            # Add the number to the total and increment the count\n            total += number\n            count += 1\n\n        # If the user enters a non-numeric value, print an error message and continue\n        except ValueError:\n            print(\"That's not a valid number. Please try again.\")\n\n    # Calculate and return the average\n    if count > 0:\n        average = total / count\n        return average\n    else:\n        print(\"No numbers were entered. The average is undefined.\")\n        return None\n\n# Call the function and print the result\naverage = get_average()\nif average is not None:\n    print(f\"The average is {average}.\")\n```\nThis program prompts the user to enter numbers one at a time, until they type 'done'. It then calculates the average of the numbers entered and prints the result. If no numbers are entered, it prints a message indicating that the average is undefined.",
+  "error": null,
+  "elapsed_seconds": 4.12,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

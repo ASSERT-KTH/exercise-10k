@@ -1,0 +1,9 @@
+{
+  "id": 8787,
+  "title": "Least Common Multiple",
+  "prompt": "Write a program that takes two numbers as input and returns their least common multiple.\nSample Input: 12 15\nSample Output: 60\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes two numbers as input and returns their least common multiple (LCM) using the Euclidean algorithm:\n\n```python\ndef lcm(a, b):\n    \"\"\"\n    Returns the least common multiple of two numbers.\n\n    :param a: The first number.\n    :param b: The second number.\n    :return: The least common multiple of a and b.\n    \"\"\"\n    # Ensure a and b are non-negative\n    a, b = abs(a), abs(b)\n\n    # Euclidean algorithm to find the GCD\n    while b:\n        a, b = b, a % b\n\n    # Return the product of a and the original divisor b\n    return a * b\n\n# Get user input\nnum1 = int(input(\"Enter the first number: \"))\nnum2 = int(input(\"Enter the second number: \"))\n\n# Calculate and print the LCM\nlcm_result = lcm(num1, num2)\nprint(f\"The least common multiple of {num1} and {num2} is {lcm_result}.\")\n```\n\nThis program first ensures that the input numbers are non-negative by taking their absolute values. Then, it uses the Euclidean algorithm to find the greatest common divisor (GCD) of the two numbers. Finally, it returns the product of the original numbers and their GCD to get the LCM.",
+  "error": null,
+  "elapsed_seconds": 3.32,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

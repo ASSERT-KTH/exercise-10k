@@ -1,0 +1,9 @@
+{
+  "id": 2148,
+  "title": "Command Line Arguments",
+  "prompt": "Write a program that takes two command line arguments, a name and an age, and prints out a greeting message.\nSample Input: John Doe 25\nSample Output: Hello, John Doe! You are 25 years old.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses command line arguments to get the name and age from the user, and then prints out a greeting message with the specified name and age.\n\n```python\nimport sys\n\ndef main():\n    if len(sys.argv) != 3:\n        print(\"Usage: python greeting.py <name> <age>\")\n        return\n\n    name = sys.argv[1]\n    age = int(sys.argv[2])\n\n    greeting_message = f\"Hello, {name}! You are {age} years old.\"\n    print(greeting_message)\n\nif __name__ == \"__main__\":\n    main()\n```\n\nTo run this program, save it as `greeting.py` and execute it from the command line, providing the name and age as arguments. For example:\n\n```\npython greeting.py John Doe 25\n```\n\nThis will output:\n\n```\nHello, John Doe! You are 25 years old.\n```",
+  "error": null,
+  "elapsed_seconds": 2.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

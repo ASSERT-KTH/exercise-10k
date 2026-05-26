@@ -1,0 +1,9 @@
+{
+  "id": 7208,
+  "title": "Student Grades",
+  "prompt": "Create a program that calculates the average grade of a student using a for loop.\nSample Input: [90, 80, 70, 60]\nSample Output: 75.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the average grade of a student using a for loop:\n\n```python\ndef calculate_average_grade(grades):\n    \"\"\"\n    Calculates the average grade of a student using a for loop.\n\n    :param grades: List of grades (float)\n    :return: Average grade (float)\n    \"\"\"\n\n    # Check if the input is a non-empty list\n    if not grades or not isinstance(grades, list) or len(grades) == 0:\n        raise ValueError(\"Input should be a non-empty list of grades.\")\n\n    # Initialize the sum of grades and the count of grades\n    total_grade = 0\n    grade_count = 0\n\n    # Use a for loop to iterate through each grade in the list\n    for grade in grades:\n        # Check if the grade is a number (float)\n        if not isinstance(grade, (float, int)):\n            raise ValueError(\"All elements in the list should be numbers.\")\n\n        # Add the grade to the total and increment the count\n        total_grade += grade\n        grade_count += 1\n\n    # Calculate and return the average grade\n    return total_grade / grade_count\n\n\n# Example usage\ngrades = [90, 80, 70, 60]\naverage_grade = calculate_average_grade(grades)\nprint(f\"The average grade is: {average_grade:.2f}\")\n```\n\nThis program checks if the input is a non-empty list of numbers, and then uses a for loop to iterate through each grade and calculate the average. The average is then returned as a float with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 5.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

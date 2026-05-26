@@ -1,0 +1,9 @@
+{
+  "id": 9169,
+  "title": "Character Classification",
+  "prompt": "Create a string and classify each character as a letter, digit, or special character, then print out the classified characters.\nSample Input: hello123\nSample Output: ['letter', 'letter', 'letter', 'letter', 'letter', 'digit', 'digit', 'digit']\n",
+  "answer": "Here's a Python solution for the problem:\n\n```python\ndef classify_chars(s):\n    result = []\n    for char in s:\n        if char.isalpha():\n            result.append('letter')\n        elif char.isdigit():\n            result.append('digit')\n        else:\n            result.append('special')\n    return result\n\ns = \"hello123\"\nprint(classify_chars(s))  # Output: ['letter', 'letter', 'letter', 'letter', 'letter', 'digit', 'digit', 'special']\n```\n\nThis function goes through each character in the input string, checks if it's a letter (using `isalpha()`), a digit (using `isdigit()`), or something else (anything that's not a letter or digit). If it's a letter or digit, it appends 'letter' or 'digit' to the result list. If it's not a letter or digit, it appends 'special'. Finally, it returns the result list.",
+  "error": null,
+  "elapsed_seconds": 2.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

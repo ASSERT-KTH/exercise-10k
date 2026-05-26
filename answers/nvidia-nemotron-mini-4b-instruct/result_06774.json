@@ -1,0 +1,9 @@
+{
+  "id": 6774,
+  "title": "Dictionary Data Analysis",
+  "prompt": "Create a program that takes a dictionary as input where the keys are names of students and the values are lists of their scores in different subjects. The program should calculate the average score for each student and return a new dictionary with the student names as keys and their average scores as values.\nSample Input: {\"John\": [90, 85, 95], \"Alice\": [88, 92, 89], \"Bob\": [76, 82, 81]}\nSample Output: {\"John\": 90.0, \"Alice\": 89.66666666666667, \"Bob\": 79.66666666666667}\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef calculate_averages(students_scores):\n    \"\"\"\n    Calculates the average score for each student and returns a new dictionary.\n\n    :param students_scores: A dictionary where keys are student names and values are lists of their scores.\n    :return: A new dictionary with student names as keys and their average scores as values.\n    \"\"\"\n    averages = {}\n    for student, scores in students_scores.items():\n        total = sum(scores)\n        averages[student] = total / len(scores)\n    return averages\n\n# Example usage\nstudents_scores = {\"John\": [90, 85, 95], \"Alice\": [88, 92, 89], \"Bob\": [76, 82, 81]}\naverages = calculate_averages(students_scores)\nprint(averages)\n```\n\nThis program defines a function `calculate_averages` that takes a dictionary of student scores as input and returns a new dictionary with the average score for each student. The function iterates over each student and calculates the total score, then divides it by the number of scores to get the average. The resulting averages are stored in a new dictionary and returned. The example usage demonstrates how to call this function with a sample input dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

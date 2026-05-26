@@ -1,0 +1,9 @@
+{
+  "id": 9075,
+  "title": "Number Sorter",
+  "prompt": "Write a program that sorts a list of numbers in ascending or descending order using if/else statements\nSample Input: 5, 2, 8, 1\nSample Output: 1, 2, 5, 8\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that sorts a list of numbers in ascending or descending order using if/else statements:\n```python\ndef sort_numbers(numbers, order='asc'):\n    \"\"\"\n    Sort a list of numbers in ascending or descending order.\n\n    :param numbers: List of numbers to sort\n    :param order: 'asc' for ascending order, 'desc' for descending order (default: 'asc')\n    :return: Sorted list of numbers\n    \"\"\"\n    if order not in ['asc', 'desc']:\n        raise ValueError(\"Invalid order. Choose either 'asc' or 'desc'.\")\n\n    # Sort the list in ascending order by default\n    if order == 'asc':\n        sorted_numbers = sorted(numbers)\n    else:  # order == 'desc'\n        sorted_numbers = sorted(numbers, reverse=True)\n\n    return sorted_numbers\n\n# Example usage\ninput_numbers = [5, 2, 8, 1]\nsorted_numbers = sort_numbers(input_numbers)\nprint(sorted_numbers)  # Output: [1, 2, 5, 8]\n```\nThis program defines a function `sort_numbers` that takes a list of numbers and an optional `order` parameter. The function checks if the `order` parameter is valid and then sorts the list in ascending order by default. If the `order` parameter is set to 'desc', the function sorts the list in descending order using the `sorted` function with the `reverse=True` argument. The function returns the sorted list of numbers. The example usage at the end of the program demonstrates how to use the function to sort a list of numbers in ascending or descending order.",
+  "error": null,
+  "elapsed_seconds": 4.0,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

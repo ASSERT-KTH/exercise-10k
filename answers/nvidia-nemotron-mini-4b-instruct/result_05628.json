@@ -1,0 +1,9 @@
+{
+  "id": 5628,
+  "title": "Reversing a Linked List",
+  "prompt": "Create a program to reverse a linked list.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [5, 4, 3, 2, 1]\n",
+  "answer": "Here's a Python solution using recursion:\n\n```python\nclass ListNode:\n    def __init__(self, x):\n        self.val = x\n        self.next = None\n\ndef reverseList(head):\n    if head is None or head.next is None:\n        return head\n\n    prev = None\n    curr = head\n    while curr is not None:\n        next_node = curr.next\n        curr.next = prev\n        prev = curr\n        curr = next_node\n\n    return prev\n```\n\nThis function works by maintaining two pointers, `prev` and `curr`, which move along the linked list. When `curr` reaches the end of the list (i.e., when `curr.next` is `None`), it means that we have reversed the entire list and updated the head pointer to point to the new reversed list.\n\nYou can use this function as follows:\n\n```python\n# Create a linked list\nhead = ListNode(1)\nhead.next = ListNode(2)\nhead.next.next = ListNode(3)\nhead.next.next.next = ListNode(4)\nhead.next.next.next.next = ListNode(5)\n\n# Reverse the linked list\nreversed_head = reverseList(head)\n\n# Print the reversed linked list\nwhile reversed_head is not None:\n    print(reversed_head.val, end=\" -> \")\n    reversed_head = reversed_head.next\nprint(\"None\")\n```\n\nThis will output: `5 -> 4 -> 3 -> 2 -> 1 -> None`.",
+  "error": null,
+  "elapsed_seconds": 3.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

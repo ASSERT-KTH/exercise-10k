@@ -1,0 +1,9 @@
+{
+  "id": 5694,
+  "title": "Object Checker",
+  "prompt": "Write a program that takes an object as input and checks if it's empty or not using conditional statements.\nSample Input: {\"name\": \"John\"}\nSample Output: Not empty\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given object is empty or not using conditional statements:\n```python\ndef is_object_empty(obj):\n    \"\"\"\n    Check if an object is empty or not.\n\n    :param obj: The object to check.\n    :return: A string indicating whether the object is empty or not.\n    \"\"\"\n    # Check if the object is a dictionary (which is the most common case)\n    if isinstance(obj, dict):\n        # Check if the dictionary is empty (i.e., has no keys)\n        if not obj:\n            return \"Empty\"\n        else:\n            return \"Not empty\"\n\n    # If the object is not a dictionary, it's likely empty (e.g., a list with no elements)\n    return \"Empty\"\n\n# Example usage\nsample_input = {\"name\": \"John\"}\nprint(is_object_empty(sample_input))  # Output: Not empty\n\nempty_input = []\nprint(is_object_empty(empty_input))  # Output: Empty\n```\nThis program checks if the input object is a dictionary using the `isinstance()` function. If it is, the program checks if the dictionary is empty by checking if it has no keys (`not obj`). If the object is not a dictionary, the program assumes it's likely empty (e.g., a list with no elements) and returns \"Empty\".",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

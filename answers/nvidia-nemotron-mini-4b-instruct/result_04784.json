@@ -1,0 +1,9 @@
+{
+  "id": 4784,
+  "title": "Multiple Inputs",
+  "prompt": "Write a program that asks the user for two numbers and then prints out their sum.\nSample Input: 5 10\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a simple Python program that meets your requirements:\n\n```python\ndef get_user_input():\n    \"\"\"Asks the user for two numbers and returns them as integers.\"\"\"\n    while True:\n        try:\n            num1 = int(input(\"Enter the first number: \"))\n            num2 = int(input(\"Enter the second number: \"))\n            return num1, num2\n        except ValueError:\n            print(\"Invalid input. Please enter two integers.\")\n\ndef calculate_sum(num1, num2):\n    \"\"\"Calculates and prints the sum of the two numbers.\"\"\"\n    sum_of_numbers = num1 + num2\n    print(f\"The sum of {num1} and {num2} is {sum_of_numbers}.\")\n\n# Call the functions to get user input and calculate the sum\nnum1, num2 = get_user_input()\ncalculate_sum(num1, num2)\n```\n\nWhen you run this program, it will prompt the user to enter two numbers, then calculate and print their sum. The `get_user_input` function handles user input validation to ensure that the user enters two integers.",
+  "error": null,
+  "elapsed_seconds": 2.87,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

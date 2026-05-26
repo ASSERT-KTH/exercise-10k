@@ -1,0 +1,9 @@
+{
+  "id": 5878,
+  "title": "Fibonacci Sequence",
+  "prompt": "Generate the first n numbers of the Fibonacci sequence.\nSample Input: 10\nSample Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]\n",
+  "answer": "Here's a Python solution for your problem:\n\n```python\ndef fibonacci(n):\n    fib_sequence = [0, 1]\n    while len(fib_sequence) < n:\n        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])\n    return fib_sequence[:n]\n\nprint(fibonacci(10))  # Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]\n```\n\nThis function starts with the first two numbers of the Fibonacci sequence (0 and 1), then enters a loop that continues until the sequence has `n` elements. In each iteration, it appends the sum of the last two numbers in the sequence to the end of the sequence. Finally, it returns the first `n` elements of the sequence.",
+  "error": null,
+  "elapsed_seconds": 2.06,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

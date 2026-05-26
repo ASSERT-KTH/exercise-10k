@@ -1,0 +1,9 @@
+{
+  "id": 6766,
+  "title": "Phonebook App",
+  "prompt": "Write a program to create a phonebook app where users can add, remove, and search contacts.\nSample Input: Add contact: John Doe, 123-456-7890\nSample Output: Contact added: John Doe, Phone: 123-456-7890\n",
+  "answer": "Here's a Python program that meets your requirements. This program uses a dictionary to store the contacts and provides methods to add, remove, and search contacts.\n\n```python\nclass Phonebook:\n    def __init__(self):\n        self.contacts = {}\n\n    def add_contact(self, name, phone_number):\n        if name not in self.contacts:\n            self.contacts[name] = phone_number\n            print(f\"Contact added: {name}, Phone: {phone_number}\")\n        else:\n            print(f\"Contact {name} already exists. Cannot add duplicate contact.\")\n\n    def remove_contact(self, name):\n        if name in self.contacts:\n            del self.contacts[name]\n            print(f\"Contact removed: {name}\")\n        else:\n            print(f\"Contact {name} not found. Cannot remove contact.\")\n\n    def search_contact(self, name):\n        if name in self.contacts:\n            print(f\"Contact found: {name}, Phone: {self.contacts[name]}\")\n        else:\n            print(f\"Contact {name} not found.\")\n\n# Example usage\nphonebook = Phonebook()\n\n# Add contact\nphonebook.add_contact(\"John Doe\", \"123-456-7890\")\n\n# Remove contact\nphonebook.remove_contact(\"John Doe\")\n\n# Search contact\nphonebook.search_contact(\"John Doe\")\n```\n\nThis program will create a simple phonebook app with the specified functionality.",
+  "error": null,
+  "elapsed_seconds": 3.52,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

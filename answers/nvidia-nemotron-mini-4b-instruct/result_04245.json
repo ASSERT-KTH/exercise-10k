@@ -1,0 +1,9 @@
+{
+  "id": 4245,
+  "title": "Guessing Game",
+  "prompt": "Develop a program that generates a random number between 1 and 100, and allows the user to guess the number. After each guess, the program should print 'Higher' or 'Lower' to indicate the correct direction.\nSample Input: 50\nSample Output: Higher\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\nimport random\n\ndef play_guessing_game():\n    # Generate a random number between 1 and 100\n    random_number = random.randint(1, 100)\n\n    # Initialize the number of guesses\n    guesses = 0\n\n    # Keep asking for guesses until the user guesses correctly\n    while True:\n        # Get user input and convert it to an integer\n        user_guess = int(input(\"Guess a number between 1 and 100: \"))\n\n        # Increment the number of guesses\n        guesses += 1\n\n        # Print the feedback based on the user's guess\n        if user_guess < random_number:\n            print(\"Lower\")\n        elif user_guess > random_number:\n            print(\"Higher\")\n        else:\n            # If the user guesses correctly, break the loop\n            print(f\"Congratulations! You guessed the number in {guesses} guesses.\")\n            break\n\n# Call the function to start the game\nplay_guessing_game()\n```\n\nThis program generates a random number between 1 and 100, and then repeatedly asks the user for a guess until the user guesses correctly. After each guess, the program prints \"Higher\" or \"Lower\" to indicate the correct direction. The program also keeps track of the number of guesses and prints a message indicating how many guesses it took the user to guess correctly.",
+  "error": null,
+  "elapsed_seconds": 3.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

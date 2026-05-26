@@ -1,0 +1,9 @@
+{
+  "id": 5167,
+  "title": "Dictionary Mapping",
+  "prompt": "Write a function to map a dictionary to a new dictionary with transformed values. For example, double the values of the original dictionary.\nSample Input: {\"a\": 1, \"b\": 2, \"c\": 3}\nSample Output: {\"a\": 2, \"b\": 4, \"c\": 6}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It takes a dictionary and a transformation function as arguments, and returns a new dictionary with the transformed values. In this example, I'll use a lambda function to double the values of the original dictionary.\n\n```python\ndef transform_dict(original_dict, transform_func):\n    \"\"\"\n    Maps a dictionary to a new dictionary with transformed values.\n\n    Parameters:\n    original_dict (dict): The original dictionary to transform.\n    transform_func (callable): A function that takes a value and returns a transformed value.\n\n    Returns:\n    dict: A new dictionary with transformed values.\n    \"\"\"\n    return {key: transform_func(value) for key, value in original_dict.items()}\n\n# Example usage: double the values of the original dictionary\noriginal_dict = {\"a\": 1, \"b\": 2, \"c\": 3}\ntransformed_dict = transform_dict(original_dict, lambda value: value * 2)\nprint(transformed_dict)  # Output: {'a': 2, 'b': 4, 'c': 6}\n```\n\nYou can replace the lambda function with any other transformation function you need. For example, you could use a lambda function to add 10 to each value, or a custom function that takes a value and returns a new value based on some complex logic.",
+  "error": null,
+  "elapsed_seconds": 3.37,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

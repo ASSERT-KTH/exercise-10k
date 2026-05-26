@@ -1,0 +1,9 @@
+{
+  "id": 9832,
+  "title": "Find the Maximum Number in a List",
+  "prompt": "Write a program that takes a list of integers as input and returns the maximum number in the list. The program should use a basic algorithm to find the maximum number.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef find_max(numbers):\n    \"\"\"\n    Given a list of integers, return the maximum number in the list.\n\n    :param numbers: list of integers\n    :return: maximum integer in the list\n    \"\"\"\n    if not numbers:  # Check if the input list is empty\n        raise ValueError(\"Input list cannot be empty\")\n\n    # Initialize the maximum number to the first element in the list\n    max_number = numbers[0]\n\n    # Iterate through the remaining elements in the list\n    for num in numbers[1:]:\n        # Update the maximum number if a larger one is found\n        if num > max_number:\n            max_number = num\n\n    return max_number\n```\nHere's an example of how you can use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\nprint(find_max(numbers))  # Output: 5\n```\nThis function first checks if the input list is empty and raises a `ValueError` if it is. Then, it initializes the maximum number to the first element in the list. Finally, it iterates through the remaining elements in the list, updating the maximum number if a larger one is found. The function returns the final maximum number.",
+  "error": null,
+  "elapsed_seconds": 3.15,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

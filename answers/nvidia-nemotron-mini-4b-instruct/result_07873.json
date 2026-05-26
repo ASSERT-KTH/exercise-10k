@@ -1,0 +1,9 @@
+{
+  "id": 7873,
+  "title": " Guessing Game with Limit",
+  "prompt": "Write a program that plays a guessing game with a limited number of attempts using conditional statements.\nSample Input: 50\nSample Output: Too high\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that plays a guessing game with a limited number of attempts using conditional statements. In this example, the user is asked to guess a randomly generated number between 1 and 100, and they have 5 attempts to guess correctly.\n\n```python\nimport random\n\n# Generate a random number between 1 and 100\ntarget_number = random.randint(1, 100)\n\n# Set the number of attempts\nnum_attempts = 5\n\n# Initialize a counter for the number of attempts\nattempts = 0\n\n# Main loop of the game\nwhile attempts < num_attempts:\n    # Get user input\n    user_guess = int(input(f\"Guess a number between 1 and 100 (attempt {attempts + 1}): \"))\n\n    # Check if the user guessed correctly\n    if user_guess == target_number:\n        print(\"Congratulations! You guessed the number correctly!\")\n        break\n\n    # Check if the user exceeded the number of attempts\n    elif attempts == num_attempts - 1:\n        print(f\"Sorry, you ran out of attempts. The target number was {target_number}.\")\n        break\n\n    # Check if the user's guess is too high or too low\n    else:\n        if user_guess > target_number:\n            print(\"Too high\")\n        else:\n            print(\"Too low\")\n\n    # Increment the counter for the number of attempts\n    attempts += 1\n```\n\nYou can modify the `target_number` variable and the `num_attempts` variable to change the difficulty level of the game.",
+  "error": null,
+  "elapsed_seconds": 3.92,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

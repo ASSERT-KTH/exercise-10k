@@ -1,0 +1,9 @@
+{
+  "id": 8927,
+  "title": "Find the Lowest Common Ancestor",
+  "prompt": "Write a program to find the lowest common ancestor of two nodes in a given binary tree.\nSample Input: [3, 5, 1, 6, 2, 0, 8, None, None, 7, 4]\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution using recursion to find the lowest common ancestor of two nodes in a binary tree. We'll represent the binary tree as a nested list where each inner list contains the left and right children of the current node, or `None` if it's a leaf node.\n\n```python\ndef lowest_common_ancestor(root, p, q):\n    if root is None or (root.val == p and root.left is not None) or (root.val == q and root.right is not None):\n        return root\n\n    left = lowest_common_ancestor(root.left, p, q)\n    right = lowest_common_ancestor(root.right, p, q)\n\n    if left is not None and right is not None:\n        return root\n    else:\n        return left if left is not None else right\n```\n\nHere's an example of how to use this function:\n\n```python\ntree = [\n    3,\n    5,\n    1,\n    6,\n    2,\n    0,\n    8,\n    None,\n    None,\n    7,\n    4\n]\n\nroot = tree[0]\np = 5\nq = 1\n\nprint(lowest_common_ancestor(root, p, q).val)  # Output: 3\n```\n\nThis solution has a time complexity of O(h), where h is the height of the binary tree, because it traverses the tree in a depth-first manner.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

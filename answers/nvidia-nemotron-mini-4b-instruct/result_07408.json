@@ -1,0 +1,9 @@
+{
+  "id": 7408,
+  "title": "Input/Output Challenge",
+  "prompt": "Create a program that takes a string input from the user and outputs the string with all vowels removed. The program should also output the number of vowels removed.\nSample Input: Hello World\nSample Output: Hll Wrld\nVowels removed: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef remove_vowels(s):\n    \"\"\"Remove all vowels from the given string and return the result.\"\"\"\n    vowels = set(\"aeiouAEIOU\")\n    return \"\".join(char for char in s if char not in vowels)\n\ndef main():\n    user_input = input(\"Enter a string: \")\n    result = remove_vowels(user_input)\n    vowels_removed = sum(1 for char in user_input if char in \"aeiouAEIOU\")\n\n    print(f\"Result: {result}\")\n    print(f\"Vowels removed: {vowels_removed}\")\n\nif __name__ == \"__main__\":\n    main()\n```\nThis program defines a function `remove_vowels` that takes a string as input and returns a new string with all vowels removed. The function uses a set of vowels to check if each character in the input string is a vowel or not.\n\nThe `main` function prompts the user to enter a string, calls the `remove_vowels` function to get the result, and calculates the number of vowels removed by summing up the number of vowels in the input string. Finally, it prints the result and the number of vowels removed.\n\nHere's an example of how the program works:\n```\nEnter a string: Hello World\nResult: Hll Wrld\nVowels removed: 3\n```",
+  "error": null,
+  "elapsed_seconds": 9.81,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

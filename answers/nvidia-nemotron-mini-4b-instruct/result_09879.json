@@ -1,0 +1,9 @@
+{
+  "id": 9879,
+  "title": "Weather Program",
+  "prompt": "Write a program that takes a city as input and prints out the current weather.\nSample Input: New York\nSample Output: The current weather in New York is sunny.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses the OpenWeatherMap API to get the current weather for a given city. Make sure to replace `'YOUR_API_KEY'` with your actual OpenWeatherMap API key. You can sign up for a free API key at <https://openweathermap.org/appid>.\n\n```python\nimport requests\n\ndef get_weather(city):\n    # Replace 'YOUR_API_KEY' with your actual OpenWeatherMap API key\n    API_KEY = 'YOUR_API_KEY'\n\n    url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric'\n    response = requests.get(url)\n\n    if response.status_code == 200:\n        weather_data = response.json()\n        temperature = weather_data['main']['temp']\n        weather_description = weather_data['weather'][0]['description']\n\n        return f'The current weather in {city} is {temperature}°C ({weather_description}).'\n    else:\n        print(f'Error fetching weather data for {city}. Status code: {response.status_code}')\n        return None\n\n# Get user input for the city\ncity = input('Enter a city: ')\n\n# Print the current weather\nprint(get_weather(city))\n```\n\nThis program defines a function `get_weather` that takes a city as input and returns the current weather description for that city. The function uses the OpenWeatherMap API to fetch the weather data and returns a string with the temperature and weather description. The program then prompts the user for a city, calls the `get_weather` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 4.3,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

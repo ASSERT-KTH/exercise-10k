@@ -1,0 +1,9 @@
+{
+  "id": 4843,
+  "title": "Array Intersection",
+  "prompt": "Write a program that takes two arrays as input, and returns their intersection.\nSample Input: [1, 2, 3, 4, 5], [4, 5, 6, 7, 8]\nSample Output: [4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes two arrays as input and returns their intersection:\n```python\ndef array_intersection(arr1, arr2):\n    \"\"\"\n    Returns the intersection of two arrays.\n\n    :param arr1: The first array\n    :param arr2: The second array\n    :return: A new array containing the common elements between arr1 and arr2\n    \"\"\"\n    # Convert input arrays to sets for faster lookup\n    set1 = set(arr1)\n    set2 = set(arr2)\n\n    # Find the intersection of the sets and convert it back to a list\n    intersection = list(set1 & set2)\n\n    return intersection\n```\nHere's an example of how you can use this function:\n```python\narr1 = [1, 2, 3, 4, 5]\narr2 = [4, 5, 6, 7, 8]\n\nprint(array_intersection(arr1, arr2))  # Output: [4, 5]\n```\nThis program first converts the input arrays to sets, which allows for faster lookup of elements. Then, it finds the intersection of the two sets using the `&` operator and converts the result back to a list before returning it.",
+  "error": null,
+  "elapsed_seconds": 3.02,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

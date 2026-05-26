@@ -1,0 +1,9 @@
+{
+  "id": 8717,
+  "title": "Hexadecimal Converter",
+  "prompt": "Ask the user for a decimal number and print out its hexadecimal equivalent.\nSample Input: 10\nSample Output: a\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that asks the user for a decimal number and prints its hexadecimal equivalent:\n\n```python\ndef decimal_to_hex(decimal):\n    \"\"\"\n    Converts a decimal number to its hexadecimal equivalent.\n\n    :param decimal: The decimal number to convert.\n    :return: The hexadecimal equivalent of the decimal number.\n    \"\"\"\n    if not isinstance(decimal, (int, float)):\n        raise TypeError(\"The input must be a number.\")\n\n    hex_digits = \"0123456789abcdef\"\n    return hex_digits[decimal % 16] + decimal//16 * \"10\"\n\n# Get user input\ndecimal_number = float(input(\"Enter a decimal number: \"))\n\n# Print the hexadecimal equivalent\nhex_number = decimal_to_hex(decimal_number)\nprint(f\"The hexadecimal equivalent of {decimal_number} is {hex_number}.\")\n```\n\nThis program defines a function `decimal_to_hex` that takes a decimal number as input and returns its hexadecimal equivalent. The function checks if the input is a number and then uses a string of hexadecimal digits to convert the decimal number to its hexadecimal equivalent. The program then prompts the user to enter a decimal number, calls the function with the user input, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

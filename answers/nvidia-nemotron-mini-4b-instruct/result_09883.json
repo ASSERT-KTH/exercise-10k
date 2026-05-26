@@ -1,0 +1,9 @@
+{
+  "id": 9883,
+  "title": "Morse Code Translator",
+  "prompt": "Write a program that takes a message as input and translates it to Morse code.\nSample Input: hello\nSample Output: .... . .-.. .-.. ---\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that translates a given message to Morse code:\n\n```python\nmorse_code = {\n    \"a\": \".-\", \"b\": \"-...\", \"c\": \"-.-.\", \"d\": \"-..\", \"e\": \".\",\n    \"f\": \"..-.\", \"g\": \"--.\", \"h\": \"....\", \"i\": \"..\", \"j\": \".---\",\n    \"k\": \"-.-\", \"l\": \".-..\", \"m\": \"--\", \"n\": \"-.\", \"o\": \"---\",\n    \"p\": \".--.\", \"q\": \"--.-\", \"r\": \".-.\", \"s\": \"...\", \"t\": \"-\",\n    \"u\": \"..-\", \"v\": \"...-\", \"w\": \".--\", \"x\": \"-..-\", \"y\": \"-.--\",\n    \"z\": \"--..\", \" \": \"   \"\n}\n\ndef translate_to_morse(message):\n    morse_output = \"\"\n    for char in message:\n        if char.isalpha():\n            morse_output += morse_code[char] + \" \"\n        else:\n            morse_output += char + \" \"\n    return morse_output.strip()\n\n# Example usage\nmessage = \"hello\"\nprint(translate_to_morse(message))  # Output: .... . .-.. .-.. ---\n```\n\nThis program defines a dictionary that maps each English letter to its corresponding Morse code sequence. The `translate_to_morse` function takes a message as input, converts each alphabetic character to its Morse code equivalent, and adds a space after each character to separate them. The function then returns the translated message with leading/trailing whitespace removed.",
+  "error": null,
+  "elapsed_seconds": 4.1,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7827,
+  "title": "Finding the Maximum Value in a List",
+  "prompt": "Create a function that takes a list of integers as input and returns the maximum value in the list. The function should handle empty lists and lists with duplicate maximum values.\nSample Input: [4, 2, 9, 6, 5, 1, 8, 3, 7]\nSample Output: 9\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef max_value(numbers):\n    \"\"\"\n    Given a list of integers, return the maximum value in the list.\n    Handles empty lists and lists with duplicate maximum values.\n\n    :param numbers: list of integers\n    :return: maximum value in the list\n    \"\"\"\n    if not numbers:  # Check if the input is an empty list\n        return None\n\n    max_value = numbers[0]  # Initialize the maximum value to the first element\n    for num in numbers[1:]:  # Iterate over the remaining elements\n        if num > max_value:  # Update the maximum value if a larger one is found\n            max_value = num\n\n    return max_value\n```\nHere's an example of how you can use this function:\n```python\nprint(max_value([4, 2, 9, 6, 5, 1, 8, 3, 7]))  # Output: 9\nprint(max_value([]))  # Output: None\nprint(max_value([5, 5, 5]))  # Output: 5\n```\nThis function first checks if the input list is empty and returns `None` if it is. Then, it initializes the maximum value to the first element of the list. Finally, it iterates over the remaining elements and updates the maximum value if a larger one is found. The function returns the final maximum value at the end.",
+  "error": null,
+  "elapsed_seconds": 3.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

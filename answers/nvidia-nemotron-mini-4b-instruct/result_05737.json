@@ -1,0 +1,9 @@
+{
+  "id": 5737,
+  "title": "Map, Filter, Reduce",
+  "prompt": "Write a function that uses the map, filter, and reduce functions to process a list of numbers.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: the sum of the squares of the even numbers\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses the `map`, `filter`, and `reduce` functions to process a list of numbers and calculate the sum of the squares of the even numbers.\n\n```python\ndef sum_of_squares_of_even(numbers):\n    \"\"\"\n    Calculate the sum of the squares of the even numbers in a list.\n\n    :param numbers: List of numbers\n    :return: The sum of the squares of the even numbers\n    \"\"\"\n\n    # Step 1: Filter even numbers\n    even_numbers = list(filter(lambda x: x % 2 == 0, numbers))\n\n    # Step 2: Map squares to even numbers\n    squared_even_numbers = map(lambda x: x ** 2, even_numbers)\n\n    # Step 3: Reduce sum of squares\n    sum_of_squares = reduce(lambda x, y: x + y, squared_even_numbers, 0)\n\n    return sum_of_squares\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(sum_of_squares_of_even([1, 2, 3, 4, 5]))  # Output: 20\n```\n\nThis function first filters out the even numbers from the input list using the `filter` function and a lambda function. Then, it maps the squares of the even numbers using the `map` function. Finally, it reduces the sum of the squares using the `reduce` function, which applies a binary function (in this case, addition) to an iterable (in this case, a list of squares) and starts with an initial value (0 in this case).",
+  "error": null,
+  "elapsed_seconds": 3.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

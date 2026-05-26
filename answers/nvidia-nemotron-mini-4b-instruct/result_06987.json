@@ -1,0 +1,9 @@
+{
+  "id": 6987,
+  "title": "Calculation of Distance",
+  "prompt": "Write a program that takes the speed and time of an object as input and returns the distance traveled.\nSample Input: 50 2\nSample Output: 100\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_distance(speed, time):\n    \"\"\"\n    Calculates the distance traveled by an object given its speed and time.\n\n    :param speed: The speed of the object in meters per second.\n    :param time: The time the object travels in seconds.\n    :return: The distance traveled in meters.\n    \"\"\"\n    # Validate input\n    if speed <= 0 or time <= 0:\n        raise ValueError(\"Both speed and time must be positive numbers.\")\n\n    # Calculate distance\n    distance = speed * time\n\n    return distance\n\n# Get user input\nspeed = float(input(\"Enter the speed of the object in meters per second: \"))\ntime = float(input(\"Enter the time the object travels in seconds: \"))\n\n# Calculate and print distance\ndistance = calculate_distance(speed, time)\nprint(f\"The distance traveled is {distance} meters.\")\n```\nThis program defines a function `calculate_distance` that takes the speed and time as input and returns the distance traveled. It also includes input validation to ensure that both speed and time are positive numbers. The program then gets user input for speed and time, calculates the distance using the function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.26,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

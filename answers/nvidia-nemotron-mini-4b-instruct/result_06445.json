@@ -1,0 +1,9 @@
+{
+  "id": 6445,
+  "title": "Subtraction and Addition",
+  "prompt": "Write a program that takes three numbers as input and outputs the result of subtracting the second number from the first and then adding the third number.\nSample Input: 10 3 2\nSample Output: 9\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_result(num1, num2, num3):\n    \"\"\"\n    Calculates the result of subtracting the second number from the first and then adding the third number.\n\n    :param num1: The first number.\n    :param num2: The second number.\n    :param num3: The third number.\n    :return: The result of the calculation.\n    \"\"\"\n    # Check that the inputs are numbers\n    if not all(isinstance(num, (int, float)) for num in (num1, num2, num3)):\n        raise ValueError(\"All inputs must be numbers.\")\n\n    # Calculate the result\n    result = num1 - num2 + num3\n\n    return result\n\n# Get user input\nnum1 = float(input(\"Enter the first number: \"))\nnum2 = float(input(\"Enter the second number: \"))\nnum3 = float(input(\"Enter the third number: \"))\n\n# Calculate and print the result\nresult = calculate_result(num1, num2, num3)\nprint(f\"The result is: {result}\")\n```\nThis program defines a function `calculate_result` that takes three numbers as input and returns their sum. It then gets user input for the three numbers, checks that they are all numbers, and calculates the result using the function. Finally, it prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

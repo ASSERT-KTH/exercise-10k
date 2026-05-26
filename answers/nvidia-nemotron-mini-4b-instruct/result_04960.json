@@ -1,0 +1,9 @@
+{
+  "id": 4960,
+  "title": "Game Outcome",
+  "prompt": "Create a program that determines the outcome of a simple game based on user input (win, lose, or draw) using conditional statements.\nSample Input: win\nSample Output: You win!\n",
+  "answer": "Sure, I'd be happy to help you create a program for a simple game with user input and conditional statements. Here's an example Python program that determines the outcome of a game based on the user's input:\n\n```python\ndef play_game():\n    \"\"\"\n    Plays a simple game and determines the outcome based on user input.\n    \"\"\"\n\n    # Define the game rules\n    rules = {\n        \"win\": \"You win!\",\n        \"lose\": \"You lose.\",\n        \"draw\": \"It's a draw.\"\n    }\n\n    # Get user input\n    user_input = input(\"Enter 'win', 'lose', or 'draw' to play the game: \").lower()\n\n    # Validate user input\n    while user_input not in rules:\n        print(\"Invalid input. Please enter 'win', 'lose', or 'draw'.\")\n        user_input = input(\"Enter 'win', 'lose', or 'draw' to play the game: \").lower()\n\n    # Determine the outcome based on user input\n    outcome = rules[user_input]\n\n    # Print the outcome\n    print(outcome)\n\n# Call the function to play the game\nplay_game()\n```\n\nThis program defines a simple game with three possible outcomes: win, lose, and draw. The user is prompted to enter one of these options, and the program validates the input to ensure it's one of the valid options. Once the user input is validated, the program determines the outcome based on the user's input and prints the corresponding message.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

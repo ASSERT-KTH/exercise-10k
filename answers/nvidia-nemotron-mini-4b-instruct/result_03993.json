@@ -1,0 +1,9 @@
+{
+  "id": 3993,
+  "title": "String Compression",
+  "prompt": "Write a program that compresses a given string by replacing repeated characters with the character and the count of repetitions.\nSample Input: aaaabbbccc\nSample Output: a4b3c3\n",
+  "answer": "Here's a Python program that accomplishes this task:\n\n```python\ndef compress_string(s):\n    result = \"\"\n    count = 1\n    for i in range(1, len(s)):\n        if s[i] == s[i-1]:\n            count += 1\n        else:\n            result += s[i-1] + str(count)\n            count = 1\n    result += s[-1] + str(count)\n    return result if len(result) <= len(s) else s\n\nprint(compress_string(\"aaaabbbccc\"))  # Output: \"a4b3c3\"\n```\n\nThis program works by iterating over the string and keeping track of the count of consecutive identical characters. When a non-identical character is encountered, it is added to the result string along with the count (as a string), and the count is reset to 1. The process continues until all characters have been processed. If the resulting string is shorter than the original one, it means that some characters were removed due to compression, so the original string is returned. Otherwise, the original string is returned unchanged.",
+  "error": null,
+  "elapsed_seconds": 2.77,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

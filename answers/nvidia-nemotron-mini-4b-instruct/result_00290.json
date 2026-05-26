@@ -1,0 +1,9 @@
+{
+  "id": 290,
+  "title": "Percentage Calculator",
+  "prompt": "Create a program that calculates the percentage of a given number.\nSample Input: 25 100\nSample Output: 25.0\n",
+  "answer": "Sure, I'd be happy to help you create a program that calculates the percentage of a given number. Here's a simple Python program that meets your requirements:\n\n```python\ndef calculate_percentage(number, total):\n    \"\"\"\n    Calculates the percentage of a given number relative to a total.\n\n    :param number: The number for which to calculate the percentage.\n    :param total: The total value against which to calculate the percentage.\n    :return: The percentage as a float.\n    \"\"\"\n\n    # Check if the inputs are valid\n    if not isinstance(number, (int, float)) or number < 0:\n        raise ValueError(\"The 'number' parameter must be a non-negative number.\")\n\n    if not isinstance(total, (int, float)) or total < 0:\n        raise ValueError(\"The 'total' parameter must be a non-negative number.\")\n\n    # Calculate and return the percentage\n    return number / total * 100\n\n\n# Get user input\nnumber = float(input(\"Enter the number: \"))\ntotal = float(input(\"Enter the total: \"))\n\n# Calculate and print the percentage\npercentage = calculate_percentage(number, total)\nprint(f\"{number} is {percentage:.2f}% of {total}.\")\n```\n\nThis program defines a function `calculate_percentage` that checks if the inputs are valid and then calculates the percentage. The program then prompts the user to enter the number and total, calculates the percentage, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 6.11,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

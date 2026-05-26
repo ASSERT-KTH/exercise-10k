@@ -1,0 +1,9 @@
+{
+  "id": 5458,
+  "title": "Bill Splitter",
+  "prompt": "Write a program that takes a bill amount and number of people as input and prints out the amount each person owes\nSample Input: 100 4\nSample Output: Each person owes $25\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_bill_amount(bill_amount, num_people):\n    \"\"\"\n    Calculates the amount each person owes based on the given bill amount and number of people.\n\n    :param bill_amount: The total bill amount.\n    :param num_people: The number of people sharing the bill.\n    :return: A string indicating the amount each person owes.\n    \"\"\"\n    if num_people <= 0:\n        raise ValueError(\"Number of people must be a positive integer.\")\n\n    return f\"Each person owes ${bill_amount // num_people:.2f}\"\n\n# Example usage:\nbill_amount = 100\nnum_people = 4\nprint(calculate_bill_amount(bill_amount, num_people))  # Output: Each person owes $25.00\n```\nThis program defines a function `calculate_bill_amount` that takes a bill amount and number of people as input, calculates the amount each person owes by dividing the bill amount by the number of people, and returns a string formatted as requested. The function checks that the number of people is a positive integer and raises a `ValueError` if it's not. The example usage shows how to call the function with a bill amount of $100 and 4 people.",
+  "error": null,
+  "elapsed_seconds": 3.2,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

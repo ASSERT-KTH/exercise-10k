@@ -1,0 +1,9 @@
+{
+  "id": 3477,
+  "title": "Jokes Teller Program",
+  "prompt": "Create a program that tells jokes with user-inputted names and locations.\nSample Input: name, location\nSample Output: Why did {name} go to {location}? Because they heard the food was great!\n",
+  "answer": "Sure, I'd be happy to help you create a program that tells jokes based on user-inputted names and locations. Here's a Python solution using the `random` module to select jokes from a list. You can add or remove jokes from the list as needed.\n\n```python\nimport random\n\njokes = [\n    \"Why did {name} go to {location}? Because they heard the food was great!\",\n    \"What do you call a {name} from {location}? An exotic dancer!\",\n    \"Why did {name} visit {location}? To see the famous {location} landmarks!\",\n    \"How did {name} spend their weekend in {location}? Watching the sunset and enjoying the local cuisine!\",\n    \"Why did {name} go to {location}? To escape the cold and enjoy the warm weather!\",\n]\n\ndef tell_joke(name, location):\n    joke = jokes[random.randint(0, len(jokes) - 1)]\n    joke = joke.format(name=name, location=location)\n    return joke\n\nif __name__ == \"__main__\":\n    name = input(\"Enter your name: \")\n    location = input(\"Enter a location: \")\n\n    joke = tell_joke(name, location)\n    print(f\"\\n{joke}\")\n```\n\nThis program prompts the user to enter their name and a location, then generates a random joke based on those inputs. You can customize the jokes list to include more or different jokes.",
+  "error": null,
+  "elapsed_seconds": 3.42,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3265,
+  "title": "Printing Patterns",
+  "prompt": "Write a program that uses nested for loops to print out a pattern of asterisks (*) in the shape of a square.\nSample Input: 5\nSample Output: *****\n*****\n*****\n*****\n*****\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses nested for loops to print out a pattern of asterisks in the shape of a square, given an input size:\n\n```python\ndef print_square(size):\n    \"\"\"Print a square pattern of asterisks of the given size.\"\"\"\n\n    # Check if the input is a positive integer\n    if not isinstance(size, int) or size <= 0:\n        raise ValueError(\"Input must be a positive integer\")\n\n    # Print the top row\n    print(\"*\" * size)\n\n    # Print the remaining rows, each with one less asterisk than the previous row\n    for i in range(1, size):\n        print((size - i - 1) * \" \" + \"*\" * (2 * i - 1))\n\n    # Print the bottom row\n    print(\"*\" * size)\n\n# Get user input and call the function\nsize = int(input(\"Enter the size of the square: \"))\nprint_square(size)\n```\n\nThis program defines a function `print_square` that takes an integer size as input and prints a square pattern of asterisks. The function first checks if the input is a positive integer, and then prints the top row with all asterisks, followed by a row with one less asterisk than the previous row, and so on, down to the bottom row. The function also includes a call to the `print_square` function to get user input and print the square pattern.",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

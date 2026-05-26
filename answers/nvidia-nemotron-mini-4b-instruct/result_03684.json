@@ -1,0 +1,9 @@
+{
+  "id": 3684,
+  "title": "Interest Calculator",
+  "prompt": "Write a program to calculate the simple interest and compound interest based on principal amount, rate, and time.\nSample Input: principal = 1000, rate = 5, time = 2\nSample Output: Simple Interest: 100, Compound Interest: 110.25\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates both simple and compound interest based on the given principal amount, rate, and time:\n\n```python\ndef calculate_interest(principal, rate, time):\n    \"\"\"\n    Calculates simple and compound interest based on the given principal amount, rate, and time.\n\n    :param principal: The initial principal amount.\n    :param rate: The annual interest rate as a decimal (e.g., 5% is 0.05).\n    :param time: The time in years for which the interest is calculated.\n    :return: A tuple containing the simple interest and compound interest.\n    \"\"\"\n\n    # Calculate simple interest\n    simple_interest = principal * rate * time\n\n    # Calculate compound interest (assuming annual compounding)\n    compound_interest = principal * (1 + rate) ** time\n\n    return simple_interest, compound_interest\n\n# Sample input\nprincipal = 1000\nrate = 5\ntime = 2\n\n# Calculate and print the results\nsimple_interest, compound_interest = calculate_interest(principal, rate, time)\nprint(f\"Simple Interest: {simple_interest:.2f}\")\nprint(f\"Compound Interest: {compound_interest:.2f}\")\n```\n\nThis program defines a function `calculate_interest` that takes the principal amount, rate, and time as input and returns a tuple containing the simple and compound interest. The function calculates both types of interest and prints the results using an f-string. The sample input and output are provided to demonstrate the usage of the function.",
+  "error": null,
+  "elapsed_seconds": 4.61,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

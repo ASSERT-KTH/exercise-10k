@@ -1,0 +1,9 @@
+{
+  "id": 6309,
+  "title": "Dictionary Key Sorting",
+  "prompt": "Sort the keys of a dictionary in ascending order\nSample Input: {\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}\nSample Output: ['age', 'city', 'name']\n",
+  "answer": "You can use the `list()` function to convert the dictionary to a list of tuples, and then sort the list of tuples based on the first element of each tuple (which is the key). Finally, convert the sorted list of tuples back to a list and return it.\n\nHere's how you can do it:\n\n```python\ndef sort_dict_keys(d):\n    return list(sorted(d.items()))\n\n# Example usage\nprint(sort_dict_keys({\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}))  # Output: [('age', 30), ('city', 'New York'), ('name', 'John')]\n```",
+  "error": null,
+  "elapsed_seconds": 1.64,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

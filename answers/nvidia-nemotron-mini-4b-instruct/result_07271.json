@@ -1,0 +1,9 @@
+{
+  "id": 7271,
+  "title": "Array Rotation",
+  "prompt": "Write a program that rotates the elements of a given array to the right by a specified number of positions. For example, if the array is [1, 2, 3, 4, 5] and the number of positions is 2, the resulting array should be [4, 5, 1, 2, 3]. The program should handle arrays of any length and any number of positions.\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: [4, 5, 1, 2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef rotate_array(arr, positions):\n    \"\"\"\n    Rotates the elements of a given array to the right by a specified number of positions.\n\n    :param arr: The input array\n    :param positions: The number of positions to rotate the array to the right\n    :return: The rotated array\n    \"\"\"\n    # Ensure the input is a non-empty list\n    if not arr or not isinstance(arr, list) or len(arr) == 0:\n        raise ValueError(\"Input should be a non-empty list\")\n\n    # Ensure the number of positions is non-negative\n    if not isinstance(positions, int) or positions < 0:\n        raise ValueError(\"Number of positions should be a non-negative integer\")\n\n    # Rotate the array by the specified number of positions\n    rotated_arr = arr[-positions:] + arr[:-positions]\n\n    return rotated_arr\n```\nHere's an example of how to use this function:\n```python\narr = [1, 2, 3, 4, 5]\npositions = 2\n\nrotated_arr = rotate_array(arr, positions)\nprint(rotated_arr)  # Output: [4, 5, 1, 2, 3]\n```\nThis function first checks if the input is a non-empty list. If not, it raises a `ValueError`. Then, it checks if the number of positions is non-negative. If not, it also raises a `ValueError`. Finally, it rotates the array by the specified number of positions using slicing and returns the result.",
+  "error": null,
+  "elapsed_seconds": 3.93,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

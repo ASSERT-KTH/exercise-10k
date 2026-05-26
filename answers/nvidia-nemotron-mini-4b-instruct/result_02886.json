@@ -1,0 +1,9 @@
+{
+  "id": 2886,
+  "title": "Root Calculator",
+  "prompt": "Design a program to calculate the square root and cube root of a number.\nSample Input: 16\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you design a program to calculate the square root and cube root of a number. Here's a Python solution using the built-in `math` module for the square root calculation and the `math.pow()` function for the cube root calculation:\n\n```python\nimport math\n\ndef calculate_roots(number):\n    \"\"\"\n    Calculates the square root and cube root of a given number.\n\n    :param number: The number to calculate the roots of.\n    :return: A tuple containing the square root and cube root of the number.\n    \"\"\"\n\n    # Check if the number is non-negative to avoid taking the square root of a negative number\n    if number >= 0:\n        square_root = math.sqrt(number)\n        cube_root = math.pow(number, 1/3)\n        return square_root, cube_root\n    else:\n        raise ValueError(\"The number must be non-negative to calculate its square root.\")\n\n# Example usage\nsample_input = 16\nsquare_root, cube_root = calculate_roots(sample_input)\nprint(f\"The square root of {sample_input} is {square_root}.\")\nprint(f\"The cube root of {sample_input} is {cube_root}.\")\n```\n\nThis program defines a function `calculate_roots()` that takes a number as input and returns a tuple containing the square root and cube root of the number. The function checks if the number is non-negative to avoid taking the square root of a negative number. The example usage demonstrates how to use the function with a sample input of 16.",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

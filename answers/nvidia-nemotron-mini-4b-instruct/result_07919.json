@@ -1,0 +1,9 @@
+{
+  "id": 7919,
+  "title": "Distance Between Two Points",
+  "prompt": "Write a program to calculate the distance between two points in a 2D plane.\nSample Input: 1 2 4 6\nSample Output: 5.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the Euclidean distance between two points in a 2D plane given their x and y coordinates:\n\n```python\ndef calculate_distance(point1, point2):\n    \"\"\"\n    Calculates the Euclidean distance between two points in a 2D plane.\n\n    :param point1: A list or tuple of two floats representing the x and y coordinates of the first point.\n    :param point2: A list or tuple of two floats representing the x and y coordinates of the second point.\n    :return: A float representing the Euclidean distance between the two points.\n    \"\"\"\n    if len(point1) != 2 or len(point2) != 2:\n        raise ValueError(\"Both points must have two coordinates (x, y).\")\n\n    x1, y1 = point1\n    x2, y2 = point2\n\n    distance = ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5\n\n    return distance\n\n\n# Sample input and output\npoint1 = [1, 2]\npoint2 = [4, 6]\ndistance = calculate_distance(point1, point2)\nprint(f\"The distance between {point1} and {point2} is {distance}.\")\n```\n\nWhen you run this program with the sample input `[1, 2]`, `[4, 6]`, it will output:\n\n```\nThe distance between [1, 2] and [4, 6] is 5.0.\n```",
+  "error": null,
+  "elapsed_seconds": 3.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

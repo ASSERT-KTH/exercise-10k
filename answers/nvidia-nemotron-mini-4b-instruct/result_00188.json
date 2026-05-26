@@ -1,0 +1,9 @@
+{
+  "id": 188,
+  "title": "Fibonacci Sequence",
+  "prompt": "Create a program that uses a for loop to generate the Fibonacci sequence up to the nth number.\nSample Input: 10\nSample Output: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses a for loop to generate the Fibonacci sequence up to the nth number:\n\n```python\ndef fibonacci(n):\n    \"\"\"Generate the Fibonacci sequence up to the nth number.\"\"\"\n    sequence = [0, 1]\n\n    # Use a for loop to generate the remaining Fibonacci numbers\n    # up to the nth number\n    for _ in range(2, n):\n        sequence.append(sequence[-1] + sequence[-2])\n\n    return sequence\n\n# Get user input for the nth number\nn = int(input(\"Enter the value of n: \"))\n\n# Print the Fibonacci sequence up to the nth number\nprint(f\"Fibonacci sequence up to {n}: {fibonacci(n)}\")\n```\n\nWhen you run this program and enter `10` as the value for `n`, it will output:\n\n```\nEnter the value of n: 10\nFibonacci sequence up to 10: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]\n```",
+  "error": null,
+  "elapsed_seconds": 3.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8862,
+  "title": "Function to Calculate the Sum of Digit Factorials",
+  "prompt": "Write a function to calculate the sum of digit factorials of a given number\nSample Input: 145\nSample Output: 145\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that calculates the sum of the factorials of the digits of a given number:\n\n```python\ndef digit_factorial_sum(n):\n    \"\"\"\n    Calculates the sum of the factorials of the digits of a given number.\n\n    :param n: The number to calculate the sum for.\n    :return: The sum of the factorials of the digits of n.\n    \"\"\"\n    # Convert the number to a string and split it into digits\n    digits = [int(digit) for digit in str(n)]\n\n    # Calculate the factorial of each digit and sum them\n    factorial_sum = sum(math.factorial(digit) for digit in digits)\n\n    return factorial_sum\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(digit_factorial_sum(145))  # Output: 145\n```\n\nThis function first converts the given number to a string and splits it into individual digits. Then, it calculates the factorial of each digit using the `math.factorial()` function and sums them up. The result is returned as the final output.",
+  "error": null,
+  "elapsed_seconds": 2.84,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9576,
+  "title": "Data Type Analyzer",
+  "prompt": "Create a program that takes in a list of variables with their corresponding values and determines the data type of each variable. The program should then print out the variable name, its value, and its data type.\nSample Input: [{'var1': 10}, {'var2': 'hello'}, {'var3': 3.14}]\nSample Output: var1 = 10 (int)\nvar2 = hello (str)\nvar3 = 3.14 (float)\n",
+  "answer": "Here's a Python solution for the problem:\n\n```python\ndef determine_data_type(var_list):\n    result = []\n    for var in var_list:\n        value = var.values()[0]\n        data_type = type(value).__name__\n        result.append(f\"{var.keys()[0]} = {value} ({data_type})\")\n    return result\n\nsample_input = [{'var1': 10}, {'var2': 'hello'}, {'var3': 3.14}]\nprint(\"\\n\".join(determine_data_type(sample_input)))\n```\n\nThis program defines a function `determine_data_type()` that takes a list of dictionaries as input. It iterates through each dictionary in the list, extracts the value of a key (which is assumed to be the only key in each dictionary), and determines its data type using the `type()` function. The data type is then printed along with the variable name and its value. The function returns a list of strings, which is then printed out using the `print()` function and a newline character (`\\n`) to separate each output line.",
+  "error": null,
+  "elapsed_seconds": 2.66,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

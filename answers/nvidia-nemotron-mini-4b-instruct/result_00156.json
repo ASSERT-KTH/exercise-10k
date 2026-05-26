@@ -1,0 +1,9 @@
+{
+  "id": 156,
+  "title": "Dictionary Flattening",
+  "prompt": "Create a function that takes in a nested dictionary and returns a new flattened dictionary containing the same key-value pairs\nSample Input: dictionary = {'person': {'name': 'John', 'age': 30}, 'location': {'city': 'New York', 'country': 'USA'}}\nSample Output: {'name': 'John', 'age': 30, 'city': 'New York', 'country': 'USA'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef flatten_dict(nested_dict):\n    \"\"\"\n    Flattens a nested dictionary into a single-level dictionary.\n\n    Parameters:\n    nested_dict (dict): A nested dictionary containing key-value pairs.\n\n    Returns:\n    dict: A flattened dictionary containing the same key-value pairs as the input dictionary.\n    \"\"\"\n    flat_dict = {}\n    for key, value in nested_dict.items():\n        if isinstance(value, dict):\n            flat_dict.update(flatten_dict(value))\n        else:\n            flat_dict[key] = value\n    return flat_dict\n```\nHere's an example of how you can use this function:\n```python\ndictionary = {'person': {'name': 'John', 'age': 30}, 'location': {'city': 'New York', 'country': 'USA'}}\nflat_dict = flatten_dict(dictionary)\nprint(flat_dict)  # Output: {'name': 'John', 'age': 30, 'city': 'New York', 'country': 'USA'}\n```\nThis function uses recursion to flatten the nested dictionary. It iterates over each key-value pair in the input dictionary, and if the value is another dictionary, it calls itself recursively to flatten that dictionary and adds its key-value pairs to the output dictionary. If the value is not a dictionary, it simply adds the key-value pair to the output dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

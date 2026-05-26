@@ -1,0 +1,9 @@
+{
+  "id": 4704,
+  "title": "Dictionary Deletion",
+  "prompt": "Delete a key-value pair from a dictionary\nSample Input: {'name': 'John', 'age': 25}\nSample Output: {'age': 25}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's how you can delete a key-value pair from a dictionary in Python:\n\nYou can use the `pop()` method to delete a key-value pair from a dictionary. If you provide the key as an argument to the `pop()` method, it will return the corresponding value and remove the key-value pair from the dictionary. If you don't provide a key, it will raise a `KeyError`. Here's an example:\n\n```python\n# Sample Input: {'name': 'John', 'age': 25}\nmy_dict = {'name': 'John', 'age': 25}\n\n# Delete the key-value pair with key 'age'\nage_value = my_dict.pop('age')\nprint(my_dict)  # Output: {'name': 'John'}\nprint(age_value)  # Output: 25\n```\n\nIf you want to delete a key-value pair without knowing the key beforehand, you can use a loop to iterate through the dictionary and delete the pair when you find it. Here's an example:\n\n```python\n# Sample Input: {'name': 'John', 'age': 25}\nmy_dict = {'name': 'John', 'age': 25}\n\n# Delete the key-value pair with key 'age'\nfor key, value in my_dict.items():\n    if key == 'age':\n        del my_dict[key]\n        break\n\nprint(my_dict)  # Output: {'name': 'John'}\n```\n\nI hope this helps! Let me know if you have any further questions.",
+  "error": null,
+  "elapsed_seconds": 3.74,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

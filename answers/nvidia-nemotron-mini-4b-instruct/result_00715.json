@@ -1,0 +1,9 @@
+{
+  "id": 715,
+  "title": "Finding the Least Common Value",
+  "prompt": "Write a function to find the least common value in a dictionary\nSample Input: {'a': 1, 'b': 2, 'c': 1, 'd': 2, 'e': 1}\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the least common value (LCV) in a dictionary. The function assumes that the dictionary contains only unique integer values.\n\n```python\nfrom collections import Counter\n\ndef least_common_value(dictionary):\n    \"\"\"\n    Find the least common value in a dictionary.\n\n    :param dictionary: A dictionary with integer values.\n    :return: The least common value.\n    \"\"\"\n    # Count the occurrences of each value in the dictionary\n    value_counts = Counter(dictionary.values())\n\n    # Find the value with the smallest count\n    lcv = min(value_counts.keys(), key=value_counts.get)\n\n    return lcv\n```\n\nHere's an example of how to use the function:\n\n```python\nsample_input = {'a': 1, 'b': 2, 'c': 1, 'd': 2, 'e': 1}\nprint(least_common_value(sample_input))  # Output: 1\n```\n\nThis function first counts the occurrences of each value in the dictionary using a `Counter` object from the `collections` module. Then, it finds the value with the smallest count using the `min()` function with a `key` argument that specifies the `get()` method of the `Counter` object.",
+  "error": null,
+  "elapsed_seconds": 3.14,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

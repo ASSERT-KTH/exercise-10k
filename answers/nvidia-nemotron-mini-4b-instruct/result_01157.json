@@ -1,0 +1,9 @@
+{
+  "id": 1157,
+  "title": "Guessing Game with Hints",
+  "prompt": "Write a program that generates a random number between 1 and 100, and asks the user to guess it. After each guess, give the user a hint, such as 'too high' or 'too low'.\nSample Input: 50\nSample Output: Too high! Try again.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\nimport random\n\n# Generate a random number between 1 and 100\ntarget = random.randint(1, 100)\n\n# Initialize the number of attempts and the user's guess\nnum_attempts = 0\nuser_guess = int(input(\"Guess a number between 1 and 100: \"))\n\n# Continue guessing until the user guesses the correct number\nwhile user_guess != target:\n    num_attempts += 1\n\n    # Check if the user's guess is too high or too low\n    if user_guess < target:\n        print(\"Too low! Try again.\")\n    elif user_guess > target:\n        print(\"Too high! Try again.\")\n\n    # Get the user's new guess\n    user_guess = int(input(\"Guess a number between 1 and 100: \"))\n\n# After the user guesses correctly, inform them of the number of attempts\nprint(f\"Congratulations! You guessed the number in {num_attempts} attempts. The target number was {target}.\")\n```\nThis program generates a random number between 1 and 100, and then repeatedly asks the user to guess the number until they guess correctly. After each guess, the program provides a hint indicating whether the user's guess is too high or too low. Finally, the program informs the user of the number of attempts it took them to guess the correct number.",
+  "error": null,
+  "elapsed_seconds": 4.86,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

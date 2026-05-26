@@ -1,0 +1,9 @@
+{
+  "id": 4352,
+  "title": "Tax Calculator",
+  "prompt": "Write a program that calculates the tax on a given income based on a simple tax bracket system (e.g., 10% on income up to $1000, 20% on income above $1000)\nSample Input: 1500\nSample Output: 150\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the tax on a given income based on a simple tax bracket system:\n\n```python\ndef calculate_tax(income):\n    # Define the tax brackets\n    tax_brackets = [\n        (0, 1000, 0.1),  # 10% tax on income up to $1000\n        (1000, float('inf'), 0.2)  # 20% tax on income above $1000\n    ]\n\n    # Calculate the total tax\n    total_tax = 0\n    for bracket in tax_brackets:\n        lower, upper, tax_rate = bracket\n        if income >= lower and income <= upper:\n            tax_amount = income * tax_rate\n            total_tax += tax_amount\n            income -= tax_amount\n            break\n\n    return total_tax\n\n# Get user input\nincome = float(input(\"Enter your income: \"))\n\n# Calculate and print the tax\ntax = calculate_tax(income)\nprint(f\"The tax on your income of ${income} is ${tax}.\")\n```\n\nThis program defines a function `calculate_tax` that takes an income as input and returns the total tax based on the given tax bracket system. The function iterates through the tax brackets, calculating the tax for each bracket and updating the remaining income until it reaches zero. Finally, the function returns the total tax. The program then gets user input for the income, calls the function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.6,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

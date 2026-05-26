@@ -1,0 +1,9 @@
+{
+  "id": 6737,
+  "title": "Input Monitoring",
+  "prompt": "Write a program that monitors input data in real-time\nSample Input: Hello, world!\nSample Output: Monitoring input\n",
+  "answer": "Sure, I can help you with that. Here's an example Python program that demonstrates how to monitor input data in real-time using the `input()` function and the `print()` function. This program will print \"Monitoring input\" whenever the user enters input.\n\n```python\n# Function to monitor input in real-time\ndef monitor_input():\n    while True:\n        user_input = input(\"Enter input (or press Enter to exit): \")\n\n        # Check if the user has entered 'quit' or 'exit' to exit the loop\n        if user_input.lower() in ['quit', 'exit']:\n            print(\"Exiting...\")\n            break\n        else:\n            print(f\"Monitoring input: {user_input}\")\n\n# Call the function to start monitoring input\nmonitor_input()\n```\n\nThis program creates a function called `monitor_input()` that runs in an infinite loop. Inside the loop, it calls `input()` to get user input and stores it in the `user_input` variable. The program then checks if the user has entered 'quit' or 'exit' (case-insensitive) using the `in` keyword. If the user enters 'quit' or 'exit', the program prints \"Exiting...\" and breaks out of the loop. Otherwise, it prints \"Monitoring input: [user input]\" and continues monitoring input.\n\nYou can run this program in a terminal or command prompt and enter input to see the output. When you enter 'quit' or 'exit', the program will exit.",
+  "error": null,
+  "elapsed_seconds": 3.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

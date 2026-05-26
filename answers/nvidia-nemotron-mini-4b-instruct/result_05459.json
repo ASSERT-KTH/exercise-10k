@@ -1,0 +1,9 @@
+{
+  "id": 5459,
+  "title": "Mad Libs",
+  "prompt": "Write a program that takes a story with missing words as input and fills them in with user input\nSample Input: Once upon a time, there was a {adjective} {noun} who loved to {verb}\nSample Output: Once upon a time, there was a happy dog who loved to run\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef fill_in_the_blanks(story):\n    \"\"\"\n    Fills in missing words in a story with user input.\n\n    :param story: The story with missing words, as a string.\n    :return: The filled-in story, as a string.\n    \"\"\"\n    # Split the story into lines and remove any empty lines\n    lines = [line.strip() for line in story.split('\\n') if line.strip()]\n\n    # Prompt the user for input for each missing word\n    filled_lines = []\n    for i, line in enumerate(lines):\n        words = line.split()\n        missing_word = words[len(words) - 1]\n        prompt = f\"Please enter a word to replace {missing_word} in line {i + 1}: \"\n        user_input = input(prompt)\n        filled_lines.append(f\"{' '.join(words[:-1])} {user_input}\")\n\n    # Join the filled lines back into a single story\n    filled_story = '\\n'.join(filled_lines)\n\n    return filled_story\n\n# Example usage\nstory = \"\"\"\nOnce upon a time, there was a {adjective} {noun} who loved to {verb}.\nBut one day, the {noun} got lost in the forest.\n\"\"\"\nfilled_story = fill_in_the_blanks(story)\nprint(filled_story)\n```\nThis program prompts the user for input for each missing word in the story, and then fills in the blanks in the story based on the user's input. The resulting story is then printed to the console.",
+  "error": null,
+  "elapsed_seconds": 4.12,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8779,
+  "title": "Subsequence",
+  "prompt": "Write a function to check if a given string is a subsequence of another string.\nSample Input: ['abc', 'ahbgdc']\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a given string is a subsequence of another string. A subsequence of a string is a new string that is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters.\n\n```python\ndef is_subsequence(s1, s2):\n    \"\"\"\n    Check if s1 is a subsequence of s2.\n\n    :param s1: The string to check if it's a subsequence of s2.\n    :param s2: The string to check against.\n    :return: True if s1 is a subsequence of s2, False otherwise.\n    \"\"\"\n    if not s1:  # If s1 is empty, it's a subsequence of any string\n        return True\n\n    if not s2:  # If s2 is empty, s1 cannot be a subsequence\n        return False\n\n    for char in s1:\n        if char == s2[0]:\n            s2 = s2[1:]  # Remove the first character of s2\n            if not s2:  # If s2 is empty, s1 is a subsequence\n                return True\n            s2 = s2[1:]  # Remove the first character of s2 (to skip the next iteration)\n\n    return False\n```\n\nHere's an example of how to use the function:\n\n```python\nprint(is_subsequence('abc', 'ahbgdc'))  # Output: True\nprint(is_subsequence('abc', 'ahbgdcabc'))  # Output: False\nprint(is_subsequence('', 'abc'))  # Output: True\nprint(is_subsequence('abc', ''))  # Output: False\n```",
+  "error": null,
+  "elapsed_seconds": 4.13,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1335,
+  "title": "HTML Entity Encoder",
+  "prompt": "Write a function that takes a string as input and returns the string with HTML entities encoded.\nSample Input: <hello> world\nSample Output: &lt;hello&gt; world\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses the built-in `html` module to encode HTML entities in a string:\n\n```python\nimport html\n\ndef encode_html_entities(input_string: str) -> str:\n    \"\"\"\n    Encodes HTML entities in the given input string.\n\n    :param input_string: The input string to encode.\n    :return: The encoded string with HTML entities.\n    \"\"\"\n    return html.escape(input_string)\n```\n\nHere's an example of how to use this function:\n\n```python\ninput_string = \"<hello> world\"\noutput_string = encode_html_entities(input_string)\nprint(output_string)  # Output: &lt;hello&gt; world\n```\n\nThis function first imports the `html` module, which provides a `escape()` function to escape special characters in a string. The function then defines a parameter `input_string` and returns the result of calling `html.escape()` on the input string.",
+  "error": null,
+  "elapsed_seconds": 2.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

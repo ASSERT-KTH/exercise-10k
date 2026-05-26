@@ -1,0 +1,9 @@
+{
+  "id": 3335,
+  "title": "List Mapping (Function Application)",
+  "prompt": "Write a program that takes a list of integers and a function as input and returns a new list containing the result of applying the function to each element in the original list.\nSample Input: [1, 2, 3, 4, 5], sqrt\nSample Output: [1.0, 1.4142135623730951, 1.7320508075688772, 2.0, 2.23606797749979]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef apply_function_to_list(numbers, func):\n    \"\"\"\n    Applies a given function to each element in a list of numbers.\n\n    Parameters:\n    numbers (list): A list of numbers.\n    func (callable): A function that takes a single number as input and returns a number.\n\n    Returns:\n    list: A new list containing the results of applying the function to each element in the original list.\n    \"\"\"\n    # Check that the input is valid\n    if not isinstance(numbers, list) or not all(isinstance(num, (int, float)) for num in numbers):\n        raise ValueError(\"Input list must contain only numbers.\")\n    if not callable(func):\n        raise ValueError(\"Input function must be callable.\")\n\n    # Apply the function to each number in the list and return the result\n    return [func(num) for num in numbers]\n```\nHere's an example of how you can use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\nsqrt_numbers = apply_function_to_list(numbers, sqrt)\nprint(sqrt_numbers)  # Output: [1.0, 1.4142135623730951, 1.7320508075688772, 2.0, 2.23606797749979]\n```\nThis function checks that the input is valid (i.e., a list of numbers and a callable function), and then uses list comprehension to apply the given function to each element in the input list and returns the result.",
+  "error": null,
+  "elapsed_seconds": 4.16,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

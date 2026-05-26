@@ -1,0 +1,9 @@
+{
+  "id": 5341,
+  "title": "Array Indexing",
+  "prompt": "Create a function that takes an array and an index as input, and returns the element at that index in the array. If the index is out of bounds, return an error message.\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_element_at_index(arr, index):\n    \"\"\"\n    Returns the element at the given index in the input array.\n    If the index is out of bounds, returns an error message.\n\n    Parameters:\n    arr (list): The input array.\n    index (int): The index to retrieve the element from.\n\n    Returns:\n    int or str: The element at the given index, or an error message if the index is out of bounds.\n    \"\"\"\n    if not isinstance(arr, list) or not all(isinstance(x, (int, float)) for x in arr):\n        return \"Input array must be a list of numbers.\"\n\n    if not isinstance(index, int) or index < 0:\n        return \"Index must be a non-negative integer.\"\n\n    if index < 0 or index >= len(arr):\n        return f\"Index {index} is out of bounds for array with length {len(arr)}.\"\n\n    return arr[index]\n```\nHere's an example of how you can use this function:\n```python\n>>> get_element_at_index([1, 2, 3, 4, 5], 2)\n3\n>>> get_element_at_index([1, 2, 3, 4, 5], 6)\n\"Index 6 is out of bounds for array with length 5.\"\n```\nThis function checks that the input is a list of numbers, that the index is a non-negative integer, and that the index is within the bounds of the array. If any of these checks fail, it returns an error message. Otherwise, it returns the element at the given index.",
+  "error": null,
+  "elapsed_seconds": 4.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

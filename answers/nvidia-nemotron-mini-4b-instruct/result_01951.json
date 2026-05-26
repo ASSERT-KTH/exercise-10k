@@ -1,0 +1,9 @@
+{
+  "id": 1951,
+  "title": "Array Minimum",
+  "prompt": "Write a program that takes an array as input and returns the minimum value in the array.\nSample Input: [5, 2, 8, 1, 9]\nSample Output: 1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes an array (or list in Python) as input and returns the minimum value in the array:\n```python\ndef find_min(arr):\n    \"\"\"\n    This function takes an array as input and returns the minimum value in the array.\n\n    :param arr: The input array\n    :return: The minimum value in the array\n    \"\"\"\n\n    # Check if the input is a non-empty list\n    if not isinstance(arr, list) or len(arr) == 0:\n        raise ValueError(\"Input should be a non-empty list\")\n\n    # Find the minimum value in the array\n    min_val = arr[0]\n    for num in arr:\n        if num < min_val:\n            min_val = num\n\n    return min_val\n```\nHere's an example of how to use this function:\n```python\nsample_input = [5, 2, 8, 1, 9]\nprint(find_min(sample_input))  # Output: 1\n```\nThis function first checks if the input is a non-empty list. If not, it raises a `ValueError`. Then, it initializes the minimum value to the first element of the array and iterates through the array to find the smallest value. Finally, it returns the minimum value.",
+  "error": null,
+  "elapsed_seconds": 3.22,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

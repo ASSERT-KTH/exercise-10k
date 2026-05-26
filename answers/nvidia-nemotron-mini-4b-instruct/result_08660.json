@@ -1,0 +1,9 @@
+{
+  "id": 8660,
+  "title": "Function to Find Union of List of Lists",
+  "prompt": "Write a function that finds the union of a list of lists.\nSample Input: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nSample Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the union of a list of lists using a set to keep track of unique elements:\n\n```python\ndef union_of_lists(lists):\n    \"\"\"\n    Find the union of a list of lists.\n\n    :param lists: List of lists\n    :return: List containing all unique elements from all input lists\n    \"\"\"\n    # Initialize an empty set to store unique elements\n    unique_elements = set()\n\n    # Iterate over each list in the input list\n    for lst in lists:\n        # Add all elements from the current list to the set\n        unique_elements.update(lst)\n\n    # Convert the set back to a list and return it\n    return list(unique_elements)\n```\n\nHere's an example of how to use this function:\n\n```python\nsample_input = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nsample_output = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n\nprint(union_of_lists(sample_input))  # Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]\n```",
+  "error": null,
+  "elapsed_seconds": 3.23,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

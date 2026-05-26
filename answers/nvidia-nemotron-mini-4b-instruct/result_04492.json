@@ -1,0 +1,9 @@
+{
+  "id": 4492,
+  "title": "Tip Calculator",
+  "prompt": "Create a function that calculates the tip for a meal based on the total cost and a percentage.\nSample Input: 100 15\nSample Output: Tip: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef calculate_tip(total_cost, tip_percentage):\n    \"\"\"\n    Calculates the tip for a meal based on the total cost and a percentage.\n\n    Parameters:\n    total_cost (float): The total cost of the meal before tax.\n    tip_percentage (float): The percentage of the total cost to be added as a tip.\n\n    Returns:\n    float: The amount of the tip.\n    \"\"\"\n\n    # Validate input\n    if total_cost <= 0 or tip_percentage <= 0 or tip_percentage >= 100:\n        raise ValueError(\"Total cost and tip percentage must be positive numbers less than 100.\")\n\n    # Calculate the tip amount\n    tip_amount = total_cost * tip_percentage / 100\n\n    return tip_amount\n```\nHere's an example of how you can use this function:\n```python\ntotal_cost = 100\ntip_percentage = 15\n\ntip_amount = calculate_tip(total_cost, tip_percentage)\nprint(f\"Tip: {tip_amount:.2f}\")\n```\nThis will output:\n```yaml\nTip: 15.00\n```",
+  "error": null,
+  "elapsed_seconds": 3.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

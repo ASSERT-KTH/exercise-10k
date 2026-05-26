@@ -1,0 +1,9 @@
+{
+  "id": 4211,
+  "title": "Maximum Subarray",
+  "prompt": "Find the maximum contiguous subarray of an array.\nSample Input: [-2, 1, -3, 4, -1, 2, 1, -5, 4]\nSample Output: [4, -1, 2, 1] with sum 6\n",
+  "answer": "To find the maximum contiguous subarray of an array, you can use a dynamic programming approach with two pointers. Here's a Python function that implements this:\n\n```python\ndef max_subarray(arr):\n    n = len(arr)\n    max_so_far = arr[0]\n    max_ending_here = arr[0]\n\n    for i in range(1, n):\n        max_ending_here = max(arr[i], max_ending_here + arr[i])\n        max_so_far = max(max_so_far, max_ending_here)\n\n    return max_so_far\n```\n\nThis function initializes `max_so_far` and `max_ending_here` to the first element of the array. Then, it iterates through the array, updating `max_ending_here` to be the maximum of the current element and the sum of the current element and the previous `max_ending_here`. The maximum value found so far is stored in `max_so_far`.\n\nAfter iterating through the array, the function returns `max_so_far`, which represents the maximum contiguous subarray of the input array.\n\nHere's how you can use this function with the sample input:\n\n```python\narr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]\nprint(max_subarray(arr))  # Output: 6\n```",
+  "error": null,
+  "elapsed_seconds": 3.52,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2345,
+  "title": "Mad Libs",
+  "prompt": "Write a program to take a story with missing words as input and ask the user to fill in the words, then print out the completed story\nSample Input: noun, verb, adjective\nSample Output: The quick brown noun verb over the adjective fence\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program prompts the user to input a story with missing words, then asks the user to fill in the missing words, and finally prints out the completed story.\n\n```python\ndef complete_story():\n    \"\"\"Get a story with missing words from the user and complete it.\"\"\"\n\n    # Get the story with missing words from the user\n    story = input(\"Please provide a story with missing words separated by commas: \")\n    missing_words = story.split(', ')\n\n    # Ask the user to fill in the missing words\n    completed_story = []\n    for word in missing_words:\n        word_to_fill = input(f\"Please fill in the word '{word}': \")\n        completed_story.append(word_to_fill)\n\n    # Print out the completed story\n    print(\" \".join(completed_story))\n\n# Call the function to complete the story\ncomplete_story()\n```\n\nThis program defines a function `complete_story()` that prompts the user for a story with missing words, splits the input into individual words, asks the user to fill in each missing word, and then prints out the completed story. The function is then called to complete the story.",
+  "error": null,
+  "elapsed_seconds": 3.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

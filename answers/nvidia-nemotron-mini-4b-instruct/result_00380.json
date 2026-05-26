@@ -1,0 +1,9 @@
+{
+  "id": 380,
+  "title": "Grade Checker",
+  "prompt": "Write a program that uses conditional statements to determine a student's grade based on their score. The grade is 'A' if the score is 90 or above, 'B' if the score is between 80 and 89, 'C' if the score is between 70 and 79, 'D' if the score is between 60 and 69, and 'F' if the score is below 60.\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef determine_grade(score):\n    \"\"\"Determines a student's grade based on their score.\"\"\"\n\n    # Check for invalid scores\n    if score < 0 or score > 100:\n        return \"Invalid score. Please enter a score between 0 and 100.\"\n\n    # Determine the grade based on the score\n    if score >= 90:\n        grade = \"A\"\n    elif score >= 80:\n        grade = \"B\"\n    elif score >= 70:\n        grade = \"C\"\n    elif score >= 60:\n        grade = \"D\"\n    else:\n        grade = \"F\"\n\n    return grade\n\n# Get user input\nscore = int(input(\"Enter a score between 0 and 100: \"))\n\n# Print the result\nprint(f\"Your grade is {determine_grade(score)}.\")\n```\n\nThis program defines a function `determine_grade` that takes a score as input and returns the corresponding grade. It then prompts the user to enter a score, converts the input to an integer, and calls the function to determine the grade. Finally, it prints the result.",
+  "error": null,
+  "elapsed_seconds": 58.87,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

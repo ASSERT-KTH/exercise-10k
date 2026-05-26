@@ -1,0 +1,9 @@
+{
+  "id": 5319,
+  "title": "Reduce Function",
+  "prompt": "Create a function that uses the reduce function to calculate the sum of a list of numbers\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a JavaScript function that uses the `reduce()` method to calculate the sum of a list of numbers:\n\n```javascript\nfunction calculateSum(numbers) {\n  // Check if the input is an array and contains at least one number\n  if (!Array.isArray(numbers) || numbers.length === 0) {\n    throw new Error('Input should be a non-empty array of numbers');\n  }\n\n  // Use reduce to calculate the sum\n let sum = numbers.reduce((accumulator, currentValue) => {\n    // Check if the current value is a number\n    if (typeof currentValue === 'number') {\n      return accumulator + currentValue;\n    } else {\n      throw new Error('All elements in the array should be numbers');\n    }\n  }, 0);\n\n  return sum;\n}\n```\n\nYou can use this function like this:\n\n```javascript\nconst numbers = [1, 2, 3, 4, 5];\nconst sum = calculateSum(numbers);\nconsole.log(sum); // Output: 15\n```\n\nThis function first checks if the input is an array and contains at least one number. If not, it throws an error. Then, it uses the `reduce()` method to iterate through the array and accumulate the sum. It checks if each element is a number and adds it to the accumulator if it is. If not, it throws an error. Finally, it returns the calculated sum.",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

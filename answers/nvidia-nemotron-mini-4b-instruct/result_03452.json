@@ -1,0 +1,9 @@
+{
+  "id": 3452,
+  "title": "Coin Flip Simulator",
+  "prompt": "Develop a program that simulates a coin flip, where the user can choose to flip a coin and the program generates a random result (heads or tails)\nSample Input: flip\nSample Output: Heads\n",
+  "answer": "Sure, I'd be happy to help you develop a program for simulating a coin flip. Here's a simple Python program that meets your requirements:\n\n```python\nimport random\n\ndef flip_coin():\n    \"\"\"Simulate a coin flip and return the result (heads or tails).\"\"\"\n    return \"Heads\" if random.randint(0, 1) == 0 else \"Tails\"\n\ndef main():\n    \"\"\"Get user input, simulate a coin flip, and display the result.\"\"\"\n    user_input = input(\"Do you want to flip a coin? (yes/no): \").lower()\n\n    if user_input == \"yes\":\n        result = flip_coin()\n        print(f\"You flipped a coin and got {result}.\")\n    else:\n        print(\"Have a great day!\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program defines a function `flip_coin()` that generates a random result (heads or tails) by calling `random.randint(0, 1)`. The `main()` function gets user input, checks if the user wants to flip a coin, and displays the result based on the `flip_coin()` function.\n\nYou can run this program and enter \"yes\" to flip a coin, or any other input to exit. The program will then display the result of the simulated coin flip.",
+  "error": null,
+  "elapsed_seconds": 3.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

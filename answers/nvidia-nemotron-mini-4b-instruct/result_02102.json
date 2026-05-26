@@ -1,0 +1,9 @@
+{
+  "id": 2102,
+  "title": "Accessing Dictionary Values",
+  "prompt": "Write a function to retrieve the value associated with a given key from a dictionary\nSample Input: {'name': 'John', 'age': 30}, 'name'\nSample Output: John\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_value_from_dict(dictionary, key):\n    \"\"\"\n    Retrieves the value associated with a given key from a dictionary.\n\n    Parameters:\n    dictionary (dict): The dictionary to search in.\n    key (any): The key to look up in the dictionary.\n\n    Returns:\n    any: The value associated with the given key, or None if the key is not found.\n    \"\"\"\n    return dictionary.get(key)\n```\nHere's an example of how you can use this function:\n```python\nmy_dict = {'name': 'John', 'age': 30}\nprint(get_value_from_dict(my_dict, 'name'))  # Output: John\nprint(get_value_from_dict(my_dict, 'city'))   # Output: None\n```\nThis function uses the `dict.get()` method, which is a safer alternative to accessing a key directly, since it returns `None` if the key is not found instead of raising a `KeyError`. If you prefer to use the `in` keyword to check for the existence of a key before accessing it, you can modify the function as follows:\n```python\ndef get_value_from_dict(dictionary, key):\n    \"\"\"\n    Retrieves the value associated with a given key from a dictionary.\n\n    Parameters:\n    dictionary (dict): The dictionary to search in.\n    key (any): The key to look up in the dictionary.\n\n    Returns:\n    any: The value associated with the given key, or None if the key is not found.\n    \"\"\"\n    return dictionary.get(key, None)\n```\nThis modified function will return `None` if the key is not found, instead of raising a `KeyError`.",
+  "error": null,
+  "elapsed_seconds": 4.61,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

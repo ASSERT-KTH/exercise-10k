@@ -1,0 +1,9 @@
+{
+  "id": 747,
+  "title": "Mad Libs",
+  "prompt": "Write a program that takes a story with blank spaces as input and asks the user to fill in the blanks with words\nSample Input: once upon a time in a __ADJECTIVE__ land\nSample Output: once upon a time in a happy land\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef fill_blanks(story):\n    \"\"\"\n    Asks the user to fill in the blanks in a story with blank spaces.\n\n    :param story: str, the story with blank spaces\n    :return: str, the story with filled-in blanks\n    \"\"\"\n    # Split the story into lines and find the blank spaces\n    lines = story.splitlines()\n    blank_lines = [line for line in lines if ' ' in line]\n\n    # Ask the user to fill in the blanks\n    filled_lines = [input(f\"Enter a word to fill in the blank in line {i + 1}: \") for i, line in enumerate(blank_lines)]\n\n    # Join the filled lines back into a story and return it\n    return '\\n'.join(filled_lines)\n\n# Example usage\nstory = \"\"\"\nonce upon a time in a __ADJECTIVE__ land\nthere lived a brave __NOUN__\n\"\"\"\nprint(fill_blanks(story))\n```\nThis program first splits the input story into lines and finds the lines with blank spaces using a list comprehension. Then, it asks the user to fill in the blanks for each line. Finally, it joins the filled lines back into a story and returns it.",
+  "error": null,
+  "elapsed_seconds": 3.14,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

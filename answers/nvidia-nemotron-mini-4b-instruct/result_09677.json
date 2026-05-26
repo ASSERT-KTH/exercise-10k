@@ -1,0 +1,9 @@
+{
+  "id": 9677,
+  "title": "Suffix Checker",
+  "prompt": "Write a program that asks for two strings and checks if the first string is a suffix of the second string.\nSample Input: def, abcdef\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef is_suffix(string1, string2):\n    \"\"\"\n    Check if string1 is a suffix of string2.\n\n    :param string1: The string to check as a suffix.\n    :param string2: The string to check against.\n    :return: True if string1 is a suffix of string2, False otherwise.\n    \"\"\"\n    if not isinstance(string1, str) or not isinstance(string2, str):\n        raise TypeError(\"Both inputs must be strings.\")\n\n    return string1 in string2[len(string1):]\n\n# Get user input\nstring1 = input(\"Enter the first string: \")\nstring2 = input(\"Enter the second string: \")\n\n# Check if string1 is a suffix of string2\nresult = is_suffix(string1, string2)\n\n# Print the result\nif result:\n    print(f\"'{string1}' is a suffix of '{string2}'.\")\nelse:\n    print(f\"'{string1}' is not a suffix of '{string2}'.\")\n```\nThis program defines a function `is_suffix` that checks if a given string `string1` is a suffix of another string `string2`. The function checks if both inputs are strings and raises a `TypeError` if they are not. Then, it uses the built-in `in` operator to check if `string1` is a substring of `string2` starting from the length of `string1`. The program then gets user input for the two strings and calls the `is_suffix` function to check if the first string is a suffix of the second string. Finally, it prints the result.\n\nHere's an example of how the program works:\n\n```\nEnter the first string: def\nEnter the second string: abcdef\n'def' is a suffix of 'abcdef'.\n```",
+  "error": null,
+  "elapsed_seconds": 4.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

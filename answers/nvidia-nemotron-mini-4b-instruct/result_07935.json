@@ -1,0 +1,9 @@
+{
+  "id": 7935,
+  "title": "Distance Calculator",
+  "prompt": "Write a program to calculate the distance between two points given their coordinates.\nSample Input: 1 2 4 6\nSample Output: 5.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the Euclidean distance between two points given their x and y coordinates:\n\n```python\nimport math\n\ndef calculate_distance(point1, point2):\n    \"\"\"\n    Calculates the Euclidean distance between two points given their coordinates.\n\n    :param point1: A tuple of two floats representing the x and y coordinates of the first point.\n    :param point2: A tuple of two floats representing the x and y coordinates of the second point.\n    :return: A float representing the Euclidean distance between the two points.\n    \"\"\"\n    x1, y1 = point1\n    x2, y2 = point2\n\n    # Calculate the difference in x and y coordinates\n    dx = x2 - x1\n    dy = y2 - y1\n\n    # Calculate the Euclidean distance using the Pythagorean theorem\n    distance = math.sqrt(dx**2 + dy**2)\n\n    return distance\n\n# Sample input\npoint1 = (1, 2)\npoint2 = (4, 6)\n\ndistance = calculate_distance(point1, point2)\n\nprint(f\"The distance between the two points is {distance:.2f}.\")\n```\n\nWhen you run this program with the sample input `(1, 2)` and `(4, 6)`, it will output:\n\n```\nThe distance between the two points is 5.00.\n```",
+  "error": null,
+  "elapsed_seconds": 3.42,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

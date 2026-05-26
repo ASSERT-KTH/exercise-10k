@@ -1,0 +1,9 @@
+{
+  "id": 437,
+  "title": "Consonant Counter",
+  "prompt": "Ask the user for a string and print out the number of consonants in it.\nSample Input: Hello world\nSample Output: 7\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution for your problem:\n\n```python\ndef count_consonants(s):\n    \"\"\"\n    Count the number of consonants in a given string.\n\n    :param s: str - The input string.\n    :return: int - The number of consonants in the string.\n    \"\"\"\n    # Define a set of consonants\n    consonants = set(\"bcdfghjklmnpqrstvwxyz\")\n\n    # Count the number of consonants in the string\n    num_consonants = sum(1 for char in s if char.lower() in consonants)\n\n    return num_consonants\n\n# Get user input\nuser_input = input(\"Enter a string: \")\n\n# Print the result\nprint(f\"The number of consonants in '{user_input}' is {count_consonants(user_input)}.\")\n```\n\nThis program defines a function `count_consonants` that takes a string as input and returns the number of consonants in it. It does this by converting the string to lowercase, checking if each character is a consonant using a set of consonants, and summing up the number of consonants found. The function is then called with user input, and the result is printed to the console.",
+  "error": null,
+  "elapsed_seconds": 3.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

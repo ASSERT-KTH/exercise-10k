@@ -1,0 +1,9 @@
+{
+  "id": 1364,
+  "title": "Division Calculator",
+  "prompt": "Create a program that asks the user for two numbers and then divides the first number by the second.\nSample Input: 10 2\nSample Output: 5.0\n",
+  "answer": "Sure, I'd be happy to help you create a program that performs the given task. Here's an example Python program that meets your requirements:\n\n```python\ndef divide_numbers():\n    \"\"\"Asks the user for two numbers and then divides the first number by the second.\"\"\"\n\n    # Ask the user for the first number\n    num1 = float(input(\"Enter the first number: \"))\n\n    # Ask the user for the second number (assumed to be non-zero)\n    while True:\n        try:\n            num2 = float(input(\"Enter the second number (non-zero): \"))\n            if num2 != 0:\n                break\n            else:\n                print(\"Error: The second number cannot be zero. Please try again.\")\n        except ValueError:\n            print(\"Error: Please enter a valid number for the second number.\")\n\n    # Perform the division and print the result\n    result = num1 / num2\n    print(f\"{num1} divided by {num2} is {result}.\")\n\n# Call the function to start the program\ndivide_numbers()\n```\n\nThis program defines a function `divide_numbers()` that prompts the user for two numbers, validates that the second number is non-zero, and then performs the division and prints the result. The function uses input() to get user input and float() to convert the input to a floating-point number. It also uses a `while` loop to ensure that the user enters a non-zero number for the second number.",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

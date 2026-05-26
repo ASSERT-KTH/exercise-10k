@@ -1,0 +1,9 @@
+{
+  "id": 1153,
+  "title": "Dictionary Lookup",
+  "prompt": "Write a program that looks up a word in a dictionary and prints out its definition.\nSample Input: hello\nSample Output: A greeting.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses the `urllib` library to fetch the definition of a word from an online dictionary (in this case, I used the Merriam-Webster API). You can replace it with any other dictionary API or a local dictionary file if needed.\n\n```python\nimport urllib.request\n\ndef get_definition(word):\n    url = f\"https://www.merriam-webster.com/api/v1/words/{word}.json\"\n    with urllib.request.urlopen(url) as response:\n        data = response.read().decode()\n    return data\n\ndef lookup_definition(word):\n    try:\n        definition_data = get_definition(word)\n        definition = definition_data[\"results\"][0][\"principalPartOfSpeech\"][\"name\"] + \": \" + definition_data[\"results\"][0][\"meanings\"][0][\"definitions\"][0][\"definition\"]\n        print(definition)\n    except IndexError:\n        print(f\"No definition found for the word '{word}'.\")\n\n# Example usage\nlookup_definition(\"hello\")\n```\n\nThis program defines a function `get_definition` that fetches the definition of a word from the Merriam-Webster API. The function `lookup_definition` then calls `get_definition` with a user-provided word and prints out its definition. You can replace the `lookup_definition` function with your own implementation if needed.",
+  "error": null,
+  "elapsed_seconds": 3.24,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5235,
+  "title": "Student GPA Calculator",
+  "prompt": "Write a program that takes a student's grades as input, and prints their GPA based on the following scale: A (4.0), B (3.0), C (2.0), D (1.0), F (0.0).\nSample Input: [A, B, C]\nSample Output: 3.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_gpa(grades):\n    \"\"\"\n    Calculates the GPA of a student based on their grades.\n\n    :param grades: List of letter grades (A, B, C, D, F)\n    :return: Float representing the GPA\n    \"\"\"\n    if not all(grade in 'ABCD' for grade in grades):\n        raise ValueError(\"All grades must be either A, B, C, D, or F.\")\n\n    gpa = sum(GRADES[grade] for grade in grades) / len(grades)\n    return gpa\n\n# Example usage:\nstudent_grades = ['A', 'B', 'C']\ngpa = calculate_gpa(student_grades)\nprint(f\"The GPA is: {gpa:.1f}\")\n```\nThis program defines a function `calculate_gpa` that takes a list of letter grades as input and returns the corresponding GPA. It checks that all grades are valid (A, B, C, D, or F) and calculates the GPA by summing the corresponding numeric values (4.0, 3.0, 2.0, 1.0, and 0.0) and dividing by the number of grades. The example usage at the end of the program demonstrates how to use the function with a sample input.",
+  "error": null,
+  "elapsed_seconds": 3.18,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

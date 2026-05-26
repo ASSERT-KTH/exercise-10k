@@ -1,0 +1,9 @@
+{
+  "id": 2909,
+  "title": "Character Counter",
+  "prompt": "Develop a program to count the occurrences of a given character in a string.\nSample Input: ['programming', 'm']\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef count_char(string, char):\n    \"\"\"\n    Count the occurrences of a given character in a string.\n\n    :param string: The input string.\n    :param char: The character to count occurrences of.\n    :return: The number of times the character appears in the string.\n    \"\"\"\n    # Ensure the input is a non-empty string\n    if not isinstance(string, str) or not string:\n        raise ValueError(\"Input must be a non-empty string.\")\n\n    # Count the occurrences of the character in the string\n    count = string.count(char)\n\n    return count\n\n# Example usage\ninput_string = 'programming'\nchar = 'm'\nresult = count_char(input_string, char)\nprint(f\"The character '{char}' appears {result} times in the string '{input_string}'.\")\n```\nThis program defines a function `count_char` that takes a string and a character as input, and returns the number of times the character appears in the string. The function checks that the input is a non-empty string, and then uses the built-in `str.count` method to count the occurrences of the character. The example usage at the end of the program demonstrates how to use the function to count the occurrences of the character 'm' in the string 'programming'.",
+  "error": null,
+  "elapsed_seconds": 3.22,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

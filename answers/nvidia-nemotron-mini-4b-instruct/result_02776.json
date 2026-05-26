@@ -1,0 +1,9 @@
+{
+  "id": 2776,
+  "title": "Quiz Game",
+  "prompt": "Write a program that takes a list of questions as input and asks the user to answer them.\nSample Input: ['What is the capital of France?', 'What is the largest planet in our solar system?']\nSample Output: You scored 2/2.\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef ask_and_check(questions):\n    \"\"\"Ask the user to answer a list of questions and check their answers.\"\"\"\n    score = 0\n    for question in questions:\n        answer = input(question + \"\\n\")\n        if answer.lower() == questions[questions.index(question)].lower():\n            score += 1\n    print(f\"You scored {score}/{len(questions)}.\")\n\n# Example usage\nquestions = ['What is the capital of France?', 'What is the largest planet in our solar system?']\nask_and_check(questions)\n```\n\nThis program defines a function `ask_and_check` that takes a list of questions as input. It then loops through each question, prompts the user to answer, and checks if their answer is correct by comparing it to the correct answer (which is also stored in the list of questions). If the answer is correct, the score is incremented. Finally, it prints the user's score out of the total number of questions.\n\nYou can modify the `questions` list to include any questions you'd like to ask the user.",
+  "error": null,
+  "elapsed_seconds": 2.82,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

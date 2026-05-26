@@ -1,0 +1,9 @@
+{
+  "id": 9917,
+  "title": "Typography Checker",
+  "prompt": "Write a program that checks the typography of a given text (e.g. font, size, style).\nSample Input: This is a sample text.\nSample Output: Font: default, Size: 12, Style: plain\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks the typography of a given text based on the information provided in the sample input. This program uses the `re` module to extract the font name, size, and style from the input text.\n\n```python\nimport re\n\ndef get_typography(text):\n    # Regular expression pattern to match font name, size, and style\n    pattern = r'(?P<font>\\w+): (?P<size>\\d+), (?P<style>\\w+)'\n\n    # Find all matches in the input text\n    matches = re.findall(pattern, text)\n\n    # Extract the font name, size, and style from the matches\n    font = matches[0]['font'] if matches else 'default'\n    size = matches[0]['size'] if matches else '12'\n    style = matches[0]['style'] if matches else 'plain'\n\n    return f'Font: {font}, Size: {size}, Style: {style}'\n\n# Test the function with a sample input\nsample_input = \"This is a sample text.\"\nprint(get_typography(sample_input))\n```\n\nThis program defines a function `get_typography` that takes a text as input and returns a string containing the font name, size, and style. The function uses a regular expression pattern to extract the information from the input text. The sample input \"This is a sample text.\" is then used to test the function, and the output is printed to the console.",
+  "error": null,
+  "elapsed_seconds": 3.88,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

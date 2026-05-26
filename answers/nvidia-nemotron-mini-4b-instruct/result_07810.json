@@ -1,0 +1,9 @@
+{
+  "id": 7810,
+  "title": "IP Address Validator",
+  "prompt": "Write a program that checks whether an IP address is valid.\nSample Input: 192.168.1.1\nSample Output: Valid IP address\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if an IP address is valid based on the following rules:\n\n1. Each part (group) of the IP address must be between 0 and 255, inclusive.\n2. The IP address must have four parts (groups) separated by dots (`.`).\n\nHere's the code:\n\n```python\nimport re\n\ndef is_valid_ip(ip):\n    # Regular expression pattern for a valid IP address\n    pattern = r'^((2[0-4]\\d|25[0-5]|[01]?\\d\\d?)\\.){3}(2[0-4]\\d|25[0-5]|[01]?\\d\\d?)$'\n\n    # Check if the IP address matches the pattern\n    match = re.match(pattern, ip)\n\n    # If the match is not None, the IP address is valid\n    return match is not None\n\n# Test the function with a sample input\nip = \"192.168.1.1\"\nif is_valid_ip(ip):\n    print(f\"{ip} is a Valid IP address\")\nelse:\n    print(f\"{ip} is not a Valid IP address\")\n```\n\nThis program uses a regular expression to check if the IP address matches the pattern for a valid IP address. The `re` module provides a `match()` method that checks if a string matches a regular expression pattern. If the match is not None, the IP address is considered valid.",
+  "error": null,
+  "elapsed_seconds": 3.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

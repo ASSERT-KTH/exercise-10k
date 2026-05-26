@@ -1,0 +1,9 @@
+{
+  "id": 3708,
+  "title": "Function to Generate Random Password",
+  "prompt": "Write a function that generates a random password of a specified length.\nSample Input: 10\nSample Output: 'g4j#8dLpM'\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that generates a random password of a specified length using the `secrets` module, which provides cryptographically secure random numbers. Make sure to install the `cryptography` library if you haven't already, as it's required for the `secrets` module. You can install it using pip:\n\n```bash\npip install cryptography\n```\n\nHere's the function:\n\n```python\nimport secrets\nimport string\n\ndef generate_password(length: int) -> str:\n    \"\"\"\n    Generates a random password of the specified length.\n\n    :param length: The desired length of the password.\n    :return: A random password as a string.\n    \"\"\"\n    if length < 8:\n        raise ValueError(\"Password length must be at least 8 characters.\")\n\n    # Define the character set for the password\n    char_set = string.ascii_letters + string.digits + string.punctuation\n\n    # Generate a random password using secrets.choice()\n    return ''.join(secrets.choice(char_set) for _ in range(length))\n```\n\nHere's an example of how to use the function:\n\n```python\npassword = generate_password(10)\nprint(password)\n```\n\nThis will output a random 10-character password, like this:\n\n```\n'g4j#8dLpM'\n```",
+  "error": null,
+  "elapsed_seconds": 3.52,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

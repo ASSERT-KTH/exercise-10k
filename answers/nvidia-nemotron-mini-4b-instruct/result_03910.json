@@ -1,0 +1,9 @@
+{
+  "id": 3910,
+  "title": "Tip Calculator",
+  "prompt": "Create a program that calculates the total cost of a meal including a tip given the cost of the meal and the tip percentage.\nSample Input: 20 15\nSample Output: 23.0\n",
+  "answer": "Sure, I'd be happy to help you create a program for that. Here's an example solution in Python:\n\n```python\ndef calculate_total_cost(meal_cost, tip_percentage):\n    \"\"\"\n    Calculates the total cost of a meal including a tip.\n\n    :param meal_cost: The cost of the meal before adding a tip.\n    :param tip_percentage: The percentage of the meal cost to tip as a decimal (e.g., 0.15 for 15%).\n    :return: The total cost of the meal including a tip.\n    \"\"\"\n\n    # Validate input\n    if not isinstance(meal_cost, (int, float)) or meal_cost < 0:\n        raise ValueError(\"Meal cost must be a non-negative number.\")\n\n    if not isinstance(tip_percentage, (int, float)) or tip_percentage < 0 or tip_percentage > 1:\n        raise ValueError(\"Tip percentage must be a number between 0 and 1 (exclusive).\")\n\n    # Calculate the tip amount\n    tip_amount = meal_cost * tip_percentage\n\n    # Calculate the total cost\n    total_cost = meal_cost + tip_amount\n\n    return total_cost\n\n\n# Example usage\nmeal_cost = 20\ntip_percentage = 0.15\ntotal_cost = calculate_total_cost(meal_cost, tip_percentage)\nprint(f\"{meal_cost} + {tip_percentage * meal_cost:.2f} = {total_cost:.2f}\")\n```\n\nThis program defines a function `calculate_total_cost` that takes the cost of the meal and the tip percentage as input, validates the input, calculates the tip amount, and returns the total cost. The example usage at the end of the program demonstrates how to use the function to calculate the total cost for a meal with a cost of $20 and a tip percentage of 15%.",
+  "error": null,
+  "elapsed_seconds": 4.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

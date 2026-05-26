@@ -1,0 +1,9 @@
+{
+  "id": 7000,
+  "title": "Calculation of Volume of a Sphere",
+  "prompt": "Write a program that takes the radius of a sphere as input and returns its volume.\nSample Input: 5\nSample Output: 523.5987755982988\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes the radius of a sphere as input and returns its volume using the formula `V = (4/3) * π * r^3`, where `r` is the radius and `V` is the volume. The output will be rounded to 10 decimal places using the `format()` function with the `f` format specifier.\n\n```python\nimport math\n\ndef sphere_volume(radius):\n    \"\"\"\n    Calculates the volume of a sphere given its radius.\n\n    :param radius: float or int - The radius of the sphere.\n    :return: float - The volume of the sphere.\n    \"\"\"\n    if not isinstance(radius, (float, int)):\n        raise TypeError(\"The radius must be a number.\")\n\n    volume = (4/3) * math.pi * (radius ** 3)\n    return format(volume, '.10f')\n\n# Get user input\nradius = float(input(\"Enter the radius of the sphere: \"))\n\n# Calculate and print the volume\nvolume = sphere_volume(radius)\nprint(f\"The volume of the sphere with radius {radius} is {volume} cubic units.\")\n```\n\nThis program will prompt the user to enter the radius of the sphere, calculate its volume, and then display the result with 10 decimal places.",
+  "error": null,
+  "elapsed_seconds": 3.23,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

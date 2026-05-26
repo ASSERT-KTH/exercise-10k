@@ -1,0 +1,9 @@
+{
+  "id": 2662,
+  "title": "Substring Extraction",
+  "prompt": "Write a program that takes a string and two integers as input, and returns the substring starting at the first integer and ending at the second integer.\nSample Input: hello world 3 7\nSample Output: lo wo\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_substring(s, start, end):\n    \"\"\"\n    Returns the substring starting at the first integer and ending at the second integer,\n    where s is a string and start and end are integers.\n    \"\"\"\n    # Check that the input is valid\n    if not isinstance(s, str) or not isinstance(start, int) or not isinstance(end, int):\n        raise ValueError(\"All inputs must be of type str, int, and the correct order.\")\n    if start < 0 or end > len(s) or start > end:\n        raise ValueError(\"The start index must be less than the end index and within the string's length.\")\n\n    # Return the substring\n    return s[start:end]\n\n# Example usage\nsample_input = \"hello world 3 7\"\nprint(get_substring(sample_input, 3, 7))  # Output: lo wo\n```\nThis program defines a function `get_substring` that checks the input types and validity, and then returns the substring using Python's slice notation. The example usage shows how to call the function with a sample input string.",
+  "error": null,
+  "elapsed_seconds": 4.24,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

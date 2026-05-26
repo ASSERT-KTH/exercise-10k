@@ -1,0 +1,9 @@
+{
+  "id": 9628,
+  "title": "Function with Nested Loops",
+  "prompt": "Create a function that uses nested loops to print out a multiplication table.\nSample Input: 10\nSample Output: Multiplication table up to 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef print_multiplication_table(number):\n    \"\"\"\n    Print a multiplication table up to the given number.\n\n    :param number: The upper limit of the multiplication table.\n    \"\"\"\n    # Ensure the input is a positive integer\n    if not isinstance(number, int) or number < 1:\n        raise ValueError(\"Input must be a positive integer\")\n\n    # Print the header\n    print(f\"Multiplication table up to {number}\")\n\n    # Use nested loops to print the table\n    for i in range(1, number + 1):\n        print(f\"{i} x \", end=\"\")\n        for j in range(1, i + 1):\n            print(f\"{i} x {j} = {i * j} \", end=\"\")\n        print()\n\n# Example usage\nprint_multiplication_table(10)\n```\nThis function first checks if the input is a positive integer. If not, it raises a `ValueError`. Then, it prints the header and uses two nested loops to print the multiplication table. The outer loop iterates from 1 to the given number, and the inner loop iterates from 1 to the current value of `i`. The product of the two values is printed in the table, and a space is added after each product to make it easier to read. Finally, a newline character is added to move to the next row.\n\nYou can call this function with any positive integer as the argument to print a multiplication table up to that number.",
+  "error": null,
+  "elapsed_seconds": 3.67,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

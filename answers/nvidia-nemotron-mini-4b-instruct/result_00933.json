@@ -1,0 +1,9 @@
+{
+  "id": 933,
+  "title": "Bank Account Manager",
+  "prompt": "Write a program that creates a bank account manager using if/else statement\nSample Input: deposit 100\nSample Output: Deposit successful. New balance is 100\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that creates a simple bank account manager using an `if` statement to handle deposits and withdrawals. This program assumes that the account balance is stored in a global variable.\n\n```python\n# Global account balance\naccount_balance = 0\n\ndef deposit(amount):\n    \"\"\"Deposit money into the account.\"\"\"\n    global account_balance\n\n    if amount > 0:\n        account_balance += amount\n        print(f\"Deposit successful. New balance is {account_balance}.\")\n    else:\n        print(\"Deposit amount must be positive.\")\n\ndef withdraw(amount):\n    \"\"\"Withdraw money from the account.\"\"\"\n    global account_balance\n\n    if amount > 0 and account_balance >= amount:\n        account_balance -= amount\n        print(f\"Withdrawal successful. Current balance is {account_balance}.\")\n    else:\n        print(\"Insufficient funds or withdrawal amount is zero.\")\n\n# Example usage\ndeposit(100)  # Output: Deposit successful. New balance is 100\nwithdraw(50)  # Output: Withdrawal successful. Current balance is 50\n```\n\nYou can modify this program to suit your specific needs, such as adding additional account methods, validating user inputs, or storing the account balance in a database.",
+  "error": null,
+  "elapsed_seconds": 3.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

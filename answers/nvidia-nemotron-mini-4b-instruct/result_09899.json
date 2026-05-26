@@ -1,0 +1,9 @@
+{
+  "id": 9899,
+  "title": "Password Validator",
+  "prompt": "Write a program that checks whether a given password meets certain criteria (e.g. length, characters).\nSample Input: password123\nSample Output: Valid password\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given password meets certain criteria, such as length and character types. In this example, I'll assume that the password should contain at least one uppercase letter, one lowercase letter, one digit, and a special character (e.g., !@#$%^&*()-_=+[]{}|;:,.<>?).\n\n```python\nimport re\n\ndef check_password(password):\n    \"\"\"\n    Check if a given password meets certain criteria.\n\n    :param password: str - The password to check.\n    :return: str - A message indicating whether the password is valid or not.\n    \"\"\"\n\n    # Regular expression pattern for checking password criteria\n    pattern = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*()_+{}|:;,.<>?\\s])[A-Za-z\\d!@#$%^&*()_+{}|:;,.<>?\\s]{8,}$'\n\n    # Compile the pattern into a regular expression object\n    regex = re.compile(pattern)\n\n    # Check if the password matches the pattern\n    if regex.match(password):\n        return \"Valid password\"\n    else:\n        return \"Invalid password\"\n\n# Example usage\npassword = input(\"Enter a password: \")\nprint(check_password(password))\n```\n\nThis program defines a function `check_password` that takes a password as input and checks if it meets the specified criteria using a regular expression pattern. The example usage prompts the user to enter a password and prints a message indicating whether it is valid or not.",
+  "error": null,
+  "elapsed_seconds": 3.94,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6647,
+  "title": "Function with Monitoring",
+  "prompt": "Write a function that uses monitoring to track its performance and health\nSample Input: 5\nSample Output: 10\n",
+  "answer": "Sure, I can help you with that. Here's a Python function that uses monitoring to track its performance and health. This function calculates the sum of the first `n` natural numbers, where `n` is given as input. It uses a decorator to monitor its performance and health.\n\n```python\nimport time\n\ndef performance_monitor(func):\n    \"\"\"Decorator to monitor function performance and health.\"\"\"\n\n    def wrapper(*args, **kwargs):\n        start_time = time.time()\n        result = func(*args, **kwargs)\n        end_time = time.time()\n\n        execution_time = end_time - start_time\n        print(f\"Function {func.__name__} took {execution_time:.6f} seconds to execute.\")\n        return result\n\n    return wrapper\n\n@performance_monitor\ndef sum_of_first_n_natural_numbers(n):\n    \"\"\"Calculate the sum of the first n natural numbers.\"\"\"\n    return sum(range(1, n + 1))\n\n# Example usage\nsample_input = 5\nsample_output = sum_of_first_n_natural_numbers(sample_input)\nprint(f\"Sample Input: {sample_input}, Sample Output: {sample_output}\")\n```\n\nThis function will print the execution time of the `sum_of_first_n_natural_numbers` function for each input. The decorator will also print the function name and execution time.",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9724,
+  "title": "Hexadecimal Arithmetic",
+  "prompt": "Write a program that takes two hexadecimal numbers as input and returns their sum.\nSample Input: A 5\nSample Output: E\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes two hexadecimal numbers as input and returns their sum:\n\n```python\ndef hex_sum(hex_num1, hex_num2):\n    \"\"\"\n    Takes two hexadecimal numbers as input and returns their sum.\n\n    :param hex_num1: The first hexadecimal number as a string.\n    :param hex_num2: The second hexadecimal number as a string.\n    :return: The sum of the two hexadecimal numbers as a string.\n    \"\"\"\n\n    # Ensure the input strings are in uppercase for case-insensitive comparison\n    hex_num1 = hex_num1.upper()\n    hex_num2 = hex_num2.upper()\n\n    # Convert the hexadecimal strings to integers\n    num1 = int(hex_num1, 16)\n    num2 = int(hex_num2, 16)\n\n    # Add the integers and convert the result back to a hexadecimal string\n    result = hex(num1 + num2)[2:]  # Remove the '0x' prefix\n\n    # Pad the result with leading zeros if necessary\n    result = '0' * (2 if len(result) == 1 else 0) + result\n\n    return result\n\n# Example usage\nhex_num1 = input(\"Enter the first hexadecimal number: \")\nhex_num2 = input(\"Enter the second hexadecimal number: \")\n\nsum_hex = hex_sum(hex_num1, hex_num2)\nprint(f\"The sum of {hex_num1} and {hex_num2} is {sum_hex}.\")\n```\n\nThis program first converts the hexadecimal strings to integers, adds them, and then converts the result back to a hexadecimal string with leading zeros if necessary.",
+  "error": null,
+  "elapsed_seconds": 4.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

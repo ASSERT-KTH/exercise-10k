@@ -1,0 +1,9 @@
+{
+  "id": 4951,
+  "title": "Adult or Minor",
+  "prompt": "Write a program that checks whether a person is an adult or a minor based on their age using conditional statements.\nSample Input: 17\nSample Output: Minor\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks whether a person is an adult (18 or older) or a minor (under 18) based on their age using conditional statements:\n\n```python\ndef is_adult_or_minor(age):\n    \"\"\"\n    Check whether a person is an adult or a minor based on their age.\n\n    :param age: int - The age of the person.\n    :return: str - 'Adult' or 'Minor'.\n    \"\"\"\n\n    # Check if the age is within the valid range (0-120)\n    if not (0 <= age <= 120):\n        raise ValueError(\"Age must be within the valid range (0-120).\")\n\n    # Check if the age is an adult (18 or older)\n    if age >= 18:\n        return \"Adult\"\n\n    # If the age is not an adult, it must be a minor\n    return \"Minor\"\n\n# Get user input for age\nage = int(input(\"Enter your age: \"))\n\n# Call the function to determine whether the person is an adult or a minor\nresult = is_adult_or_minor(age)\n\n# Print the result\nprint(f\"You are a {result}.\")\n```\n\nThis program defines a function `is_adult_or_minor` that checks if a person's age is within the valid range (0-120) and then determines whether they are an adult (18 or older) or a minor. The function returns the appropriate string, which is then printed based on the user's input.",
+  "error": null,
+  "elapsed_seconds": 4.01,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

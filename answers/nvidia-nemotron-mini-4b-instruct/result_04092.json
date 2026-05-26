@@ -1,0 +1,9 @@
+{
+  "id": 4092,
+  "title": "Map, Filter, Reduce",
+  "prompt": "Create a function that uses map, filter, and reduce to calculate the sum of squares of even numbers in a list\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 20\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses map, filter, and reduce to calculate the sum of squares of even numbers in a list:\n```python\ndef sum_of_squares_of_evens(numbers):\n    \"\"\"\n    Calculate the sum of squares of even numbers in a list using map, filter, and reduce.\n\n    :param numbers: List of numbers\n    :return: Sum of squares of even numbers\n    \"\"\"\n    # Step 1: Map the square function to each even number in the list\n    even_squares = map(lambda x: x**2, filter(lambda x: x % 2 == 0, numbers))\n\n    # Step 2: Reduce the list of squares to a single value (the sum)\n    sum_of_squares = reduce(lambda x, y: x + y, even_squares)\n\n    return sum_of_squares\n```\nHere's an example of how to use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\nresult = sum_of_squares_of_evens(numbers)\nprint(result)  # Output: 20\n```\nThis function first uses the `filter` function to filter out all odd numbers from the input list, leaving only even numbers. Then, it uses the `map` function to apply the square function to each even number in the filtered list. Finally, it uses the `reduce` function to add up all the squares in the mapped list, resulting in the sum of squares of even numbers in the input list.",
+  "error": null,
+  "elapsed_seconds": 3.61,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

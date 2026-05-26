@@ -1,0 +1,9 @@
+{
+  "id": 2579,
+  "title": "Generating the First N Fibonacci Numbers with For Loop",
+  "prompt": "Write a program that generates the first n Fibonacci numbers using a for loop.\nSample Input: 10\nSample Output: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates the first `n` Fibonacci numbers using a for loop:\n\n```python\ndef generate_fibonacci(n):\n    \"\"\"\n    Generates the first n Fibonacci numbers using a for loop.\n\n    :param n: The number of Fibonacci numbers to generate.\n    :return: A list of the first n Fibonacci numbers.\n    \"\"\"\n    if n < 1:\n        raise ValueError(\"Input must be a positive integer\")\n\n    fib_sequence = [0, 1]\n\n    # Generate the remaining Fibonacci numbers up to n\n    for i in range(2, n):\n        fib_sequence.append(fib_sequence[i-1] + fib_sequence[i-2])\n\n    return fib_sequence\n\n# Get user input for n\nn = int(input(\"Enter the value of n: \"))\n\n# Generate and print the Fibonacci sequence\nfib_sequence = generate_fibonacci(n)\nprint(f\"The first {n} Fibonacci numbers are: {fib_sequence}\")\n```\n\nWhen you run this program and enter `10` as the value for `n`, it will output:\n\n```\nEnter the value of n: 10\nThe first 10 Fibonacci numbers are: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]\n```",
+  "error": null,
+  "elapsed_seconds": 3.31,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

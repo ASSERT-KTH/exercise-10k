@@ -1,0 +1,9 @@
+{
+  "id": 8482,
+  "title": "Array Explorer",
+  "prompt": "Write a program that takes an array of integers as input, and outputs the sum of all elements, the average of all elements, and the maximum element in the array.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: Sum: 15, Average: 3.0, Max: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef process_array(arr):\n    \"\"\"\n    Processes an array of integers and returns a tuple containing the sum, average, and maximum element.\n\n    :param arr: The input array of integers\n    :return: A tuple containing the sum, average, and maximum element\n    \"\"\"\n    # Check if the input is a non-empty list\n    if not isinstance(arr, list) or len(arr) == 0:\n        raise ValueError(\"Input should be a non-empty list of integers.\")\n\n    # Calculate the sum, average, and maximum element\n    sum_ = sum(arr)\n    avg = sum_ / len(arr) if len(arr) > 0 else 0\n    max_ = max(arr)\n\n    return sum_, avg, max_\n\n# Get user input\nuser_input = input(\"Enter a list of integers separated by spaces: \")\narr = [int(i) for i in user_input.split()]\n\n# Process the array and print the results\ntry:\n    sum_, avg, max_ = process_array(arr)\n    print(f\"Sum: {sum_}, Average: {avg:.2f}, Max: {max_}\")\nexcept ValueError as e:\n    print(e)\n```\nThis program defines a function `process_array` that takes an array of integers as input and returns a tuple containing the sum, average, and maximum element. The function checks if the input is a non-empty list and raises a `ValueError` if it's not. Then, it calculates the sum, average, and maximum element and returns them. The program then gets user input, processes the array, and prints the results.",
+  "error": null,
+  "elapsed_seconds": 4.3,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1372,
+  "title": "Temperature Converter",
+  "prompt": "Create a program to convert a temperature from Celsius to Fahrenheit or vice versa.\nSample Input: 30 C\nSample Output: 86.0 F\n",
+  "answer": "Sure, I'd be happy to help you create a program for converting temperatures between Celsius and Fahrenheit. Here's a Python solution that follows your specifications:\n\n```python\ndef convert_temp(temp, celsius=True):\n    \"\"\"\n    Converts a temperature from Celsius to Fahrenheit or vice versa.\n\n    :param temp: The temperature to convert (float)\n    :param celsius: If True, converts from Celsius to Fahrenheit, else from Fahrenheit to Celsius (bool)\n    :return: The converted temperature (float)\n    \"\"\"\n\n    # Define the conversion factor based on the input parameter\n    conversion_factor = 1 if celsius else 9/5\n\n    # Perform the conversion and return the result\n    return temp * conversion_factor + 32 if celsius else temp * conversion_factor - 273.15\n\n\n# Example usage\ncelsius_temp = 30\nfahrenheit_temp = convert_temp(celsius_temp, celsius=False)\nprint(f\"{celsius_temp} C = {fahrenheit_temp:.1f} F\")\n\n# Or, convert from Fahrenheit to Celsius\nfahrenheit_temp = 86.0\ncelsius_temp = convert_temp(fahrenheit_temp, celsius=True)\nprint(f\"{fahrenheit_temp} F = {celsius_temp:.1f} C\")\n```\n\nThis program defines a function `convert_temp` that takes a temperature and an optional `celsius` parameter. The function calculates the conversion factor based on the input parameter and returns the converted temperature. The example usage demonstrates how to use the function to convert temperatures between Celsius and Fahrenheit.",
+  "error": null,
+  "elapsed_seconds": 3.76,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

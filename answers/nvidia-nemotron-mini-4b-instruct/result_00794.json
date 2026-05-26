@@ -1,0 +1,9 @@
+{
+  "id": 794,
+  "title": "Calculate Standard Deviation",
+  "prompt": "Create a program to calculate the standard deviation given a list of numbers.\nSample Input: numbers = [1, 2, 3, 4, 5]\nSample Output: Standard deviation: 1.41\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the standard deviation of a given list of numbers:\n\n```python\nimport math\n\ndef calculate_standard_deviation(numbers):\n    \"\"\"\n    Calculates the standard deviation of a given list of numbers.\n\n    :param numbers: List of numbers\n    :return: Standard deviation as a float\n    \"\"\"\n\n    # Calculate the mean of the numbers\n    mean = sum(numbers) / len(numbers)\n\n    # Calculate the squared differences from the mean\n    squared_differences = [(x - mean) ** 2 for x in numbers]\n\n    # Calculate the variance\n    variance = sum(squared_differences) / len(numbers)\n\n    # Calculate the standard deviation\n    standard_deviation = math.sqrt(variance)\n\n    return standard_deviation\n\n# Example usage\nnumbers = [1, 2, 3, 4, 5]\nstandard_deviation = calculate_standard_deviation(numbers)\nprint(f\"Standard deviation: {standard_deviation:.2f}\")\n```\n\nThis program first calculates the mean of the numbers. Then, it calculates the squared differences from the mean for each number in the list. Finally, it calculates the variance by taking the average of these squared differences, and then calculates the standard deviation by taking the square root of the variance. The result is returned as a float with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 3.27,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

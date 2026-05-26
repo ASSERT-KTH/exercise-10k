@@ -1,0 +1,9 @@
+{
+  "id": 2442,
+  "title": "List Slicing",
+  "prompt": "Write a program that takes a list and two indices as input and returns a slice of the list from the first index to the second.\nSample Input: [1, 2, 3, 4, 5], 1, 3\nSample Output: [2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef slice_list(lst, start_index, end_index):\n    \"\"\"\n    Returns a slice of the given list from the start index to the end index (exclusive).\n\n    :param lst: The list to slice from.\n    :param start_index: The index to start the slice from (inclusive).\n    :param end_index: The index to end the slice at (exclusive).\n    :return: A slice of the list from the start index to the end index.\n    \"\"\"\n    if start_index < 0 or end_index > len(lst) or start_index >= end_index:\n        raise IndexError(\"Both indices must be non-negative and start_index must be less than end_index.\")\n\n    return lst[start_index:end_index]\n\n# Example usage:\nsample_input = [1, 2, 3, 4, 5]\nstart_index = 1\nend_index = 3\nprint(slice_list(sample_input, start_index, end_index))  # Output: [2, 3]\n```\nThis program defines a function `slice_list` that takes a list and two indices as input, checks if the indices are valid, and returns a slice of the list from the start index to the end index (exclusive). The example usage at the end of the program demonstrates how to use this function with a sample input list and indices.",
+  "error": null,
+  "elapsed_seconds": 3.65,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

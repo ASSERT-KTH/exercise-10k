@@ -1,0 +1,9 @@
+{
+  "id": 1409,
+  "title": "Number sequence",
+  "prompt": "Write a program that generates a sequence of numbers based on the user's input. If the input is 'even', print the first 10 even numbers, if 'odd', print the first 10 odd numbers, and if 'both', print the first 10 numbers.\nSample Input: even\nSample Output: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef generate_sequence():\n    \"\"\"Generate a sequence of numbers based on user input.\"\"\"\n    while True:\n        user_input = input(\"Enter 'even', 'odd', or 'both' to generate a sequence of numbers: \").lower()\n        if user_input in ['even', 'odd', 'both']:\n            break\n        else:\n            print(\"Invalid input. Please enter 'even', 'odd', or 'both'.\")\n\n    if user_input == 'even':\n        print(\"The first 10 even numbers are:\")\n        for i in range(10):\n            print(2 * (i + 1))\n    elif user_input == 'odd':\n        print(\"The first 10 odd numbers are:\")\n        for i in range(10):\n            print(2 * i + 1)\n    else:  # user_input == 'both'\n        print(\"The first 10 numbers are:\")\n        for i in range(10):\n            print(i + 1)\n\n# Call the function to start the program\ngenerate_sequence()\n```\n\nThis program defines a function `generate_sequence()` that prompts the user for input, validates the input, and generates the sequence of numbers based on the user's input. The function then calls itself to start the program.",
+  "error": null,
+  "elapsed_seconds": 3.15,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

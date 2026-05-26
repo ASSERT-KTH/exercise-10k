@@ -1,0 +1,9 @@
+{
+  "id": 9468,
+  "title": "Hangman Game",
+  "prompt": "Create a program that plays a game of Hangman with the user.\nSample Input: guess\nSample Output: _ _ _ _ _\n",
+  "answer": "Sure, I'd be happy to help you create a Hangman game program. Here's a Python solution that follows your specifications:\n\n```python\nimport random\n\ndef get_word():\n    \"\"\"Generate a random word from a list of words.\"\"\"\n    words = [\n        \"python\",\n        \"javascript\",\n        \"kotlin\",\n        \"ruby\",\n        \"swift\",\n        \"go\",\n        \"javascript\",  # For testing purposes\n    ]\n    return random.choice(words).lower()\n\ndef play_hangman(word):\n    \"\"\"Play a game of Hangman with the user.\"\"\"\n    secret_word = list(word)\n    guessed_letters = set()\n    remaining_guesses = 6\n\n    print(f\"\\nWelcome to Hangman! The word has {len(word)} letters.\\n\")\n\n    while remaining_guesses > 0:\n        print(f\"\\nYou have {remaining_guesses} guesses left.\\n\")\n\n        for i, char in enumerate(secret_word):\n            if char in guessed_letters:\n                print(f\"_{char}_\", end=\" \")\n            else:\n                print(f\"_{char}_\", end=\" \")\n        print()\n\n        guess = input(\"Guess a letter: \").lower()\n        if guess in secret_word:\n            guessed_letters.add(guess)\n        else:\n            remaining_guesses -= 1\n\n    if remaining_guesses == 0:\n        print(\"\\nYou lose! The word was '{}'.\\n\".format(word))\n    else:\n        print(\"\\nCongratulations! You win!\\n\")\n\nif __name__ == \"__main__\":\n    word = get_word()\n    play_hangman(word)\n```\n\nThis program generates a random word from a list of words, plays the game of Hangman with the user, and keeps track of the remaining guesses. The output will look similar to the sample input you provided.",
+  "error": null,
+  "elapsed_seconds": 4.92,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

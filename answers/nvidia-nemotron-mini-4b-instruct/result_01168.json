@@ -1,0 +1,9 @@
+{
+  "id": 1168,
+  "title": "Caesar Cipher",
+  "prompt": "Write a function to encrypt a given string using a Caesar cipher with a given shift\nSample Input: ['hello', 3]\nSample Output: khoor\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that encrypts a given string using a Caesar cipher with a given shift:\n```python\ndef caesar_cipher(text, shift):\n    \"\"\"\n    Encrypts a given string using a Caesar cipher with a given shift.\n\n    Parameters:\n    text (str): The string to encrypt.\n    shift (int): The number of positions to shift each character.\n\n    Returns:\n    str: The encrypted string.\n    \"\"\"\n\n    # Ensure the shift is within the valid range (0-25)\n    shift %= 26\n\n    # Define the mapping from characters to their shifted equivalents\n    alphabet = 'abcdefghijklmnopqrstuvwxyz'\n    shifted_alphabet = alphabet[shift:] + alphabet[:shift]\n\n    # Encrypt the given string using the shifted alphabet\n    encrypted_text = ''.join(shifted_alphabet[ord(c) - ord('a')] if c.isalpha() else c for c in text)\n\n    return encrypted_text\n```\nHere's an example of how to use this function:\n```python\nprint(caesar_cipher('hello', 3))  # Output: khoor\n```\nThis function first ensures that the shift is within the valid range (0-25) by taking the modulus of the shift with 26. It then defines a mapping from the original alphabet to a shifted alphabet, where each character is shifted by the given number of positions. Finally, it iterates over each character in the given string, encrypts it using the shifted alphabet, and returns the encrypted string.",
+  "error": null,
+  "elapsed_seconds": 3.73,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

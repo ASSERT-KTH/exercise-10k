@@ -1,0 +1,9 @@
+{
+  "id": 9908,
+  "title": "Grocery List App",
+  "prompt": "Write a program that allows users to create and manage a grocery list.\nSample Input: add milk\nSample Output: Grocery list: [milk]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that allows users to create and manage a grocery list. This program uses a list to store the items in the grocery list.\n\n```python\n# Initialize an empty grocery list\ngrocery_list = []\n\ndef add_item():\n    \"\"\"Add an item to the grocery list.\"\"\"\n    item = input(\"Enter an item to add to the grocery list: \").strip()\n    grocery_list.append(item)\n    print(f\"Grocery list: [{', '.join(grocery_list)}]\")\n\ndef remove_item():\n    \"\"\"Remove an item from the grocery list.\"\"\"\n    if grocery_list:\n        item_index = int(input(\"Enter the index of the item to remove (0-based): \"))\n        grocery_list.pop(item_index)\n        print(f\"Grocery list: [{', '.join(grocery_list)}]\")\n    else:\n        print(\"The grocery list is empty.\")\n\ndef main():\n    while True:\n        print(\"1. Add an item\")\n        print(\"2. Remove an item\")\n        print(\"3. Display the grocery list\")\n        print(\"4. Exit\")\n\n        choice = int(input(\"Enter your choice: \"))\n\n        if choice == 1:\n            add_item()\n        elif choice == 2:\n            remove_item()\n        elif choice == 3:\n            print(f\"Grocery list: [{', '.join(grocery_list)}]\")\n        elif choice == 4:\n            print(\"Goodbye!\")\n            break\n        else:\n            print(\"Invalid choice. Please try again.\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program allows users to add items to the grocery list, remove items from the list, and display the list. The user can also exit the program at any time.",
+  "error": null,
+  "elapsed_seconds": 4.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

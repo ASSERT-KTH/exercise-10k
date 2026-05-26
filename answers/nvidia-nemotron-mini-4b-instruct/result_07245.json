@@ -1,0 +1,9 @@
+{
+  "id": 7245,
+  "title": "Array Element Retrieval",
+  "prompt": "Write a program that retrieves the middle element of an array. If the array has an even number of elements, retrieve the average of the two middle elements.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 3\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef get_middle(arr):\n    # Check if the array has an odd or even number of elements\n    n = len(arr)\n    if n % 2 == 0:  # Even number of elements\n        mid1, mid2 = arr[n//2 - 1], arr[n//2]\n        return (mid1 + mid2) / 2  # Calculate the average of the two middle elements\n    else:  # Odd number of elements\n        return arr[n//2]  # Return the middle element directly\n\n# Test the function with the given sample input\narr = [1, 2, 3, 4, 5]\nprint(get_middle(arr))  # Output: 3\n```\n\nThis program defines a function `get_middle()` that takes an array as input and returns the middle element or the average of the two middle elements, depending on whether the array has an odd or even number of elements. The function first calculates the index of the middle element using integer division (`//`) to ensure that the result is an integer, and then returns the value at that index. If the array has an even number of elements, the function calculates the average of the two middle elements by adding them together and dividing by 2.",
+  "error": null,
+  "elapsed_seconds": 4.71,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

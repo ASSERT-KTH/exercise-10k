@@ -1,0 +1,9 @@
+{
+  "id": 7591,
+  "title": "Set Validation",
+  "prompt": "Write a program that checks if a given variable is a set.\nSample Input: var = {1, 2, 3}\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given variable is a set:\n\n```python\ndef is_set(var):\n    \"\"\"Check if a given variable is a set.\"\"\"\n    try:\n        # Check if the variable is callable (which would indicate it's a function)\n        if callable(var):\n            return False\n        # Check if the variable is iterable (which would indicate it's a list, tuple, or set)\n        elif isinstance(var, (set, frozenset)):\n            return True\n        else:\n            return False\n    except Exception as e:\n        print(f\"An error occurred while checking the type: {e}\")\n        return False\n\n# Example usage\nvar = {1, 2, 3}\nprint(is_set(var))  # Output: True\n```\n\nThis program defines a function `is_set()` that takes a variable as input and checks its type. If the variable is callable (which would indicate it's a function), the function returns `False`. Otherwise, it checks if the variable is an instance of the built-in `set` or `frozenset` classes. If the variable is an instance of one of these classes, the function returns `True`. If an error occurs while checking the type, the function prints an error message and returns `False`.",
+  "error": null,
+  "elapsed_seconds": 3.44,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

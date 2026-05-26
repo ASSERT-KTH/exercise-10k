@@ -1,0 +1,9 @@
+{
+  "id": 3592,
+  "title": "Currency Conversion",
+  "prompt": "Create a program that converts an amount of money from one currency to another given the exchange rate.\nSample Input: 100 1.25\nSample Output: 125.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef convert_currency(amount, from_currency, to_currency, exchange_rate):\n    \"\"\"\n    Converts an amount of money from one currency to another given the exchange rate.\n\n    Parameters:\n    amount (float): The amount of money to convert.\n    from_currency (str): The currency of the amount.\n    to_currency (str): The currency to convert the amount to.\n    exchange_rate (float): The current exchange rate between the two currencies.\n\n    Returns:\n    float: The converted amount of money.\n    \"\"\"\n    # Ensure the input amounts are floats\n    amount = float(amount)\n\n    # Perform the conversion\n    converted_amount = amount * exchange_rate\n\n    # Return the converted amount\n    return converted_amount\n\n# Example usage\namount = 100\nfrom_currency = \"USD\"\nto_currency = \"EUR\"\nexchange_rate = 1.25\n\nconverted_amount = convert_currency(amount, from_currency, to_currency, exchange_rate)\nprint(f\"{amount} {from_currency} is equal to {converted_amount:.2f} {to_currency}.\")\n```\nThis program defines a function `convert_currency` that takes the amount, from and to currencies, and the exchange rate as input, and returns the converted amount of money. The example usage at the end of the program demonstrates how to use this function to convert 100 USD to EUR using an exchange rate of 1.25.",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

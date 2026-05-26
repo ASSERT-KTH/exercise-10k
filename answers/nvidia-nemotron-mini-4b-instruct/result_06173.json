@@ -1,0 +1,9 @@
+{
+  "id": 6173,
+  "title": "Function to Map a List",
+  "prompt": "Create a function that takes a list and a transformation as input and returns a new list with the transformation applied to each element.\nSample Input: [1, 2, 3, 4, 5], lambda x: x * 2\nSample Output: [2, 4, 6, 8, 10]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef transform_list(lst, transform):\n    \"\"\"\n    Applies a transformation function to each element in a list and returns a new list.\n\n    Parameters:\n    lst (list): The input list of elements.\n    transform (callable): A function that takes one argument and returns a transformed value.\n\n    Returns:\n    list: A new list with the transformation applied to each element in the input list.\n    \"\"\"\n    return [transform(element) for element in lst]\n```\nHere's an example of how you can use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\ndouble = lambda x: x * 2\nresult = transform_list(numbers, double)\nprint(result)  # Output: [2, 4, 6, 8, 10]\n```\nThis function uses list comprehension to apply the `transform` function to each element in the input list and creates a new list with the transformed values. The function is flexible and can be used with any callable object, not just lambdas.",
+  "error": null,
+  "elapsed_seconds": 2.86,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 340,
+  "title": "Variable Generator",
+  "prompt": "Write a program to generate a sequence of variables with increasing values, using a loop or other mechanism.\nSample Input: 5\nSample Output: Variables generated: x1 = 1, x2 = 2, x3 = 3, x4 = 4, x5 = 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates a sequence of variables with increasing values based on the input number. The program uses a `for` loop to iterate from 1 to the input number (inclusive) and assigns each variable with its corresponding value.\n\n```python\ndef generate_variables(n):\n    \"\"\"\n    Generate a sequence of variables with increasing values.\n\n    :param n: The upper limit for the sequence.\n    :return: None\n    \"\"\"\n    if n < 1:\n        raise ValueError(\"Input must be a positive integer.\")\n\n    # Initialize variables\n    variables = []\n\n    # Generate variables\n    for i in range(1, n + 1):\n        variables.append(f\"x{i} = {i}\")\n\n    # Print the generated variables\n    print(\"Variables generated:\")\n    print(\"\\n\".join(variables))\n\n# Example usage\ngenerate_variables(5)\n```\n\nWhen you run this program with the sample input 5, it will output:\n\n```\nVariables generated:\n\nx1 = 1\nx2 = 2\nx3 = 3\nx4 = 4\nx5 = 5\n```",
+  "error": null,
+  "elapsed_seconds": 2.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2138,
+  "title": "List Zipping",
+  "prompt": "Write a function that takes two lists as input and returns a new list containing tuples, where each tuple contains one element from each of the input lists.\nSample Input: ([1, 2, 3], [4, 5, 6])\nSample Output: [(1, 4), (2, 5), (3, 6)]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef zip_lists(list1, list2):\n    \"\"\"\n    Takes two lists as input and returns a new list containing tuples,\n    where each tuple contains one element from each of the input lists.\n\n    :param list1: The first input list\n    :param list2: The second input list\n    :return: A new list of tuples\n    \"\"\"\n    if not isinstance(list1, list) or not isinstance(list2, list):\n        raise TypeError(\"Both inputs must be lists.\")\n\n    return [(item1, item2) for item1, item2 in zip(list1, list2)]\n```\nHere's how you can use this function:\n```python\nsample_input = ([1, 2, 3], [4, 5, 6])\nresult = zip_lists(sample_input[0], sample_input[1])\nprint(result)  # Output: [(1, 4), (2, 5), (3, 6)]\n```\nThis function first checks if the inputs are lists. If not, it raises a `TypeError`. Then, it uses a list comprehension with the `zip` function to create a new list of tuples, where each tuple contains one element from each of the input lists.",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

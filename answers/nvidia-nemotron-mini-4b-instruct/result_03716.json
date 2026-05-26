@@ -1,0 +1,9 @@
+{
+  "id": 3716,
+  "title": "Function to Check Duplicate",
+  "prompt": "Write a function that takes in a list and returns True if it contains any duplicates, False otherwise.\nSample Input: [1, 2, 3, 2]\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef has_duplicates(lst):\n    \"\"\"\n    Returns True if the given list contains any duplicates, False otherwise.\n\n    :param lst: The list to check for duplicates\n    :return: True if duplicates are present, False otherwise\n    \"\"\"\n    # Use a set to store the elements of the list. Sets only allow unique elements,\n    # so adding an element to a set automatically removes any duplicate elements.\n    unique_elements = set(lst)\n\n    # Check if the length of the set is less than the length of the original list.\n    # If it is, then at least one element was not added to the set, meaning there\n    # were duplicates in the original list.\n    return len(unique_elements) != len(lst)\n```\nHere's an example of how you can use this function:\n```python\nprint(has_duplicates([1, 2, 3, 2]))  # Output: True\nprint(has_duplicates([1, 2, 3, 4]))  # Output: False\n```\nThis function first converts the input list to a set, which automatically removes any duplicate elements. It then checks if the length of the set is equal to the length of the original list. If they are not equal, then at least one element was not added to the set, meaning there were duplicates in the original list.",
+  "error": null,
+  "elapsed_seconds": 3.61,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

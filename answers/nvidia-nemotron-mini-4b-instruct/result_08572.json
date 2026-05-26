@@ -1,0 +1,9 @@
+{
+  "id": 8572,
+  "title": "Accessing Dictionary Values",
+  "prompt": "Given a dictionary, write a function to access and print a specific value by its key\nSample Input: {'name': 'John', 'age': 25, 'city': 'New York'}\nSample Output: John\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef print_value_by_key(dictionary, key):\n    \"\"\"\n    Given a dictionary and a key, prints the value associated with that key.\n\n    :param dictionary: The dictionary to search in.\n    :param key: The key to look up in the dictionary.\n    \"\"\"\n    if key in dictionary:\n        print(dictionary[key])\n    else:\n        print(f\"The key '{key}' was not found in the dictionary.\")\n```\nHere's an example of how you can use this function:\n```python\nsample_input = {'name': 'John', 'age': 25, 'city': 'New York'}\nprint_value_by_key(sample_input, 'name')  # Output: John\nprint_value_by_key(sample_input, 'job')   # Output: The key 'job' was not found in the dictionary.\n```\nThis function checks if the given key is in the dictionary before accessing its value, which helps prevent `KeyError` exceptions in case the key is not found.",
+  "error": null,
+  "elapsed_seconds": 2.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

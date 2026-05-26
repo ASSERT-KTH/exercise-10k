@@ -1,0 +1,9 @@
+{
+  "id": 9258,
+  "title": "Dictionary Keys",
+  "prompt": "Write a program that prints the keys of a dictionary and handles potential errors.\nSample Input: dict = {'name': 'John', 'age': 25}\nSample Output: ['name', 'age']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef print_dict_keys(dict_to_print):\n    \"\"\"Print the keys of a dictionary and handle potential errors.\n\n    This function takes a dictionary as input and prints its keys. If the input is not a dictionary, it raises a TypeError.\n\n    Args:\n        dict_to_print (dict): The dictionary to print the keys of.\n\n    Raises:\n        TypeError: If the input is not a dictionary.\n    \"\"\"\n    if not isinstance(dict_to_print, dict):\n        raise TypeError(\"The input must be a dictionary.\")\n\n    try:\n        print(\"Keys of the dictionary:\")\n        for key in dict_to_print:\n            print(f\"- {key}\")\n    except Exception as e:\n        print(f\"An error occurred while printing the keys: {e}\")\n\n# Example usage:\ndict_sample = {'name': 'John', 'age': 25}\nprint_dict_keys(dict_sample)\n```\nWhen you run this program with the given sample input, it will output:\n```yaml\nKeys of the dictionary:\n- name\n- age\n```\nIf you pass an invalid input, it will raise a `TypeError` and print an error message:\n```python\nprint_dict_keys(\"not a dictionary\")\n```\nOutput:\n```yaml\nTypeError: The input must be a dictionary.\n```",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

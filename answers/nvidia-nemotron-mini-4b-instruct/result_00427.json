@@ -1,0 +1,9 @@
+{
+  "id": 427,
+  "title": "Quiz Show",
+  "prompt": "Write a program that asks the user a series of trivia questions and keeps track of their score.\nSample Input: Answer to question 1 Answer to question 2\nSample Output: You scored 2/2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program asks the user a series of trivia questions, keeps track of their score, and displays the final score.\n\n```python\ndef ask_question():\n    \"\"\"Ask a trivia question and get the user's answer.\"\"\"\n    question = input(\"Question: \")\n    answer = input(\"Answer: \")\n    return question, answer\n\ndef check_answer(question, answer):\n    \"\"\"Check if the user's answer is correct and return their score.\"\"\"\n    if answer.lower() == question.lower().split(\" \")[-1].lower():\n        return 1\n    else:\n        return 0\n\ndef main():\n    \"\"\"Ask the user a series of trivia questions and display their score.\"\"\"\n    score = 0\n    for _ in range(2):\n        question, answer = ask_question()\n        score += check_answer(question, answer)\n\n    print(f\"You scored {score}/{score}.\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program defines three functions: `ask_question()` to ask a trivia question and get the user's answer, `check_answer()` to check if the user's answer is correct, and `main()` to ask the user a series of trivia questions and display their score. The `main()` function calls `ask_question()` twice to ask two questions, and then calls `check_answer()` to check the user's answers and updates their score. Finally, it prints the final score.",
+  "error": null,
+  "elapsed_seconds": 3.54,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

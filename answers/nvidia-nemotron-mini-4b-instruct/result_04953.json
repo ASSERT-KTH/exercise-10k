@@ -1,0 +1,9 @@
+{
+  "id": 4953,
+  "title": "Semester Checker",
+  "prompt": "Write a program that checks whether a given month number (1-12) falls within a specific semester (e.g., spring: January-May) using conditional statements.\nSample Input: 3\nSample Output: Spring\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef check_semester(month):\n    \"\"\"\n    Check whether a given month number falls within a specific semester.\n\n    :param month: The month number (1-12)\n    :return: The corresponding semester (str)\n    \"\"\"\n    if month < 1 or month > 12:\n        raise ValueError(\"Month number must be between 1 and 12\")\n\n    # Define the semesters\n    semesters = {\n        1: \"Spring\",\n        2: \"Summer\",\n        3: \"Fall\",\n        4: \"Winter\"\n    }\n\n    # Check which semester the month falls within\n    for semester, start_month in semesters.items():\n        if month >= start_month:\n            return semesters[semester]\n\n    # If no match is found, return an error message\n    return \"Invalid month number\"\n\n# Get user input\nmonth = int(input(\"Enter a month number (1-12): \"))\n\n# Call the function and print the result\ntry:\n    semester = check_semester(month)\n    print(f\"{month} falls within the {semester} semester.\")\nexcept ValueError as e:\n    print(e)\n```\nThis program defines a function `check_semester` that takes a month number as input and returns the corresponding semester. It checks for invalid month numbers and handles exceptions gracefully. The function uses a dictionary to map month numbers to their corresponding semesters. The function then checks which semester the month falls within and returns the corresponding semester. The program gets user input, calls the function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.84,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

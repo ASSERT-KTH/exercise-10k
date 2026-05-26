@@ -1,0 +1,9 @@
+{
+  "id": 4201,
+  "title": "Array Indexing",
+  "prompt": "Write a program to access and print the elements of an array at specific indices.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 1, 3, 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes an array (or list) as input and prints the elements at specific indices:\n```python\ndef print_array_elements(arr, indices):\n    \"\"\"Print the elements at specific indices of the given array.\n\n    Args:\n    arr (list): The array to access elements from.\n    indices (list): A list of indices to access elements from.\n    \"\"\"\n    # Check if the indices are valid and within the array's length\n    if not all(0 <= i < len(arr) for i in indices):\n        raise IndexError(\"One or more indices are out of range.\")\n\n    # Print the elements at the specified indices\n    for index in indices:\n        print(arr[index])\n\n# Example usage\narr = [1, 2, 3, 4, 5]\nindices = [0, 2, 4]\nprint_array_elements(arr, indices)\n```\nWhen you run this program with the sample input `[1, 2, 3, 4, 5]` and the sample output `[0, 3, 5]`, it will output:\n```yaml\n1\n3\n5\n```\nThis program first checks if the indices are valid and within the array's length. If not, it raises an `IndexError`. Then, it iterates over the specified indices and prints the corresponding elements from the array.",
+  "error": null,
+  "elapsed_seconds": 3.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

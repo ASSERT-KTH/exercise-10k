@@ -1,0 +1,9 @@
+{
+  "id": 4735,
+  "title": "Filter Function",
+  "prompt": "Create a function that uses the filter function to select elements from a list that satisfy a given condition.\nSample Input: is_even, [1, 2, 3, 4, 5]\nSample Output: [2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. The `filter` function takes a function and an iterable as arguments, and returns an iterator yielding the results of applying the function to each item in the iterable. In this case, we'll use the `is_even` function as the filter function, and pass a list as the iterable.\n\n```python\ndef is_even(num):\n    \"\"\"Check if a number is even.\"\"\"\n    return num % 2 == 0\n\ndef filter_elements(func, iterable):\n    \"\"\"Select elements from an iterable that satisfy a given condition using the filter function.\"\"\"\n    return list(filter(func, iterable))\n\n# Example usage:\nis_even_list = filter_elements(is_even, [1, 2, 3, 4, 5])\nprint(is_even_list)  # Output: [2, 4]\n```\n\nThis function can be used with any filter function that takes a single argument and returns a boolean value. The `is_even` function is just an example, but you can replace it with any other function that checks for a specific condition.",
+  "error": null,
+  "elapsed_seconds": 2.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

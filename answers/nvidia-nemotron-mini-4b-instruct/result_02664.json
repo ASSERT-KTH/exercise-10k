@@ -1,0 +1,9 @@
+{
+  "id": 2664,
+  "title": "Character Counting",
+  "prompt": "Write a program that takes a string and a character as input, and returns the number of occurrences of the character in the string.\nSample Input: hello world l\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef count_char(s, c):\n    \"\"\"\n    Count the number of occurrences of the character c in the string s.\n\n    :param s: str - The input string.\n    :param c: str - The character to count.\n    :return: int - The number of occurrences of c in s.\n    \"\"\"\n    if not isinstance(s, str) or not isinstance(c, str):\n        raise TypeError(\"Both s and c must be strings.\")\n\n    return s.count(c)\n\n# Example usage:\ninput_str = \"hello world l\"\nchar_to_count = \"l\"\n\nnum_occurrences = count_char(input_str, char_to_count)\nprint(f\"{char_to_count} appears {num_occurrences} times in the string.\")\n```\nThis program defines a function `count_char` that takes a string `s` and a character `c` as input, and returns the number of occurrences of `c` in `s`. The function checks if the input types are strings, and raises a `TypeError` if they are not. The example usage demonstrates how to use the function to count the number of occurrences of the character 'l' in the string \"hello world l\".",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

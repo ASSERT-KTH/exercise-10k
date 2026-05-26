@@ -1,0 +1,9 @@
+{
+  "id": 3887,
+  "title": "User Information Collector",
+  "prompt": "Build a program that takes user information like name, age, and email, and stores it in a dictionary for later use.\nSample Input: John Doe, 30, john@example.com\nSample Output: User information collected successfully\n",
+  "answer": "Sure, I'd be happy to help you build a program that collects user information and stores it in a dictionary. Here's a Python solution using the `re` module for regular expressions to extract the required fields:\n\n```python\nimport re\n\ndef collect_user_info():\n    \"\"\"Collects user information and stores it in a dictionary.\"\"\"\n\n    # Regular expression pattern to extract name, age, and email\n    pattern = r'(?P<name>\\w+)\\s+(?P<age>\\d+),\\s+(?P<email>\\w+@\\w+\\.\\w+)'\n\n    # Get user input\n    user_input = input(\"Enter your name, age, and email (separated by commas): \")\n\n    # Extract user information using regular expression\n    match = re.match(pattern, user_input)\n\n    if match:\n        # Store user information in a dictionary\n        user_info = {\n            \"name\": match.group(\"name\"),\n            \"age\": match.group(\"age\"),\n            \"email\": match.group(\"email\")\n        }\n\n        print(f\"User information collected successfully: {user_info}\")\n        return user_info\n    else:\n        print(\"Invalid input. Please enter your name, age, and email separated by commas.\")\n        return None\n\n# Call the function to collect user information\nuser_info = collect_user_info()\n```\n\nThis program will prompt the user to enter their name, age, and email separated by commas. If the input is valid, it will extract the information using regular expressions and store it in a dictionary. The function returns the dictionary or `None` if the input is invalid.",
+  "error": null,
+  "elapsed_seconds": 4.12,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7105,
+  "title": "Function Frenzy",
+  "prompt": "Create a function called 'calculate_area' that takes the radius of a circle as input and returns the area of the circle. The function should also handle invalid input, such as negative numbers or non-numeric values.\nSample Input: 5\nSample Output: 78.54\n",
+  "answer": "Sure, I'd be happy to help you create the `calculate_area` function. Here's an implementation in Python that meets your requirements:\n\n```python\nimport math\n\ndef calculate_area(radius):\n    \"\"\"\n    Calculates the area of a circle given its radius.\n\n    :param radius: The radius of the circle as a float or numeric value.\n    :return: The area of the circle as a float.\n    \"\"\"\n    # Validate input to ensure it's a numeric value and positive\n    while not isinstance(radius, (float, int)) or radius < 0:\n        try:\n            radius = float(input(\"Please enter a positive numeric value for the radius: \"))\n        except ValueError:\n            print(\"That's not a valid number. Please try again.\")\n\n    # Calculate the area using the formula A = πr^2\n    area = math.pi * (radius ** 2)\n\n    return area\n```\n\nThis function will prompt the user to enter a positive numeric value for the radius, and then calculate the area of the circle using the formula `A = πr^2`. The function also handles invalid input, such as non-numeric values or negative numbers, by prompting the user to enter a valid value until a valid input is provided.",
+  "error": null,
+  "elapsed_seconds": 4.2,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8576,
+  "title": "Dictionary Keys",
+  "prompt": "Write a function to get all keys from a dictionary\nSample Input: {'name': 'John', 'age': 25, 'city': 'New York'}\nSample Output: ['name', 'age', 'city']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that takes a dictionary as input and returns a list of all its keys:\n```python\ndef get_dict_keys(d):\n    \"\"\"\n    Returns a list of all keys from a given dictionary.\n\n    :param d: The dictionary to get keys from.\n    :return: A list of all keys in the dictionary.\n    \"\"\"\n    if not isinstance(d, dict):\n        raise TypeError(\"Input must be a dictionary.\")\n\n    return list(d.keys())\n```\nHere's an example of how you can use this function:\n```python\nsample_input = {'name': 'John', 'age': 25, 'city': 'New York'}\nkeys = get_dict_keys(sample_input)\nprint(keys)  # Output: ['name', 'age', 'city']\n```\nThis function first checks if the input is a dictionary. If not, it raises a `TypeError`. Then, it uses the built-in `dict.keys()` method to get a view object that provides a dictionary's keys, and converts it to a list using `list()`. This ensures that the function works correctly even if the input dictionary is modified after it's been passed to the function.",
+  "error": null,
+  "elapsed_seconds": 3.11,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

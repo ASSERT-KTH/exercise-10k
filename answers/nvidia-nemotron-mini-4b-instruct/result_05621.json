@@ -1,0 +1,9 @@
+{
+  "id": 5621,
+  "title": "Finding the Maximum Value",
+  "prompt": "Write a program to find the maximum value in a list of integers.\nSample Input: [1, 5, 3, 9, 2]\nSample Output: 9\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the maximum value in a list of integers:\n\n```python\ndef find_max(numbers):\n    \"\"\"\n    Find the maximum value in a list of integers.\n\n    :param numbers: List of integers\n    :return: Maximum integer value\n    \"\"\"\n    if not numbers:  # Check if the list is empty\n        raise ValueError(\"Input list cannot be empty\")\n\n    max_value = numbers[0]  # Assume the first element as the maximum\n    for num in numbers[1:]:  # Iterate through the remaining elements\n        if num > max_value:  # Update the maximum value if a larger one is found\n            max_value = num\n\n    return max_value\n\n# Test the function with a sample input\nsample_input = [1, 5, 3, 9, 2]\nprint(find_max(sample_input))  # Output: 9\n```\n\nThis program defines a function `find_max` that checks if the input list is empty and then iterates through the list to find the maximum value. If you want to allow negative numbers as well, you can modify the function as follows:\n\n```python\ndef find_max(numbers):\n    \"\"\"\n    Find the maximum value in a list of integers, including negative numbers.\n\n    :param numbers: List of integers\n    :return: Maximum integer value\n    \"\"\"\n    if not numbers:  # Check if the list is empty\n        raise ValueError(\"Input list cannot be empty\")\n\n    max_value = numbers[0]  # Assume the first element as the maximum\n    for num in numbers:  # Iterate through the list\n        if num > max_value:  # Update the maximum value if a larger one is found\n            max_value = num\n\n    return max_value\n```",
+  "error": null,
+  "elapsed_seconds": 4.3,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

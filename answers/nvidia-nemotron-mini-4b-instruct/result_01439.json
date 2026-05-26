@@ -1,0 +1,9 @@
+{
+  "id": 1439,
+  "title": "Array Flat",
+  "prompt": "Create a function that takes an array of arrays as input and returns a new array with all elements flattened into a single array.\nSample Input: [[1, 2], [3, 4], [5, 6]]\nSample Output: [1, 2, 3, 4, 5, 6]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a JavaScript function that meets your requirements:\n```javascript\nfunction flattenArray(arrayOfArrays) {\n  // Use the built-in spread operator to flatten the array of arrays\n  // into a single array, and then return that array\n  return [].concat(...arrayOfArrays);\n}\n```\nHere's how you can use this function:\n```javascript\nconst inputArray = [[1, 2], [3, 4], [5, 6]];\nconst flattenedArray = flattenArray(inputArray);\nconsole.log(flattenedArray); // Output: [1, 2, 3, 4, 5, 6]\n```\nThis function uses the spread operator (`...`) to flatten the array of arrays into a single array. The spread operator creates a new array by copying all elements from the iterable (in this case, the array of arrays) and concatenating them into a new array. The built-in `concat()` method is then used to concatenate the new array with any other elements that were passed to the function.\n\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 5.92,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

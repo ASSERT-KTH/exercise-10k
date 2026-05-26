@@ -1,0 +1,9 @@
+{
+  "id": 581,
+  "title": "Find the Maximum Number",
+  "prompt": "Write a program that takes an array of numbers as input and returns the maximum number in the array.\nSample Input: [12, 45, 7, 23, 56, 89, 34]\nSample Output: 89\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef find_max(numbers):\n    \"\"\"\n    Given an array of numbers, return the maximum number in the array.\n\n    :param numbers: list of numbers\n    :return: int - the maximum number in the array\n    \"\"\"\n    if not numbers:  # Check if the input list is empty\n        raise ValueError(\"Input list cannot be empty\")\n\n    # Initialize the maximum number to the first element in the list\n    max_number = numbers[0]\n\n    # Iterate through the list to find the maximum number\n    for num in numbers:\n        if num > max_number:\n            max_number = num\n\n    return max_number\n```\nYou can use this function by passing an array of numbers as a list to the `find_max()` function, like this:\n```python\nnumbers = [12, 45, 7, 23, 56, 89, 34]\nmax_number = find_max(numbers)\nprint(max_number)  # Output: 89\n```\nThis program first checks if the input list is empty and raises a `ValueError` if it is. Then, it initializes the maximum number to the first element in the list. Finally, it iterates through the list, updating the maximum number if it encounters a larger number. The function returns the final maximum number.",
+  "error": null,
+  "elapsed_seconds": 3.3,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

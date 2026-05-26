@@ -1,0 +1,9 @@
+{
+  "id": 6536,
+  "title": "Books Authors",
+  "prompt": "Write a function that returns a list of authors from a list of books.\nSample Input: [{'title': 'book1', 'author': 'author1'}, {'title': 'book2', 'author': 'author2'}]\nSample Output: ['author1', 'author2']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_authors(books):\n    \"\"\"\n    Given a list of books, return a list of unique authors.\n\n    :param books: List of dictionaries, where each dictionary has a 'title' and 'author' key.\n    :return: List of unique authors.\n    \"\"\"\n    # Filter out any books without an 'author' key\n    authors = [book['author'] for book in books if 'author' in book]\n\n    # Remove any duplicate authors\n    unique_authors = list(set(authors))\n\n    return unique_authors\n```\nHere's how you can use this function:\n```python\nbooks = [{'title': 'book1', 'author': 'author1'}, {'title': 'book2', 'author': 'author2'}, {'title': 'book3', 'author': 'author1'}]\nprint(get_authors(books))  # Output: ['author1', 'author2']\n```\nThis function first filters out any books that don't have an 'author' key, and then converts the list of authors to a set to remove any duplicates. Finally, it converts the set back to a list and returns it.",
+  "error": null,
+  "elapsed_seconds": 3.12,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

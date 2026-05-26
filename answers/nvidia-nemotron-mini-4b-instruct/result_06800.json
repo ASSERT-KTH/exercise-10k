@@ -1,0 +1,9 @@
+{
+  "id": 6800,
+  "title": "Sorting Books on a Shelf",
+  "prompt": "Write a program that sorts a list of books based on their titles. The books are represented as strings in the format 'title,author'. The program should take a list of books as input, sort them alphabetically by title, and then print out the sorted list.\nSample Input: ['To Kill a Mockingbird,Harper Lee', '1984,George Orwell', 'Pride and Prejudice,Jane Austen']\nSample Output: ['1984,George Orwell', 'Pride and Prejudice,Jane Austen', 'To Kill a Mockingbird,Harper Lee']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef sort_books(books):\n    \"\"\"\n    Sort a list of books by title and print the result.\n\n    :param books: List of strings in the format 'title,author'\n    \"\"\"\n    # Sort the books by title and then by author (if there's a tie)\n    sorted_books = sorted(books, key=lambda book: (book.split(',')[0], book.split(',')[-1]))\n\n    # Print the sorted list of books\n    for book in sorted_books:\n        print(book)\n\n# Example usage\nbooks = ['To Kill a Mockingbird,Harper Lee', '1984,George Orwell', 'Pride and Prejudice,Jane Austen']\nsort_books(books)\n```\nWhen you run this program with the sample input you provided, it will output:\n```\n1984,George Orwell\nPride and Prejudice,Jane Austen\nTo Kill a Mockingbird,Harper Lee\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.65,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

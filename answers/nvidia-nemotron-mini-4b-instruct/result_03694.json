@@ -1,0 +1,9 @@
+{
+  "id": 3694,
+  "title": "Salary Calculator",
+  "prompt": "Write a program to calculate the net salary of an employee given the gross salary, tax rate, and deductions.\nSample Input: gross salary = 5000, tax rate = 10, deductions = 500\nSample Output: Net Salary: 4000\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the net salary of an employee given the gross salary, tax rate, and deductions:\n\n```python\ndef calculate_net_salary(gross_salary, tax_rate, deductions):\n    \"\"\"\n    Calculates the net salary of an employee.\n\n    Parameters:\n    gross_salary (float): The gross salary of the employee.\n    tax_rate (float): The tax rate as a percentage.\n    deductions (float): The total amount of deductions.\n\n    Returns:\n    float: The net salary of the employee.\n    \"\"\"\n\n    # Calculate the tax amount\n    tax = gross_salary * tax_rate / 100\n\n    # Calculate the net salary\n    net_salary = gross_salary - tax - deductions\n\n    return net_salary\n\n# Example usage\ngross_salary = 5000\ntax_rate = 10\ndeductions = 500\n\nnet_salary = calculate_net_salary(gross_salary, tax_rate, deductions)\nprint(f\"Net Salary: {net_salary:.2f}\")\n```\n\nThis program defines a function `calculate_net_salary` that takes the gross salary, tax rate, and deductions as input parameters and returns the net salary. The function calculates the tax amount by multiplying the gross salary by the tax rate and then dividing by 100. Finally, it calculates the net salary by subtracting the tax amount and deductions from the gross salary. The example usage at the end of the program demonstrates how to use the function to calculate the net salary for a given set of input parameters.",
+  "error": null,
+  "elapsed_seconds": 3.85,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

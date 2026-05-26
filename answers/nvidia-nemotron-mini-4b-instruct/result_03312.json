@@ -1,0 +1,9 @@
+{
+  "id": 3312,
+  "title": "Array Rotation",
+  "prompt": "Write a program that takes an array and a rotation amount as input, and returns a new array containing the elements of the original array, but rotated by the specified amount.\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: [4, 5, 1, 2, 3]\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef rotate_array(arr, rotation):\n    \"\"\"\n    Rotates an array by the specified amount.\n\n    :param arr: The input array\n    :param rotation: The amount to rotate the array\n    :return: A new array containing the elements of the original array, rotated by the specified amount\n    \"\"\"\n\n    # Ensure rotation is within the valid range (0 to length of array)\n    rotation %= len(arr)\n\n    # Rotate the array using slicing\n    return arr[-rotation:] + arr[:-rotation]\n\n# Example usage\ninput_array = [1, 2, 3, 4, 5]\nrotation_amount = 2\noutput_array = rotate_array(input_array, rotation_amount)\nprint(output_array)  # Output: [4, 5, 1, 2, 3]\n```\n\nThis program first checks if the rotation amount is within the valid range (0 to length of array). Then, it uses slicing to rotate the array by the specified amount. The resulting array is returned as the output.",
+  "error": null,
+  "elapsed_seconds": 2.59,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

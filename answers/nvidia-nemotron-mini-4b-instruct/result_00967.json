@@ -1,0 +1,9 @@
+{
+  "id": 967,
+  "title": "Dictionary Mapping",
+  "prompt": "Given a dictionary and a function, write a function to apply the function to each value in the dictionary and return a new dictionary with the results.\nSample Input: dict = {'name': 'Frank', 'age': 45}, func = lambda x: x.upper() if isinstance(x, str) else x * 2\nSample Output: {'name': 'FRANK', 'age': 90}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef apply_function_to_dict(dict_, func):\n    \"\"\"\n    Applies a given function to each value in a dictionary and returns a new dictionary with the results.\n\n    Parameters:\n    dict_ (dict): The input dictionary.\n    func (callable): A function that takes a single argument and returns a new value.\n\n    Returns:\n    dict: A new dictionary with the results of applying the function to each value in the input dictionary.\n    \"\"\"\n    # Create a new dictionary to store the results\n    result = {}\n\n    # Iterate over the keys and values of the input dictionary\n    for key, value in dict_.items():\n        # Apply the function to the value and store the result in the new dictionary\n        result[key] = func(value)\n\n    return result\n```\nHere's an example of how to use this function:\n```python\ndict_ = {'name': 'Frank', 'age': 45}\nfunc = lambda x: x.upper() if isinstance(x, str) else x * 2\n\nresult = apply_function_to_dict(dict_, func)\nprint(result)  # Output: {'name': 'FRANK', 'age': 90}\n```\nThis function first creates a new dictionary to store the results. Then, it iterates over the keys and values of the input dictionary, applying the given function to each value and storing the result in the new dictionary. Finally, it returns the new dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.61,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

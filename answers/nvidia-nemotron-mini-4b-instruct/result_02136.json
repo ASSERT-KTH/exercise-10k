@@ -1,0 +1,9 @@
+{
+  "id": 2136,
+  "title": "List Chunking",
+  "prompt": "Write a function that takes a list and a chunk size as input and returns a new list containing chunks of the specified size.\nSample Input: ([1, 2, 3, 4, 5], 2)\nSample Output: [[1, 2], [3, 4], [5]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function uses the built-in `zip()` function to iterate over the input list and its chunks, and then creates a new list containing each chunk. If the length of the input list is not a multiple of the chunk size, the last chunk may be shorter than the others. This function handles that case by padding the last chunk with `None` values to ensure that all chunks have the same length.\n\n```python\ndef chunk_list(lst, chunk_size):\n    \"\"\"\n    Splits a list into chunks of a specified size.\n\n    Parameters:\n    lst (list): The input list to be chunked.\n    chunk_size (int): The size of each chunk.\n\n    Returns:\n    list: A new list containing chunks of the specified size.\n    \"\"\"\n    if chunk_size <= 0:\n        raise ValueError(\"Chunk size must be a positive integer.\")\n\n    chunks = []\n    for i in range(0, len(lst), chunk_size):\n        chunk = lst[i:i + chunk_size]\n        chunks.append(chunk + [None] * (chunk_size - len(chunk)))\n\n    return chunks\n```\n\nHere's an example of how to use this function:\n\n```python\nresult = chunk_list([1, 2, 3, 4, 5], 2)\nprint(result)  # Output: [[1, 2], [3, 4], [5, None]]\n```",
+  "error": null,
+  "elapsed_seconds": 3.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

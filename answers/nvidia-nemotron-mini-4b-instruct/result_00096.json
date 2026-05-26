@@ -1,0 +1,9 @@
+{
+  "id": 96,
+  "title": "Rotating Array",
+  "prompt": "Rotate an array of integers by a given number of positions\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: [4, 5, 1, 2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that rotates an array of integers by a given number of positions:\n```python\ndef rotate_array(arr, n):\n    # Ensure n is non-negative\n    n %= len(arr)\n\n    # Rotate the array by shifting elements to the left\n    arr = arr[-n:] + arr[:-n]\n\n    return arr\n```\nHere's how you can use this function:\n```python\narr = [1, 2, 3, 4, 5]\nn = 2\nprint(rotate_array(arr, n))  # Output: [4, 5, 1, 2, 3]\n```\nThis function first ensures that `n` is non-negative by taking its modulus with the length of the array. Then, it rotates the array by shifting elements to the left by `n` positions. Finally, it returns the rotated array.\n\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.46,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

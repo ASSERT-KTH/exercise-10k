@@ -1,0 +1,9 @@
+{
+  "id": 5990,
+  "title": "Finding the Index",
+  "prompt": "Write a function that takes a list and a value as input, and returns the index of the value in the list if it exists\nSample Input: [1, 2, 3, 4, 5], 3\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef find_index(lst, value):\n    \"\"\"\n    Returns the index of the value in the list if it exists, otherwise returns -1.\n\n    :param lst: The list to search in\n    :param value: The value to search for\n    :return: The index of the value in the list if it exists, otherwise -1\n    \"\"\"\n    try:\n        return lst.index(value)\n    except ValueError:\n        return -1\n```\nThis function uses the built-in `list.index()` method to find the index of the given value in the list. If the value is not found, it raises a `ValueError`, which is caught and handled by returning -1. Here's an example of how to use this function:\n```python\nprint(find_index([1, 2, 3, 4, 5], 3))  # Output: 2\nprint(find_index([1, 2, 3, 4, 5], 6))  # Output: -1\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.96,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

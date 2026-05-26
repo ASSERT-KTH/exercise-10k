@@ -1,0 +1,9 @@
+{
+  "id": 3690,
+  "title": "Volume Calculator",
+  "prompt": "Write a program to calculate the volume of a cube, cylinder, and sphere given their dimensions.\nSample Input: side = 5, radius = 3, height = 6\nSample Output: Cube Volume: 125, Cylinder Volume: 169.65, Sphere Volume: 113.10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the volume of a cube, cylinder, and sphere given their dimensions:\n\n```python\nimport math\n\ndef calculate_volume(shape, *dimensions):\n    \"\"\"Calculate the volume of a given shape with the provided dimensions.\"\"\"\n    if shape == 'cube':\n        volume = dimensions[0] ** 3\n    elif shape == 'cylinder':\n        volume = math.pi * dimensions[0] ** 2 * dimensions[1]\n    elif shape == 'sphere':\n        volume = (4/3) * math.pi * dimensions[0] ** 3\n    else:\n        raise ValueError(f\"Invalid shape: {shape}. Choose from cube, cylinder, or sphere.\")\n\n    return f\"{shape} Volume: {volume:.2f}\"\n\n# Sample input\nside = 5\nradius = 3\nheight = 6\n\n# Calculate and print volumes\nprint(calculate_volume('cube', side))\nprint(calculate_volume('cylinder', radius, height))\nprint(calculate_volume('sphere', radius))\n```\n\nThis program defines a function `calculate_volume` that takes a shape and its dimensions as arguments. It checks if the shape is valid and calculates the volume accordingly. The function returns a string containing the shape name and its volume with two decimal places. The sample input and output are generated using this function.",
+  "error": null,
+  "elapsed_seconds": 3.2,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

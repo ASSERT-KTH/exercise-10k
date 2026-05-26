@@ -1,0 +1,9 @@
+{
+  "id": 5933,
+  "title": "Finding the Minimum",
+  "prompt": "Write a program that takes a list of numbers as input and finds the minimum value.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a list of numbers as input and finds the minimum value:\n\n```python\ndef find_min(numbers):\n    \"\"\"\n    Find the minimum value in a list of numbers.\n\n    :param numbers: List of numbers\n    :return: Minimum value in the list\n    \"\"\"\n    if not numbers:  # Check if the input list is empty\n        raise ValueError(\"Input list cannot be empty\")\n\n    # Initialize the minimum value to the first element in the list\n    min_value = numbers[0]\n\n    # Iterate through the rest of the elements in the list\n    for num in numbers[1:]:\n        if num < min_value:\n            min_value = num  # Update the minimum value if a smaller number is found\n\n    return min_value\n```\n\nYou can use this function by calling it with a list of numbers as an argument, like this:\n\n```python\nnumbers = [1, 2, 3, 4, 5]\nmin_value = find_min(numbers)\nprint(min_value)  # Output: 1\n```\n\nThis function checks if the input list is empty and raises a `ValueError` if it is. It then initializes the minimum value to the first element in the list and iterates through the rest of the elements, updating the minimum value if a smaller number is found.",
+  "error": null,
+  "elapsed_seconds": 3.32,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2248,
+  "title": "Find the First Duplicate in an Array",
+  "prompt": "Write a program that takes an array of numbers as input and returns the first duplicate.\nSample Input: [1, 2, 3, 2, 4]\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes an array (or list) of numbers as input and returns the first duplicate:\n```python\ndef find_duplicate(numbers):\n    \"\"\"\n    Given an array of numbers, return the first duplicate.\n\n    :param numbers: List[int] - The array of numbers to search through\n    :return: int - The first duplicate number in the array, or -1 if no duplicates are found\n    \"\"\"\n    # Create a set to store the numbers we've seen so far\n    seen = set()\n\n    # Iterate through each number in the input array\n    for num in numbers:\n        # If the number has been seen before, it's a duplicate\n        if num in seen:\n            return num\n        # Otherwise, mark it as seen and continue to the next number\n        seen.add(num)\n\n    # If we get here without finding a duplicate, return -1\n    return -1\n```\nHere's an example of how you can use this function:\n```python\nnumbers = [1, 2, 3, 2, 4]\nprint(find_duplicate(numbers))  # Output: 2\n```\nThis program works by iterating through each number in the input array and checking if it has been seen before. If a number is found to be a duplicate, it is immediately returned. If no duplicates are found after iterating through all the numbers, the function returns -1. The use of a set to store the numbers we've seen so far allows for efficient lookup and removal of numbers, which is crucial for this problem since we need to check each number only once.",
+  "error": null,
+  "elapsed_seconds": 3.76,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

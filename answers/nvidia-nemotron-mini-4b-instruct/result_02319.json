@@ -1,0 +1,9 @@
+{
+  "id": 2319,
+  "title": "Number Sequence",
+  "prompt": "Write a program that generates and prints out a sequence of numbers (e.g. Fibonacci sequence, arithmetic sequence).\nSample Input: 10\nSample Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates and prints out a sequence of numbers based on the user's input. In this case, it generates a Fibonacci sequence up to the specified number of terms.\n\n```python\ndef generate_sequence(num_terms):\n    \"\"\"Generate and print out a sequence of numbers (e.g. Fibonacci sequence, arithmetic sequence).\"\"\"\n\n    # Initialize the first two terms of the sequence\n    sequence = [0, 1]\n\n    # Generate the remaining terms based on the user's input\n    if num_terms > 2:\n        while len(sequence) < num_terms:\n            next_term = sequence[-1] + sequence[-2]\n            sequence.append(next_term)\n\n    # Print the sequence\n    print(sequence)\n\n# Get user input for the number of terms\nnum_terms = int(input(\"Enter the number of terms in the sequence: \"))\n\n# Call the generate_sequence function\ngenerate_sequence(num_terms)\n```\n\nWhen you run this program and enter `10` as the number of terms, it will output:\n\n```\n[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]\n```",
+  "error": null,
+  "elapsed_seconds": 4.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

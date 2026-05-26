@@ -1,0 +1,9 @@
+{
+  "id": 2233,
+  "title": "Array Matrix Multiplication",
+  "prompt": "Write a program that multiplies two matrices represented as 2D arrays.\nSample Input: [[1, 2], [3, 4]], [[5, 6], [7, 8]]\nSample Output: [[19, 22], [43, 50]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that multiplies two matrices represented as 2D arrays:\n\n```python\ndef multiply_matrices(matrix1, matrix2):\n    # Check if the matrices can be multiplied (same number of columns in the first matrix as rows in the second matrix)\n    if len(matrix1[0]) != len(matrix2):\n        raise ValueError(\"The matrices cannot be multiplied. The number of columns in the first matrix must match the number of rows in the second matrix.\")\n\n    # Initialize the result matrix with the correct dimensions\n    result = [[0] * len(matrix2[0]) for _ in range(len(matrix1))]\n\n    # Perform the matrix multiplication\n    for i in range(len(matrix1)):\n        for j in range(len(matrix2[0])):\n            for k in range(len(matrix2)):\n                result[i][j] += matrix1[i][k] * matrix2[k][j]\n\n    return result\n\n# Example usage\nmatrix1 = [[1, 2], [3, 4]]\nmatrix2 = [[5, 6], [7, 8]]\n\nprint(multiply_matrices(matrix1, matrix2))  # Output: [[19, 22], [43, 50]]\n```\n\nThis program first checks if the matrices can be multiplied, and then initializes the result matrix with the correct dimensions. It then performs the matrix multiplication by iterating over the elements of the first matrix, multiplying each element by the corresponding element in the second matrix, and adding the result to the corresponding element in the result matrix.",
+  "error": null,
+  "elapsed_seconds": 72.44,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

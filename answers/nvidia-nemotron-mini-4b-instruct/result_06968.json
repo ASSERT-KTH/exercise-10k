@@ -1,0 +1,9 @@
+{
+  "id": 6968,
+  "title": "Mode Function",
+  "prompt": "Create a function that takes a list of numbers as an argument and returns the mode.\nSample Input: [1, 2, 2, 3, 3, 3]\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that calculates the mode of a given list of numbers. The mode is the number that appears most frequently in the list. If there are multiple numbers with the same maximum frequency, the function will return any one of them.\n\n```python\nfrom collections import Counter\n\ndef find_mode(numbers):\n    \"\"\"\n    Given a list of numbers, return the mode.\n\n    :param numbers: list of numbers\n    :return: mode (int)\n    \"\"\"\n    # Count the occurrences of each number in the list\n    count = Counter(numbers)\n\n    # Find the number with the maximum frequency\n    max_count = max(count.values())\n\n    # Return any number with the maximum frequency\n    return [num for num, freq in count.items() if freq == max_count][0]\n```\n\nYou can use this function as follows:\n\n```python\nprint(find_mode([1, 2, 2, 3, 3, 3]))  # Output: 3\nprint(find_mode([1, 1, 1, 2, 2, 3]))  # Output: 1 or 2 (either will work)\nprint(find_mode([1, 2, 2, 2, 3, 3]))  # Output: 2\n```",
+  "error": null,
+  "elapsed_seconds": 3.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

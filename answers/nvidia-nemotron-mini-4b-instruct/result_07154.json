@@ -1,0 +1,9 @@
+{
+  "id": 7154,
+  "title": "Function Composition Challenge",
+  "prompt": "Write a program that takes two functions as input and returns their composition. The first function should take one argument and return a value, and the second function should take one argument and return a value. The composition of the two functions should be a new function that takes one argument and returns the result of applying the second function to the result of applying the first function.\nSample Input: f(x) = x^2, g(x) = 2x\nSample Output: h(x) = 2x^2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes two functions as input and returns their composition:\n```python\ndef compose(*functions):\n    \"\"\"\n    Composes a variable number of functions into a new function.\n\n    :param functions: Variable number of functions to compose.\n    :return: A new function that takes one argument and returns the result of applying the last function to the result of applying the previous functions.\n    \"\"\"\n    if not functions:\n        raise ValueError(\"At least one function must be provided.\")\n\n    def composed_function(x):\n        result = x\n        for func in reversed(functions):\n            result = func(result)\n        return result\n\n    return composed_function\n```\nHere's an example of how to use this function:\n```python\nf = lambda x: x**2\ng = lambda x: 2*x\n\nh = compose(f, g)\nprint(h(3))  # Output: 24\n```\nIn this example, `f(x) = x^2` and `g(x) = 2x`, so `h(x) = 2(x^2) = 2x^2`. The `compose` function takes any number of functions as arguments, and returns a new function that applies the last function to the result of applying all the previous functions.",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5311,
+  "title": "Memoization",
+  "prompt": "Create a function that uses memoization to store the results of expensive function calls\nSample Input: f(x) = x^2\nSample Output: A function with memoized results\n",
+  "answer": "Sure, I'd be happy to help you create a memoized function for the given example. Here's an example implementation in Python:\n\n```python\ndef f(x):\n    \"\"\"An expensive function that returns x^2.\"\"\"\n    return x ** 2\n\ndef memoized_f(cache={}):\n    \"\"\"A memoized version of the f function.\"\"\"\n    def helper(x):\n        \"\"\"The actual function that caches the results.\"\"\"\n        if x not in cache:\n            cache[x] = f(x)\n        return cache[x]\n    return helper\n\n# Example usage:\nmemoized_f_result = memoized_f()  # Memoized version of f\nprint(memoized_f_result(2))  # Output: 4\nprint(memoized_f_result(2))  # Output: 4 (since the result is already cached)\n```\n\nIn this implementation, we define the `f` function as an expensive function that calculates x^2. Then, we create a memoized version of the function `memoized_f` using a dictionary `cache` to store the results of expensive function calls. The `helper` function is a wrapper around the original `f` function that checks if the result is already in the cache before calculating it again. If the result is not in the cache, it calculates the result using the original `f` function and stores it in the cache before returning it.\n\nBy using memoization, we can significantly reduce the number of expensive function calls and improve the performance of the program.",
+  "error": null,
+  "elapsed_seconds": 3.46,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

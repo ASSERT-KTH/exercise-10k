@@ -1,0 +1,9 @@
+{
+  "id": 3883,
+  "title": "Simple Chatbot",
+  "prompt": "Build a simple chatbot that responds to basic user queries like 'hello', 'how are you?', and 'goodbye'.\nSample Input: hello\nSample Output: Hello! How can I assist you today?\n",
+  "answer": "Sure, I'd be happy to help you build a simple chatbot! Here's a Python code snippet using the `nltk` library for natural language processing and the `nltk-bot` library for creating a chatbot. First, you need to install the required libraries. You can do this by running:\n\n```bash\npip install nltk nltk-bot\n```\n\nNow, you can use the following code to create a simple chatbot:\n\n```python\nimport nltk\nfrom nltk.chat.util import Chat, reflections\n\n# Define a set of patterns for the chatbot\npatterns = [\n    [r'^hello$', 'Hello! How can I assist you today?'],\n    [r'^how are you?$', 'I\\'m doing well, thank you! How can I help you?'],\n    [r'^goodbye$', 'Goodbye! It was nice chatting with you. See you next time.']\n]\n\n# Create the chatbot\nbot = Chat(patterns, reflections)\n\n# Function to handle user input\ndef handle_input(user_input):\n    response = bot.respond(user_input)\n    return response\n\n# Main loop\nwhile True:\n    user_input = input('You: ')\n    response = handle_input(user_input)\n    print('Chatbot:', response)\n```\n\nThis code will create a simple chatbot that responds to the given queries. You can add more patterns to the `patterns` list to make it more versatile. The `handle_input` function is responsible for handling user input and passing it to the chatbot for a response. The main loop continues until the user types 'goodbye'.",
+  "error": null,
+  "elapsed_seconds": 3.76,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

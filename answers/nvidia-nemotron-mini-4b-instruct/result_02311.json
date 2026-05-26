@@ -1,0 +1,9 @@
+{
+  "id": 2311,
+  "title": "Word Scramble",
+  "prompt": "Write a program that generates a scrambled version of a word and asks the user to unscramble it.\nSample Input: tlae\nSample Output: Unscrambled word: tale\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses a simple algorithm to scramble a word by swapping its letters in a random order. It then asks the user to unscramble the scrambled word.\n\n```python\nimport random\n\ndef scramble_word(word):\n    \"\"\"Scramble a word by swapping its letters in a random order.\"\"\"\n    scrambled_word = list(word)\n    random.shuffle(scrambled_word)\n    return ''.join(scrambled_word)\n\ndef unscramble_word(scrambled_word):\n    \"\"\"Unscramble a scrambled word by swapping its letters in the correct order.\"\"\"\n    word = list(scrambled_word)\n    original_order = list(scrambled_word)\n    original_order.sort()\n\n    for i, char in enumerate(word):\n        if char != original_order[i]:\n            word[i], word[original_order.index(char)] = original_order[i], char\n\n    return ''.join(word)\n\n# Get user input\nuser_input = input(\"Enter a word to scramble: \")\n\n# Scramble the word\nscrambled_word = scramble_word(user_input)\n\n# Ask the user to unscramble the word\nunscrambled_word = unscramble_word(scrambled_word)\n\nprint(f\"Unscrambled word: {unscrambled_word}\")\n```\n\nThis program defines two functions: `scramble_word` and `unscramble_word`. The `scramble_word` function takes a word as input and returns a scrambled version of it. The `unscramble_word` function takes a scrambled word as input and returns the original word. The program then prompts the user to enter a word, scrambles it, and asks the user to unscramble it.",
+  "error": null,
+  "elapsed_seconds": 5.55,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

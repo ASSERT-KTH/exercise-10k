@@ -1,0 +1,9 @@
+{
+  "id": 9276,
+  "title": "Minimum Window Substring",
+  "prompt": "Given two strings s and t, find the minimum window in s that contains all characters of t. If no such window exists, return an empty string. The window must contain all characters of t in any order, and the characters in the window can be repeated.\nSample Input: s = \"ADOBECODEBANC\", t = \"ABC\"\nSample Output: BANC\n",
+  "answer": "```python\ndef min_window(s, t):\n    char_count = {c: 0 for c in t}\n    min_len = len(s) + 1\n    start, end = 0, 0\n    result = \"\"\n    while end < len(s):\n        char = s[end]\n        char_count[char] += 1\n        if char in char_count and char_count[char] == 1:\n            min_len = min(min_len, end - start + 1)\n        end += 1\n        while end - start > 0:\n            char = s[start]\n            char_count[char] -= 1\n            if char in char_count and char_count[char] == 0:\n                del char_count[char]\n            start += 1\n            if end - start < min_len:\n                min_len = end - start + 1\n                result = s[start:end + 1]\n    return \"\" if min_len > len(s) else result\n```",
+  "error": null,
+  "elapsed_seconds": 2.67,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

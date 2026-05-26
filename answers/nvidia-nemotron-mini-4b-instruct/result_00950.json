@@ -1,0 +1,9 @@
+{
+  "id": 950,
+  "title": "Sum of First N Natural Numbers",
+  "prompt": "Write a program that calculates the sum of the first n natural numbers using a while loop.\nSample Input: 10\nSample Output: 55\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the sum of the first `n` natural numbers using a while loop:\n\n```python\ndef calculate_sum(n):\n    \"\"\"\n    Calculates the sum of the first n natural numbers using a while loop.\n\n    :param n: The number of natural numbers to sum.\n    :return: The sum of the first n natural numbers.\n    \"\"\"\n\n    # Initialize the sum to 0\n    sum = 0\n\n    # Check if the input is a positive integer\n    if not isinstance(n, int) or n < 1:\n        raise ValueError(\"Input must be a positive integer.\")\n\n    # Calculate the sum using a while loop\n    i = 1\n    while i <= n:\n        sum += i\n        i += 1\n\n    return sum\n\n# Get user input\nn = int(input(\"Enter the value of n: \"))\n\n# Calculate and print the sum\nsum_value = calculate_sum(n)\nprint(f\"The sum of the first {n} natural numbers is {sum_value}.\")\n```\n\nThis program defines a function `calculate_sum` that takes an integer `n` as input and returns the sum of the first `n` natural numbers. The function checks if the input is a positive integer and raises a `ValueError` if it's not. Then, it calculates the sum using a while loop and returns the result. The program then gets user input for `n`, calculates the sum using the `calculate_sum` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.65,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

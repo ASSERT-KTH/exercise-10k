@@ -1,0 +1,9 @@
+{
+  "id": 2980,
+  "title": "Stack Implementation",
+  "prompt": "Create a program that implements a stack data structure. The program should support push, pop, and peek operations.\nSample Input: stack operations\nSample Output: stack: [1, 2, 3]\n",
+  "answer": "Sure, I'd be happy to help you create a program that implements a stack data structure with push, pop, and peek operations. Here's an example implementation in Python:\n\n```python\nclass Stack:\n    def __init__(self):\n        self.items = []\n\n    def is_empty(self):\n        return self.items == []\n\n    def push(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop() if not self.is_empty() else None\n\n    def peek(self):\n        return self.items[-1] if not self.is_empty() else None\n\n# Example usage:\nstack = Stack()\n\n# Push operations\nstack.push(1)\nstack.push(2)\nstack.push(3)\nprint(\"stack:\", stack.items)  # Output: stack: [1, 2, 3]\n\n# Pop operations\nprint(\"Popped item:\", stack.pop())  # Output: Popped item: 3\nprint(\"stack:\", stack.items)  # Output: stack: [1, 2]\n\n# Peek operation\nprint(\"Peeked item:\", stack.peek())  # Output: Peeked item: 2\n```\n\nThis implementation uses a list to store the elements of the stack. The `is_empty()` method checks if the stack is empty, the `push()` method adds an item to the top of the stack, the `pop()` method removes and returns the top item (or `None` if the stack is empty), and the `peek()` method returns the top item without removing it (or `None` if the stack is empty).",
+  "error": null,
+  "elapsed_seconds": 5.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

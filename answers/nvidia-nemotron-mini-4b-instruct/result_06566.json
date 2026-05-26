@@ -1,0 +1,9 @@
+{
+  "id": 6566,
+  "title": "Dictionary Concatenation",
+  "prompt": "Write a function that concatenates two dictionaries into one\nSample Input: {'name': 'Eve', 'age': 50} and {'city': 'Chicago', 'country': 'USA'}\nSample Output: {'name': 'Eve', 'age': 50, 'city': 'Chicago', 'country': 'USA'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that concatenates two dictionaries into one:\n```python\ndef merge_dicts(dict1, dict2):\n    \"\"\"\n    Merge two dictionaries into one.\n\n    Parameters:\n    dict1 (dict): The first dictionary to merge.\n    dict2 (dict): The second dictionary to merge.\n\n    Returns:\n    dict: The merged dictionary.\n    \"\"\"\n    # Combine the two dictionaries using the update() method\n    dict1.update(dict2)\n\n    return dict1\n```\nHere's an example of how you can use this function:\n```python\ndict1 = {'name': 'Eve', 'age': 50}\ndict2 = {'city': 'Chicago', 'country': 'USA'}\n\nmerged_dict = merge_dicts(dict1, dict2)\nprint(merged_dict)  # Output: {'name': 'Eve', 'age': 50, 'city': 'Chicago', 'country': 'USA'}\n```\nThis function first combines the two dictionaries using the `update()` method, which adds all key-value pairs from `dict2` to `dict1`. Then, it returns the merged dictionary. Note that this function modifies the first dictionary in-place, so you can use it directly on any dictionary object without creating a new one.",
+  "error": null,
+  "elapsed_seconds": 3.12,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

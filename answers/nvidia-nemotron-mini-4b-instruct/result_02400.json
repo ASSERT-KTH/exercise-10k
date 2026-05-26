@@ -1,0 +1,9 @@
+{
+  "id": 2400,
+  "title": "Koch Curve",
+  "prompt": "Write a program that generates the Koch curve using a while loop.\nSample Input: 4\nSample Output: A visual representation of the Koch curve\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates the Koch curve using a while loop and displays a visual representation using the `turtle` module. Make sure to install the `turtle` module if you haven't already by running `pip install turtle`.\n\n```python\nimport turtle\n\ndef koch_curve(length, level):\n    \"\"\"\n    Draw a Koch curve of the given length and level.\n    \"\"\"\n    if level == 0:\n        turtle.forward(length)\n        return\n\n    third = length / 3\n    turtle.left(60)\n    koch_curve(third, level - 1)\n    turtle.right(120)\n    koch_curve(third, level - 1)\n    turtle.left(60)\n    koch_curve(third, level - 1)\n    turtle.right(120)\n\ndef generate_koch_curve(level):\n    \"\"\"\n    Generate a visual representation of the Koch curve.\n    \"\"\"\n    turtle.speed(0)  # Set the drawing speed to maximum\n    turtle.penup()   # Raise the pen to avoid drawing over previous segments\n    turtle.goto(-200, 0)  # Set the starting position\n    turtle.pendown()   # Lower the pen\n\n    koch_curve(200, level)\n    turtle.hideturtle()  # Hide the turtle to avoid cluttering the screen\n\n# Get the level from the user input\nlevel = int(input(\"Enter the level of the Koch curve (integer): \"))\n\nif level < 0:\n    print(\"Invalid input. Level must be a non-negative integer.\")\nelse:\n    generate_koch_curve(level)\n    turtle.done()  # Keep the window open until the user closes it\n```\n\nThis program will display a visual representation of the Koch curve at the given level. You can adjust the `level` variable to generate the curve at different levels.",
+  "error": null,
+  "elapsed_seconds": 4.5,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

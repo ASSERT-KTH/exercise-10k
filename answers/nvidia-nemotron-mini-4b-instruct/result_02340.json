@@ -1,0 +1,9 @@
+{
+  "id": 2340,
+  "title": "Input and Print with Regular Expressions",
+  "prompt": "Write a program to take a string input from the user and print it to the screen, using regular expressions to validate the input.\nSample Input: Hello, World!\nSample Output: Hello, World!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a string input from the user and validates it using regular expressions to ensure it meets certain criteria. In this case, we'll check if the input string contains only alphanumeric characters (letters and numbers) and has a length between 1 and 50 characters.\n\n```python\nimport re\n\ndef get_valid_string():\n    \"\"\"Get a valid string input from the user.\"\"\"\n    while True:\n        user_input = input(\"Please enter a string with 1 to 50 alphanumeric characters: \")\n\n        # Validate the input using a regular expression\n        if re.match(r'^[a-zA-Z0-9]{1,50}$', user_input):\n            return user_input\n        else:\n            print(\"Invalid input. Please try again.\")\n\n# Call the function to get a valid string input\nvalid_string = get_valid_string()\n\n# Print the input to the screen\nprint(f\"Your input: {valid_string}\")\n```\n\nThis program defines a function `get_valid_string()` that prompts the user for input, validates it using a regular expression, and returns the valid input. The regular expression `^[a-zA-Z0-9]{1,50}$` matches any string containing only alphanumeric characters and has a length between 1 and 50 characters. The function continues to prompt the user for input until a valid string is provided. Finally, the program prints the user's input to the screen.",
+  "error": null,
+  "elapsed_seconds": 3.47,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

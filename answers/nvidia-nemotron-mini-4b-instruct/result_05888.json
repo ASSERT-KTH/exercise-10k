@@ -1,0 +1,9 @@
+{
+  "id": 5888,
+  "title": "Array Searching",
+  "prompt": "Write a function that takes an array and a target element as input and returns the index of the target element in the array, or -1 if the target element is not found.\nSample Input: [1, 2, 3, 4, 5], 3\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef find_index(arr, target):\n    \"\"\"\n    Given an array and a target element, return the index of the target element in the array,\n    or -1 if the target element is not found.\n\n    :param arr: The input array\n    :param target: The target element to search for\n    :return: The index of the target element in the array, or -1 if not found\n    \"\"\"\n    for i, element in enumerate(arr):\n        if element == target:\n            return i\n    return -1\n```\nHere's how you can use this function:\n```python\nprint(find_index([1, 2, 3, 4, 5], 3))  # Output: 2\nprint(find_index([1, 2, 3, 4, 5], 6))  # Output: -1\n```\nThis function uses a `for` loop to iterate over each element in the input array, comparing it to the target element. If a match is found, the function returns the index of the element using the `enumerate()` function to get both the index and the value of the element at the same time. If no match is found after iterating over the entire array, the function returns -1.",
+  "error": null,
+  "elapsed_seconds": 3.52,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

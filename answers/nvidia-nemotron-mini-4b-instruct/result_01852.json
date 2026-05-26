@@ -1,0 +1,9 @@
+{
+  "id": 1852,
+  "title": "List Difference",
+  "prompt": "Write a program that takes two lists of integers as input, and returns a new list containing only the elements that are in the first list but not in the second list.\nSample Input: [1, 2, 3, 4, 5], [4, 5, 6, 7, 8]\nSample Output: [1, 2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef find_unique(list1, list2):\n    \"\"\"\n    Given two lists of integers, return a new list containing only the elements\n    that are in the first list but not in the second list.\n\n    :param list1: The first list of integers\n    :param list2: The second list of integers\n    :return: A new list containing unique elements from list1 that are not in list2\n    \"\"\"\n    # Convert the input lists to sets to remove duplicates and enable fast lookup\n    set1 = set(list1)\n    set2 = set(list2)\n\n    # Find the elements in set1 that are not in set2\n    unique_elements = set1 - set2\n\n    # Convert the result back to a list\n    return list(unique_elements)\n```\nHere's an example of how you can use this function:\n```python\nprint(find_unique([1, 2, 3, 4, 5], [4, 5, 6, 7, 8]))  # Output: [1, 2, 3]\n```\nThis function first converts the input lists to sets to enable fast lookup of elements. It then finds the elements in the first set (which contains all elements from list1) that are not in the second set (which contains all elements from list2). Finally, it converts the result back to a list and returns it.",
+  "error": null,
+  "elapsed_seconds": 3.43,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

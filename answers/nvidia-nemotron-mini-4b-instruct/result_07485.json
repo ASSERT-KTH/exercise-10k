@@ -1,0 +1,9 @@
+{
+  "id": 7485,
+  "title": "Set Intersection Finder",
+  "prompt": "Write a program that finds the intersection of two sets\nSample Input: {1, 2, 3}, {2, 3, 4}\nSample Output: {2, 3}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the intersection of two sets:\n\n```python\ndef find_intersection(set1, set2):\n    \"\"\"\n    Find the intersection of two sets.\n\n    :param set1: The first set\n    :param set2: The second set\n    :return: A set containing the elements that are in both set1 and set2\n    \"\"\"\n    # Convert the sets to frozensets to ensure they are hashable\n    set1_frozen = frozenset(set1)\n    set2_frozen = frozenset(set2)\n\n    # Find the intersection using the & operator\n    intersection = set1_frozen & set2_frozen\n\n    return intersection\n\n# Example usage\nset1 = {1, 2, 3}\nset2 = {2, 3, 4}\n\nresult = find_intersection(set1, set2)\nprint(result)  # Output: {2, 3}\n```\n\nThis program first converts the input sets to frozensets to ensure they are hashable, which is required for the set intersection operation. Then, it uses the `&` operator to find the intersection of the two sets. Finally, it returns the resulting set.",
+  "error": null,
+  "elapsed_seconds": 3.26,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

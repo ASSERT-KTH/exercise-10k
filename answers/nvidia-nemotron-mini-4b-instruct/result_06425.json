@@ -1,0 +1,9 @@
+{
+  "id": 6425,
+  "title": "Integrated Loop",
+  "prompt": "Create a program where the user can input the number of rows and columns, then use nested for loops to print a rectangle of asterisks (*) with the specified number of rows and columns.\nSample Input: 5 5\nSample Output: *****\n*****\n*****\n*****\n*****\n",
+  "answer": "Sure, I'd be happy to help you create a program for that. Here's a Python solution using nested for loops:\n\n```python\ndef print_rectangle(rows, cols):\n    \"\"\"\n    Print a rectangle of asterisks with the specified number of rows and columns.\n\n    :param rows: The number of rows in the rectangle.\n    :param cols: The number of columns in the rectangle.\n    \"\"\"\n\n    # Check if the inputs are positive integers\n    if not isinstance(rows, int) or rows <= 0:\n        raise ValueError(\"Number of rows must be a positive integer.\")\n    if not isinstance(cols, int) or cols <= 0:\n        raise ValueError(\"Number of columns must be a positive integer.\")\n\n    # Print the rectangle\n    for i in range(rows):\n        for j in range(cols):\n            print(\"*\", end=\"\")\n        print()\n\n# Get user input\nrows = int(input(\"Enter the number of rows: \"))\ncols = int(input(\"Enter the number of columns: \"))\n\ntry:\n    print_rectangle(rows, cols)\nexcept ValueError as e:\n    print(e)\n```\n\nThis program checks if the inputs are positive integers, and if not, it raises a `ValueError`. Then, it prints the rectangle using nested for loops. The `end=\"\"` argument in the `print()` function is used to print the characters without adding a newline character at the end of each row.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

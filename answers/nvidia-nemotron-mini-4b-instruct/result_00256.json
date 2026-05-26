@@ -1,0 +1,9 @@
+{
+  "id": 256,
+  "title": "List Superset",
+  "prompt": "Write a function that takes two lists as input, and returns True if the first list is a superset of the second list, and False otherwise.\nSample Input: [1, 2, 3, 4, 5], [1, 2, 3]\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef is_superset(list1, list2):\n    \"\"\"\n    Returns True if list1 is a superset of list2, and False otherwise.\n    A superset is a set that contains all the elements of another set.\n    \"\"\"\n    # Convert the input lists to sets for faster lookup\n    set1 = set(list1)\n    set2 = set(list2)\n\n    # Check if set1 is a superset of set2\n    return set1 >= set2\n```\nHere's how this function works:\n\n1. It converts both input lists to sets using the `set()` function, which allows for faster lookup of elements since sets only allow unique elements.\n2. It checks if `set1` is greater than or equal to `set2` using the `>=` operator. If so, it returns `True`, indicating that `list1` is a superset of `list2`. Otherwise, it returns `False`.\n\nHere are some examples of how you can use this function:\n```python\nprint(is_superset([1, 2, 3, 4, 5], [1, 2, 3]))  # True\nprint(is_superset([1, 2, 3], [1, 2]))  # True\nprint(is_superset([1, 2, 3], [1, 2, 4]))  # False\nprint(is_superset([], []))  # True\nprint(is_superset([1], [1, 2]))  # False\n```\nI hope this helps! Let me know if you have any questions or if there's anything else I can help you with.",
+  "error": null,
+  "elapsed_seconds": 7.67,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

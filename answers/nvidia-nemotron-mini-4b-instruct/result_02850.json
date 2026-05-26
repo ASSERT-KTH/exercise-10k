@@ -1,0 +1,9 @@
+{
+  "id": 2850,
+  "title": "Dictionary Get",
+  "prompt": "Write a function to retrieve the value associated with a given key from a dictionary, providing a default value if the key is not present.\nSample Input: {'name': 'John', 'age': 30}, 'name', 'Unknown'\nSample Output: 'John'\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_value(dictionary, key, default=None):\n    \"\"\"\n    Retrieves the value associated with a given key from a dictionary,\n    providing a default value if the key is not present.\n\n    Parameters:\n    dictionary (dict): The dictionary to search in.\n    key (any): The key to look up in the dictionary.\n    default (any, optional): The default value to return if the key is not found.\n                             Defaults to None.\n\n    Returns:\n    any: The value associated with the given key, or the default value if the key is not found.\n    \"\"\"\n    return dictionary.get(key, default)\n```\nHere's an example of how you can use this function:\n```python\nresult = get_value({'name': 'John', 'age': 30}, 'name', 'Unknown')\nprint(result)  # Output: John\n```\nThis function uses the `get()` method of a dictionary, which returns the value associated with the given key, or the default value if the key is not found. The function is designed to be flexible and can handle any type of key and value, as long as they are hashable (i.e., they can be used as dictionary keys).",
+  "error": null,
+  "elapsed_seconds": 3.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

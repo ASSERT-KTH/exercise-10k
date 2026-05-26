@@ -1,0 +1,9 @@
+{
+  "id": 2486,
+  "title": "Generating Fibonacci Sequence",
+  "prompt": "Write a program to generate the Fibonacci sequence up to a given number\nSample Input: 10\nSample Output: [0, 1, 1, 2, 3, 5, 8]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates the Fibonacci sequence up to a given number:\n\n```python\ndef fibonacci(n):\n    \"\"\"Generate the Fibonacci sequence up to a given number.\"\"\"\n    sequence = [0, 1]\n    while sequence[-1] + sequence[-2] < n:\n        sequence.append(sequence[-1] + sequence[-2])\n    return sequence\n\n# Get user input for the number of terms in the sequence\nn = int(input(\"Enter the number of terms in the Fibonacci sequence: \"))\n\n# Generate and print the Fibonacci sequence\nprint(fibonacci(n))\n```\n\nWhen you run this program and enter `10` as the number of terms, it will output:\n\n```\nEnter the number of terms in the Fibonacci sequence: 10\n[0, 1, 1, 2, 3, 5, 8]\n```\n\nThis program defines a function `fibonacci(n)` that generates the Fibonacci sequence up to `n` by repeatedly adding the last two numbers in the sequence until the sum exceeds `n`. The function returns the resulting sequence. The program then prompts the user to enter the number of terms in the sequence, generates the sequence using the `fibonacci()` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 2.95,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

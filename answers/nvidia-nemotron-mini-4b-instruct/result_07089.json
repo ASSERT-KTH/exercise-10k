@@ -1,0 +1,9 @@
+{
+  "id": 7089,
+  "title": "Longest Word",
+  "prompt": "Read a sentence from the user and find the longest word\nSample Input: hello world programming\nSample Output: programming\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that takes a sentence as input and returns the longest word in the sentence:\n\n```python\ndef longest_word(sentence):\n    # Split the sentence into words\n    words = sentence.split()\n\n    # Find the length of the longest word\n    longest_length = max(len(word) for word in words)\n\n    # Return the longest word(s)\n    return [word for word in words if len(word) == longest_length]\n```\n\nHere's how you can use this function:\n\n```python\nprint(longest_word(\"hello world programming\"))  # Output: ['programming']\n```\n\nThis function first splits the input sentence into words using the `split()` method. Then, it uses a generator expression to find the length of each word and returns the maximum length. Finally, it uses another generator expression to find all words that have the same length as the longest word and returns them as a list.",
+  "error": null,
+  "elapsed_seconds": 2.42,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

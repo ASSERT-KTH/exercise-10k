@@ -1,0 +1,9 @@
+{
+  "id": 3637,
+  "title": "Sort a 2D Array by Column",
+  "prompt": "Write a program to sort a given 2D array of integers by a specified column.\nSample Input: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nSample Output: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\n",
+  "answer": "Sure, I can help you with that. Here's a Python program that sorts a given 2D array of integers by a specified column:\n\n```python\ndef sort_2d_array(arr, column):\n    # Check if the input is valid\n    if not arr or not all(isinstance(row, list) for row in arr):\n        return \"Invalid input. Please provide a 2D array of integers.\"\n\n    # Sort the array based on the specified column\n    sorted_arr = sorted(arr, key=lambda row: row[column])\n\n    return sorted_arr\n\n# Example usage\narr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nprint(sort_2d_array(arr, 1))  # Output: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\n```\n\nThis program first checks if the input is valid (i.e., it's a 2D array of integers). Then, it sorts the array using the `sorted()` function with a custom key function that extracts the value from the specified column of each row. Finally, it returns the sorted array.",
+  "error": null,
+  "elapsed_seconds": 2.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

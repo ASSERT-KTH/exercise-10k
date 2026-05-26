@@ -1,0 +1,9 @@
+{
+  "id": 8982,
+  "title": "String Is Space",
+  "prompt": "Write a function that takes a string as input and returns True if the string contains only whitespace characters, False otherwise.\nSample Input: ['   ']\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef contains_only_whitespace(s: str) -> bool:\n    \"\"\"\n    Returns True if the given string contains only whitespace characters (spaces, tabs, newlines, etc.),\n    and False otherwise.\n\n    :param s: The string to check.\n    :return: True if s contains only whitespace characters, False otherwise.\n    \"\"\"\n    return all(c in ' ' + '\\t' + '\\n' for c in s)\n```\nThis function uses a generator expression to check if each character in the input string is a whitespace character. The `all()` function then checks if all characters in the string are whitespace characters.\n\nHere's an example of how you can use this function:\n```python\nprint(contains_only_whitespace('   '))  # Output: True\nprint(contains_only_whitespace('hello world'))  # Output: False\nprint(contains_only_whitespace('\\n'))  # Output: True\nprint(contains_only_whitespace('\\t'))  # Output: True\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.92,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2132,
+  "title": "List Partitioning",
+  "prompt": "Write a function that takes a list and a predicate function as input and returns two new lists: one containing the elements for which the predicate returns True, and another containing the elements for which the predicate returns False.\nSample Input: ([1, 2, 3, 4, 5], lambda x: x % 2 == 0)\nSample Output: ([2, 4], [1, 3, 5])\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses list comprehension to create two new lists based on the input list and the predicate function.\n\n```python\ndef filter_list(input_list, predicate):\n    \"\"\"\n    Filters a list based on a given predicate function.\n\n    Parameters:\n    input_list (list): The input list to filter.\n    predicate (callable): A function that takes an element as input and returns a boolean.\n\n    Returns:\n    tuple: A tuple containing two new lists: one containing the elements for which the predicate returns True,\n           and another containing the elements for which the predicate returns False.\n    \"\"\"\n    return ([element for element in input_list if predicate(element)],\n            [element for element in input_list if not predicate(element)])\n```\n\nHere's an example of how to use this function:\n\n```python\nfiltered_evens = filter_list([1, 2, 3, 4, 5], lambda x: x % 2 == 0)\nfiltered_odds = filter_list([1, 2, 3, 4, 5], lambda x: x % 2 != 0)\n\nprint(filtered_evens)  # Output: ([2, 4], [])\nprint(filtered_odds)   # Output: ([1, 3, 5], [2, 4])\n```",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

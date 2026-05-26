@@ -1,0 +1,9 @@
+{
+  "id": 8875,
+  "title": "Modulus Operator",
+  "prompt": "Write a program that takes two numbers as input and returns their remainder.\nSample Input: 17 5\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes two numbers as input and returns their remainder:\n\n```python\ndef get_remainder(num1, num2):\n    \"\"\"\n    This function takes two numbers as input and returns their remainder.\n\n    :param num1: The first number.\n    :param num2: The second number.\n    :return: The remainder of the division of num1 by num2.\n    \"\"\"\n\n    # Check if the second number is zero, as division by zero is not allowed\n    if num2 == 0:\n        raise ValueError(\"Cannot divide by zero.\")\n\n    # Calculate the remainder using the modulus operator (%)\n    remainder = num1 % num2\n\n    return remainder\n\n# Get user input\nnum1 = int(input(\"Enter the first number: \"))\nnum2 = int(input(\"Enter the second number: \"))\n\n# Call the function and print the result\ntry:\n    remainder = get_remainder(num1, num2)\n    print(f\"The remainder of {num1} divided by {num2} is {remainder}.\")\nexcept ValueError as e:\n    print(e)\n```\n\nThis program defines a function `get_remainder` that checks if the second number is zero and raises a `ValueError` if it is. Then, it calculates the remainder using the modulus operator (`%`) and returns it. The program then gets user input for the two numbers, calls the function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.52,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

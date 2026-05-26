@@ -1,0 +1,9 @@
+{
+  "id": 6369,
+  "title": "Array Reduce",
+  "prompt": "Write a program that takes an array and a reduction function as input and returns the result of applying the reduction to all elements in the array\nSample Input: [1, 2, 3, 4, 5], add\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef reduce_array(arr, func):\n    \"\"\"\n    Applies a reduction function to all elements in an array.\n\n    Parameters:\n    arr (list): The input array.\n    func (callable): A function that takes two arguments and returns a single value.\n\n    Returns:\n    int: The result of applying the reduction function to all elements in the array.\n    \"\"\"\n    # Check that the input is a list and the function is callable\n    if not isinstance(arr, list):\n        raise ValueError(\"Input should be a list.\")\n    if not callable(func):\n        raise ValueError(\"func should be a callable function.\")\n\n    # Apply the reduction function to each element in the array\n    result = arr[0]\n    for num in arr[1:]:\n        result = func(result, num)\n\n    return result\n\n# Example usage\narr = [1, 2, 3, 4, 5]\nfunc = lambda x, y: x + y\nprint(reduce_array(arr, func))  # Output: 15\n```\nThis program defines a function `reduce_array` that takes an array and a reduction function as input, and returns the result of applying the reduction to all elements in the array. The function checks that the input is a list and the function is callable, and then applies the reduction function to each element in the array using a for loop. The example usage shows how to use the function with a simple addition function.",
+  "error": null,
+  "elapsed_seconds": 4.31,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

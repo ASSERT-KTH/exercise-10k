@@ -1,0 +1,9 @@
+{
+  "id": 8193,
+  "title": "Caesar Cipher",
+  "prompt": "Write a program that implements a Caesar cipher using a for loop.\nSample Input: hello\nSample Output: khoor\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that implements a Caesar cipher using a for loop:\n\n```python\ndef caesar_cipher(text, shift):\n    \"\"\"\n    Encrypts a given text using a Caesar cipher with a specified shift.\n\n    :param text: The text to encrypt.\n    :param shift: The number of positions to shift each character.\n    :return: The encrypted text.\n    \"\"\"\n    encrypted_text = \"\"\n\n    # Iterate over each character in the input text\n    for char in text:\n        # If the character is a letter (both uppercase and lowercase),\n        # shift it by the specified amount and wrap around the alphabet\n        if char.isalpha():\n            shifted_char = chr((ord(char.upper()) - ord('A') + shift) % 26 + ord('A'))\n            encrypted_text += shifted_char.lower()  # Convert the shifted character to lowercase\n        else:\n            encrypted_text += char\n\n    return encrypted_text\n\n# Example usage: encrypt the input \"hello\" with a shift of 3\nshift = 3\nencrypted_text = caesar_cipher(\"hello\", shift)\nprint(encrypted_text)  # Output: \"khoor\"\n```\n\nThis program defines a function `caesar_cipher` that takes a text and a shift as input, and returns the encrypted text using a Caesar cipher with the specified shift. The function iterates over each character in the input text, shifts it by the specified amount, and wraps around the alphabet if necessary. The shifted character is then converted to lowercase before being added to the encrypted text.",
+  "error": null,
+  "elapsed_seconds": 3.85,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

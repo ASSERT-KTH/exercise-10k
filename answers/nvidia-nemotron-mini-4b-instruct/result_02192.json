@@ -1,0 +1,9 @@
+{
+  "id": 2192,
+  "title": "Duplicate Remover",
+  "prompt": "Create a function to remove duplicate characters from a given string. The function should return the string without duplicates.\nSample Input: hello\nSample Output: helo\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that removes duplicate characters from a given string:\n\n```python\ndef remove_duplicates(s: str) -> str:\n    \"\"\"\n    Remove duplicate characters from a given string.\n\n    :param s: The input string.\n    :return: The string without duplicate characters.\n    \"\"\"\n    unique_chars = set()\n    result = \"\"\n\n    for char in s:\n        if char not in unique_chars:\n            unique_chars.add(char)\n            result += char\n\n    return result\n```\n\nThis function works by iterating over each character in the input string. If the character is not already in the `unique_chars` set, it adds the character to the set and appends it to the result string. This ensures that each unique character is only added to the result string once. Finally, the function returns the result string without any duplicate characters.\n\nHere's an example of how you can use this function:\n\n```python\nprint(remove_duplicates(\"hello\"))  # Output: \"helo\"\n```",
+  "error": null,
+  "elapsed_seconds": 2.63,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4804,
+  "title": "Longest Common Prefix",
+  "prompt": "Find the longest common prefix of an array of strings. The function should take in an array of strings as input and return the longest common prefix.\nSample Input: ['flower', 'flow', 'flight']\nSample Output: fl\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the longest common prefix of an array of strings using a two-pointer approach. This method works by comparing the first characters of each string in the array, then moving one pointer forward for each string until a mismatch occurs. If no mismatch is found, the longest common prefix is the substring between the two pointers.\n\n```python\ndef longest_common_prefix(strs):\n    if not strs:\n        return \"\"\n\n    shortest_str = min(strs, key=len)  # Get the shortest string\n\n    for i, char in enumerate(shortest_str):\n        for other_str in strs[1:]:\n            if i == len(other_str) or other_str[i] != char:\n                return shortest_str[:i]\n\n    return shortest_str\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(longest_common_prefix(['flower', 'flow', 'flight']))  # Output: fl\n```\n\nThis function has a time complexity of O(n \\* m), where n is the number of strings in the input array and m is the length of the shortest string. This is because it iterates through each character of the shortest string and each string in the array, and returns as soon as a mismatch is found.",
+  "error": null,
+  "elapsed_seconds": 3.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

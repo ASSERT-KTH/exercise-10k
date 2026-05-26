@@ -1,0 +1,9 @@
+{
+  "id": 5237,
+  "title": "Matrix Checker",
+  "prompt": "Write a program that takes a matrix as input, and prints 'Symmetric' if the matrix is symmetric, 'Not Symmetric' otherwise.\nSample Input: [[1, 2], [2, 1]]\nSample Output: Symmetric\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given matrix is symmetric:\n\n```python\ndef is_symmetric(matrix):\n    \"\"\"Check if a given matrix is symmetric.\n\n    Args:\n        matrix (list of lists): The matrix to check.\n\n    Returns:\n        str: 'Symmetric' if the matrix is symmetric, 'Not Symmetric' otherwise.\n    \"\"\"\n    # Check if the matrix is square (i.e., has the same number of rows and columns)\n    n = len(matrix)\n    if n != len(matrix[0]):\n        return 'Not Symmetric'\n\n    # Check if the matrix is symmetric by comparing each element in the matrix with its corresponding element in the transpose\n    for i in range(n):\n        for j in range(i, n):\n            if matrix[i][j] != matrix[j][i]:\n                return 'Not Symmetric'\n\n    # If all elements are equal, the matrix is symmetric\n    return 'Symmetric'\n\n# Example usage\nmatrix = [[1, 2], [2, 1]]\nprint(is_symmetric(matrix))  # Output: Symmetric\n```\n\nThis program first checks if the input matrix is square (i.e., has the same number of rows and columns). Then, it checks if the matrix is symmetric by comparing each element in the matrix with its corresponding element in the transpose. If any element does not match, the program returns 'Not Symmetric'. If all elements are equal, the program returns 'Symmetric'.",
+  "error": null,
+  "elapsed_seconds": 3.7,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1338,
+  "title": "Levenshtein Distance Calculator",
+  "prompt": "Write a function that takes two strings as input and returns the Levenshtein distance between them.\nSample Input: ['kitten', 'sitting']\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! The Levenshtein distance, also known as the edit distance, is the minimum number of single-character edits (insertions, deletions, or substitutions) required to change one string into the other. Here's a Python function that calculates the Levenshtein distance between two strings using dynamic programming:\n\n```python\ndef levenshtein_distance(str1, str2):\n    if len(str1) < len(str2):\n        # Swap the strings for simplicity\n        str1, str2 = str2, str1\n\n    # Initialize a matrix to store the Levenshtein distances\n    matrix = [[0] * (len(str2) + 1) for _ in range(len(str1) + 1)]\n\n    # Fill the matrix in bottom-up manner\n    for i in range(len(str1) + 1):\n        for j in range(len(str2) + 1):\n            if i == 0:\n                matrix[i][j] = j\n            elif j == 0:\n                matrix[i][j] = i\n            elif str1[i - 1] == str2[j - 1]:\n                matrix[i][j] = matrix[i - 1][j - 1]\n            else:\n                matrix[i][j] = 1 + min(matrix[i - 1][j], matrix[i][j - 1], matrix[i - 1][j - 1])\n\n    return matrix[len(str1)][len(str2)]\n```\n\nYou can use this function to calculate the Levenshtein distance between two strings as follows:\n\n```python\nprint(levenshtein_distance('kitten', 'sitting'))  # Output: 3\n```",
+  "error": null,
+  "elapsed_seconds": 4.11,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

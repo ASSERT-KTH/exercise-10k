@@ -1,0 +1,9 @@
+{
+  "id": 8442,
+  "title": "Discount Calculator",
+  "prompt": "Write a program that takes in a price and calculates the corresponding discount using conditional statements.\nSample Input: 100\nSample Output: 90\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_discount(price):\n    \"\"\"\n    Calculates the corresponding discount for a given price using conditional statements.\n\n    :param price: The price of the item.\n    :return: The discounted price.\n    \"\"\"\n\n    # Define the discount rates based on the price\n    discount_rates = {\n        100: 0.10,  # 10% discount for price >= 100\n        50: 0.05,   # 5% discount for price < 100 and >= 50\n        0: 1.0     # No discount for price < 50\n    }\n\n    # Check if the price is within the discount range\n    if price >= 100:\n        discount_amount = price * discount_rates[price]\n    elif price >= 50:\n        discount_amount = price * discount_rates[price] - (price * 0.05)\n    else:\n        discount_amount = price\n\n    # Return the discounted price\n    return discount_amount\n\n# Get user input\nprice = float(input(\"Enter the price: \"))\n\n# Calculate and display the discounted price\ndiscounted_price = calculate_discount(price)\nprint(f\"The discounted price is: {discounted_price:.2f}\")\n```\nThis program defines a function `calculate_discount` that takes in a price and returns the corresponding discount. It uses conditional statements to determine the discount rate based on the price. The function then checks if the price is within the discount range and calculates the discount amount accordingly. Finally, the program gets user input for the price, calls the function, and displays the discounted price.",
+  "error": null,
+  "elapsed_seconds": 4.1,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

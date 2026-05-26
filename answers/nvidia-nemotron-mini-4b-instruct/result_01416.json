@@ -1,0 +1,9 @@
+{
+  "id": 1416,
+  "title": "Student grades",
+  "prompt": "Create a program that calculates a student's grade based on their scores. If the score is above 90, print 'A', between 80 and 90 print 'B', and so on.\nSample Input: 95\nSample Output: A\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef calculate_grade(score):\n    \"\"\"\n    Calculates a student's grade based on their score.\n\n    :param score: The student's score as an integer between 0 and 100.\n    :return: A string representing the student's grade ('A', 'B', 'C', 'D', or 'F').\n    \"\"\"\n    if score < 0 or score > 100:\n        raise ValueError(\"Score must be an integer between 0 and 100.\")\n\n    grade = \"\"\n    if score >= 90:\n        grade = \"A\"\n    elif score >= 80:\n        grade = \"B\"\n    elif score >= 70:\n        grade = \"C\"\n    elif score >= 60:\n        grade = \"D\"\n    else:\n        grade = \"F\"\n\n    return grade\n\n# Example usage:\nscore = 95\nprint(f\"The grade for a score of {score} is {calculate_grade(score)}.\")\n```\n\nThis program defines a function `calculate_grade` that takes a score as an argument and returns a string representing the student's grade. The function checks if the score is within the valid range (0-100) and raises a `ValueError` if it's not. Then, it uses an `if` statement to determine the student's grade based on their score. The example usage at the end of the program demonstrates how to use the function to calculate a grade for a given score.",
+  "error": null,
+  "elapsed_seconds": 3.72,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

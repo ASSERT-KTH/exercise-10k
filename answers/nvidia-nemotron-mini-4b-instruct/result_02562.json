@@ -1,0 +1,9 @@
+{
+  "id": 2562,
+  "title": "Guessing Game with While Loop",
+  "prompt": "Create a program that generates a random number and asks the user to guess it using a while loop.\nSample Input: 50\nSample Output: Congratulations! You guessed the number!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\nimport random\n\n# Generate a random number between 1 and 100\nrandom_number = random.randint(1, 100)\n\n# Initialize a variable to keep track of the number of guesses\nnum_guesses = 0\n\n# Use a while loop to keep asking the user to guess the number until they get it right\nwhile True:\n    # Ask the user to guess the number\n    user_guess = int(input(\"Guess a number between 1 and 100: \"))\n\n    # Increment the number of guesses\n    num_guesses += 1\n\n    # Check if the user guessed the number correctly\n    if user_guess == random_number:\n        print(f\"Congratulations! You guessed the number in {num_guesses} guesses.\")\n        break\n    # If the user's guess is too high, prompt them to guess lower\n    elif user_guess > random_number:\n        print(\"Your guess is too high. Try again!\")\n    # If the user's guess is too low, prompt them to guess higher\n    else:\n        print(\"Your guess is too low. Try again!\")\n```\nThis program generates a random number between 1 and 100, and then uses a while loop to keep asking the user to guess the number until they get it right. The program keeps track of the number of guesses and prints a congratulatory message when the user guesses the number correctly.",
+  "error": null,
+  "elapsed_seconds": 3.5,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

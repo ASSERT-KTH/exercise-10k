@@ -1,0 +1,9 @@
+{
+  "id": 239,
+  "title": " trolls String Validator",
+  "prompt": "Create a function to validate if a given string contains only alphanumeric characters.\nSample Input: HelloWorld123\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\nimport re\n\ndef is_alphanumeric(s: str) -> bool:\n    \"\"\"\n    Validate if a given string contains only alphanumeric characters.\n\n    :param s: The string to validate.\n    :return: True if the string contains only alphanumeric characters, False otherwise.\n    \"\"\"\n    # Use a regular expression to match alphanumeric characters only\n    return bool(re.match(r'^[a-zA-Z0-9]*$', s))\n```\nThis function uses a regular expression to check if the string only contains alphanumeric characters (letters and digits). The regular expression `^[a-zA-Z0-9]*$` matches any string that consists only of alphanumeric characters, surrounded by word boundaries (`^` and `$`) to ensure a whole word match.\n\nHere are some examples of how you can use this function:\n```python\nprint(is_alphanumeric(\"HelloWorld123\"))  # True\nprint(is_alphanumeric(\"HelloWorld@#\"))   # False\nprint(is_alphanumeric(\"123abc\"))         # True\nprint(is_alphanumeric(\"abc123\"))         # True\nprint(is_alphanumeric(\"ABC123\"))         # True\nprint(is_alphanumeric(\"ABC123_\"))        # False\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

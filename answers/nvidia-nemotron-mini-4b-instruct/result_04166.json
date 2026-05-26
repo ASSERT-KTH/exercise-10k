@@ -1,0 +1,9 @@
+{
+  "id": 4166,
+  "title": "Trivia Game",
+  "prompt": "Write a program that asks the user 3 trivia questions and keeps track of the score.\nSample Input: yes\nno\nyes\nSample Output: You scored 2 out of 3.\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef get_user_answer():\n    \"\"\"Get user input for a trivia question.\"\"\"\n    while True:\n        user_answer = input(\"Enter 'yes' or 'no': \").lower()\n        if user_answer in ['yes', 'no']:\n            return user_answer\n        else:\n            print(\"Invalid input. Please enter 'yes' or 'no'.\")\n\ndef play_trivia():\n    \"\"\"Play a trivia game with three questions and keep track of the score.\"\"\"\n    questions = [\n        \"Who is the current Prime Minister of the UK?\",\n        \"What is the name of the largest moon of Jupiter?\",\n        \"Which country has the most UNESCO World Heritage Sites?\"\n    ]\n\n    answers = [\n        \"<NAME>\",\n        \"Ganymede\",\n        \"China\"\n    ]\n\n    score = 0\n\n    for question, answer in zip(questions, answers):\n        user_answer = get_user_answer()\n        if user_answer == answer:\n            print(f\"Correct! The answer is {answer}.\")\n            score += 1\n        else:\n            print(f\"Incorrect. The correct answer is {answer}.\")\n\n    print(f\"You scored {score} out of 3.\")\n\nif __name__ == \"__main__\":\n    play_trivia()\n```\n\nThis program defines three trivia questions and their corresponding answers. It then defines a function `get_user_answer()` that prompts the user for a yes/no answer and validates the input. Finally, the `play_trivia()` function plays the game by asking the user three trivia questions, keeping track of the score, and displaying the final score.",
+  "error": null,
+  "elapsed_seconds": 4.5,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

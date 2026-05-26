@@ -1,0 +1,9 @@
+{
+  "id": 4738,
+  "title": "Function Decorator",
+  "prompt": "Write a function that uses a decorator to modify the behavior of another function.\nSample Input: None\nSample Output: A decorated function\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example of a function that uses a decorator to modify the behavior of another function. In this example, we'll create a decorator that adds a prefix to the output of the decorated function.\n\n```python\ndef prefix_output(prefix):\n    \"\"\"A decorator that adds a prefix to the output of a function.\"\"\"\n\n    def decorator(func):\n        \"\"\"The actual decorator that modifies the behavior of a function.\"\"\"\n\n        def wrapper(*args, **kwargs):\n            \"\"\"The wrapper function that calls the original function and adds the prefix.\"\"\"\n            result = func(*args, **kwargs)\n            return prefix + \" \" + result\n\n        return wrapper\n\n    return decorator\n\n# Example usage:\n@prefix_output(\"Hello, \")\ndef greet(name):\n    \"\"\"A simple function that greets a person.\"\"\"\n    return f\"Hello, {name}!\"\n\nprint(greet(\"Alice\"))  # Output: Hello, Alice!\n```\n\nIn this example, the `prefix_output` function takes a prefix as an argument and returns a decorator. The decorator then wraps the original function with a new wrapper function that adds the prefix to the output. The `@prefix_output(\"Hello, \")` syntax is a shorthand way of applying the decorator to the `greet` function.\n\nYou can replace the prefix with any string you like, and the decorator will work as expected.",
+  "error": null,
+  "elapsed_seconds": 3.46,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

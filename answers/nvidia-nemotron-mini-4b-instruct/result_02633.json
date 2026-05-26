@@ -1,0 +1,9 @@
+{
+  "id": 2633,
+  "title": "Mad Libs",
+  "prompt": "Write a program that takes a story template and word types as input and generates a completed story.\nSample Input: I love to __ADJECTIVE__ in the __LOCATION__.\nSample Output: I love to happy in the park.\n",
+  "answer": "Sure, I can help you with that. Here's a Python program that takes a story template and word types as input and generates a completed story. This program uses a simple template matching approach, but you can extend it to use more sophisticated natural language generation techniques if needed.\n\n```python\nimport random\n\ndef generate_story(template, word_types):\n    # Replace placeholders in the template with random words from the given types\n    template_parts = template.split('__')\n    story = ' '.join([random.choice(word_types) for part in template_parts if part])\n\n    return story\n\n# Example usage\nstory_template = \"I love to __ADJECTIVE__ in the __LOCATION__.\"\nword_types = ['happy', 'sad', 'excited', 'bored', 'angry', 'calm', 'happy', 'sad']\n\nprint(generate_story(story_template, word_types))\n```\n\nThis program defines a function `generate_story` that takes a story template and word types as input. It splits the template into placeholders and randomly selects words from the given types to replace each placeholder. The resulting story is then concatenated into a single string and returned.\n\nYou can customize the word types and the template format to suit your needs. For example, you can add more placeholders, change the word types, or use a more sophisticated natural language generation technique like a Markov chain or a recurrent neural network.",
+  "error": null,
+  "elapsed_seconds": 3.2,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6797,
+  "title": "Grade Calculator",
+  "prompt": "Create a program that calculates a student's grade based on their score. If the score is 90 or above, the grade is 'A'. If the score is between 80 and 89, the grade is 'B'. If the score is between 70 and 79, the grade is 'C'. If the score is between 60 and 69, the grade is 'D'. If the score is below 60, the grade is 'F'.\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you create a program for that. Here's a Python solution that meets your requirements:\n\n```python\ndef calculate_grade(score):\n    \"\"\"\n    Calculates a student's grade based on their score.\n\n    :param score: The student's score as an integer between 0 and 100.\n    :return: The corresponding grade as a string ('A', 'B', 'C', 'D', or 'F').\n    \"\"\"\n    if score < 0 or score > 100:\n        raise ValueError(\"Score must be an integer between 0 and 100.\")\n\n    if score >= 90:\n        return 'A'\n    elif score >= 80:\n        return 'B'\n    elif score >= 70:\n        return 'C'\n    elif score >= 60:\n        return 'D'\n    else:\n        return 'F'\n\n# Example usage:\nscore = 85\ngrade = calculate_grade(score)\nprint(f\"The grade for a score of {score} is {grade}.\")\n```\n\nThis function checks if the input score is within the valid range (0-100), and then returns the corresponding grade based on the given score. The function also includes a docstring and example usage to demonstrate its purpose and usage.",
+  "error": null,
+  "elapsed_seconds": 3.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

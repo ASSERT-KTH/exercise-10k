@@ -1,0 +1,9 @@
+{
+  "id": 557,
+  "title": "Palindrome Generator",
+  "prompt": "Write a program that takes a string as input and returns all possible palindromes that can be formed using the characters in the string.\nSample Input: abc\nSample Output: ['aba', 'abcba', 'abba']\n",
+  "answer": "Here's a Python solution using backtracking:\n\n```python\ndef generate_palindromes(s):\n    result = []\n    def helper(start, end):\n        if start >= end:\n            result.append(''.join(s[start:end+1]))\n            return\n        if s[start] == s[end]:\n            helper(start+1, end-1)\n            helper(start+1, end)\n\n    helper(0, len(s)-1)\n    return result\n\nprint(generate_palindromes('abc'))\n```\n\nThis program works by recursively generating all possible substrings of the input string, checking if they are palindromes (i.e., equal when reversed), and adding them to the result list. The helper function is called with the start and end indices of the current substring, and it recursively generates all palindromes for that substring by comparing each character with its opposite (i.e., the character at the same index but in reverse order). If a match is found, the helper function is called again with the indices incremented by 1, effectively skipping that character. This process continues until the start index reaches the end index, at which point all possible palindromes have been generated and added to the result list.",
+  "error": null,
+  "elapsed_seconds": 2.84,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

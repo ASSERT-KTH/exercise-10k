@@ -1,0 +1,9 @@
+{
+  "id": 6433,
+  "title": "Chessboard Pattern",
+  "prompt": "Create a program to print a chessboard pattern using nested for loops. The pattern should consist of alternating black and white squares.\nSample Input: 8 8\nSample Output: ********\n********\n********\n********\n********\n********\n********\n********\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that prints a chessboard pattern using nested for loops:\n```python\n# Get the size of the chessboard from user input\nn = int(input(\"Enter the size of the chessboard (must be an even number): \"))\n\n# Ensure the size is even\nwhile n % 2 != 0:\n    print(\"The size of the chessboard must be an even number. Please try again.\")\n    n = int(input(\"Enter the size of the chessboard: \"))\n\n# Print the chessboard pattern\nfor i in range(n):\n    # Print alternating black and white squares\n    for j in range(n):\n        if (i + j) % 2 == 0:\n            print(\" \", end=\"\")\n        else:\n            print(\"*\", end=\"\")\n    print()\n```\nThis program first prompts the user to enter the size of the chessboard, which must be an even number. It then checks if the user input is even and prompts the user to enter a valid size if it's not. Once it has a valid size, it prints a chessboard pattern consisting of alternating black and white squares. The pattern is printed using two nested for loops: the outer loop iterates over the rows of the chessboard, and the inner loop iterates over the columns. For each cell in the chessboard, it prints a space if the row and column indices sum to an even number (indicating a white square), or it prints an asterisk if the row and column indices sum to an odd number (indicating a black square). Finally, it prints a newline character after each row to create a new line.",
+  "error": null,
+  "elapsed_seconds": 3.74,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

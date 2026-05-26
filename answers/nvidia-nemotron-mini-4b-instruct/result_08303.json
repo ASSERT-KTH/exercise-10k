@@ -1,0 +1,9 @@
+{
+  "id": 8303,
+  "title": "Pattern Printer",
+  "prompt": "Create a program that prints a pattern of asterisks (*) based on user input. The pattern should be a square of asterisks with the size specified by the user. Use loops to achieve this.\nSample Input: 5\nSample Output: *****\n*****\n*****\n*****\n*****\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef print_pattern(size):\n    \"\"\"Print a square pattern of asterisks of the given size.\"\"\"\n    # Validate the input size\n    if size <= 0:\n        raise ValueError(\"Size must be a positive integer\")\n\n    # Print the top row\n    print(\"*\" * size)\n\n    # Print the remaining rows, one less than the size to account for the top row\n    for i in range(1, size - 1):\n        print(\"*\" + (\" \" * (size - 2 * i - 1)) + \"*\")\n\n    # Print the bottom row\n    print(\"*\" * size)\n\n# Get user input for the size\ntry:\n    size = int(input(\"Enter the size of the square pattern (positive integer): \"))\n    print_pattern(size)\nexcept ValueError as e:\n    print(e)\n```\nThis program defines a function `print_pattern` that takes the size of the square pattern as input and prints it using nested loops. The function first prints the top row of asterisks, then prints the remaining rows one less than the size to account for the top row, and finally prints the bottom row. The program then gets user input for the size, validates it, and calls the `print_pattern` function with the validated size.",
+  "error": null,
+  "elapsed_seconds": 3.16,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

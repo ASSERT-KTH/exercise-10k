@@ -1,0 +1,9 @@
+{
+  "id": 6842,
+  "title": "Array Element Reversal",
+  "prompt": "Write a program that takes an array of integers as input and returns a new array where the elements are reversed. For example, if the input array is [1, 2, 3, 4, 5], the output array should be [5, 4, 3, 2, 1]. The program should handle arrays of varying lengths and should not modify the original array.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [5, 4, 3, 2, 1]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef reverse_array(arr):\n    \"\"\"\n    Reverses the order of elements in an array and returns a new array.\n    The original array is not modified.\n\n    :param arr: The input array of integers\n    :return: A new array with reversed elements\n    \"\"\"\n    # Check if the input is a list and has at least one element\n    if not isinstance(arr, list) or len(arr) < 1:\n        raise ValueError(\"Input should be a non-empty list\")\n\n    # Create a new list with reversed elements and return it\n    return arr[::-1].copy()\n```\nHere's how you can use this function:\n```python\ninput_array = [1, 2, 3, 4, 5]\noutput_array = reverse_array(input_array)\nprint(output_array)  # Output: [5, 4, 3, 2, 1]\nprint(input_array)   # Output: [1, 2, 3, 4, 5] (the original array is not modified)\n```\nThis function checks if the input is a list and has at least one element, and then creates a new list with reversed elements using slicing (`arr[::-1]`). The `copy()` method is used to create a new list instead of modifying the original array.",
+  "error": null,
+  "elapsed_seconds": 3.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

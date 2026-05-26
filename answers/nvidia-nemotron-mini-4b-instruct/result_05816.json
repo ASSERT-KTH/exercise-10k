@@ -1,0 +1,9 @@
+{
+  "id": 5816,
+  "title": "Calendar Printer",
+  "prompt": "Create a program that uses nested for loops to print a calendar for a given month and year.\nSample Input: January 2024\nSample Output: January 2024 calendar\n",
+  "answer": "Sure, I'd be happy to help you create a program that prints a calendar for a given month and year using nested for loops. Here's an example Python program that does that:\n\n```python\ndef print_calendar(month, year):\n    # Calculate the number of days in the month\n    days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month - 1]\n\n    # Print the header\n    print(f\"\\n{year} calendar\")\n\n    # Print the days of the week\n    print(\"  Sun Mon Tue Wed Thu Fri Sat\".center(10))\n\n    # Print the calendar grid\n    for i in range(1, days_in_month + 1):\n        if i % 7 == 0:\n            print(f\"{i - 6}. {month.title()} {year}\".center(10))\n        else:\n            print(f\"{i:2}. {i}\".center(5), end=\"  \")\n        print(f\"{i % 7 == 6 and '' or ' '}\".center(3))\n\n# Example usage\nprint_calendar(month=1, year=2024)\n```\n\nThis program first calculates the number of days in the given month using a list comprehension. Then, it prints the header of the calendar and the days of the week. Finally, it prints the calendar grid with the days of the month and the corresponding days of the week.\n\nYou can modify the `print_calendar` function to accept any month and year as input, and call it with the desired month and year to generate a calendar.",
+  "error": null,
+  "elapsed_seconds": 4.02,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

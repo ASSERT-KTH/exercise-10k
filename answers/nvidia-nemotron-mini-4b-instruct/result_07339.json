@@ -1,0 +1,9 @@
+{
+  "id": 7339,
+  "title": "Output to Network",
+  "prompt": "Write a program that takes input from the user and writes it to a network socket.\nSample Input: Hello, World!\nSample Output: example.net\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes input from the user and writes it to a network socket using the `socket` module. This example uses the hostname `example.net` as the destination address, but you can replace it with any valid hostname or IP address.\n\n```python\nimport socket\n\ndef main():\n    # Create a TCP/IP socket\n    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n\n    # Get the hostname or IP address from the user\n    address = input(\"Enter the hostname or IP address to send the message to: \")\n\n    # Connect the socket to the remote server\n    try:\n        sock.connect((address, 80))  # Default port for HTTP is 80\n    except socket.error as e:\n        print(f\"Error connecting to {address}: {e}\")\n        return\n\n    # Write the input message to the socket\n    message = input(\"Enter the message to send: \")\n    sock.sendall(message.encode())\n\n    # Receive a response from the server\n    response = sock.recv(1024)\n    print(f\"Received response from {address}: {response.decode()}\")\n\n    # Close the socket\n    sock.close()\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program prompts the user to enter a hostname or IP address and a message, then connects to the specified address and sends the message. It then receives a response from the server and prints it out. Make sure to replace `example.net` with the correct hostname or IP address before running the program.",
+  "error": null,
+  "elapsed_seconds": 3.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

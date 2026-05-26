@@ -1,0 +1,9 @@
+{
+  "id": 6253,
+  "title": "Dictionary Set Default",
+  "prompt": "Write a function that takes a dictionary and a key as input and returns the value for the given key if it exists in the dictionary. If not, it inserts the key with a default value and returns the default value\nSample Input: ({'a': 1, 'b': 2}, 'c', 3)\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_or_insert(dictionary, key, default=None):\n    \"\"\"\n    Retrieves the value for the given key in the dictionary, or inserts the key with the default value.\n\n    Parameters:\n    dictionary (dict): The dictionary to search in or modify.\n    key (any): The key to look up or insert.\n    default (any): The default value to use if the key is not found in the dictionary.\n\n    Returns:\n    any: The value associated with the key, or the default value if the key is not found.\n    \"\"\"\n    # Check if the key exists in the dictionary\n    if key in dictionary:\n        return dictionary[key]\n\n    # If the key is not found, insert it with the default value\n    dictionary[key] = default\n    return default\n```\nHere's an example of how you can use this function:\n```python\nresult = get_or_insert({'a': 1, 'b': 2}, 'c', 3)\nprint(result)  # Output: 3\n\nresult = get_or_insert({'a': 1, 'b': 2}, 'd', 4)\nprint(result)  # Output: 4\n```\nThis function first checks if the key exists in the dictionary. If it does, it returns the value associated with that key. If the key is not found, it inserts the key with the default value and returns the default value. The default value can be any type, including other types of data structures like lists or dictionaries.",
+  "error": null,
+  "elapsed_seconds": 3.78,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

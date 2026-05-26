@@ -1,0 +1,9 @@
+{
+  "id": 4539,
+  "title": "Array Transposition",
+  "prompt": "Write a program that takes a 2D array as input and returns the transposed array.\nSample Input: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nSample Output: [[1, 4, 7], [2, 5, 8], [3, 6, 9]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a 2D array (represented as a list of lists) as input and returns its transposed array:\n```python\ndef transpose(arr):\n    # Get the number of rows and columns in the input array\n    num_rows = len(arr)\n    num_cols = len(arr[0])  # Assuming the input array is a list of lists\n\n    # Initialize the transposed array with zeros\n    transposed_arr = [[0] * num_cols for _ in range(num_rows)]\n\n    # Fill the transposed array with the elements from the input array\n    for i in range(num_rows):\n        for j in range(num_cols):\n            transposed_arr[i][j] = arr[j][i]\n\n    return transposed_arr\n```\nHere's an example of how to use this function:\n```python\nsample_input = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\ntransposed_output = transpose(sample_input)\nprint(transposed_output)\n```\nOutput:\n```python\n[[1, 4, 7], [2, 5, 8], [3, 6, 9]]\n```\nThis program first gets the number of rows and columns in the input array, and then initializes a new 2D array with the same number of rows as the input array and the same number of columns as the number of elements in the first row of the input array. It then iterates over the input array and fills the transposed array with the corresponding elements from the input array. Finally, it returns the transposed array.",
+  "error": null,
+  "elapsed_seconds": 4.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

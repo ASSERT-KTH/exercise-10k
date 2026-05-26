@@ -1,0 +1,9 @@
+{
+  "id": 1687,
+  "title": "Function to Find the First Duplicate in a List",
+  "prompt": "Create a function to find the first duplicate in a list of numbers.\nSample Input: [1, 2, 3, 4, 2, 5]\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the first duplicate in a list of numbers using a dictionary to keep track of the numbers we've seen so far. This approach has a time complexity of O(n), where n is the length of the input list.\n\n```python\ndef find_first_duplicate(numbers):\n    \"\"\"\n    Find the first duplicate in a list of numbers.\n\n    :param numbers: List of numbers\n    :return: First duplicate number or None if there are no duplicates\n    \"\"\"\n    if not numbers:\n        return None\n\n    # Create a dictionary to store the numbers we've seen so far\n    seen = {}\n\n    # Iterate through the input list\n    for num in numbers:\n        # If the number is already in the dictionary, it's a duplicate\n        if num in seen:\n            return num\n        # Otherwise, add the number to the dictionary\n        else:\n            seen[num] = True\n\n    # If we didn't find any duplicates, return None\n    return None\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(find_first_duplicate([1, 2, 3, 4, 2, 5]))  # Output: 2\nprint(find_first_duplicate([]))  # Output: None\nprint(find_first_duplicate([1, 1, 2, 3, 4, 5]))  # Output: 1\n```",
+  "error": null,
+  "elapsed_seconds": 4.76,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

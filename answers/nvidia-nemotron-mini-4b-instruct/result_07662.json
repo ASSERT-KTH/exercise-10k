@@ -1,0 +1,9 @@
+{
+  "id": 7662,
+  "title": "Function to Check for Abundant Numbers",
+  "prompt": "Write a function to check if a given number is an abundant number.\nSample Input: n = 12\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! An abundant number is a positive integer that is greater than the sum of its proper positive divisors. Here's a Python function that checks if a given number is abundant:\n\n```python\ndef is_abundant(n):\n    \"\"\"\n    Check if a given number is an abundant number.\n\n    :param n: The number to check.\n    :return: True if n is an abundant number, False otherwise.\n    \"\"\"\n    # Calculate the sum of proper positive divisors for n\n    proper_divisors = [i for i in range(1, n) if n % i == 0]\n    sum_of_divisors = sum(proper_divisors)\n\n    # Check if the sum of proper positive divisors is greater than n\n    return sum_of_divisors > n\n```\n\nYou can use this function to check if a number is abundant, like this:\n\n```python\nprint(is_abundant(12))  # Output: True\n```\n\nThis function first calculates the sum of proper positive divisors for the given number `n`. Then, it checks if the sum is greater than `n`. If it is, then `n` is an abundant number.",
+  "error": null,
+  "elapsed_seconds": 3.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

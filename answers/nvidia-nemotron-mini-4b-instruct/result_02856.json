@@ -1,0 +1,9 @@
+{
+  "id": 2856,
+  "title": "Dictionary Items",
+  "prompt": "Write a function to retrieve a list of all key-value pairs in a dictionary.\nSample Input: {'name': 'John', 'age': 30}\nSample Output: [('name', 'John'), ('age', 30)]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_key_value_pairs(dictionary):\n    \"\"\"\n    Retrieves a list of all key-value pairs in a dictionary.\n\n    :param dictionary: The dictionary to extract key-value pairs from.\n    :return: A list of tuples, where each tuple contains a key and its corresponding value.\n    \"\"\"\n    return [(key, value) for key, value in dictionary.items()]\n```\nHere's an example of how you can use this function:\n```python\nsample_dict = {'name': 'John', 'age': 30}\nkey_value_pairs = get_key_value_pairs(sample_dict)\nprint(key_value_pairs)  # Output: [('name', 'John'), ('age', 30)]\n```\nThis function uses a list comprehension to iterate over the items() method of the dictionary, which returns a list of tuples containing the key and value of each item in the dictionary. The list comprehension then converts each tuple into a single tuple containing the key and value, which is then returned as the result.",
+  "error": null,
+  "elapsed_seconds": 2.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

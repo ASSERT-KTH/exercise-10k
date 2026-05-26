@@ -1,0 +1,9 @@
+{
+  "id": 9703,
+  "title": "Personalized Greeting",
+  "prompt": "Write a program that asks for the user's name and age, then prints out a personalized greeting message including their name and age. The program should handle cases where the user enters a non-integer value for their age.\nSample Input: John\n25\nSample Output: Hello, John! You are 25 years old.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_age(prompt):\n    \"\"\"Get a non-negative integer from the user, handling non-integer input.\"\"\"\n    while True:\n        try:\n            age = int(input(prompt))\n            if age >= 0:\n                return age\n            else:\n                print(\"Age must be a non-negative integer. Please try again.\")\n        except ValueError:\n            print(\"That's not a valid integer. Please try again.\")\n\ndef main():\n    name = input(\"Please enter your name: \")\n    age = get_age(\"Please enter your age: \")\n\n    greeting = f\"Hello, {name}! You are {age} years old.\"\n    print(greeting)\n\nif __name__ == \"__main__\":\n    main()\n```\nThis program defines a helper function `get_age` that prompts the user for a non-negative integer and handles non-integer input. The `main` function gets the user's name and age, formats a personalized greeting message, and prints it out.\n\nWhen you run the program and enter a non-integer value for your age, it will prompt you to enter a valid integer again. This ensures that the program handles non-integer input gracefully and provides a useful error message to guide the user in correcting their input.",
+  "error": null,
+  "elapsed_seconds": 3.14,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

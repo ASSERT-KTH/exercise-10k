@@ -1,0 +1,9 @@
+{
+  "id": 5344,
+  "title": "Array Aggregation",
+  "prompt": "Write a function that takes an array and an aggregation function (such as sum, product, or average) as input, and returns the aggregated value of the array elements.\nSample Input: [1, 2, 3, 4, 5], sum\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef aggregate(arr, func):\n    \"\"\"\n    Aggregates the values in a given array using a specified aggregation function.\n\n    Parameters:\n    arr (list): The input array of elements.\n    func (callable): The aggregation function to apply to the array elements.\n                     Should take a single argument (the element) and return a single value.\n                     Examples include sum, product, or average.\n\n    Returns:\n    int or float: The aggregated value of the array elements.\n    \"\"\"\n    if not callable(func):\n        raise ValueError(\"The 'func' parameter must be a callable function.\")\n\n    return func(arr)\n```\nHere's an example of how to use this function:\n```python\nprint(aggregate([1, 2, 3, 4, 5], sum))  # Output: 15\nprint(aggregate([1, 2, 3, 4, 5], product))  # Output: 120\nprint(aggregate([1, 2, 3, 4, 5], average))  # Output: 3.0\n```\nThis function first checks if the `func` parameter is a callable function. If not, it raises a `ValueError`. Then, it applies the specified aggregation function to the array elements and returns the aggregated value. The function is designed to work with any callable function that takes a single argument and returns a single value, making it flexible for various use cases.",
+  "error": null,
+  "elapsed_seconds": 3.59,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3104,
+  "title": "Dictionary Aggregation",
+  "prompt": "Create a dictionary with 5 key-value pairs. Calculate the sum of all the values in the dictionary.\nSample Input: None\nSample Output: Sum of values\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef calculate_sum_of_values(dictionary):\n    \"\"\"\n    Calculates the sum of all the values in a given dictionary.\n\n    :param dictionary: A dictionary with key-value pairs\n    :return: The sum of all the values in the dictionary\n    \"\"\"\n    if not isinstance(dictionary, dict):\n        raise TypeError(\"The input must be a dictionary.\")\n\n    total_sum = 0\n    for value in dictionary.values():\n        if not isinstance(value, (int, float)):\n            raise TypeError(\"All values in the dictionary must be numbers.\")\n        total_sum += value\n\n    return f\"The sum of all the values is: {total_sum}\"\n```\nHere's an example of how to use this function:\n```python\nmy_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}\nprint(calculate_sum_of_values(my_dict))  # Output: The sum of all the values is: 15\n```\nThis function checks if the input is a dictionary and if all the values in the dictionary are numbers. If the input is valid, it calculates the sum of all the values and returns a string with the result.",
+  "error": null,
+  "elapsed_seconds": 3.18,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

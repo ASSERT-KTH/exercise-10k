@@ -1,0 +1,9 @@
+{
+  "id": 4766,
+  "title": "Leap Year Checker",
+  "prompt": "Write a program that checks if a year is a leap year. A year is a leap year if it is divisible by 4, but not by 100, unless it is also divisible by 400.\nSample Input: 2020\nSample Output: Leap year\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given year is a leap year:\n\n```python\ndef is_leap_year(year):\n    \"\"\"Check if a given year is a leap year.\"\"\"\n    # A year is a leap year if it is divisible by 4, but not by 100, unless it is also divisible by 400.\n    if year % 4 == 0:\n        if year % 100 == 0:\n            return year % 400 == 0\n        else:\n            return True\n    else:\n        return False\n\n# Get user input\nyear = int(input(\"Enter a year: \"))\n\n# Check if the year is a leap year\nif is_leap_year(year):\n    print(f\"{year} is a leap year.\")\nelse:\n    print(f\"{year} is not a leap year.\")\n```\n\nThis program defines a function `is_leap_year` that takes a year as input and returns `True` if the year is a leap year and `False` otherwise. The function checks if the year is divisible by 4, then checks if it's also divisible by 100, and finally checks if it's also divisible by 400. If none of these conditions are met, the year is not a leap year. The program then gets user input for a year, checks if it's a leap year using the `is_leap_year` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2887,
+  "title": "Arithmetic Progression",
+  "prompt": "Write a program to generate the terms of an arithmetic progression (e.g., 2, 5, 8, 11) based on user input.\nSample Input: 2 3 10\nSample Output: 2 5 8 11 14 17\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates the terms of an arithmetic progression based on user input:\n\n```python\ndef generate_arithmetic_progression():\n    \"\"\"Generate the terms of an arithmetic progression based on user input.\"\"\"\n\n    # Get user input\n    first_term, common_difference, num_terms = map(int, input(\"Enter the first term, common difference, and number of terms (separated by spaces): \").split())\n\n    # Validate input\n    if first_term < 0 or common_difference < 0 or num_terms < 1:\n        print(\"Error: All inputs must be non-negative integers.\")\n        return\n\n    # Generate and print the terms\n    sequence = [first_term]\n    for _ in range(num_terms - 1):\n        sequence.append(sequence[-1] + common_difference)\n\n    print(f\"The terms of the arithmetic progression are: {', '.join(map(str, sequence))}.\")\n\n# Call the function\ngenerate_arithmetic_progression()\n```\n\nWhen you run this program, it prompts the user to enter the first term, common difference, and number of terms. It then validates the input to ensure that all values are non-negative integers. Finally, it generates and prints the terms of the arithmetic progression based on the user input. For example, if the user enters `2 3 10`, the program will output:\n\n```\nThe terms of the arithmetic progression are: 2, 5, 8, 11, 14, 17.\n```",
+  "error": null,
+  "elapsed_seconds": 3.73,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

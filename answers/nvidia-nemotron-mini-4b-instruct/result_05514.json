@@ -1,0 +1,9 @@
+{
+  "id": 5514,
+  "title": "Checking for Connectivity",
+  "prompt": "Write a program to check if a graph is connected using depth-first search.\nSample Input: [[0, 1], [1, 2], [2, 3], [3, 0]]\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given graph (represented as a 2D list of edges) is connected using Depth-First Search (DFS). The function `is_connected()` takes a graph as input and returns `True` if it's connected, and `False` otherwise.\n\n```python\ndef is_connected(graph):\n    # Function to perform DFS\n    def dfs(node, visited):\n        visited.add(node)\n        for neighbor in graph[node]:\n            if neighbor not in visited:\n                dfs(neighbor, visited)\n\n    # Initialize visited set and start DFS from any node\n    visited = set()\n    for node in range(len(graph)):\n        if node not in visited:\n            dfs(node, visited)\n            # If all nodes are visited, the graph is connected\n            if len(visited) == len(graph):\n                return True\n\n    # If no connected component is found, the graph is not connected\n    return False\n\n# Example usage\ngraph = [[0, 1], [1, 2], [2, 3], [3, 0]]\nprint(is_connected(graph))  # Output: true\n```\n\nThis program first defines a helper function `dfs()` that performs a DFS on the given graph. The `is_connected()` function then initializes a visited set and starts DFS from any node. If all nodes are visited, the graph is connected. Otherwise, it's not connected.",
+  "error": null,
+  "elapsed_seconds": 3.46,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

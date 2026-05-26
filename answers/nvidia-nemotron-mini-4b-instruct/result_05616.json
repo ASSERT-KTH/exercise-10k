@@ -1,0 +1,9 @@
+{
+  "id": 5616,
+  "title": "Password Generator",
+  "prompt": "Write a program that generates a random password based on user input (e.g. length, character types), taking the user's input as parameters.\nSample Input: 10\nuppercase\nnumbers\nSample Output: G4jR8dLpM2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates a random password based on user input for length, character types (uppercase, lowercase, numbers, and special characters), and the actual password generation. This program uses the `secrets` module for generating random passwords.\n\n```python\nimport secrets\n\ndef get_user_input():\n    \"\"\"Get user input for password generation parameters.\"\"\"\n    length = int(input(\"Enter the length of the password: \"))\n    character_types = input(\"Enter the character types (uppercase, lowercase, numbers, special characters): \").lower()\n    return length, character_types\n\ndef generate_password(length, character_types):\n    \"\"\"Generate a random password based on user input parameters.\"\"\"\n    password_chars = \"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+[]{}|;:,.<>?\"\n    password_chars += character_types.replace(\"uppercase\", \"\").replace(\"lowercase\", \"\").replace(\"numbers\", \"\").replace(\"special characters\", \"\")\n\n    return \"\".join(secrets.choice(password_chars) for _ in range(length))\n\nif __name__ == \"__main__\":\n    length, character_types = get_user_input()\n    password = generate_password(length, character_types)\n    print(f\"Your generated password is: {password}\")\n```\n\nThis program prompts the user to enter the length of the password and the character types they want to include. Then, it generates a random password based on those parameters and prints it out.",
+  "error": null,
+  "elapsed_seconds": 4.14,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

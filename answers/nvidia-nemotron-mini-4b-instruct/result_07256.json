@@ -1,0 +1,9 @@
+{
+  "id": 7256,
+  "title": "String Reversal",
+  "prompt": "Write a program that takes a string as input and returns the reversed string. For example, if the input is 'hello', the output should be 'olleh'. The program should handle strings of any length and should not use any built-in reverse functions.\nSample Input: hello\nSample Output: olleh\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef reverse_string(input_str: str) -> str:\n    \"\"\"\n    Reverses a given string without using built-in reverse functions.\n\n    :param input_str: The string to reverse.\n    :return: The reversed string.\n    \"\"\"\n    if not isinstance(input_str, str):\n        raise TypeError(\"Input must be a string.\")\n\n    reversed_str = \"\"\n    for char in input_str[::-1]:  # Use slicing with step -1 to reverse the string\n        reversed_str += char\n\n    return reversed_str\n```\n\nThis function checks if the input is a string, then reverses the string by iterating over it in reverse order and appending each character to a new string. Here's an example of how to use this function:\n\n```python\nprint(reverse_string('hello'))  # Output: olleh\nprint(reverse_string('world'))  # Output: dlrow\nprint(reverse_string(''))       # Output: ''\n```",
+  "error": null,
+  "elapsed_seconds": 2.65,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

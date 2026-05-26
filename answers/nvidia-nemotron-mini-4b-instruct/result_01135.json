@@ -1,0 +1,9 @@
+{
+  "id": 1135,
+  "title": "Simple Calculator",
+  "prompt": "Create a program that allows the user to perform basic arithmetic operations (e.g. addition, subtraction, multiplication, division)\nSample Input: 2 + 2\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you create a program for basic arithmetic operations. Here's an example in Python that follows your requirements:\n\n```python\ndef perform_arithmetic(operation, num1, num2):\n    \"\"\"\n    Performs a basic arithmetic operation on two numbers.\n\n    :param operation: str, one of 'add', 'sub', 'mul', 'div'\n    :param num1: float or int\n    :param num2: float or int\n    :return: float or int\n    \"\"\"\n    if operation not in ['add', 'sub', 'mul', 'div']:\n        raise ValueError(\"Invalid operation. Choose from 'add', 'sub', 'mul', or 'div'.\")\n\n    if operation == 'add':\n        return num1 + num2\n    elif operation == 'sub':\n        return num1 - num2\n    elif operation == 'mul':\n        return num1 * num2\n    elif operation == 'div':\n        if num2 == 0:\n            raise ValueError(\"Division by zero is not allowed.\")\n        return num1 / num2\n\n# Get user input\nwhile True:\n    try:\n        operation = input(\"Enter the operation (add, sub, mul, or div): \").lower()\n        num1 = float(input(\"Enter the first number: \"))\n        num2 = float(input(\"Enter the second number: \"))\n\n        result = perform_arithmetic(operation, num1, num2)\n        print(f\"{num1} {operation} {num2} = {result}\")\n        break\n    except ValueError as e:\n        print(e)\n```\n\nThis program will keep prompting the user for input until a valid operation is entered. It checks for invalid inputs and raises appropriate exceptions. The `perform_arithmetic` function performs the chosen operation and returns the result.",
+  "error": null,
+  "elapsed_seconds": 4.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

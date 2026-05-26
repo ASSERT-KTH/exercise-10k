@@ -1,0 +1,9 @@
+{
+  "id": 1082,
+  "title": "Multiplication Table",
+  "prompt": "Write a program that prints the multiplication table for a given number.\nSample Input: 5\nSample Output: 5 * 1 = 5\n5 * 2 = 10\n5 * 3 = 15\n5 * 4 = 20\n5 * 5 = 25\n",
+  "answer": "Here's a Python program that prints the multiplication table for a given number:\n\n```python\ndef print_multiplication_table(number):\n    # Ensure the input is a positive integer\n    if not isinstance(number, int) or number < 1:\n        raise ValueError(\"Input must be a positive integer\")\n\n    # Print the header\n    print(f\"{number} * 1 = {number}\")\n\n    # Print the remaining rows\n    for i in range(2, 11):  # Print rows up to 10\n        print(f\"{number} * {i} = {number * i}\")\n\n# Example usage\ntry:\n    print_multiplication_table(5)\nexcept ValueError as e:\n    print(e)\n```\n\nWhen you run this program with the sample input 5, it will output:\n\n```\n5 * 1 = 5\n5 * 2 = 10\n5 * 3 = 15\n5 * 4 = 20\n5 * 5 = 25\n5 * 6 = 30\n5 * 7 = 35\n5 * 8 = 40\n5 * 9 = 45\n5 * 10 = 50\n```",
+  "error": null,
+  "elapsed_seconds": 2.89,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

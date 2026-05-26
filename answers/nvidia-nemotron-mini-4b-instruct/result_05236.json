@@ -1,0 +1,9 @@
+{
+  "id": 5236,
+  "title": "Weather Forecast Checker",
+  "prompt": "Write a program that takes a weather forecast as input, and prints 'Sunny' if the forecast is 'Clear', 'Rainy' if the forecast is 'Rain', and 'Snowy' if the forecast is 'Snow'.\nSample Input: Clear\nSample Output: Sunny\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef forecast_to_description(forecast):\n    \"\"\"\n    Takes a weather forecast as input and returns a string describing the weather.\n\n    :param forecast: str, one of 'Clear', 'Rain', or 'Snow'\n    :return: str, 'Sunny', 'Rainy', or 'Snowy'\n    \"\"\"\n    if forecast.lower() == 'clear':\n        return 'Sunny'\n    elif forecast.lower() == 'rain':\n        return 'Rainy'\n    elif forecast.lower() == 'snow':\n        return 'Snowy'\n    else:\n        raise ValueError(f\"Invalid forecast: {forecast}. Expected one of 'Clear', 'Rain', or 'Snow'.\")\n\n# Get user input\nuser_input = input(\"Enter a weather forecast: \")\n\n# Print the description\nprint(forecast_to_description(user_input))\n```\nThis program defines a function `forecast_to_description` that takes a weather forecast as input and returns a string describing the weather. The function checks the input against a list of valid forecasts and raises a `ValueError` if the input is invalid. The program then gets user input, calls the function with the input, and prints the result.\n\nFor example, if the user enters \"Clear\", the program will print \"Sunny\". If the user enters \"Rain\", the program will print \"Rainy\". If the user enters \"snow\", the program will print \"Snowy\". If the user enters anything else, the program will raise a `ValueError`.",
+  "error": null,
+  "elapsed_seconds": 3.77,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

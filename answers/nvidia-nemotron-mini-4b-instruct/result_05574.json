@@ -1,0 +1,9 @@
+{
+  "id": 5574,
+  "title": "Text Adventure Game",
+  "prompt": "Write a program that allows the user to navigate a text-based adventure game, making choices that affect the outcome.\nSample Input: user choice\nSample Output: You are in a dark room. Do you want to go north or south?\n",
+  "answer": "Sure, I'd be happy to help you create a simple text-based adventure game. Here's a Python program that meets your requirements. This program uses a dictionary to represent the game world and a loop to handle user input and navigation.\n\n```python\n# Define the game world as a dictionary\ngame_world = {\n    \"north\": \"You can't go north. The door is locked.\",\n    \"south\": \"You are in a small room. There is a door to the north.\",\n    \"locked_door\": \"The door is locked. You need a key to open it.\"\n}\n\n# Function to handle user input and navigation\ndef navigate(current_room):\n    print(current_room)\n    user_choice = input(\"What do you want to do? (north, south, or look) \").lower()\n\n    if user_choice == \"north\":\n        return game_world[\"north\"]\n    elif user_choice == \"south\":\n        return game_world[\"south\"]\n    elif user_choice == \"look\":\n        return \"You see a key on the table. You need it to unlock the door.\"\n    else:\n        return \"I don't understand that command. Please try again.\"\n\n# Start the game\ncurrent_room = list(game_world.keys())[0]\nwhile current_room != \"end\":\n    current_room = navigate(current_room)\n\nprint(\"Game over. You have reached the end.\")\n```\n\nThis program defines a game world as a dictionary, and the `navigate` function handles user input and navigation. The game loop continues until the user reaches the \"end\" room. You can add more rooms, items, and conditions to make the game more complex.",
+  "error": null,
+  "elapsed_seconds": 3.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2271,
+  "title": "Trigonometric Operations",
+  "prompt": "Write a program that calculates the sine, cosine, and tangent of a given angle.\nSample Input: 30\nSample Output: Sine: 0.5, Cosine: 0.866, Tangent: 0.577\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the sine, cosine, and tangent of a given angle using the `math` module, which provides pre-computed sine, cosine, and tangent values for common angles. The program also ensures that the input angle is in the range of [-pi, pi] to avoid any potential issues with the sine and cosine functions.\n\n```python\nimport math\n\ndef calculate_trigonometric_values(angle):\n    \"\"\"\n    Calculates the sine, cosine, and tangent of a given angle.\n\n    :param angle: The angle in radians.\n    :return: A tuple containing the sine, cosine, and tangent values.\n    \"\"\"\n\n    # Ensure the input angle is in the range [-pi, pi]\n    angle = (angle % (2 * math.pi)) if angle > math.pi else angle\n\n    # Calculate sine, cosine, and tangent\n    sine = math.sin(angle)\n    cosine = math.cos(angle)\n    tangent = math.tan(angle)\n\n    return sine, cosine, tangent\n\n# Get user input\nangle = float(input(\"Enter the angle in radians: \"))\n\n# Calculate and print trigonometric values\nsine, cosine, tangent = calculate_trigonometric_values(angle)\nprint(f\"Sine: {sine:.4f}, Cosine: {cosine:.4f}, Tangent: {tangent:.4f}\")\n```\n\nThis program will prompt the user to enter an angle in radians and then calculate and print the sine, cosine, and tangent values.",
+  "error": null,
+  "elapsed_seconds": 3.62,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

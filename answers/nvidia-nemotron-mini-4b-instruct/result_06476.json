@@ -1,0 +1,9 @@
+{
+  "id": 6476,
+  "title": "Dictionary Keys and Values",
+  "prompt": "Write a function that takes a dictionary as input and returns two lists, one for keys and one for values\nSample Input: {'name': 'John', 'age': 30}\nSample Output: [['name', 'age'], ['John', 30]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef dict_to_lists(input_dict):\n    \"\"\"\n    Takes a dictionary as input and returns two lists: one for keys and one for values.\n\n    :param input_dict: The input dictionary\n    :return: A tuple containing two lists: keys and values\n    \"\"\"\n    keys = list(input_dict.keys())\n    values = list(input_dict.values())\n\n    # Ensure the lists have the same length by padding with None if necessary\n    if len(keys) != len(values):\n        keys += [None] * (len(values) - len(keys))\n        values += [None] * (len(keys) - len(values))\n\n    return keys, values\n```\nHere's an example of how you can use this function:\n```python\ninput_dict = {'name': 'John', 'age': 30}\nkeys, values = dict_to_lists(input_dict)\nprint(keys)  # Output: ['name', 'age']\nprint(values)  # Output: [['John'], [30]]\n```\nThis function first converts the input dictionary to two lists using the `keys()` and `values()` methods, respectively. It then checks if the lengths of the two lists are equal, and if not, it pads the shorter list with `None` values to match the length of the longer list. Finally, it returns the two lists as a tuple.",
+  "error": null,
+  "elapsed_seconds": 3.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

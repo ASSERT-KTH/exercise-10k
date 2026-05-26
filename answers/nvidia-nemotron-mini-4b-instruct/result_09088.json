@@ -1,0 +1,9 @@
+{
+  "id": 9088,
+  "title": "Dictionary Data Analysis",
+  "prompt": "Write a program that takes a dictionary as input where keys are student names and values are lists of their scores in different subjects. The program should calculate the average score for each student and return a new dictionary with student names as keys and their average scores as values.\nSample Input: {\"John\": [90, 85, 95], \"Alice\": [88, 92, 89], \"Bob\": [76, 82, 81]}\nSample Output: {\"John\": 90.0, \"Alice\": 89.66666666666667, \"Bob\": 79.66666666666667}\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef calculate_averages(students):\n    # Calculate the average score for each student\n    averages = {}\n    for student, scores in students.items():\n        total = sum(scores)\n        averages[student] = total / len(scores)\n    return averages\n\n# Example usage\nstudents = {\"John\": [90, 85, 95], \"Alice\": [88, 92, 89], \"Bob\": [76, 82, 81]}\nprint(calculate_averages(students))\n```\n\nThis program defines a function `calculate_averages` that takes a dictionary of students and their scores as input. It iterates over each student and calculates the average score by summing all the scores and dividing by the number of scores. The resulting average score is stored in a new dictionary with the student name as the key. The function returns this new dictionary.\n\nThe example usage at the end of the program demonstrates how to use this function with the sample input you provided.",
+  "error": null,
+  "elapsed_seconds": 2.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

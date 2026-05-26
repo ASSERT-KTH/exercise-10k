@@ -1,0 +1,9 @@
+{
+  "id": 8245,
+  "title": "Time of Day Greeting",
+  "prompt": "Develop a program that greets the user based on the current time of day using if/else statements.\nSample Input: 10:00 AM\nSample Output: Good morning!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that greets the user based on the current time of day using if/else statements:\n\n```python\nimport datetime\n\n# Get the current time\nnow = datetime.datetime.now()\n\n# Define the greeting based on the current time\nif now.hour < 12:\n    greeting = \"Good morning!\"\nelif now.hour < 18:\n    greeting = \"Good afternoon!\"\nelse:\n    greeting = \"Good evening!\"\n\n# Print the greeting\nprint(greeting)\n```\n\nThis program first imports the `datetime` module, which provides classes for working with dates and times. It then gets the current time using the `datetime.datetime.now()` function.\n\nNext, it defines an `if/else` statement that checks the current hour (stored in the `now.hour` attribute) and prints the corresponding greeting. The `hour` attribute can be between 0 and 23, so we check for hours less than 12 to get \"Good morning!\", hours between 12 and 17 to get \"Good afternoon!\", and hours greater than or equal to 18 to get \"Good evening!\".\n\nFinally, it prints the greeting using the `print()` function. You can run this program and enter the current time (e.g., 10:00 AM) to see the corresponding greeting.",
+  "error": null,
+  "elapsed_seconds": 3.25,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

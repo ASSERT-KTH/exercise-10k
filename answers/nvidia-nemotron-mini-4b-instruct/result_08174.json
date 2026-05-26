@@ -1,0 +1,9 @@
+{
+  "id": 8174,
+  "title": "List All",
+  "prompt": "Create a list of 5 integers and check if all elements meet a condition.\nSample Input: [1, 2, 3, 4, 5], x > 0\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef check_condition(numbers, condition):\n    \"\"\"Check if all elements in the list meet the given condition.\n\n    Args:\n    numbers (list): A list of integers.\n    condition (callable): A function that takes an integer as input and returns a boolean.\n\n    Returns:\n    bool: True if all elements in the list meet the condition, False otherwise.\n    \"\"\"\n    return all(condition(num) for num in numbers)\n```\nYou can use this function with a list of integers and a condition function that takes an integer as input and returns `True` if the integer is greater than 0, and `False` otherwise. Here's an example:\n```python\ndef is_positive(num):\n    return num > 0\n\nnumbers = [1, 2, 3, 4, 5]\nprint(check_condition(numbers, is_positive))  # Output: True\n```\nThis function uses the `all()` function to check if all elements in the list meet the given condition. The `all()` function returns `True` if all elements in the iterable are true, and `False` otherwise. The condition function `is_positive()` is applied to each number in the list using a generator expression, and the result is passed to `all()`.",
+  "error": null,
+  "elapsed_seconds": 3.16,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8471,
+  "title": "Time Calculator",
+  "prompt": "Write a program to add or subtract a given number of hours, minutes, and seconds from a given time\nSample Input: 12:00:00 2 30 0\nSample Output: 14:30:00\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes in a time in the format of hours:minutes:seconds, an integer number of hours to add or subtract, and a number of minutes to add or subtract, and returns the resulting time in the same format:\n```python\nfrom datetime import time\n\ndef add_or_subtract_time(time_str, hours, minutes, seconds):\n    # Parse the input time string into a time object\n    time_obj = time(*time_str.split(':'))\n\n    # Add or subtract the given number of hours, minutes, and seconds\n    new_time = time_obj + timedelta(hours=hours, minutes=minutes, seconds=seconds)\n\n    # Format the resulting time as a string in the desired format\n    return new_time.strftime('%H:%M:%S')\n\n# Example usage\ntime_str = '12:00:00'\nhours = 2\nminutes = 30\nseconds = 0\n\nresult = add_or_subtract_time(time_str, hours, minutes, seconds)\nprint(result)  # Output: 14:30:00\n```\nThis program uses the `datetime` module to parse the input time string into a `time` object, and the `timedelta` class to add or subtract the given number of hours, minutes, and seconds. Finally, it formats the resulting time object as a string in the desired format using the `strftime` method.",
+  "error": null,
+  "elapsed_seconds": 3.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

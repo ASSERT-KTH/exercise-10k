@@ -1,0 +1,9 @@
+{
+  "id": 3873,
+  "title": "Dictionary Map",
+  "prompt": "Given a dictionary with names of students as keys and their grades as values, write a program to map a function to each value in the dictionary and print the resulting dictionary.\nSample Input: {'John': 85, 'Alice': 90, 'Bob': 78}\nSample Output: {'John': 'B', 'Alice': 'A', 'Bob': 'C'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that maps a function to each value in the given dictionary and prints the resulting dictionary:\n```python\ndef grade_mapping(grade):\n    \"\"\"Map a grade to a letter based on the given grade.\"\"\"\n    if grade >= 90:\n        return 'A'\n    elif grade >= 80:\n        return 'B'\n    elif grade >= 70:\n        return 'C'\n    else:\n        return 'D'\n\n# Example usage:\nstudent_grades = {'John': 85, 'Alice': 90, 'Bob': 78}\nresulting_dict = {name: grade_mapping(grade) for name, grade in student_grades.items()}\nprint(resulting_dict)\n```\nWhen you run this program with the sample input `{'John': 85, 'Alice': 90, 'Bob': 78}`, it will output:\n```python\n{'John': 'B', 'Alice': 'A', 'Bob': 'C'}\n```\nThe program defines a function `grade_mapping` that maps a given grade to a letter based on the grade's value. Then, it uses a dictionary comprehension to create a new dictionary where the keys are the names of the students and the values are the corresponding letter grades.",
+  "error": null,
+  "elapsed_seconds": 3.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

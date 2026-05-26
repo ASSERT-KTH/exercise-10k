@@ -1,0 +1,9 @@
+{
+  "id": 6556,
+  "title": "Character Replacement",
+  "prompt": "Write a function that replaces all occurrences of a specified character with another character.\nSample Input: ['Hello World', 'l', 'x']\nSample Output: Hexxo Worxd\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef replace_char(text, char, replacement):\n    \"\"\"\n    Replaces all occurrences of a specified character with another character.\n\n    Parameters:\n    text (str): The input text.\n    char (str): The character to replace.\n    replacement (str): The character to replace 'char' with.\n\n    Returns:\n    str: The modified text with all occurrences of 'char' replaced by 'replacement'.\n    \"\"\"\n    return text.replace(char, replacement)\n```\nHere's an example of how you can use this function:\n```python\ntext = ['Hello World', 'l', 'x']\nchar = 'l'\nreplacement = 'x'\n\noutput = ''.join(replace_char(t, char, replacement) for t in text)\nprint(output)  # Output: Hexxo Worxd\n```\nThis function takes three parameters: `text`, `char`, and `replacement`. It uses a generator expression to apply the `replace` method to each element in the `text` list, and then joins the modified strings back together into a single string.",
+  "error": null,
+  "elapsed_seconds": 2.73,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

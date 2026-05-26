@@ -1,0 +1,9 @@
+{
+  "id": 8388,
+  "title": "Factorial Calculation",
+  "prompt": "Write a program that calculates the factorial of a given number using recursion.\nSample Input: 5\nSample Output: 120\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the factorial of a given number using recursion:\n\n```python\ndef factorial(n):\n    \"\"\"\n    Calculates the factorial of a given number using recursion.\n\n    :param n: The number for which to calculate the factorial.\n    :return: The factorial of n.\n    \"\"\"\n\n    # Base case: the factorial of 0 is 1\n    if n == 0:\n        return 1\n\n    # Recursive case: the factorial of n is n * factorial(n-1)\n    else:\n        return n * factorial(n-1)\n\n# Get user input\nn = int(input(\"Enter a positive integer: \"))\n\n# Calculate and print the factorial\nfact = factorial(n)\nprint(f\"{n}! = {fact}\")\n```\n\nThis program defines a function `factorial(n)` that calculates the factorial of a given number `n`. The base case is when `n` is 0, in which case the function returns 1 (since the factorial of 0 is defined to be 1). For all other positive integers `n`, the function calls itself with the argument `n-1` and multiplies the result by `n`. The program then prompts the user to enter a positive integer, calculates its factorial using the `factorial()` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

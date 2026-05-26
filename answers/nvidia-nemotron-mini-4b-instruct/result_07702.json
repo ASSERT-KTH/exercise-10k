@@ -1,0 +1,9 @@
+{
+  "id": 7702,
+  "title": "Substring Extraction",
+  "prompt": "Extract a substring from a given string starting at a specified index and ending at another specified index.\nSample Input: hello world, 6, 11\nSample Output: world\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that extracts a substring from a given string, starting at a specified index and ending at another specified index:\n```python\ndef extract_substring(s, start_index, end_index):\n    \"\"\"\n    Extract a substring from a given string starting at a specified index and ending at another specified index.\n\n    Parameters:\n    s (str): The input string.\n    start_index (int): The starting index of the substring.\n    end_index (int): The ending index of the substring (exclusive).\n\n    Returns:\n    str: The extracted substring.\n    \"\"\"\n    if start_index < 0 or start_index >= len(s):\n        raise IndexError(\"start_index is out of range\")\n    if end_index < 0 or end_index > len(s) or start_index >= end_index:\n        raise IndexError(\"end_index is out of range or start_index is greater than or equal to end_index\")\n\n    return s[start_index:end_index]\n```\nHere's an example of how to use this function:\n```python\ns = \"hello world\"\nstart_index = 6\nend_index = 11\n\nsubstring = extract_substring(s, start_index, end_index)\nprint(substring)  # Output: world\n```\nThis function checks for invalid index values and raises an `IndexError` if they are out of range. It then returns the substring using Python's slicing syntax (`s[start_index:end_index]`).",
+  "error": null,
+  "elapsed_seconds": 3.9,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

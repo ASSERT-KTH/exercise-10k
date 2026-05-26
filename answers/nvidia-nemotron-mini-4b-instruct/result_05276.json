@@ -1,0 +1,9 @@
+{
+  "id": 5276,
+  "title": "Game Outcome Predictor",
+  "prompt": "Create a program to predict the outcome of a game based on the scores of the two teams using conditional statements\nSample Input: 10 20\nSample Output: Team B wins\n",
+  "answer": "Sure, I'd be happy to help you create a program to predict the outcome of a game based on the scores of the two teams. Here's an example Python program that uses conditional statements to determine the winner:\n\n```python\ndef predict_game_winner(team_score_a, team_score_b):\n    \"\"\"\n    Predict the outcome of a game based on the scores of the two teams.\n\n    :param team_score_a: The score of team A.\n    :param team_score_b: The score of team B.\n    :return: A string indicating the winner of the game.\n    \"\"\"\n\n    # Check if team A has won\n    if team_score_a > team_score_b:\n        return f\"Team A wins\"\n\n    # Check if team B has won\n    elif team_score_b > team_score_a:\n        return f\"Team B wins\"\n\n    # If the scores are equal, the game is a draw\n    else:\n        return \"It's a draw\"\n\n# Get user input for the scores of the two teams\nteam_score_a = int(input(\"Enter the score of team A: \"))\nteam_score_b = int(input(\"Enter the score of team B: \"))\n\n# Predict the winner and print the result\nwinner = predict_game_winner(team_score_a, team_score_b)\nprint(winner)\n```\n\nThis program defines a function `predict_game_winner` that takes the scores of the two teams as input and returns a string indicating the winner. The function uses conditional statements to check if team A has won, if team B has won, or if the game is a draw. The program then gets user input for the scores of the two teams, calls the `predict_game_winner` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 4.2,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

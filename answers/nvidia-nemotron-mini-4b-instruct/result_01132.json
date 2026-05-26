@@ -1,0 +1,9 @@
+{
+  "id": 1132,
+  "title": "Text Analyzer",
+  "prompt": "Write a program that takes a piece of text as input and analyzes its content (e.g. word frequency, sentiment)\nSample Input: This is a sample text.\nSample Output: Word frequency: {'this': 1, 'is': 1, ...}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses the Natural Language Toolkit (NLTK) to analyze the content of a given text. First, you need to install NLTK by running `pip install nltk`. Then, you can use the following code:\n\n```python\nimport nltk\nfrom nltk.corpus import stopwords\nfrom nltk.tokenize import word_tokenize\nfrom nltk.probability import FreqDist\nfrom nltk.sentiment import SentimentIntensityAnalyzer\n\ndef analyze_text(text):\n    # Remove stopwords and tokenize the text\n    words = word_tokenize(text.lower())\n    stop_words = set(stopwords.words('english'))\n    words = [word for word in words if word.isalnum() and word not in stop_words]\n\n    # Calculate word frequency\n    word_freq = FreqDist(words)\n\n    # Analyze sentiment\n    sia = SentimentIntensityAnalyzer()\n    sentiment = sia.polarity_scores(text)\n\n    # Output results\n    output = {\n        'Word frequency': word_freq,\n        'Sentiment': sentiment\n    }\n\n    return output\n\n# Example usage\ntext = \"This is a sample text. It's quite interesting, isn't it?\"\nresult = analyze_text(text)\nprint(result)\n```\n\nThis program first removes stopwords and tokenizes the text, then calculates the word frequency using NLTK's FreqDist class. It also analyzes the sentiment of the text using NLTK's SentimentIntensityAnalyzer. Finally, it outputs the results in a dictionary. You can customize the output format as needed.",
+  "error": null,
+  "elapsed_seconds": 4.16,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

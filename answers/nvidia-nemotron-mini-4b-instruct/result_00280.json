@@ -1,0 +1,9 @@
+{
+  "id": 280,
+  "title": "Tip Calculator",
+  "prompt": "Write a program that calculates the tip amount and total cost of a bill given its amount and tip percentage.\nSample Input: 100 15\nSample Output: Tip Amount: 15\nTotal Cost: 115\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the tip amount and total cost of a bill given its amount and tip percentage:\n\n```python\ndef calculate_bill(bill_amount, tip_percentage):\n    \"\"\"\n    Calculates the tip amount and total cost of a bill.\n\n    :param bill_amount: The amount of the bill before tax.\n    :param tip_percentage: The percentage of the tip as a decimal (e.g., 0.15 for 15%).\n    :return: A tuple containing the tip amount and total cost.\n    \"\"\"\n\n    # Validate input\n    if not isinstance(bill_amount, (int, float)) or bill_amount < 0:\n        raise ValueError(\"Bill amount must be a non-negative number.\")\n\n    if not isinstance(tip_percentage, (float, int)) or tip_percentage < 0 or tip_percentage > 1:\n        raise ValueError(\"Tip percentage must be a number between 0 and 1.\")\n\n    # Calculate tip amount and total cost\n    tip_amount = bill_amount * tip_percentage\n    total_cost = bill_amount + tip_amount\n\n    return tip_amount, total_cost\n\n\n# Example usage\nbill_amount = 100\ntip_percentage = 15\n\ntip_amount, total_cost = calculate_bill(bill_amount, tip_percentage)\n\nprint(f\"Tip Amount: {tip_amount:.2f}\")\nprint(f\"Total Cost: {total_cost:.2f}\")\n```\n\nThis program defines a function `calculate_bill` that takes the bill amount and tip percentage as input, validates the input, calculates the tip amount and total cost, and returns them as a tuple. The example usage at the end of the program demonstrates how to use this function to calculate the tip amount and total cost for a bill of $100 with a 15% tip.",
+  "error": null,
+  "elapsed_seconds": 4.42,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

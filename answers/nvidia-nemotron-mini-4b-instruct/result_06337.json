@@ -1,0 +1,9 @@
+{
+  "id": 6337,
+  "title": "Array Flattening",
+  "prompt": "Write a program that takes a nested array as input, flattens it into a one-dimensional array, and returns the flattened array.\nSample Input: [1, [2, [3, 4]], 5]\nSample Output: [1, 2, 3, 4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses recursion to flatten the nested array. The base case is when the input is a single element (i.e., a leaf node), which is simply added to the output list. For non-leaf nodes (i.e., arrays), the program recursively calls itself on the sub-array and concatenates the results with the current element.\n\n```python\ndef flatten_nested_array(arr):\n    \"\"\"\n    Flattens a nested array into a one-dimensional array.\n\n    :param arr: The nested array to flatten\n    :return: The flattened array\n    \"\"\"\n    output = []\n\n    for element in arr:\n        if isinstance(element, list):  # If the element is an array, flatten it recursively\n            output.extend(flatten_nested_array(element))\n        else:\n            output.append(element)  # If the element is a leaf node, add it to the output list\n\n    return output\n```\n\nHere's an example of how to use this function:\n\n```python\nnested_array = [1, [2, [3, 4]], 5]\nflattened_array = flatten_nested_array(nested_array)\nprint(flattened_array)  # Output: [1, 2, 3, 4, 5]\n```",
+  "error": null,
+  "elapsed_seconds": 3.37,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

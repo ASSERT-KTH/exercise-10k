@@ -1,0 +1,9 @@
+{
+  "id": 7048,
+  "title": "Currency Converter",
+  "prompt": "Write a program that takes an amount in USD as input and prints out the equivalent amount in EUR.\nSample Input: 100\nSample Output: 88.72 EUR\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes an amount in USD as input and prints out the equivalent amount in EUR, using the current exchange rate. You can replace the `exchange_rate` variable with the actual exchange rate you need.\n\n```python\n# Current exchange rate (as of 2023-03-15): 1 USD = 0.8872 EUR\nexchange_rate = 0.8872\n\ndef usd_to_eur(amount):\n    \"\"\"Converts USD to EUR and returns the result as a float.\"\"\"\n    return amount * exchange_rate\n\n# Get user input\ntry:\n    user_input = float(input(\"Enter the amount in USD: \"))\nexcept ValueError:\n    print(\"That's not a valid number. Please try again.\")\n    exit()\n\n# Convert and print the result\nresult = usd_to_eur(user_input)\nprint(f\"{user_input} USD is equivalent to {result:.2f} EUR.\")\n```\n\nThis program defines a function `usd_to_eur` that takes an amount in USD and returns the equivalent amount in EUR. The function multiplies the input amount by the exchange rate to calculate the result. The program then gets user input, converts it to a float, and calls the function to calculate the equivalent amount in EUR. Finally, it prints the result with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 3.22,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

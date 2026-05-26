@@ -1,0 +1,9 @@
+{
+  "id": 5995,
+  "title": "Function with Exception Handling",
+  "prompt": "Create a function that takes a list and an index as input, and returns the value at that index if it exists, handling the case where the index is out of range\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_value_at_index(lst, index):\n    \"\"\"\n    Returns the value at the given index in the input list,\n    handling the case where the index is out of range.\n\n    Parameters:\n    lst (list): The input list.\n    index (int): The index to retrieve the value from.\n\n    Returns:\n    int or None: The value at the given index, or None if the index is out of range.\n    \"\"\"\n    # Check if the index is within the valid range (0 <= index < len(lst))\n    if not (0 <= index < len(lst)):\n        return None\n\n    # Return the value at the given index\n    return lst[index]\n```\nHere's an example of how you can use this function:\n```python\nprint(get_value_at_index([1, 2, 3, 4, 5], 2))  # Output: 3\nprint(get_value_at_index([1, 2, 3, 4, 5], 6))  # Output: None\n```\nThis function first checks if the given index is within the valid range of the list. If it is, it returns the value at that index using the list's indexing syntax (`lst[index]`). If the index is out of range, it returns `None`.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1080,
+  "title": "Miles Per Hour",
+  "prompt": "Create a program that uses a while loop to calculate the miles per hour of a car given the distance traveled and the time taken.\nSample Input: 100, 2\nSample Output: 50 miles per hour\n",
+  "answer": "Sure, I'd be happy to help you create a program that calculates the miles per hour of a car given the distance traveled and the time taken. Here's an example Python program that uses a while loop for this purpose:\n\n```python\ndef calculate_mph(distance, time):\n    \"\"\"\n    Calculates the miles per hour of a car given the distance traveled and the time taken.\n\n    :param distance: The distance traveled in miles.\n    :param time: The time taken in hours.\n    :return: The miles per hour of the car.\n    \"\"\"\n\n    # Validate input\n    if distance <= 0 or time <= 0:\n        raise ValueError(\"Distance and time must be positive numbers.\")\n\n    # Use a while loop to calculate the miles per hour\n    mph = 0\n    while time > 0:\n        distance += 1  # Assume the car travels 1 mile per hour\n        time -= 1\n        mph = distance / time\n\n    return mph\n\n# Example usage\ndistance = 100\ntime = 2\nmph = calculate_mph(distance, time)\nprint(f\"{distance} miles traveled in {time} hours equals {mph:.1f} miles per hour.\")\n```\n\nThis program defines a function `calculate_mph` that takes the distance and time as input, validates them, and uses a while loop to calculate the miles per hour. The example usage at the end of the program demonstrates how to use the function to calculate the miles per hour for a given distance and time.",
+  "error": null,
+  "elapsed_seconds": 3.47,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

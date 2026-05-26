@@ -1,0 +1,9 @@
+{
+  "id": 1619,
+  "title": "Compound Interest Calculator",
+  "prompt": "Write a program that takes the principal amount, interest rate, and time as input and outputs the compound interest.\nSample Input: 1000 5 2\nSample Output: 110.25\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes the principal amount, interest rate, and time as input and outputs the compound interest using the formula:\n\nCompound Interest = P * (1 + r/n)^(nt)\n\nwhere P is the principal amount, r is the annual interest rate as a decimal (e.g., 5% is 0.05), n is the number of times interest is compounded per year, and t is the number of years.\n\n```python\ndef calculate_compound_interest():\n    \"\"\"\n    Calculates the compound interest given the principal amount, interest rate, and time.\n    \"\"\"\n\n    # Get user input\n    principal = float(input(\"Enter the principal amount: \"))\n    rate = float(input(\"Enter the annual interest rate as a decimal (e.g., 5% is 0.05): \"))\n    time = float(input(\"Enter the number of years: \"))\n    n = int(input(\"Enter the number of times interest is compounded per year: \"))\n\n    # Calculate compound interest\n    compound_interest = principal * (1 + rate/n) ** (n*time)\n\n    # Output result\n    print(f\"The compound interest is ${compound_interest:.2f}.\")\n\n# Call the function\ncalculate_compound_interest()\n```\n\nThis program will prompt the user to enter the principal amount, interest rate, number of times interest is compounded per year, and the number of years. It will then calculate the compound interest and output the result to two decimal places.",
+  "error": null,
+  "elapsed_seconds": 4.25,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

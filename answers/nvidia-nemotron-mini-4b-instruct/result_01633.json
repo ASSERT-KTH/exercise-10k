@@ -1,0 +1,9 @@
+{
+  "id": 1633,
+  "title": "Checking for Duplicate Elements",
+  "prompt": "Create a program that takes a list as input and returns True if it contains any duplicate elements, False otherwise.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: False\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef has_duplicates(lst):\n    \"\"\"\n    Returns True if the given list contains any duplicate elements, False otherwise.\n\n    :param lst: The list to check for duplicates\n    :return: True if duplicates exist, False otherwise\n    \"\"\"\n    # Use a set to store the elements of the list. Sets only allow unique elements,\n    # so adding an element to a set automatically removes any duplicate elements.\n    unique_elements = set(lst)\n\n    # Check if the number of elements in the set is less than the length of the original list.\n    # If it is, there must be duplicates.\n    return len(unique_elements) < len(lst)\n```\nHere's how you can use this function:\n```python\nprint(has_duplicates([1, 2, 3, 4, 5]))  # Output: False\nprint(has_duplicates([1, 2, 2, 3, 4]))  # Output: True\n```\nThis function first converts the input list to a set, which automatically removes any duplicate elements. It then checks if the length of the set is less than the length of the original list, which indicates that there were duplicates in the original list.",
+  "error": null,
+  "elapsed_seconds": 3.03,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

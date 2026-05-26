@@ -1,0 +1,9 @@
+{
+  "id": 7786,
+  "title": "String Validator",
+  "prompt": "Write a program that checks if a given string is valid according to the following rules: it must contain at least one lowercase letter, one uppercase letter, and one digit. The string must also be between 8 and 32 characters long.\nSample Input: ValidString123\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given string is valid according to the specified rules:\n\n```python\nimport re\n\ndef is_valid_string(s: str) -> bool:\n    \"\"\"\n    Check if a given string is valid according to the following rules:\n    - It must contain at least one lowercase letter, one uppercase letter, and one digit.\n    - The string must also be between 8 and 32 characters long.\n\n    :param s: The string to check.\n    :return: True if the string is valid, False otherwise.\n    \"\"\"\n\n    # Check if the string contains at least one lowercase letter, one uppercase letter, and one digit\n    if not re.search(r'[a-z]', s) or not re.search(r'[A-Z]', s) or not re.search(r'\\d', s):\n        return False\n\n    # Check if the string length is between 8 and 32 characters\n    if len(s) < 8 or len(s) > 32:\n        return False\n\n    return True\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(is_valid_string(\"ValidString123\"))  # True\nprint(is_valid_string(\"InvalidString\"))   # False\nprint(is_valid_string(\"ShortString\"))     # False\nprint(is_valid_string(\"LongString\"))      # False\n```",
+  "error": null,
+  "elapsed_seconds": 3.54,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

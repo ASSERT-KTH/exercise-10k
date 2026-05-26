@@ -1,0 +1,9 @@
+{
+  "id": 4357,
+  "title": "Weather Checker",
+  "prompt": "Write a program that checks the weather (sunny, rainy, cloudy, etc.) and prints a corresponding message\nSample Input: sunny\nSample Output: Wear sunscreen\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks the weather and prints a corresponding message:\n\n```python\nweather_dict = {\n    \"sunny\": \"Wear sunscreen\",\n    \"rainy\": \"Bring an umbrella\",\n    \"cloudy\": \"Dress in layers\",\n    # Add more weather conditions and their corresponding messages here\n}\n\ndef get_weather_message(weather_condition):\n    \"\"\"\n    Returns the message to print based on the given weather condition.\n\n    :param weather_condition: str, the weather condition (e.g. \"sunny\", \"rainy\", etc.)\n    :return: str, the message to print\n    \"\"\"\n    if weather_condition in weather_dict:\n        return weather_dict[weather_condition]\n    else:\n        return \"Invalid weather condition. Please enter one of the following: \" + \", \".join(weather_dict.keys())\n\n# Example usage\nweather_condition = input(\"Enter the weather condition (e.g. sunny, rainy, cloudy, etc.): \")\nprint(get_weather_message(weather_condition))\n```\n\nThis program defines a dictionary `weather_dict` that maps weather conditions to their corresponding messages. The `get_weather_message` function takes a weather condition as input and returns the corresponding message from the dictionary. The example usage at the end of the program prompts the user to enter a weather condition and prints the corresponding message.",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

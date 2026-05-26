@@ -1,0 +1,9 @@
+{
+  "id": 9079,
+  "title": "Number Generator",
+  "prompt": "Write a program that generates a random number within a given range using if statements\nSample Input: 1, 10\nSample Output: 7\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates a random number within a given range using if statements:\n\n```python\nimport random\n\ndef generate_random_number(min_value, max_value):\n    \"\"\"\n    Generates a random integer within the given range.\n\n    :param min_value: The minimum value of the range.\n    :param max_value: The maximum value of the range.\n    :return: A random integer within the given range.\n    \"\"\"\n\n    # Check if the input values are valid\n    if min_value > max_value:\n        raise ValueError(\"The minimum value must be less than or equal to the maximum value.\")\n\n    # Generate a random integer within the given range\n    random_number = random.randint(min_value, max_value)\n\n    return random_number\n\n# Get user input for the range\nmin_value = int(input(\"Enter the minimum value: \"))\nmax_value = int(input(\"Enter the maximum value: \"))\n\n# Generate and print the random number\nrandom_number = generate_random_number(min_value, max_value)\nprint(f\"The random number generated is: {random_number}\")\n```\n\nThis program defines a function `generate_random_number` that checks if the input values are valid and then generates a random integer within the given range using the `random.randint()` function. The function is then called with user input for the range, and the generated random number is printed to the console.",
+  "error": null,
+  "elapsed_seconds": 3.52,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

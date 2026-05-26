@@ -1,0 +1,9 @@
+{
+  "id": 5784,
+  "title": "Function to Convert Temperature",
+  "prompt": "Write a function that converts a temperature from Celsius to Fahrenheit or vice versa.\nSample Input: 30, 'Celsius'\nSample Output: 86.0 Fahrenheit\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that converts temperatures from Celsius to Fahrenheit or vice versa. It uses the formula `(C * 9/5) + 32` to convert Celsius to Fahrenheit and `(F - 32) * 5/9` to convert Fahrenheit to Celsius.\n\n```python\ndef convert_temperature(temp, unit):\n    \"\"\"\n    Converts a temperature from Celsius to Fahrenheit or vice versa.\n\n    :param temp: The temperature value as a float.\n    :param unit: The unit of the temperature as a string ('Celsius' or 'Fahrenheit').\n    :return: The converted temperature as a float.\n    \"\"\"\n\n    # Validate the input unit\n    valid_units = {'Celsius': 'Fahrenheit', 'Fahrenheit': 'Celsius'}\n    if unit not in valid_units:\n        raise ValueError(f\"Invalid unit. Supported units are {', '.join(valid_units.values())}.\")\n\n    # Convert the temperature\n    if unit == 'Celsius':\n        return (temp * 9/5) + 32\n    else:\n        return (temp - 32) * 5/9\n```\n\nHere's an example of how to use the function:\n\n```python\nprint(convert_temperature(30, 'Celsius'))  # Output: 86.0 Fahrenheit\nprint(convert_temperature(86, 'Fahrenheit'))  # Output: 30.0 Celsius\n```",
+  "error": null,
+  "elapsed_seconds": 3.83,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

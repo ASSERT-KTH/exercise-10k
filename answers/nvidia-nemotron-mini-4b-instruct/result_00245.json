@@ -1,0 +1,9 @@
+{
+  "id": 245,
+  "title": "Array Mapping",
+  "prompt": "Write a program that takes an array and a function as input, and returns a new array with the function applied to each element.\nSample Input: [1, 2, 3, 4, 5], x * 2\nSample Output: [2, 4, 6, 8, 10]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef apply_function_to_array(arr, func):\n    \"\"\"\n    Applies a function to each element in an array.\n\n    Parameters:\n    arr (list): The input array.\n    func (callable): A function that takes one argument and returns a single value.\n\n    Returns:\n    list: A new array with the function applied to each element.\n    \"\"\"\n    # Check that the input is a list and the function is callable\n    if not isinstance(arr, list):\n        raise TypeError(\"Input 'arr' must be a list.\")\n    if not callable(func):\n        raise TypeError(\"Input 'func' must be a callable function.\")\n\n    # Apply the function to each element in the array and return the result\n    return [func(x) for x in arr]\n```\nHere's an example of how to use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\ndouble = lambda x: x * 2\nresult = apply_function_to_array(numbers, double)\nprint(result)  # Output: [2, 4, 6, 8, 10]\n```\nThis function first checks that the input is a list and the function is callable. If both conditions are true, it applies the function to each element in the array using a list comprehension and returns the result. The `lambda` function `double` is used as an example, but you can replace it with any other callable function that takes one argument and returns a single value.",
+  "error": null,
+  "elapsed_seconds": 3.82,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8113,
+  "title": "Average Word Length Calculator",
+  "prompt": "Write a program that takes a string as input and returns the average length of the words in the string.\nSample Input: Hello World this is a test\nSample Output: 3.5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\nimport re\n\ndef average_word_length(input_string: str) -> float:\n    \"\"\"\n    Calculates the average length of words in a given string.\n\n    :param input_string: The input string containing words separated by spaces.\n    :return: The average length of words in the string.\n    \"\"\"\n    # Remove any non-word characters (like punctuation) and split the string into words\n    words = re.findall(r'\\b\\w+\\b', input_string.lower())\n\n    # Calculate the total length of all words and the number of words\n    total_length = sum(len(word) for word in words)\n    num_words = len(words)\n\n    # Return the average length of words\n    return total_length / num_words if num_words > 0 else 0.0\n```\nHere's how you can use this function:\n```python\nprint(average_word_length(\"Hello World this is a test\"))  # Output: 3.5\n```\nThis function first removes any non-word characters (like punctuation) from the input string using a regular expression. It then splits the string into words and calculates the total length of all words and the number of words. Finally, it returns the average length of words by dividing the total length by the number of words. If there are no words in the input string, the function returns 0.0.",
+  "error": null,
+  "elapsed_seconds": 3.46,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

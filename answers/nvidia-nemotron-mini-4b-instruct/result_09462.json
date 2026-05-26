@@ -1,0 +1,9 @@
+{
+  "id": 9462,
+  "title": "Perfect Number Checker",
+  "prompt": "Create a program that checks if a given number is perfect and prints a corresponding message.\nSample Input: 6\nSample Output: The number is perfect.\n",
+  "answer": "Sure, I'd be happy to help you create a program that checks if a given number is perfect and prints a corresponding message. Here's an example Python program that does this:\n\n```python\ndef is_perfect(n):\n    \"\"\"Check if a given number is perfect.\"\"\"\n    divisors = [i for i in range(1, n) if n % i == 0]\n    return sum(divisors) == n\n\n# Get user input\nnumber = int(input(\"Enter a number: \"))\n\n# Check if the number is perfect\nif is_perfect(number):\n    print(f\"The number {number} is perfect.\")\nelse:\n    print(f\"{number} is not a perfect number.\")\n```\n\nThis program defines a helper function `is_perfect(n)` that checks if a given number `n` is perfect by summing up all its positive divisors (excluding `n` itself). The main part of the program gets user input, checks if the number is perfect using the helper function, and prints a message accordingly.\n\nHere's an example interaction with the program:\n\n```\nEnter a number: 6\nThe number 6 is perfect.\n```",
+  "error": null,
+  "elapsed_seconds": 2.76,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1253,
+  "title": "Generators",
+  "prompt": "Write a generator that yields the Fibonacci sequence.\nSample Input: None\nSample Output: 0, 1, 1, 2, 3, 5, 8, ...\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python generator function that yields the Fibonacci sequence:\n\n```python\ndef fibonacci():\n    \"\"\"Yields the Fibonacci sequence starting from 0.\"\"\"\n    a, b = 0, 1\n    while True:\n        yield a\n        a, b = b, a + b\n```\n\nThis generator function starts by initializing two variables `a` and `b` to 0 and 1, respectively. It then enters an infinite loop where it yields the current value of `a` (which is the first Fibonacci number), updates `a` and `b` to the next two numbers in the sequence, and then repeats the process.\n\nHere's an example of how you can use this generator function:\n\n```python\nfor fib_num in fibonacci():\n    if fib_num > 100:\n        break\n    print(fib_num)\n```\n\nThis will print out the Fibonacci numbers up to the first one that is greater than 100.",
+  "error": null,
+  "elapsed_seconds": 2.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

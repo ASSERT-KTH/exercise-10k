@@ -1,0 +1,9 @@
+{
+  "id": 7337,
+  "title": "Input with cryptography",
+  "prompt": "Write a program that takes input from the user with cryptography and prints out the results.\nSample Input: encrypted message\nSample Output: decrypted message\n",
+  "answer": "Sure, I can help you with that. Here's an example Python program that uses the `cryptography` library to encrypt and decrypt user input. Before running the code, make sure you have the `cryptography` library installed. You can install it using pip:\n\n```bash\npip install cryptography\n```\n\nHere's the Python code:\n\n```python\nfrom cryptography.fernet import Fernet\n\n# Generate a Fernet key\nkey = Fernet.generate_key()\n\n# Encrypt the message\nfernet = Fernet(key)\nencrypted_message = fernet.encrypt(b\"encrypted message\")\n\n# Ask the user for input\nuser_input = input(\"Enter your message: \")\n\n# Decrypt the user input\ndecrypted_message = fernet.decrypt(user_input.encode()).decode()\n\nprint(f\"Decrypted message: {decrypted_message}\")\n```\n\nThis program generates a Fernet key, encrypts the user input, and then asks the user for input. The user input is then decrypted and printed out.\n\nPlease note that using encryption and decryption for user input can be risky if the encryption key is not properly managed and stored securely. It's always a good idea to follow best practices for secure key management when working with encryption.",
+  "error": null,
+  "elapsed_seconds": 2.96,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

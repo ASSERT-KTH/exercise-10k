@@ -1,0 +1,9 @@
+{
+  "id": 3377,
+  "title": "Generate a List of Factorials",
+  "prompt": "Use a for loop to generate a list of factorials up to a given limit\nSample Input: 5\nSample Output: [1, 2, 6, 24, 120]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses a for loop to generate a list of factorials up to a given limit:\n```python\ndef generate_factorials(limit):\n    \"\"\"\n    Generate a list of factorials up to a given limit using a for loop.\n\n    :param limit: The upper limit for the factorials.\n    :return: A list of factorials up to the given limit.\n    \"\"\"\n    if limit < 1:\n        raise ValueError(\"Limit must be a positive integer.\")\n\n    factorials = []\n    for n in range(1, limit + 1):\n        factorial = 1\n        for i in range(1, n + 1):\n            factorial *= i\n        factorials.append(factorial)\n\n    return factorials\n```\nHere's an example of how to use this function:\n```python\nprint(generate_factorials(5))  # Output: [1, 2, 6, 24, 120]\n```\nThis function first checks if the input limit is a positive integer. If not, it raises a `ValueError`. Then, it initializes an empty list to store the factorials. Finally, it uses a nested for loop to calculate and append each factorial to the list. The outer loop iterates from 1 to the given limit, and the inner loop iterates from 1 to the current value of `n`, multiplying each factor by the current value of `factorial` in each iteration.",
+  "error": null,
+  "elapsed_seconds": 3.57,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

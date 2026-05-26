@@ -1,0 +1,9 @@
+{
+  "id": 3597,
+  "title": "Calculate Change",
+  "prompt": "Write a program that calculates the change given the amount paid and the total bill.\nSample Input: 100 80\nSample Output: 20\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the change given the amount paid and the total bill:\n\n```python\ndef calculate_change(amount_paid, total_bill):\n    \"\"\"\n    Calculates the change given the amount paid and the total bill.\n\n    :param amount_paid: The amount paid as a float.\n    :param total_bill: The total bill as a float.\n    :return: The change as a float.\n    \"\"\"\n\n    # Ensure the inputs are valid\n    if amount_paid < 0 or total_bill < 0:\n        raise ValueError(\"Both amount_paid and total_bill must be non-negative numbers.\")\n\n    # Calculate the change\n    change = amount_paid - total_bill\n\n    return change\n\n\n# Get sample input\namount_paid = float(input(\"Enter the amount paid: \"))\ntotal_bill = float(input(\"Enter the total bill: \"))\n\n# Calculate and print the change\nchange = calculate_change(amount_paid, total_bill)\nprint(f\"The change is ${change:.2f}.\")\n```\n\nThis program defines a function `calculate_change` that takes the amount paid and the total bill as inputs, validates them to ensure they're non-negative, calculates the change, and returns it. The program then gets sample input from the user, calls the function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.25,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

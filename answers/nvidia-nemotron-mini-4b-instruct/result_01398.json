@@ -1,0 +1,9 @@
+{
+  "id": 1398,
+  "title": "Quiz Game",
+  "prompt": "Create a program that uses a while loop to play a quiz game with the user. The program should ask the user a series of questions and keep track of the score.\nSample Input: answer1\nanswer2\nanswer3\nSample Output: Correct!\nIncorrect\nCorrect!\n",
+  "answer": "Sure, I'd be happy to help you create a quiz game program using a while loop in Python. Here's an example program that keeps track of the user's score:\n\n```python\n# Initialize the score to 0\nscore = 0\n\n# Define a list of questions and answers\nquestions = [\n    (\"Who is the capital of France?\", \"Paris\", \"London\"),\n    (\"What is the largest planet in our solar system?\", \"Jupiter\", \"Saturn\"),\n    (\"Which language has the most native speakers?\", \"Chinese\", \"English\"),\n]\n\n# Use a while loop to keep asking questions until the user wants to quit\nwhile True:\n    # Display the current question and answer options\n    print(\"Question:\", questions[0][0])\n    for i, option in enumerate(questions[0][2]):\n        print(f\"{i + 1}. {option}\")\n\n    # Get the user's answer\n    answer = input(\"Enter your answer (or type 'quit' to quit): \").lower()\n\n    # Check if the user wants to quit\n    if answer == \"quit\":\n        break\n\n    # Check if the user's answer is correct\n    if answer == questions[0][1]:\n        print(\"Correct!\")\n        score += 1\n    else:\n        print(\"Incorrect\")\n\n    # Move to the next question\n    questions.pop(0)\n\n# Display the final score\nprint(f\"Your final score is: {score}\")\n```\n\nThis program defines a list of questions and answers, and then uses a while loop to ask each question in turn. The user can enter 'quit' at any time to quit the game. The program keeps track of the user's score and displays it at the end.",
+  "error": null,
+  "elapsed_seconds": 5.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

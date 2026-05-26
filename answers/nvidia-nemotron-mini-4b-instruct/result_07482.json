@@ -1,0 +1,9 @@
+{
+  "id": 7482,
+  "title": "Boolean Expression Simplifier",
+  "prompt": "Write a program that simplifies a given boolean expression\nSample Input: True and False or True\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that simplifies a given boolean expression using the `sympy` library, which provides symbolic mathematics functions. If you don't have it installed, you can install it using pip:\n\n```bash\npip install sympy\n```\n\nHere's the program:\n\n```python\nimport sympy as sp\n\ndef simplify_boolean_expression(expression: str) -> str:\n    \"\"\"\n    Simplifies a given boolean expression.\n\n    :param expression: The boolean expression as a string.\n    :return: The simplified boolean expression as a string.\n    \"\"\"\n    # Create a sympy expression from the input string\n    expr = sp.sympify(expression)\n\n    # Simplify the expression using sympy's simplify function\n    simplified_expr = expr.simplify()\n\n    # Convert the simplified expression back to a string\n    simplified_str = str(simplified_expr)\n\n    return simplified_str\n\n# Example usage\nexpression = \"True and False or True\"\nprint(simplify_boolean_expression(expression))  # Output: True\n```\n\nThis program first creates a sympy expression from the input string using `sp.sympify()`. Then, it simplifies the expression using `expr.simplify()`. Finally, it converts the simplified expression back to a string using `str()`.",
+  "error": null,
+  "elapsed_seconds": 3.13,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5356,
+  "title": "List Flattening",
+  "prompt": "Write a function that takes a list of lists as input, and returns a new list containing all elements from the sublists, in the order they appeared in the input list.\nSample Input: [[1, 2], [3, 4], [5, 6]]\nSample Output: [1, 2, 3, 4, 5, 6]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef flatten_list(nested_list):\n    \"\"\"\n    Flattens a list of lists into a single list, preserving the order of elements.\n\n    Parameters:\n    nested_list (list): A list of lists.\n\n    Returns:\n    list: A new list containing all elements from the sublists, in the order they appeared in the input list.\n    \"\"\"\n    return [element for sublist in nested_list for element in sublist]\n```\nHere's how you can use this function:\n```python\nnested_list = [[1, 2], [3, 4], [5, 6]]\nflat_list = flatten_list(nested_list)\nprint(flat_list)  # Output: [1, 2, 3, 4, 5, 6]\n```\nThis function uses a list comprehension to iterate over each sublist in the input list and then over each element in the sublist. The resulting list contains all elements from the sublists, in the order they appeared in the input list.",
+  "error": null,
+  "elapsed_seconds": 2.77,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

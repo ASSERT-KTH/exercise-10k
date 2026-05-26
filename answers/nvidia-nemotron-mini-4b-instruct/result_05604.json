@@ -1,0 +1,9 @@
+{
+  "id": 5604,
+  "title": "Mad Libs",
+  "prompt": "Write a program that takes a story template with placeholders for different types of words (e.g. noun, verb, adjective), then asks the user to input words to fill in the placeholders and prints out the completed story.\nSample Input: cat\nrun\nhappy\nSample Output: Yesterday, I saw a happy cat run down the street.\n",
+  "answer": "Sure, I can help you with that. Here's a Python program that meets your requirements:\n```python\ndef fill_story(template):\n    \"\"\"Fill in the placeholders in a story template with user input.\"\"\"\n    words = template.split()\n    for i, word in enumerate(words):\n        if word.startswith('{'):\n            word = input(f\"Enter a {word[1:-1]}: \").strip()\n        words[i] = word\n    return ' '.join(words)\n\n# Example usage\nstory_template = \"\"\"Yesterday, I saw a {adjective} {noun} {verb} down the street.\"\"\"\nstory = fill_story(story_template)\nprint(story)\n```\nThis program defines a function `fill_story` that takes a story template as input and prompts the user to input words to fill in the placeholders. The function iterates over the words in the template, checks if a word starts with `{`, and if so, prompts the user to input a new word. The user input is then stripped of any whitespace and assigned to the placeholder word. Finally, the function joins the filled-in words back into a string and returns it.\n\nThe example usage at the end of the program demonstrates how to use the `fill_story` function to fill in a story template with user input. The output of this example would be:\n```\nEnter a adjective: friendly\nEnter a noun: dog\nEnter a verb: barked\nYesterday, I saw a friendly dog barked down the street.\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.78,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

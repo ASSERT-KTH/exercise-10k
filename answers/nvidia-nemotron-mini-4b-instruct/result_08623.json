@@ -1,0 +1,9 @@
+{
+  "id": 8623,
+  "title": "Validate Email Address",
+  "prompt": "Write a program that takes a string as input and returns True if the string is a valid email address, False otherwise.\nSample Input: example@example.com\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given string is a valid email address:\n\n```python\nimport re\n\ndef is_valid_email(email):\n    \"\"\"\n    Check if a given string is a valid email address.\n\n    :param email: str, the email address to check\n    :return: bool, True if the email is valid, False otherwise\n    \"\"\"\n    # Regular expression pattern for a valid email address\n    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$'\n\n    # Compile the pattern into a regular expression object\n    regex = re.compile(pattern)\n\n    # Check if the email matches the pattern\n    return bool(regex.match(email))\n\n# Example usage\nemail = \"example@example.com\"\nprint(is_valid_email(email))  # Output: True\n```\n\nThis program defines a function `is_valid_email` that checks if a given string is a valid email address using a regular expression pattern. The pattern matches strings that have a local part (before the `@` symbol) consisting of alphanumeric characters, dots, underscores, percent signs, plus signs, and hyphens, and an optional top-level domain (after the `@` symbol) consisting of alphanumeric characters, dots, and hyphens. The function returns `True` if the email is valid and `False` otherwise. The example usage demonstrates how to use the function with a sample input.",
+  "error": null,
+  "elapsed_seconds": 3.66,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6303,
+  "title": "Dictionary Value Update",
+  "prompt": "Update the value of a specific key in a dictionary\nSample Input: {\"name\": \"John\", \"age\": 30}\nSample Output: {\"name\": \"John\", \"age\": 31}\n",
+  "answer": "Sure, I'd be happy to help you update the value of a specific key in a dictionary. Here's a Python function that takes a dictionary and a new value as input, and updates the value of the specified key:\n\n```python\ndef update_dict_value(dictionary, key, new_value):\n    \"\"\"\n    Updates the value of a specific key in a dictionary.\n\n    Parameters:\n    dictionary (dict): The dictionary to modify.\n    key (str): The key to update.\n    new_value (any): The new value to assign to the key.\n\n    Returns:\n    dict: The modified dictionary with the updated value.\n    \"\"\"\n    # Check if the key exists in the dictionary\n    if key in dictionary:\n        # Update the value of the key with the new value\n        dictionary[key] = new_value\n        return dictionary\n    else:\n        # If the key does not exist, raise a KeyError\n        raise KeyError(f\"The key '{key}' does not exist in the dictionary.\")\n```\n\nHere's an example of how to use this function:\n\n```python\nupdated_dict = update_dict_value({\"name\": \"John\", \"age\": 30}, \"age\", 31)\nprint(updated_dict)  # Output: {'name': 'John', 'age': 31}\n```",
+  "error": null,
+  "elapsed_seconds": 3.11,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6250,
+  "title": "Dictionary Copy",
+  "prompt": "Write a function that takes a dictionary as input and returns a copy of the dictionary\nSample Input: {'a': 1, 'b': 2, 'c': 3}\nSample Output: {'a': 1, 'b': 2, 'c': 3}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses the built-in `copy()` function to create a shallow copy of the input dictionary, which means it creates a new dictionary object with the same keys and values as the original, but references the original objects for mutable values (like lists and dictionaries). For immutable values like strings and numbers, it creates new objects.\n\n```python\ndef copy_dict(input_dict):\n    \"\"\"\n    Returns a copy of the input dictionary.\n\n    :param input_dict: The dictionary to copy.\n    :return: A copy of the input dictionary.\n    \"\"\"\n    return input_dict.copy()\n```\n\nHere's an example of how to use this function:\n\n```python\noriginal_dict = {'a': 1, 'b': 2, 'c': 3}\ncopied_dict = copy_dict(original_dict)\n\nprint(original_dict)  # {'a': 1, 'b': 2, 'c': 3}\nprint(copied_dict)    # {'a': 1, 'b': 2, 'c': 3}\n\n# Now modifying the original dictionary will not affect the copied dictionary\noriginal_dict['a'] = 4\nprint(original_dict)  # {'a': 4, 'b': 2, 'c': 3}\nprint(copied_dict)    # {'a': 1, 'b': 2, 'c': 3}\n```",
+  "error": null,
+  "elapsed_seconds": 3.65,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

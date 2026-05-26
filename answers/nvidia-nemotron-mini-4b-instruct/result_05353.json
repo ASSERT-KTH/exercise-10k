@@ -1,0 +1,9 @@
+{
+  "id": 5353,
+  "title": "Array Insertion",
+  "prompt": "Create a function that takes an array and an index as input, and inserts a new element at the specified index in the array.\nSample Input: [1, 2, 3, 4, 5], 2, 10\nSample Output: [1, 2, 10, 3, 4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a JavaScript function that meets your requirements:\n```javascript\nfunction insertAtIndex(arr, index, value) {\n  // Check if the index is within the array bounds\n  if (index < 0 || index > arr.length) {\n    throw new Error('Index out of bounds');\n  }\n\n  // Create a new array with the specified index and value\n const newArr = [...arr];\n newArr.splice(index, 0, value);\n\n  return newArr;\n}\n```\nThis function takes three arguments: `arr`, `index`, and `value`. It first checks if the index is within the array bounds, and throws an error if it's not. Then, it creates a new array using the `Array.prototype.slice()` method and appends the specified value at the specified index using the `Array.prototype.splice()` method. Finally, it returns the new array.\n\nHere's an example of how you can use this function:\n```javascript\nconst arr = [1, 2, 3, 4, 5];\nconst newArr = insertAtIndex(arr, 2, 10);\nconsole.log(newArr); // [1, 2, 10, 3, 4, 5]\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 9.95,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

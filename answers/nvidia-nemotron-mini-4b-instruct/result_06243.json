@@ -1,0 +1,9 @@
+{
+  "id": 6243,
+  "title": "Dictionary Updates",
+  "prompt": "Write a function that takes a dictionary and a list of key-value pairs as input and updates the dictionary with the new values\nSample Input: ({'a': 1, 'b': 2}, [('a', 3), ('c', 4)])\nSample Output: {'a': 3, 'b': 2, 'c': 4}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function, `update_dict_with_list`, takes a dictionary and a list of key-value pairs as input, and updates the dictionary with the new values. If a key already exists in the dictionary, its value will be overwritten with the corresponding value from the list. If a key does not exist in the dictionary, a new key-value pair will be added with the value from the list.\n\n```python\ndef update_dict_with_list(dictionary, key_value_pairs):\n    \"\"\"\n    Updates a dictionary with new values from a list of key-value pairs.\n\n    Parameters:\n    dictionary (dict): The dictionary to update.\n    key_value_pairs (list of tuples): A list of tuples, where each tuple contains a key and a value to be added to the dictionary.\n\n    Returns:\n    None\n    \"\"\"\n    for key, value in key_value_pairs:\n        if key in dictionary:\n            dictionary[key] = value\n        else:\n            dictionary[key] = value\n```\n\nHere's an example of how to use this function:\n\n```python\ninput_dict = {'a': 1, 'b': 2}\nkey_value_pairs = [('a', 3), ('c', 4)]\n\nupdate_dict_with_list(input_dict, key_value_pairs)\nprint(input_dict)  # Output: {'a': 3, 'b': 2, 'c': 4}\n```",
+  "error": null,
+  "elapsed_seconds": 3.79,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

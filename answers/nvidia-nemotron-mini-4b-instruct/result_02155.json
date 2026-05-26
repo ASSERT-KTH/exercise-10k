@@ -1,0 +1,9 @@
+{
+  "id": 2155,
+  "title": "Html Input and Output",
+  "prompt": "Write a program that reads an HTML file and prints out the file's contents.\nSample Input: <html><body>Hello World</body></html>\nSample Output: <html>\n  <body>\n    Hello World\n  </body>\n</html>\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that reads an HTML file and prints out its contents using the `BeautifulSoup` library, which is a popular library for parsing HTML and XML documents. If you don't have it installed, you can install it using pip:\n\n```bash\npip install beautifulsoup4\n```\n\nHere's the Python code:\n\n```python\nfrom bs4 import BeautifulSoup\n\ndef read_html_file(file_path):\n    \"\"\"Reads an HTML file and prints out its contents.\"\"\"\n    with open(file_path, 'r', encoding='utf-8') as file:\n        html_content = file.read()\n\n    # Parse the HTML content using BeautifulSoup\n    soup = BeautifulSoup(html_content, 'html.parser')\n\n    # Print out the contents of the parsed HTML document\n    print(soup.prettify())\n\n# Replace 'your_file.html' with the path to your HTML file\nread_html_file('your_file.html')\n```\n\nThis program reads the HTML file, parses it using BeautifulSoup, and then prints out the parsed HTML content using the `prettify()` method. The `html.parser` parser is used to parse the HTML content, and the `utf-8` encoding is used to ensure that the file is read correctly.\n\nPlease replace `'your_file.html'` with the path to your HTML file.",
+  "error": null,
+  "elapsed_seconds": 9.15,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

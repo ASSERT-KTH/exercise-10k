@@ -1,0 +1,9 @@
+{
+  "id": 4251,
+  "title": "Student Grade Book",
+  "prompt": "Develop a program that maintains a student's grade book. The program should allow users to add grades for assignments, and print the average grade for the student.\nSample Input: Assignment1 90\nSample Output: 90.0\n",
+  "answer": "Sure, I'd be happy to help you develop a program for maintaining a student's grade book. Here's a Python solution using a dictionary to store the grades. This approach allows us to easily add new assignments and calculate the average grade.\n\n```python\ndef add_grade(student_grades, assignment_name, grade):\n    \"\"\"Add a grade for a specific assignment to the student's grade book.\"\"\"\n    if assignment_name not in student_grades:\n        student_grades[assignment_name] = []\n\n    student_grades[assignment_name].append(grade)\n\ndef calculate_average(student_grades):\n    \"\"\"Calculate and return the average grade for the student.\"\"\"\n    if not student_grades:\n        return 0\n\n    return sum(grade for assignment_list in student_grades.values() for grade in assignment_list) / len(student_grades)\n\ndef main():\n    student_grades = {}\n\n    while True:\n        assignment_name = input(\"Enter assignment name (or 'done' to finish): \").strip()\n\n        if assignment_name.lower() == \"done\":\n            break\n\n        grade = float(input(f\"Enter grade for {assignment_name}: \"))\n        add_grade(student_grades, assignment_name, grade)\n\n    average_grade = calculate_average(student_grades)\n\n    print(f\"Average grade: {average_grade:.2f}\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program will prompt the user to enter assignment names and grades until the user enters \"done\". Then, it calculates and prints the average grade for the student.",
+  "error": null,
+  "elapsed_seconds": 3.82,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7220,
+  "title": "Nested Loops",
+  "prompt": "Create a program that demonstrates the use of nested loops using a for loop.\nSample Input: 5\nSample Output: Nested loop output\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that demonstrates the use of nested loops using a `for` loop. The program will print a message for each iteration of the nested loop, resulting in a \"nested loop output\" for the given input of 5.\n\n```python\ndef nested_loop_output(n):\n    \"\"\"\n    Demonstrates the use of nested loops using a for loop.\n\n    :param n: The number of iterations for the outer loop.\n    \"\"\"\n\n    # Ensure n is a positive integer\n    if not isinstance(n, int) or n <= 0:\n        raise ValueError(\"Input must be a positive integer.\")\n\n    # Print the message for each iteration of the nested loop\n    for i in range(1, n + 1):\n        for j in range(1, i + 1):\n            print(f\"Nested loop output ({i}, {j})\", end=\" \")\n        print()\n\n\nif __name__ == \"__main__\":\n    n = int(input(\"Enter the number of iterations for the outer loop: \"))\n    nested_loop_output(n)\n```\n\nWhen you run this program and enter 5 as the input, it will output:\n\n```\nNested loop output (1, 1)\nNested loop output (2, 1) Nested loop output (2, 2)\nNested loop output (3, 1) Nested loop output (3, 2) Nested loop output (3, 3)\nNested loop output (4, 1) Nested loop output (4, 2) Nested loop output (4, 3) Nested loop output (4, 4)\nNested loop output (5, 1) Nested loop output (5, 2) Nested loop output (5, 3) Nested loop output (5, 4) Nested loop output (5, 5)\n```",
+  "error": null,
+  "elapsed_seconds": 4.51,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

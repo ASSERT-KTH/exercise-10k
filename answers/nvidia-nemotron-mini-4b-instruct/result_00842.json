@@ -1,0 +1,9 @@
+{
+  "id": 842,
+  "title": "Recursive Fibonacci",
+  "prompt": "Write a recursive function to calculate the nth Fibonacci number.\nSample Input: 10\nSample Output: 55\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that calculates the nth Fibonacci number using recursion. This function uses memoization to avoid redundant calculations, which can improve performance for larger inputs. The memoization is implemented using a dictionary to store previously calculated Fibonacci numbers.\n\n```python\ndef fibonacci(n, memo={}):\n    \"\"\"\n    Calculate the nth Fibonacci number using recursion with memoization.\n\n    :param n: The position of the Fibonacci number to calculate.\n    :param memo: A dictionary to store previously calculated Fibonacci numbers.\n    :return: The nth Fibonacci number.\n    \"\"\"\n\n    # Base cases\n    if n == 0:\n        return 0\n    elif n == 1:\n        return 1\n\n    # Check if the nth Fibonacci number is already in the memo dictionary\n    if n in memo:\n        return memo[n]\n\n    # Calculate the nth Fibonacci number and store it in the memo dictionary\n    memo[n] = fibonacci(n - 1, memo) + fibonacci(n - 2, memo)\n    return memo[n]\n```\n\nHere's an alternative iterative solution using a loop, which can be more efficient for larger inputs:\n\n```python\ndef fibonacci_iterative(n):\n    \"\"\"\n    Calculate the nth Fibonacci number using iteration.\n\n    :param n: The position of the Fibonacci number to calculate.\n    :return: The nth Fibonacci number.\n    \"\"\"\n\n    if n == 0:\n        return 0\n    elif n == 1:\n        return 1\n\n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b\n```\n\nBoth functions will return the correct Fibonacci number for the given input.",
+  "error": null,
+  "elapsed_seconds": 4.16,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8415,
+  "title": "Conditional Discount Calculator",
+  "prompt": "Create a program that calculates the total cost of items after applying discounts based on the total amount spent. If the total amount is greater than $100, apply a 10% discount. If the total amount is greater than $50 but less than or equal to $100, apply a 5% discount. For amounts less than or equal to $50, no discount is applied.\nSample Input: 100\nSample Output: 90.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_total_cost(amount):\n    \"\"\"\n    Calculates the total cost of items after applying discounts based on the total amount spent.\n\n    :param amount: The total amount spent on items.\n    :return: The total cost after applying discounts.\n    \"\"\"\n\n    # Calculate the discount amount based on the total amount spent\n    discount_amount = 0\n    if amount > 100:\n        discount_amount = amount * 0.1\n    elif amount > 50:\n        discount_amount = amount * 0.05\n\n    # Calculate the total cost after applying the discount\n    total_cost = amount - discount_amount\n\n    return total_cost\n\n# Get user input for the total amount spent\ntotal_amount = float(input(\"Enter the total amount spent: \"))\n\n# Calculate and print the total cost\ntotal_cost = calculate_total_cost(total_amount)\nprint(f\"The total cost after applying discounts is {total_cost:.2f}.\")\n```\nThis program defines a function `calculate_total_cost` that takes the total amount spent as input and returns the total cost after applying discounts. The function checks the total amount and applies the appropriate discount based on the given conditions. The program then gets user input for the total amount spent, calls the function, and prints the total cost with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 3.37,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

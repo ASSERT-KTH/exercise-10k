@@ -1,0 +1,9 @@
+{
+  "id": 4769,
+  "title": "Day of the Week",
+  "prompt": "Write a program that determines the day of the week based on the date. If the date is between Monday and Friday, the day is a weekday. If the date is Saturday or Sunday, the day is a weekend day.\nSample Input: 2022-09-01\nSample Output: Thursday\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that determines the day of the week based on a given date:\n\n```python\nfrom datetime import datetime\n\ndef get_day_of_week(date):\n    \"\"\"\n    Determines the day of the week based on a given date.\n\n    :param date: str, in the format 'YYYY-MM-DD'\n    :return: str, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', or 'Sunday'\n    \"\"\"\n    # Parse the input date into a datetime object\n    date_obj = datetime.strptime(date, '%Y-%m-%d')\n\n    # Get the day of the week as an integer (0-6, where 0 is Sunday)\n    day_of_week = date_obj.weekday()\n\n    # Map the day of the week integer to a string\n    day_names = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']\n    return day_names[day_of_week]\n\n# Example usage\ndate = '2022-09-01'\nday = get_day_of_week(date)\nprint(f'The day of the week for {date} is {day}.')\n```\n\nThis program defines a function `get_day_of_week` that takes a date string in the format 'YYYY-MM-DD' and returns the corresponding day of the week as a string. The function uses the `datetime` module to parse the input date into a datetime object and then calculates the day of the week as an integer. Finally, it maps the day of the week integer to a string using a dictionary. The example usage at the end of the program demonstrates how to use the function to determine the day of the week for a given date.",
+  "error": null,
+  "elapsed_seconds": 4.2,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7404,
+  "title": "User Information Collector",
+  "prompt": "Write a program that asks the user for their name, age, and favorite color, then prints out a greeting message with the collected information.\nSample Input: John\n25\nBlue\nSample Output: Hello, John! You are 25 years old and your favorite color is Blue.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef greet_user():\n    \"\"\"Ask the user for their name, age, and favorite color, then print a greeting message.\"\"\"\n\n    # Ask the user for their name\n    name = input(\"Please enter your name: \")\n\n    # Ask the user for their age\n    while True:\n        try:\n            age = int(input(\"Please enter your age: \"))\n            break\n        except ValueError:\n            print(\"That's not a valid age. Please try again.\")\n\n    # Ask the user for their favorite color\n    favorite_color = input(\"Please enter your favorite color: \")\n\n    # Print the greeting message\n    print(f\"Hello, {name}! You are {age} years old and your favorite color is {favorite_color}.\")\n\n# Call the function to start the program\ngreet_user()\n```\nThis program defines a function `greet_user()` that prompts the user for their name, age, and favorite color, and then prints a greeting message with the collected information. The function uses a `while` loop to ensure that the user enters a valid age (i.e., a non-negative integer). The program then calls this function to start the interaction with the user.",
+  "error": null,
+  "elapsed_seconds": 2.96,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

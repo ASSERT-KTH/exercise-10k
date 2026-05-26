@@ -1,0 +1,9 @@
+{
+  "id": 7153,
+  "title": "Data Type Debugger",
+  "prompt": "Create a program that takes in a list of variables and their corresponding values, and then determines the data type of each variable. The variables can be of type integer, float, or string. The program should print out the variable name and its corresponding data type.\nSample Input: [['var1', 10], ['var2', 3.14], ['var3', 'hello']]\nSample Output: var1: integer\nvar2: float\nvar3: string\n",
+  "answer": "Here's a Python solution for the problem:\n\n```python\ndef determine_data_type(var_list):\n    for var_name, value in var_list:\n        if isinstance(value, int):\n            print(f\"{var_name}: integer\")\n        elif isinstance(value, float):\n            print(f\"{var_name}: float\")\n        elif isinstance(value, str):\n            print(f\"{var_name}: string\")\n\n# Sample input\nvar_list = [['var1', 10], ['var2', 3.14], ['var3', 'hello']]\ndetermine_data_type(var_list)\n```\n\nThis program works by iterating over each pair of variable name and value in the input list. It checks if the value is an integer, float, or string using the `isinstance()` function. If it is an integer, it prints the variable name and its data type as an integer. If it's a float, it prints the variable name and its data type as a float. If it's a string, it prints the variable name and its data type as a string.",
+  "error": null,
+  "elapsed_seconds": 2.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

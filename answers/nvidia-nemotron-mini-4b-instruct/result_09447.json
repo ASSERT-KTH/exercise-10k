@@ -1,0 +1,9 @@
+{
+  "id": 9447,
+  "title": "Simple Calculator",
+  "prompt": "Write a program that takes two numbers and an operator (+, -, *, /) as input and performs the corresponding operation.\nSample Input: 2 + 3\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef perform_operation(num1, num2, operator):\n    \"\"\"Perform the given operation on two numbers and return the result.\n\n    Args:\n    num1 (float or int): The first number.\n    num2 (float or int): The second number.\n    operator (str): The operator to use ('+', '-', '*', or '/').\n\n    Returns:\n    float or int: The result of the operation.\n    \"\"\"\n    if operator not in ['+', '-', '*', '/']:\n        raise ValueError(\"Invalid operator. Please use '+' for addition, '-' for subtraction, '*' for multiplication, and '/' for division.\")\n\n    if operator == '+':\n        return num1 + num2\n    elif operator == '-':\n        return num1 - num2\n    elif operator == '*':\n        return num1 * num2\n    else:  # operator == '/'\n        return num1 / num2\n\n# Get user input\nnum1 = float(input(\"Enter the first number: \"))\nnum2 = float(input(\"Enter the second number: \"))\noperator = input(\"Enter the operator (+, -, *, or /): \")\n\n# Perform the operation\nresult = perform_operation(num1, num2, operator)\n\n# Print the result\nprint(f\"{num1} {operator} {num2} = {result}\")\n```\nThis program defines a function `perform_operation` that takes two numbers and an operator as input, performs the corresponding operation, and returns the result. The function checks if the operator is valid and raises a `ValueError` if it's not. The program then gets user input for the two numbers and the operator, calls the `perform_operation` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 4.2,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

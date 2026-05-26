@@ -1,0 +1,9 @@
+{
+  "id": 7738,
+  "title": "List Reversal and Sorting",
+  "prompt": "Write a program that takes a list of integers, reverses the order of the elements, and then sorts the list in ascending order. The program should also remove any duplicate elements from the list.\nSample Input: [5, 2, 8, 2, 1, 8, 5]\nSample Output: [1, 2, 5, 8]\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef reverse_and_sort(numbers):\n    # Reverse the order of elements in the list\n    reversed_list = numbers[::-1]\n\n    # Remove duplicate elements using a set (which automatically removes duplicates)\n    unique_list = list(set(reversed_list))\n\n    # Sort the list in ascending order\n    sorted_list = sorted(unique_list)\n\n    return sorted_list\n\n# Test the function with the given sample input\nsample_input = [5, 2, 8, 2, 1, 8, 5]\nprint(reverse_and_sort(sample_input))  # Output: [1, 2, 5, 8]\n```\n\nThis program first reverses the order of elements in the list using slicing (`[::-1]`). Then, it converts the reversed list back to a list and removes any duplicate elements using a set. Finally, it sorts the list in ascending order using the built-in `sorted()` function and returns the result.",
+  "error": null,
+  "elapsed_seconds": 2.55,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

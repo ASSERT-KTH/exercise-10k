@@ -1,0 +1,9 @@
+{
+  "id": 356,
+  "title": "List Intersection",
+  "prompt": "Create a function that finds the intersection of two lists.\nSample Input: [1, 2, 3, 4, 5], [4, 5, 6, 7, 8]\nSample Output: [4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the intersection of two lists using list comprehension and the `set` data structure, which allows for efficient lookup and removal of elements. This approach has a time complexity of O(m + n), where m and n are the lengths of the input lists.\n\n```python\ndef find_intersection(list1, list2):\n    \"\"\"\n    Find the intersection of two lists.\n\n    :param list1: The first list\n    :param list2: The second list\n    :return: A list containing the common elements between the two lists\n    \"\"\"\n    # Convert input lists to sets for efficient lookup\n    set1 = set(list1)\n    set2 = set(list2)\n\n    # Find the intersection of sets and convert back to a list\n    intersection = list(set1 & set2)\n\n    return intersection\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(find_intersection([1, 2, 3, 4, 5], [4, 5, 6, 7, 8]))  # Output: [4, 5]\n```",
+  "error": null,
+  "elapsed_seconds": 2.94,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

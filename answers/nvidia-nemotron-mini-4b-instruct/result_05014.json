@@ -1,0 +1,9 @@
+{
+  "id": 5014,
+  "title": "Variable Scope",
+  "prompt": "Write a program that declares a variable 'x' inside a function and assigns it the value 10. Then, try to access the variable outside the function. Print the result to the console.\nSample Input: None\nSample Output: NameError: name 'x' is not defined\n",
+  "answer": "Sure, I'd be happy to help you with that! In Python, variables declared inside a function are only accessible within that function. If you try to access the variable outside the function, you will get a `NameError`. Here's a simple program that demonstrates this:\n\n```python\ndef my_function():\n    \"\"\"Declare a variable 'x' inside the function and assign it the value 10.\"\"\"\n    x = 10\n    print(f\"Inside the function, x has the value: {x}\")\n\n# Try to access the variable outside the function\ntry:\n    print(f\"Outside the function, x has the value: {x}\")\nexcept NameError as e:\n    print(e)\n\n# This will raise a NameError\n# my_function()\n```\n\nWhen you run this program, it will print:\n\n```\nInside the function, x has the value: 10\nNameError: name 'x' is not defined\n```\n\nTo access the variable outside the function, you need to return it from the function or pass it as an argument to another function. Here's an example:\n\n```python\ndef my_function():\n    \"\"\"Declare a variable 'x' inside the function and assign it the value 10.\"\"\"\n    x = 10\n    return x\n\n# Call the function to get the value of 'x'\nx = my_function()\nprint(f\"Outside the function, x has the value: {x}\")\n```\n\nThis will print:\n\n```\nOutside the function, x has the value: 10\n```",
+  "error": null,
+  "elapsed_seconds": 4.3,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

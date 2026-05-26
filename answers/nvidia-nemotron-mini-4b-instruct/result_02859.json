@@ -1,0 +1,9 @@
+{
+  "id": 2859,
+  "title": "Dictionary Set Default",
+  "prompt": "Write a function to set a default value for a given key in a dictionary if the key is not present.\nSample Input: {'name': 'John'}, 'age', 30\nSample Output: {'name': 'John', 'age': 30}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function, `set_default_value`, takes a dictionary and a key as arguments, and returns a new dictionary with the given key set to the default value if it's not already present.\n\n```python\ndef set_default_value(dictionary, key, default_value):\n    \"\"\"\n    Sets a default value for a given key in a dictionary if the key is not present.\n\n    Parameters:\n    dictionary (dict): The dictionary to modify.\n    key (any): The key to set the default value for.\n    default_value (any): The default value to set for the key if it's not present.\n\n    Returns:\n    dict: A new dictionary with the given key set to the default value if it's not already present.\n    \"\"\"\n    return {**dictionary, key: default_value if key not in dictionary else dictionary[key]}\n```\n\nHere's an example of how to use this function:\n\n```python\nresult = set_default_value({'name': 'John'}, 'age', 30)\nprint(result)  # Output: {'name': 'John', 'age': 30}\n```\n\nThis function uses the `**` operator to create a new dictionary with the original dictionary's keys and values, and then updates the new dictionary with the given key and default value. If the key is already present in the original dictionary, the default value is only set for the new dictionary, not the original one.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

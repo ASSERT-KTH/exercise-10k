@@ -1,0 +1,9 @@
+{
+  "id": 9664,
+  "title": "Longest Word Finder",
+  "prompt": "Write a program that asks for a sentence and prints out the longest word.\nSample Input: hello world python\nSample Output: python\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef longest_word(sentence):\n    \"\"\"\n    Given a sentence, return the longest word.\n\n    :param sentence: str - The sentence to search for the longest word in.\n    :return: str - The longest word in the sentence.\n    \"\"\"\n    # Split the sentence into words and sort them by length in descending order\n    words = sentence.split()\n    words.sort(key=len, reverse=True)\n\n    # Return the longest word\n    return words[0]\n\n# Get user input and print the result\nsentence = input(\"Enter a sentence: \")\nlongest_word_found = longest_word(sentence)\nprint(f\"The longest word in the sentence is: {longest_word_found}\")\n```\nThis program defines a function `longest_word` that takes a sentence as input, splits it into words, sorts the words by length in descending order, and returns the longest word. The program then prompts the user to enter a sentence, calls the `longest_word` function with the user input, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 2.72,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3974,
+  "title": "Implementing the Insertion Sort Algorithm",
+  "prompt": "Implement the insertion sort algorithm to sort a list of integers in ascending order. The program should take a list of integers as input and output the sorted list.\nSample Input: [5, 2, 8, 3, 1]\nSample Output: [1, 2, 3, 5, 8]\n",
+  "answer": "Sure, I'd be happy to help you implement the insertion sort algorithm. Here's a Python solution for your problem:\n\n```python\ndef insertion_sort(arr):\n    for i in range(1, len(arr)):\n        key = arr[i]\n        j = i - 1\n        while j >= 0 and arr[j] > key:\n            arr[j + 1] = arr[j]\n            j -= 1\n        arr[j + 1] = key\n    return arr\n\n# Test the function with the given sample input\nsample_input = [5, 2, 8, 3, 1]\nprint(insertion_sort(sample_input))  # Output: [1, 2, 3, 5, 8]\n```\n\nThis function works by iterating through the array from the second element to the last one. For each element, it compares it with the elements in its left side. If it finds an element that is larger, it swaps the two elements and continues the process until it finds a position where the current element can be inserted without violating the sorted order. Finally, it inserts the current element at that position.\n\nThe function returns the sorted array after processing all elements. In the sample input, the function first compares `5` with `2`, then with `8`, and so on. After processing all elements, the final sorted array is `[1, 2, 3, 5, 8]`.",
+  "error": null,
+  "elapsed_seconds": 3.32,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4292,
+  "title": "Dictionary Intersection",
+  "prompt": "Write a function to find the intersection between two dictionaries.\nSample Input: {'a': 1, 'b': 2, 'c': 3}; {'b': 2, 'c': 3, 'd': 4}\nSample Output: {'b': 2, 'c': 3}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the intersection between two dictionaries using the `dict.keys()` and `dict.values()` methods to get the common keys and values, respectively. Then, it creates a new dictionary with the common keys and values.\n\n```python\ndef find_intersection(dict1, dict2):\n    \"\"\"\n    Find the intersection between two dictionaries.\n\n    :param dict1: The first dictionary\n    :param dict2: The second dictionary\n    :return: A new dictionary containing the common keys and values\n    \"\"\"\n    # Get common keys\n    common_keys = set(dict1.keys()) & set(dict2.keys())\n\n    # Create a new dictionary with the common keys and values\n    intersection = {key: dict1[key] if key in dict1 else None for key in common_keys}\n\n    return intersection\n```\n\nHere's an example of how to use this function:\n\n```python\ndict1 = {'a': 1, 'b': 2, 'c': 3}\ndict2 = {'b': 2, 'c': 3, 'd': 4}\n\nresult = find_intersection(dict1, dict2)\nprint(result)  # Output: {'b': 2, 'c': 3}\n```",
+  "error": null,
+  "elapsed_seconds": 3.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

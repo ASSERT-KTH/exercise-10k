@@ -1,0 +1,9 @@
+{
+  "id": 2965,
+  "title": "Factorial Calculator",
+  "prompt": "Write a program that calculates the factorial of a given number. The factorial of a number n is the product of all positive integers less than or equal to n.\nSample Input: 5\nSample Output: 120\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the factorial of a given number:\n\n```python\ndef factorial(n):\n    \"\"\"\n    Calculates the factorial of a given number n.\n\n    :param n: The number for which to calculate the factorial.\n    :return: The factorial of n.\n    \"\"\"\n    if n < 0:\n        raise ValueError(\"Input must be non-negative\")\n    elif n == 0:\n        return 1\n    else:\n        return n * factorial(n-1)\n\n# Get user input\nn = int(input(\"Enter a positive integer: \"))\n\n# Calculate and print the factorial\nresult = factorial(n)\nprint(f\"{n}! = {result}\")\n```\n\nThis program defines a function `factorial` that calculates the factorial of a given number using recursion. The function checks if the input is non-negative and returns 1 if the input is 0, as the factorial of 0 is defined to be 1. Otherwise, it calls itself with the argument `n-1` and multiplies the result by `n`. The program then prompts the user to enter a positive integer, calculates its factorial using the `factorial` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

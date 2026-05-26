@@ -1,0 +1,9 @@
+{
+  "id": 5899,
+  "title": "List Shuffling",
+  "prompt": "Write a function that takes a list as input and returns a new list containing the same elements in a random order.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [3, 5, 1, 2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\nimport random\n\ndef randomize_list(input_list):\n    \"\"\"\n    Takes a list as input and returns a new list containing the same elements in a random order.\n\n    :param input_list: The list to randomize\n    :return: A new list with the elements in a random order\n    \"\"\"\n    # Create a copy of the input list to avoid modifying the original\n    randomized_list = input_list.copy()\n\n    # Shuffle the elements in the randomized list using the random.shuffle function\n    random.shuffle(randomized_list)\n\n    return randomized_list\n```\nHere's an example of how to use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\nrandomized_numbers = randomize_list(numbers)\nprint(randomized_numbers)  # Output: [3, 5, 1, 2, 4]\n```\nThis function creates a copy of the input list using the `copy()` method, shuffles the elements in the copy using the `random.shuffle()` function, and then returns the randomized list. This ensures that the original list remains unchanged.",
+  "error": null,
+  "elapsed_seconds": 7.63,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

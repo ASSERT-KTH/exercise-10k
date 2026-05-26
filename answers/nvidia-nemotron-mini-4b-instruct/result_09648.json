@@ -1,0 +1,9 @@
+{
+  "id": 9648,
+  "title": "Function with/_udp",
+  "prompt": "Create a function that uses the socket module to send and receive UDP packets.\nSample Input: None\nSample Output: Received packets\n",
+  "answer": "Sure, I'd be happy to help you create a function that sends and receives UDP packets using the `socket` module in Python. Here's an example function that demonstrates this:\n\n```python\nimport socket\n\ndef udp_socket_communication(host, port, message):\n    \"\"\"\n    Send and receive UDP packets using the socket module.\n\n    :param host: The IP address or hostname of the remote device.\n    :param port: The port number on the remote device to send and receive packets.\n    :param message: The message to send or receive as a string.\n    \"\"\"\n\n    # Create a UDP socket\n    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)\n\n    # Bind the socket to a local port\n    sock.bind((host, port))\n\n    print(f\"Sending message: {message}\")\n\n    # Send the message\n    sock.sendto(message.encode(), (host, port))\n\n    # Receive the response\n    response, addr = sock.recvfrom(1024)\n\n    print(f\"Received message: {response.decode()}\")\n\n    # Close the socket\n    sock.close()\n\n# Example usage\nudp_socket_communication(\"192.168.1.10\", 5000, \"Hello, world!\")\n```\n\nThis function creates a UDP socket, binds it to a local port, sends a message to the remote device, receives a response, and then closes the socket. The `recvfrom` method is used to receive the response, which includes the IP address and port of the sender.\n\nYou can modify the `host`, `port`, and `message` parameters to suit your specific use case. Make sure to replace `192.168.1.10` and 5000 with the correct IP address and port for your network and application.",
+  "error": null,
+  "elapsed_seconds": 4.46,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

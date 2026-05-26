@@ -1,0 +1,9 @@
+{
+  "id": 5483,
+  "title": "Reverse Array Elements",
+  "prompt": "Write a program to reverse the elements of an array.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [5, 4, 3, 2, 1]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that reverses the elements of an array (or list, as it's called in Python):\n```python\ndef reverse_array(arr):\n    \"\"\"\n    Reverses the elements of a given array in-place.\n\n    :param arr: The array to reverse.\n    :return: None (the array is modified in-place)\n    \"\"\"\n    n = len(arr)\n\n    # Reverse the array using two pointers\n    left, right = 0, n - 1\n    while left < right:\n        arr[left], arr[right] = arr[right], arr[left]\n        left += 1\n        right -= 1\n\n# Example usage\narr = [1, 2, 3, 4, 5]\nreverse_array(arr)\nprint(arr)  # Output: [5, 4, 3, 2, 1]\n```\nThis program defines a function `reverse_array` that takes an array as input and modifies it in-place to reverse the elements. The function first gets the length of the array and then uses two pointers, `left` and `right`, to reverse the array. The pointers move towards each other, swapping the elements at their positions until they meet.\n\nThe example usage at the end of the program demonstrates how to use the `reverse_array` function to reverse the elements of an array and print the result.",
+  "error": null,
+  "elapsed_seconds": 3.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

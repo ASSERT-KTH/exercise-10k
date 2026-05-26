@@ -1,0 +1,9 @@
+{
+  "id": 9796,
+  "title": "Writing Output to Database",
+  "prompt": "Write a program that writes output to a database.\nSample Input: example.db\nSample Output: Database output sent\n",
+  "answer": "Sure, I can help you with that. Here's a Python program that writes output to a SQLite database using the `sqlite3` module. This program will create a new database file named `example.db` and write the given output to it. Make sure you have the `sqlite3` module installed, you can install it using pip:\n\n```bash\npip install sqlite3\n```\n\nHere's the Python code:\n\n```python\nimport sqlite3\n\ndef write_to_database(output):\n    \"\"\"\n    Writes the given output to a SQLite database.\n\n    :param output: The output to write to the database.\n    \"\"\"\n\n    # Connect to the database\n    conn = sqlite3.connect('example.db')\n\n    # Create a cursor object\n    cursor = conn.cursor()\n\n    # Create a table if it doesn't exist\n    cursor.execute('''CREATE TABLE IF NOT EXISTS output (id INTEGER PRIMARY KEY, data TEXT)''')\n\n    # Insert the output into the table\n    cursor.execute(\"INSERT INTO output (data) VALUES (?)\", (output,))\n\n    # Commit the changes and close the connection\n    conn.commit()\n    conn.close()\n\n# Call the function with the desired output\nwrite_to_database(\"Database output sent\")\n```\n\nThis program creates a new database file named `example.db` and inserts the given output into a table named `output`. The table structure is defined as follows:\n\n```\nCREATE TABLE output (\n    id INTEGER PRIMARY KEY,\n    data TEXT\n);\n```\n\nYou can run this program and check the database file (`example.db`) to see the output written to it.",
+  "error": null,
+  "elapsed_seconds": 3.79,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

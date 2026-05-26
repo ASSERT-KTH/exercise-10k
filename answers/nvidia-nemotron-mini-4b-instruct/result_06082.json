@@ -1,0 +1,9 @@
+{
+  "id": 6082,
+  "title": "Guessing Game",
+  "prompt": "Create a program that uses a while loop to keep asking the user for input until they guess a randomly generated number.\nSample Input: 50\nSample Output: Congratulations, you guessed the number!\n",
+  "answer": "Sure, I'd be happy to help you create a program that meets your requirements. Here's a Python solution using a while loop:\n\n```python\nimport random\n\n# Generate a random number between 1 and 100\nrandom_number = random.randint(1, 100)\n\nwhile True:\n    # Ask the user for input\n    user_guess = int(input(\"Guess a number between 1 and 100: \"))\n\n    # Check if the user guessed the correct number\n    if user_guess == random_number:\n        print(\"Congratulations, you guessed the number!\")\n        break\n    elif user_guess < random_number:\n        print(\"Your guess is too low. Try again!\")\n    else:\n        print(\"Your guess is too high. Try again!\")\n```\n\nIn this program, we first generate a random number between 1 and 100 using the `random.randint()` function. Then, we enter a while loop that continues until the user guesses the correct number. Inside the loop, we ask the user for input, convert it to an integer, and check if it's equal to the random number. If it is, we print a congratulatory message and break out of the loop. If not, we print a message indicating whether the user's guess was too low or too high, and continue asking for input.",
+  "error": null,
+  "elapsed_seconds": 3.24,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 372,
+  "title": "Array Element Insertion",
+  "prompt": "Write a program to insert an element at a specified position in an array. The program should take as input the array, the element to be inserted, and the position where the element should be inserted. If the position is greater than the length of the array, the element should be appended to the end of the array.\nSample Input: [1, 2, 3, 4, 5], 10, 2\nSample Output: [1, 2, 10, 3, 4, 5]\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef insert_element(arr, element, position):\n    # Check if the position is within the array bounds\n    if position < 0 or position > len(arr):\n        return \"Invalid position. Element will be appended to the end of the array.\"\n\n    # Insert the element at the specified position\n    arr.insert(position, element)\n\n    return arr\n```\n\nYou can use this function like this:\n\n```python\narr = [1, 2, 3, 4, 5]\nelement = 10\nposition = 2\n\nprint(insert_element(arr, element, position))  # Output: [1, 2, 10, 3, 4, 5]\n```\n\nThis function first checks if the position is valid (within the bounds of the array). If it is, it inserts the element at the specified position using the `insert()` method. Finally, it returns the updated array. If the position is invalid, it returns a message indicating that the element will be appended to the end of the array.",
+  "error": null,
+  "elapsed_seconds": 2.66,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

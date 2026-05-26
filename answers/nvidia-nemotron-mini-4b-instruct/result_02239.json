@@ -1,0 +1,9 @@
+{
+  "id": 2239,
+  "title": "Array Symmetric Difference",
+  "prompt": "Write a program that finds the symmetric difference between two arrays.\nSample Input: [1, 2, 3], [2, 3, 4]\nSample Output: [1, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the symmetric difference between two arrays (also known as the \"XOR\" or \"exclusive OR\" of the two sets):\n```python\ndef symmetric_difference(arr1, arr2):\n    # Convert the arrays to sets for faster lookup\n    set1 = set(arr1)\n    set2 = set(arr2)\n\n    # Find the symmetric difference using the ^ operator\n    symmetric_diff = set1 ^ set2\n\n    # Convert the result back to a list and return it\n    return list(symmetric_diff)\n```\nHere's an example of how to use this function:\n```python\narr1 = [1, 2, 3]\narr2 = [2, 3, 4]\n\nresult = symmetric_difference(arr1, arr2)\nprint(result)  # Output: [1, 4]\n```\nThis program first converts the input arrays to sets, which allows for faster lookup of elements. Then, it uses the bitwise XOR operator (`^`) to find the symmetric difference between the two sets. Finally, it converts the result back to a list and returns it.",
+  "error": null,
+  "elapsed_seconds": 2.92,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

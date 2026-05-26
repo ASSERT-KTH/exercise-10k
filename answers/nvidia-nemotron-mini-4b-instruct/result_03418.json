@@ -1,0 +1,9 @@
+{
+  "id": 3418,
+  "title": "Dictionary Reduction",
+  "prompt": "Write a program to reduce a given dictionary into a single value, such as the sum of all values.\nSample Input: {'a': 1, 'b': 2, 'c': 3}\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that reduces a given dictionary into a single value, such as the sum of all values:\n```python\ndef reduce_dict(d):\n    \"\"\"Reduce a dictionary into a single value, such as the sum of all values.\n\n    Args:\n        d (dict): The input dictionary.\n\n    Returns:\n        int or float: The reduced value.\n\n    Raises:\n        TypeError: If the input is not a dictionary.\n    \"\"\"\n    if not isinstance(d, dict):\n        raise TypeError(\"Input must be a dictionary.\")\n\n    # Calculate the reduced value by summing all values\n    reduced_value = sum(d.values())\n\n    return reduced_value\n```\nHere's an example of how to use this function:\n```python\ninput_dict = {'a': 1, 'b': 2, 'c': 3}\noutput = reduce_dict(input_dict)\nprint(output)  # Output: 6\n```\nThis function first checks if the input is a dictionary. If not, it raises a `TypeError`. Then, it calculates the reduced value by summing all the values in the dictionary using the built-in `sum()` function. The function returns the reduced value as an integer or float, depending on the data types of the values in the dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

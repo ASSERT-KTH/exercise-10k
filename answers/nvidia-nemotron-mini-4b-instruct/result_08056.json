@@ -1,0 +1,9 @@
+{
+  "id": 8056,
+  "title": "To-Do List App with Tags",
+  "prompt": "Write a program that uses an if/else statement to manage a to-do list with tags based on user input.\nSample Input: add task tag\nSample Output: Task added with tag\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses a dictionary to store the to-do list and an `if` statement to manage tags. The program prompts the user for input, adds a task to the list if the input is \"add task\", and adds a tag to an existing task if the input is \"add tag\".\n\n```python\n# Initialize the to-do list as an empty dictionary\nto_do_list = {}\n\ndef add_task_or_tag():\n    \"\"\"Prompts the user for input and adds a task or tag to the to-do list.\"\"\"\n    user_input = input(\"Enter 'add task' to add a new task or 'add tag' to add a tag: \").lower()\n\n    if user_input == \"add task\":\n        task_name = input(\"Enter the task name: \")\n        to_do_list[task_name] = []\n        print(f\"Task added with empty tag.\")\n\n    elif user_input == \"add tag\":\n        task_name = input(\"Enter the task name: \")\n        tag = input(\"Enter the tag: \")\n        to_do_list[task_name].append(tag)\n        print(f\"Tag added to task '{task_name}'.\")\n\n    else:\n        print(\"Invalid input. Please enter 'add task' or 'add tag'.\")\n        add_task_or_tag()\n\n# Call the function to start the program\nadd_task_or_tag()\n```\n\nThis program will keep prompting the user for input until they enter \"add task\" or \"add tag\". You can modify the function to allow for more complex tag management, such as allowing users to view or edit existing tags.",
+  "error": null,
+  "elapsed_seconds": 4.35,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

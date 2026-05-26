@@ -1,0 +1,9 @@
+{
+  "id": 5627,
+  "title": "Finding the First Duplicate",
+  "prompt": "Write a program to find the first duplicate in a list of integers.\nSample Input: [1, 2, 3, 4, 2, 5]\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the first duplicate in a list of integers:\n```python\ndef find_first_duplicate(numbers):\n    \"\"\"\n    Find the first duplicate in a list of integers.\n\n    :param numbers: List of integers\n    :return: First duplicate integer or None if no duplicates exist\n    \"\"\"\n    # Create a set to store the numbers we've seen so far\n    seen = set()\n\n    # Iterate through the input list\n    for num in numbers:\n        # If the number has been seen before, it's a duplicate\n        if num in seen:\n            return num\n        # Otherwise, mark it as seen\n        seen.add(num)\n\n    # If we get here, no duplicates were found\n    return None\n```\nHere's an example of how you can use this function:\n```python\nnumbers = [1, 2, 3, 4, 2, 5]\nresult = find_first_duplicate(numbers)\nprint(result)  # Output: 2\n```\nThis program works by iterating through the input list and checking if each number has been seen before. If a number is a duplicate, it immediately returns that number. If no duplicates are found, it returns `None`. The use of a set to store the numbers we've seen so far allows for efficient lookups and additions, which is crucial for this problem since we need to check each number only once.",
+  "error": null,
+  "elapsed_seconds": 3.65,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

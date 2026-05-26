@@ -1,0 +1,9 @@
+{
+  "id": 3692,
+  "title": "Quiz Score Calculator",
+  "prompt": "Write a program to calculate the score of a quiz given the number of correct answers and the total number of questions.\nSample Input: correct answers = 8, total questions = 10\nSample Output: Score: 80%\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the score of a quiz given the number of correct answers and the total number of questions:\n\n```python\ndef calculate_score(correct_answers, total_questions):\n    \"\"\"\n    Calculates the score of a quiz given the number of correct answers and the total number of questions.\n\n    :param correct_answers: The number of correct answers out of the total number of questions.\n    :param total_questions: The total number of questions in the quiz.\n    :return: A string indicating the score as a percentage.\n    \"\"\"\n\n    # Check that the inputs are valid\n    if not isinstance(correct_answers, int) or correct_answers < 0:\n        raise ValueError(\"The number of correct answers must be a non-negative integer.\")\n\n    if not isinstance(total_questions, int) or total_questions < 0:\n        raise ValueError(\"The total number of questions must be a non-negative integer.\")\n\n    # Calculate the score as a percentage\n    score = correct_answers / total_questions * 100\n\n    # Format the score as a string with two decimal places\n    score_str = f\"{score:.2f}\"\n\n    # Return the score as a string indicating the percentage\n    return f\"Score: {score_str}%\\n\"\n\n# Example usage\ncorrect_answers = 8\ntotal_questions = 10\nprint(calculate_score(correct_answers, total_questions))\n```\n\nWhen you run this program with the sample input `correct_answers = 8, total_questions = 10`, it will output:\n\n```\nScore: 80.00%\n```",
+  "error": null,
+  "elapsed_seconds": 4.09,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

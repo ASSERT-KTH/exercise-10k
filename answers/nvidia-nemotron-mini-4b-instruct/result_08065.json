@@ -1,0 +1,9 @@
+{
+  "id": 8065,
+  "title": "Function with Default Argument",
+  "prompt": "Write a function that takes a name as an argument and returns a personalized greeting message, with a default argument for the greeting\nSample Input: John\nSample Output: Hello John\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses the `default` argument to provide a default greeting when the name is not provided. The function also ensures that the greeting is always in the correct format, even when the name is empty or contains only whitespace characters.\n\n```python\ndef personalized_greeting(name, greeting=\"Hello\"):\n    \"\"\"\n    Returns a personalized greeting message with a default greeting.\n\n    Parameters:\n    name (str): The name of the person to greet.\n    greeting (str, optional): The default greeting to use if the name is not provided.\n                              Defaults to \"Hello\".\n\n    Returns:\n    str: A personalized greeting message.\n    \"\"\"\n\n    # Ensure the name is not empty or contains only whitespace characters\n    if not name or name.isspace():\n        return greeting\n\n    # Capitalize the first letter of the name and add it to the greeting\n    return f\"{greeting} {name.capitalize()}!\"\n```\n\nHere are some examples of how you can use this function:\n\n```python\nprint(personalized_greeting(\"John\"))  # Output: Hello John!\nprint(personalized_greeting(\"   \"))   # Output: Hello!\nprint(personalized_greeting(\"\"))      # Output: Hello!\nprint(personalized_greeting(\"   \", \"Greetings\"))  # Output: Greetings!\n```",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

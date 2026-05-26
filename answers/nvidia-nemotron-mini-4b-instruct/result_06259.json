@@ -1,0 +1,9 @@
+{
+  "id": 6259,
+  "title": "Dictionary Filter",
+  "prompt": "Write a function that takes a dictionary as input and filters out key-value pairs where the value is less than 5\nSample Input: {'a': 1, 'b': 2, 'c': 3, 'd': 6}\nSample Output: {'d': 6}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef filter_dict(input_dict):\n    \"\"\"\n    Filters a dictionary to keep only key-value pairs where the value is greater than or equal to 5.\n\n    Parameters:\n    input_dict (dict): The input dictionary to filter.\n\n    Returns:\n    dict: A new dictionary containing only the key-value pairs where the value is greater than or equal to 5.\n    \"\"\"\n    return {k: v for k, v in input_dict.items() if v >= 5}\n```\nHere's how you can use this function:\n```python\ninput_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 6}\nfiltered_dict = filter_dict(input_dict)\nprint(filtered_dict)  # Output: {'d': 6}\n```\nThis function uses a dictionary comprehension to create a new dictionary that only includes key-value pairs where the value is greater than or equal to 5. The `items()` method is used to iterate over the key-value pairs in the input dictionary, and the `if` clause checks if the value is greater than or equal to 5. The resulting dictionary is then returned.",
+  "error": null,
+  "elapsed_seconds": 3.02,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

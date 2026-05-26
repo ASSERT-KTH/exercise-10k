@@ -1,0 +1,9 @@
+{
+  "id": 2214,
+  "title": "Simple Chatbot",
+  "prompt": "Write a program that responds to basic user inputs. Print a greeting message when the user types 'hello', print a farewell message when the user types 'bye', and print 'I didn't understand that' for any other input.\nSample Input: hello\nSample Output: Hello! How are you?\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef respond_to_user():\n    \"\"\"Respond to user inputs with a greeting or farewell message.\"\"\"\n\n    while True:\n        user_input = input(\"Enter a message (or type 'bye' to exit): \").lower()\n\n        if user_input == \"bye\":\n            print(\"Goodbye!\")\n            break\n        elif user_input == \"hello\":\n            print(\"Hello! How are you?\")\n        else:\n            print(f\"I didn't understand that. Please type 'hello' or 'bye'.\")\n\n# Run the function\nrespond_to_user()\n```\n\nThis program defines a function `respond_to_user()` that prompts the user for input, converts it to lowercase to ensure case-insensitivity, and then checks the user's input against the two allowed values (`\"bye\"` and `\"hello\"`). If the user types `bye`, the program prints a farewell message and breaks out of the loop. If the user types `hello`, the program prints a greeting message. For any other input, the program prints a message indicating that it didn't understand the input and prompts the user for another message. The program then runs the `respond_to_user()` function indefinitely, allowing the user to continue interacting with the program.",
+  "error": null,
+  "elapsed_seconds": 3.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

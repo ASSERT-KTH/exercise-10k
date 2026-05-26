@@ -1,0 +1,9 @@
+{
+  "id": 7858,
+  "title": " Guessing Game",
+  "prompt": "Create a program that plays a guessing game using conditional statements.\nSample Input: 50\nSample Output: Too high\n",
+  "answer": "Sure, I'd be happy to help you create a guessing game program using conditional statements. Here's an example in Python:\n\n```python\nimport random\n\ndef play_guessing_game():\n    \"\"\"Plays a guessing game with the user.\"\"\"\n\n    # Generate a random number between 1 and 100\n    target_number = random.randint(1, 100)\n\n    # Initialize the number of guesses\n    guesses = 0\n\n    # Keep asking the user for a guess until they get it right\n    while True:\n        # Get user input\n        user_guess = int(input(\"Guess a number between 1 and 100: \"))\n\n        # Check if the user guessed correctly\n        if user_guess == target_number:\n            print(f\"Congratulations! You guessed the number in {guesses} tries.\")\n            break\n\n        # Check if the user's guess is too high or too low\n        elif user_guess > target_number:\n            print(\"Too high\")\n        else:\n            print(\"Too low\")\n\n        # Increment the number of guesses\n        guesses += 1\n\n# Play the guessing game\nplay_guessing_game()\n```\n\nThis program generates a random number between 1 and 100, and then asks the user to guess the number. The program checks the user's guess and provides feedback on whether it's too high or too low. The user continues guessing until they get the number correct.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

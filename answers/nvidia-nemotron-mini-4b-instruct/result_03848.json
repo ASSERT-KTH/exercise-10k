@@ -1,0 +1,9 @@
+{
+  "id": 3848,
+  "title": "While Loop Fibonacci",
+  "prompt": "Write a program that uses a while loop to generate the Fibonacci sequence up to a given number.\nSample Input: 10\nSample Output: 0\n1\n1\n2\n3\n5\n8\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses a while loop to generate the Fibonacci sequence up to a given number:\n\n```python\ndef generate_fibonacci(limit):\n    \"\"\"Generate the Fibonacci sequence up to a given limit.\"\"\"\n    a, b = 0, 1\n    while a < limit:\n        yield a\n        a, b = b, a + b\n\n# Get user input for the limit\nlimit = int(input(\"Enter the limit for the Fibonacci sequence: \"))\n\n# Generate and print the Fibonacci sequence\nfib_sequence = generate_fibonacci(limit)\nfor num in fib_sequence:\n    print(num, end=\" \")\nprint()\n```\n\nWhen you run this program and enter a number as the input, it will print the Fibonacci sequence up to that number. For example, if you enter 10, it will print:\n\n```\n0\n1\n1\n2\n3\n5\n8\n```\n\nThis program uses a generator function `generate_fibonacci()` to generate the Fibonacci sequence on-the-fly. The function initializes two variables `a` and `b` to 0 and 1, respectively. Then, it enters a while loop that continues until `a` is less than the given limit. Inside the loop, it yields `a` and then updates `a` and `b` to be the next two numbers in the sequence. Finally, the program prints each number in the sequence using a for loop.",
+  "error": null,
+  "elapsed_seconds": 3.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

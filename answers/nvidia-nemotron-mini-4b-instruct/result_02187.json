@@ -1,0 +1,9 @@
+{
+  "id": 2187,
+  "title": "Word Counter",
+  "prompt": "Write a function to count the number of words in a given string. The function should take a string as input and return the word count.\nSample Input: hello world this is a test\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\nimport re\n\ndef count_words(text: str) -> int:\n    \"\"\"\n    Count the number of words in a given string.\n\n    :param text: The input string.\n    :return: The number of words in the input string.\n    \"\"\"\n    # Use a regular expression to split the text into words,\n    # ignoring any whitespace at the beginning or end of each word.\n    words = re.findall(r'\\b\\w+\\b', text.strip())\n\n    # Return the length of the list of words, which is the same as the word count.\n    return len(words)\n```\nHere's how this function works:\n\n* We use the `re` module to define a regular expression pattern that matches any sequence of word characters (`\\w+`) surrounded by word boundaries (`\\b`). This ensures that we only match complete words and not substrings of words.\n* We use the `strip()` method to remove any leading or trailing whitespace from the input string before splitting it into words.\n* Finally, we return the length of the list of words, which is the same as the word count.\n\nHere are some examples of how you can use this function:\n```python\n>>> count_words(\"hello world this is a test\")\n6\n>>> count_words(\"  hello world   this is a test   \")\n6\n>>> count_words(\"\")\n0\n>>> count_words(\"a\")\n1\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 7.66,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

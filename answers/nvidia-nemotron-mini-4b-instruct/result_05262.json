@@ -1,0 +1,9 @@
+{
+  "id": 5262,
+  "title": "Grade Calculator",
+  "prompt": "Create a program to calculate the grade of a student based on their score using if/else statements\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you create a program to calculate a grade based on a student's score using if/else statements. Here's an example Python program that meets your requirements:\n```python\ndef calculate_grade(score):\n    \"\"\"\n    Calculates a letter grade for a student based on their score.\n\n    :param score: The student's score as an integer between 0 and 100.\n    :return: A string representing the student's letter grade.\n    \"\"\"\n\n    # Define the grade boundaries\n    low_passing = 60\n    high_passing = 70\n    low_b = 80\n    high_b = 89\n    low_a = 90\n    high_a = 100\n\n    # Check the score and return the corresponding letter grade\n    if score >= high_a:\n        return \"A\"\n    elif score >= high_b:\n        return \"B\"\n    elif score >= low_passing:\n        return \"Pass\"\n    else:\n        return \"F\"\n\n# Get user input and calculate the grade\nscore = int(input(\"Enter a score between 0 and 100: \"))\ngrade = calculate_grade(score)\n\n# Print the result\nprint(f\"Your letter grade is: {grade}\")\n```\nThis program defines a function `calculate_grade` that takes a score as input and returns a letter grade based on the score. The function uses if/else statements to check the score against different grade boundaries and return the corresponding letter grade. The program then prompts the user to enter a score, calls the function with the user's input, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.81,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

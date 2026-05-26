@@ -1,0 +1,9 @@
+{
+  "id": 5297,
+  "title": "Insertion Sort",
+  "prompt": "Create a program that implements the insertion sort algorithm to sort a list of numbers. Use a for loop to iterate over the list.\nSample Input: [3, 2, 1, 4, 5, 6]\nSample Output: [1, 2, 3, 4, 5, 6]\n",
+  "answer": "Sure, I'd be happy to help you create a program that implements the insertion sort algorithm. Here's a Python solution using a for loop to iterate over the list:\n\n```python\ndef insertion_sort(arr):\n    \"\"\"\n    Sort the given list of numbers using the insertion sort algorithm.\n\n    :param arr: The list of numbers to be sorted.\n    :return: The sorted list of numbers.\n    \"\"\"\n    for i in range(1, len(arr)):\n        key = arr[i]\n        j = i - 1\n\n        # Move elements of arr[0..i-1], that are greater than key, to one position ahead of their current position\n        while j >= 0 and arr[j] > key:\n            arr[j + 1] = arr[j]\n            j -= 1\n\n        # Insert the key in its correct position\n        arr[j + 1] = key\n\n    return arr\n\n\n# Example usage\ninput_list = [3, 2, 1, 4, 5, 6]\nsorted_list = insertion_sort(input_list)\nprint(sorted_list)  # Output: [1, 2, 3, 4, 5, 6]\n```\n\nThis function takes a list of numbers as input and sorts it in ascending order using the insertion sort algorithm. The function uses a for loop to iterate over the list, and for each element, it compares it with the elements in the sorted sublist (elements from the beginning of the list up to the current position). If the current element is greater than the element in the sorted sublist, it moves all the elements in the sorted sublist one position ahead and then inserts the current element in its correct position.",
+  "error": null,
+  "elapsed_seconds": 3.9,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 366,
+  "title": "Arithmetic Operations Simulator",
+  "prompt": "Create a program that takes two numbers and an operator as input and performs the corresponding arithmetic operation. The program should support addition, subtraction, multiplication, and division.\nSample Input: 2 3 +\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you create a program that performs arithmetic operations based on the given input. Here's a Python solution using the `eval()` function to evaluate the arithmetic expression:\n\n```python\ndef perform_arithmetic(num1, num2, operator):\n    \"\"\"\n    Performs the given arithmetic operation on two numbers.\n\n    :param num1: The first number.\n    :param num2: The second number.\n    :param operator: The arithmetic operator (+, -, *, /).\n    :return: The result of the operation.\n    \"\"\"\n\n    # Ensure the operator is one of the supported operators\n    if operator not in ['+', '-', '*', '/']:\n        raise ValueError(\"Invalid operator. Supported operators are +, -, *, /\")\n\n    # Evaluate the arithmetic expression using eval()\n    try:\n        result = eval(f\"{num1} {operator} {num2}\")\n    except (NameError, SyntaxError) as e:\n        raise ValueError(f\"Invalid input. Please provide two numbers and an operator separated by a space.\") from e\n\n    return result\n\n\n# Example usage\nnum1 = int(input(\"Enter the first number: \"))\nnum2 = int(input(\"Enter the second number: \"))\noperator = input(\"Enter the arithmetic operator (+, -, *, /): \")\n\nprint(perform_arithmetic(num1, num2, operator))\n```\n\nThis program will prompt the user to enter two numbers and an operator, then perform the corresponding arithmetic operation and display the result.",
+  "error": null,
+  "elapsed_seconds": 5.01,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

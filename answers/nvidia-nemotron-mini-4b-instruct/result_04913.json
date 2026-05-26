@@ -1,0 +1,9 @@
+{
+  "id": 4913,
+  "title": "BMI Calculator",
+  "prompt": "Write a program that takes a person's weight and height as input and calculates their BMI. Based on the BMI, print the corresponding weight status (Underweight, Normal, Overweight, Obese).\nSample Input: 70 1.75\nSample Output: Normal\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. It takes the person's weight and height as input, calculates their Body Mass Index (BMI), and prints the corresponding weight status based on the BMI.\n\n```python\ndef calculate_bmi(weight, height):\n    \"\"\"Calculate BMI and return the corresponding weight status.\"\"\"\n    # Convert height from meters to centimeters\n    cm_height = height * 100\n\n    # Calculate BMI\n    bmi = weight / (height / 100) ** 2\n\n    # Determine weight status based on BMI\n    if bmi < 18.5:\n        weight_status = \"Underweight\"\n    elif 18.5 <= bmi < 25:\n        weight_status = \"Normal\"\n    elif 25 <= bmi < 30:\n        weight_status = \"Overweight\"\n    else:\n        weight_status = \"Obese\"\n\n    return bmi, weight_status\n\n\nif __name__ == \"__main__\":\n    # Get user input\n    weight = float(input(\"Enter your weight in kilograms: \"))\n    height = float(input(\"Enter your height in meters: \"))\n\n    # Calculate BMI and print weight status\n    bmi, weight_status = calculate_bmi(weight, height)\n    print(f\"Your BMI is {bmi:.1f}. This corresponds to {weight_status} weight status.\")\n```\n\nThis program defines a function `calculate_bmi` that takes the person's weight and height as input, calculates the BMI, and returns the corresponding weight status. The main part of the program gets user input, calls the `calculate_bmi` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 4.26,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

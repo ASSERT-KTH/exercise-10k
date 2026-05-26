@@ -1,0 +1,9 @@
+{
+  "id": 5769,
+  "title": "Day of the Week",
+  "prompt": "Write a program that takes the day of the week as input and prints out the corresponding day number (Monday = 1, Tuesday = 2, ..., Sunday = 7).\nSample Input: Wednesday\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef day_of_week_to_number(day_of_week):\n    \"\"\"\n    Converts a day of the week (as a string) to its corresponding day number (1-7).\n\n    :param day_of_week: str, one of 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', or 'Sunday'\n    :return: int, the corresponding day number (1-7)\n    \"\"\"\n    # Mapping from day of the week strings to numbers\n    day_numbers = {\n        'Monday': 1,\n        'Tuesday': 2,\n        'Wednesday': 3,\n        'Thursday': 4,\n        'Friday': 5,\n        'Saturday': 6,\n        'Sunday': 7,\n    }\n\n    # Ensure the input is a valid day of the week\n    if day_of_week not in day_numbers:\n        raise ValueError(f\"Invalid day of the week: {day_of_week}. Must be one of {', '.join(day_numbers.keys())}.\")\n\n    # Convert the input to lowercase to ensure case-insensitive matching\n    day_of_week = day_of_week.lower()\n\n    # Return the corresponding day number\n    return day_numbers[day_of_week]\n\n# Example usage\nday_number = day_of_week_to_number('Wednesday')\nprint(f\"The day number for Wednesday is {day_number}.\")\n```\nThis program defines a function `day_of_week_to_number` that takes a day of the week as a string and returns its corresponding day number (1-7). It also includes an example usage to demonstrate how to use the function.",
+  "error": null,
+  "elapsed_seconds": 4.18,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

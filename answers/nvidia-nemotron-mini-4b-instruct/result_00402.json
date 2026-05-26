@@ -1,0 +1,9 @@
+{
+  "id": 402,
+  "title": "Maximum Element in Array",
+  "prompt": "Find the maximum element in an array and return its value and index.\nSample Input: [12, 45, 7, 23, 56, 89, 34]\nSample Output: 89, index: 5\n",
+  "answer": "Here's a Python solution for your problem:\n\n```python\ndef find_max(arr):\n    max_val = arr[0]\n    max_index = 0\n    for i in range(1, len(arr)):\n        if arr[i] > max_val:\n            max_val = arr[i]\n            max_index = i\n    return max_val, max_index\n\nsample_input = [12, 45, 7, 23, 56, 89, 34]\nprint(find_max(sample_input))  # Output: (89, 5)\n```\n\nThis function works by iterating through the array and updating `max_val` and `max_index` whenever it encounters a larger value than the current maximum. After the loop finishes, it returns the maximum value and its index.",
+  "error": null,
+  "elapsed_seconds": 2.02,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

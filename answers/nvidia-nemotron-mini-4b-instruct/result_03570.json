@@ -1,0 +1,9 @@
+{
+  "id": 3570,
+  "title": "Dictionary Reversing",
+  "prompt": "Write a function that reverses a dictionary (swaps keys and values)\nSample Input: {\"a\": 1, \"b\": 2, \"c\": 3}\nSample Output: {\"1\": \"a\", \"2\": \"b\", \"3\": \"c\"}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that reverses a dictionary (swaps keys and values) using a simple for loop:\n\n```python\ndef reverse_dict(d):\n    \"\"\"\n    Reverses the key-value pairs in a dictionary.\n\n    :param d: The dictionary to reverse.\n    :return: The reversed dictionary.\n    \"\"\"\n    reversed_dict = {}\n    for key, value in d.items():\n        reversed_dict[value] = key\n    return reversed_dict\n```\n\nHere's an example of how to use this function:\n\n```python\nd = {\"a\": 1, \"b\": 2, \"c\": 3}\nprint(reverse_dict(d))  # Output: {1: 'a', 2: 'b', 3: 'c'}\n```\n\nIf you want to use a more concise and Pythonic way to write this function using dictionary comprehension, you can do the following:\n\n```python\ndef reverse_dict(d):\n    \"\"\"\n    Reverses the key-value pairs in a dictionary.\n\n    :param d: The dictionary to reverse.\n    :return: The reversed dictionary.\n    \"\"\"\n    return {value: key for key, value in d.items()}\n```\n\nBoth functions will produce the same output for the given sample input.",
+  "error": null,
+  "elapsed_seconds": 3.22,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

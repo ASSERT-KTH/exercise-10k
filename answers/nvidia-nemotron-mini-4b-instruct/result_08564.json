@@ -1,0 +1,9 @@
+{
+  "id": 8564,
+  "title": "Dictionary to List of Tuples",
+  "prompt": "Create a dictionary with 3 key-value pairs and convert it to a list of tuples.\nSample Input: None\nSample Output: list_of_tuples\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef dict_to_list_of_tuples(dictionary):\n    \"\"\"\n    Converts a dictionary to a list of tuples.\n\n    Parameters:\n    dictionary (dict): The dictionary to convert to a list of tuples.\n\n    Returns:\n    list_of_tuples (list): A list of tuples, where each tuple contains a key-value pair from the input dictionary.\n    \"\"\"\n    if not isinstance(dictionary, dict):\n        raise ValueError(\"Input must be a dictionary.\")\n\n    return list(dictionary.items())\n```\nHere's an example of how you can use this function:\n```python\nsample_dict = {'a': 1, 'b': 2, 'c': 3}\nlist_of_tuples = dict_to_list_of_tuples(sample_dict)\nprint(list_of_tuples)  # Output: [('a', 1), ('b', 2), ('c', 3)]\n```\nThis function first checks if the input is a dictionary. If not, it raises a `ValueError`. Then, it converts the dictionary to a list of tuples using the `items()` method, which returns a view object providing access to a list of (key, value) pairs.",
+  "error": null,
+  "elapsed_seconds": 3.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

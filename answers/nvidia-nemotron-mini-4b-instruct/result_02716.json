@@ -1,0 +1,9 @@
+{
+  "id": 2716,
+  "title": "Phone Number Formatter",
+  "prompt": "Write a program to format a given phone number in a specific format (e.g. (123) 456-7890).\nSample Input: 1234567890\nSample Output: (123) 456-7890\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that formats a given phone number in the specified format:\n\n```python\ndef format_phone_number(phone_number):\n    \"\"\"\n    Formats a given phone number in the format (XXX) XXX-XXXX.\n\n    :param phone_number: str, the phone number to format\n    :return: str, the formatted phone number\n    \"\"\"\n    # Ensure the input is a string and has the correct format\n    if not isinstance(phone_number, str) or len(phone_number) != 10 or phone_number.isdigit():\n        raise ValueError(\"Input must be a string of length 10 containing only digits.\")\n\n    # Format the phone number\n    formatted_number = f\"({phone_number[0:3]}) {phone_number[3:6]}-{phone_number[6:10]}\"\n\n    return formatted_number\n\n# Example usage\nphone_number = \"1234567890\"\nformatted_number = format_phone_number(phone_number)\nprint(formatted_number)  # Output: (123) 456-7890\n```\n\nThis program defines a function `format_phone_number` that checks if the input is a string of length 10 containing only digits, and then formats the phone number in the specified format. The example usage at the end of the program demonstrates how to use the function with a sample input.",
+  "error": null,
+  "elapsed_seconds": 4.72,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6165,
+  "title": "Rock, Paper, Scissors",
+  "prompt": "Create a function that plays a game of rock, paper, scissors against the user.\nSample Input: rock\nSample Output: You win! The computer chose scissors\n",
+  "answer": "Sure, I'd be happy to help you create a function for a game of rock, paper, scissors. Here's an example implementation in Python:\n\n```python\nimport random\n\ndef play_game():\n    \"\"\"\n    Plays a game of rock, paper, scissors against the user.\n    \"\"\"\n    print(\"Let's play rock, paper, scissors!\")\n\n    # Define the possible choices and their outcomes\n    choices = [\"rock\", \"paper\", \"scissors\"]\n    valid_choices = {\"rock\": \"paper\", \"paper\": \"scissors\", \"scissors\": \"rock\"}\n\n    # Get the user's choice\n    user_choice = input(\"Enter your choice (rock, paper, scissors): \").lower()\n\n    # Ensure the user's choice is valid\n    while user_choice not in choices:\n        print(\"Invalid choice. Please enter 'rock', 'paper', or 'scissors'.\")\n        user_choice = input(\"Enter your choice: \").lower()\n\n    # Generate a random choice for the computer\n    computer_choice = random.choice(choices)\n\n    # Determine the winner and print the result\n    if user_choice == computer_choice:\n        print(\"It's a tie!\")\n    elif valid_choices[user_choice] == computer_choice:\n        print(f\"You win! The computer chose {computer_choice}.\")\n    else:\n        print(f\"You lose! The computer chose {computer_choice}.\")\n\n# Call the function to start the game\nplay_game()\n```\n\nThis function defines the possible choices, their outcomes, and ensures the user's choice is valid. It then generates a random choice for the computer and prints the result of the game.",
+  "error": null,
+  "elapsed_seconds": 3.94,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

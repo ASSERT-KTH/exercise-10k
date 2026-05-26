@@ -1,0 +1,9 @@
+{
+  "id": 4890,
+  "title": "Dictionary Copy",
+  "prompt": "Create a copy of a dictionary.\nSample Input: { 'name': 'John', 'age': 25 }\nSample Output: { 'name': 'John', 'age': 25 }\n",
+  "answer": "Sure, I'd be happy to help you with that! In Python, you can create a copy of a dictionary using the `copy()` method or the `dict()` constructor with the `copy=True` argument. Here's how you can do it:\n\n1. Using `copy()` method:\n```python\noriginal_dict = {'name': 'John', 'age': 25}\ncopied_dict = original_dict.copy()\nprint(copied_dict)  # Output: {'name': 'John', 'age': 25}\n```\n\n2. Using `dict()` constructor with `copy=True`:\n```python\noriginal_dict = {'name': 'John', 'age': 25}\ncopied_dict = dict(original_dict)  # or copied_dict = dict(original_dict, copy=True)\nprint(copied_dict)  # Output: {'name': 'John', 'age': 25}\n```\n\nBoth methods will create a shallow copy of the original dictionary, meaning that any changes made to the values in the copied dictionary will not affect the original dictionary. If you need a deep copy, which includes all nested dictionaries and lists, you can use the `copy.deepcopy()` function from the `copy` module:\n\n```python\nimport copy\n\noriginal_dict = {'name': 'John', 'age': 25, 'address': {'city': 'New York', 'state': 'NY'}}\ncopied_dict = copy.deepcopy(original_dict)\n\ncopied_dict['age'] = 26  # This will not affect the original dictionary\nprint(original_dict)  # Output: {'name': 'John', 'age': 25, 'address': {'city': 'New York', 'state': 'NY'}}\n```",
+  "error": null,
+  "elapsed_seconds": 4.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

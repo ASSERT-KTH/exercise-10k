@@ -1,0 +1,9 @@
+{
+  "id": 6593,
+  "title": "Find the Variance of All Numbers in an Array",
+  "prompt": "Write a program to find the variance of all numbers in an array.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 2.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the variance of all numbers in an array (or list, as you might call it in Python). The variance is the average of the squared differences from the mean. In this program, I'll assume that the input list contains only numerical values.\n\n```python\ndef calculate_variance(numbers):\n    \"\"\"\n    Calculate the variance of all numbers in the given list.\n\n    :param numbers: List of numbers\n    :return: Variance of the numbers\n    \"\"\"\n\n    # Calculate the mean\n    mean = sum(numbers) / len(numbers)\n\n    # Calculate the squared differences from the mean\n    squared_diffs = [pow(num - mean, 2) for num in numbers]\n\n    # Calculate the variance\n    variance = sum(squared_diffs) / len(numbers)\n\n    return variance\n\n# Example usage\nsample_input = [1, 2, 3, 4, 5]\nprint(calculate_variance(sample_input))  # Output: 2.0\n```\n\nThis program first calculates the mean of the input list. Then, it calculates the squared differences between each number in the list and the mean. Finally, it calculates the variance by dividing the sum of the squared differences by the length of the list.",
+  "error": null,
+  "elapsed_seconds": 3.72,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

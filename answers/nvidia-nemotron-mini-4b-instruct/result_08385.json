@@ -1,0 +1,9 @@
+{
+  "id": 8385,
+  "title": "Catalan Numbers Calculation",
+  "prompt": "Write a program that calculates the nth Catalan number using dynamic programming.\nSample Input: 5\nSample Output: 42\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the nth Catalan number using dynamic programming:\n\n```python\ndef catalan(n):\n    # Initialize the dynamic programming table with base cases\n    dp = [0] * (n + 1)\n    dp[0], dp[1] = 1, 1\n\n    # Calculate the Catalan numbers using dynamic programming\n    for i in range(2, n + 1):\n        for j in range(i):\n            dp[i] += dp[j] * dp[i - j - 1]\n\n    return dp[n]\n\n# Get user input for the value of n\nn = int(input(\"Enter the value of n: \"))\n\n# Calculate and print the nth Catalan number\nprint(f\"The {n}th Catalan number is {catalan(n)}\")\n```\n\nThis program defines a function `catalan(n)` that calculates the nth Catalan number using dynamic programming. The function initializes a dynamic programming table `dp` with base cases (i.e., Catalan numbers for n=0 and n=1) and then calculates the Catalan numbers for n=2 to n using the recurrence relation: `C(n) = Σ (C(i) * C(n-i-1))`. The function returns the nth Catalan number.\n\nThe program then gets user input for the value of `n`, calculates the nth Catalan number using the `catalan(n)` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

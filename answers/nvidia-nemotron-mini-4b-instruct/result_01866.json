@@ -1,0 +1,9 @@
+{
+  "id": 1866,
+  "title": "List Filtering",
+  "prompt": "Write a program to filter a list based on a condition and print the filtered list.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that filters a list based on a condition and prints the filtered list:\n```python\ndef filter_list(input_list, condition):\n    \"\"\"\n    Filters a list based on a condition and returns a new list.\n\n    Parameters:\n    input_list (list): The list to filter.\n    condition (callable): A function that takes one argument and returns a boolean.\n                          The function should be applied to each element in the input list.\n\n    Returns:\n    list: A new list containing only the elements from the input list that satisfy the condition.\n    \"\"\"\n    return [element for element in input_list if condition(element)]\n\n# Example usage:\ninput_list = [1, 2, 3, 4, 5]\ncondition = lambda x: x % 2 == 0  # Filter even numbers\nfiltered_list = filter_list(input_list, condition)\nprint(filtered_list)  # Output: [2, 4]\n```\nIn this program, the `filter_list` function takes an input list and a condition function as arguments. It uses a list comprehension to create a new list containing only the elements from the input list that satisfy the condition. The condition function should take one argument and return a boolean, indicating whether the element should be included in the filtered list.\n\nIn the example usage, we define an input list and a condition function that filters even numbers. We then call the `filter_list` function with these arguments and print the resulting filtered list.",
+  "error": null,
+  "elapsed_seconds": 3.71,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9064,
+  "title": "Simple Quiz",
+  "prompt": "Create a program that asks the user a series of questions and keeps track of their score using if statements\nSample Input: A, B, C\nSample Output: Your score is 2\n",
+  "answer": "Sure, I'd be happy to help you create a program that keeps track of a user's score based on their answers to a series of questions. Here's an example Python program that follows your sample input/output format:\n```python\ndef get_score(answers):\n    \"\"\"\n    Calculates the score based on the given answers.\n\n    :param answers: A list of answers (str)\n    :return: The score (int)\n    \"\"\"\n    score = 0\n    for answer in answers:\n        if answer.upper() == 'A':\n            score += 10\n        elif answer.upper() == 'B':\n            score += 8\n        elif answer.upper() == 'C':\n            score += 6\n        else:\n            print(f\"Invalid answer: '{answer}'. Please use 'A', 'B', or 'C'.\")\n            return\n    return score\n\nif __name__ == \"__main__\":\n    answers = input(\"Enter your answers (A, B, or C): \").upper().split(', ')\n    score = get_score(answers)\n    print(f\"Your score is {score}.\")\n```\nThis program defines a function `get_score` that calculates the score based on the given answers. The function checks if the answer is 'A', 'B', or 'C', and adds a corresponding score to the `score` variable. If an invalid answer is given, the function prints an error message and returns.\n\nThe main part of the program prompts the user to enter their answers, splits the input into a list of answers, and calls the `get_score` function to calculate the score. Finally, it prints the user's score.\n\nYou can modify this program to suit your specific requirements, such as changing the scoring system, adding more questions, or changing the error message.",
+  "error": null,
+  "elapsed_seconds": 4.11,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

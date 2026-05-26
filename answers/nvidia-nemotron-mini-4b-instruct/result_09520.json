@@ -1,0 +1,9 @@
+{
+  "id": 9520,
+  "title": "Simple Calculator Program",
+  "prompt": "Create a program that takes in two numbers and an operation (+, -, *, /) as input from the user and performs the specified operation. The program should then output the result.\nSample Input: 10 + 5\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you create a program for that. Here's a Python solution that meets your requirements:\n\n```python\ndef perform_operation(num1, num2, operation):\n    \"\"\"Perform the specified operation on two numbers and return the result.\"\"\"\n    if operation == '+':\n        return num1 + num2\n    elif operation == '-':\n        return num1 - num2\n    elif operation == '*':\n        return num1 * num2\n    elif operation == '/':\n        if num2 == 0:\n            raise ValueError(\"Cannot divide by zero.\")\n        return num1 / num2\n    else:\n        raise ValueError(f\"Invalid operation: {operation}. Choose from +, -, *, /\")\n\n# Get user input\nnum1 = float(input(\"Enter the first number: \"))\nnum2 = float(input(\"Enter the second number: \"))\noperation = input(\"Enter the operation (+, -, *, /): \")\n\n# Perform the operation and output the result\ntry:\n    result = perform_operation(num1, num2, operation)\n    print(f\"{num1} {operation} {num2} = {result}\")\nexcept ValueError as e:\n    print(e)\n```\n\nThis program defines a function `perform_operation` that takes three arguments: two numbers and an operation string. It checks if the operation is valid and performs the specified operation. The main part of the program gets user input for the numbers and the operation, calls the `perform_operation` function, and prints the result. The program also includes error handling for invalid operations and division by zero.",
+  "error": null,
+  "elapsed_seconds": 3.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

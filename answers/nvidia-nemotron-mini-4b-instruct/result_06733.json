@@ -1,0 +1,9 @@
+{
+  "id": 6733,
+  "title": "Input Validation with Regex",
+  "prompt": "Write a program that uses regular expressions to validate input data\nSample Input: Hello, world!\nSample Output: Input is valid\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses regular expressions to validate input data. In this example, we'll check if the input string contains only alphanumeric characters, spaces, and punctuation marks.\n\n```python\nimport re\n\ndef validate_input(input_data):\n    \"\"\"\n    Validates input data using regular expressions.\n\n    :param input_data: The input data to validate.\n    :return: A string indicating whether the input is valid or not.\n    \"\"\"\n    # Regular expression pattern for validating alphanumeric characters, spaces, and punctuation marks\n    pattern = r'^[a-zA-Z0-9\\s]+'\n\n    # Compile the regular expression pattern\n    pattern_obj = re.compile(pattern)\n\n    # Check if the input data matches the pattern\n    if pattern_obj.match(input_data):\n        return \"Input is valid\"\n    else:\n        return \"Input is invalid\"\n\n# Test the function with a sample input\ninput_data = \"Hello, world!\"\nprint(validate_input(input_data))  # Output: Input is valid\n```\n\nYou can modify the regular expression pattern to suit your specific validation needs. For example, if you want to allow only alphanumeric characters and spaces, you can change the pattern to:\n\n```python\npattern = r'^[a-zA-Z0-9\\s]+$'\n```\n\nThis pattern will match strings that start and end with alphanumeric characters or spaces, and only contain those characters.",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7771,
+  "title": "Calculating Student Grades",
+  "prompt": "Create a function that calculates the average grade of a student from a list of grades. The function should take a list of grades as input, calculate the average, and return the average grade. If the list is empty, return a message indicating that there are no grades to calculate.\nSample Input: [90, 80, 70, 95]\nSample Output: 83.75\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef calculate_average_grade(grades):\n    \"\"\"\n    Calculates the average grade of a student from a list of grades.\n\n    Parameters:\n    grades (list): A list of numeric grades (float or int).\n\n    Returns:\n    float: The average grade of the student. If the list is empty, returns a message indicating that there are no grades to calculate.\n    \"\"\"\n    if not grades:  # Check if the list is empty\n        return \"There are no grades to calculate.\"\n\n    total_grade = sum(grades)  # Calculate the total grade\n    num_grades = len(grades)   # Calculate the number of grades\n\n    average_grade = total_grade / num_grades  # Calculate the average grade\n\n    return average_grade\n```\nHere's an example of how you can use this function:\n```python\ngrades = [90, 80, 70, 95]\naverage = calculate_average_grade(grades)\nprint(average)  # Output: 83.75\n```\nThis function first checks if the input list is empty, and returns a message indicating that there are no grades to calculate if it is. Otherwise, it calculates the total grade by summing all the grades in the list, and the number of grades by getting the length of the list. Finally, it calculates the average grade by dividing the total grade by the number of grades, and returns the result.",
+  "error": null,
+  "elapsed_seconds": 3.51,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

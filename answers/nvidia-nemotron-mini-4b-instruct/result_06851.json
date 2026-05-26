@@ -1,0 +1,9 @@
+{
+  "id": 6851,
+  "title": "Dictionary Data Processor",
+  "prompt": "Create a program that processes student data stored in a dictionary. The dictionary contains student names as keys and their respective grades as values. The program should calculate the average grade, find the student with the highest grade, and print out all students with grades above the average.\nSample Input: {\"John\": 90, \"Alice\": 85, \"Bob\": 95, \"Charlie\": 80}\nSample Output: Average grade: 87.5\nHighest grade: Bob with 95\nStudents above average: John, Bob\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef process_student_data(students):\n    # Calculate the average grade\n    total_grade = sum(students.values())\n    num_students = len(students)\n    average_grade = total_grade / num_students\n\n    # Find the student with the highest grade\n    highest_grade = max(students.values())\n    highest_student = next((k for k, v in students.items() if v == highest_grade), None)\n\n    # Print the results\n    print(f\"Average grade: {average_grade:.2f}\")\n    print(f\"Highest grade: {highest_student} with {highest_grade}\")\n\n    # Filter students with grades above the average\n    above_average_students = [k for k, v in students.items() if v > average_grade]\n    print(\"Students above average:\")\n    for student in above_average_students:\n        print(f\"- {student}\")\n\n# Sample input\nstudents = {\"John\": 90, \"Alice\": 85, \"Bob\": 95, \"Charlie\": 80}\nprocess_student_data(students)\n```\n\nThis program first calculates the average grade by summing all grades and dividing by the number of students. Then, it finds the student with the highest grade and prints it out. Finally, it filters the students with grades above the average and prints their names.",
+  "error": null,
+  "elapsed_seconds": 3.32,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

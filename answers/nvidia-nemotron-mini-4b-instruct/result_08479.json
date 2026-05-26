@@ -1,0 +1,9 @@
+{
+  "id": 8479,
+  "title": "Modulus Calculator",
+  "prompt": "Write a program to calculate the remainder of an integer division operation\nSample Input: 17 5\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the remainder of an integer division operation:\n\n```python\ndef calculate_remainder(dividend, divisor):\n    \"\"\"\n    Calculates the remainder of an integer division operation.\n\n    :param dividend: The number to be divided.\n    :param divisor: The number that divides the dividend.\n    :return: The remainder of the division operation.\n    \"\"\"\n\n    # Check if the divisor is zero, as it would result in a division by zero error\n    if divisor == 0:\n        raise ValueError(\"Divisor cannot be zero.\")\n\n    # Calculate the remainder using integer division and modulus operator\n    remainder = dividend % divisor\n\n    return remainder\n\n# Example usage\ndividend = 17\ndivisor = 5\n\ntry:\n    result = calculate_remainder(dividend, divisor)\n    print(f\"The remainder of {dividend} divided by {divisor} is {result}.\")\nexcept ValueError as e:\n    print(e)\n```\n\nWhen you run this program with the sample input `17 5`, it will output:\n\n```\nThe remainder of 17 divided by 5 is 2.\n```",
+  "error": null,
+  "elapsed_seconds": 2.87,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

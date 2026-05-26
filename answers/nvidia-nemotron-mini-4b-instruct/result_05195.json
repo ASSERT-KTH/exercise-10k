@@ -1,0 +1,9 @@
+{
+  "id": 5195,
+  "title": "College GPA Calculator",
+  "prompt": "Write a program that asks the user for their grades and then calculates their GPA based on the following scale: A (4.0), B (3.0), C (2.0), D (1.0), F (0.0).\nSample Input: ['A', 'B', 'C', 'D']\nSample Output: GPA: 2.5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_gpa():\n    \"\"\"\n    Asks the user for their grades and calculates their GPA based on the given scale.\n    \"\"\"\n    # Initialize GPA to 0\n    gpa = 0\n\n    # Ask the user for their grades\n    grades = []\n    while True:\n        grade = input(\"Enter a grade (or type 'done' to finish): \").upper()\n        if grade == \"DONE\":\n            break\n        grades.append(grade)\n\n    # Calculate GPA\n    for grade in grades:\n        if grade == \"A\":\n            gpa += 4.0\n        elif grade == \"B\":\n            gpa += 3.0\n        elif grade == \"C\":\n            gpa += 2.0\n        elif grade == \"D\":\n            gpa += 1.0\n        elif grade != \"F\":\n            print(f\"'{grade}' is not a valid grade. Please try again.\")\n        else:\n            gpa += 0.0\n\n    # Print the GPA\n    print(f\"GPA: {gpa:.1f}\")\n\n# Call the function\ncalculate_gpa()\n```\nThis program prompts the user to enter their grades one at a time, until they type \"DONE\". It then calculates the GPA by summing the corresponding values from the grade scale. Finally, it prints the GPA to the console with one decimal place.",
+  "error": null,
+  "elapsed_seconds": 11.29,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

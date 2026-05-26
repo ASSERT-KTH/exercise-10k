@@ -1,0 +1,9 @@
+{
+  "id": 3220,
+  "title": "Simple Linear Equation Solver",
+  "prompt": "Write a program that takes the coefficients of a linear equation as input and prints its solution.\nSample Input: 2 3 4\nSample Output: x = -1.5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes the coefficients of a linear equation as input and prints its solution:\n```python\ndef linear_equation_solution():\n    \"\"\"\n    Takes the coefficients of a linear equation as input and prints its solution.\n    \"\"\"\n    # Get the coefficients as a list\n    coefficients = list(map(float, input(\"Enter the coefficients of the linear equation (space-separated): \").split()))\n\n    # Check if there are exactly three coefficients\n    if len(coefficients) != 3:\n        print(\"Error: The coefficients must be a list of three numbers.\")\n        return\n\n    # Calculate the solution\n    a, b, c = coefficients\n    x = (-b + (b**2 - 4*a*c)**0.5) / (2*a)\n\n    # Print the solution\n    print(f\"x = {x:.2f}\")\n\n# Call the function\nlinear_equation_solution()\n```\nThis program first prompts the user to enter the coefficients of the linear equation as a space-separated string. It then converts this string into a list of floats, checks if there are exactly three coefficients, and calculates the solution using the quadratic formula. Finally, it prints the solution in the format \"x = x_value\".",
+  "error": null,
+  "elapsed_seconds": 2.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

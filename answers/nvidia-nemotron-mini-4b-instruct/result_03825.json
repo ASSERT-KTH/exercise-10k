@@ -1,0 +1,9 @@
+{
+  "id": 3825,
+  "title": "Palindrome Checker",
+  "prompt": "Write a program that takes a string as input and checks if it is a palindrome. If it is, print out a success message. If not, print out a failure message.\nSample Input: madam\nSample Output: The string is a palindrome.\n",
+  "answer": "Here's a Python program that checks if a given string is a palindrome:\n\n```python\ndef is_palindrome(s):\n    \"\"\"Check if a string is a palindrome.\n\n    Args:\n        s (str): The string to check.\n\n    Returns:\n        bool: True if the string is a palindrome, False otherwise.\n    \"\"\"\n    # Remove non-alphanumeric characters and convert to lowercase\n    s = ''.join(c.lower() for c in s if c.isalnum())\n\n    # Check if the string is equal to its reverse\n    return s == s[::-1]\n\n# Get user input\nuser_input = input(\"Enter a string: \")\n\n# Check if it's a palindrome\nif is_palindrome(user_input):\n    print(f\"The string '{user_input}' is a palindrome.\")\nelse:\n    print(f\"The string '{user_input}' is not a palindrome.\")\n```\n\nThis program first removes any non-alphanumeric characters from the input string and converts it to lowercase. Then, it checks if the string is equal to its reverse (which can be done using slicing with a step of -1). If they are equal, the program prints a success message; otherwise, it prints a failure message.",
+  "error": null,
+  "elapsed_seconds": 3.26,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

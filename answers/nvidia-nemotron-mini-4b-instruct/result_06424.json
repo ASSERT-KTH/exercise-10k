@@ -1,0 +1,9 @@
+{
+  "id": 6424,
+  "title": "Average of Numbers",
+  "prompt": "Write a program to calculate the average of a list of numbers. Use a for loop to iterate over the numbers and sum them up.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 3.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the average of a list of numbers using a for loop to iterate over the numbers and sum them up:\n```python\ndef calculate_average(numbers):\n    \"\"\"\n    Calculates the average of a list of numbers.\n\n    :param numbers: List of numbers\n    :return: Average of the numbers\n    \"\"\"\n    # Check if the input is a non-empty list\n    if not isinstance(numbers, list) or len(numbers) == 0:\n        raise ValueError(\"Input should be a non-empty list of numbers.\")\n\n    # Initialize the sum and the count of numbers\n    total = 0\n    count = len(numbers)\n\n    # Iterate over each number in the list\n    for num in numbers:\n        # Check if the number is a number (float or int)\n        if not isinstance(num, (float, int)):\n            raise ValueError(\"All elements in the list should be numbers.\")\n\n        # Add the number to the sum\n        total += num\n\n    # Calculate and return the average\n    return total / count\n```\nYou can use this function like this:\n```python\nnumbers = [1, 2, 3, 4, 5]\naverage = calculate_average(numbers)\nprint(average)  # Output: 3.0\n```\nThis function checks if the input is a non-empty list and if all elements in the list are numbers. If not, it raises a `ValueError`. Then, it initializes the sum and the count of numbers, iterates over each number in the list, adds it to the sum, and calculates and returns the average.",
+  "error": null,
+  "elapsed_seconds": 4.1,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

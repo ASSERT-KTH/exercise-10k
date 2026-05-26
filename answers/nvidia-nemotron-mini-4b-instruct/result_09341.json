@@ -1,0 +1,9 @@
+{
+  "id": 9341,
+  "title": "Looping Through Numbers",
+  "prompt": "Write a program that uses a while loop to print out all the even numbers from 1 to n, where n is a number provided by the user. The program should also calculate the sum of these even numbers and print it out at the end.\nSample Input: 10\nSample Output: 2 4 6 8 10\nThe sum of even numbers is: 30\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef print_even_numbers_and_sum(n):\n    \"\"\"Print all even numbers from 1 to n and calculate their sum.\"\"\"\n\n    # Initialize variables to store the even numbers and their sum\n    even_numbers = []\n    sum_of_even_numbers = 0\n\n    # Use a while loop to print all even numbers from 1 to n\n    i = 1\n    while i <= n:\n        if i % 2 == 0:  # Check if the number is even\n            even_numbers.append(i)\n            print(i, end=\" \")  # Print the even number and a space\n            sum_of_even_numbers += i  # Add the even number to the sum\n        i += 1\n\n    # Print the last line with a newline character\n    print()\n\n    # Print the sum of even numbers\n    print(f\"The sum of even numbers is: {sum_of_even_numbers}\")\n\n# Get user input for n\nn = int(input(\"Enter a number: \"))\n\n# Call the function with the user-provided n\nprint_even_numbers_and_sum(n)\n```\nThis program defines a function `print_even_numbers_and_sum` that takes an integer `n` as input and prints all even numbers from 1 to `n` and calculates their sum. The function uses a while loop to iterate over the numbers and checks if each number is even before adding it to the sum. The function then prints the sum of even numbers at the end. The program then gets user input for `n`, calls the function with the user-provided `n`, and prints the output.",
+  "error": null,
+  "elapsed_seconds": 3.98,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

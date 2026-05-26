@@ -1,0 +1,9 @@
+{
+  "id": 1092,
+  "title": "Distance Calculator",
+  "prompt": "Write a program that takes the speed and time of travel as input and outputs the distance traveled.\nSample Input: 50 2\nSample Output: 100\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_distance(speed, time):\n    \"\"\"\n    Calculates the distance traveled based on the given speed and time.\n\n    Parameters:\n    speed (float): The speed of travel in miles per hour (mph).\n    time (float): The time of travel in hours.\n\n    Returns:\n    float: The distance traveled in miles.\n    \"\"\"\n    # Ensure the input values are positive\n    if speed <= 0 or time <= 0:\n        raise ValueError(\"Both speed and time must be positive numbers.\")\n\n    # Calculate the distance using the formula: distance = speed * time\n    distance = speed * time\n\n    return distance\n\n# Get user input\nspeed = float(input(\"Enter the speed of travel in miles per hour: \"))\ntime = float(input(\"Enter the time of travel in hours: \"))\n\n# Calculate and display the distance\ndistance = calculate_distance(speed, time)\nprint(f\"The distance traveled is {distance} miles.\")\n```\nThis program defines a function `calculate_distance` that takes the speed and time as input and returns the distance traveled. The function checks if the input values are positive and raises a `ValueError` if they are not. The program then gets user input for the speed and time, calls the function to calculate the distance, and displays the result.",
+  "error": null,
+  "elapsed_seconds": 3.23,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

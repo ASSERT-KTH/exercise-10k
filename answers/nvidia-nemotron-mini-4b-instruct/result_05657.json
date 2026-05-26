@@ -1,0 +1,9 @@
+{
+  "id": 5657,
+  "title": "Number Validator",
+  "prompt": "Write a function that checks if a given number is within a specified range.\nSample Input: 5, 1, 10\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function, `is_in_range`, takes two arguments: the number to check and the range (a tuple of two integers representing the minimum and maximum values). It returns `True` if the number is within the specified range and `False` otherwise.\n\n```python\ndef is_in_range(num, range_):\n    \"\"\"\n    Check if a given number is within a specified range.\n\n    :param num: The number to check.\n    :param range_: A tuple of two integers representing the minimum and maximum values.\n    :return: True if the number is within the specified range, False otherwise.\n    \"\"\"\n    if not isinstance(num, (int, float)) or not isinstance(range_, tuple) or len(range_) != 2:\n        raise ValueError(\"Both arguments must be a number and a tuple of two integers, respectively.\")\n\n    min_val, max_val = range_\n    return min_val <= num <= max_val\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(is_in_range(5, (1, 10)))  # True\nprint(is_in_range(1, (1, 10)))  # True\nprint(is_in_range(11, (1, 10))) # False\n```",
+  "error": null,
+  "elapsed_seconds": 3.25,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

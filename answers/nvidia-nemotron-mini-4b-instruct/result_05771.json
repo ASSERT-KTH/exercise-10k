@@ -1,0 +1,9 @@
+{
+  "id": 5771,
+  "title": "Restaurant Menu",
+  "prompt": "Write a program that simulates a restaurant menu. The program should allow the user to order food and drinks, and calculate the total cost.\nSample Input: Order pizza\nSample Output: Total cost: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that simulates a restaurant menu and allows the user to order food and drinks. This program uses a dictionary to store the prices of various menu items. You can add or modify the `menu` dictionary to include more items as needed.\n\n```python\n# Define the restaurant menu\nmenu = {\n    \"pizza\": 15,\n    \"salad\": 10,\n    \"burger\": 12,\n    \"drink\": 3,\n}\n\ndef calculate_total_cost(order):\n    \"\"\"Calculate the total cost of an order.\"\"\"\n    total_cost = 0\n    for item, quantity in order.items():\n        cost = menu[item] * quantity\n        total_cost += cost\n    return total_cost\n\ndef main():\n    while True:\n        user_input = input(\"Enter an item to order (or 'quit' to finish): \").lower()\n\n        if user_input == \"quit\":\n            print(\"Thank you for ordering!\")\n            break\n\n        if user_input not in menu:\n            print(f\"Sorry, '{user_input}' is not on the menu. Please try again.\")\n            continue\n\n        quantity = int(input(f\"Enter the quantity of '{user_input}': \"))\n\n        order = {user_input: quantity}\n        total_cost = calculate_total_cost(order)\n\n        print(f\"Total cost: {total_cost}\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program will keep asking the user to enter an item to order until they type \"quit\". For each item ordered, it will prompt the user to enter the quantity, calculate the cost, and display the total cost.",
+  "error": null,
+  "elapsed_seconds": 4.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

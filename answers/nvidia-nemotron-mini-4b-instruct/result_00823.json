@@ -1,0 +1,9 @@
+{
+  "id": 823,
+  "title": "Caesar Cipher",
+  "prompt": "Implement a Caesar cipher, which shifts each letter in the input string by a fixed number of positions down the alphabet.\nSample Input: hello, 3\nSample Output: khoor\n",
+  "answer": "Sure, I'd be happy to help you implement a Caesar cipher. Here's a Python function that takes an input string and a shift value as arguments, and returns the ciphertext:\n```python\ndef caesar_cipher(text, shift):\n    \"\"\"\n    Encrypts a given text using a Caesar cipher with the given shift value.\n\n    :param text: The input text as a string.\n    :param shift: The number of positions to shift each letter down the alphabet.\n    :return: The ciphertext as a string.\n    \"\"\"\n\n    # Define the alphabet and its length\n    alphabet = \"abcdefghijklmnopqrstuvwxyz\"\n    alphabet_length = len(alphabet)\n\n    # Define a function to shift a single letter\n    def shift_letter(letter, shift):\n        if letter.islower():\n            shift_amount = shift % alphabet_length\n            return alphabet[(alphabet.index(letter.lower()) + shift_amount) % alphabet_length].lower()\n        elif letter.isupper():\n            shift_amount = shift % alphabet_length\n            return alphabet[(alphabet.index(letter.upper()) + shift_amount) % alphabet_length].upper()\n        else:\n            return letter\n\n    # Apply the shift function to each letter in the input text\n    ciphertext = \"\".join(shift_letter(char, shift) for char in text)\n\n    return ciphertext\n```\nHere's an example of how to use the function:\n```python\nprint(caesar_cipher(\"hello\", 3))  # Output: khoor\n```\nThis function handles both uppercase and lowercase letters, and handles wrap-around of the alphabet when shifting by a multiple of 26.",
+  "error": null,
+  "elapsed_seconds": 4.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

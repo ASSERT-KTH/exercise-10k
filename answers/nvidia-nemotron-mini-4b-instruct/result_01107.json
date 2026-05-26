@@ -1,0 +1,9 @@
+{
+  "id": 1107,
+  "title": "Percent Increase",
+  "prompt": "Write a program to calculate the percent increase between two numbers\nSample Input: 10 15\nSample Output: 50%\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the percent increase between two numbers:\n\n```python\ndef calculate_percent_increase(num1, num2):\n    \"\"\"\n    Calculates the percent increase between two numbers.\n\n    :param num1: The first number.\n    :param num2: The second number.\n    :return: A string representing the percent increase as a percentage (e.g., \"50%\").\n    \"\"\"\n    # Check if the inputs are numbers\n    if not isinstance(num1, (int, float)) or not isinstance(num2, (int, float)):\n        raise ValueError(\"Both inputs must be numbers.\")\n\n    # Calculate the percent increase\n    percent_increase = (num2 - num1) / num1 * 100\n\n    # Format the result as a percentage with two decimal places\n    result = f\"{percent_increase:.2f}%\"\n\n    return result\n\n# Example usage\nnum1 = 10\nnum2 = 15\npercent_increase = calculate_percent_increase(num1, num2)\nprint(f\"The percent increase between {num1} and {num2} is {percent_increase}.\")\n```\n\nThis program defines a function `calculate_percent_increase` that takes two numbers as input and returns a string representing the percent increase as a percentage. The function checks if the inputs are numbers, calculates the percent increase, and formats the result with two decimal places. The example usage at the end of the program demonstrates how to use the function to calculate the percent increase between two numbers.",
+  "error": null,
+  "elapsed_seconds": 3.61,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6000,
+  "title": "Finding the Last Occurrence",
+  "prompt": "Write a function that takes a list and a value as input, and returns the index of the last occurrence of the value in the list if it exists\nSample Input: [1, 2, 3, 4, 2, 5], 2\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef last_occurrence_index(lst, value):\n    \"\"\"\n    Given a list and a value, return the index of the last occurrence of the value in the list if it exists.\n\n    :param lst: The list to search in\n    :param value: The value to search for\n    :return: The index of the last occurrence of the value in the list if it exists, otherwise -1\n    \"\"\"\n    # Use a list comprehension to find the indices of all occurrences of the value\n    indices = [i for i, x in enumerate(lst) if x == value]\n\n    # If there are no occurrences, return -1\n    if not indices:\n        return -1\n\n    # Return the index of the last occurrence (the last element in the indices list)\n    return indices[-1]\n```\nHere's an example of how you can use this function:\n```python\nprint(last_occurrence_index([1, 2, 3, 4, 2, 5], 2))  # Output: 4\nprint(last_occurrence_index([1, 2, 3, 4, 5], 2))     # Output: -1\n```\nThis function first uses a list comprehension to find all the indices of the value in the list. If there are no occurrences, it returns -1. Otherwise, it returns the index of the last occurrence, which is the last element in the indices list.",
+  "error": null,
+  "elapsed_seconds": 3.54,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

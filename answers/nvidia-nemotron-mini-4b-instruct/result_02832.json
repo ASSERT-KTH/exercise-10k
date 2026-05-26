@@ -1,0 +1,9 @@
+{
+  "id": 2832,
+  "title": "Day of the Week Checker",
+  "prompt": "Create a program to determine the day of the week based on the date.\nSample Input: 2022-09-01\nSample Output: Thursday\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that determines the day of the week based on a given date in the format `YYYY-MM-DD`. This program uses the `datetime` module to handle dates and the `calendar` module to get the day name for a given date.\n\n```python\nfrom datetime import datetime\n\ndef get_day_of_week(date_str):\n    \"\"\"\n    Determines the day of the week based on the given date.\n\n    :param date_str: A string in the format YYYY-MM-DD\n    :return: A string representing the day of the week (e.g., 'Monday', 'Tuesday', etc.)\n    \"\"\"\n    # Parse the input date string into a datetime object\n    date = datetime.strptime(date_str, \"%Y-%m-%d\")\n\n    # Get the day of the week as a string\n    day_name = date.strftime(\"%A\")\n\n    return day_name\n\n# Example usage\ndate_str = \"2022-09-01\"\nday_of_week = get_day_of_week(date_str)\nprint(f\"The day of the week for {date_str} is {day_of_week}.\")\n```\n\nThis program will output:\n\n```\nThe day of the week for 2022-09-01 is Thursday.\n```",
+  "error": null,
+  "elapsed_seconds": 4.62,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

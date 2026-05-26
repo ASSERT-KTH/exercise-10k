@@ -1,0 +1,9 @@
+{
+  "id": 3638,
+  "title": "Find the Transpose of a Matrix",
+  "prompt": "Write a program to find the transpose of a given matrix.\nSample Input: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nSample Output: [[1, 4, 7], [2, 5, 8], [3, 6, 9]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the transpose of a given matrix:\n\n```python\ndef transpose(matrix):\n    # Get the number of rows and columns\n    num_rows = len(matrix)\n    num_cols = len(matrix[0]) if matrix else 0\n\n    # Initialize the transposed matrix with zeros\n    transposed_matrix = [[0] * num_cols for _ in range(num_rows)]\n\n    # Fill the transposed matrix with the elements of the original matrix\n    for i in range(num_rows):\n        for j in range(num_cols):\n            transposed_matrix[i][j] = matrix[j][i]\n\n    return transposed_matrix\n\n# Example usage\nmatrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\ntransposed_matrix = transpose(matrix)\n\nfor row in transposed_matrix:\n    print(row)\n```\n\nWhen you run this program with the sample input `[[1, 2, 3], [4, 5, 6], [7, 8, 9]]`, it will output:\n\n```\n[1, 4, 7]\n[2, 5, 8]\n[3, 6, 9]\n```\n\nThis is the transpose of the original matrix. The function `transpose` first gets the number of rows and columns in the matrix, then initializes a new matrix with zeros, and finally fills the new matrix with the elements of the original matrix in a transposed order.",
+  "error": null,
+  "elapsed_seconds": 3.79,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

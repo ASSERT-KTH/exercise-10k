@@ -1,0 +1,9 @@
+{
+  "id": 7288,
+  "title": "Function to Calculate Perimeter",
+  "prompt": "Create a function that takes the length and width of a rectangle as arguments and returns the perimeter\nSample Input: 4, 5\nSample Output: 18\n",
+  "answer": "Sure, I'd be happy to help you create a function for calculating the perimeter of a rectangle. Here's an example implementation in Python:\n\n```python\ndef calculate_rectangle_perimeter(length, width):\n    \"\"\"\n    Calculates the perimeter of a rectangle with given length and width.\n\n    :param length: The length of the rectangle.\n    :param width: The width of the rectangle.\n    :return: The perimeter of the rectangle.\n    \"\"\"\n\n    # Check if the inputs are positive numbers\n    if not isinstance(length, (int, float)) or length <= 0:\n        raise ValueError(\"Length must be a positive number.\")\n\n    if not isinstance(width, (int, float)) or width <= 0:\n        raise ValueError(\"Width must be a positive number.\")\n\n    # Calculate the perimeter\n    perimeter = 2 * (length + width)\n\n    return perimeter\n```\n\nYou can use this function as follows:\n\n```python\nprint(calculate_rectangle_perimeter(4, 5))  # Output: 18\n```\n\nThis function checks if the inputs are positive numbers and raises a `ValueError` if they are not. If the inputs are valid, it calculates the perimeter as twice the sum of the length and width.",
+  "error": null,
+  "elapsed_seconds": 2.9,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

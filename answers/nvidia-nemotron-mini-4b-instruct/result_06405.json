@@ -1,0 +1,9 @@
+{
+  "id": 6405,
+  "title": "Leap Year Checker",
+  "prompt": "Write a program that takes a year as input and checks if it is a leap year. Use if/else statements to determine the result.\nSample Input: 2020\nSample Output: Leap year\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef is_leap_year(year):\n    \"\"\"\n    Check if a given year is a leap year using if/else statements.\n\n    :param year: int - The year to check.\n    :return: str - \"Leap year\" if the year is a leap year, \"Not a leap year\" otherwise.\n    \"\"\"\n    # Check if the year is evenly divisible by 4\n    if year % 4 == 0:\n        # But not evenly divisible by 100\n        if year % 100 != 0:\n            return \"Leap year\"\n        # Or evenly divisible by 400\n        elif year % 400 == 0:\n            return \"Leap year\"\n    return \"Not a leap year\"\n\n# Get user input\nyear = int(input(\"Enter a year: \"))\n\n# Check if the year is a leap year\nresult = is_leap_year(year)\n\n# Print the result\nprint(f\"{year} is {result}.\")\n```\n\nThis program defines a function `is_leap_year` that checks if a given year is a leap year using if/else statements. The function then prompts the user to enter a year, checks if it's a leap year, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.64,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

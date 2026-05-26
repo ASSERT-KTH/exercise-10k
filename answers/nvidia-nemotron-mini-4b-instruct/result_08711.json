@@ -1,0 +1,9 @@
+{
+  "id": 8711,
+  "title": "SimpleUploader",
+  "prompt": "Ask the user for a file name and print out its contents.\nSample Input: example.txt\nSample Output: Hello World!\n",
+  "answer": "Sure, I can help you with that. Here's a Python code snippet that demonstrates how to ask the user for a file name, open it, and print its contents:\n```python\n# Ask the user for a file name\nfile_name = input(\"Enter the name of the file you want to read: \")\n\n# Open the file and read its contents\ntry:\n    with open(file_name, 'r') as file:\n        contents = file.read()\n        print(contents)\nexcept FileNotFoundError:\n    print(f\"The file '{file_name}' was not found.\")\n```\nIn this code, we first prompt the user to enter the name of the file they want to read. We use the `input()` function to get the user's input, and then store it in the `file_name` variable.\n\nNext, we try to open the file using the `open()` function, passing in the `file_name` as an argument and specifying the 'r' mode (read) to open the file for reading. We then use a `try`-`except` block to handle any `FileNotFoundError` exceptions that might be raised if the file is not found.\n\nIf the file is found, we use the `read()` method to read its contents into a variable called `contents`. Finally, we print out the contents of the file using the `print()` function.\n\nIf the file is not found, we print an error message using an `except` block.",
+  "error": null,
+  "elapsed_seconds": 3.46,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

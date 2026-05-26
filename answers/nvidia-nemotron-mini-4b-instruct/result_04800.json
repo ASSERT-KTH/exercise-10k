@@ -1,0 +1,9 @@
+{
+  "id": 4800,
+  "title": "Simple Chat Program",
+  "prompt": "Write a program that allows two users to chat with each other.\nSample Input: hello\nSample Output: User2: hello\n",
+  "answer": "Sure, I can help you with that. Here's a simple Python program that allows two users to chat with each other using a shared buffer. This program uses a simple echo server to receive messages from one user and then send them to the other user.\n\n```python\nimport socket\n\n# Function to handle incoming messages\ndef handle_client(client_socket):\n    while True:\n        data = client_socket.recv(1024).decode()\n        if not data:\n            break\n        print(f\"User1: {data}\")\n        client_socket.send(data.encode())\n\n# Function to create the echo server\ndef create_server(port):\n    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    server_socket.bind((\"localhost\", port))\n    server_socket.listen(5)\n\n    print(f\"Chat server started on port {port}\")\n\n    while True:\n        client_socket, addr = server_socket.accept()\n        print(f\"Connection from {addr}\")\n        handle_client(client_socket)\n        client_socket.close()\n\n# Call the function to start the chat server\ncreate_server(12345)\n```\n\nThis program creates a simple echo server on port 12345. When a client connects to this server, it enters a loop that receives messages from the client, prints them out, and then sends the same message to the other client. The program continues to run until the server is closed.\n\nYou can run this program on two different machines and connect to the server on each machine to start chatting with each other.",
+  "error": null,
+  "elapsed_seconds": 3.76,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1276,
+  "title": "List Unzipping",
+  "prompt": "Write a program to unzip a list of tuples into separate lists.\nSample Input: [('a', 1), ('b', 2), ('c', 3)]\nSample Output: (['a', 'b', 'c'], [1, 2, 3])\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a list of tuples as input and returns two separate lists based on the first element of each tuple:\n```python\ndef unzip_tuples(tuples):\n    \"\"\"\n    Unzips a list of tuples into separate lists.\n\n    Parameters:\n    tuples (list of tuples): A list of tuples, where each tuple contains two elements.\n\n    Returns:\n    tuple: A tuple containing two lists, where the first list contains the first elements of each tuple,\n           and the second list contains the second elements of each tuple.\n    \"\"\"\n    # Split the input list into two lists based on the first element of each tuple\n    first_elements, second_elements = zip(*tuples)\n\n    # Convert the lists back to regular lists\n    first_elements = list(first_elements)\n    second_elements = list(second_elements)\n\n    return first_elements, second_elements\n```\nHere's an example of how you can use this function:\n```python\ntuples = [('a', 1), ('b', 2), ('c', 3)]\nfirst_elements, second_elements = unzip_tuples(tuples)\nprint(first_elements)  # Output: ['a', 'b', 'c']\nprint(second_elements)  # Output: [1, 2, 3]\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

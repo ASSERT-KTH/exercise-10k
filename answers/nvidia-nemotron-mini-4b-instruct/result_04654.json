@@ -1,0 +1,9 @@
+{
+  "id": 4654,
+  "title": "To-Do List",
+  "prompt": "Create a program that manages a to-do list. The user can add or remove tasks from the list, and the program displays the tasks.\nSample Input: add task buy milk\nSample Output: Your tasks: buy milk\n",
+  "answer": "Sure, I'd be happy to help you create a simple to-do list program. Here's a Python solution using a list to store tasks and the `print()` function to display them. We'll also use the `input()` function to get user input.\n\n```python\ntasks = []\n\ndef add_task():\n    \"\"\"Add a task to the to-do list.\"\"\"\n    task = input(\"Enter a task (or type 'done' to complete a task): \")\n\n    if task.lower() == \"done\":\n        # Remove the last task if it's \"done\"\n        tasks.pop()\n    else:\n        tasks.append(task)\n\n    print(\"Your tasks:\")\n    print(\", \".join(tasks))\n\ndef main():\n    while True:\n        add_task()\n        user_input = input(\"Do you want to add another task? (yes/no): \").lower()\n        if user_input != \"yes\":\n            break\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program defines two functions: `add_task()` and `main()`. The `main()` function calls `add_task()` repeatedly until the user decides to stop adding tasks. The `add_task()` function adds a task to the list and displays the updated list. The program also checks for the \"done\" command to remove the last task.",
+  "error": null,
+  "elapsed_seconds": 3.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

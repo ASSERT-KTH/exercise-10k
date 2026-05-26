@@ -1,0 +1,9 @@
+{
+  "id": 1913,
+  "title": "Percentage Increase Calculator",
+  "prompt": "Write a program that calculates the percentage increase given the original and new values.\nSample Input: 100 120\nSample Output: 20.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the percentage increase given the original and new values:\n\n```python\ndef calculate_percentage_increase(original, new):\n    \"\"\"\n    Calculates the percentage increase given the original and new values.\n\n    :param original: The original value.\n    :param new: The new value.\n    :return: The percentage increase as a float.\n    \"\"\"\n\n    # Check if the new value is less than the original value\n    if new < original:\n        raise ValueError(\"New value cannot be less than the original value.\")\n\n    # Calculate the percentage increase\n    percentage_increase = (new - original) / original * 100\n\n    return percentage_increase\n\n# Example usage\noriginal_value = 100\nnew_value = 120\n\npercentage_increase = calculate_percentage_increase(original_value, new_value)\nprint(f\"{original_value} increased by {percentage_increase:.2f}% to {new_value}.\")\n```\n\nThis program defines a function `calculate_percentage_increase` that checks if the new value is less than the original value and raises a `ValueError` if it is. Then, it calculates the percentage increase by subtracting the original value from the new value and dividing the result by the original value, then multiplying by 100. The function returns the percentage increase as a float. The example usage at the end of the program demonstrates how to use the function to calculate the percentage increase for the given sample input.",
+  "error": null,
+  "elapsed_seconds": 3.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

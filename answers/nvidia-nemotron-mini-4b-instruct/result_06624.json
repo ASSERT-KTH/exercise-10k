@@ -1,0 +1,9 @@
+{
+  "id": 6624,
+  "title": "Function with Variable Number of Arguments",
+  "prompt": "Create a function that takes a variable number of arguments and returns their average\nSample Input: 1, 2, 3, 4, 5\nSample Output: 3.0\n",
+  "answer": "Sure, I'd be happy to help you create a function that calculates the average of a variable number of arguments. Here's an example implementation in Python:\n\n```python\ndef calculate_average(*args):\n    \"\"\"\n    Calculates the average of a variable number of arguments.\n\n    :param args: Variable number of arguments to calculate the average of.\n    :return: The average of the arguments.\n    \"\"\"\n    # Check if at least one argument is provided\n    if len(args) == 0:\n        raise ValueError(\"At least one argument is required to calculate the average.\")\n\n    # Calculate the sum of the arguments\n    total = sum(args)\n\n    # Calculate the average and return it\n    return total / len(args)\n```\n\nYou can use this function to calculate the average of any number of arguments like this:\n\n```python\nprint(calculate_average(1, 2, 3, 4, 5))  # Output: 3.0\nprint(calculate_average(10, 20, 30))      # Output: 20.0\nprint(calculate_average())               # Raises ValueError\n```\n\nThis function checks if at least one argument is provided, calculates the sum of the arguments, and then divides the sum by the number of arguments to get the average.",
+  "error": null,
+  "elapsed_seconds": 2.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 32,
+  "title": "Function to Generate a List of Prime Numbers",
+  "prompt": "Write a function that takes an integer as input and returns a list of prime numbers up to that number.\nSample Input: 20\nSample Output: [2, 3, 5, 7, 11, 13, 17, 19]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef primes_up_to(n):\n    \"\"\"\n    Returns a list of prime numbers up to the given integer `n`.\n\n    :param n: The upper limit for prime numbers.\n    :return: A list of prime numbers up to `n`.\n    \"\"\"\n    if n < 2:\n        return []\n\n    # Initialize a list of boolean values to keep track of whether\n    # each number is prime or not. True means it's prime, False means it's not.\n    is_prime = [True] * (n + 1)\n    is_prime[0], is_prime[1] = False, False\n\n    # Implement the Sieve of Eratosthenes algorithm to mark non-prime numbers.\n    for num in range(2, int(n**0.5) + 1):\n        if is_prime[num]:\n            for multiple in range(num*num, n+1, num):\n                is_prime[multiple] = False\n\n    # Return the list of prime numbers up to `n`.\n    return [num for num in range(2, n+1) if is_prime[num]]\n```\nHere's an example of how you can use this function:\n```python\nprint(primes_up_to(20))  # Output: [2, 3, 5, 7, 11, 13, 17, 19]\n```\nThis function first initializes a list of boolean values to keep track of whether each number is prime or not. It then implements the Sieve of Eratosthenes algorithm to mark non-prime numbers, which is an efficient way to find all prime numbers up to a given limit. Finally, it returns a list of prime numbers up to the given limit by filtering the list of boolean values based on the prime numbers.",
+  "error": null,
+  "elapsed_seconds": 6.65,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

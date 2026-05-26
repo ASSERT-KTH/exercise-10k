@@ -1,0 +1,9 @@
+{
+  "id": 9612,
+  "title": "Program that Generates a Random Password",
+  "prompt": "Write a program that generates a random password based on user input\nSample Input: password length\nSample Output: Generated password: password123\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates a random password based on the user's input for the password length. This program uses the `secrets` module, which provides a secure way to generate random numbers and bytes in Python.\n\n```python\nimport secrets\n\ndef generate_password(length):\n    \"\"\"\n    Generates a random password of the given length.\n\n    :param length: The desired length of the password.\n    :return: A randomly generated password.\n    \"\"\"\n    if length < 8:\n        raise ValueError(\"Password length must be at least 8 characters.\")\n\n    # Define the character sets for each character type\n    char_sets = [\n        secrets.ascii_letters,  # lowercase letters\n        secrets.ascii_letters.upper(),  # uppercase letters\n        secrets.digits,  # digits\n        secrets.punctuation  # punctuation characters\n    ]\n\n    # Concatenate the character sets to create a random password\n    password = ''.join(secrets.choice(char_sets[i]) for i in range(length))\n\n    return password\n\nif __name__ == \"__main__\":\n    password_length = int(input(\"Enter the desired length of the password: \"))\n    print(f\"Generated password: {generate_password(password_length)}\")\n```\n\nThis program prompts the user to enter the desired length of the password, validates the input, and then generates a random password of that length using the `secrets` module. The generated password includes lowercase and uppercase letters, digits, and punctuation characters.",
+  "error": null,
+  "elapsed_seconds": 3.61,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

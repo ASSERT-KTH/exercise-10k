@@ -1,0 +1,9 @@
+{
+  "id": 5050,
+  "title": "Calculate Standard Deviation",
+  "prompt": "Write a program that calculates the standard deviation of a list of numbers.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 1.4142135623730951\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the standard deviation of a list of numbers:\n\n```python\nimport math\n\ndef calculate_standard_deviation(numbers):\n    \"\"\"\n    Calculates the standard deviation of a list of numbers.\n\n    :param numbers: List of numbers\n    :return: Standard deviation as a float\n    \"\"\"\n\n    # Calculate the mean (average) of the numbers\n    mean = sum(numbers) / len(numbers)\n\n    # Calculate the squared differences from the mean\n    squared_diffs = [(x - mean) ** 2 for x in numbers]\n\n    # Calculate the variance (average of the squared differences)\n    variance = sum(squared_diffs) / len(numbers)\n\n    # Calculate the standard deviation (square root of the variance)\n    standard_deviation = math.sqrt(variance)\n\n    return standard_deviation\n\n# Example usage\nnumbers = [1, 2, 3, 4, 5]\nprint(calculate_standard_deviation(numbers))  # Output: 1.4142135623730951\n```\n\nThis program first calculates the mean of the numbers by summing them up and dividing by the length of the list. Then, it calculates the squared differences from the mean and takes the average of those squared differences to get the variance. Finally, it calculates the standard deviation by taking the square root of the variance. The `math` module is used to perform the square root operation.",
+  "error": null,
+  "elapsed_seconds": 3.79,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

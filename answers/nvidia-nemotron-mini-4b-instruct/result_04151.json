@@ -1,0 +1,9 @@
+{
+  "id": 4151,
+  "title": "Dictionary Pop Method",
+  "prompt": "Write a function to use the pop() method to remove and return a value from a dictionary.\nSample Input: {'name': 'John', 'age': 30}, 'age'\nSample Output: 30\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses the `pop()` method to remove and return a value from a dictionary. The function checks if the key exists in the dictionary before attempting to remove it, to avoid raising a `KeyError`.\n\n```python\ndef get_value_from_dict(dictionary, key):\n    \"\"\"\n    Retrieves and returns a value from a dictionary using the pop() method.\n\n    :param dictionary: The dictionary to search in.\n    :param key: The key to look up in the dictionary.\n    :return: The value associated with the key, or None if the key does not exist.\n    \"\"\"\n    if key in dictionary:\n        value = dictionary.pop(key)\n        return value\n    else:\n        return None\n```\n\nHere's an example of how to use this function:\n\n```python\nmy_dict = {'name': 'John', 'age': 30}\nresult = get_value_from_dict(my_dict, 'age')\nprint(result)  # Output: 30\n```\n\nThis function ensures that the key exists in the dictionary before attempting to remove it, so it will not raise a `KeyError`.",
+  "error": null,
+  "elapsed_seconds": 3.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

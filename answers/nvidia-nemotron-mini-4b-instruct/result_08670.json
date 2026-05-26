@@ -1,0 +1,9 @@
+{
+  "id": 8670,
+  "title": "Word Counter",
+  "prompt": "Write a program that asks the user for a string and counts the number of words in it.\nSample Input: Hello world this is a test\nSample Output: There are 6 words in the string.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef count_words(user_input):\n    \"\"\"\n    This function takes a string as input and returns the number of words in it.\n    It defines a word as a sequence of non-whitespace characters, surrounded by\n    whitespace characters.\n    \"\"\"\n    # Split the input string into words, removing any empty strings\n    words = [word.strip() for word in user_input.split()]\n\n    # Return the number of non-empty words\n    return len([word for word in words if word])\n\n# Get user input\nuser_input = input(\"Please enter a string: \")\n\n# Call the function and print the result\nnum_words = count_words(user_input)\nprint(f\"There are {num_words} words in the string.\")\n```\nThis program defines a function `count_words` that takes a string as input and returns the number of words in it. It first splits the input string into words using the `split()` method, then filters out any empty strings using a list comprehension. Finally, it returns the length of the resulting list, which is the number of non-empty words. The program then gets user input, calls the function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 2.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

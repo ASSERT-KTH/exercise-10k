@@ -1,0 +1,9 @@
+{
+  "id": 3034,
+  "title": "Password Validator",
+  "prompt": "Write a program that takes a string as input and returns true if it is a valid password, and false otherwise.\nSample Input: P@ssw0rd\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given string is a valid password:\n\n```python\nimport re\n\ndef is_valid_password(password):\n    \"\"\"\n    Check if a given string is a valid password.\n\n    A valid password should meet the following criteria:\n    - Contain at least 8 characters.\n    - Contain at least one uppercase letter.\n    - Contain at least one lowercase letter.\n    - Contain at least one digit.\n    - Not contain any spaces or special characters other than @.\n\n    :param password: str, the password to check\n    :return: bool, True if the password is valid, False otherwise\n    \"\"\"\n\n    # Regular expression pattern to match a valid password\n    pattern = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@#$%^&+=])[A-Za-z\\d@#$%^&+=]{8,}$'\n\n    # Check if the password matches the pattern\n    return bool(re.match(pattern, password))\n\n# Example usage\npassword = \"P@ssw0rd\"\nprint(is_valid_password(password))  # Output: True\n```\n\nThis program defines a function `is_valid_password` that checks if a given string meets the criteria for a valid password. The regular expression pattern used in the function checks for the following requirements:\n\n1. At least 8 characters.\n2. At least one uppercase letter.\n3. At least one lowercase letter.\n4. At least one digit.\n5. No spaces or special characters other than `@`.\n\nThe function returns `True` if the password matches the pattern and `False` otherwise. The example usage at the end of the program demonstrates how to use the function to check if a given password is valid.",
+  "error": null,
+  "elapsed_seconds": 4.26,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

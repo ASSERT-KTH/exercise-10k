@@ -1,0 +1,9 @@
+{
+  "id": 7083,
+  "title": "Sum of Digits",
+  "prompt": "Read a positive integer from the user and calculate the sum of its digits\nSample Input: 1234\nSample Output: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution that reads a positive integer from the user and calculates the sum of its digits:\n\n```python\ndef calculate_digit_sum(number):\n    \"\"\"\n    Calculates the sum of the digits of a positive integer.\n\n    :param number: The positive integer to calculate the sum of its digits for.\n    :return: The sum of the digits of the input number.\n    \"\"\"\n    # Check if the input is a positive integer\n    if not isinstance(number, int) or number < 0:\n        raise ValueError(\"Input must be a positive integer.\")\n\n    # Calculate the sum of the digits\n    digit_sum = 0\n    while number > 0:\n        digit_sum += number % 10\n        number //= 10\n\n    return digit_sum\n\n# Get user input\nuser_input = input(\"Enter a positive integer: \")\n\n# Convert the input to an integer and calculate the digit sum\ndigit_sum = calculate_digit_sum(int(user_input))\n\n# Print the result\nprint(f\"The sum of the digits is: {digit_sum}\")\n```\n\nThis program defines a function `calculate_digit_sum` that checks if the input is a positive integer, then calculates the sum of its digits by repeatedly taking the last digit, adding it to the sum, and removing the last digit from the number. The program then prompts the user for input, converts it to an integer, and calls the function to calculate the digit sum. Finally, it prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.88,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 198,
+  "title": "String Permutation",
+  "prompt": "Create a program that uses a for loop to generate all permutations of a given string.\nSample Input: string: abc\nSample Output: abc, acb, bac, bca, cab, cba\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses a for loop to generate all permutations of a given string. This program assumes that the input string contains only lowercase letters. If you want to handle uppercase letters or other characters, you can modify the code accordingly.\n\n```python\ndef generate_permutations(string):\n    \"\"\"\n    Generate all permutations of a given string using a for loop.\n\n    :param string: The input string containing only lowercase letters.\n    :return: A list of all permutations of the input string.\n    \"\"\"\n    if not string:\n        return [\"\"]\n\n    # Initialize an empty list to store the permutations\n    permutations = []\n\n    # Generate permutations for each character in the string\n    for i, char in enumerate(string):\n        for perm in generate_permutations(string[:i] + string[i+1:]):\n            permutations.append(char + perm)\n\n    return permutations\n\n# Example usage\ninput_string = \"abc\"\nprint(generate_permutations(input_string))\n```\n\nWhen you run this program with the input string \"abc\", it will print:\n\n```\n['abc', 'acb', 'bac', 'bca', 'cab', 'cba']\n```",
+  "error": null,
+  "elapsed_seconds": 2.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

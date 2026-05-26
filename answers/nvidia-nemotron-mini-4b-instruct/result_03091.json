@@ -1,0 +1,9 @@
+{
+  "id": 3091,
+  "title": "Function to Check for Anagrams",
+  "prompt": "Implement a function to check if two given strings are anagrams of each other.\nSample Input: \"listen\", \"silent\"\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if two given strings are anagrams of each other:\n\n```python\ndef are_anagrams(str1, str2):\n    \"\"\"\n    Check if two given strings are anagrams of each other.\n\n    :param str1: The first string to compare.\n    :param str2: The second string to compare.\n    :return: True if the strings are anagrams, False otherwise.\n    \"\"\"\n    # Remove any non-alphanumeric characters and convert to lowercase\n    str1 = ''.join(c.lower() for c in str1 if c.isalnum())\n    str2 = ''.join(c.lower() for c in str2 if c.isalnum())\n\n    # Check if the lengths of the strings are equal and if they contain the same characters\n    return len(str1) == len(str2) and set(str1) == set(str2)\n```\n\nThis function first removes any non-alphanumeric characters from both strings and converts them to lowercase to ensure that the comparison is case-insensitive. Then, it checks if the lengths of the strings are equal and if their characters appear in the same order by converting them to sets and comparing them. If both conditions are true, the function returns `True`, indicating that the strings are anagrams of each other. Otherwise, it returns `False`.\n\nHere's an example of how to use this function:\n\n```python\nprint(are_anagrams(\"listen\", \"silent\"))  # Output: True\nprint(are_anagrams(\"hello\", \"world\"))    # Output: False\n```",
+  "error": null,
+  "elapsed_seconds": 4.02,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3450,
+  "title": "Palindrome Checker",
+  "prompt": "Write a program that checks if a given string is a palindrome (reads the same backwards as forwards)\nSample Input: madam\nSample Output: The string is a palindrome\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given string is a palindrome:\n\n```python\ndef is_palindrome(s: str) -> str:\n    \"\"\"\n    Check if a given string is a palindrome.\n\n    :param s: The string to check.\n    :return: A string indicating whether the input string is a palindrome or not.\n    \"\"\"\n    # Remove non-alphanumeric characters and convert to lowercase\n    s = ''.join(c.lower() for c in s if c.isalnum())\n\n    # Check if the string is equal to its reverse\n    return \"The string is a palindrome\" if s == s[::-1] else \"The string is not a palindrome\"\n\n# Example usage\ninput_string = \"madam\"\nprint(is_palindrome(input_string))\n```\n\nWhen you run this program with the sample input \"madam\", it will output:\n\n```\nThe string is a palindrome\n```",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

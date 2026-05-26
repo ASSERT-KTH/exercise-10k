@@ -1,0 +1,9 @@
+{
+  "id": 6612,
+  "title": "Mad Libs",
+  "prompt": "Write a program that asks the user for a noun, verb, and adjective, and then prints a Mad Libs story using these words.\nSample Input: cat run happy\nSample Output: One day, a happy cat decided to run.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_input(prompt):\n    \"\"\"Get user input and validate it.\"\"\"\n    while True:\n        user_input = input(prompt)\n        if user_input.strip():  # Check if the input is not empty\n            return user_input\n        else:\n            print(\"Please enter a valid input. Try again.\")\n\ndef generate_mad_libs_story():\n    \"\"\"Generate a Mad Libs story using user input.\"\"\"\n    noun = get_input(\"Enter a noun: \")\n    verb = get_input(\"Enter a verb: \")\n    adjective = get_input(\"Enter an adjective: \")\n\n    story = f\"One day, a {adjective} {noun} decided to {verb}. \"\n    print(story)\n\n# Call the function to generate the Mad Libs story\ngenerate_mad_libs_story()\n```\nThis program defines two functions: `get_input` and `generate_mad_libs_story`. The `get_input` function prompts the user for input and validates it to ensure it's not empty. The `generate_mad_libs_story` function prompts the user for a noun, verb, and adjective, then uses these words to generate a Mad Libs story and prints it. The program calls the `generate_mad_libs_story` function to generate the Mad Libs story.",
+  "error": null,
+  "elapsed_seconds": 3.43,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

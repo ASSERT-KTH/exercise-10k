@@ -1,0 +1,9 @@
+{
+  "id": 8622,
+  "title": "Validate IP Address",
+  "prompt": "Write a program that takes a string as input and returns True if the string is a valid IP address, False otherwise.\nSample Input: 192.168.0.1\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given string is a valid IP address:\n\n```python\nimport re\n\ndef is_valid_ip(ip_str):\n    \"\"\"\n    Check if the given string is a valid IP address.\n\n    :param ip_str: str, the IP address to validate\n    :return: bool, True if the IP address is valid, False otherwise\n    \"\"\"\n    # Regular expression pattern for a valid IP address\n    pattern = r'^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$'\n\n    # Use the re.match function to check if the IP address matches the pattern\n    if re.match(pattern, ip_str):\n        return True\n    else:\n        return False\n\n# Example usage\nip_str = \"192.168.0.1\"\nprint(is_valid_ip(ip_str))  # Output: True\n```\n\nThis program defines a function `is_valid_ip` that uses a regular expression pattern to check if the given string is a valid IP address. The pattern matches any string that consists of four groups of one to three decimal digits, separated by dots, and ends with a dot or not. The `re.match` function is used to check if the IP address matches the pattern, and the function returns `True` if it does and `False` otherwise.",
+  "error": null,
+  "elapsed_seconds": 3.88,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

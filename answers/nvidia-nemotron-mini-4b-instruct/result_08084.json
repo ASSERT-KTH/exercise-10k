@@ -1,0 +1,9 @@
+{
+  "id": 8084,
+  "title": "Function that Returns a Closure with a Context Manager",
+  "prompt": "Write a function that returns a closure with a context manager\nSample Input: None\nSample Output: A closure with a context manager\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example Python function that returns a closure with a context manager. In this example, we'll use a `with` statement to manage the closure's context.\n\n```python\ndef create_context_manager(context_manager_function):\n    \"\"\"\n    Returns a closure with a context manager.\n\n    :param context_manager_function: The function to be used as the context manager.\n    :return: A closure with a context manager.\n    \"\"\"\n\n    # Create a closure that wraps the given function\n    closure = functools.wraps(context_manager_function)\n\n    # Define the context manager's __enter__ and __exit__ methods\n    closure.__enter__ = context_manager_function.__enter__\n    closure.__exit__ = context_manager_function.__exit__\n\n    return closure\n\n\n# Example usage\ndef open_file(file_path):\n    \"\"\"\n    Opens a file and returns it.\n\n    :param file_path: The path to the file.\n    :return: The opened file.\n    \"\"\"\n    return open(file_path, 'r')\n\n\n# Create a closure with a context manager\nwith_open_file = create_context_manager(open_file)\n\n# Use the closure\nwith with_open_file('example.txt') as file:\n    print(file.read())\n```\n\nIn this example, the `create_context_manager` function takes a function as an argument and returns a closure that wraps it with the necessary context manager methods. The `open_file` function is used as an example, but you can replace it with any function that you want to use as a context manager. The `with` statement then uses the closure to manage the context of the function call.",
+  "error": null,
+  "elapsed_seconds": 4.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

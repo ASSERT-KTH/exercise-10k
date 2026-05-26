@@ -1,0 +1,9 @@
+{
+  "id": 3022,
+  "title": "Substrings",
+  "prompt": "Write a program that takes a string and a substring as input, and returns the number of occurrences of the substring in the string.\nSample Input: hello world hello\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef count_substring(string, substring):\n    \"\"\"\n    This function takes a string and a substring as input, and returns the number of occurrences of the substring in the string.\n\n    :param string: The input string.\n    :param substring: The substring to search for in the string.\n    :return: The number of occurrences of the substring in the string.\n    \"\"\"\n    # Check that the inputs are not empty strings\n    if not string or not substring or (len(string) < len(substring)):\n        return 0\n\n    # Use the built-in string method count to count the occurrences of the substring\n    return string.count(substring)\n```\nHere's an example of how you can use this function:\n```python\nprint(count_substring(\"hello world hello\", \"hello\"))  # Output: 2\n```\nThis program first checks that the inputs are not empty strings, and then uses the built-in `str.count()` method to count the occurrences of the substring in the string. The function returns the number of occurrences, which is the desired output for the given sample input.",
+  "error": null,
+  "elapsed_seconds": 2.95,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

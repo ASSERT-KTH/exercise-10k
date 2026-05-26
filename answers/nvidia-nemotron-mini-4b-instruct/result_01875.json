@@ -1,0 +1,9 @@
+{
+  "id": 1875,
+  "title": "Array Unzipping",
+  "prompt": "Write a program to unzip a list of pairs into two separate lists and print the resulting lists.\nSample Input: [(1, 4), (2, 5), (3, 6)]\nSample Output: [1, 2, 3] and [4, 5, 6]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a list of pairs as input (where each pair is represented as a tuple), unzips them into two separate lists, and prints the resulting lists:\n```python\ndef unzip_pairs(pairs):\n    # Unzip the pairs into two separate lists\n    unzipped_list1 = [pair[0] for pair in pairs]\n    unzipped_list2 = [pair[1] for pair in pairs]\n\n    # Print the resulting lists\n    print(f\"[\", end=\"\")\n    print(\", \".join(str(num) for num in unzipped_list1), end=\"\")\n    print(\"] and [\", end=\"\")\n    print(\", \".join(str(num) for num in unzipped_list2), end=\"\")\n    print(\"]\")\n\n# Example usage\npairs = [(1, 4), (2, 5), (3, 6)]\nunzip_pairs(pairs)\n```\nWhen you run this program with the sample input `[(1, 4), (2, 5), (3, 6)]`, it will output:\n```yaml\n[1, 2, 3] and [4, 5, 6]\n```\nThis program uses list comprehensions to unzip the pairs into two separate lists. The first list comprehension `[pair[0] for pair in pairs]` creates a new list containing only the first elements of each pair, while the second list comprehension `[pair[1] for pair in pairs]` creates a new list containing only the second elements of each pair. Finally, the `print` function is used to print the resulting lists with the \"and\" separator.",
+  "error": null,
+  "elapsed_seconds": 3.98,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

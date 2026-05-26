@@ -1,0 +1,9 @@
+{
+  "id": 6091,
+  "title": "Matrix Multiplication",
+  "prompt": "Create a program that uses nested for loops to multiply two matrices.\nSample Input: [[1, 2], [3, 4]]\n[[5, 6], [7, 8]]\nSample Output: [[19, 22], [43, 50]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses nested for loops to multiply two matrices:\n\n```python\ndef multiply_matrices(matrix1, matrix2):\n    # Check if the number of columns in matrix1 is equal to the number of rows in matrix2\n    if len(matrix1[0]) != len(matrix2):\n        return \"Error: Matrices cannot be multiplied. The number of columns in matrix1 must be equal to the number of rows in matrix2.\"\n\n    result = []\n    for row in range(len(matrix1)):\n        result_row = []\n        for col in range(len(matrix2[0])):\n            sum = 0\n            for i in range(len(matrix1)):\n                sum += matrix1[row][i] * matrix2[i][col]\n            result_row.append(sum)\n        result.append(result_row)\n\n    return result\n\n# Example usage\nmatrix1 = [[1, 2], [3, 4]]\nmatrix2 = [[5, 6], [7, 8]]\nprint(multiply_matrices(matrix1, matrix2))  # Output: [[19, 22], [43, 50]]\n```\n\nThis program first checks if the matrices can be multiplied by checking if the number of columns in the first matrix is equal to the number of rows in the second matrix. If they can be multiplied, it creates a new matrix to store the result and uses nested for loops to calculate the product of each element in the first matrix with the corresponding elements in the second matrix. Finally, it returns the resulting matrix.",
+  "error": null,
+  "elapsed_seconds": 3.76,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

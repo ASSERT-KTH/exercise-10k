@@ -1,0 +1,9 @@
+{
+  "id": 8697,
+  "title": "Guessing Game",
+  "prompt": "Create a simple number guessing game where the user has to guess a randomly generated number.\nSample Input: 50\nSample Output: Too high! Try again.\n",
+  "answer": "Sure, I'd be happy to help you create a simple number guessing game. Here's a Python solution using the `random` module for generating a random number and the `input()` function for user input:\n\n```python\nimport random\n\n# Generate a random number between 1 and 100\nrandom_number = random.randint(1, 100)\n\n# Game loop\nwhile True:\n    # Get user input\n    user_guess = int(input(\"Guess a number between 1 and 100: \"))\n\n    # Check if the user guessed the correct number\n    if user_guess == random_number:\n        print(\"Congratulations! You guessed the number correctly.\")\n        break\n    elif user_guess < random_number:\n        print(\"Too low! Try again.\")\n    else:\n        print(\"Too high! Try again.\")\n```\n\nThis code generates a random number between 1 and 100, and then enters a game loop where the user enters a guess and the program checks if the guess is correct, too low, or too high. Once the user guesses the correct number, the game ends.\n\nYou can customize the range of the random number by changing the `random.randint(1, 100)` line to something like `random.randint(1, 1000)` or `random.randint(1, 10000)`.",
+  "error": null,
+  "elapsed_seconds": 3.13,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

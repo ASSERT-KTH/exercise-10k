@@ -1,0 +1,9 @@
+{
+  "id": 5106,
+  "title": "Character and String Operations",
+  "prompt": "Perform common operations on characters and strings, such as concatenation, substring extraction, and case conversion.\nSample Input: str = 'Hello World'\nSample Output: Results of various string operations (e.g., 'hello world', 'World', etc.)\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution that demonstrates how to perform common operations on characters and strings, such as concatenation, substring extraction, and case conversion.\n\n```python\ndef string_operations(str):\n    # Concatenation\n    result = str + \" \" * (len(str) - len(str.lstrip()))  # Add spaces to make it a sentence\n    print(\"Concatenation:\", result)\n\n    # Substring extraction\n    first_half = str[:len(str) // 2]\n    second_half = str[len(str) // 2:]\n    print(\"Substring extraction:\", first_half, second_half)\n\n    # Case conversion\n    title_case = str.title()\n    print(\"Case conversion (title):\", title_case)\n    print(\"Case conversion (lower):\", str.lower())\n    print(\"Case conversion (upper):\", str.upper())\n\nstring_operations('Hello World')\n```\n\nOutput:\n\n```\nConcatenation: Hello World\nSubstring extraction: Hello World\nCase conversion (title): Hello World\nCase conversion (lower): hello world\nCase conversion (upper): HELLO WORLD\n```",
+  "error": null,
+  "elapsed_seconds": 2.77,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

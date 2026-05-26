@@ -1,0 +1,9 @@
+{
+  "id": 1019,
+  "title": "Character Frequency",
+  "prompt": "Write a program that takes a string as input and returns the frequency of each character in the string.\nSample Input: abcabc\nSample Output: {'a': 2, 'b': 2, 'c': 2}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef char_frequency(input_string):\n    \"\"\"\n    Given a string, return a dictionary where the keys are characters and the values are the number of times each character appears in the string.\n\n    :param input_string: str - The input string to analyze\n    :return: dict - A dictionary where keys are characters and values are their frequencies\n    \"\"\"\n    # Create an empty dictionary to store the character frequencies\n    char_freq = {}\n\n    # Iterate over each character in the input string\n    for char in input_string:\n        # If the character is already a key in the dictionary, increment its value\n        if char in char_freq:\n            char_freq[char] += 1\n        # Otherwise, add the character as a new key with a value of 1\n        else:\n            char_freq[char] = 1\n\n    return char_freq\n```\nHere's an example of how you can use this function:\n```python\nprint(char_frequency(\"abcabc\"))  # Output: {'a': 2, 'b': 2, 'c': 2}\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1751,
+  "title": "List Filtering",
+  "prompt": "Given a list of integers, write a program to filter out elements that meet a specific condition.\nSample Input: [1, 2, 3, 4, 5], even\nSample Output: [2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef filter_even(numbers, condition):\n    \"\"\"\n    Filters a list of integers based on a given condition.\n\n    Parameters:\n    numbers (list): A list of integers.\n    condition (str): A string representing the condition.\n                     Should be either 'even' or 'odd'.\n\n    Returns:\n    list: A new list containing only the elements from the input list that meet the given condition.\n    \"\"\"\n    if condition not in ['even', 'odd']:\n        raise ValueError(\"Invalid condition. Should be either 'even' or 'odd'.\")\n\n    return [num for num in numbers if num % 2 == 0 if condition == 'even' else num % 2 != 0 if condition == 'odd']\n\n# Example usage:\nnumbers = [1, 2, 3, 4, 5]\nprint(filter_even(numbers, 'even'))  # Output: [2, 4]\n```\nThis function takes a list of integers and a condition as input, and returns a new list containing only the elements that meet the given condition. The condition can be either 'even' or 'odd'. The function checks if the input condition is valid and raises a `ValueError` if it's not. Then, it uses a list comprehension to filter the input list based on the given condition.",
+  "error": null,
+  "elapsed_seconds": 3.22,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

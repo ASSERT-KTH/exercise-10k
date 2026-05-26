@@ -1,0 +1,9 @@
+{
+  "id": 7100,
+  "title": " Armstrong Number Checker",
+  "prompt": "Read a positive integer from the user and check if it is an Armstrong number\nSample Input: 371\nSample Output: Yes\n",
+  "answer": "Sure, I'd be happy to help you with that! An Armstrong number is a number that is equal to the sum of its own digits each raised to the power of the number of digits. Here's a Python function that checks if a given positive integer is an Armstrong number:\n\n```python\ndef is_armstrong(n: int) -> bool:\n    \"\"\"\n    Check if a given positive integer is an Armstrong number.\n\n    :param n: The positive integer to check.\n    :return: True if the number is an Armstrong number, False otherwise.\n    \"\"\"\n    # Get the number of digits in n\n    num_digits = len(str(n))\n\n    # Calculate the sum of each digit raised to the power of the number of digits\n    sum_of_powers = sum(int(digit) ** num_digits for digit in str(n))\n\n    # Return True if the sum is equal to n, False otherwise\n    return sum_of_powers == n\n```\n\nHere's an example of how to use the function:\n\n```python\nnumber = int(input(\"Enter a positive integer: \"))\nif is_armstrong(number):\n    print(f\"{number} is an Armstrong number.\")\nelse:\n    print(f\"{number} is not an Armstrong number.\")\n```\n\nThis will prompt the user to enter a positive integer, check if it's an Armstrong number using the `is_armstrong` function, and print a message accordingly.",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

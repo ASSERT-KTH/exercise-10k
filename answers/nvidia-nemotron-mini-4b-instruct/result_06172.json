@@ -1,0 +1,9 @@
+{
+  "id": 6172,
+  "title": "Function to Filter a List",
+  "prompt": "Write a function that takes a list and a condition as input and returns a new list with only the elements that satisfy the condition.\nSample Input: [1, 2, 3, 4, 5], lambda x: x > 3\nSample Output: [4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef filter_list(lst, condition):\n    \"\"\"\n    Filters a list based on a given condition.\n\n    Parameters:\n    lst (list): The list to filter.\n    condition (callable): A function that takes one argument and returns a boolean.\n                          The function should be applied to each element in the list.\n\n    Returns:\n    list: A new list containing only the elements from the input list that satisfy the condition.\n    \"\"\"\n    return [element for element in lst if condition(element)]\n```\nHere's an example of how you can use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\ncondition = lambda x: x > 3\nfiltered_numbers = filter_list(numbers, condition)\nprint(filtered_numbers)  # Output: [4, 5]\n```\nThis function uses a list comprehension to create a new list containing only the elements from the input list that satisfy the given condition. The `condition` parameter is a callable that takes one argument and returns a boolean. The function checks if each element in the input list satisfies the condition by calling the `condition` function with the element as the argument and checking if the return value is `True`.",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

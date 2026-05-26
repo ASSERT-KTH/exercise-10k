@@ -1,0 +1,9 @@
+{
+  "id": 1817,
+  "title": "University Course Planner",
+  "prompt": "Write a program that plans a university course schedule, using conditional statements to determine the course conflicts\nSample Input: ['course1', 'course2', 'course3']\nSample Output: The course schedule is planned\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that plans a university course schedule using conditional statements to check for conflicts. This program assumes that each course is represented as a string with a unique name.\n\n```python\ndef plan_course_schedule(courses):\n    # Initialize a dictionary to store the courses and their start times\n    course_schedule = {}\n\n    # Loop through the courses and add them to the schedule with unique start times\n    for course in courses:\n        start_time = max(course_schedule.keys()) + 1\n        course_schedule[start_time] = course\n\n    # Check for conflicts by looping through the course schedule and checking adjacent times\n    for start_time in course_schedule:\n        if start_time in course_schedule and start_time + 1 in course_schedule and course_schedule[start_time] == course_schedule[start_time + 1]:\n            return f\"There is a conflict between {course_schedule[start_time]} and {course_schedule[start_time + 1]}.\"\n\n    return \"The course schedule is planned.\"\n\n# Example usage\ncourses = ['course1', 'course2', 'course3']\nprint(plan_course_schedule(courses))\n```\n\nThis program first initializes a dictionary to store the courses and their start times. Then, it loops through the courses and adds them to the schedule with unique start times. After that, it checks for conflicts by looping through the course schedule and checking adjacent times. If a conflict is found, it returns an error message. If no conflicts are found, it returns a success message.",
+  "error": null,
+  "elapsed_seconds": 3.64,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

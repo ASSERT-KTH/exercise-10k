@@ -1,0 +1,9 @@
+{
+  "id": 5475,
+  "title": "List Mapping",
+  "prompt": "Write a program that takes a list and a function as input and applies the function to each element of the list.\nSample Input: [1, 2, 3, 4, 5], lambda x: x * 2\nSample Output: [2, 4, 6, 8, 10]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef apply_function_to_list(input_list, function):\n    \"\"\"\n    Applies a given function to each element of a list.\n\n    Parameters:\n    input_list (list): The list of elements to apply the function to.\n    function (callable): A function that takes one argument and returns a value.\n\n    Returns:\n    list: The list with each element applied to the given function.\n    \"\"\"\n    # Use a list comprehension to apply the function to each element of the input list\n    result = [function(element) for element in input_list]\n    return result\n\n# Example usage:\ninput_list = [1, 2, 3, 4, 5]\nfunction = lambda x: x * 2\noutput_list = apply_function_to_list(input_list, function)\nprint(output_list)  # Output: [2, 4, 6, 8, 10]\n```\nThis program defines a function `apply_function_to_list` that takes a list and a function as input, and returns a new list with each element of the input list applied to the given function. The example usage at the end of the program demonstrates how to use this function with a lambda function that doubles each element of a list.",
+  "error": null,
+  "elapsed_seconds": 3.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

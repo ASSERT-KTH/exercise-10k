@@ -1,0 +1,9 @@
+{
+  "id": 2503,
+  "title": "Multiplication Table",
+  "prompt": "Write a program that prints the multiplication table for a given number up to 10.\nSample Input: 5\nSample Output: 5 * 1 = 5\n5 * 2 = 10\n5 * 3 = 15\n5 * 4 = 20\n5 * 5 = 25\n5 * 6 = 30\n5 * 7 = 35\n5 * 8 = 40\n5 * 9 = 45\n5 * 10 = 50\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef print_multiplication_table(number):\n    \"\"\"Print the multiplication table for a given number up to 10.\"\"\"\n    if number < 1:\n        raise ValueError(\"Number must be a positive integer.\")\n\n    print(f\"{number} * 1 = {number}\")\n    for i in range(2, 11):\n        product = number * i\n        print(f\"{number} * {i} = {product}\")\n\n# Get user input for the number\ntry:\n    user_input = int(input(\"Enter a positive integer: \"))\n    print_multiplication_table(user_input)\nexcept ValueError as e:\n    print(e)\n```\nThis program defines a function `print_multiplication_table` that takes a positive integer as input and prints its multiplication table up to 10. The function first checks if the input is a positive integer, and raises a `ValueError` if it's not. Then, it prints the multiplication table as described in the sample output.\n\nThe program then gets user input for the number, converts it to an integer, and calls the `print_multiplication_table` function with the user input. If the user input is not a positive integer, the program catches the `ValueError` and prints an error message.",
+  "error": null,
+  "elapsed_seconds": 3.15,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5432,
+  "title": "Day of the Week",
+  "prompt": "Write a program that determines the day of the week based on the date. If the date is between Monday and Friday, it is a weekday. If the date is Saturday or Sunday, it is a weekend.\nSample Input: 2022-02-14\nSample Output: Monday\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that determines the day of the week based on a given date:\n\n```python\nfrom datetime import datetime\n\ndef get_day_of_week(date):\n    \"\"\"\n    Determines the day of the week based on a given date.\n\n    :param date: str, in the format 'YYYY-MM-DD'\n    :return: str, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', or 'Sunday'\n    \"\"\"\n    # Parse the input date into a datetime object\n    date_obj = datetime.strptime(date, '%Y-%m-%d')\n\n    # Determine the day of the week and return it as a string\n    day_of_week = date_obj.strftime('%A')\n\n    return day_of_week\n\n# Example usage\ndate = '2022-02-14'\nprint(get_day_of_week(date))  # Output: Monday\n```\n\nThis program uses the `datetime` module to parse the input date into a `datetime` object and then formats it back into a string with the day of the week. The `strftime` method is used to format the date according to the 'A' format specifier, which returns the day of the week as a full name (e.g., 'Monday', 'Tuesday', etc.).",
+  "error": null,
+  "elapsed_seconds": 3.25,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

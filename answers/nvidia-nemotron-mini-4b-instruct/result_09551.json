@@ -1,0 +1,9 @@
+{
+  "id": 9551,
+  "title": "String Reversal and Palindrome Check",
+  "prompt": "Write a program that takes a string as input, reverses it, and checks if the original string is a palindrome. A palindrome is a string that reads the same forwards and backwards.\nSample Input: madam\nSample Output: The string 'madam' is a palindrome. The reversed string is 'madam'.\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef is_palindrome(s):\n    \"\"\"Check if a string is a palindrome.\"\"\"\n    return s == s[::-1]\n\ndef reverse_string(s):\n    \"\"\"Reverse a string.\"\"\"\n    return s[::-1]\n\ndef main():\n    input_string = input(\"Enter a string: \")\n    reversed_string = reverse_string(input_string)\n\n    if is_palindrome(input_string):\n        print(f\"The string '{input_string}' is a palindrome.\")\n    else:\n        print(f\"The string '{input_string}' is not a palindrome.\")\n\n    print(f\"The reversed string is '{reversed_string}'.\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program defines three functions: `is_palindrome`, `reverse_string`, and `main`. The `main` function prompts the user to enter a string, reverses it using the `reverse_string` function, and then checks if the original string is a palindrome using the `is_palindrome` function. If the string is a palindrome, it prints a message indicating that it is a palindrome and displays the reversed string. Otherwise, it prints a message indicating that the string is not a palindrome.",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

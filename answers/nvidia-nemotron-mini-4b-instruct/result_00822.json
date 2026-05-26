@@ -1,0 +1,9 @@
+{
+  "id": 822,
+  "title": "Palindromic Substrings",
+  "prompt": "Given a string, find all unique palindromic substrings and return them in a list.\nSample Input: abba\nSample Output: ['a', 'b', 'bb', 'abba']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution using dynamic programming to find all unique palindromic substrings in a given string:\n\n```python\ndef find_palindromes(s):\n    n = len(s)\n    dp = [[False] * n for _ in range(n)]\n\n    # Initialize the base cases\n    for i in range(n):\n        dp[i][i] = True\n\n    # Construct the table in bottom-up manner\n    for k in range(2, n):\n        for i in range(n - k):\n            j = i + k - 1\n            if s[i] == s[j] and dp[i + 1][j - 1]:\n                dp[i][j] = True\n\n    # Find all palindromic substrings\n    palindromes = []\n    for i in range(n):\n        for j in range(i, n):\n            if dp[i][j]:\n                palindromes.append(s[i:j+1])\n\n    return list(set(palindromes))  # Remove duplicates\n```\n\nHere's how the function works:\n\n1. It initializes a 2D boolean array `dp` with all elements set to False. This array will be used to keep track of whether a substring is a palindrome or not.\n2. It initializes the base cases (substrings of length 1 and 2) as palindromes.\n3. It constructs the table in a bottom-up manner, checking for palindromes of all lengths from 2 to the length of the string.\n4. Finally, it finds all palindromic substrings by iterating through the string and checking for palindromes in each substring. It adds each palindrome to a list and removes duplicates before returning the list.\n\nYou can call the function with a string as an argument to get a list of all unique palindromic substrings:\n\n```python\nprint(find_palindromes('abba'))  # Output: ['a', 'b', 'bb', 'abba']\n```",
+  "error": null,
+  "elapsed_seconds": 5.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

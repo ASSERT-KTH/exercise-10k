@@ -1,0 +1,9 @@
+{
+  "id": 2414,
+  "title": "Function with Generators",
+  "prompt": "Create a function that uses generators to produce a sequence of numbers. Then, call this function with an input value and print the generated sequence.\nSample Input: 5\nSample Output: [1, 2, 3, 4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses generators to produce a sequence of numbers, and then a sample usage of the function with an input value of 5.\n\n```python\ndef generate_sequence(n):\n    \"\"\"Generate a sequence of numbers from 1 to n using a generator.\"\"\"\n    i = 1\n    while i <= n:\n        yield i\n        i += 1\n\n# Call the function with an input value of 5\nsequence = generate_sequence(5)\n\n# Print the generated sequence\nfor num in sequence:\n    print(num, end=\" \")\n```\n\nWhen you run this code with an input value of 5, it will output:\n\n```\n1 2 3 4 5\n```\n\nThis is because the `generate_sequence` function generates a sequence of numbers from 1 to `n` using a generator, and the `for` loop in the second part of the code prints each number in the sequence.",
+  "error": null,
+  "elapsed_seconds": 2.37,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

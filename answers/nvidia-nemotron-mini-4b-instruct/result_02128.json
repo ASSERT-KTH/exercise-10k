@@ -1,0 +1,9 @@
+{
+  "id": 2128,
+  "title": "List Insertion",
+  "prompt": "Write a function that takes a list and a new element as input and inserts the new element at a specified index.\nSample Input: ([1, 2, 3], 4, 1)\nSample Output: [1, 4, 2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function, `insert_element`, takes a list and two indices as input: the index at which to insert the new element and the new element itself. It ensures that the second index is within the bounds of the list and inserts the new element at the specified index.\n\n```python\ndef insert_element(lst, index, new_element):\n    \"\"\"\n    Inserts a new element at a specified index in a list.\n\n    Parameters:\n    lst (list): The list to modify.\n    index (int): The index at which to insert the new element.\n    new_element (any): The element to insert at the specified index.\n\n    Returns:\n    list: The modified list with the new element inserted.\n    \"\"\"\n\n    # Ensure the second index is within bounds\n    if index >= len(lst):\n        raise IndexError(\"Index out of bounds\")\n\n    # Insert the new element at the specified index\n    lst.insert(index, new_element)\n\n    return lst\n```\n\nHere's an example of how to use this function:\n\n```python\nlst = [1, 2, 3]\nnew_element = 4\nindex = 1\n\nmodified_list = insert_element(lst, index, new_element)\nprint(modified_list)  # Output: [1, 4, 2, 3]\n```",
+  "error": null,
+  "elapsed_seconds": 3.86,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

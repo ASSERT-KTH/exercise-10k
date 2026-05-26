@@ -1,0 +1,9 @@
+{
+  "id": 5149,
+  "title": "Find Oldest Student",
+  "prompt": "Find the oldest student in a dictionary where keys are student names and values are their corresponding ages\nSample Input: {'John': 20, 'Emma': 22, 'Oliver': 21, 'Ava': 20, 'William': 22}\nSample Output: Emma\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution for your problem:\n\n```python\ndef find_oldest_student(students):\n    # Sort the dictionary based on the values (ages) in descending order\n    sorted_students = sorted(students.items(), key=lambda x: x[1], reverse=True)\n    \n    # Return the name of the first student in the sorted list\n    return sorted_students[0][0]\n\n# Example usage\nstudents = {'John': 20, 'Emma': 22, 'Oliver': 21, 'Ava': 20, 'William': 22}\nprint(find_oldest_student(students))  # Output: Emma\n```\n\nThis solution first sorts the dictionary based on the values (ages) in descending order using the `sorted()` function with a lambda function as the `key` argument. Then, it returns the name of the first student in the sorted list. The example usage demonstrates how to use this function with a sample input dictionary.",
+  "error": null,
+  "elapsed_seconds": 2.45,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

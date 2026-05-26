@@ -1,0 +1,9 @@
+{
+  "id": 3490,
+  "title": "Surface Area of a Cube",
+  "prompt": "Create a program that takes the side length of a cube as input and returns its surface area.\nSample Input: 5\nSample Output: 150\n",
+  "answer": "Sure, I'd be happy to help you create a program that calculates the surface area of a cube given its side length. Here's an example Python program that meets your requirements:\n\n```python\ndef calculate_cube_surface_area(side_length):\n    \"\"\"\n    Calculates the surface area of a cube with the given side length.\n\n    :param side_length: The side length of the cube.\n    :return: The surface area of the cube.\n    \"\"\"\n\n    # Validate the input\n    if not isinstance(side_length, (int, float)) or side_length <= 0:\n        raise ValueError(\"The side length must be a positive number.\")\n\n    # Calculate the surface area\n    surface_area = 6 * side_length**2\n\n    return surface_area\n\n\n# Get user input\nside_length = float(input(\"Enter the side length of the cube: \"))\n\n# Calculate and print the surface area\nsurface_area = calculate_cube_surface_area(side_length)\nprint(f\"The surface area of the cube is {surface_area} square units.\")\n```\n\nThis program defines a function `calculate_cube_surface_area` that takes the side length as input, validates it, calculates the surface area, and returns it. The program then prompts the user to enter the side length, calls the function with the user input, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

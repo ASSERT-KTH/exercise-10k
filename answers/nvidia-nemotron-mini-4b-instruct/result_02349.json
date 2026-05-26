@@ -1,0 +1,9 @@
+{
+  "id": 2349,
+  "title": "Chatbot",
+  "prompt": "Write a program to take user input and respond with a pre-defined response based on the input\nSample Input: hello\nSample Output: Hello! How can I assist you today?\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes user input, checks if it matches a predefined input pattern, and responds with a pre-defined response:\n```python\ndef respond(user_input):\n    \"\"\"Respond to the user based on their input.\"\"\"\n    # Define the input pattern and the corresponding response\n    input_pattern = r'^hello$'\n    response = \"Hello! How can I assist you today?\"\n\n    # Check if the user input matches the pattern\n    if re.match(input_pattern, user_input):\n        return response\n    else:\n        print(\"I'm sorry, I didn't understand that. Could you please try again?\")\n        return None\n\n# Get user input and respond\nwhile True:\n    user_input = input(\"Enter your message: \")\n    response = respond(user_input)\n    if response is not None:\n        print(response)\n    else:\n        break\n```\nThis program uses a regular expression (regex) to match the input pattern `^hello$`, which is case-sensitive. If the user input matches the pattern, the program responds with the pre-defined response. If the input does not match the pattern, the program prints a message asking the user to try again.\n\nYou can customize the input pattern and the response as needed. The `re` module is used to perform regular expression operations.",
+  "error": null,
+  "elapsed_seconds": 3.16,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

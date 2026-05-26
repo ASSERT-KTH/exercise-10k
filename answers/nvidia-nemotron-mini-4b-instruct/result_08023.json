@@ -1,0 +1,9 @@
+{
+  "id": 8023,
+  "title": "String manipulation: Palindrome checker",
+  "prompt": "Create a program that checks if a given string is a palindrome. The program should ignore non-alphanumeric characters and be case-insensitive. It should return 'True' if the string is a palindrome and 'False' otherwise.\nSample Input: A man, a plan, a canal: Panama\nSample Output: True\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\nimport re\n\ndef is_palindrome(s):\n    # Remove non-alphanumeric characters and convert to lowercase\n    s = re.sub(r'\\W+', '', s).lower()\n\n    # Check if the string is equal to its reverse\n    return s == s[::-1]\n\n# Test the function\nprint(is_palindrome(\"A man, a plan, a canal: Panama\"))  # Output: True\n```\n\nThis program uses the `re` module to remove all non-alphanumeric characters from the input string using a regular expression. It then converts the string to lowercase using the `lower()` method before checking if it is equal to its reverse. If they are equal, the function returns `True`, indicating that the string is a palindrome. Otherwise, it returns `False`.",
+  "error": null,
+  "elapsed_seconds": 2.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3717,
+  "title": "Function to Generate Random Tree",
+  "prompt": "Create a function that generates a random tree of a specified depth.\nSample Input: 3\nSample Output: {'value': 1, 'children': [{'value': 2, 'children': [{'value': 3}]}, {'value': 4}]}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that generates a random tree of a specified depth. The function uses recursion to create the tree structure.\n\n```python\nimport random\n\ndef generate_random_tree(depth):\n    \"\"\"\n    Generates a random tree of a specified depth.\n\n    :param depth: The depth of the tree.\n    :return: A dictionary representing the tree.\n    \"\"\"\n\n    # Base case: if the depth is 0, return an empty tree\n    if depth == 0:\n        return {}\n\n    # Generate a random value for the root node\n    root_value = random.randint(1, 100)\n\n    # Generate a list of children nodes for the root node\n    children = []\n    for _ in range(random.randint(1, depth)):\n        child_depth = depth - 1\n        child = generate_random_tree(child_depth)\n        children.append(child)\n\n    # Return the root node and its children\n    return {\n        'value': root_value,\n        'children': children\n    }\n```\n\nHere's an example of how to use the function:\n\n```python\ntree = generate_random_tree(3)\nprint(tree)\n```\n\nThis will output a random tree structure with a depth of 3. The output will vary each time you run the function.",
+  "error": null,
+  "elapsed_seconds": 3.42,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

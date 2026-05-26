@@ -1,0 +1,9 @@
+{
+  "id": 919,
+  "title": "Data Type Verifier",
+  "prompt": "Create a program that verifies if a given list of variables is of a certain data type (e.g., all integers, all floats).\nSample Input: variables = [1, 2, 3, 4, 5]\nSample Output: All variables are integers.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that verifies if a given list of variables is of a certain data type (in this case, all integers):\n```python\ndef verify_data_type(variables):\n    \"\"\"\n    Verifies if a given list of variables is of a certain data type.\n\n    Parameters:\n    variables (list): The list of variables to verify.\n\n    Returns:\n    str: A message indicating whether all variables are of the specified data type.\n    \"\"\"\n    # Define the data type to verify\n    target_type = type(1)\n\n    # Check if all variables are of the target type\n    if all(isinstance(var, target_type) for var in variables):\n        return f\"All variables are {target_type.__name__}.\"\n    else:\n        return f\"Not all variables are {target_type.__name__}.\"\n\n# Example usage\nvariables = [1, 2, 3, 4, 5]\nprint(verify_data_type(variables))  # Output: All variables are integers.\n```\nThis program defines a function `verify_data_type` that takes a list of variables as input and checks if all variables are of a certain data type (defined as the type of an integer in this example). The function returns a message indicating whether all variables are of the specified data type. The example usage shows how to use the function with a list of integers as input.\n\nYou can modify the `target_type` variable in the function to verify any other data type, such as floats or strings. Just make sure to replace the type with the correct type for your use case.",
+  "error": null,
+  "elapsed_seconds": 3.76,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2594,
+  "title": "Finding the Missing Number",
+  "prompt": "Write a program to find the missing number in a given sequence of numbers (e.g. 1, 2, 3, 5, 6).\nSample Input: [1, 2, 3, 5, 6]\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the missing number in a given sequence of numbers:\n\n```python\ndef find_missing_number(sequence):\n    \"\"\"\n    Given a sequence of numbers, return the missing number.\n\n    :param sequence: List of numbers\n    :return: Missing number\n    \"\"\"\n    # Calculate the expected sum of the sequence\n    expected_sum = sum(range(min(sequence), max(sequence) + 1))\n\n    # Calculate the actual sum of the given sequence\n    actual_sum = sum(sequence)\n\n    # Calculate the missing number by subtracting the expected sum from the actual sum\n    missing_number = expected_sum - actual_sum\n\n    return missing_number\n\n# Example usage\nsequence = [1, 2, 3, 5, 6]\nprint(find_missing_number(sequence))  # Output: 4\n```\n\nThis program first calculates the expected sum of the sequence by summing up all the numbers in the range from the minimum to the maximum value in the sequence. Then, it calculates the actual sum of the given sequence and finds the missing number by subtracting the expected sum from the actual sum. The function returns the missing number.",
+  "error": null,
+  "elapsed_seconds": 2.95,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

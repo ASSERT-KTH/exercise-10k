@@ -1,0 +1,9 @@
+{
+  "id": 6109,
+  "title": "Array Shift",
+  "prompt": "Write a program that takes an array of integers and a shift value as input, and returns a new array containing the elements shifted by the specified amount.\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: [3, 4, 5, 1, 2]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef shift_array(arr, shift):\n    \"\"\"\n    Shifts each element in the input array by the specified amount.\n\n    Parameters:\n    arr (list): The input array of integers.\n    shift (int): The amount by which to shift the elements.\n\n    Returns:\n    list: A new array containing the elements shifted by the specified amount.\n    \"\"\"\n    # Ensure the shift value is within the range of the array length\n    shift %= len(arr)\n\n    # Shift each element in the array by the specified amount\n    shifted_arr = arr[shift:] + arr[:shift]\n\n    return shifted_arr\n```\nHere's an example of how you can use this function:\n```python\narr = [1, 2, 3, 4, 5]\nshift = 2\nprint(shift_array(arr, shift))  # Output: [3, 4, 5, 1, 2]\n```\nThis function first ensures that the `shift` value is within the range of the array length, since shifting beyond the end of the array would result in a circular shift. Then, it creates a new array by concatenating the elements starting from the `shift` position and those starting from position 0, effectively shifting each element by the specified amount.",
+  "error": null,
+  "elapsed_seconds": 3.27,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

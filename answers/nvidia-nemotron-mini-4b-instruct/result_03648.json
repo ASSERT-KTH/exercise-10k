@@ -1,0 +1,9 @@
+{
+  "id": 3648,
+  "title": "Function with Default Argument",
+  "prompt": "Create a function that takes a string and a number as arguments, with a default value of 2 for the number, and returns the string repeated that many times\nSample Input: 'hello'\nSample Output: hellohello\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef repeat_string(s: str, times: int = 2) -> str:\n    \"\"\"\n    Repeats the given string `s` the specified number of times.\n\n    :param s: The string to repeat.\n    :param times: The number of times to repeat the string. Default is 2.\n    :return: The string repeated the specified number of times.\n    \"\"\"\n    if not isinstance(s, str) or not isinstance(times, int):\n        raise TypeError(\"Both 's' and 'times' must be of type str and int, respectively.\")\n\n    return s * times\n```\nHere's an example of how to use this function:\n```python\nprint(repeat_string('hello'))  # Output: hellohello\nprint(repeat_string('world', 3))  # Output: worldworldworld\n```\nThis function checks if the input types are correct and raises a `TypeError` if they are not. Then, it uses the built-in Python operator `*` to repeat the string the specified number of times.",
+  "error": null,
+  "elapsed_seconds": 2.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5834,
+  "title": "Email Validation",
+  "prompt": "Write a function to validate a given email address based on its format and characters\nSample Input: test@example.com\nSample Output: Valid\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that validates a given email address based on its format and characters. This function checks for the presence of a local part (before the '@' symbol), a domain part (after the '@' symbol), and the '@' symbol itself. It also ensures that the local part and domain part contain only alphanumeric characters and underscores, and that the '@' symbol is followed by a dot and another alphanumeric character.\n\n```python\nimport re\n\ndef is_valid_email(email):\n    \"\"\"\n    Validate a given email address based on its format and characters.\n\n    :param email: str, the email address to validate\n    :return: bool, True if the email is valid, False otherwise\n    \"\"\"\n    # Regular expression pattern for a valid email address\n    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$'\n\n    # Check if the email matches the pattern\n    if re.match(pattern, email):\n        return True\n    else:\n        return False\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(is_valid_email(\"test@example.com\"))  # Output: True\nprint(is_valid_email(\"invalid-email@example.com\"))  # Output: False\nprint(is_valid_email(\"test@example.invalid\"))  # Output: False\n```",
+  "error": null,
+  "elapsed_seconds": 3.66,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

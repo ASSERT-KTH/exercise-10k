@@ -1,0 +1,9 @@
+{
+  "id": 6229,
+  "title": "Find Unique Elements in Two Lists",
+  "prompt": "Write a program that finds the unique elements in two lists, i.e., elements that are in either list but not both.\nSample Input: [1, 2, 3, 4, 5], [4, 5, 6, 7, 8]\nSample Output: [1, 2, 3, 6, 7, 8]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the unique elements in two lists as described:\n```python\ndef unique_elements(list1, list2):\n    \"\"\"\n    Find the unique elements in two lists.\n\n    :param list1: The first list of elements\n    :param list2: The second list of elements\n    :return: A new list containing the unique elements in either list but not both\n    \"\"\"\n    # Convert the input lists to sets to remove duplicates and enable fast lookup\n    set1 = set(list1)\n    set2 = set(list2)\n\n    # Find the union of the two sets (which gives us all elements in either list),\n    # then find the difference between that and the intersection of the two sets\n    unique_elements = set1.union(set2).difference(set1 & set2)\n\n    # Convert the result back to a list\n    return list(unique_elements)\n\n# Example usage\nlist1 = [1, 2, 3, 4, 5]\nlist2 = [4, 5, 6, 7, 8]\nprint(unique_elements(list1, list2))  # Output: [1, 2, 3, 6, 7, 8]\n```\nThis program first converts the input lists to sets, which allows for fast lookup of elements and removal of duplicates. It then finds the union of the two sets, which gives us all elements in either list. Finally, it finds the difference between that and the intersection of the two sets, which gives us the unique elements in either list but not both. The result is then converted back to a list before being returned.",
+  "error": null,
+  "elapsed_seconds": 3.85,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

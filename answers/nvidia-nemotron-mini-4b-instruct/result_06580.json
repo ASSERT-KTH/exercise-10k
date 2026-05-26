@@ -1,0 +1,9 @@
+{
+  "id": 6580,
+  "title": "Dictionary Normalization",
+  "prompt": "Write a function that normalizes a dictionary by converting its keys to a standard format\nSample Input: {'Name': 'Robert', 'Age': 115, 'City': 'LA'}\nSample Output: {'name': 'Robert', 'age': 115, 'city': 'LA'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that normalizes a dictionary by converting its keys to a standard format (lowercase, with '-' instead of spaces):\n```python\ndef normalize_dict(input_dict):\n    \"\"\"\n    Normalizes a dictionary by converting its keys to a standard format.\n\n    Parameters:\n    input_dict (dict): The input dictionary to be normalized.\n\n    Returns:\n    dict: The normalized dictionary with keys in lowercase and '-' instead of spaces.\n    \"\"\"\n    return {k.lower().replace(' ', '-'): v for k, v in input_dict.items()}\n```\nHere's an example of how to use this function:\n```python\ninput_dict = {'Name': 'Robert', 'Age': 115, 'City': 'LA'}\nnormalized_dict = normalize_dict(input_dict)\nprint(normalized_dict)  # Output: {'name': 'robert', 'age': 115, 'city': 'la'}\n```\nThis function uses a dictionary comprehension to create a new dictionary with normalized keys. The `lower()` method is used to convert each key to lowercase, and the `replace(' ', '-')` method is used to replace any spaces in the key with a hyphen. The `items()` method is used to iterate over the items in the input dictionary, and the `for k, v in input_dict.items()` syntax is used to unpack the key-value pairs into separate variables `k` and `v`.",
+  "error": null,
+  "elapsed_seconds": 3.59,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

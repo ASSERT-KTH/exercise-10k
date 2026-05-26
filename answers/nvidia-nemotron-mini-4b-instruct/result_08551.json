@@ -1,0 +1,9 @@
+{
+  "id": 8551,
+  "title": "Dictionary Merging",
+  "prompt": "Create two dictionaries with 3 key-value pairs each and merge them into a single dictionary.\nSample Input: dict1, dict2\nSample Output: merged_dict\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution that merges two dictionaries into a single dictionary:\n\n```python\ndef merge_dicts(dict1, dict2):\n    \"\"\"\n    Merges two dictionaries into a single dictionary.\n\n    :param dict1: The first dictionary\n    :param dict2: The second dictionary\n    :return: A new dictionary containing the key-value pairs from both input dictionaries\n    \"\"\"\n    # Combine the two dictionaries using the update() method\n    merged_dict = dict1.copy()\n    merged_dict.update(dict2)\n\n    return merged_dict\n\n# Example usage\ndict1 = {'a': 1, 'b': 2}\ndict2 = {'b': 3, 'c': 4}\n\nmerged_dict = merge_dicts(dict1, dict2)\nprint(merged_dict)  # Output: {'a': 1, 'b': 3, 'c': 4}\n```\n\nThis function creates a copy of the first dictionary (`dict1`), updates it with the key-value pairs from the second dictionary (`dict2` using the `update()` method), and returns the resulting merged dictionary.",
+  "error": null,
+  "elapsed_seconds": 2.92,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

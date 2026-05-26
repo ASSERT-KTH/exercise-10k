@@ -1,0 +1,9 @@
+{
+  "id": 205,
+  "title": "Display Menu",
+  "prompt": "Create a function that displays a menu with options and takes the user's choice as input.\nSample Input: 1\nSample Output: You chose option 1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function will display a menu with options and take the user's choice as input. It will then display a message indicating which option the user chose.\n\n```python\ndef display_menu():\n    \"\"\"Displays a menu with options and takes the user's choice as input.\"\"\"\n\n    # Define the menu options\n    options = {\n        1: \"Option 1\",\n        2: \"Option 2\",\n        3: \"Option 3\",\n        4: \"Option 4\",\n    }\n\n    # Display the menu\n    print(\"Welcome to the menu!\")\n    for option_number, option_name in options.items():\n        print(f\"{option_number}. {option_name}\")\n\n    # Get the user's choice\n    while True:\n        try:\n            user_choice = int(input(\"\\nPlease choose an option: \"))\n            if user_choice in options:\n                break\n            else:\n                print(\"That's not a valid option. Please try again.\")\n        except ValueError:\n            print(\"That's not a valid input. Please enter a number.\")\n\n    # Display a message indicating which option the user chose\n    print(f\"You chose option {user_choice}: {options[user_choice]}\")\n\n# Call the function\ndisplay_menu()\n```\n\nThis function will display a menu with options and take the user's choice as input. The function will continue to prompt the user for input until they enter a valid option number. Once a valid option is entered, the function will display a message indicating which option the user chose.",
+  "error": null,
+  "elapsed_seconds": 5.74,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

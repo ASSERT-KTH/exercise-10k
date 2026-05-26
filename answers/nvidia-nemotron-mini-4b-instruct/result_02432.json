@@ -1,0 +1,9 @@
+{
+  "id": 2432,
+  "title": "To-Do List App",
+  "prompt": "Write a program to create a simple to-do list app, allowing users to add, remove, and list tasks, using a while loop.\nSample Input: add Buy milk\nSample Output: 1. Buy milk\n",
+  "answer": "Sure, I'd be happy to help you create a simple to-do list app using a while loop in Python. Here's a program that meets your requirements:\n\n```python\n# Initialize an empty list to store tasks\ntasks = []\n\n# Main loop for interacting with the user\nwhile True:\n    # Get user input\n    user_input = input(\"Enter 'add' to add a task, 'remove' to remove a task, or 'list' to list tasks, or 'quit' to exit: \").lower()\n\n    # Handle user input\n    if user_input == 'add':\n        # Get task details\n        task = input(\"Enter your task: \")\n\n        # Add the task to the list\n        tasks.append(f\"{len(tasks) + 1}. {task}\")\n\n    elif user_input == 'remove':\n        # Get the index of the task to remove\n        try:\n            index = int(input(\"Enter the index of the task to remove: \")) - 1\n\n            # Remove the task from the list\n            del tasks[index]\n\n        except ValueError:\n            print(\"Invalid input. Please enter a valid index.\")\n\n    elif user_input == 'list':\n        # Print the list of tasks\n        print(\"\\n\".join(tasks))\n\n    elif user_input == 'quit':\n        break\n\n    else:\n        print(\"Invalid input. Please enter 'add', 'remove', 'list', or 'quit'.\")\n\nprint(\"Goodbye!\")\n```\n\nThis program allows users to add tasks, remove tasks, and list tasks using a while loop. The tasks are stored in a list, and the index of each task is incremented by one to maintain a one-based numbering system. The program also handles invalid user inputs and ensures that tasks are added, removed, and listed in the correct order.",
+  "error": null,
+  "elapsed_seconds": 5.63,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

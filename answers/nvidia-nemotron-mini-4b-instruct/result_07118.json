@@ -1,0 +1,9 @@
+{
+  "id": 7118,
+  "title": "String Validator",
+  "prompt": "Create a function that takes a string as input and checks if it contains only letters, numbers, and spaces. The function should return 'Valid' if the string meets the criteria, 'Invalid' otherwise.\nSample Input: Hello World123\nSample Output: Valid\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\nimport re\n\ndef is_valid_string(s):\n    \"\"\"\n    Check if a string contains only letters, numbers, and spaces.\n\n    :param s: str - The input string to check.\n    :return: str - 'Valid' if the string meets the criteria, 'Invalid' otherwise.\n    \"\"\"\n    # Use a regular expression to match only letters, numbers, and spaces\n    pattern = r'^[a-zA-Z0-9\\s]*$'\n\n    # Check if the string matches the pattern\n    if re.match(pattern, s):\n        return 'Valid'\n    else:\n        return 'Invalid'\n```\nHere's how you can use this function:\n```python\nprint(is_valid_string(\"Hello World123\"))  # Output: Valid\nprint(is_valid_string(\"Hello! World\"))    # Output: Invalid\nprint(is_valid_string(\"  Hello World  \")) # Output: Valid\n```\nThis function uses a regular expression to match only alphanumeric characters (`[a-zA-Z0-9]`) and spaces (`\\s`). The `^` and `$` anchors ensure that the match starts and ends at the beginning and end of the string, respectively. The `re.match()` function checks if the string matches the pattern, and returns `None` if it doesn't, or a match object if it does. The match object has a `group()` method that returns the matched string, which we can use to check if it's empty (i.e., if it contains only whitespace).",
+  "error": null,
+  "elapsed_seconds": 3.83,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

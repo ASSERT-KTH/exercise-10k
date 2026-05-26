@@ -1,0 +1,9 @@
+{
+  "id": 9408,
+  "title": "Factorial",
+  "prompt": "Create a program that calculates the factorial of a given integer.\nSample Input: 5\nSample Output: 120\n",
+  "answer": "Sure, I'd be happy to help you create a program that calculates the factorial of a given integer. Here's a Python solution:\n\n```python\ndef factorial(n):\n    \"\"\"\n    Calculates the factorial of a given integer.\n\n    :param n: The integer for which to calculate the factorial.\n    :return: The factorial of n.\n    \"\"\"\n    if n < 0:\n        raise ValueError(\"Input must be non-negative\")\n    elif n == 0:\n        return 1\n    else:\n        return n * factorial(n-1)\n\n# Get user input\nn = int(input(\"Enter an integer to calculate its factorial: \"))\n\n# Calculate and print the result\nresult = factorial(n)\nprint(f\"{n}! = {result}\")\n```\n\nThis program defines a function `factorial()` that calculates the factorial of a given integer using recursion. The function checks if the input is non-negative and returns 1 if the input is 0. Otherwise, it calculates the factorial by multiplying the input number with the factorial of the input number minus 1. The program then gets user input, calls the `factorial()` function with the user's input, and prints the result.\n\nHere's an example of how the program works:\n\n```\nEnter an integer to calculate its factorial: 5\n5! = 120\n```",
+  "error": null,
+  "elapsed_seconds": 3.13,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

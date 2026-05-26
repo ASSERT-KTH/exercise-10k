@@ -1,0 +1,9 @@
+{
+  "id": 8638,
+  "title": "Function to Check Palindrome",
+  "prompt": "Write a function that checks if a given string is a palindrome or not.\nSample Input: madam\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a given string is a palindrome or not, taking into account only alphanumeric characters (letters and numbers) and ignoring case:\n\n```python\nimport re\n\ndef is_palindrome(s: str) -> bool:\n    \"\"\"\n    Check if a given string is a palindrome.\n\n    :param s: The string to check.\n    :return: True if the string is a palindrome, False otherwise.\n    \"\"\"\n    # Remove non-alphanumeric characters and convert to lowercase\n    s = re.sub(r'\\W+', '', s).lower()\n\n    # Check if the string is equal to its reverse\n    return s == s[::-1]\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(is_palindrome(\"madam\"))  # True\nprint(is_palindrome(\"race car\"))  # False\nprint(is_palindrome(\"A man a plan a canal Panama\"))  # True\n```",
+  "error": null,
+  "elapsed_seconds": 2.78,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

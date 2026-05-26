@@ -1,0 +1,9 @@
+{
+  "id": 7788,
+  "title": "Data Type Validator",
+  "prompt": "Create a program that takes in a variable and its value as input, and then checks if the given value matches the declared data type. The data types to be validated are integer, float, string, and boolean. If the value matches the data type, the program should print 'Valid', otherwise it should print 'Invalid'. The program should handle potential errors during the validation process.\nSample Input: integer 10\nSample Output: Valid\n",
+  "answer": "Here's a Python program that meets your requirements. This program uses the `type()` function to check if the value matches the declared data type. It also handles potential errors during the validation process by using a `try`-`except` block.\n\n```python\ndef validate_data_type(variable_name, value):\n    try:\n        data_type = type(value)\n\n        if data_type in [int, float]:\n            print('Valid')\n        elif data_type is str:\n            print('Valid')\n        elif data_type is bool:\n            print('Valid')\n        else:\n            print('Invalid')\n\n    except TypeError as e:\n        print(f'Error: {e}. Please provide a valid data type.')\n\n# Example usage\nvalidate_data_type('my_integer', 10)\nvalidate_data_type('my_float', 10.5)\nvalidate_data_type('my_string', 'hello')\nvalidate_data_type('my_boolean', True)\nvalidate_data_type('my_invalid', 10)  # This will raise a TypeError\n```\n\nThis program can be easily extended to support more data types by adding more conditions to the `if` statement.",
+  "error": null,
+  "elapsed_seconds": 2.84,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8977,
+  "title": "String Is Alpha",
+  "prompt": "Write a function that takes a string as input and returns True if the string contains only alphabets, False otherwise.\nSample Input: ['HelloWorld']\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\nimport re\n\ndef is_alphabet(s):\n    \"\"\"\n    Returns True if the given string contains only alphabets, False otherwise.\n\n    :param s: str - The input string\n    :return: bool - True if the string contains only alphabets, False otherwise\n    \"\"\"\n    # Use a regular expression to check if the string contains only alphabets (both lowercase and uppercase)\n    return bool(re.match(r'^[a-zA-Z]*$', s))\n```\nHere's how this function works:\n\n* We use the `re` module to define a regular expression pattern that matches any string containing only lowercase or uppercase alphabets (`[a-zA-Z]*`).\n* The `re.match()` function checks if the input string `s` matches this pattern. If it does, the function returns `True`; otherwise, it returns `False`.\n\nHere are some examples of how you can use this function:\n```python\nprint(is_alphabet('HelloWorld'))  # True\nprint(is_alphabet('Hello!@#'))    # False\nprint(is_alphabet('123abc'))     # False\nprint(is_alphabet('ABC'))         # True\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

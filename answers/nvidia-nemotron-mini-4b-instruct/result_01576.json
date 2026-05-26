@@ -1,0 +1,9 @@
+{
+  "id": 1576,
+  "title": "Reduce Function",
+  "prompt": "Create a function that uses the reduce function to apply a given function to a list of numbers and return the result.\nSample Input: add, [1, 2, 3, 4, 5]\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a JavaScript function that meets your requirements. It uses the built-in `reduce` method to apply a given function (in this case, `add`, which represents the `+` operator) to a list of numbers and returns the result.\n\n```javascript\nfunction applyReduceFunction(func, arr) {\n  return arr.reduce((accumulator, currentValue) => {\n    return func(accumulator, currentValue);\n  }, 0);\n}\n\n// Example usage:\nconst add = (accumulator, currentValue) => accumulator + currentValue;\n\nconsole.log(applyReduceFunction(add, [1, 2, 3, 4, 5])); // Output: 15\n```\n\nIn this example, the `applyReduceFunction` function takes two arguments: `func` and `arr`. It initializes an accumulator variable to 0 and then uses the `reduce` method to iterate over the elements of the `arr` array. For each element, it applies the `func` function to the accumulator and the current value, and updates the accumulator accordingly. Finally, it returns the final value of the accumulator.\n\nIn the example usage, we define a function `add` that simply adds two numbers together. We then call `applyReduceFunction` with `add` as the first argument and `[1, 2, 3, 4, 5]` as the second argument. The result is 15, which is the sum of the numbers in the array.",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

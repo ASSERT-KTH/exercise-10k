@@ -1,0 +1,9 @@
+{
+  "id": 4350,
+  "title": "Greeting Message",
+  "prompt": "Write a program that checks the time of day (morning, afternoon, evening) and prints a corresponding greeting message\nSample Input: morning\nSample Output: Good morning\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a simple Python program that checks the current time of day and prints a corresponding greeting message:\n\n```python\nimport datetime\n\ndef get_time_of_day():\n    \"\"\"Returns the current time of day as a string (morning, afternoon, evening).\"\"\"\n    now = datetime.datetime.now()\n    hour = now.hour\n\n    if hour < 12:\n        return \"morning\"\n    elif 12 <= hour < 18:\n        return \"afternoon\"\n    else:\n        return \"evening\"\n\ndef print_greeting():\n    \"\"\"Prints a greeting message based on the current time of day.\"\"\"\n    time_of_day = get_time_of_day()\n    greeting_messages = {\n        \"morning\": \"Good morning!\",\n        \"afternoon\": \"Good afternoon!\",\n        \"evening\": \"Good evening!\"\n    }\n\n    print(greeting_messages[time_of_day])\n\n# Call the function to print the greeting message\nprint_greeting()\n```\n\nThis program defines two functions: `get_time_of_day()` and `print_greeting()`. The `get_time_of_day()` function returns the current time of day as a string (morning, afternoon, or evening). The `print_greeting()` function uses the `get_time_of_day()` function to determine the corresponding greeting message and prints it.",
+  "error": null,
+  "elapsed_seconds": 3.31,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

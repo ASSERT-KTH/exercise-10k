@@ -1,0 +1,9 @@
+{
+  "id": 8523,
+  "title": "Area of a Circle",
+  "prompt": "Write a program to calculate the area of a circle given its radius.\nSample Input: 5\nSample Output: 78.5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the area of a circle given its radius:\n\n```python\nimport math\n\ndef calculate_circle_area(radius):\n    \"\"\"\n    Calculates the area of a circle given its radius.\n\n    :param radius: The radius of the circle.\n    :return: The area of the circle.\n    \"\"\"\n\n    # Validate the input\n    if not isinstance(radius, (int, float)) or radius < 0:\n        raise ValueError(\"The radius must be a non-negative number.\")\n\n    # Calculate the area using the formula: area = pi * radius^2\n    area = math.pi * (radius ** 2)\n\n    return area\n\n# Get user input for the radius\nradius = float(input(\"Enter the radius of the circle: \"))\n\n# Calculate and print the area\narea = calculate_circle_area(radius)\nprint(f\"The area of the circle with radius {radius} is {area}.\")\n```\n\nThis program defines a function `calculate_circle_area` that takes a radius as input, validates it, calculates the area using the formula `area = pi * radius^2`, and returns the result. The program then gets user input for the radius, calls the function with the input value, and prints the area.",
+  "error": null,
+  "elapsed_seconds": 3.3,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2457,
+  "title": "Array Permutation",
+  "prompt": "Write a program that takes an array as input and returns a new array containing all possible permutations of the elements.\nSample Input: [1, 2, 3]\nSample Output: [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses the `itertools.permutations` function to generate all possible permutations of a given array:\n\n```python\nimport itertools\n\ndef generate_permutations(arr):\n    \"\"\"\n    Generate all possible permutations of the elements in the given array.\n\n    :param arr: The input array\n    :return: A list of all possible permutations of the elements in arr\n    \"\"\"\n    # Use itertools.permutations to generate all permutations\n    permutations = list(itertools.permutations(arr))\n\n    return permutations\n\n# Example usage\ninput_array = [1, 2, 3]\noutput_array = generate_permutations(input_array)\nprint(output_array)\n```\n\nWhen you run this program with the sample input `[1, 2, 3]`, it will output:\n\n```python\n[[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]\n```\n\nThis function works by using the `itertools.permutations` function, which generates all possible permutations of a given sequence (in this case, the elements of the input array). The `list()` function is then used to convert the generator object returned by `itertools.permutations` into a list, which can be returned as the output.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

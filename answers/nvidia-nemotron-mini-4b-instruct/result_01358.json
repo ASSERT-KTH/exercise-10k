@@ -1,0 +1,9 @@
+{
+  "id": 1358,
+  "title": "Environment Variables",
+  "prompt": "Write a program to demonstrate the use of environment variables\nSample Input: None\nSample Output: PATH = /usr/bin\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that demonstrates the use of environment variables. This program will print the value of the `PATH` environment variable.\n\n```python\nimport os\n\n# Check if the 'PATH' environment variable exists\nif 'PATH' in os.environ:\n    # Get the value of the 'PATH' environment variable\n    path_value = os.environ['PATH']\n\n    # Print the value of the 'PATH' environment variable\n    print(f\"The value of the 'PATH' environment variable is: {path_value}\")\nelse:\n    # If the 'PATH' environment variable is not found, print a message\n    print(\"The 'PATH' environment variable is not set.\")\n```\n\nWhen you run this program, it will print the value of the `PATH` environment variable, which is typically a list of directories that the system uses to locate executables. For example, on a Unix-based system, the `PATH` environment variable might contain the following:\n\n```\n/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/local/bin:/snap/bin\n```\n\nThis program checks if the `PATH` environment variable exists using the `in` keyword, and then gets its value using the `os.environ['PATH']` syntax. If the variable is not found, the program prints a message indicating that it is not set.",
+  "error": null,
+  "elapsed_seconds": 3.16,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

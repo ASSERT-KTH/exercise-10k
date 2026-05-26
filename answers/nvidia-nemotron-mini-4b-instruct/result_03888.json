@@ -1,0 +1,9 @@
+{
+  "id": 3888,
+  "title": "Alarm Clock",
+  "prompt": "Create a program that takes a time input from the user and prints a message when the current time matches the input time.\nSample Input: 08:00\nSample Output: Wake up!\n",
+  "answer": "Sure, I'd be happy to help you create a program for that. Here's an example Python program that takes a time input from the user and checks if the current time matches the input time. We'll use the `datetime` module to get the current time.\n\n```python\nimport datetime\n\ndef get_time_input():\n    \"\"\"Get a time input from the user.\"\"\"\n    while True:\n        try:\n            time_input = input(\"Please enter a time (e.g., 08:00): \")\n            time_parts = [int(part) for part in time_input.split(\":\")]\n            if all(part >= 0 and part <= 23 for part in time_parts):\n                return datetime.time(hour=time_parts[0], minute=time_parts[1])\n            else:\n                print(\"Invalid time input. Please enter a time in the format HH:MM.\")\n        except ValueError:\n            print(\"Invalid input. Please enter a time in the format HH:MM.\")\n\ndef check_time(user_time, current_time):\n    \"\"\"Check if the current time matches the user input time.\"\"\"\n    if user_time == current_time:\n        print(\"Wake up!\")\n\nif __name__ == \"__main__\":\n    user_time = get_time_input()\n    current_time = datetime.datetime.now().time()\n    check_time(user_time, current_time)\n```\n\nThis program defines two functions: `get_time_input()` and `check_time()`. The first function gets a time input from the user and validates it. The second function checks if the current time matches the user input time. The main part of the program gets the user input, current time, and calls the `check_time()` function to print a message when the current time matches the input time.",
+  "error": null,
+  "elapsed_seconds": 4.6,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

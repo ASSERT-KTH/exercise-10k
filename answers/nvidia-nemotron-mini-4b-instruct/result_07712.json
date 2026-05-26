@@ -1,0 +1,9 @@
+{
+  "id": 7712,
+  "title": "Vowel Removal",
+  "prompt": "Remove all vowels from a given string.\nSample Input: hello world\nSample Output: hll wrld\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution using a list comprehension and the built-in string method `translate()`:\n\n```python\ndef remove_vowels(s):\n    vowels = set('aeiouAEIOU')\n    return s.translate(str.maketrans('', '', vowels))\n\n# Sample usage:\ninput_str = \"hello world\"\noutput_str = remove_vowels(input_str)\nprint(output_str)  # Output: hll wrld\n```\n\nIn this solution, we first define a set of vowels. Then, we use `str.maketrans()` to create a translation table that removes all vowels from the input string. Finally, we call the `translate()` method on the input string to apply the translation table.",
+  "error": null,
+  "elapsed_seconds": 1.95,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

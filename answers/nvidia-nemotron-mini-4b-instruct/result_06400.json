@@ -1,0 +1,9 @@
+{
+  "id": 6400,
+  "title": "Image Resize Tool",
+  "prompt": "Develop a program that takes in the image width and height, then prints out the resized image dimensions. If the width is greater than the height, print 'Landscape', otherwise print 'Portrait'\nSample Input: 800 600\nSample Output: Landscape\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef get_image_aspect_ratio(width, height):\n    \"\"\"\n    Calculates the aspect ratio of an image with given width and height.\n\n    :param width: The width of the image.\n    :param height: The height of the image.\n    :return: A string indicating whether the image is landscape or portrait.\n    \"\"\"\n    if width > height:\n        return \"Landscape\"\n    else:\n        return \"Portrait\"\n\ndef print_resized_dimensions(width, height):\n    \"\"\"\n    Prints the resized image dimensions and aspect ratio.\n\n    :param width: The width of the image.\n    :param height: The height of the image.\n    \"\"\"\n    if width > height:\n        aspect_ratio = f\"Resized dimensions: {width} x {height // width} ({get_image_aspect_ratio(width, height)})\"\n    else:\n        aspect_ratio = f\"Resized dimensions: {height // width} x {height} ({get_image_aspect_ratio(width, height)})\"\n\n    print(aspect_ratio)\n\n# Example usage:\nprint_resized_dimensions(800, 600)\n```\n\nThis program defines two functions: `get_image_aspect_ratio` and `print_resized_dimensions`. The first function calculates the aspect ratio of an image given its width and height. The second function prints the resized image dimensions and aspect ratio based on the given width and height. The example usage at the end of the program demonstrates how to use these functions.",
+  "error": null,
+  "elapsed_seconds": 4.13,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

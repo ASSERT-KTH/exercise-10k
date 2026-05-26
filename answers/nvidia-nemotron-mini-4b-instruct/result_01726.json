@@ -1,0 +1,9 @@
+{
+  "id": 1726,
+  "title": "Finding the First Occurrence of a Target Value",
+  "prompt": "Write a program that takes a list of numbers and a target value as input, and returns the index of the first occurrence of the target value if it exists in the list.\nSample Input: [1, 2, 3, 2, 4], 2\nSample Output: 1\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef find_index(numbers, target):\n    \"\"\"\n    Given a list of numbers and a target value, return the index of the first occurrence of the target value if it exists in the list.\n\n    :param numbers: List[int] - The list of numbers to search in\n    :param target: int - The target value to find in the list\n    :return: int - The index of the first occurrence of the target value, or -1 if not found\n    \"\"\"\n    for i, num in enumerate(numbers):\n        if num == target:\n            return i\n    return -1\n\n# Sample usage:\nnumbers = [1, 2, 3, 2, 4]\ntarget = 2\nindex = find_index(numbers, target)\nprint(index)  # Output: 1\n```\n\nThis program defines a function `find_index()` that takes a list of numbers and a target value as input. It iterates over the list using a `for` loop, comparing each number to the target value. If a match is found, the function returns the index of that element. If no match is found, the function returns -1. The sample usage at the end of the program demonstrates how to use this function with the given sample input.",
+  "error": null,
+  "elapsed_seconds": 3.11,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

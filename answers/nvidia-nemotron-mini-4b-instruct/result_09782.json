@@ -1,0 +1,9 @@
+{
+  "id": 9782,
+  "title": "Input Validation with Regex",
+  "prompt": "Write a program that takes an input and validates it using a regular expression.\nSample Input: 123-456-7890\nSample Output: Valid phone number\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes an input string and validates it using a regular expression to check if it's a valid phone number in the format \"XXX-XXX-XXXX\". The program will output \"Valid phone number\" if the input is valid, and \"Invalid phone number\" otherwise.\n\n```python\nimport re\n\ndef is_valid_phone_number(input_string):\n    # Regular expression pattern for a valid phone number\n    pattern = r'\\d{3}[-\\.\\s]\\d{3}[-\\.\\s]\\d{4}'\n\n    # Compile the pattern into a regular expression object\n    regex = re.compile(pattern)\n\n    # Check if the input string matches the pattern\n    if regex.match(input_string):\n        return \"Valid phone number\"\n    else:\n        return \"Invalid phone number\"\n\n# Get user input\nuser_input = input(\"Please enter a phone number: \")\n\n# Validate the input\nresult = is_valid_phone_number(user_input)\n\n# Output the result\nprint(result)\n```\n\nYou can customize the regular expression pattern to match other phone number formats as needed. For example, to allow for country codes and area codes, you could use the following pattern:\n\n```python\npattern = r'\\(\\d{3}\\)\\s*\\d{3}[-\\.\\s]\\d{3}[-\\.\\s]\\d{4}'\n```\n\nThis pattern matches a phone number in the format \"XXX-XXX-XXXX\" with a country code in parentheses, followed by the rest of the number.",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

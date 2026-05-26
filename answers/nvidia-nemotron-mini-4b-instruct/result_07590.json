@@ -1,0 +1,9 @@
+{
+  "id": 7590,
+  "title": "Dictionary Validation",
+  "prompt": "Write a program that checks if a given variable is a dictionary.\nSample Input: var = {'a': 1, 'b': 2}\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given variable is a dictionary:\n\n```python\ndef is_dictionary(var):\n    \"\"\"Check if a given variable is a dictionary.\"\"\"\n    try:\n        # Check if the variable is callable (i.e., it's not a built-in type like int, str, etc.)\n        if callable(var):\n            return False\n\n        # Check if the variable has a length of 0 (i.e., it's an empty dictionary)\n        if len(var) == 0:\n            return False\n\n        # Check if the variable is a dictionary by checking if it has the 'items' attribute\n        if 'items' in dir(var):\n            return True\n\n        # If we get here, the variable is not a dictionary\n        return False\n\n    except Exception as e:\n        # If there's an error while checking the variable, return False\n        return False\n\n# Example usage\nvar = {'a': 1, 'b': 2}\nprint(is_dictionary(var))  # Output: True\n```\n\nThis program first checks if the variable is callable (i.e., it's not a built-in type like int, str, etc.). If it is, the function returns False. Then, it checks if the variable is empty (i.e., has a length of 0). If it is, the function returns False. Finally, it checks if the variable has the 'items' attribute, which indicates that it's a dictionary. If it does, the function returns True. If there's an error while checking the variable, the function returns False.",
+  "error": null,
+  "elapsed_seconds": 4.11,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

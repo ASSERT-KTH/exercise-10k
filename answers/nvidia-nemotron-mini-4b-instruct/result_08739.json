@@ -1,0 +1,9 @@
+{
+  "id": 8739,
+  "title": "Advanced Variable Validation",
+  "prompt": "Validate variables against a complex set of rules to ensure they are correct.\nSample Input: {name: 'John', age: 30}\nSample Output: valid object\n",
+  "answer": "Sure, I'd be happy to help you validate variables against a complex set of rules. Here's a Python function that checks if a given object (in this case, a dictionary) adheres to the specified rules:\n```python\ndef validate_object(obj):\n    \"\"\"\n    Validates a given object against a complex set of rules.\n\n    :param obj: The object to validate.\n    :return: A string indicating the validation result.\n    \"\"\"\n    # Define the rules as a dictionary of validation functions\n    rules = {\n        'name': lambda name: isinstance(name, str) and len(name) > 0,\n        'age': lambda age: isinstance(age, int) and age >= 0,\n    }\n\n    # Iterate over the rules and check each one\n    validation_result = 'valid object'\n    for rule_name, rule in rules.items():\n        if rule_name not in obj:\n            continue\n\n        if not rule(obj[rule_name]):\n            validation_result = f'Invalid {rule_name} value: {obj[rule_name]}.'\n            break\n\n    return validation_result\n```\nHere's an example of how to use this function:\n```python\nsample_input = {'name': 'John', 'age': 30}\nprint(validate_object(sample_input))  # Output: valid object\n\ninvalid_input = {'name': 'John', 'age': -1}\nprint(validate_object(invalid_input))  # Output: Invalid age value: -1.\n```\nThis function defines a set of rules as a dictionary of validation functions. It then iterates over the rules, checking each one and returning a validation result string if any rule is violated. The function handles missing keys gracefully by simply skipping them.",
+  "error": null,
+  "elapsed_seconds": 9.02,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

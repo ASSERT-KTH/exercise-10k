@@ -1,0 +1,9 @@
+{
+  "id": 522,
+  "title": "Binary Search",
+  "prompt": "Implement a binary search algorithm to find an element in a sorted array.\nSample Input: [1, 2, 3, 4, 5], 3\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you implement a binary search algorithm. Here's a Python function that takes a sorted array and a target value as input, and returns the index of the target value if it's present in the array, otherwise it returns -1:\n```python\ndef binary_search(arr, target):\n    low = 0\n    high = len(arr) - 1\n\n    while low <= high:\n        mid = (low + high) // 2\n        guess = arr[mid]\n\n        if guess == target:\n            return mid\n        elif guess < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n\n    return -1\n```\nHere's an example of how you can use this function:\n```python\narr = [1, 2, 3, 4, 5]\ntarget = 3\nindex = binary_search(arr, target)\n\nif index != -1:\n    print(f\"The element {target} is at index {index}.\")\nelse:\n    print(f\"The element {target} is not in the array.\")\n```\nThis will output:\n```yaml\nThe element 3 is at index 2.\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 9.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

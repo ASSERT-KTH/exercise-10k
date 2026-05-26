@@ -1,0 +1,9 @@
+{
+  "id": 1126,
+  "title": "Mad Libs",
+  "prompt": "Write a program that takes a story with missing words as input and asks the user to fill them in\nSample Input: noun\nSample Output: The _______________ (noun) was very happy.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses a simple prompt to ask the user to fill in the missing word, and then prints the story with the filled-in word.\n\n```python\ndef fill_in_the_blank(story):\n    \"\"\"\n    Asks the user to fill in a missing word in a story.\n\n    :param story: The story with a missing word.\n    :return: The story with the missing word filled in.\n    \"\"\"\n\n    # Find the index of the missing word\n    missing_word_index = story.index('__')\n\n    # Ask the user to fill in the missing word\n    missing_word = input(f\"What word should replace the {missing_word_index+1}st blank in the story? \")\n\n    # Replace the missing word with the user's input\n    filled_in_story = story[:missing_word_index] + missing_word + story[missing_word_index+len(missing_word):]\n\n    return filled_in_story\n\n\n# Example usage\nstory = \"noun was very happy.\"\nprint(fill_in_the_blank(story))\n```\n\nThis program defines a function `fill_in_the_blank` that takes a story with a missing word as input and returns the story with the missing word filled in. The function uses the `index` method to find the index of the missing word, and then prompts the user to fill in the missing word. Finally, the function replaces the missing word with the user's input and returns the filled-in story.",
+  "error": null,
+  "elapsed_seconds": 3.81,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8683,
+  "title": "Word Scramble",
+  "prompt": "Write a program that scrambles a word and asks the user to unscramble it.\nSample Input: sgnid\nSample Output: Unscramble the word: sgnid\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\nimport string\n\ndef scramble_word(word):\n    \"\"\"Scramble a word by swapping adjacent characters.\"\"\"\n    scrambled = list(word)\n    for i in range(len(scrambled) - 1):\n        if scrambled[i] == scrambled[i + 1]:\n            scrambled[i], scrambled[i + 1] = scrambled[i + 1], scrambled[i]\n    return ''.join(scrambled)\n\ndef unscramble_word(scrambled_word):\n    \"\"\"Unscramble a word by swapping adjacent characters.\"\"\"\n    word = list(scrambled_word)\n    for i in range(len(word) - 1):\n        if word[i] == word[i + 1]:\n            word[i], word[i + 1] = word[i + 1], word[i]\n    return ''.join(word)\n\ndef main():\n    scrambled_word = input(\"Enter a scrambled word: \")\n    unscrambled_word = unscramble_word(scramble_word(scrambled_word))\n    print(f\"Unscramble the word: {unscrambled_word}\")\n\n# Ensure the program only runs when called directly\nif __name__ == \"__main__\":\n    main()\n```\nThis program defines two functions: `scramble_word` and `unscramble_word`. The `scramble_word` function takes a word as input and returns a scrambled version of the word by swapping adjacent characters. The `unscramble_word` function takes a scrambled word as input and returns the unscrambled version. The `main` function prompts the user to enter a scrambled word, scrambles it, unscrambles it, and prints the result. The program ensures that it only runs when called directly and not when imported as a module.",
+  "error": null,
+  "elapsed_seconds": 10.65,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

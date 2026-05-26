@@ -1,0 +1,9 @@
+{
+  "id": 7711,
+  "title": "Caesar Cipher",
+  "prompt": "Implement a Caesar cipher, which shifts each letter in a given string by a specified number of positions down the alphabet.\nSample Input: hello, 3\nSample Output: khoor\n",
+  "answer": "Sure, I'd be happy to help you implement a Caesar cipher in Python. Here's a simple implementation that takes a string and an integer shift value as input, and returns the ciphertext:\n\n```python\ndef caesar_cipher(text, shift):\n    \"\"\"\n    Encrypts a given string using a Caesar cipher with the specified shift value.\n\n    :param text: The string to encrypt.\n    :param shift: The number of positions to shift each letter down the alphabet.\n    :return: The encrypted string.\n    \"\"\"\n\n    # Ensure shift is within the valid range (0-25)\n    shift %= 26\n\n    # Create a translation table to map characters to their shifted equivalents\n    translation_table = str.maketrans(\n        alphabet,\n        alphabet[shift:] + alphabet[:shift]\n    )\n\n    # Encrypt the input string using the translation table\n    encrypted_text = text.translate(translation_table)\n\n    return encrypted_text\n\n\n# Define the alphabet for simplicity\nalphabet = 'abcdefghijklmnopqrstuvwxyz'\n\n# Test the function with sample inputs\nprint(caesar_cipher('hello', 3))  # Output: khoor\n```\n\nThis implementation uses a translation table to map each character in the input string to its shifted equivalent. The `str.maketrans()` function creates the translation table, and the `str.translate()` method applies the translation table to the input string. The `%` operator is used to ensure that the shift value is within the valid range (0-25).",
+  "error": null,
+  "elapsed_seconds": 4.53,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

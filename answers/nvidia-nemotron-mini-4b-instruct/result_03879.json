@@ -1,0 +1,9 @@
+{
+  "id": 3879,
+  "title": "Dictionary Subset",
+  "prompt": "Given two dictionaries with names of cities as keys and their populations as values, write a program to check if one dictionary is a subset of the other and print the result.\nSample Input: {'New York': 8450837, 'Los Angeles': 3990456}, {'New York': 8450837, 'Los Angeles': 3990456, 'Chicago': 2720599}\nSample Output: True\n",
+  "answer": "Here's a Python program that checks if one dictionary is a subset of the other:\n\n```python\ndef is_subset(dict1, dict2):\n    return set(dict1.keys()) <= set(dict2.keys())\n\nsample_input = {'New York': 8450837, 'Los Angeles': 3990456}\nsample_output = {'New York': 8450837, 'Los Angeles': 3990456, 'Chicago': 2720599}\n\nprint(is_subset(sample_input, sample_output))  # Output: True\n```\n\nThis program defines a function `is_subset()` that takes two dictionaries as arguments and returns `True` if the first dictionary is a subset of the second dictionary (i.e., every key in the first dictionary also exists as a key in the second dictionary), and `False` otherwise. It then uses this function to check if the sample input dictionary is a subset of the sample output dictionary, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 2.47,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9436,
+  "title": "Function with Coroutines",
+  "prompt": "Create a function that uses coroutines to asynchronously compute the sum of a list of numbers\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses coroutines (also known as generators or iterators) to compute the sum of a list of numbers asynchronously. This function uses the `yield` keyword to suspend the execution and allows the coroutine to be resumed later.\n\n```python\nimport asyncio\n\nasync def async_sum(numbers):\n    \"\"\"\n    Asynchronously computes the sum of a list of numbers using coroutines.\n\n    :param numbers: List of numbers\n    :return: Sum of the numbers\n    \"\"\"\n    total = 0\n    for num in numbers:\n        total += num\n        yield num\n\n    return total\n\n# Example usage\nnumbers = [1, 2, 3, 4, 5]\nasync_sum_task = asyncio.create_task(async_sum(numbers))\n\n# Wait for the task to complete\nresult = await async_sum_task\nprint(result)  # Output: 15\n```\n\nIn this example, the `async_sum` function is a coroutine that yields each number in the input list. The `asyncio.create_task` function is used to create a task that runs the coroutine asynchronously. The `await` keyword is used to suspend the execution and wait for the coroutine to complete, which in this case, yields the final sum of the numbers.",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

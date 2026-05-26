@@ -1,0 +1,9 @@
+{
+  "id": 4050,
+  "title": "Dictionary Copy Method",
+  "prompt": "Write a function that takes a dictionary as input and returns a copy of the dictionary.\nSample Input: { 'a': 1, 'b': 2, 'c': 3 }\nSample Output: { 'a': 1, 'b': 2, 'c': 3 }\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef copy_dict(input_dict):\n    \"\"\"\n    Returns a deep copy of the input dictionary.\n\n    :param input_dict: The dictionary to copy.\n    :return: A new dictionary that is a deep copy of the input dictionary.\n    \"\"\"\n    # Use the copy.deepcopy() function from the built-in `copy` module\n    # to create a deep copy of the input dictionary\n    return copy.deepcopy(input_dict)\n```\nHere's how you can use this function:\n```python\ninput_dict = {'a': 1, 'b': 2, 'c': 3}\ncopied_dict = copy_dict(input_dict)\n\n# You can now modify the copied dictionary without affecting the original\ncopied_dict['a'] = 4\nprint(copied_dict)  # Output: {'a': 4, 'b': 2, 'c': 3}\nprint(input_dict)   # Output: {'a': 1, 'b': 2, 'c': 3}\n```\nThis function uses the `copy.deepcopy()` function from the built-in `copy` module, which creates a deep copy of the input dictionary by recursively copying all its elements, including nested dictionaries and lists. This ensures that modifying the copied dictionary does not affect the original dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.36,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

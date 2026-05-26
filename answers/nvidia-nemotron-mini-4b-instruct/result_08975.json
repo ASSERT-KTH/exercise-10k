@@ -1,0 +1,9 @@
+{
+  "id": 8975,
+  "title": "String Starts With",
+  "prompt": "Write a function that takes a string and a substring as input and returns True if the string starts with the substring, False otherwise.\nSample Input: ['Hello World', 'Hello']\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef starts_with(string, substring):\n    \"\"\"\n    Returns True if the given string starts with the given substring,\n    and False otherwise.\n\n    :param string: The string to check.\n    :param substring: The substring to check for.\n    :return: True if the string starts with the substring, False otherwise.\n    \"\"\"\n    if not isinstance(string, str) or not isinstance(substring, str):\n        raise TypeError(\"Both 'string' and 'substring' must be strings.\")\n\n    return string.lower().startswith(substring.lower())\n```\nThis function checks if the input types are strings, and then converts both the string and the substring to lowercase before checking if the substring is a prefix of the string. This ensures that the function is case-insensitive and works correctly for strings of different lengths.\n\nHere's an example of how you can use this function:\n```python\nprint(starts_with('Hello World', 'Hello'))  # Output: True\nprint(starts_with('Hello World', 'hi'))     # Output: False\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.85,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

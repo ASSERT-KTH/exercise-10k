@@ -1,0 +1,9 @@
+{
+  "id": 3144,
+  "title": "Fibonacci Sequence",
+  "prompt": "Write a program to generate the Fibonacci sequence up to the nth term.\nSample Input: 10\nSample Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates the Fibonacci sequence up to the nth term:\n\n```python\ndef fibonacci(n):\n    \"\"\"Generate the Fibonacci sequence up to the nth term.\"\"\"\n    if n < 1:\n        raise ValueError(\"Number of terms must be at least 1\")\n\n    sequence = [0, 1]\n\n    while len(sequence) < n:\n        sequence.append(sequence[-1] + sequence[-2])\n\n    return sequence[:n]\n\n# Get user input for the number of terms\nn = int(input(\"Enter the number of Fibonacci terms to generate: \"))\n\n# Print the generated sequence\nprint(fibonacci(n))\n```\n\nWhen you run this program and enter `10` as the number of terms, it will output:\n\n```\nEnter the number of Fibonacci terms to generate: 10\n[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]\n```",
+  "error": null,
+  "elapsed_seconds": 2.71,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

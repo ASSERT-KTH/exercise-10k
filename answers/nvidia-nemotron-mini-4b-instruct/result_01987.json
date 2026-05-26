@@ -1,0 +1,9 @@
+{
+  "id": 1987,
+  "title": "Weather Forecast",
+  "prompt": "Write a program to determine the weather forecast based on the temperature using conditional statements\nSample Input: 25\nSample Output: Sunny\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that determines the weather forecast based on the temperature using conditional statements:\n\n```python\ndef get_weather_forecast(temperature):\n    \"\"\"\n    Determines the weather forecast based on the temperature.\n\n    :param temperature: The temperature as an integer between 0 and 40.\n    :return: A string indicating the weather forecast.\n    \"\"\"\n\n    # Define the temperature ranges for each weather condition\n    temperature_ranges = {\n        0: \"Freezing\",\n        10: \"Mild\",\n        20: \"Sunny\",\n        30: \"Hot\",\n        40: \"Very Hot\"\n    }\n\n    # Check the temperature range and return the corresponding weather forecast\n    return temperature_ranges.get(temperature, \"Invalid temperature\")\n\n# Get user input and print the weather forecast\nuser_input = int(input(\"Enter the temperature: \"))\nweather_forecast = get_weather_forecast(user_input)\nprint(f\"The weather forecast is: {weather_forecast}\")\n```\n\nThis program defines a function `get_weather_forecast` that takes an integer temperature as input and returns a string indicating the weather forecast based on the temperature range. The function uses a dictionary to map temperature ranges to corresponding weather forecasts. The program then gets user input, calls the function, and prints the weather forecast.",
+  "error": null,
+  "elapsed_seconds": 3.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

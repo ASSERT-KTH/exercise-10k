@@ -1,0 +1,9 @@
+{
+  "id": 2975,
+  "title": "Dynamic Programming",
+  "prompt": "Write a program that uses dynamic programming to solve a given problem. The problem should be: find the minimum number of coins needed to make change for a given amount.\nSample Input: amount\nSample Output: minimum coins: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses dynamic programming to find the minimum number of coins needed to make change for a given amount. This program assumes that the coins are of denominations `[1, 5, 10, 25]` and that the function `change(amount, coins)` returns the minimum number of coins needed to make change for the given amount.\n\n```python\ndef change(amount, coins):\n    # Initialize a table to store the minimum number of coins needed for each amount\n    dp = [float('inf')] * (amount + 1)\n    dp[0] = 0\n\n    # Fill the table using dynamic programming\n    for coin in coins:\n        for i in range(coin, amount + 1):\n            dp[i] = min(dp[i], dp[i - coin] + 1)\n\n    # Return the minimum number of coins needed for the given amount\n    return dp[amount] if dp[amount] != float('inf') else -1\n\n# Example usage\ncoins = [1, 5, 10, 25]\namount = 50\nprint(f\"Minimum coins: {change(amount, coins)}\")\n```\n\nThis program first initializes a table `dp` to store the minimum number of coins needed for each amount. It then iterates over each coin in the given denominations and for each amount from the coin's value to the given amount. For each amount, it updates the table entry using the minimum of the current entry and the entry for the previous amount minus the coin's value plus one. Finally, it returns the minimum number of coins needed for the given amount if the table entry is not `float('inf')`, indicating that a change can be made, or `-1` if no change can be made.",
+  "error": null,
+  "elapsed_seconds": 5.16,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

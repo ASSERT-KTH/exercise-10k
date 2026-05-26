@@ -1,0 +1,9 @@
+{
+  "id": 14,
+  "title": "File Input/Output",
+  "prompt": "Write a program to read from and write to a file.\nSample Input: write to file: hello world\nSample Output: read from file: hello world\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that demonstrates reading from and writing to a file. This program uses the built-in `open()` function to open the file for reading and writing, and the `read()` and `write()` methods to interact with the file.\n\n```python\n# Function to write to a file\ndef write_to_file(file_path, content):\n    with open(file_path, 'w') as file:\n        file.write(content)\n\n# Function to read from a file\ndef read_from_file(file_path):\n    with open(file_path, 'r') as file:\n        return file.read()\n\n# Test the functions\nwrite_to_file('sample.txt', 'hello world')\nprint(read_from_file('sample.txt'))  # Output: hello world\n```\n\nIn this program, the `write_to_file()` function opens the file for writing (`'w'`) and writes the given content to it. The `read_from_file()` function opens the file for reading (`'r'`) and returns its contents as a string. The `with` statement is used to ensure that the file is properly closed after reading or writing, even if an exception occurs.\n\nYou can replace the file path and content in the `write_to_file()` function call with your own values to write to a file and read from it.",
+  "error": null,
+  "elapsed_seconds": 3.25,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

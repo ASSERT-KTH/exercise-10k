@@ -1,0 +1,9 @@
+{
+  "id": 9277,
+  "title": "Pattern Printer",
+  "prompt": "Write a program that prints a pattern of asterisks (*) based on the input number. The pattern should be a square of asterisks with the size of the input number. For example, if the input is 5, the output should be a 5x5 square of asterisks.\nSample Input: 5\nSample Output: *****\n*****\n*****\n*****\n*****\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that prints a pattern of asterisks based on the input number, forming a square of asterisks with the size of the input number:\n```python\ndef print_square(n):\n    \"\"\"Print a square of asterisks with the given size.\"\"\"\n    # Check if the input is a positive integer\n    if not isinstance(n, int) or n < 1:\n        raise ValueError(\"Input must be a positive integer\")\n\n    # Print the top row\n    print(\"*\" * n)\n\n    # Print the remaining rows, one less than the input size\n    for i in range(1, n - 1):\n        print(\"*\" + (\" \" * (n - 2)) + \"*\")\n\n    # Print the bottom row\n    print(\"*\" * n)\n\n# Get user input and call the function\nn = int(input(\"Enter a positive integer: \"))\nprint_square(n)\n```\nThis program checks if the input is a positive integer, and then prints a square of asterisks with the given size. The `print_square` function uses a loop to print the top and bottom rows, and another loop to print the remaining rows, one less than the input size. The `*\" + (\" \" * (n - 2)) + \"*` line prints the central asterisks in each row.",
+  "error": null,
+  "elapsed_seconds": 3.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

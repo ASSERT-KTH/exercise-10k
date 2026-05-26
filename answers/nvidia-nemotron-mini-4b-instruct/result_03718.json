@@ -1,0 +1,9 @@
+{
+  "id": 3718,
+  "title": "Function to Calculate Hamming Distance",
+  "prompt": "Write a function that takes in two strings and returns the Hamming distance between them.\nSample Input: 'abc', 'abc'\nSample Output: 0\n",
+  "answer": "Sure, I'd be happy to help you with that! The Hamming distance between two strings is the number of positions at which the corresponding symbols are different. Here's a Python function that calculates the Hamming distance between two strings:\n\n```python\ndef hamming_distance(str1, str2):\n    \"\"\"\n    Calculates the Hamming distance between two strings.\n\n    :param str1: The first string.\n    :param str2: The second string.\n    :return: The Hamming distance between the two strings.\n    \"\"\"\n    # Ensure both inputs are strings\n    if not isinstance(str1, str) or not isinstance(str2, str):\n        raise TypeError(\"Both inputs must be strings.\")\n\n    # Calculate the length of the shorter string to avoid division by zero\n    min_length = min(len(str1), len(str2))\n\n    # Calculate the Hamming distance\n    hamming_distance = sum(c1 != c2 for c1, c2 in zip(str1, str2[:min_length]))\n\n    return hamming_distance\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(hamming_distance('abc', 'abc'))  # Output: 0\nprint(hamming_distance('abc', 'abd'))  # Output: 1\n```",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

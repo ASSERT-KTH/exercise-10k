@@ -1,0 +1,9 @@
+{
+  "id": 8378,
+  "title": "Square Root Calculation",
+  "prompt": "Write a program that calculates the square root of a given number using the Babylonian method.\nSample Input: 16\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! The Babylonian method, also known as Heron's method, is an iterative algorithm to find the square root of a number. Here's a Python program that calculates the square root of a given number using this method:\n\n```python\ndef babylonian_sqrt(n, tol=1e-6, max_iter=100):\n    \"\"\"\n    Calculate the square root of a given number using the Babylonian method.\n\n    :param n: The number to find the square root of.\n    :param tol: The tolerance for the iterative process. Default is 1e-6.\n    :param max_iter: The maximum number of iterations. Default is 100.\n    :return: The square root of n.\n    \"\"\"\n\n    # Initialize the guess and the counter\n    guess = n / 2\n    iter_count = 0\n\n    # Iterate until the tolerance is met or the maximum number of iterations is reached\n    while abs(guess**2 - n) > tol and iter_count < max_iter:\n        guess = (guess + n / guess) / 2\n        iter_count += 1\n\n    return guess\n\n# Example usage\nnumber = 16\nsqrt_value = babylonian_sqrt(number)\nprint(f\"The square root of {number} is approximately {sqrt_value}.\")\n```\n\nThis program defines a function `babylonian_sqrt` that takes a number `n`, a tolerance `tol`, and a maximum number of iterations `max_iter` as arguments. It then uses an iterative process to find the square root of `n` with the specified tolerance and maximum number of iterations. The example usage at the end of the program calculates the square root of 16 and prints the result.",
+  "error": null,
+  "elapsed_seconds": 4.1,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

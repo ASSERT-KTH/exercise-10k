@@ -1,0 +1,9 @@
+{
+  "id": 3299,
+  "title": "SIMON SAYS with While Loop",
+  "prompt": "Write a program that plays the Simon Says game with the user using a while loop.\nSample Input: SIMON SAYS touch your nose\nSample Output: You should touch your nose\n",
+  "answer": "Sure, I'd be happy to help you write a program for the Simon Says game. Here's an example Python program that uses a while loop to play the game with the user:\n\n```python\ndef play_simon_says():\n    \"\"\"Play the Simon Says game with the user.\"\"\"\n\n    # Initialize the sequence of colors and the user's sequence\n    colors = ['red', 'green', 'blue', 'yellow']\n    user_sequence = []\n\n    # Main game loop\n    while True:\n        # Get the user's sequence\n        print(\"Simon says:\")\n        user_sequence.clear()\n        while True:\n            command = input().upper().strip()\n            if command in colors:\n                user_sequence.append(command)\n                break\n            else:\n                print(\"That's not a valid color. Please try again.\")\n\n        # Check if the user's sequence matches Simon's sequence\n        if user_sequence == colors:\n            print(\"Congratulations! You won the Simon Says game!\")\n            break\n        else:\n            print(\"Sorry, that's not correct. The correct sequence was:\", colors)\n\n# Call the play_simon_says function\nplay_simon_says()\n```\n\nThis program defines a function `play_simon_says()` that prompts the user for their sequence and checks if it matches Simon's sequence. The game continues until the user wins or makes an incorrect guess.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

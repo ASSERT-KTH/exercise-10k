@@ -1,0 +1,9 @@
+{
+  "id": 3683,
+  "title": "GCD Calculator",
+  "prompt": "Write a program to calculate the greatest common divisor (GCD) of two numbers using the Euclidean algorithm.\nSample Input: 12, 18\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the greatest common divisor (GCD) of two numbers using the Euclidean algorithm:\n\n```python\ndef gcd(a, b):\n    \"\"\"\n    Calculate the greatest common divisor of two numbers using the Euclidean algorithm.\n\n    :param a: The first number.\n    :param b: The second number.\n    :return: The greatest common divisor of a and b.\n    \"\"\"\n    while b:\n        a, b = b, a % b\n    return abs(a)\n\n# Get sample input from the user\nnum1 = int(input(\"Enter the first number: \"))\nnum2 = int(input(\"Enter the second number: \"))\n\n# Calculate and print the GCD\ngcd_value = gcd(num1, num2)\nprint(f\"The greatest common divisor of {num1} and {num2} is {gcd_value}.\")\n```\n\nThis program defines a function `gcd(a, b)` that takes two numbers as arguments and returns their greatest common divisor. The Euclidean algorithm is implemented within this function. The program then prompts the user to enter two numbers, calls the `gcd()` function to calculate their GCD, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

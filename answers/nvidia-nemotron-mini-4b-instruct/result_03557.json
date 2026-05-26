@@ -1,0 +1,9 @@
+{
+  "id": 3557,
+  "title": "Array Superset Checking",
+  "prompt": "Write a program that takes two arrays as input, and returns a boolean indicating whether the first array is a superset of the second.\nSample Input: [1, 2, 3, 4, 5], [1, 2, 3]\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. It uses the built-in `set` data structure to efficiently check if the first array contains all elements from the second array. If the first array is a superset of the second, the function will return `True`, otherwise it will return `False`.\n\n```python\ndef is_superset(arr1, arr2):\n    \"\"\"\n    Returns True if arr1 is a superset of arr2, False otherwise.\n\n    :param arr1: The first array\n    :param arr2: The second array\n    :return: A boolean indicating whether arr1 is a superset of arr2\n    \"\"\"\n    # Convert the arrays to sets for efficient lookup\n    set1 = set(arr1)\n    set2 = set(arr2)\n\n    # Check if all elements in set1 are in set2\n    return set1 >= set2\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(is_superset([1, 2, 3, 4, 5], [1, 2, 3]))  # Output: True\nprint(is_superset([1, 2, 3], [1, 2, 3, 4]))  # Output: False\n```",
+  "error": null,
+  "elapsed_seconds": 3.26,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7338,
+  "title": "Input from Network",
+  "prompt": "Write a program that reads input from a network socket and prints out the contents.\nSample Input: example.net\nSample Output: This is an example network connection.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that reads input from a network socket and prints out the contents. In this example, I'll use the `socket` and `struct` modules to handle the network communication. Make sure you have the necessary libraries installed by running `pip install socket struct`.\n\n```python\nimport socket\nimport struct\n\ndef read_network_socket(host, port):\n    \"\"\"Reads input from a network socket and prints out the contents.\n\n    Args:\n        host (str): The hostname or IP address of the server.\n        port (int): The port number of the server.\n\n    Returns:\n        None\n    \"\"\"\n\n    # Create a socket object\n    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n\n    # Connect to the server\n    sock.connect((host, port))\n\n    try:\n        # Read the entire message from the socket\n        message = sock.recv(1024)\n\n        # Print the received message\n        print(f\"Received message: {message.decode('utf-8')}\")\n\n    finally:\n        # Close the socket\n        sock.close()\n\n\nif __name__ == \"__main__\":\n    host = \"example.net\"  # Replace with the actual hostname or IP address\n    port = 80  # Replace with the actual port number\n\n    read_network_socket(host, port)\n```\n\nThis program creates a socket, connects to the specified host and port, reads the entire message from the socket, and then prints out the received message. Make sure to replace the `host` and `port` variables with the actual hostname or IP address and port number of the server you want to connect to.",
+  "error": null,
+  "elapsed_seconds": 4.0,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 618,
+  "title": "Mode Calculator",
+  "prompt": "Write a program to calculate the mode of a set of numbers.\nSample Input: 1 2 2 3 4\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the mode of a set of numbers:\n\n```python\ndef find_mode(numbers):\n    \"\"\"\n    Find the mode of a set of numbers.\n\n    A mode is the most frequently occurring value in a set of numbers.\n    If there are multiple values with the same maximum frequency,\n    all of them can be considered the mode.\n\n    Parameters:\n    numbers (list): A list of numbers.\n\n    Returns:\n    int: The mode of the input numbers.\n    \"\"\"\n\n    # Count the occurrences of each number in the list\n    counts = {}\n    for num in numbers:\n        if num not in counts:\n            counts[num] = 0\n        counts[num] += 1\n\n    # Find the number with the maximum frequency\n    max_count = max(counts.values())\n    modes = [num for num, count in counts.items() if count == max_count]\n\n    # If there's only one mode, return it. Otherwise, return all modes.\n    return modes[0] if len(modes) == 1 else modes\n\n# Test the function with the given sample input\nnumbers = [1, 2, 2, 3, 4]\nprint(find_mode(numbers))  # Output: 2\n```\n\nThis program first counts the occurrences of each number in the input list using a dictionary. Then, it finds the number with the maximum frequency and returns it if there's only one mode. Otherwise, it returns all modes.",
+  "error": null,
+  "elapsed_seconds": 4.88,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

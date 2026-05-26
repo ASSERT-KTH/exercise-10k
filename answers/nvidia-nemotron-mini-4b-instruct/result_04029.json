@@ -1,0 +1,9 @@
+{
+  "id": 4029,
+  "title": "First Duplicate",
+  "prompt": "Create a function to find the first duplicate in an array of integers\nSample Input: [2, 1, 3, 5, 3, 2]\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the first duplicate in an array of integers. This function uses a set to keep track of the numbers we've seen so far, and checks if each number is already in the set. If it is, then that number is a duplicate and we return it. If not, we add it to the set and continue checking the next number.\n\n```python\ndef first_duplicate(arr):\n    \"\"\"\n    Find the first duplicate in an array of integers.\n\n    :param arr: List of integers\n    :return: First duplicate or None if no duplicates exist\n    \"\"\"\n    # Create an empty set to keep track of the numbers we've seen so far\n    seen = set()\n\n    for num in arr:\n        # Check if the number is already in the set. If it is, then we've found a duplicate\n        if num in seen:\n            return num\n        # Otherwise, add the number to the set and continue checking the next number\n        seen.add(num)\n\n    # If we reach this point, no duplicates were found\n    return None\n```\n\nYou can use this function as follows:\n\n```python\nprint(first_duplicate([2, 1, 3, 5, 3, 2]))  # Output: 3\nprint(first_duplicate([1, 2, 3, 4, 5]))     # Output: None\n```",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

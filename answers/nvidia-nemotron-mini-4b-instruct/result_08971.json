@@ -1,0 +1,9 @@
+{
+  "id": 8971,
+  "title": "String Find",
+  "prompt": "Write a function that takes a string and a substring as input and returns the index of the substring in the string.\nSample Input: ['Hello World', 'World']\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef find_substring_index(string, substring):\n    \"\"\"\n    Given a string and a substring, return the index of the substring in the string.\n\n    :param string: The string to search in.\n    :param substring: The substring to search for.\n    :return: The index of the substring in the string, or -1 if the substring is not found.\n    \"\"\"\n    if not isinstance(string, str) or not isinstance(substring, str):\n        raise TypeError(\"Both 'string' and 'substring' must be strings.\")\n\n    return string.find(substring)\n```\nThis function checks if the input types are strings, and raises a `TypeError` if they are not. Then, it uses the built-in `str.find()` method to return the index of the substring in the string. If the substring is not found, the method returns `-1`.\n\nHere's an example of how you can use this function:\n```python\nprint(find_substring_index(\"Hello World\", \"World\"))  # Output: 6\nprint(find_substring_index(\"Hello World\", \"Hello\"))  # Output: -1\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

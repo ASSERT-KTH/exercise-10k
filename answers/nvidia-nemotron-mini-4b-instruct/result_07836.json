@@ -1,0 +1,9 @@
+{
+  "id": 7836,
+  "title": "Array Element Checker",
+  "prompt": "Write a program that checks if a given element exists in a list or array. The program should take two inputs: the list/array and the target element. It should return 'True' if the element exists in the list/array, and 'False' otherwise.\nSample Input: [1, 2, 3, 4, 5], 3\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef element_in_list(lst, target):\n    \"\"\"\n    Check if a given element exists in a list/array.\n\n    Parameters:\n    lst (list or array-like): The list or array to search in.\n    target (any): The element to search for.\n\n    Returns:\n    bool: True if the element exists in the list/array, False otherwise.\n    \"\"\"\n    if not isinstance(lst, (list, tuple)):\n        raise TypeError(\"The first argument must be a list or tuple.\")\n    if not isinstance(target, (int, float, str)):\n        raise TypeError(\"The second argument must be a number or string.\")\n\n    return target in lst\n```\nThis function checks if the first argument is a list or tuple, and if the second argument is a number or string. If both conditions are met, it checks if the target element exists in the list using the `in` keyword.\n\nHere's an example of how to use this function:\n```python\nprint(element_in_list([1, 2, 3, 4, 5], 3))  # Output: True\nprint(element_in_list([1, 2, 3, 4, 5], 6))  # Output: False\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.31,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

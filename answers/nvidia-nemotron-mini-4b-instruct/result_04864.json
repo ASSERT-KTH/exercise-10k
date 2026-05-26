@@ -1,0 +1,9 @@
+{
+  "id": 4864,
+  "title": "Printing Patterns with Nested Loops",
+  "prompt": "Write a program that uses nested loops to print a square pattern of asterisks.\nSample Input: 5\nSample Output: ***\n***\n***\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses nested loops to print a square pattern of asterisks based on the given input:\n\n```python\ndef print_square(size):\n    \"\"\"Print a square pattern of asterisks of given size.\"\"\"\n    # Ensure the input is a positive integer\n    if size <= 0:\n        raise ValueError(\"Input size must be a positive integer.\")\n\n    # Print the top row\n    print(\"*\" * size)\n\n    # Print the remaining rows, increasing the number of spaces by one each time\n    for i in range(1, size):\n        print(\" \" * (size - i - 1) + \"*\" * (2 * i - 1))\n\n    # Print the bottom row\n    print(\"*\" * size)\n\n# Get user input and call the function\ntry:\n    size = int(input(\"Enter the size of the square pattern: \"))\n    print_square(size)\nexcept ValueError as e:\n    print(e)\n```\n\nThis program defines a function `print_square` that takes an integer `size` as input and prints a square pattern of asterisks with the given size. The function first prints the top row, then prints the remaining rows by increasing the number of spaces by one each time. Finally, it prints the bottom row. The program then gets user input for the size of the square pattern and calls the `print_square` function with the user input. If the user input is not a positive integer, the program prints an error message.",
+  "error": null,
+  "elapsed_seconds": 3.43,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9901,
+  "title": "Binary Search",
+  "prompt": "Write a program that performs a binary search on a sorted list of numbers.\nSample Input: [1, 2, 3, 4, 5] 3\nSample Output: Number found at index 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that performs a binary search on a sorted list of numbers:\n\n```python\ndef binary_search(sorted_list, target):\n    \"\"\"\n    Performs a binary search on a sorted list of numbers to find the target value.\n\n    :param sorted_list: A sorted list of numbers\n    :param target: The target value to search for\n    :return: The index of the target value if found, otherwise -1\n    \"\"\"\n\n    # Check if the list is empty\n    if not sorted_list:\n        return -1\n\n    left, right = 0, len(sorted_list) - 1\n\n    while left <= right:\n        mid = (left + right) // 2\n\n        if sorted_list[mid] == target:\n            return mid\n        elif sorted_list[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n\n    return -1\n\n\n# Example usage\nsorted_list = [1, 2, 3, 4, 5]\ntarget = 3\nindex = binary_search(sorted_list, target)\n\nif index != -1:\n    print(f\"Number found at index {index}\")\nelse:\n    print(f\"The number {target} was not found in the list\")\n```\n\nThis program defines a function `binary_search` that takes a sorted list and a target value as input, and returns the index of the target value if found, otherwise -1. The function uses a binary search algorithm to efficiently find the target value in the sorted list. The example usage at the end of the program demonstrates how to use the function to search for a specific number in a sorted list.",
+  "error": null,
+  "elapsed_seconds": 4.06,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

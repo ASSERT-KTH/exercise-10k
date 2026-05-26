@@ -1,0 +1,9 @@
+{
+  "id": 4666,
+  "title": "Longest Common Prefix",
+  "prompt": "Write a program that takes a list of strings as input and returns the longest common prefix.\nSample Input: ['hello', 'hello world', 'hello there']\nSample Output: hello\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a list of strings as input and returns the longest common prefix using a two-pointer approach:\n```python\ndef longest_common_prefix(strs):\n    if not strs:\n        return \"\"\n\n    shortest_str = min(strs, key=len)\n\n    for i, char in enumerate(shortest_str):\n        for other_str in strs[1:]:\n            if i >= len(other_str) or other_str[i] != char:\n                return shortest_str[:i]\n\n    return shortest_str\n```\nHere's how this program works:\n\n1. It first checks if the input list is empty. If it is, the function returns an empty string as there is no common prefix.\n2. It finds the shortest string in the list using the `min()` function with a key function that returns the length of each string.\n3. It initializes two pointers, `i` and `j`, to the first character of the shortest string and the first string in the list, respectively.\n4. It iterates over the characters of the shortest string, comparing them to the corresponding characters of the other strings in the list. If a character does not match in any of the other strings, it returns the prefix up to that point.\n5. If it completes the iteration without returning, it means that all strings have a common prefix up to the last character of the shortest string, so it returns that prefix.\n\nHere's an example of how you can use this function:\n```python\nstrs = ['hello', 'hello world', 'hello there']\nprint(longest_common_prefix(strs))  # Output: hello\n```",
+  "error": null,
+  "elapsed_seconds": 11.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

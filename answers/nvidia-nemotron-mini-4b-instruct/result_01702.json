@@ -1,0 +1,9 @@
+{
+  "id": 1702,
+  "title": "While Loop Calculator",
+  "prompt": "Create a program that uses a while loop to continuously ask the user for a calculation until they choose to quit.\nSample Input: 2 + 2\nquit\nSample Output: 4\nDo you want to calculate again? (yes/no)\n",
+  "answer": "Sure, I'd be happy to help you create a program that meets your requirements. Here's a Python solution using a while loop:\n\n```python\ndef calculate():\n    \"\"\"Continuously ask the user for a calculation until they choose to quit.\"\"\"\n\n    # Initialize a flag to keep track of whether the user wants to calculate again\n    calculate_again = True\n\n    while calculate_again:\n        # Ask the user for a calculation\n        calculation = input(\"Enter a calculation (or type 'quit' to exit): \")\n\n        # Check if the user wants to quit\n        if calculation.lower() == \"quit\":\n            print(\"Thank you for using the calculator!\")\n            calculate_again = False\n        else:\n            # Calculate the result and print it\n            try:\n                result = eval(calculation)\n                print(f\"The result of {calculation} is {result}.\")\n            except Exception as e:\n                print(f\"Error: {e}. Please enter a valid calculation.\")\n\n# Call the function to start the calculator\ncalculate()\n```\n\nThis program defines a function `calculate()` that continuously asks the user for a calculation until they type \"quit\". If the user enters a valid calculation, the program calculates the result and prints it. If the user enters an invalid calculation or types \"quit\", the program prints a message and breaks the loop.",
+  "error": null,
+  "elapsed_seconds": 3.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

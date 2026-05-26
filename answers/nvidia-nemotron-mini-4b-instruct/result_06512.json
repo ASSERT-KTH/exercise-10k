@@ -1,0 +1,9 @@
+{
+  "id": 6512,
+  "title": "Set Operations",
+  "prompt": "Write a program to perform basic set operations (union, intersection, difference).\nSample Input: {1, 2, 3} U {3, 4, 5}\nSample Output: {1, 2, 3, 4, 5}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that performs basic set operations (union, intersection, difference) using the built-in set data type. \n\n```python\ndef set_operations(set1, set2):\n    \"\"\"\n    Performs union, intersection, and difference operations on two sets.\n\n    :param set1: The first set\n    :param set2: The second set\n    :return: A tuple containing the union, intersection, and difference sets\n    \"\"\"\n\n    # Perform union operation\n    union = set1.union(set2)\n\n    # Perform intersection operation\n    intersection = set1.intersection(set2)\n\n    # Perform difference operation (set1 - set2)\n    difference = set1.difference(set2)\n\n    # Perform difference operation (set2 - set1)\n    difference_two = set2.difference(set1)\n\n    return (union, intersection, difference, difference_two)\n\n\n# Sample input\nset1 = {1, 2, 3}\nset2 = {3, 4, 5}\n\n# Call the function\nresult = set_operations(set1, set2)\n\n# Print the results\nprint(f\"Union: {result[0]}\")\nprint(f\"Intersection: {result[1]}\")\nprint(f\"Difference (set1 - set2): {result[2]}\")\nprint(f\"Difference (set2 - set1): {result[3]}\")\n```\n\nThis program defines a function `set_operations` that takes two sets as input and returns a tuple containing the union, intersection, difference, and difference of the two sets. The sample input `{1, 2, 3} U {3, 4, 5}` is used to demonstrate the output.",
+  "error": null,
+  "elapsed_seconds": 4.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

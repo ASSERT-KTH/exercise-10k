@@ -1,0 +1,9 @@
+{
+  "id": 2297,
+  "title": "Bank Account Manager",
+  "prompt": "Create a program that simulates a simple bank account system where the user can deposit, withdraw, and check their balance.\nSample Input: deposit 100\nSample Output: Balance: $100\n",
+  "answer": "Sure, I'd be happy to help you create a simple bank account system simulation program. Here's an example Python program that meets your requirements:\n\n```python\nclass BankAccount:\n    def __init__(self, balance=0):\n        self.balance = balance\n\n    def deposit(self, amount):\n        if amount > 0:\n            self.balance += amount\n            print(f\"Deposit successful. Balance: ${self.balance}\")\n        else:\n            print(\"Deposit amount must be positive.\")\n\n    def withdraw(self, amount):\n        if amount > 0 and self.balance >= amount:\n            self.balance -= amount\n            print(f\"Withdrawal successful. Balance: ${self.balance}\")\n        else:\n            print(\"Insufficient funds or withdrawal amount is negative.\")\n\n    def check_balance(self):\n        print(f\"Balance: ${self.balance}\")\n\n\n# Create a new bank account\naccount = BankAccount()\n\n# Perform some transactions\naccount.deposit(100)\naccount.withdraw(50)\naccount.check_balance()\n```\n\nThis program defines a `BankAccount` class with methods for depositing, withdrawing, and checking the balance. The `check_balance` method simply prints the current balance. The example usage at the end of the program demonstrates how to create a new bank account, perform some transactions, and check the balance.",
+  "error": null,
+  "elapsed_seconds": 3.18,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

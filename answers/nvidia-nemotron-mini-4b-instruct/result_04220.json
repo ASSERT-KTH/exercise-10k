@@ -1,0 +1,9 @@
+{
+  "id": 4220,
+  "title": "Outlier Detection",
+  "prompt": "Identify outliers in an array using the interquartile range (IQR) method.\nSample Input: [1, 2, 3, 4, 5, 100]\nSample Output: [100]\n",
+  "answer": "Sure, I'd be happy to help you identify outliers in an array using the IQR (Interquartile Range) method. Here's a Python function that does that:\n\n```python\ndef find_outliers(data):\n    # Calculate the quartiles\n    Q1 = sorted(data)[int(len(data) / 4)]\n    Q3 = sorted(data)[-int(len(data) / 4) - 1]\n\n    # Calculate the IQR\n    iqr = Q3 - Q1\n\n    # Identify outliers\n    outliers = []\n    for num in data:\n        if (num < Q1 - 1.5 * iqr) or (num > Q3 + 1.5 * iqr):\n            outliers.append(num)\n\n    return outliers\n```\n\nYou can use this function by passing a list of numbers as an argument, like this:\n\n```python\nprint(find_outliers([1, 2, 3, 4, 5, 100]))  # Output: [100]\n```\n\nThis function first calculates the quartiles (Q1 and Q3) of the input data. Then, it calculates the IQR (Q3 - Q1). Finally, it iterates through the input data and identifies any numbers that are more than 1.5 times the IQR below Q1 or above Q3 as outliers.",
+  "error": null,
+  "elapsed_seconds": 3.16,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

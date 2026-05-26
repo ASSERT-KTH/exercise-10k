@@ -1,0 +1,9 @@
+{
+  "id": 493,
+  "title": "Array Flattening",
+  "prompt": "Write a program that takes a 2D array as input, and returns a new array containing all elements from the subarrays.\nSample Input: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nSample Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a 2D array (or list of lists) as input and returns a new array containing all elements from the subarrays:\n```python\ndef flatten_2d_array(arr):\n    \"\"\"\n    Flattens a 2D array into a 1D array.\n\n    :param arr: The 2D array to flatten\n    :return: A new 1D array containing all elements from the subarrays\n    \"\"\"\n    # Use a list comprehension to flatten the 2D array\n    return [element for sublist in arr for element in sublist]\n```\nHere's an example of how you can use this function:\n```python\nsample_input = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nsample_output = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n\nflattened_array = flatten_2d_array(sample_input)\n\nprint(flattened_array == sample_output)  # True\n```\nThis program uses a list comprehension to iterate over each sublist in the input array and then over each element in each sublist. The resulting list contains all elements from the original 2D array.",
+  "error": null,
+  "elapsed_seconds": 3.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

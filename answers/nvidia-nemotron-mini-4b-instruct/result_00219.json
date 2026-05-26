@@ -1,0 +1,9 @@
+{
+  "id": 219,
+  "title": "CalculateAverage",
+  "prompt": "Create a function that calculates the average of all numbers in a list.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 3.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that calculates the average of all numbers in a list:\n\n```python\ndef calculate_average(numbers):\n    \"\"\"\n    Calculates the average of all numbers in a list.\n\n    :param numbers: List of numbers\n    :return: Average of the numbers\n    \"\"\"\n    # Check if the input is a non-empty list\n    if not isinstance(numbers, list) or len(numbers) == 0:\n        raise ValueError(\"Input should be a non-empty list\")\n\n    # Calculate the sum of all numbers and divide by the number of elements\n    total_sum = sum(numbers)\n    average = total_sum / len(numbers)\n\n    return average\n```\n\nYou can use this function as follows:\n\n```python\nnumbers = [1, 2, 3, 4, 5]\naverage = calculate_average(numbers)\nprint(average)  # Output: 3.0\n```\n\nThis function checks if the input is a non-empty list and raises a `ValueError` if it's not. Then, it calculates the sum of all numbers and divides it by the number of elements in the list to get the average.",
+  "error": null,
+  "elapsed_seconds": 4.03,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

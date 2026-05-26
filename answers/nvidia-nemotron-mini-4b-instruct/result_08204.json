@@ -1,0 +1,9 @@
+{
+  "id": 8204,
+  "title": "Hex Dump",
+  "prompt": "Write a program that prints a hex dump of a binary file using a for loop.\nSample Input: example.bin\nSample Output: 00 01 02 03 04 05\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that prints a hex dump of a binary file using a for loop. This program assumes that the binary file is in a format where each byte is stored as a single character (ASCII or UTF-8). If your binary file has multi-byte characters, you may need to use a different approach or a library like `struct` to handle the data correctly.\n\n```python\nimport os\n\ndef print_hex_dump(file_path):\n    \"\"\"Print a hex dump of a binary file.\"\"\"\n    if not os.path.isfile(file_path):\n        print(f\"Error: The file '{file_path}' does not exist.\")\n        return\n\n    with open(file_path, 'rb') as file:\n        data = file.read()\n\n    for i, byte in enumerate(data):\n        print(f\"{i:02X} {byte.hex()}\")\n\n# Example usage:\nfile_path = \"example.bin\"\nprint_hex_dump(file_path)\n```\n\nThis program defines a function `print_hex_dump` that takes a file path as an argument and prints a hex dump of the binary file. The function opens the file in binary mode, reads its contents, and then iterates over each byte in the data. For each byte, it prints its position (in hexadecimal format) and its hexadecimal representation.\n\nYou can replace `\"example.bin\"` with the path to your binary file to print its hex dump.",
+  "error": null,
+  "elapsed_seconds": 3.63,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7094,
+  "title": "Reverse Number Sequence",
+  "prompt": "Read a positive integer from the user and print a sequence of numbers from that number down to 1\nSample Input: 5\nSample Output: 5\n4\n3\n2\n1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution that reads a positive integer from the user, prints a sequence of numbers from that number down to 1, and handles edge cases such as zero or negative inputs:\n```python\ndef print_sequence(n):\n    \"\"\"Print a sequence of numbers from n down to 1.\"\"\"\n    if n < 1:\n        print(\"Error: Input must be a positive integer.\")\n        return\n\n    # Print the sequence in reverse order to start with the largest number\n    for i in range(n, 0, -1):\n        print(i)\n\n# Get user input and call the function\ntry:\n    user_input = int(input(\"Enter a positive integer: \"))\n    print_sequence(user_input)\nexcept ValueError:\n    print(\"Error: Input must be a valid integer.\")\n```\nWhen you run this program, it will prompt the user to enter a positive integer. If the user enters a valid integer, the program will print a sequence of numbers from that number down to 1. If the user enters an invalid input (such as a non-integer value or a negative integer), the program will catch the `ValueError` exception and print an error message.",
+  "error": null,
+  "elapsed_seconds": 3.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

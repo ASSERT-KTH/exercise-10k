@@ -1,0 +1,9 @@
+{
+  "id": 7277,
+  "title": "Number Classifier",
+  "prompt": "Write a program that takes an integer as input and classifies it as positive, negative, or zero using conditional statements. The program should also check if the number is even or odd.\nSample Input: 10\nSample Output: The number 10 is positive and even.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef classify_number(num):\n    \"\"\"\n    Classifies an integer as positive, negative, or zero, and checks if it's even or odd.\n\n    :param num: The integer to classify.\n    :return: A string indicating the classification.\n    \"\"\"\n    # Check if the number is zero\n    if num == 0:\n        return f\"The number {num} is zero.\"\n\n    # Check if the number is positive or negative\n    if num > 0:\n        classification = \"positive\"\n    elif num < 0:\n        classification = \"negative\"\n    else:\n        classification = \"zero\"\n\n    # Check if the number is even or odd\n    if num % 2 == 0:\n        evenness = \"even\"\n    else:\n        evenness = \"odd\"\n\n    # Construct and return the classification string\n    return f\"The number {num} is {classification} and {evenness}.\"\n\n# Get user input\nuser_input = int(input(\"Enter an integer: \"))\n\n# Call the classify_number function and print the result\nprint(classify_number(user_input))\n```\nThis program defines a function `classify_number` that takes an integer as input, checks if it's zero, positive, negative, or zero, and checks if it's even or odd. The function returns a string indicating the classification. The program then prompts the user to enter an integer, calls the `classify_number` function with the user input, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 4.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

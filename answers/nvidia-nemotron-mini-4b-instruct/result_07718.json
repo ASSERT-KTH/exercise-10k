@@ -1,0 +1,9 @@
+{
+  "id": 7718,
+  "title": "Duplicate Character Detection",
+  "prompt": "Determine if a given string contains any duplicate characters.\nSample Input: hello\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that determines if a given string contains any duplicate characters:\n\n```python\ndef has_duplicates(s: str) -> bool:\n    \"\"\"\n    Determines if a given string contains any duplicate characters.\n\n    :param s: The string to check.\n    :return: True if the string contains duplicate characters, False otherwise.\n    \"\"\"\n    # Create a set to store the unique characters in the string\n    unique_chars = set()\n\n    # Iterate over each character in the string\n    for char in s:\n        # If the character is already in the set, it's a duplicate\n        if char in unique_chars:\n            return True\n        # Add the character to the set to ensure it's unique\n        unique_chars.add(char)\n\n    # If we didn't find any duplicates, return False\n    return False\n```\n\nYou can call this function with a string as an argument, like this:\n\n```python\nprint(has_duplicates(\"hello\"))  # Output: True\nprint(has_duplicates(\"world\"))  # Output: False\n```\n\nThis function works by iterating over each character in the input string and checking if it's already in a set of unique characters. If a duplicate character is found, the function immediately returns `True`. If the function iterates over all characters in the string without finding any duplicates, it returns `False`.",
+  "error": null,
+  "elapsed_seconds": 3.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

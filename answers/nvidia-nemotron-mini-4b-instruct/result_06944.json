@@ -1,0 +1,9 @@
+{
+  "id": 6944,
+  "title": "Function with Lazy Evaluation",
+  "prompt": "Create a function that uses lazy evaluation to delay its execution\nSample Input: None\nSample Output: a function with delayed execution\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example of a Python function that uses lazy evaluation to delay its execution. In Python, functions can be defined to use lazy evaluation by defining a generator function instead of a regular function. The generator function will yield one or more values on demand, allowing the function to be executed only when needed.\n\n```python\ndef delayed_execution():\n    \"\"\"A function with delayed execution using lazy evaluation.\"\"\"\n\n    # Define a generator function that yields values on demand\n    def generator():\n        for i in range(1, 6):\n            yield i * i\n\n    # The delayed_execution function returns the generator function\n    return generator\n\n# Example usage:\ndelayed_execution_func = delayed_execution()\n\n# The function is not executed until we call the next() function\nprint(next(delayed_execution_func))  # Output: 1\nprint(next(delayed_execution_func))  # Output: 4\nprint(next(delayed_execution_func))  # Output: 9\nprint(next(delayed_execution_func))  # Output: 16\n```\n\nIn this example, the `delayed_execution` function returns a generator function that yields the squares of numbers from 1 to 5. The `next()` function is called on the generator, which returns the next value in the sequence. This process continues until the end of the sequence is reached, at which point `StopIteration` is raised, and the function returns `None`.",
+  "error": null,
+  "elapsed_seconds": 3.43,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

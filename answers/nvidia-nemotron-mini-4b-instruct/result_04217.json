@@ -1,0 +1,9 @@
+{
+  "id": 4217,
+  "title": "Median Calculation",
+  "prompt": "Calculate the median of an array.\nSample Input: [1, 3, 5, 2, 4]\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you calculate the median of an array. The median of a set of numbers is the middle value when the numbers are arranged in order from least to greatest. If the set has an even number of elements, the median is the average (arithmetic mean) of the two middle values. Here's a Python function that calculates the median of an array:\n\n```python\ndef calculate_median(arr):\n    # Sort the array in ascending order\n    arr.sort()\n\n    # Calculate the length of the array\n    n = len(arr)\n\n    # If the length is odd, the median is the middle element\n    if n % 2 == 1:\n        return arr[n // 2]\n    else:\n        # If the length is even, the median is the average of the two middle elements\n        mid1 = arr[n // 2 - 1]\n        mid2 = arr[n // 2]\n        return (mid1 + mid2) / 2\n```\n\nYou can use this function to calculate the median of an array as follows:\n\n```python\narr = [1, 3, 5, 2, 4]\nmedian = calculate_median(arr)\nprint(median)  # Output: 3\n```\n\nThis function first sorts the array in ascending order using the built-in `sort()` method. Then, it calculates the length of the array and checks if the length is odd or even. If the length is odd, the median is the middle element. If the length is even, the median is the average of the two middle elements.",
+  "error": null,
+  "elapsed_seconds": 3.6,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

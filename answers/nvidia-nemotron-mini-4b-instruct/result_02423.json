@@ -1,0 +1,9 @@
+{
+  "id": 2423,
+  "title": "Guessing Game",
+  "prompt": "Develop a program where the user has to guess a randomly generated number between 1 and 100. The program should provide hints if the guess is too high or too low, using a while loop.\nSample Input: 50\nSample Output: Too low, try again!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\nimport random\n\n# Generate a random number between 1 and 100\ntarget = random.randint(1, 100)\n\n# Initialize variables for user input and hints\nguess = None\nhints = 0\n\n# Main loop of the program\nwhile guess != target:\n    # Get user input and convert it to an integer\n    guess = int(input(\"Guess a number between 1 and 100: \"))\n\n    # Increment hints if user input is not a number\n    if not isinstance(guess, int):\n        hints += 1\n        continue\n\n    # Provide hints based on whether the guess is too high or too low\n    if guess < target:\n        print(f\"Too low, try again!\")\n    elif guess > target:\n        print(f\"Too high, try again!\")\n    else:\n        print(f\"Congratulations! You guessed the number in {hints + 1} attempts.\")\n\n# If the user guesses the number on the first try, print a message\nif guess == target:\n    print(\"You guessed the number on the first try! Well done!\")\n```\n\nThis program generates a random number between 1 and 100, then enters a while loop that continues until the user guesses the correct number. The loop checks if the user input is a number, and if not, increments the hints counter and continues to the next iteration. If the user input is a number, the program checks if it's too high or too low, and provides a hint accordingly. Finally, the program checks if the user guessed the number on the first try, and prints a message accordingly.",
+  "error": null,
+  "elapsed_seconds": 4.62,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

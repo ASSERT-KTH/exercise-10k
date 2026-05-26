@@ -1,0 +1,9 @@
+{
+  "id": 3565,
+  "title": "Dictionary Filter",
+  "prompt": "Write a function that filters a dictionary based on a given condition and returns the filtered dictionary\nSample Input: {\"a\": 1, \"b\": 2, \"c\": 3} and condition (value > 1)\nSample Output: {\"b\": 2, \"c\": 3}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef filter_dict(input_dict, condition):\n    \"\"\"\n    Filters a dictionary based on a given condition and returns the filtered dictionary.\n\n    Parameters:\n    input_dict (dict): The input dictionary to filter.\n    condition (callable): A function that takes a single argument (the value of a dictionary key) and returns a boolean.\n                          The function should be applied to each value in the input dictionary.\n\n    Returns:\n    dict: The filtered dictionary that only includes keys for which the condition returns True.\n    \"\"\"\n    return {k: v for k, v in input_dict.items() if condition(v)}\n```\nHere's an example of how you can use this function:\n```python\ninput_dict = {\"a\": 1, \"b\": 2, \"c\": 3}\ncondition = lambda value: value > 1\nfiltered_dict = filter_dict(input_dict, condition)\nprint(filtered_dict)  # Output: {'b': 2, 'c': 3}\n```\nThis function uses a dictionary comprehension to create a new dictionary that only includes keys for which the condition returns True. The `condition` parameter can be any callable function that takes a single argument (the value of a dictionary key) and returns a boolean.",
+  "error": null,
+  "elapsed_seconds": 3.23,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

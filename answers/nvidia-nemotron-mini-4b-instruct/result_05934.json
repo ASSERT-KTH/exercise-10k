@@ -1,0 +1,9 @@
+{
+  "id": 5934,
+  "title": "Checking for Valid Passwords",
+  "prompt": "Write a program that takes a string as input and checks if it is a valid password. A valid password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, and one digit.\nSample Input: Password123\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given string is a valid password:\n\n```python\nimport re\n\ndef is_valid_password(password):\n    \"\"\"\n    Check if a given string is a valid password.\n\n    A valid password must be at least 8 characters long, contain at least one uppercase letter,\n    one lowercase letter, and one digit.\n\n    :param password: str - The password to check\n    :return: bool - True if the password is valid, False otherwise\n    \"\"\"\n\n    # Check if the password is at least 8 characters long\n    if len(password) < 8:\n        return False\n\n    # Check if the password contains at least one uppercase letter, one lowercase letter, and one digit\n    if not re.search(r'[A-Z]', password):\n        return False\n    if not re.search(r'[a-z]', password):\n        return False\n    if not re.search(r'\\d', password):\n        return False\n\n    return True\n```\n\nYou can use this function to check if a given password is valid by calling `is_valid_password(password)`. For example:\n\n```python\nprint(is_valid_password(\"Password123\"))  # Output: True\nprint(is_valid_password(\"shortpassword\"))  # Output: False\nprint(is_valid_password(\"uppercasepassword\"))  # Output: True\nprint(is_valid_password(\"password123\"))  # Output: False\n```",
+  "error": null,
+  "elapsed_seconds": 3.65,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4970,
+  "title": "String Splitting",
+  "prompt": "Write a function that splits a string into a list of substrings based on a delimiter\nSample Input: ['Hello World', ' ']\nSample Output: ['Hello', 'World']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef split_string_by_delimiter(input_string, delimiter):\n    \"\"\"\n    Splits a string into a list of substrings based on a delimiter.\n\n    Parameters:\n    input_string (str): The string to be split.\n    delimiter (str): The character or substring that separates the substrings.\n\n    Returns:\n    list: A list of substrings in the input string, separated by the delimiter.\n    \"\"\"\n    # Use list comprehension to split the string and convert the result to a list\n    return [substring.strip() for substring in input_string.split(delimiter)]\n```\nHere's an example of how you can use this function:\n```python\ninput_string = 'Hello World'\ndelimiter = ' '\n\nresult = split_string_by_delimiter(input_string, delimiter)\nprint(result)  # Output: ['Hello', 'World']\n```\nThis function first uses the `split()` method to split the input string into a list of substrings, and then uses a list comprehension to filter out any empty strings and convert the result to a list. The `strip()` method is used to remove any leading or trailing whitespace from each substring before adding it to the result list.",
+  "error": null,
+  "elapsed_seconds": 3.23,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

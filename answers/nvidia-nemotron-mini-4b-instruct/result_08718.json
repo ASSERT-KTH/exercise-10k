@@ -1,0 +1,9 @@
+{
+  "id": 8718,
+  "title": "Octal Converter",
+  "prompt": "Ask the user for a decimal number and print out its octal equivalent.\nSample Input: 10\nSample Output: 12\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution that follows your specifications:\n\n```python\ndef decimal_to_octal(decimal):\n    \"\"\"\n    Converts a decimal number to its octal equivalent.\n\n    :param decimal: The decimal number to convert.\n    :return: The octal equivalent of the decimal number.\n    \"\"\"\n    if not isinstance(decimal, (int, float)):\n        raise TypeError(\"The input must be a number.\")\n\n    # Convert the decimal number to a string and then to octal\n    return oct(decimal)[2:]  # Remove the '0o' prefix\n\n\n# Get user input\ndecimal_number = float(input(\"Enter a decimal number: \"))\n\n# Print the octal equivalent\nprint(f\"The octal equivalent of {decimal_number} is {decimal_to_octal(decimal_number)}.\")\n```\n\nThis script defines a function `decimal_to_octal` that takes a decimal number as input and returns its octal equivalent as a string. The main part of the script prompts the user to enter a decimal number, converts it to a float, and then calls the `decimal_to_octal` function to get its octal equivalent. Finally, it prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

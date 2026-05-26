@@ -1,0 +1,9 @@
+{
+  "id": 2993,
+  "title": "Check if String is Anagram",
+  "prompt": "Write a program that checks if two given strings are anagrams of each other.\nSample Input: ['listen', 'silent']\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if two given strings are anagrams of each other:\n\n```python\ndef are_anagrams(str1, str2):\n    \"\"\"\n    Check if two given strings are anagrams of each other.\n\n    :param str1: The first string to compare.\n    :param str2: The second string to compare.\n    :return: True if the strings are anagrams, False otherwise.\n    \"\"\"\n    # Remove any non-alphanumeric characters and convert to lowercase\n    str1 = ''.join(c.lower() for c in str1 if c.isalnum())\n    str2 = ''.join(c.lower() for c in str2 if c.isalnum())\n\n    # Check if the lengths of the strings are equal and if they contain the same characters\n    return len(str1) == len(str2) and set(str1) == set(str2)\n\n# Example usage\nstrings = ['listen', 'silent']\nfor i in range(len(strings)):\n    for j in range(i + 1, len(strings)):\n        if are_anagrams(strings[i], strings[j]):\n            print(f\"{strings[i]} and {strings[j]} are anagrams.\")\n```\n\nThis program first removes any non-alphanumeric characters from the input strings and converts them to lowercase. Then, it checks if the lengths of the strings are equal and if the sets of their characters are equal, which indicates that the strings are anagrams. The example usage at the end of the program demonstrates how to use the `are_anagrams` function to check if two strings are anagrams of each other.",
+  "error": null,
+  "elapsed_seconds": 4.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

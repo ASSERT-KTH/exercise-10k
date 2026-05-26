@@ -1,0 +1,9 @@
+{
+  "id": 2872,
+  "title": "Longest Substring",
+  "prompt": "Create a function to find the longest substring of a given string without repeating characters\nSample Input: abcabcbb\nSample Output: abc\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the longest substring of a given string without repeating characters using a sliding window approach. This function uses two pointers, `left` and `right`, to keep track of the start and end of the current substring. It also uses a set to keep track of the characters that have appeared in the substring so far to avoid repeating them.\n\n```python\ndef longest_substring(s: str) -> str:\n    \"\"\"\n    Find the longest substring of a given string without repeating characters.\n\n    :param s: The input string.\n    :return: The longest substring without repeating characters.\n    \"\"\"\n    if not s:\n        return \"\"\n\n    max_length = 1\n    start = 0\n    char_set = set()\n\n    for right in range(len(s)):\n        if s[right] in char_set:\n            # If a character has appeared before, move the left pointer to skip it\n            while s[left] != s[right]:\n                char_set.remove(s[left])\n                left += 1\n            left += 1\n        char_set.add(s[right])\n\n        # Update the maximum length if necessary\n        max_length = max(max_length, right - left + 1)\n\n    return s[start:start + max_length]\n```\n\nYou can test the function with the sample input as follows:\n\n```python\nprint(longest_substring(\"abcabcbb\"))  # Output: abc\n```",
+  "error": null,
+  "elapsed_seconds": 3.6,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

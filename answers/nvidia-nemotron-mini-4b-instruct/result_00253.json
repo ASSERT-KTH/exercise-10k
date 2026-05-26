@@ -1,0 +1,9 @@
+{
+  "id": 253,
+  "title": "Array Difference",
+  "prompt": "Write a program that takes two arrays as input, and returns a new array that contains only the elements that are in the first array but not in the second array.\nSample Input: [1, 2, 3, 4, 5], [4, 5, 6, 7, 8]\nSample Output: [1, 2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef array_difference(arr1, arr2):\n    \"\"\"\n    Given two arrays, return a new array containing only the elements that are in the first array but not in the second array.\n\n    :param arr1: The first array\n    :param arr2: The second array\n    :return: A new array containing the elements from arr1 that are not in arr2\n    \"\"\"\n    # Use set operations to find the elements in arr1 that are not in arr2\n    return list(set(arr1) - set(arr2))\n```\nHere's how you can use this function:\n```python\narr1 = [1, 2, 3, 4, 5]\narr2 = [4, 5, 6, 7, 8]\nresult = array_difference(arr1, arr2)\nprint(result)  # Output: [1, 2, 3]\n```\nThis program first converts both input arrays to sets, which allows for faster lookup times. Then, it uses the `-` set operator to find the elements in `arr1` that are not in `arr2`. Finally, it converts the resulting set back to a list and returns it.",
+  "error": null,
+  "elapsed_seconds": 3.15,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

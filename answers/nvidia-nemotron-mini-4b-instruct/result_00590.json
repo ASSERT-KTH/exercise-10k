@@ -1,0 +1,9 @@
+{
+  "id": 590,
+  "title": "Find the First Non-Repeating Character",
+  "prompt": "Write a program that takes a string as input and returns the first non-repeating character in the string.\nSample Input: aabbc\nSample Output: c\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef first_non_repeating(s: str) -> str:\n    \"\"\"\n    Given a string, return the first non-repeating character in the string.\n\n    :param s: The input string.\n    :return: The first non-repeating character in the string, or an empty string if there is no such character.\n    \"\"\"\n    if not s:  # Check for empty string\n        return \"\"\n\n    # Create a dictionary to store the count of each character\n    char_count = {}\n    for char in s:\n        if char in char_count:\n            char_count[char] += 1\n        else:\n            char_count[char] = 1\n\n    # Iterate through the string again and return the first non-repeating character\n    for char in s:\n        if char_count[char] == 1:\n            return char\n\n    # If no non-repeating character is found, return an empty string\n    return \"\"\n```\nHere's an example of how you can use this function:\n```python\nprint(first_non_repeating(\"aabbc\"))  # Output: c\nprint(first_non_repeating(\"\"))       # Output: \"\"\nprint(first_non_repeating(\"hello\"))  # Output: h\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 11.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

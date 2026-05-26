@@ -1,0 +1,9 @@
+{
+  "id": 9016,
+  "title": "Error Handling",
+  "prompt": "Write a function that demonstrates error handling using try-except blocks.\nSample Input: divide(10, 0)\nSample Output: error: division by zero\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that demonstrates error handling using a `try-except` block to catch a `ZeroDivisionError` exception. The function is named `divide` and takes two arguments: the first is the numerator, and the second is the denominator.\n\n```python\ndef divide(numerator, denominator):\n    \"\"\"\n    Performs integer division of the numerator by the denominator.\n\n    :param numerator: The numerator of the division.\n    :param denominator: The denominator of the division.\n    :return: The result of the integer division.\n    :raises ZeroDivisionError: If the denominator is zero.\n    \"\"\"\n    try:\n        result = numerator // denominator\n        return result\n    except ZeroDivisionError as e:\n        print(f\"error: {e}\")\n        return None\n```\n\nNow, let's test the function with the sample input `divide(10, 0)`. Here's how the output would look like:\n\n```\nerror: division by zero\n```\n\nThis demonstrates how the `try-except` block catches the `ZeroDivisionError` exception and prints an error message. If the division is successful, the function returns the result.",
+  "error": null,
+  "elapsed_seconds": 2.93,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

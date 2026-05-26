@@ -1,0 +1,9 @@
+{
+  "id": 6479,
+  "title": "Dictionary Update from List",
+  "prompt": "Write a function that takes a dictionary and a list of key-value pairs as input and updates the dictionary with the new key-value pairs\nSample Input: {'name': 'John'}, [['age', 30], ['city', 'New York']]\nSample Output: {'name': 'John', 'age': 30, 'city': 'New York'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef update_dict_with_pairs(existing_dict, new_pairs):\n    \"\"\"\n    Updates a dictionary with new key-value pairs from a list of key-value pairs.\n\n    Parameters:\n    existing_dict (dict): The dictionary to update.\n    new_pairs (list of tuples): A list of key-value pairs to add to the existing dictionary.\n\n    Returns:\n    dict: The updated dictionary with the new key-value pairs.\n    \"\"\"\n    # Combine the existing dictionary and the new pairs into a single dictionary\n    updated_dict = {**existing_dict, **{pair[0]: pair[1] for pair in new_pairs}}\n\n    return updated_dict\n```\nHere's an example of how to use this function:\n```python\nexisting_dict = {'name': 'John'}\nnew_pairs = [['age', 30], ['city', 'New York']]\n\nupdated_dict = update_dict_with_pairs(existing_dict, new_pairs)\nprint(updated_dict)  # Output: {'name': 'John', 'age': 30, 'city': 'New York'}\n```\nThis function uses the `**` operator to combine two dictionaries, which allows it to update the existing dictionary with the new key-value pairs. The `{pair[0]: pair[1] for pair in new_pairs}` part of the `updated_dict` line creates a new dictionary that maps each key in the `new_pairs` list to its corresponding value. Finally, the `**` operator is used again to combine this new dictionary with the existing dictionary.",
+  "error": null,
+  "elapsed_seconds": 4.09,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

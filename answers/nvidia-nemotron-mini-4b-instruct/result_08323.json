@@ -1,0 +1,9 @@
+{
+  "id": 8323,
+  "title": "Input Validation and Formatting",
+  "prompt": "Create a program that takes a user's full name and age as input, validates if the age is within the range of 1 to 120, and then formats the output to display the user's name in title case and the age with a descriptive message based on the age group (child: 1-12, teenager: 13-19, adult: 20-64, senior: 65 and above). If the age is not within the valid range, display an error message.\nSample Input: john DOE 25\nSample Output: John Doe is an adult.\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef get_age_group(age):\n    if age < 1 or age > 120:\n        return \"Error: Age must be between 1 and 120.\"\n    elif age < 13:\n        return \"child\"\n    elif age < 20:\n        return \"teenager\"\n    elif age < 65:\n        return \"adult\"\n    else:\n        return \"senior\"\n\ndef main():\n    name = input(\"Enter your full name: \")\n    name = name.title()  # convert to title case\n    age = int(input(\"Enter your age: \"))\n\n    group = get_age_group(age)\n\n    if group == \"Error\":\n        print(group)\n    else:\n        print(f\"{name} is a {group}.\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program defines two functions: `get_age_group()` which validates the age and returns the appropriate age group based on the age range, and `main()` which gets user input, calls `get_age_group()`, and prints the result. The program handles errors by returning an error message if the age is not within the valid range.",
+  "error": null,
+  "elapsed_seconds": 3.01,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

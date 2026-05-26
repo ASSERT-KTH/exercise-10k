@@ -1,0 +1,9 @@
+{
+  "id": 6328,
+  "title": "List Search",
+  "prompt": "Write a function that takes a list and an element as input, searches for the element in the list, and returns its index if found, or -1 if not found.\nSample Input: [1, 2, 3, 4, 5], 3\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef find_index(lst, elem):\n    \"\"\"\n    Searches for the element in the list and returns its index if found,\n    or -1 if not found.\n\n    Parameters:\n    lst (list): The list to search in.\n    elem (any): The element to search for.\n\n    Returns:\n    int: The index of the element in the list, or -1 if not found.\n    \"\"\"\n    try:\n        return lst.index(elem)\n    except ValueError:\n        return -1\n```\nThis function uses the built-in `list.index()` method to search for the element in the list. If the element is not found, it raises a `ValueError`, which is caught and handled by returning -1. Here's an example of how to use this function:\n```python\nprint(find_index([1, 2, 3, 4, 5], 3))  # Output: 2\nprint(find_index([1, 2, 3, 4, 5], 6))  # Output: -1\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.96,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

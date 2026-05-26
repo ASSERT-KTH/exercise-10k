@@ -1,0 +1,9 @@
+{
+  "id": 8098,
+  "title": "String Splitter",
+  "prompt": "Write a program that takes a string and a delimiter as input and returns a list of substrings split by the delimiter.\nSample Input: Hello,World,Python,Programming\nSample Output: ['Hello', 'World', 'Python', 'Programming']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef split_string_by_delimiter(input_string: str, delimiter: str) -> list:\n    \"\"\"\n    Splits a given input string into a list of substrings separated by the delimiter.\n\n    :param input_string: The input string to be split.\n    :param delimiter: The delimiter to use for splitting the input string.\n    :return: A list of substrings split by the delimiter.\n    \"\"\"\n    # Ensure the delimiter is a string and not an empty string\n    if not isinstance(delimiter, str) or delimiter == \"\":\n        raise ValueError(\"The delimiter must be a non-empty string.\")\n\n    # Split the input string into a list of substrings using the delimiter\n    substrings = input_string.split(delimiter)\n\n    return substrings\n```\nHere's an example of how to use this function:\n```python\ninput_string = \"Hello,World,Python,Programming\"\ndelimiter = \",\"\n\nsplit_list = split_string_by_delimiter(input_string, delimiter)\nprint(split_list)  # Output: ['Hello', 'World', 'Python', 'Programming']\n```\nThis function first checks if the input `delimiter` is a non-empty string. If not, it raises a `ValueError`. Then, it uses the built-in `str.split()` method to split the input `input_string` into a list of substrings using the delimiter. Finally, it returns the list of substrings.",
+  "error": null,
+  "elapsed_seconds": 3.63,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

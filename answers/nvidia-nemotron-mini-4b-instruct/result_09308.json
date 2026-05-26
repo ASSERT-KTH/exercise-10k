@@ -1,0 +1,9 @@
+{
+  "id": 9308,
+  "title": "Caesar Cipher",
+  "prompt": "Create a function that takes a string and a shift value as input and returns the encrypted string using the Caesar Cipher algorithm.\nSample Input: Hello World\nSample Output: Khoor Zruog\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that implements the Caesar Cipher algorithm to encrypt a given string using a specified shift value:\n\n```python\ndef caesar_cipher(text, shift):\n    \"\"\"\n    Encrypts a given string using the Caesar Cipher algorithm.\n\n    Parameters:\n    text (str): The string to be encrypted.\n    shift (int): The shift value to apply to each character in the text.\n\n    Returns:\n    str: The encrypted string.\n    \"\"\"\n\n    # Ensure shift value is within the valid range (0-25)\n    shift %= 26\n\n    # Create a translation table to apply the Caesar Cipher\n    translation_table = str.maketrans(\n        alphabet,\n        alphabet[shift:] + alphabet[:shift]\n    )\n\n    # Encrypt the text using the translation table\n    encrypted_text = text.translate(translation_table)\n\n    return encrypted_text\n\n# Define the alphabet for Caesar Cipher\nalphabet = 'abcdefghijklmnopqrstuvwxyz'\n\n# Test the function with sample input\ntext = 'Hello World'\nshift = 3\nprint(caesar_cipher(text, shift))  # Output: Khoor Zruog\n```\n\nThis function first ensures that the shift value is within the valid range (0-25) by taking the modulus of the shift value with 26. Then, it creates a translation table that applies the Caesar Cipher to each character in the text. Finally, it applies the translation table to the text and returns the encrypted string.",
+  "error": null,
+  "elapsed_seconds": 3.64,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

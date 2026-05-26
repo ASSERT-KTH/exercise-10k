@@ -1,0 +1,9 @@
+{
+  "id": 9881,
+  "title": "Personal Finance Tracker",
+  "prompt": "Write a program that takes a user's income and expenses as input and prints out a summary of their finances.\nSample Input: income: 5000, expenses: 2000\nSample Output: You have 3000 left over.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program takes user input for income and expenses, calculates the difference, and prints out a summary of the finances.\n\n```python\ndef summarize_finances():\n    \"\"\"\n    This function takes a user's income and expenses as input and prints out a summary of their finances.\n    \"\"\"\n\n    # Get user input for income and expenses\n    income = float(input(\"Enter your monthly income: \"))\n    expenses = float(input(\"Enter your monthly expenses: \"))\n\n    # Validate input to ensure it's positive\n    if income <= 0 or expenses <= 0:\n        print(\"Error: Both income and expenses must be positive numbers.\")\n        return\n\n    # Calculate the difference between income and expenses\n    remaining_funds = income - expenses\n\n    # Print the summary\n    print(f\"You have ${remaining_funds:.2f} left over.\")\n\n# Call the function to summarize finances\nsummarize_finances()\n```\n\nThis program first prompts the user to enter their monthly income and expenses. It then validates the input to ensure it's positive. After calculating the difference between income and expenses, it prints out a summary of the finances, rounding the remaining funds to two decimal places.",
+  "error": null,
+  "elapsed_seconds": 3.11,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

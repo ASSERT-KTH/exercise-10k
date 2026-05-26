@@ -1,0 +1,9 @@
+{
+  "id": 7640,
+  "title": "Prime Numbers",
+  "prompt": "Create a program that uses a for loop to find all prime numbers up to a given number.\nSample Input: 20\nSample Output: [2 3 5 7 11 13 17 19]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses a for loop to find all prime numbers up to a given number:\n\n```python\ndef find_primes(limit):\n    \"\"\"Find all prime numbers up to the given limit using a for loop.\"\"\"\n    # Initialize a list to store the prime numbers\n    primes = []\n\n    # Start from 2, the smallest prime number\n    for num in range(2, limit + 1):\n        # Check if the number is prime by checking if it has any divisors between 2 and its square root\n        is_prime = True\n        for potential_divisor in range(2, int(num**0.5) + 1):\n            if num % potential_divisor == 0:\n                is_prime = False\n                break\n        # If the number is prime, add it to the list\n        if is_prime:\n            primes.append(num)\n\n    return primes\n\n# Get the sample input (limit) from the user\nlimit = int(input(\"Enter a limit: \"))\n\n# Print the list of prime numbers\nprint(find_primes(limit))\n```\n\nWhen you run this program and enter a limit of 20, it will output:\n\n```\n[2, 3, 5, 7, 11, 13, 17, 19]\n```\n\nThis program first initializes an empty list to store the prime numbers. Then, it uses a for loop to iterate over all numbers from 2 up to the given limit. For each number, it checks if it is prime by checking if it has any divisors between 2 and its square root. If the number is prime, it adds it to the list. Finally, it returns the list of prime numbers.",
+  "error": null,
+  "elapsed_seconds": 4.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7079,
+  "title": "Employee Data",
+  "prompt": "Read an employee's name, age, and salary from the user and print their details\nSample Input: John 25 5000.0\nSample Output: Name: John\nAge: 25\nSalary: 5000.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution that reads the employee's name, age, and salary from the user, validates the input, and prints the details in the desired format:\n\n```python\ndef print_employee_details():\n    \"\"\"Print an employee's name, age, and salary.\"\"\"\n\n    # Get the employee's name from the user\n    name = input(\"Enter the employee's name: \")\n\n    # Get the employee's age from the user\n    while True:\n        try:\n            age = float(input(\"Enter the employee's age: \"))\n            break\n        except ValueError:\n            print(\"Invalid input. Please enter a number.\")\n\n    # Get the employee's salary from the user\n    while True:\n        try:\n            salary = float(input(\"Enter the employee's salary: \"))\n            break\n        except ValueError:\n            print(\"Invalid input. Please enter a number.\")\n\n    # Print the employee's details\n    print(f\"Name: {name}\")\n    print(f\"Age: {age}\")\n    print(f\"Salary: ${salary}\")\n\n# Call the function to print the employee's details\nprint_employee_details()\n```\n\nThis script defines a function `print_employee_details()` that prompts the user for the employee's name, age, and salary, validates the input, and prints the details in the desired format. The function uses a `while` loop to ensure that the user enters valid input for each field.",
+  "error": null,
+  "elapsed_seconds": 4.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

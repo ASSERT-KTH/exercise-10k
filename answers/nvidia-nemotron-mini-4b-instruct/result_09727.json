@@ -1,0 +1,9 @@
+{
+  "id": 9727,
+  "title": "Statistics: Median",
+  "prompt": "Write a program that takes a list of numbers as input and returns their median.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a list of numbers as input and returns their median:\n```python\ndef find_median(numbers):\n    # Sort the list of numbers in ascending order\n    sorted_numbers = sorted(numbers)\n\n    # Calculate the length of the sorted list\n    n = len(sorted_numbers)\n\n    # If the length is even, the median is the average of the middle two numbers\n    if n % 2 == 0:\n        median = (sorted_numbers[n//2 - 1] + sorted_numbers[n//2]) / 2\n    # If the length is odd, the median is the middle number\n    else:\n        median = sorted_numbers[n//2]\n\n    return median\n```\nHere's an example of how you can use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\nprint(find_median(numbers))  # Output: 3\n```\nThis program first sorts the list of numbers in ascending order. Then, it calculates the length of the sorted list and determines whether the length is even or odd. If the length is even, it calculates the average of the two middle numbers as the median. If the length is odd, it simply returns the middle number as the median.",
+  "error": null,
+  "elapsed_seconds": 3.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

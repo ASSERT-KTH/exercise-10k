@@ -1,0 +1,9 @@
+{
+  "id": 1546,
+  "title": "Array Searching",
+  "prompt": "Given an array of integers, write a function to find the index of a specified element.\nSample Input: [1, 2, 3, 4, 5], 3\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the index of a specified element in an array (or list, as it's called in Python). This function uses the `index()` method of lists, which raises a `ValueError` if the element is not found. We can catch this exception and return -1 if the element is not found.\n\n```python\ndef find_index(arr, element):\n    try:\n        return arr.index(element)\n    except ValueError:\n        return -1\n```\n\nHere's an example of how to use this function:\n\n```python\narr = [1, 2, 3, 4, 5]\nprint(find_index(arr, 3))  # Output: 2\nprint(find_index(arr, 6))  # Output: -1\n```\n\nIf you prefer a more robust solution that handles edge cases and returns a default value if the element is not found, you can modify the function as follows:\n\n```python\ndef find_index(arr, element, default=-1):\n    try:\n        return arr.index(element)\n    except ValueError:\n        return default\n```\n\nThis function now accepts an optional `default` parameter, which can be any value you want to return if the element is not found. Here's an example:\n\n```python\nprint(find_index(arr, 6, 0))  # Output: 0\n```",
+  "error": null,
+  "elapsed_seconds": 3.51,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

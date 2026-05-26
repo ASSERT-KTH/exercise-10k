@@ -1,0 +1,9 @@
+{
+  "id": 7832,
+  "title": "Function Organizer",
+  "prompt": "Create a function called organize_data that takes in a list of integers and returns a dictionary where the keys are the integers from the list and the values are the number of times each integer appears in the list. The function should also handle cases where the input list is empty, in which case it should return an empty dictionary.\nSample Input: [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]\nSample Output: {1: 1, 2: 2, 3: 3, 4: 4}\n",
+  "answer": "Here's a Python function that meets your requirements:\n\n```python\ndef organize_data(lst):\n    \"\"\"\n    Organizes a list of integers into a dictionary where the keys are the integers from the list and the values are the number of times each integer appears in the list.\n\n    :param lst: List of integers\n    :return: Dictionary of integers and their counts\n    \"\"\"\n    if not lst:  # Check if the input list is empty\n        return {}\n\n    # Use a dictionary to count the occurrences of each integer\n    count_dict = {}\n    for num in lst:\n        if num in count_dict:\n            count_dict[num] += 1\n        else:\n            count_dict[num] = 1\n\n    return count_dict\n```\n\nYou can use this function as follows:\n\n```python\nprint(organize_data([1, 2, 2, 3, 3, 3, 4, 4, 4, 4]))  # Output: {1: 1, 2: 2, 3: 3, 4: 4}\nprint(organize_data([]))  # Output: {}\n```",
+  "error": null,
+  "elapsed_seconds": 2.74,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

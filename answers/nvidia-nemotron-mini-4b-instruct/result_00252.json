@@ -1,0 +1,9 @@
+{
+  "id": 252,
+  "title": "List Intersection",
+  "prompt": "Write a function that takes two lists as input, and returns a new list that contains only the elements that are common to both lists.\nSample Input: [1, 2, 3, 4, 5], [4, 5, 6, 7, 8]\nSample Output: [4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses the `set` data structure to efficiently find common elements between the two lists, and then converts the set back to a list before returning it.\n\n```python\ndef common_elements(list1, list2):\n    \"\"\"\n    Returns a new list containing only the elements that are common to both input lists.\n\n    :param list1: The first input list\n    :param list2: The second input list\n    :return: A new list containing common elements\n    \"\"\"\n    # Convert both lists to sets to remove duplicates and enable fast lookup\n    set1 = set(list1)\n    set2 = set(list2)\n\n    # Find common elements by intersecting the two sets\n    common = set1 & set2\n\n    # Convert the set back to a list and return it\n    return list(common)\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(common_elements([1, 2, 3, 4, 5], [4, 5, 6, 7, 8]))  # Output: [4, 5]\n```",
+  "error": null,
+  "elapsed_seconds": 2.86,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

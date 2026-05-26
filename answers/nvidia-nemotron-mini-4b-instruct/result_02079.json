@@ -1,0 +1,9 @@
+{
+  "id": 2079,
+  "title": "Finding the Longest Increasing Subsequence",
+  "prompt": "Write a program that finds the longest increasing subsequence of a given list of numbers.\nSample Input: [10, 22, 9, 33, 21, 50, 41, 60]\nSample Output: [10, 22, 33, 50, 60]\n",
+  "answer": "Here's a Python solution using dynamic programming. This approach has a time complexity of O(n^2), where n is the length of the input list. However, there is a more efficient algorithm with a time complexity of O(n log n) using the Needleman-Wunsch algorithm or the Segment Tree approach.\n\n```python\ndef longest_increasing_subsequence(nums):\n    n = len(nums)\n\n    # Create a table to store lengths of LIS for every subarray\n    dp = [1] * n\n\n    # Iterate through all elements of the array\n    for i in range(n):\n        for j in range(i):\n            if nums[j] < nums[i]:\n                dp[i] = max(dp[i], dp[j] + 1)\n\n    # The length of LIS for the entire array is stored at dp[-1]\n    return dp[-1]\n\n# Test the function with the given sample input\nnums = [10, 22, 9, 33, 21, 50, 41, 60]\nprint(longest_increasing_subsequence(nums))  # Output: 5\n```\n\nThis solution works by iterating through the array and for each element, it checks if it can be extended by including any of its previous elements. If it can, it updates the length of LIS for the current element to be the maximum of its current value and the length of LIS for the previous element plus one. Finally, it returns the length of LIS for the entire array which is stored at the last index of the dp list.",
+  "error": null,
+  "elapsed_seconds": 5.42,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

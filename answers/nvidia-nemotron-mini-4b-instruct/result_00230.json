@@ -1,0 +1,9 @@
+{
+  "id": 230,
+  "title": "case Converter",
+  "prompt": "Write a program to convert a given string to uppercase or lowercase.\nSample Input: Hello World\nSample Output: hello world\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that converts a given string to uppercase or lowercase:\n\n```python\ndef convert_string(input_string, case_type):\n    \"\"\"\n    Converts a given string to uppercase or lowercase based on the case_type parameter.\n\n    :param input_string: The string to be converted.\n    :param case_type: The type of conversion to perform. Can be 'uppercase' or 'lowercase'.\n    :return: The converted string.\n    \"\"\"\n\n    # Validate the case_type parameter\n    if case_type not in ['uppercase', 'lowercase']:\n        raise ValueError(\"case_type must be either 'uppercase' or 'lowercase'.\")\n\n    # Perform the conversion\n    if case_type == 'uppercase':\n        output_string = input_string.upper()\n    elif case_type == 'lowercase':\n        output_string = input_string.lower()\n    else:\n        raise ValueError(\"Invalid case_type. Please use either 'uppercase' or 'lowercase'.\")\n\n    return output_string\n\n\n# Example usage\ninput_string = \"Hello World\"\ncase_type = \"uppercase\"\noutput_string = convert_string(input_string, case_type)\nprint(output_string)  # Output: HELLO WORLD\n```\n\nThis program defines a function `convert_string` that takes an input string and a case type as parameters, validates the case type, and then performs the conversion. The function returns the converted string. The example usage at the end of the program demonstrates how to use the function to convert a given string to uppercase.",
+  "error": null,
+  "elapsed_seconds": 5.71,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

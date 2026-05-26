@@ -1,0 +1,9 @@
+{
+  "id": 4282,
+  "title": "Accessing Dictionary Values",
+  "prompt": "Given a dictionary, write a function to retrieve the value associated with a given key.\nSample Input: {'name': 'John', 'age': 20}; 'name'\nSample Output: John\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_value(dictionary, key):\n    \"\"\"\n    Retrieves the value associated with a given key in a dictionary.\n\n    Parameters:\n    dictionary (dict): The dictionary to search in.\n    key (any): The key to look up in the dictionary.\n\n    Returns:\n    any: The value associated with the given key in the dictionary,\n         or None if the key is not found.\n    \"\"\"\n    return dictionary.get(key)\n```\nHere's an example of how you can use this function:\n```python\nsample_dict = {'name': 'John', 'age': 20}\nprint(get_value(sample_dict, 'name'))  # Output: John\nprint(get_value(sample_dict, 'job'))   # Output: None\n```\nThis function uses the `get()` method of Python dictionaries, which returns the value associated with the given key if it exists, and `None` otherwise. If you prefer a more explicit approach, you can also implement the function as follows:\n```python\ndef get_value(dictionary, key):\n    \"\"\"\n    Retrieves the value associated with a given key in a dictionary.\n\n    Parameters:\n    dictionary (dict): The dictionary to search in.\n    key (any): The key to look up in the dictionary.\n\n    Returns:\n    any: The value associated with the given key in the dictionary,\n         or None if the key is not found.\n    \"\"\"\n    try:\n        return dictionary[key]\n    except KeyError:\n        return None\n```\nBoth functions will give you the same output for the given sample input.",
+  "error": null,
+  "elapsed_seconds": 4.0,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

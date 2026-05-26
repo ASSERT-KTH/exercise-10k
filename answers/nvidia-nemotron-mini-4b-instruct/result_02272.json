@@ -1,0 +1,9 @@
+{
+  "id": 2272,
+  "title": "Statistic Calculations",
+  "prompt": "Write a program that calculates the mean, median, and mode of a list of numbers.\nSample Input: 1 2 3 4 5\nSample Output: Mean: 3.0, Median: 3.0, Mode: 1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the mean, median, and mode of a list of numbers:\n\n```python\ndef calculate_stats(numbers):\n    # Calculate the mean\n    total = sum(numbers)\n    mean = total / len(numbers)\n\n    # Calculate the median\n    numbers.sort()\n    n = len(numbers)\n    if n % 2 == 0:  # even number of elements\n        median = (numbers[n//2 - 1] + numbers[n//2]) / 2\n    else:  # odd number of elements\n        median = numbers[n//2]\n\n    # Calculate the mode\n    mode = max(set(numbers), key=numbers.count)\n\n    return {\"mean\": mean, \"median\": median, \"mode\": mode}\n\n# Example usage\nnumbers = [1, 2, 3, 4, 5]\nstats = calculate_stats(numbers)\nprint(\"Mean:\", stats[\"mean\"], \", Median:\", stats[\"median\"], \", Mode:\", stats[\"mode\"])\n```\n\nThis program defines a function `calculate_stats` that takes a list of numbers as input and returns a dictionary containing the mean, median, and mode. The function first calculates the mean by summing all the numbers and dividing by the number of elements. Then, it sorts the list and calculates the median by checking if the number of elements is even and taking the average of the middle two elements if it is, or just the middle element if it's odd. Finally, it finds the mode by converting the list to a set to remove duplicates, and then finding the element with the highest count.\n\nThe example usage at the end of the program demonstrates how to use the function to calculate the statistics for a sample list of numbers.",
+  "error": null,
+  "elapsed_seconds": 7.92,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5796,
+  "title": "Function to Generate Random List",
+  "prompt": "Write a function that generates a list of random numbers with a specified length and range.\nSample Input: 10, 1, 100\nSample Output: [14, 73, 28, 41, 85, 34, 19, 67, 51, 82]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\nimport random\n\ndef generate_random_numbers(length, min_value, max_value):\n    \"\"\"\n    Generates a list of random numbers with a specified length and range.\n\n    Parameters:\n    length (int): The length of the output list.\n    min_value (int): The minimum value in the range of generated numbers.\n    max_value (int): The maximum value in the range of generated numbers.\n\n    Returns:\n    list: A list of random integers with the specified length and range.\n    \"\"\"\n    if length <= 0 or min_value > max_value:\n        raise ValueError(\"Invalid input. Length must be positive, and min_value must be less than max_value.\")\n\n    return [random.randint(min_value, max_value) for _ in range(length)]\n```\nHere's an example of how to use this function:\n```python\nrandom_numbers = generate_random_numbers(10, 1, 100)\nprint(random_numbers)  # Output: [14, 73, 28, 41, 85, 34, 19, 67, 51, 82]\n```\nThis function first checks if the input parameters are valid. If not, it raises a `ValueError`. Then, it uses a list comprehension to generate a list of random integers within the specified range and length. The `random.randint()` function generates a random integer within the specified range.",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

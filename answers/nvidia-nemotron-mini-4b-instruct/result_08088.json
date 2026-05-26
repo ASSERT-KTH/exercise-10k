@@ -1,0 +1,9 @@
+{
+  "id": 8088,
+  "title": "Function that Uses a Decorator to Implement Memoization",
+  "prompt": "Write a function that uses a decorator to implement memoization\nSample Input: None\nSample Output: The result of the function with memoization applied\n",
+  "answer": "Sure, I'd be happy to help you with that! Memoization is a technique used to optimize a function by storing the results of expensive function calls and returning the cached result when the same inputs occur again. Here's an example of how you can implement memoization using a decorator in Python:\n\n```python\ndef memoize(func):\n    \"\"\"\n    A decorator to memoize a function.\n    \"\"\"\n    cache = {}\n\n    def memoized_func(*args, **kwargs):\n        key = str(args) + str(kwargs)\n        if key not in cache:\n            cache[key] = func(*args, **kwargs)\n        return cache[key]\n\n    return memoized_func\n\n# Example usage:\n@memoize\ndef fibonacci(n):\n    \"\"\"\n    Calculate the nth Fibonacci number.\n    \"\"\"\n    if n < 2:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\n# Test the memoized function\nprint(fibonacci(10))  # Output: 55\nprint(fibonacci(10))  # Output: 55 (since the result is cached)\n```\n\nIn this example, the `memoize` function takes a function as an argument and returns a new function that caches the results of expensive function calls. The `memoized_func` function checks if the result for the given input has already been computed and stored in the cache. If not, it computes the result and stores it in the cache before returning it.\n\nYou can use this decorator to memoize any function that you want to optimize. Just make sure that the function you're memoizing doesn't modify any global state or have any side effects that could invalidate the cached result.",
+  "error": null,
+  "elapsed_seconds": 3.98,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3810,
+  "title": "Fibonacci Sequence",
+  "prompt": "Create a program that uses a for loop to calculate the first n Fibonacci numbers.\nSample Input: 5\nSample Output: 0 1 1 2 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses a for loop to calculate the first `n` Fibonacci numbers:\n\n```python\ndef fibonacci(n):\n    \"\"\"\n    Calculate the first n Fibonacci numbers.\n\n    :param n: The number of Fibonacci numbers to calculate.\n    :return: A list of the first n Fibonacci numbers.\n    \"\"\"\n    if n < 1:\n        raise ValueError(\"n must be at least 1\")\n\n    fib_sequence = [0, 1]\n\n    while len(fib_sequence) < n:\n        fib_sequence.append(sum(fib_sequence[-2:]))\n\n    return fib_sequence[:n]\n\n# Get user input for n\nn = int(input(\"Enter the value of n: \"))\n\n# Calculate and print the Fibonacci sequence\nfib_sequence = fibonacci(n)\nprint(fib_sequence)\n```\n\nThis program defines a function `fibonacci(n)` that calculates the first `n` Fibonacci numbers and returns them as a list. The function checks if `n` is at least 1 and raises a `ValueError` if it's not. Then, it initializes a list `fib_sequence` with the first two Fibonacci numbers (0 and 1) and uses a while loop to append the next Fibonacci number to the list until it has `n` numbers. Finally, the function returns the first `n` numbers in the sequence.\n\nThe program then prompts the user to enter the value of `n`, calculates the Fibonacci sequence using the `fibonacci()` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 5.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

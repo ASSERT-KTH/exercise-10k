@@ -1,0 +1,9 @@
+{
+  "id": 2364,
+  "title": "Division Calculator",
+  "prompt": "Design a program that takes two numbers as input and outputs their quotient and remainder.\nSample Input: 17 5\nSample Output: Quotient: 3, Remainder: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef calculate_quotient_and_remainder(num1, num2):\n    \"\"\"\n    This function takes two numbers as input and outputs their quotient and remainder.\n\n    :param num1: The first number (dividend)\n    :param num2: The second number (divisor)\n    :return: A tuple containing the quotient and remainder\n    \"\"\"\n\n    # Check if the divisor is zero, as division by zero is undefined\n    if num2 == 0:\n        raise ValueError(\"The divisor cannot be zero.\")\n\n    quotient = num1 // num2\n    remainder = num1 % num2\n\n    return quotient, remainder\n\n\n# Get user input\nnum1 = int(input(\"Enter the first number: \"))\nnum2 = int(input(\"Enter the second number: \"))\n\n# Calculate and print the quotient and remainder\nquotient, remainder = calculate_quotient_and_remainder(num1, num2)\nprint(f\"Quotient: {quotient}, Remainder: {remainder}\")\n```\n\nThis program defines a function `calculate_quotient_and_remainder` that takes two numbers as input and returns a tuple containing the quotient and remainder. It then prompts the user to enter two numbers, calls the function with those numbers, and prints the results. The function checks if the divisor is zero and raises a `ValueError` if it is, as division by zero is undefined.",
+  "error": null,
+  "elapsed_seconds": 3.53,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

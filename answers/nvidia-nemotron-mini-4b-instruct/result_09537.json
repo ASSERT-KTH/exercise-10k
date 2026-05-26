@@ -1,0 +1,9 @@
+{
+  "id": 9537,
+  "title": "Array Element Filter",
+  "prompt": "Create a function that takes an array and a filter condition as input, and returns a new array containing only the elements that satisfy the condition. The condition is a function that takes one argument and returns a boolean value.\nSample Input: [1, 2, 3, 4, 5], lambda x: x % 2 == 0\nSample Output: [2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses list comprehension and the `filter()` function to create a new array containing only the elements that satisfy the given condition.\n\n```python\ndef filter_array(arr, filter_condition):\n    \"\"\"\n    Filters an array using a given condition function.\n\n    Parameters:\n    arr (list): The input array.\n    filter_condition (callable): A function that takes one argument and returns a boolean value.\n\n    Returns:\n    list: A new array containing only the elements that satisfy the condition.\n    \"\"\"\n    return list(filter(filter_condition, arr))\n```\n\nHere's an example of how to use this function:\n\n```python\nnumbers = [1, 2, 3, 4, 5]\neven_numbers = filter_array(numbers, lambda x: x % 2 == 0)\nprint(even_numbers)  # Output: [2, 4]\n```\n\nThis function is flexible and can be used with any iterable (like lists, tuples, or strings) and any condition function that returns a boolean value.",
+  "error": null,
+  "elapsed_seconds": 2.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

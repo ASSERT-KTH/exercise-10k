@@ -1,0 +1,9 @@
+{
+  "id": 9193,
+  "title": "Variable Scope Resolution",
+  "prompt": "Understand how variable scope is resolved\nSample Input: x = 5, y = 3\nSample Output: 5, 3\n",
+  "answer": "Sure, I'd be happy to explain how variable scope is resolved in a simple example. \n\nIn the given sample input, we have two variables `x` and `y`, both initialized with values. Variable scope refers to the region of code where a variable can be accessed and used. Here's how it's resolved in this case:\n\n1. **Lexical Scope**: This is the first level of scope resolution. It determines where a variable can be accessed based on its position in the code. In this example, both `x` and `y` are defined outside any function or loop, so their scope is the entire program. \n\n2. **Global Scope**: Since they are not defined within any function, they are in the global scope. Variables in the global scope can be accessed and used anywhere in the program. \n\n3. **Local Scope**: If a variable is defined within a function, its scope is limited to that function. When a function is called, a new local scope is created, and any variables defined within that function become available only within that scope. \n\n4. **Closure Scope**: If a variable is defined within a function, but the function is defined within another function, the variable can be accessed even after the outer function has returned. This is because JavaScript uses closure to preserve the variable's scope. In this case, both `x` and `y` are in the closure scope, which means they can be accessed and used within the `printVariables` function, regardless of whether it's called inside or outside the `main` function.\n\nSo, in the given sample output, `5` and `3` are the values of `x` and `y`, respectively, because they are in the global scope and can be accessed and used anywhere in the program.",
+  "error": null,
+  "elapsed_seconds": 3.89,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 362,
+  "title": "String Reversal and Validation",
+  "prompt": "Write a program that takes a string input from the user and checks if it's a palindrome. If the string is a palindrome, the program should reverse the string and print it. Otherwise, it should print an error message indicating that the input string is not a palindrome.\nSample Input: madam\nSample Output: madam\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef is_palindrome(s):\n    \"\"\"Check if a string is a palindrome.\"\"\"\n    return s == s[::-1]\n\ndef main():\n    user_input = input(\"Enter a string: \")\n\n    if is_palindrome(user_input):\n        reversed_input = user_input[::-1]\n        print(f\"{user_input} is a palindrome. Its reverse is: {reversed_input}\")\n    else:\n        print(f\"{user_input} is not a palindrome.\")\n\nif __name__ == \"__main__\":\n    main()\n```\nThis program defines a helper function `is_palindrome` that checks if a string is a palindrome by comparing it to its reverse. The `main` function gets user input, checks if it's a palindrome using the helper function, and prints the result accordingly.\n\nHere's an example interaction with the program:\n```\nEnter a string: madam\nmadam is a palindrome. Its reverse is: madam\n```",
+  "error": null,
+  "elapsed_seconds": 2.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

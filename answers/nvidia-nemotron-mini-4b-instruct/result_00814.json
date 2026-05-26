@@ -1,0 +1,9 @@
+{
+  "id": 814,
+  "title": "DateTime Data Type",
+  "prompt": "Store a date and time in a variable and print it in a specific format.\nSample Input: 2022-01-01 12:00:00\nSample Output: January 1, 2022 12:00:00 PM\n",
+  "answer": "Here's a Python solution for the problem:\n\n```python\nfrom datetime import datetime\n\ndef format_date(date_time_str):\n    dt = datetime.strptime(date_time_str, \"%Y-%m-%d %H:%M:%S\")\n    return dt.strftime(\"%B %d, %Y %I:%M:%S %p\")\n\nsample_input = \"2022-01-01 12:00:00\"\nprint(format_date(sample_input))\n```\n\nThis script first imports the `datetime` module, which provides classes for working with dates and times in both simple and complex ways. Then it defines a function `format_date` that takes a string in the format `YYYY-MM-DD HH:MM:SS` as input, and returns the same string in the format `MMMM DD, YYYY HH:MM:SS AM/PM`.\n\nThe function uses the `strptime` method to parse the input string into a `datetime` object, and then uses the `strftime` method to format the `datetime` object into the desired output format.\n\nFinally, the script calls this function with the sample input string, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 8.66,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

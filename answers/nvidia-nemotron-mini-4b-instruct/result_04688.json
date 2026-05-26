@@ -1,0 +1,9 @@
+{
+  "id": 4688,
+  "title": "Substring Finder",
+  "prompt": "Create a function that finds the first occurrence of a substring within a larger string.\nSample Input: ['hello world', 'world']\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef find_first_occurrence(string, substring):\n    \"\"\"\n    Find the first occurrence of a substring within a larger string.\n\n    :param string: The larger string to search in.\n    :param substring: The substring to search for.\n    :return: The index of the first occurrence of the substring in the larger string, or -1 if not found.\n    \"\"\"\n    if not substring:  # Check for empty substring, return -1\n        return -1\n\n    start_index = string.find(substring)\n    if start_index != -1:  # If substring is found, return its index\n        return start_index\n    else:\n        return -1\n```\nHere's an example of how to use this function:\n```python\nsample_input = ['hello world', 'world']\nsample_output = 6\n\nprint(find_first_occurrence(' '.join(sample_input), 'world'))  # Output: 6\n```\nThis function first checks if the substring is empty, in which case it returns -1 since there's no substring to search for. Then, it uses the built-in `find()` method of strings to search for the first occurrence of the substring in the larger string. If the substring is found, the function returns its index; otherwise, it returns -1.",
+  "error": null,
+  "elapsed_seconds": 3.27,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7213,
+  "title": "Anagram Checker",
+  "prompt": "Write a program that checks if two words are anagrams using a while loop.\nSample Input: word1 word2\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if two words are anagrams using a while loop:\n\n```python\ndef are_anagrams(word1, word2):\n    \"\"\"\n    Check if two words are anagrams using a while loop.\n\n    :param word1: str - The first word to check for anagrams with.\n    :param word2: str - The second word to check for anagrams with.\n    :return: bool - True if the words are anagrams, False otherwise.\n    \"\"\"\n\n    # Ensure both inputs are strings\n    word1 = str(word1).lower()\n    word2 = str(word2).lower()\n\n    # Initialize counters for each character in the alphabet\n    char_counts = [0] * 26\n\n    # Count the occurrences of each character in the words\n    for char in word1:\n        if char.isalpha():\n            char_index = ord(char) - ord('a')\n            char_counts[char_index] += 1\n\n    for char in word2:\n        if char.isalpha():\n            char_index = ord(char) - ord('a')\n            char_counts[char_index] -= 1\n\n    # Check if all character counts are zero\n    while any(count != 0 for count in char_counts):\n        # If not, the words are not anagrams\n        return False\n\n    # If all counts are zero, the words are anagrams\n    return True\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(are_anagrams(\"listen\", \"silent\"))  # Output: True\nprint(are_anagrams(\"hello\", \"world\"))    # Output: False\n```",
+  "error": null,
+  "elapsed_seconds": 4.16,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

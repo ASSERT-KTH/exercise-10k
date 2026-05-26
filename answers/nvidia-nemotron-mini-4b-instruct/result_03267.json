@@ -1,0 +1,9 @@
+{
+  "id": 3267,
+  "title": "Finding the Maximum",
+  "prompt": "Write a program that uses a for loop to find the maximum number in a list of numbers.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses a for loop to find the maximum number in a list of numbers:\n\n```python\ndef find_max(numbers):\n    \"\"\"\n    Find the maximum number in a list of numbers using a for loop.\n\n    :param numbers: List of numbers\n    :return: Maximum number in the list\n    \"\"\"\n    if not numbers:  # Check if the list is empty\n        raise ValueError(\"Input list cannot be empty\")\n\n    max_number = numbers[0]  # Initialize the maximum number as the first element\n\n    for num in numbers[1:]:  # Iterate over the remaining elements in the list\n        if num > max_number:  # If the current number is greater than the maximum number found so far\n            max_number = num  # Update the maximum number\n\n    return max_number\n\n# Example usage\nnumbers = [1, 2, 3, 4, 5]\nprint(find_max(numbers))  # Output: 5\n```\n\nThis function first checks if the input list is empty and raises a `ValueError` if it is. Then, it initializes the maximum number as the first element of the list. Finally, it iterates over the remaining elements in the list and updates the maximum number if a larger number is found. The function returns the maximum number at the end.",
+  "error": null,
+  "elapsed_seconds": 4.46,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

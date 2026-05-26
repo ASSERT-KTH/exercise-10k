@@ -1,0 +1,9 @@
+{
+  "id": 9814,
+  "title": "Grade Checker",
+  "prompt": "Write a program that takes a student's grade as input and outputs whether the student passed or failed. The passing grade is 60. If the grade is 90 or above, the program should also output 'Excellent'. If the grade is between 80 and 89, the program should output 'Good'. If the grade is between 70 and 79, the program should output 'Fair'. If the grade is between 60 and 69, the program should output 'Pass'. If the grade is below 60, the program should output 'Fail'\nSample Input: 85\nSample Output: Good\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef grade_to_status(grade):\n    \"\"\"\n    Converts a student's grade to a corresponding status message.\n\n    Parameters:\n    grade (int): The student's grade as an integer between 0 and 100.\n\n    Returns:\n    str: A string indicating whether the student passed or failed, along with an optional 'Excellent' or 'Good' message.\n    \"\"\"\n    if grade >= 90:\n        return f\"Excellent\"\n    elif grade >= 80:\n        return \"Good\"\n    elif grade >= 70:\n        return \"Fair\"\n    elif grade >= 60:\n        return \"Pass\"\n    else:\n        return \"Fail\"\n\n# Get user input\ngrade = int(input(\"Enter a student's grade: \"))\n\n# Output the status message\nprint(grade_to_status(grade))\n```\nThis program defines a function `grade_to_status` that takes a student's grade as input and returns a corresponding status message. The function checks the grade range and outputs the appropriate message. The program then prompts the user to enter a grade, converts the input to an integer, and calls the function to get the corresponding status message.",
+  "error": null,
+  "elapsed_seconds": 3.03,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

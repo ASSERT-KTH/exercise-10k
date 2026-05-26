@@ -1,0 +1,9 @@
+{
+  "id": 9090,
+  "title": "Conditional Grade Checker",
+  "prompt": "Create a program that takes an integer grade as input and outputs whether it is passing or failing based on the following conditions: grade 70 and above is passing, below 70 is failing. Use conditional statements to solve this problem.\nSample Input: 75\nSample Output: Passing\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef grade_status(grade):\n    \"\"\"\n    Determines whether a given grade is passing or failing.\n\n    :param grade: int - The grade to evaluate.\n    :return: str - \"Passing\" or \"Failing\".\n    \"\"\"\n    # Check if the grade is within the valid range (70 and above is passing, below 70 is failing)\n    if 70 <= grade <= 100:\n        return \"Passing\"\n    elif grade < 70:\n        return \"Failing\"\n    else:\n        raise ValueError(\"Grade must be an integer between 0 and 100.\")\n\n# Get user input\ngrade = int(input(\"Enter a grade (0-100): \"))\n\n# Output the grade status\nprint(grade_status(grade))\n```\nThis program defines a function `grade_status` that takes an integer grade as input and returns \"Passing\" or \"Failing\" based on the given conditions. The function checks if the grade is within the valid range (70 and above is passing, below 70 is failing) and raises a `ValueError` if the grade is out of range. The program then gets user input, calls the `grade_status` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.18,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

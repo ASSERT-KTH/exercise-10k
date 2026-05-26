@@ -1,0 +1,9 @@
+{
+  "id": 1579,
+  "title": "Function Call",
+  "prompt": "Write a function that calls a given function with a given set of arguments.\nSample Input: double, 5\nSample Output: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef call_function_with_args(func, *args):\n    \"\"\"\n    Calls a given function with a given set of arguments.\n\n    Parameters:\n    func (callable): The function to call.\n    args (tuple): The arguments to pass to the function.\n\n    Returns:\n    The result of calling the function with the given arguments.\n    \"\"\"\n    return func(*args)\n```\nHere's an example of how you can use this function:\n```python\ndef double(x):\n    \"\"\"\n    Returns the double of a given number.\n    \"\"\"\n    return x * 2\n\nresult = call_function_with_args(double, 5)\nprint(result)  # Output: 10\n```\nThis function takes a `callable` (i.e., a function or a method) and a variable number of arguments (`*args`) as input, and calls the function with those arguments. The `*args` syntax allows you to pass any number of arguments to the function, even if the function only expects a single argument.\n\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.85,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

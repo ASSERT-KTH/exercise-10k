@@ -1,0 +1,9 @@
+{
+  "id": 9959,
+  "title": "Variable Name Validator",
+  "prompt": "Write a program that checks if a given string is a valid variable name.\nSample Input: variable_name = 'hello_world'\nSample Output: The string is a valid variable name.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given string is a valid variable name:\n\n```python\nimport re\n\ndef is_valid_variable_name(name):\n    \"\"\"\n    Check if the given string is a valid variable name.\n\n    A valid variable name should consist of alphanumeric characters (letters and digits)\n    and cannot start or end with a dot. It should also not contain any whitespace.\n\n    :param name: str - The name to check.\n    :return: bool - True if the name is valid, False otherwise.\n    \"\"\"\n    # Regular expression pattern for a valid variable name\n    pattern = r'^[a-zA-Z][a-zA-Z0-9_]*[a-zA-Z0-9]*$'\n\n    # Check if the name matches the pattern\n    return bool(re.match(pattern, name))\n\n# Test the function with the given sample input\nvariable_name = 'hello_world'\nprint(f\"The string '{variable_name}' is a valid variable name: {is_valid_variable_name(variable_name)}\")\n```\n\nWhen you run this program with the given sample input, it will output:\n\n```\nThe string 'hello_world' is a valid variable name: True\n```",
+  "error": null,
+  "elapsed_seconds": 3.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3556,
+  "title": "List Subset Checking",
+  "prompt": "Write a program that takes two lists as input, and returns a boolean indicating whether the first list is a subset of the second.\nSample Input: [1, 2, 3], [1, 2, 3, 4, 5]\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef is_subset(list1, list2):\n    \"\"\"\n    Returns True if list1 is a subset of list2, False otherwise.\n\n    :param list1: The first list to check for subset.\n    :param list2: The second list to compare against.\n    :return: A boolean indicating whether list1 is a subset of list2.\n    \"\"\"\n    # Check if list1 is a subset of list2 by iterating over list2 and checking if each element in list1 is also in list2\n    return all(element in list2 for element in list1)\n```\nHere's how you can use this function:\n```python\nprint(is_subset([1, 2, 3], [1, 2, 3, 4, 5]))  # Output: True\nprint(is_subset([1, 2, 3], [1, 2, 4]))       # Output: False\n```\nThis function uses a generator expression in the `all` function to iterate over the elements of `list2` and check if each one is also in `list1`. The `all` function returns `True` if all elements in the iterable are true, and `False` otherwise.",
+  "error": null,
+  "elapsed_seconds": 3.31,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

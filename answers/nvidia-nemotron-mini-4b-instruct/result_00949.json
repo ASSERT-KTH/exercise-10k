@@ -1,0 +1,9 @@
+{
+  "id": 949,
+  "title": "Print Prime Numbers",
+  "prompt": "Write a program that prints prime numbers from 1 to 20 using a for loop.\nSample Input: None\nSample Output: 2\n3\n5\n7\n11\n13\n17\n19\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that prints prime numbers from 1 to 20 using a for loop:\n\n```python\nfor num in range(2, 21):\n    prime = True\n    for i in range(2, int(num**0.5) + 1):\n        if (num % i) == 0:\n            prime = False\n            break\n    if prime:\n        print(num)\n```\n\nThis program uses a nested loop to check if a number is prime. It first checks if the number is less than 2, in which case it's not prime. Then it checks all integers from 2 up to the square root of the number (inclusive) to see if the number is divisible by any of them. If it finds a divisor, it sets `prime` to `False` and breaks out of the inner loop. If the number passes all the checks, it's prime, and the program prints it.\n\nHere's how it works:\n\n* The `range(2, 21)` generates a sequence of numbers from 2 to 20 (inclusive).\n* The `for num in ...` loop iterates over each number in the sequence.\n* The `prime = True` line sets a flag to indicate whether the number is prime or not.\n* The nested `for i in ...` loop checks all integers from 2 up to the square root of the number (inclusive).\n* The `if (num % i) == 0:` line checks if the number is divisible by any of the integers in the inner loop. If it is, it sets `prime` to `False` and breaks out of the inner loop.\n* If the number passes all the checks, it's prime, and the program prints it using the `print(num)` line.\n\nThis program will print all the prime numbers from 1 to 20, as requested.",
+  "error": null,
+  "elapsed_seconds": 4.29,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

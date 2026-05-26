@@ -1,0 +1,9 @@
+{
+  "id": 9460,
+  "title": "Integer Parser",
+  "prompt": "Create a program that takes a string as input and parses it into an integer.\nSample Input: 123\nSample Output: 123\n",
+  "answer": "Sure, I'd be happy to help you create a program that takes a string as input and parses it into an integer. Here's a Python solution using the built-in `int()` function:\n\n```python\ndef string_to_int(s: str) -> int:\n    \"\"\"\n    Parses a string into an integer.\n\n    :param s: The string to parse.\n    :return: The integer value of the string.\n    \"\"\"\n    if not isinstance(s, str):\n        raise TypeError(\"Input must be a string.\")\n\n    try:\n        return int(s)\n    except ValueError:\n        raise ValueError(f\"Invalid input: '{s}' cannot be parsed as an integer.\")\n\n# Example usage:\ninput_str = \"123\"\nresult = string_to_int(input_str)\nprint(result)  # Output: 123\n```\n\nThis function checks if the input is a string and raises a `TypeError` if it's not. Then, it tries to convert the string to an integer using the `int()` function and returns the result. If the conversion fails due to a `ValueError`, it raises a custom exception with an appropriate error message.\n\nYou can replace the `string_to_int()` function call with your desired input string to get the desired output.",
+  "error": null,
+  "elapsed_seconds": 3.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

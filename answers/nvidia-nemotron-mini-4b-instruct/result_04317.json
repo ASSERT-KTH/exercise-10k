@@ -1,0 +1,9 @@
+{
+  "id": 4317,
+  "title": "Type Checking",
+  "prompt": "Create a function that checks the type of a variable and returns an error message if it's not the expected type\nSample Input: 5, int\nSample Output: Type is correct\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks the type of a variable and returns an error message if it's not the expected type. In this example, I'll use the `type()` function to check the type of the variable and raise a `TypeError` if it's not an integer. You can modify the function to check for other types as needed.\n\n```python\ndef check_type(var, expected_type):\n    \"\"\"\n    Check if a variable has the expected type.\n\n    :param var: The variable to check.\n    :param expected_type: The expected type (str).\n    :return: A message indicating whether the type is correct.\n    :raises TypeError: If the type of the variable is not the expected type.\n    \"\"\"\n    if not isinstance(var, expected_type):\n        raise TypeError(f\"Expected type {expected_type}, got {type(var)} instead.\")\n    return f\"Type is correct\"\n\n# Example usage:\nsample_input = 5\nexpected_type = \"int\"\n\ntry:\n    check_type(sample_input, expected_type)\nexcept TypeError as e:\n    print(e)\n```\n\nThis function will raise a `TypeError` if the type of the variable is not an integer. You can modify the function to check for other types by changing the `expected_type` parameter and the exception handling.",
+  "error": null,
+  "elapsed_seconds": 3.25,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6993,
+  "title": "Calculation of Interest",
+  "prompt": "Write a program that takes the principal amount, rate of interest, and time as input and returns the interest.\nSample Input: 1000 5 2\nSample Output: 100.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_interest(principal, rate, time):\n    \"\"\"\n    Calculates the interest based on the given principal amount, rate of interest, and time.\n\n    :param principal: The principal amount.\n    :param rate: The rate of interest as a decimal (e.g., 0.05 for 5%).\n    :param time: The time in years.\n    :return: The interest as a float.\n    \"\"\"\n    # Calculate the interest using the formula: A = P(1 + r/n) ^ nt\n    interest = principal * (1 + rate/100) ** time\n    return interest\n\n# Get user input\nprincipal = float(input(\"Enter the principal amount: \"))\nrate = float(input(\"Enter the rate of interest as a decimal (e.g., 0.05 for 5%): \"))\ntime = float(input(\"Enter the time in years: \"))\n\n# Calculate and print the interest\ninterest = calculate_interest(principal, rate, time)\nprint(f\"The interest is {interest:.2f}.\")\n```\nThis program defines a function `calculate_interest` that takes the principal amount, rate of interest, and time as input and returns the interest. The function uses the formula `A = P(1 + r/n) ^ nt` to calculate the interest, where `P` is the principal amount, `r` is the rate of interest as a decimal, `n` is the number of times the interest is compounded per year (usually 12 for monthly compounding), and `t` is the time in years.\n\nThe program then prompts the user to input the principal amount, rate of interest, and time, and calls the `calculate_interest` function to calculate the interest. Finally, the program prints the result with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 4.25,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

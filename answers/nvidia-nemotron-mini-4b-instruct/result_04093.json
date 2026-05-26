@@ -1,0 +1,9 @@
+{
+  "id": 4093,
+  "title": "Function Decoration",
+  "prompt": "Write a decorator function that logs the execution time of another function\nSample Input: example_function\nSample Output: example_function executed in 0.01 seconds\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a decorator function in Python that logs the execution time of another function:\n```python\nimport time\n\ndef log_execution_time(func):\n    \"\"\"\n    A decorator function that logs the execution time of another function.\n    \"\"\"\n\n    def wrapper(*args, **kwargs):\n        \"\"\"\n        The wrapper function that measures the execution time.\n        \"\"\"\n\n        # Start the timer\n        start_time = time.time()\n\n        # Call the original function and store its return value\n        result = func(*args, **kwargs)\n\n        # Stop the timer and calculate the execution time\n        end_time = time.time()\n        execution_time = end_time - start_time\n\n        # Log the execution time and result\n        print(f\"{func.__name__} executed in {execution_time:.6f} seconds\")\n        return result\n\n    # Return the wrapper function as the decorated function\n    return wrapper\n```\nHere's an example of how to use this decorator function:\n```python\n@log_execution_time\ndef example_function():\n    \"\"\"\n    A simple example function that sleeps for a short period of time.\n    \"\"\"\n\n    time.sleep(0.01)\n\n# Call the decorated function\nexample_function()\n```\nWhen you run this code, you should see output similar to:\n```yaml\nexample_function executed in 0.01 seconds\n```\nThis decorator function measures the execution time of the decorated function and logs the result to the console. You can modify the `print` statement to log the result to a file or a database, if needed.",
+  "error": null,
+  "elapsed_seconds": 4.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

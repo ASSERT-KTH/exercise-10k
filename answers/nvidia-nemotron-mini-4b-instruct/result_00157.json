@@ -1,0 +1,9 @@
+{
+  "id": 157,
+  "title": "Dictionary Validation",
+  "prompt": "Create a function that takes in a dictionary and returns True if the dictionary contains all required keys, and False otherwise\nSample Input: dictionary = {'name': 'John', 'age': 30}, required_keys = ['name', 'age']\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef has_all_required_keys(dictionary, required_keys):\n    \"\"\"\n    Returns True if the given dictionary contains all required keys, and False otherwise.\n\n    :param dictionary: The dictionary to check.\n    :param required_keys: A list of required keys.\n    :return: True if the dictionary contains all required keys, False otherwise.\n    \"\"\"\n    # Check if the dictionary has all required keys\n    return set(required_keys).issubset(dictionary.keys())\n```\nHere's how you can use this function:\n```python\nrequired_keys = ['name', 'age']\ndictionary = {'name': 'John', 'age': 30}\n\nprint(has_all_required_keys(dictionary, required_keys))  # Output: True\n\ndictionary = {'name': 'John', 'job': 30}\nprint(has_all_required_keys(dictionary, required_keys))  # Output: False\n```\nThis function first converts the `required_keys` list to a set, which allows for more efficient lookup. Then, it checks if the set of required keys is a subset of the keys in the given dictionary using the `issubset()` method. If they are, the function returns `True`, indicating that the dictionary contains all required keys. Otherwise, it returns `False`.",
+  "error": null,
+  "elapsed_seconds": 3.24,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

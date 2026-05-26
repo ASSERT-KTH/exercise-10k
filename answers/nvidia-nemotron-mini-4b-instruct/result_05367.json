@@ -1,0 +1,9 @@
+{
+  "id": 5367,
+  "title": "Array Concatenation",
+  "prompt": "Write a program to concatenate two or more arrays.\nSample Input: [1, 2, 3], [4, 5, 6]\nSample Output: [1, 2, 3, 4, 5, 6]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that concatenates two or more arrays (lists) into a single array:\n\n```python\ndef concatenate_arrays(*args):\n    \"\"\"\n    Concatenates two or more arrays into a single array.\n\n    :param args: Variable number of arguments, each of which is an array.\n    :return: A single array containing all the elements from the input arrays.\n    \"\"\"\n    # Unpack the arguments into a list\n    arrays = list(args)\n\n    # Concatenate the arrays using the + operator\n    concatenated_array = arrays[0]\n    for array in arrays[1:]:\n        concatenated_array.extend(array)\n\n    return concatenated_array\n\n# Example usage\narray1 = [1, 2, 3]\narray2 = [4, 5, 6]\n\nconcatenated_array = concatenate_arrays(array1, array2)\nprint(concatenated_array)  # Output: [1, 2, 3, 4, 5, 6]\n```\n\nThis program defines a function `concatenate_arrays` that takes any number of arguments, each of which is an array. It then unpacks the arguments into a list, concatenates the arrays using the `+` operator, and returns the resulting array. The example usage demonstrates how to use the function with two arrays as arguments.",
+  "error": null,
+  "elapsed_seconds": 3.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

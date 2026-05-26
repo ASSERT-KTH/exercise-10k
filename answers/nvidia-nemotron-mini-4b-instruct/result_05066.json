@@ -1,0 +1,9 @@
+{
+  "id": 5066,
+  "title": "Variable Scope",
+  "prompt": "Declare a variable inside and outside a function, then try to access the variables from different scopes.\nSample Input: none\nSample Output: Variable outside function: 10, Variable inside function: 20\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python code snippet that demonstrates the concept of declaring variables in different scopes (global and local) and accessing them from different scopes:\n\n```python\n# Declare a variable outside the function\nglobal_var = 10\n\ndef function_with_local_var():\n    # Declare a variable inside the function\n    local_var = 20\n\n    # Try to access the variables from different scopes\n    print(f\"Variable outside function: {global_var}\")\n    print(f\"Variable inside function: {local_var}\")\n\n# Call the function\nfunction_with_local_var()\n\nprint(f\"Variable outside function (again): {global_var}\")\n```\n\nWhen you run this code, you'll see the following output:\n\n```\nVariable outside function: 10\nVariable inside function: 20\nVariable outside function (again): 10\n```\n\nIn this example, the `global_var` is declared outside the function and is accessible from both the global scope and the function scope. The `local_var` is declared inside the function and is only accessible within the function. When you call the function, you can access both variables from different scopes.",
+  "error": null,
+  "elapsed_seconds": 2.89,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

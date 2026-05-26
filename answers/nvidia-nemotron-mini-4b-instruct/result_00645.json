@@ -1,0 +1,9 @@
+{
+  "id": 645,
+  "title": "Number Converter",
+  "prompt": "Write a program that reads a decimal number from the user and prints out its binary representation.\nSample Input: 10\nSample Output: 1010\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that reads a decimal number from the user and prints its binary representation:\n\n```python\ndef decimal_to_binary(decimal_number):\n    \"\"\"\n    Converts a decimal number to its binary representation.\n\n    :param decimal_number: The decimal number to convert.\n    :return: The binary representation of the number.\n    \"\"\"\n    binary_number = \"\"\n    while decimal_number > 0:\n        remainder = decimal_number % 2\n        decimal_number = decimal_number // 2\n        binary_number = str(remainder) + binary_number\n\n    return binary_number\n\n\n# Get user input\ndecimal_number = int(input(\"Enter a decimal number: \"))\n\n# Print the binary representation\nbinary_representation = decimal_to_binary(decimal_number)\nprint(f\"The binary representation of {decimal_number} is {binary_representation}.\")\n```\n\nThis program defines a function `decimal_to_binary` that takes a decimal number as input and returns its binary representation as a string. The main part of the program gets user input, converts it to an integer, calls the `decimal_to_binary` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 2.94,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

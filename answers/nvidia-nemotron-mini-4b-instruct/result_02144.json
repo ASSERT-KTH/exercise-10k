@@ -1,0 +1,9 @@
+{
+  "id": 2144,
+  "title": "Reading and Writing Files",
+  "prompt": "Write a program that reads a file, counts the number of lines, and writes the count to a new file.\nSample Input: file.txt\nSample Output: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef count_lines(input_file, output_file):\n    \"\"\"Reads a file, counts the number of lines, and writes the count to a new file.\n\n    Args:\n    input_file (str): The name of the input file.\n    output_file (str): The name of the output file.\n    \"\"\"\n    # Open the input file for reading\n    with open(input_file, 'r') as file:\n        # Initialize a counter for the number of lines\n        line_count = 0\n\n        # Read each line from the file\n        for line in file:\n            # Increment the line counter\n            line_count += 1\n\n    # Open the output file for writing\n    with open(output_file, 'w') as output:\n        # Write the line count to the output file\n        output.write(f\"{line_count}\\n\")\n\n# Example usage\ncount_lines('file.txt', 'output.txt')\n```\nThis program defines a function `count_lines` that takes two arguments: the name of the input file and the name of the output file. It opens the input file for reading, reads each line into a loop, and increments a counter for the number of lines. After reading all lines, it opens the output file for writing and writes the line count to the file.\n\nYou can replace `'file.txt'` and `'output.txt'` with the names of the input and output files you want to use. The program will create the output file if it does not already exist.",
+  "error": null,
+  "elapsed_seconds": 3.9,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

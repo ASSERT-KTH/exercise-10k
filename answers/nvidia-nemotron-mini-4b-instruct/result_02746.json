@@ -1,0 +1,9 @@
+{
+  "id": 2746,
+  "title": "Distance Between Two Points",
+  "prompt": "Write a program that calculates the distance between two points in a 2D plane given their coordinates.\nSample Input: 1 2 3 4\nSample Output: 2.8284271247461903\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the Euclidean distance between two points in a 2D plane given their coordinates:\n```python\nimport math\n\ndef calculate_distance(point1, point2):\n    \"\"\"\n    Calculates the Euclidean distance between two points in a 2D plane.\n\n    Parameters:\n    point1 (tuple): A tuple of two floats representing the x and y coordinates of the first point.\n    point2 (tuple): A tuple of two floats representing the x and y coordinates of the second point.\n\n    Returns:\n    float: The Euclidean distance between the two points.\n    \"\"\"\n    # Unpack the coordinates of the points\n    x1, y1 = point1\n    x2, y2 = point2\n\n    # Calculate the Euclidean distance using the formula: sqrt((x2 - x1)^2 + (y2 - y1)^2)\n    distance = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)\n\n    return distance\n\n# Example usage\npoint1 = (1, 2)\npoint2 = (3, 4)\ndistance = calculate_distance(point1, point2)\nprint(f\"The distance between {point1} and {point2} is {distance}.\")\n```\nWhen you run this program with the sample input `(1, 2) (3, 4)`, it will output:\n```yaml\nThe distance between (1, 2) and (3, 4) is 2.8284271247461903.\n```\nThis program first defines a function `calculate_distance` that takes two tuples representing the coordinates of two points as input and returns the Euclidean distance between them. Then, it demonstrates how to use this function with sample input to calculate the distance between two points.",
+  "error": null,
+  "elapsed_seconds": 5.76,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

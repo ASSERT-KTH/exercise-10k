@@ -1,0 +1,9 @@
+{
+  "id": 3429,
+  "title": "Substring Search",
+  "prompt": "Write a function that takes two strings as input and returns the index of the first occurrence of the second string in the first string\nSample Input: hello world, world\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef first_occurrence_index(string1, string2):\n    \"\"\"\n    Returns the index of the first occurrence of string2 in string1.\n\n    :param string1: The first string to search in.\n    :param string2: The string to search for in string1.\n    :return: The index of the first occurrence of string2 in string1, or -1 if not found.\n    \"\"\"\n    if not isinstance(string1, str) or not isinstance(string2, str):\n        raise TypeError(\"Both inputs must be strings.\")\n\n    return string1.lower().find(string2.lower())\n```\nThis function first checks if the inputs are strings. If not, it raises a `TypeError`. Then, it converts both strings to lowercase using the `lower()` method to ensure a case-insensitive search. Finally, it uses the `find()` method to return the index of the first occurrence of `string2` in `string1`, or `-1` if not found.\n\nHere's an example of how to use this function:\n```python\nprint(first_occurrence_index(\"hello world\", \"world\"))  # Output: 6\nprint(first_occurrence_index(\"Hello World\", \"world\"))  # Output: -1\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 4.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

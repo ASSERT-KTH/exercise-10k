@@ -1,0 +1,9 @@
+{
+  "id": 5659,
+  "title": "List Reverser",
+  "prompt": "Write a function that reverses a given list of numbers.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [5, 4, 3, 2, 1]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that reverses a given list of numbers using list slicing and the built-in `reverse()` method:\n\n```python\ndef reverse_list(numbers):\n    \"\"\"\n    Reverses a given list of numbers.\n\n    :param numbers: The list of numbers to reverse.\n    :return: The reversed list of numbers.\n    \"\"\"\n    # Use list slicing to reverse the list\n    reversed_numbers = numbers[::-1]\n\n    # Alternatively, you can use the reverse() method\n    # reversed_numbers = numbers.copy()  # Make a copy to avoid modifying the original list\n    # reversed_numbers.reverse()\n\n    return reversed_numbers\n```\n\nHere's an example of how to use this function:\n\n```python\nnumbers = [1, 2, 3, 4, 5]\nreversed_numbers = reverse_list(numbers)\nprint(reversed_numbers)  # Output: [5, 4, 3, 2, 1]\n```\n\nIf you want to modify the original list in-place without creating a copy, you can use the `reversed()` function and a for loop:\n\n```python\ndef reverse_list_inplace(numbers):\n    \"\"\"\n    Reverses a given list of numbers in-place.\n\n    :param numbers: The list of numbers to reverse.\n    \"\"\"\n    numbers.reverse()\n```\n\nHere's an example of how to use this function:\n\n```python\nnumbers = [1, 2, 3, 4, 5]\nreverse_list_inplace(numbers)\nprint(numbers)  # Output: [5, 4, 3, 2, 1]\n```",
+  "error": null,
+  "elapsed_seconds": 4.06,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7320,
+  "title": "Input with Error Handling",
+  "prompt": "Write a program that takes input from the user and handles any errors that may occur.\nSample Input: example\nSample Output: Invalid input\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses the `input()` function to get user input, and it checks for errors by checking if the input is an empty string or if it can be converted to an integer. If an error occurs, it prints an error message and requests user input again.\n\n```python\ndef get_positive_integer():\n    \"\"\"Get a positive integer input from the user.\"\"\"\n    while True:\n        try:\n            user_input = int(input(\"Please enter a positive integer: \"))\n            if user_input > 0:\n                return user_input\n            else:\n                print(\"Invalid input. Please enter a positive integer.\")\n        except ValueError:\n            print(\"Invalid input. Please enter a positive integer.\")\n\n# Example usage:\npositive_integer = get_positive_integer()\nprint(f\"You entered: {positive_integer}\")\n```\n\nThis program defines a function `get_positive_integer()` that prompts the user for input, checks if the input is an integer, and checks if the integer is positive. If an error occurs, it prints an error message and requests user input again. The example usage at the end of the program demonstrates how to use this function to get a positive integer input from the user.",
+  "error": null,
+  "elapsed_seconds": 2.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

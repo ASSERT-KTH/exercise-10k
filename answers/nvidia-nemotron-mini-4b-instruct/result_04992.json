@@ -1,0 +1,9 @@
+{
+  "id": 4992,
+  "title": "Global Variables",
+  "prompt": "Declare a global variable 'globalVar' and access it within a function.\nSample Input: None\nSample Output: globalVar = 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example Python code that demonstrates how to declare a global variable and access it within a function:\n\n```python\n# Declare a global variable 'globalVar'\nglobalVar = 10\n\ndef access_global_var():\n    \"\"\"Access the global variable 'globalVar' within the function.\"\"\"\n    print(f\"globalVar = {globalVar}\")\n\n# Call the function to access the global variable\naccess_global_var()\n```\n\nWhen you run this code, you'll see the following output:\n\n```\nglobalVar = 10\n```\n\nThis demonstrates that the global variable 'globalVar' is accessible within the `access_global_var()` function, and its value is printed to the console.\n\nHowever, it's important to note that using global variables can lead to unintended side effects and make your code harder to maintain. In many cases, it's better to pass variables as arguments to functions or use local variables instead. Here's an example of how to pass a variable as an argument to a function:\n\n```python\ndef modify_local_var(var):\n    \"\"\"Modify the value of the 'var' variable within the function.\"\"\"\n    var = 20\n    print(f\"Local variable 'var' has been modified to {var}.\")\n\n# Declare a local variable 'localVar'\nlocalVar = 10\n\n# Call the function to modify the local variable 'localVar'\nmodify_local_var(localVar)\n\nprint(f\"Global variable 'globalVar' still has the value {globalVar}.\")\n```\n\nThis code demonstrates that local variables are only accessible within their respective functions, and global variables are accessible throughout the entire script.",
+  "error": null,
+  "elapsed_seconds": 5.37,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

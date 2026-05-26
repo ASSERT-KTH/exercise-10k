@@ -1,0 +1,9 @@
+{
+  "id": 4104,
+  "title": "Data Type Conversion",
+  "prompt": "Write a program that converts a string to an integer and vice versa, and prints out the converted values.\nSample Input: '123', 456\nSample Output: Integer: 123, String: '456'\n",
+  "answer": "Here's a Python program that converts a string to an integer and vice versa:\n\n```python\ndef str_to_int(s):\n    try:\n        return int(s)\n    except ValueError:\n        return None\n\ndef int_to_str(i):\n    return str(i)\n\nsample_input = '123', 456\n\nfor item in sample_input:\n    if isinstance(item, str):\n        converted_int = str_to_int(item)\n        if converted_int is not None:\n            print(\"String:\", item, \", Integer:\", converted_int)\n    elif isinstance(item, int):\n        converted_str = int_to_str(item)\n        if converted_str is not None:\n            print(\"Integer:\", item, \", String:\", converted_str)\n    else:\n        print(\"Invalid input\")\n```\n\nThis program defines two functions: `str_to_int()` and `int_to_str()`. The first function converts a string to an integer, and the second function converts an integer to a string. The program then iterates over the sample input, checking whether each item is a string or an integer. If it's a string, it calls `str_to_int()` to convert it to an integer and prints the results. If it's an integer, it calls `int_to_str()` to convert it to a string and prints the results. If neither is true, it prints an error message.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

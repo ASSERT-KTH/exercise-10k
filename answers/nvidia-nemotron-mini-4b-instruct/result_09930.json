@@ -1,0 +1,9 @@
+{
+  "id": 9930,
+  "title": "Dictionary Data Analyzer",
+  "prompt": "Create a program that takes a dictionary of student grades as input and calculates the average grade for each student. The dictionary should have student names as keys and lists of grades as values. The program should then print out the student names and their corresponding average grades.\nSample Input: {'John': [90, 80, 70], 'Alice': [95, 85, 75], 'Bob': [98, 88, 78]}\nSample Output: John: 80.0, Alice: 85.0, Bob: 88.0\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef calculate_average(students):\n    \"\"\"Calculate the average grade for each student.\"\"\"\n    averages = {}\n    for student, grades in students.items():\n        total = sum(grades)\n        averages[student] = total / len(grades)\n    return averages\n\ndef print_averages(averages):\n    \"\"\"Print the student names and their corresponding average grades.\"\"\"\n    for student, avg in averages.items():\n        print(f\"{student}: {avg:.1f}\")\n\n# Example usage\nstudents = {'John': [90, 80, 70], 'Alice': [95, 85, 75], 'Bob': [98, 88, 78]}\naverages = calculate_average(students)\nprint_averages(averages)\n```\n\nThis program defines two functions: `calculate_average` and `print_averages`. The first function takes a dictionary of students and their grades as input, calculates the average grade for each student, and returns a new dictionary containing the averages. The second function takes a dictionary of averages and prints out the student names and their corresponding average grades. The example usage at the end of the program demonstrates how to use these functions with the given sample input.",
+  "error": null,
+  "elapsed_seconds": 2.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

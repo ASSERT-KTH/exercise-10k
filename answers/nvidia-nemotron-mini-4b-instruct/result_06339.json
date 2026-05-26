@@ -1,0 +1,9 @@
+{
+  "id": 6339,
+  "title": "Array Intersection",
+  "prompt": "Write a program that takes two arrays as input, finds their intersection, and returns the intersection array.\nSample Input: [1, 2, 3, 4, 5], [4, 5, 6, 7, 8]\nSample Output: [4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes two arrays as input, finds their intersection, and returns the intersection array using the built-in `set` data structure to efficiently remove duplicates and find the intersection:\n\n```python\ndef find_intersection(arr1, arr2):\n    \"\"\"\n    Find the intersection of two arrays and return it as a new array.\n\n    :param arr1: The first input array\n    :param arr2: The second input array\n    :return: A new array containing the intersection of arr1 and arr2\n    \"\"\"\n    # Convert the input arrays to sets to remove duplicates and find the intersection\n    set1 = set(arr1)\n    set2 = set(arr2)\n\n    # Find the intersection of the two sets and convert it back to a list\n    intersection = list(set1 & set2)\n\n    return intersection\n\n# Example usage\narr1 = [1, 2, 3, 4, 5]\narr2 = [4, 5, 6, 7, 8]\n\nprint(find_intersection(arr1, arr2))  # Output: [4, 5]\n```\n\nThis program first converts the input arrays to sets, which automatically removes any duplicate elements. Then, it finds the intersection of the two sets using the `&` operator and converts the result back to a list before returning it.",
+  "error": null,
+  "elapsed_seconds": 3.44,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

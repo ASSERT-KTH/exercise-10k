@@ -1,0 +1,9 @@
+{
+  "id": 2198,
+  "title": "Run-Length Encoder",
+  "prompt": "Create a function to encode a given string using run-length encoding. The function should return the encoded string.\nSample Input: aaabbbccc\nSample Output: a3b3c3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that implements run-length encoding as described in your question:\n\n```python\ndef encode_string(s: str) -> str:\n    \"\"\"\n    Encodes a given string using run-length encoding.\n\n    :param s: The input string to encode.\n    :return: The encoded string.\n    \"\"\"\n    encoded = \"\"\n    char, count = s[0], 1\n    for c in s[1:]:\n        if c != char:\n            encoded += f\"{char}{count}\"\n            char, count = c, 1\n        else:\n            count += 1\n    encoded += f\"{char}{count}\"\n    return encoded\n```\n\nHere's how you can use this function:\n\n```python\nprint(encode_string(\"aaabbbccc\"))  # Output: a3b3c3\n```\n\nThis function works by iterating over the input string and maintaining track of the current character and its count. Whenever a new character is encountered, it appends the current character and count to the encoded string, and then resets the current character and count to the new character and a count of 1. This process continues until the end of the string is reached. Finally, it appends the last character and count to the encoded string.",
+  "error": null,
+  "elapsed_seconds": 3.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

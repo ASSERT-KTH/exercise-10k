@@ -1,0 +1,9 @@
+{
+  "id": 7372,
+  "title": "Finding the Maximum Value in an Array",
+  "prompt": "Write a program that takes an array of integers as input and returns the maximum value in the array. The program should handle arrays of varying lengths and should not use any built-in functions to find the maximum value.\nSample Input: [12, 45, 7, 23, 56, 89, 34]\nSample Output: 89\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. It uses a `for` loop to iterate through each element in the array, keeps track of the maximum value seen so far, and returns it at the end.\n\n```python\ndef max_value(arr):\n    \"\"\"\n    Given an array of integers, return the maximum value in the array.\n\n    :param arr: list of integers\n    :return: int - the maximum value in the array\n    \"\"\"\n    if not arr:  # Check if the array is empty\n        raise ValueError(\"Input array cannot be empty\")\n\n    max_val = arr[0]  # Initialize max_val with the first element\n\n    for num in arr[1:]:  # Iterate through the remaining elements\n        if num > max_val:  # Update max_val if the current number is greater\n            max_val = num\n\n    return max_val\n```\n\nYou can use this function as follows:\n\n```python\nprint(max_value([12, 45, 7, 23, 56, 89, 34]))  # Output: 89\nprint(max_value([]))  # Raises ValueError\n```",
+  "error": null,
+  "elapsed_seconds": 2.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

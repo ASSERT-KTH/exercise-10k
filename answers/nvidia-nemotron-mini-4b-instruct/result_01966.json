@@ -1,0 +1,9 @@
+{
+  "id": 1966,
+  "title": "Function Composition",
+  "prompt": "Create a function that takes two functions as arguments and returns a new function that is the composition of the two input functions.\nSample Input: f(x) = 2x, g(x) = x + 1\nSample Output: f(g(x)) = 2x + 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that takes two functions as arguments and returns their composition. We'll use the `functools.reduce` function to simplify the composition process.\n\n```python\nfrom functools import reduce\n\ndef compose(*functions):\n    \"\"\"\n    Returns a new function that is the composition of the given functions.\n\n    :param functions: Variable number of functions to compose.\n    :return: A new function that takes an argument and returns the result of applying\n             the given functions to that argument in order.\n    \"\"\"\n    if not functions:\n        raise ValueError(\"At least one function must be provided.\")\n\n    return lambda x: reduce(lambda acc, f: f(acc), functions, x)\n```\n\nHere's an example of how to use this function:\n\n```python\nf = lambda x: 2 * x\ng = lambda x: x + 1\n\ncomposed_func = compose(f, g)\n\nprint(composed_func(5))  # Output: 13\n```\n\nThis function works by defining a helper function `reduce` that applies the given functions to an accumulator and the current argument in order. The `compose` function then defines a new function that takes an argument and calls the `reduce` function with the given functions and the argument as arguments.",
+  "error": null,
+  "elapsed_seconds": 3.12,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

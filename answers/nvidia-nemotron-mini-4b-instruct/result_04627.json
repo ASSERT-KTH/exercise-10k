@@ -1,0 +1,9 @@
+{
+  "id": 4627,
+  "title": "Array Rotation",
+  "prompt": "Write a program that takes an array and a rotation amount as input, and returns the rotated array.\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: [4, 5, 1, 2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef rotate_array(arr, rotation):\n    \"\"\"\n    Rotates an array by the given amount.\n\n    :param arr: The input array\n    :param rotation: The amount to rotate the array\n    :return: The rotated array\n    \"\"\"\n    # Ensure rotation is within bounds\n    rotation %= len(arr)\n\n    # Rotate the array by shifting elements to the left\n    return arr[-rotation:] + arr[:-rotation]\n\n# Example usage\ninput_array = [1, 2, 3, 4, 5]\nrotation = 2\noutput_array = rotate_array(input_array, rotation)\nprint(output_array)  # Output: [4, 5, 1, 2, 3]\n```\nThis program defines a function `rotate_array` that takes an array and a rotation amount as input, and returns the rotated array. The function first ensures that the rotation amount is within bounds by taking the modulus of the rotation amount with the length of the array. Then, it rotates the array by shifting elements to the left by the given amount. Finally, it returns the rotated array by concatenating the elements from the end of the array with those from the beginning, in reverse order.\n\nThe example usage at the end of the program demonstrates how to use the function to rotate an array by 2 elements.",
+  "error": null,
+  "elapsed_seconds": 3.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2943,
+  "title": "Searching for a Target Value",
+  "prompt": "Write a program to search for a target value in a sorted array using the binary search algorithm.\nSample Input: [1, 2, 3, 4, 5, 6, 7, 8, 9], 5\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that implements the binary search algorithm to find the target value in a sorted array:\n\n```python\ndef binary_search(arr, target):\n    \"\"\"\n    Performs a binary search on a sorted array to find the target value.\n\n    :param arr: The sorted array to search in.\n    :param target: The target value to find.\n    :return: The index of the target value if found, otherwise -1.\n    \"\"\"\n    left, right = 0, len(arr) - 1\n\n    while left <= right:\n        mid = (left + right) // 2\n\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n\n    return -1\n\n# Example usage:\narr = [1, 2, 3, 4, 5, 6, 7, 8, 9]\ntarget = 5\nindex = binary_search(arr, target)\n\nif index != -1:\n    print(f\"The target value {target} is at index {index}.\")\nelse:\n    print(f\"The target value {target} was not found.\")\n```\n\nThis program defines a function `binary_search` that takes a sorted array and a target value as input, and returns the index of the target value if found, or -1 otherwise. The function uses a while loop to repeatedly divide the search interval in half until the target value is found or the search interval is empty.",
+  "error": null,
+  "elapsed_seconds": 4.46,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

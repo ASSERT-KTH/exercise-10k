@@ -1,0 +1,9 @@
+{
+  "id": 4900,
+  "title": "Dictionary Comprehension",
+  "prompt": "Create a new dictionary using dictionary comprehension.\nSample Input: [ 'name', 'age' ] and [ 'John', 25 ]\nSample Output: { 'name': 'John', 'age': 25 }\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's how you can create a new dictionary using dictionary comprehension in Python:\n\n```python\nsample_input = [ 'name', 'age' ]\nsample_output = { key: value for key, value in zip(sample_input, [ 'John', 25 ]) }\n```\n\nLet's break down this code:\n\n* `sample_input` is a list containing the keys for the dictionary you want to create. In this case, it's `['name', 'age']`.\n* `sample_output` is a variable that will hold the resulting dictionary.\n* `zip(sample_input, [ 'John', 25 ])` is a function call that takes two iterables (in this case, a list and a single element) and returns an iterator of tuples, where the i-th tuple contains the i-th element from each of the argument sequences. In this case, we're using `zip` to pair up the elements in `sample_input` with the elements in `[ 'John', 25 ]`.\n* `{ key: value for key, value in zip(sample_input, [ 'John', 25 ]) }` is a dictionary comprehension that creates a new dictionary by iterating over the tuples returned by `zip(sample_input, [ 'John', 25 ])`, assigning each key-value pair to a new key-value pair in the dictionary. In this case, the key is the element from `sample_input`, and the value is the corresponding element from `[ 'John', 25 ]`.\n\nWhen you run this code, it will create a new dictionary with the keys `'name'` and `'age'`, and the corresponding values `'John'` and `25`, respectively.",
+  "error": null,
+  "elapsed_seconds": 4.18,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

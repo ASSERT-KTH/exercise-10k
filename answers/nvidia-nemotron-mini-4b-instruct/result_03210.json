@@ -1,0 +1,9 @@
+{
+  "id": 3210,
+  "title": "Simple Exponentiation",
+  "prompt": "Write a program that takes two numbers as input and prints the first number raised to the power of the second number.\nSample Input: 2 3\nSample Output: 8\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef power(base, exponent):\n    \"\"\"\n    Calculates the base raised to the power of the exponent.\n\n    :param base: The base number to raise to a power.\n    :param exponent: The exponent to raise the base to.\n    :return: The result of the base raised to the power of the exponent.\n    \"\"\"\n    # Check if the exponent is non-negative\n    if exponent < 0:\n        raise ValueError(\"Exponent must be non-negative\")\n\n    # Calculate the result and return it\n    result = 1\n    for _ in range(exponent):\n        result *= base\n\n    return result\n\n# Get user input\nbase = int(input(\"Enter the base number: \"))\nexponent = int(input(\"Enter the exponent: \"))\n\n# Print the result\nprint(f\"{base} raised to the power of {exponent} is {power(base, exponent)}\")\n```\nThis program defines a function `power` that takes two arguments, `base` and `exponent`, and calculates the base raised to the power of the exponent. The function checks if the exponent is non-negative and raises a `ValueError` if it's not. The program then gets user input for the base and exponent, calls the `power` function with those values, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

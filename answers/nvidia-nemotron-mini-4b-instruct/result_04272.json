@@ -1,0 +1,9 @@
+{
+  "id": 4272,
+  "title": "Dictionary Pop Method",
+  "prompt": "Write a function that takes a dictionary and a key as input and removes and returns the corresponding value using the pop() method\nSample Input: {\"name\": \"John\", \"age\": 25}, \"age\"\nSample Output: 25\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_value_by_key(dictionary, key):\n    \"\"\"\n    Retrieves and removes the value associated with the given key in the dictionary.\n\n    Parameters:\n    dictionary (dict): The input dictionary.\n    key (any): The key to search for in the dictionary.\n\n    Returns:\n    any: The value associated with the given key in the dictionary.\n\n    Raises:\n    KeyError: If the key is not found in the dictionary.\n    \"\"\"\n    value = dictionary.pop(key, None)\n    if value is None:\n        raise KeyError(f\"The key '{key}' was not found in the dictionary.\")\n    return value\n```\nHere's an example of how to use this function:\n```python\nsample_dict = {\"name\": \"John\", \"age\": 25}\nresult = get_value_by_key(sample_dict, \"age\")\nprint(result)  # Output: 25\n```\nThis function first uses the `pop()` method to remove the value associated with the given key from the dictionary. If the key is not found, it returns `None` and raises a `KeyError` with an appropriate message. Otherwise, it returns the value associated with the key.",
+  "error": null,
+  "elapsed_seconds": 3.16,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

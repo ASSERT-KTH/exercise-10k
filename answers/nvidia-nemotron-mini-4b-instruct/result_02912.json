@@ -1,0 +1,9 @@
+{
+  "id": 2912,
+  "title": "Password Strength Checker",
+  "prompt": "Develop a program to check the strength of a given password based on its length and characters.\nSample Input: P@ssw0rd\nSample Output: Strong\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks the strength of a given password based on its length and character types:\n\n```python\nimport re\n\ndef check_password_strength(password):\n    \"\"\"\n    Check the strength of a given password based on its length and character types.\n\n    :param password: str - The password to check.\n    :return: str - A message indicating the password strength.\n    \"\"\"\n\n    # Regular expression pattern to match alphanumeric characters and special characters\n    pattern = r'^[a-zA-Z0-9!@#$%^&*(),.?\":{}|<>~-]+$'\n\n    # Check if the password matches the pattern\n    if re.match(pattern, password):\n        # Check if the password is at least 8 characters long\n        if len(password) >= 8:\n            return \"Strong\"\n        else:\n            return \"Weak\"\n    else:\n        return \"Invalid\"\n\n# Example usage\npassword = \"P@ssw0rd\"\nprint(check_password_strength(password))  # Output: Strong\n```\n\nThis program defines a function `check_password_strength` that takes a password as input and returns a message indicating its strength. The function checks if the password matches a regular expression pattern that includes alphanumeric characters and special characters. If the password is at least 8 characters long and matches the pattern, it is considered strong. Otherwise, it is considered weak or invalid.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

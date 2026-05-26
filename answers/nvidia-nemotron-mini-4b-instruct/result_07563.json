@@ -1,0 +1,9 @@
+{
+  "id": 7563,
+  "title": "Function with Lazy Evaluation",
+  "prompt": "Create a function that uses lazy evaluation to delay the computation of a value until it's actually needed.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example of how you can create a function that uses lazy evaluation in Python using the `functools.lru_cache` decorator, which is a built-in decorator that caches the results of expensive function calls to improve performance. In this example, I'll create a function that calculates the factorial of a number using lazy evaluation.\n\nFirst, let's define the factorial function without lazy evaluation:\n\n```python\ndef factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n-1)\n```\n\nNow, let's create a lazy version of the factorial function using `functools.lru_cache`:\n\n```python\nfrom functools import lru_cache\n\n@lru_cache(maxsize=None)\ndef lazy_factorial(n):\n    \"\"\"Calculate the factorial of a number using lazy evaluation.\"\"\"\n    if n == 0:\n        return 1\n    return n * lazy_factorial(n-1)\n```\n\nIn this example, the `@lru_cache` decorator caches the results of `lazy_factorial` calls, so if you call `lazy_factorial(5)` multiple times, it will only calculate the factorial once and store the result in the cache. This significantly improves performance compared to the non-lazy version.\n\nHere's an example of how to use the lazy version of the factorial function:\n\n```python\nprint(lazy_factorial(5))  # Output: 120\nprint(lazy_factorial(5))  # Output: 120\nprint(lazy_factorial(5))  # Output: 120\n```\n\nYou can experiment with different cache sizes (e.g., `maxsize=1000`) to see how it affects the performance of the lazy version compared to the non-lazy version.",
+  "error": null,
+  "elapsed_seconds": 4.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

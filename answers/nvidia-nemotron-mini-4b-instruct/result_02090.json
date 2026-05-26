@@ -1,0 +1,9 @@
+{
+  "id": 2090,
+  "title": "Calculate Exponentiation",
+  "prompt": "Write a program to calculate the result of exponentiation (a^b) given two numbers a and b.\nSample Input: 2 3\nSample Output: Result: 8\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the result of exponentiation (a^b) given two numbers `a` and `b`:\n\n```python\ndef calculate_exponentiation(a, b):\n    \"\"\"\n    Calculates the result of exponentiation (a^b) given two numbers a and b.\n\n    :param a: The base number (integer or float).\n    :param b: The exponent (integer).\n    :return: The result of exponentiation (integer or float).\n    \"\"\"\n\n    # Check if the exponent is non-negative\n    if b < 0:\n        raise ValueError(\"Exponent must be non-negative\")\n\n    # Calculate the result of exponentiation\n    result = 1\n    for _ in range(abs(b)):\n        result *= a\n\n    # Return the result with the correct sign\n    return result if b > 0 else 1 / result\n\n\n# Get sample input from the user\na = float(input(\"Enter the base number (a): \"))\nb = int(input(\"Enter the exponent (b): \"))\n\n# Calculate and display the result\nresult = calculate_exponentiation(a, b)\nprint(f\"Result: {result}\")\n```\n\nThis program checks if the exponent is non-negative and calculates the result of exponentiation by repeatedly multiplying the base number `a` by itself `b` times. The result is then returned with the correct sign based on the value of the exponent `b`.",
+  "error": null,
+  "elapsed_seconds": 4.11,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

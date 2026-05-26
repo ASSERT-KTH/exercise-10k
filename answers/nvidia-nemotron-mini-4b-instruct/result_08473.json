@@ -1,0 +1,9 @@
+{
+  "id": 8473,
+  "title": "Day of the Week Calculator",
+  "prompt": "Write a program to calculate the day of the week given a date\nSample Input: 2022-01-01\nSample Output: Saturday\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the day of the week given a date in the format 'YYYY-MM-DD'. This program uses the `datetime` module to handle dates and the `calendar` module to get the day of the week.\n\n```python\nfrom datetime import datetime\n\ndef get_day_of_week(date_str):\n    \"\"\"\n    Calculates the day of the week given a date in the format 'YYYY-MM-DD'.\n\n    :param date_str: str, date in the format 'YYYY-MM-DD'\n    :return: str, day of the week as a string (e.g., 'Monday', 'Tuesday', etc.)\n    \"\"\"\n    try:\n        date = datetime.strptime(date_str, '%Y-%m-%d')\n        return calendar.day_name[date.weekday()]\n    except ValueError:\n        raise ValueError(\"Invalid date format. Please use 'YYYY-MM-DD' format.\")\n\n# Example usage:\ndate_str = '2022-01-01'\nday_of_week = get_day_of_week(date_str)\nprint(f\"{date_str} is a {day_of_week}.\")\n```\n\nThis program first tries to convert the input string to a `datetime` object using the `strptime` method. If the conversion is successful, it gets the day of the week using the `weekday()` method and returns the corresponding day name using the `calendar.day_name` dictionary. If the conversion fails, it raises a `ValueError` with an appropriate error message.",
+  "error": null,
+  "elapsed_seconds": 3.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3457,
+  "title": "Simple Game",
+  "prompt": "Create a program that simulates a simple game, where the user has to navigate a character through a maze and reach the exit\nSample Input: move up\nSample Output: You moved up, you are now at (3, 4)\n",
+  "answer": "Sure, I'd be happy to help you create a simple game simulation program. Here's a Python solution using a 2D list to represent the maze and user input to navigate the character. We'll use the `input()` function to get user input and print the current position of the character using string formatting.\n\n```python\n# Initialize the maze as a 2D list\nmaze = [\n    [0, 0, 0, 0, 0],\n    [0, 1, 1, 1, 0],\n    [0, 1, '#', 1, 0],\n    [0, 1, 'X', 1, 0],\n    [0, 0, 0, 0, 0]\n]\n\n# Initialize the character position\nx, y = 0, 0\n\n# Function to get user input and move the character\ndef get_user_input():\n    user_input = input(\"Enter a direction (up, down, left, right): \").lower()\n    if user_input == 'up':\n        y -= 1\n    elif user_input == 'down':\n        y += 1\n    elif user_input == 'left':\n        x -= 1\n    elif user_input == 'right':\n        x += 1\n    else:\n        print(\"Invalid input. Please try again.\")\n        return\n\n    # Check if the character moved out of the maze or reached the exit\n    if maze[y][x] == 1 or maze[y][x] == '#':\n        print(\"You hit a wall or reached the edge of the maze. Game over.\")\n        return\n    elif maze[y][x] == 'X':\n        print(f\"Congratulations! You reached the exit. You are now at ({x}, {y}).\")\n        return\n\n# Main game loop\nwhile True:\n    get_user_input()\n    print(f\"You moved {(x, y)}\")\n```\n\nThis program will create a simple maze and allow the user to navigate through it using up, down, left, and right keys. When the user reaches the exit, the program will print a congratulatory message.",
+  "error": null,
+  "elapsed_seconds": 5.03,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

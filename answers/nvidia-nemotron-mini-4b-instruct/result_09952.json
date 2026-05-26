@@ -1,0 +1,9 @@
+{
+  "id": 9952,
+  "title": "Variable Swapper",
+  "prompt": "Write a program that swaps the values of two variables without using a temporary variable.\nSample Input: a = 5, b = 10\nSample Output: a = 10, b = 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that swaps the values of two variables without using a temporary variable:\n\n```python\ndef swap_values(a, b):\n    \"\"\"Swaps the values of two variables without using a temporary variable.\n\n    Args:\n        a (int): The first variable to swap.\n        b (int): The second variable to swap.\n\n    Returns:\n        None\n    \"\"\"\n    # Swap the values using XOR (Exclusive OR) and assignment\n    a ^= b\n    b ^= a\n    a ^= b\n\n    # Print the updated values\n    print(f\"a = {a}, b = {b}\")\n\n# Example usage\na = 5\nb = 10\nswap_values(a, b)\n```\n\nWhen you run this program, it will output:\n\n```\na = 10, b = 5\n```\n\nThis program uses the XOR operator (`^`) to swap the values of two variables without using a temporary variable. The XOR operator works as follows:\n\n* `a ^ b` returns a new value where all bits that are different between `a` and `b` are set to 1, and all bits that are the same are set to 0.\n* `a ^= b` is equivalent to `a = a ^ b`, which means that the value of `a` is updated to be the result of the XOR operation.\n* `b ^= a` is equivalent to `b = b ^ a`, which means that the value of `b` is updated to be the result of the XOR operation.\n\nBy repeating these steps, we can swap the values of `a` and `b` without using a temporary variable.",
+  "error": null,
+  "elapsed_seconds": 4.01,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

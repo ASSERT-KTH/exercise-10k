@@ -1,0 +1,9 @@
+{
+  "id": 8710,
+  "title": "Password Generator",
+  "prompt": "Create a password generator that generates a random password based on user input.\nSample Input: 10\nSample Output: G4j#8dLpM2\n",
+  "answer": "Sure, I'd be happy to help you create a password generator. Here's a Python solution that generates a random password based on the user's input for the length of the password. We'll use the `secrets` module to generate truly random numbers, which are more secure than using a fixed set of characters.\n\n```python\nimport secrets\n\ndef generate_password(length):\n    \"\"\"\n    Generate a random password of the given length.\n\n    :param length: The length of the password to generate.\n    :return: A random password as a string.\n    \"\"\"\n    # Define the character sets for each character type\n    char_sets = [\n        \"abcdefghijklmnopqrstuvwxyz\",\n        \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\",\n        \"0123456789\",\n        \"!@#$%^&*()-_=+[]{}|;:,.<>?\"\n    ]\n\n    # Generate a random password by concatenating characters from each set\n    password = \"\".join(secrets.choice(char_sets[i % len(char_sets)]) for i in range(length))\n\n    return password\n\n# Example usage\npassword_length = int(input(\"Enter the length of the password: \"))\npassword = generate_password(password_length)\nprint(f\"Your random password is: {password}\")\n```\n\nThis script defines a function `generate_password` that generates a random password of the given length by concatenating characters from four character sets. The user can input the desired length of the password, and the script will generate and print it.",
+  "error": null,
+  "elapsed_seconds": 4.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

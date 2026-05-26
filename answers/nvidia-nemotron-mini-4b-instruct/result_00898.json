@@ -1,0 +1,9 @@
+{
+  "id": 898,
+  "title": "Simple Chatbot",
+  "prompt": "Create a program that responds to basic user queries, such as 'hello', 'how are you', and 'what is your name'.\nSample Input: hello\nSample Output: Hello! How can I assist you?\n",
+  "answer": "Sure, I'd be happy to help you create a program that responds to basic user queries. Here's an example Python program using the `input()` function to read user input and the `print()` function to display the response:\n\n```python\ndef respond_to_user():\n    \"\"\"Responds to basic user queries.\"\"\"\n\n    while True:\n        user_input = input(\"You: \")\n\n        if user_input.lower() in [\"hello\", \"hi\", \"hey\"]:\n            print(f\"Hello! How can I assist you?\")\n\n        elif user_input.lower() in [\"how are you\", \"how are you doing\"]:\n            print(\"I'm doing well, thank you for asking. How can I help you today?\")\n\n        elif user_input.lower() in [\"what is your name\"]:\n            print(\"My name is an assistant. I'm here to help you with any questions or tasks you have.\")\n\n        elif user_input.lower() in [\"quit\", \"exit\"]:\n            print(\"Goodbye! Have a great day!\")\n            return\n\n        else:\n            print(\"I'm sorry, I didn't understand that. Please try again.\")\n\n# Call the function to start the interaction\nrespond_to_user()\n```\n\nThis program will continuously listen for user input and respond with appropriate greetings or helpful messages. You can customize the responses to better suit your needs by adding more conditions or changing the text.",
+  "error": null,
+  "elapsed_seconds": 3.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

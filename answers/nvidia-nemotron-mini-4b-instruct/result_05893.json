@@ -1,0 +1,9 @@
+{
+  "id": 5893,
+  "title": "List Unfolding",
+  "prompt": "Write a function that takes a list of lists as input and returns a single list containing all elements from the sublists.\nSample Input: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nSample Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef flatten_list(nested_list):\n    \"\"\"\n    Flattens a list of lists into a single list.\n\n    Parameters:\n    nested_list (list): A list of lists.\n\n    Returns:\n    list: A flattened list containing all elements from the sublists.\n    \"\"\"\n    return [element for sublist in nested_list for element in sublist]\n```\nThis function uses a list comprehension to iterate over each sublist in the input list and then over each element in the sublist. The resulting flattened list contains all elements from the sublists.\n\nHere's an example of how you can use this function:\n```python\nnested_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nflattened_list = flatten_list(nested_list)\nprint(flattened_list)  # Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2748,
+  "title": "Pressure Calculator",
+  "prompt": "Write a program that calculates the pressure of a gas given its force and area.\nSample Input: 10 2\nSample Output: 5.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the pressure of a gas given its force and area:\n\n```python\ndef calculate_pressure(force, area):\n    \"\"\"\n    Calculates the pressure of a gas given its force and area.\n\n    Parameters:\n    force (float): The force applied to the gas.\n    area (float): The area over which the force is applied.\n\n    Returns:\n    float: The pressure of the gas.\n    \"\"\"\n\n    # Check that the input values are positive\n    if force <= 0 or area <= 0:\n        raise ValueError(\"Force and area must be positive.\")\n\n    # Calculate the pressure using the formula P = F / A\n    pressure = force / area\n\n    return pressure\n\n# Get user input\nforce = float(input(\"Enter the force (in Newtons): \"))\narea = float(input(\"Enter the area (in square meters): \"))\n\n# Calculate and print the pressure\npressure = calculate_pressure(force, area)\nprint(f\"The pressure is {pressure} Pascals.\")\n```\n\nThis program defines a function `calculate_pressure` that takes the force and area as input, checks that they are positive, calculates the pressure using the formula `P = F / A`, and returns the result. The program then gets user input for the force and area, calls the function to calculate the pressure, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

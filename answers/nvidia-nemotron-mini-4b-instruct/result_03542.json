@@ -1,0 +1,9 @@
+{
+  "id": 3542,
+  "title": "List Filtering",
+  "prompt": "Write a program that takes a list and a condition as input, and returns a new list containing only the elements that satisfy the condition.\nSample Input: [1, 2, 3, 4, 5], x > 3\nSample Output: [4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef filter_list(lst, condition):\n    \"\"\"\n    Filters a list based on a given condition.\n\n    Parameters:\n    lst (list): The list to filter.\n    condition (callable): A function that takes an element as input and returns a boolean.\n\n    Returns:\n    list: A new list containing only the elements that satisfy the condition.\n    \"\"\"\n    return [element for element in lst if condition(element)]\n\n# Example usage:\nsample_input = [1, 2, 3, 4, 5]\nsample_condition = lambda x: x > 3\n\nfiltered_list = filter_list(sample_input, sample_condition)\nprint(filtered_list)  # Output: [4, 5]\n```\nThis program defines a function `filter_list` that takes a list and a condition as input, and returns a new list containing only the elements that satisfy the condition. The function uses a list comprehension to iterate over each element in the input list and checks if the condition returns `True`. If the condition is met, the element is included in the new list.\n\nThe example usage shows how to use the function with a sample input list and a sample condition function that checks if an element is greater than 3. The resulting filtered list is printed to the console.",
+  "error": null,
+  "elapsed_seconds": 3.32,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

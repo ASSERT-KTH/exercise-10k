@@ -1,0 +1,9 @@
+{
+  "id": 1090,
+  "title": "Price Calculator",
+  "prompt": "Write a program that takes the price of an item and the tax rate as input and outputs the total price.\nSample Input: 100 0.08\nSample Output: 108.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_total_price(item_price, tax_rate):\n    \"\"\"\n    Calculates the total price of an item, including tax.\n\n    Parameters:\n    item_price (float): The price of the item before tax.\n    tax_rate (float): The tax rate as a decimal (e.g., 0.08 for 8%).\n\n    Returns:\n    float: The total price of the item, including tax.\n    \"\"\"\n\n    # Calculate the tax amount\n    tax_amount = item_price * tax_rate\n\n    # Calculate the total price\n    total_price = item_price + tax_amount\n\n    return total_price\n\n# Get user input\nitem_price = float(input(\"Enter the price of the item: $\"))\ntax_rate = float(input(\"Enter the tax rate as a decimal (e.g., 0.08 for 8%): \"))\n\n# Calculate and print the total price\ntotal_price = calculate_total_price(item_price, tax_rate)\nprint(f\"The total price is ${total_price:.2f}.\")\n```\nThis program defines a function `calculate_total_price` that takes the price of an item and the tax rate as input, calculates the tax amount and the total price, and returns the total price. The program then prompts the user to enter the item price and the tax rate, calls the function with those values, and prints the total price with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 3.73,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

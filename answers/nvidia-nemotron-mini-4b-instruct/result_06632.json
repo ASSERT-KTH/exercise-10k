@@ -1,0 +1,9 @@
+{
+  "id": 6632,
+  "title": "Function with Memoization",
+  "prompt": "Create a function that uses memoization to cache its results\nSample Input: 5\nSample Output: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses memoization to cache its results for the Fibonacci sequence. The memo dictionary will store previously computed Fibonacci numbers, and the function will check if the result is already in the memo dictionary before computing it again.\n\n```python\ndef fibonacci(n, memo={}):\n    \"\"\"\n    Calculate the nth Fibonacci number using memoization.\n\n    :param n: The position of the Fibonacci number to calculate.\n    :param memo: A dictionary to store previously computed Fibonacci numbers.\n    :return: The nth Fibonacci number.\n    \"\"\"\n\n    # Base cases\n    if n == 0:\n        return 0\n    elif n == 1:\n        return 1\n\n    # Check if the result is already in the memo dictionary\n    if n in memo:\n        return memo[n]\n\n    # Compute the Fibonacci number and store it in the memo dictionary\n    result = fibonacci(n - 1, memo) + fibonacci(n - 2, memo)\n    memo[n] = result\n\n    return result\n```\n\nYou can use this function to get the nth Fibonacci number as follows:\n\n```python\nprint(fibonacci(5))  # Output: 5\n```\n\nThis function will return the correct result (5) even if you call it multiple times with the same `n` value, as it will use the cached result instead of recomputing it.",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

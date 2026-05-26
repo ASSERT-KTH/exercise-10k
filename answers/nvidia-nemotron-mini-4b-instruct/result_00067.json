@@ -1,0 +1,9 @@
+{
+  "id": 67,
+  "title": "Longest Palindromic Substring",
+  "prompt": "Write a program to find the longest palindromic substring in a given string\nSample Input: babad\nSample Output: bab\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the longest palindromic substring in a given string:\n\n```python\ndef longest_palindrome(s):\n    # Initialize variables to store the longest palindrome and its length\n    longest = \"\"\n    longest_len = 0\n\n    # Function to check if a string is a palindrome\n    def is_palindrome(s):\n        return s == s[::-1]\n\n    # Iterate over all possible lengths of substrings\n    for i in range(len(s)):\n        for j in range(i, len(s)):\n            # Check if the substring is a palindrome and its length is greater than the current longest palindrome\n            if is_palindrome(s[i:j+1]) and len(s[i:j+1]) > longest_len:\n                longest = s[i:j+1]\n                longest_len = len(s[i:j+1])\n\n    return longest\n\n# Test the function with the sample input\nprint(longest_palindrome(\"babad\"))  # Output: bab\n```\n\nThis program defines a function `longest_palindrome` that takes a string `s` as input and returns the longest palindromic substring in `s`. The function first initializes variables `longest` and `longest_len` to store the longest palindrome and its length, respectively. Then, it iterates over all possible lengths of substrings in `s` and checks if each substring is a palindrome using the `is_palindrome` helper function. If a substring is a palindrome and its length is greater than the current longest palindrome, the function updates `longest` and `longest_len`. Finally, the function returns the longest palindromic substring.",
+  "error": null,
+  "elapsed_seconds": 6.74,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4583,
+  "title": "Rock, Paper, Scissors Function",
+  "prompt": "Create a function that takes two player choices as input and returns the winner\nSample Input: \"rock\", \"scissors\"\nSample Output: Player 1 wins!\n",
+  "answer": "Sure, I'd be happy to help you create a function for determining the winner between two players based on their choices. Here's a Python function that meets your requirements:\n\n```python\ndef determine_winner(player1, player2):\n    \"\"\"\n    Determines the winner between two players based on their choices.\n\n    :param player1: The first player's choice (str, can be 'rock', 'paper', or 'scissors')\n    :param player2: The second player's choice (str, can be 'rock', 'paper', or 'scissors')\n    :return: A string indicating the winner ('Player 1 wins!', 'Player 2 wins!', or 'It\\'s a tie!')\n    \"\"\"\n\n    # Define the rules for the game\n    rules = {\n        'rock': ['scissors', 'wins'],\n        'paper': ['rock', 'wins'],\n        'scissors': ['paper', 'wins']\n    }\n\n    # Check if both players made valid choices\n    if not all(choice in rules for choice in (player1, player2)):\n        return 'Invalid choices. Please use \"rock\", \"paper\", or \"scissors\".'\n\n    # Determine the winner based on the rules\n    winner = next((player for player, wins in rules.items() if player == player1 and wins == player2), None)\n    if winner:\n        return f'Player {winner} wins!'\n    else:\n        return 'It\\'s a tie!'\n```\n\nYou can use this function as follows:\n\n```python\nprint(determine_winner('rock', 'scissors'))  # Output: Player 1 wins!\nprint(determine_winner('paper', 'rock'))     # Output: Player 2 wins!\nprint(determine_winner('scissors', 'paper'))  # Output: It's a tie!\n```",
+  "error": null,
+  "elapsed_seconds": 5.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

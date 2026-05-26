@@ -1,0 +1,9 @@
+{
+  "id": 5132,
+  "title": "Calculate GCD",
+  "prompt": "Write a program to calculate the greatest common divisor (GCD) of two given integers.\nSample Input: 12, 15\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the greatest common divisor (GCD) of two given integers using the Euclidean algorithm:\n\n```python\ndef gcd(a, b):\n    \"\"\"\n    Calculate the greatest common divisor of two integers.\n\n    :param a: The first integer.\n    :param b: The second integer.\n    :return: The greatest common divisor of a and b.\n    \"\"\"\n    while b:\n        a, b = b, a % b\n    return abs(a)\n\n# Get user input\nnum1 = int(input(\"Enter the first integer: \"))\nnum2 = int(input(\"Enter the second integer: \"))\n\n# Calculate and print the GCD\ngcd_value = gcd(num1, num2)\nprint(f\"The greatest common divisor of {num1} and {num2} is {gcd_value}.\")\n```\n\nThis program defines a function `gcd(a, b)` that calculates the GCD of two integers `a` and `b` using the Euclidean algorithm. The function works by repeatedly replacing `a` and `b` with `b` and the remainder of `a` divided by `b`, respectively, until `b` becomes zero. At this point, `a` contains the GCD. The function returns the absolute value of `a` to ensure a positive result.\n\nThe program then prompts the user to enter two integers, calls the `gcd()` function to calculate their GCD, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

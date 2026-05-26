@@ -1,0 +1,9 @@
+{
+  "id": 97,
+  "title": "Second Largest Element",
+  "prompt": "Given a list of integers, find the second largest element\nSample Input: [4, 2, 9, 6, 5, 1, 8, 3, 7]\nSample Output: 8\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution using a single pass through the list:\n\n```python\ndef second_largest(numbers):\n    # Initialize the first and second largest elements as the first element\n    first, second = numbers[0], numbers[0]\n\n    # Iterate through the remaining elements in the list\n    for num in numbers[1:]:\n        # Update the second largest element if the current number is larger than the first one\n        if num > first:\n            second = first\n            first = num\n        # Update the first largest element if the current number is larger than the second one\n        elif num > second:\n            second = num\n\n    return second\n```\n\nYou can use this function as follows:\n\n```python\nnumbers = [4, 2, 9, 6, 5, 1, 8, 3, 7]\nprint(second_largest(numbers))  # Output: 8\n```\n\nThis solution has a time complexity of O(n), where n is the length of the input list, because it only needs to iterate through the list once.",
+  "error": null,
+  "elapsed_seconds": 2.66,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

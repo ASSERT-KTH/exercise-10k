@@ -1,0 +1,9 @@
+{
+  "id": 4060,
+  "title": "Dictionary Comprehension",
+  "prompt": "Write a function that takes a dictionary as input and returns a new dictionary containing only the key-value pairs where the key is a string and the value is an integer.\nSample Input: { 'a': 1, 'b': 2, 'c': 'hello' }\nSample Output: { 'a': 1, 'b': 2 }\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef filter_string_ints(input_dict):\n    \"\"\"\n    Takes a dictionary as input and returns a new dictionary containing only the\n    key-value pairs where the key is a string and the value is an integer.\n\n    :param input_dict: The input dictionary\n    :return: A new dictionary with only string keys and integer values\n    \"\"\"\n    # Filter the input dictionary to keep only key-value pairs with string keys and integer values\n    filtered_dict = {k: v for k, v in input_dict.items() if isinstance(k, str) and isinstance(v, int)}\n\n    return filtered_dict\n```\nHere's an example of how you can use this function:\n```python\ninput_dict = {'a': 1, 'b': 2, 'c': 'hello'}\nfiltered_dict = filter_string_ints(input_dict)\nprint(filtered_dict)  # Output: {'a': 1, 'b': 2}\n```\nThis function uses a dictionary comprehension to create a new dictionary that only includes key-value pairs where the key is a string and the value is an integer. The `isinstance()` function is used to check if a value is an integer, and the `items()` method is used to iterate over the key-value pairs in the input dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.26,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

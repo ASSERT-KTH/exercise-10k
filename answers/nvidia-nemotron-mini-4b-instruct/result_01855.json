@@ -1,0 +1,9 @@
+{
+  "id": 1855,
+  "title": "Array Rotation",
+  "prompt": "Write a program that takes an array of integers and a rotation amount as input, and returns a new array containing the same elements rotated by the specified amount.\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: [4, 5, 1, 2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef rotate_array(arr, rotation_amount):\n    \"\"\"\n    Rotates an array of integers by a specified amount.\n\n    :param arr: The input array of integers.\n    :param rotation_amount: The amount to rotate the array by.\n    :return: A new array containing the same elements rotated by the specified amount.\n    \"\"\"\n\n    # Ensure rotation_amount is non-negative\n    rotation_amount %= len(arr)\n\n    # Rotate the array using slicing\n    return arr[-rotation_amount:] + arr[:-rotation_amount]\n\n# Example usage\narr = [1, 2, 3, 4, 5]\nrotation_amount = 2\nresult = rotate_array(arr, rotation_amount)\nprint(result)  # Output: [4, 5, 1, 2, 3]\n```\nThis program first checks that the rotation amount is non-negative, as a negative rotation amount would result in an out-of-bounds index error. Then, it uses slicing to rotate the array by the specified amount. The first slice (`arr[-rotation_amount:]`) removes the last `rotation_amount` elements from the end of the array, and the second slice (`arr[:-rotation_amount]`) adds the first `rotation_amount` elements from the beginning of the array. The result is a new array containing the same elements rotated by the specified amount.",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

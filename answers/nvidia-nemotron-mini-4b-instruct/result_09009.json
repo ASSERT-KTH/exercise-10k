@@ -1,0 +1,9 @@
+{
+  "id": 9009,
+  "title": "Queues",
+  "prompt": "Create a function that implements a queue using a list.\nSample Input: enqueue(1), enqueue(2), dequeue()\nSample Output: 1\n",
+  "answer": "Sure, I'd be happy to help you create a function for a queue using a list. Here's a Python implementation that meets your requirements:\n\n```python\nclass Queue:\n    def __init__(self):\n        self.items = []\n\n    def is_empty(self):\n        return self.items == []\n\n    def enqueue(self, item):\n        self.items.append(item)\n\n    def dequeue(self):\n        return self.items.pop(0)\n\n# Example usage:\nqueue = Queue()\nqueue.enqueue(1)\nqueue.enqueue(2)\nprint(queue.dequeue())  # Output: 1\n```\n\nThis implementation defines a `Queue` class with methods for checking if the queue is empty, adding an item to the rear of the queue (enqueue), and removing an item from the front of the queue (dequeue). The list is used as the underlying data structure for the queue, with the `append` method used for enqueue and the `pop(0)` method used for dequeue. The `is_empty` method checks if the queue is empty by checking if the list is empty.\n\nYou can use this implementation as follows:\n\n```python\nqueue = Queue()\nqueue.enqueue(1)\nqueue.enqueue(2)\nprint(queue.dequeue())  # Output: 1\n```\n\nThis will add the numbers 1 and 2 to the queue, and then print the first (and only) item in the queue, which is 1.",
+  "error": null,
+  "elapsed_seconds": 3.6,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

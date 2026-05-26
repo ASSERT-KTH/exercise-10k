@@ -1,0 +1,9 @@
+{
+  "id": 1785,
+  "title": "Dictionary Key Deletion",
+  "prompt": "Create a function to delete a given key from a dictionary, handling the case where the key does not exist.\nSample Input: dictionary = {\"name\": \"John\", \"age\": 30}, key = \"name\"\nSample Output: {\"age\": 30}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function, `delete_key`, takes a dictionary and a key as arguments, and returns the modified dictionary with the given key removed if it exists, or the original dictionary if the key does not exist.\n\n```python\ndef delete_key(dictionary, key):\n    \"\"\"\n    Deletes a given key from a dictionary, handling the case where the key does not exist.\n\n    :param dictionary: The dictionary to modify.\n    :param key: The key to delete.\n    :return: The modified dictionary.\n    \"\"\"\n    # Check if the key exists in the dictionary\n    if key in dictionary:\n        # Delete the key-value pair and return the modified dictionary\n        return {k: v for k, v in dictionary.items() if k != key}\n    else:\n        # If the key does not exist, return the original dictionary\n        return dictionary\n```\n\nHere's an example of how to use this function:\n\n```python\ndictionary = {\"name\": \"John\", \"age\": 30}\nprint(delete_key(dictionary, \"name\"))  # Output: {'age': 30}\nprint(delete_key(dictionary, \"job\"))    # Output: {'name': 'John', 'age': 30}\n```",
+  "error": null,
+  "elapsed_seconds": 3.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8581,
+  "title": "Removing Dictionary Items",
+  "prompt": "Write a function to remove a key-value pair from a dictionary\nSample Input: {'name': 'John', 'age': 25, 'city': 'New York'}\nSample Output: {'name': 'John', 'age': 25}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that removes a key-value pair from a dictionary:\n```python\ndef remove_key_value(dictionary, key):\n    \"\"\"\n    Remove a key-value pair from a dictionary.\n\n    Parameters:\n    dictionary (dict): The dictionary to modify.\n    key (any): The key to remove from the dictionary.\n\n    Returns:\n    dict: The modified dictionary with the key-value pair removed.\n    \"\"\"\n    # Check if the key exists in the dictionary\n    if key in dictionary:\n        # Remove the key-value pair using the pop() method\n        dictionary.pop(key)\n    return dictionary\n```\nHere's an example of how you can use this function:\n```python\nsample_input = {'name': 'John', 'age': 25, 'city': 'New York'}\nsample_output = remove_key_value(sample_input, 'city')\nprint(sample_output)  # Output: {'name': 'John', 'age': 25}\n```\nThis function first checks if the key exists in the dictionary using the `in` keyword. If the key exists, it removes the key-value pair using the `pop()` method, which returns the value associated with the key. Finally, it returns the modified dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.13,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

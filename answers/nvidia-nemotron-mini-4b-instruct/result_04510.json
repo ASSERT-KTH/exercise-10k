@@ -1,0 +1,9 @@
+{
+  "id": 4510,
+  "title": "Grade Calculator",
+  "prompt": "Create a program that calculates the average grade of a student based on their scores in different subjects.\nSample Input: math 90, science 85, english 95\nSample Output: Average Grade: 90\n",
+  "answer": "Sure, I'd be happy to help you create a program for that. Here's an example Python program that calculates the average grade of a student based on their scores in different subjects:\n```python\ndef calculate_average_grade(subject_scores):\n    \"\"\"\n    Calculates the average grade of a student based on their scores in different subjects.\n\n    :param subject_scores: A dictionary where keys are subject names and values are scores.\n    :return: A string containing the average grade.\n    \"\"\"\n\n    # Check if the input is a dictionary\n    if not isinstance(subject_scores, dict):\n        raise ValueError(\"Input should be a dictionary.\")\n\n    # Calculate the total score\n    total_score = sum(subject_scores.values())\n\n    # Calculate the number of subjects\n    num_subjects = len(subject_scores)\n\n    # Calculate the average grade\n    average_grade = total_score / num_subjects\n\n    # Format the output as a string\n    output_format = \"Average Grade: {:.2f}\"\n    return output_format.format(average_grade)\n\n\n# Example usage\nsubject_scores = {\"math\": 90, \"science\": 85, \"english\": 95}\nprint(calculate_average_grade(subject_scores))  # Output: Average Grade: 90.00\n```\nThis program defines a function `calculate_average_grade` that takes a dictionary of subject scores as input and returns the average grade as a string. The function checks if the input is a dictionary, calculates the total score and the number of subjects, and then calculates the average grade. Finally, it formats the output as a string with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 3.84,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

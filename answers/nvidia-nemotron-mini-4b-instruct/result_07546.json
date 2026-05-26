@@ -1,0 +1,9 @@
+{
+  "id": 7546,
+  "title": "String Reversal and Uppercase Conversion",
+  "prompt": "Write a program that takes a string input from the user and outputs the reversed string in uppercase. The program should handle strings of varying lengths and validate the input to ensure it only contains alphabetic characters.\nSample Input: hello\nSample Output: OLLEH\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef reverse_string(input_string):\n    \"\"\"\n    Reverses a string in uppercase, handling strings of varying lengths and validating the input.\n\n    :param input_string: The string to reverse.\n    :return: The reversed string in uppercase.\n    \"\"\"\n    # Validate the input to ensure it only contains alphabetic characters\n    if not input_string.isalpha():\n        raise ValueError(\"Input string must contain only alphabetic characters.\")\n\n    # Reverse the string and convert it to uppercase\n    reversed_string = input_string[::-1].upper()\n\n    return reversed_string\n\n# Get user input\nuser_input = input(\"Enter a string: \")\n\n# Output the reversed string in uppercase\nprint(reverse_string(user_input))\n```\nThis program defines a function `reverse_string` that takes an input string, validates it to ensure it only contains alphabetic characters, reverses the string, and converts it to uppercase. The program then gets user input, calls the function with the user input, and prints the reversed string in uppercase.\n\nHere's an example of how the program works:\n\n```\nEnter a string: hello\nOLLEH\n```",
+  "error": null,
+  "elapsed_seconds": 3.0,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7138,
+  "title": "Reading and Processing User Input",
+  "prompt": "Write a program that reads a user's name and age from the console, then prints out a greeting message with the user's name and a message indicating whether they are an adult or not based on their age.\nSample Input: John Doe\n25\nSample Output: Hello, John Doe! You are an adult.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef greet_user():\n    \"\"\"Reads a user's name and age from the console, then prints out a greeting message with the user's name and a message indicating whether they are an adult or not based on their age.\"\"\"\n\n    # Read the user's name from the console\n    user_name = input(\"Please enter your name: \")\n\n    # Read the user's age from the console\n    while True:\n        try:\n            user_age = int(input(f\"Please enter your age for {user_name}: \"))\n            break\n        except ValueError:\n            print(\"That's not a valid age. Please try again.\")\n\n    # Determine whether the user is an adult based on their age\n    if user_age >= 18:\n        adult_message = \"You are an adult.\"\n    else:\n        adult_message = \"You are not an adult.\"\n\n    # Print the greeting message\n    print(f\"Hello, {user_name}!\")\n    print(adult_message)\n\n# Call the function to start the program\ngreet_user()\n```\nThis program defines a function `greet_user()` that prompts the user to enter their name and age, validates the input to ensure it's a valid integer, and then determines whether the user is an adult based on their age. Finally, it prints out a greeting message with the user's name and the appropriate adult message. The function is then called to start the program.",
+  "error": null,
+  "elapsed_seconds": 3.53,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

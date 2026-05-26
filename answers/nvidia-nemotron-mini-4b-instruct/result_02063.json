@@ -1,0 +1,9 @@
+{
+  "id": 2063,
+  "title": "Binary Search",
+  "prompt": "Write a program that performs a binary search on a sorted list of numbers to find a specific target value.\nSample Input: [1, 2, 3, 4, 5, 6, 7, 8, 9], 5\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that performs a binary search on a sorted list of numbers to find a specific target value:\n```python\ndef binary_search(sorted_list, target):\n    \"\"\"\n    Performs a binary search on a sorted list of numbers to find a specific target value.\n\n    :param sorted_list: A sorted list of numbers\n    :param target: The target value to search for\n    :return: The index of the target value in the list, or -1 if not found\n    \"\"\"\n    left, right = 0, len(sorted_list) - 1\n\n    while left <= right:\n        mid = (left + right) // 2\n\n        if sorted_list[mid] == target:\n            return mid\n        elif sorted_list[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n\n    return -1\n```\nHere's an example of how to use this function:\n```python\nsorted_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]\ntarget = 5\nindex = binary_search(sorted_list, target)\nprint(index)  # Output: 4\n```\nThis function works by repeatedly dividing the search interval in half until the target value is found or the interval is empty. If the target value is found, the function returns its index. Otherwise, it returns -1. The function is implemented using a while loop that ensures the search interval is always non-empty and the search is always performed on the middle element of the interval.",
+  "error": null,
+  "elapsed_seconds": 3.87,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

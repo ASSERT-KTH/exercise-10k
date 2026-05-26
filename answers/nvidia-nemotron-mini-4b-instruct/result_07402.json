@@ -1,0 +1,9 @@
+{
+  "id": 7402,
+  "title": "Dictionary Phonebook",
+  "prompt": "Create a program that uses a dictionary to store names and phone numbers. The program should allow users to add, remove, and search for names in the phonebook.\nSample Input: add John 1234567890, remove Jane, search John\nSample Output: John: 1234567890, Jane not found, John: 1234567890\n",
+  "answer": "Here's a Python program that meets your requirements. This program uses a dictionary to store names and phone numbers. It allows users to add, remove, and search for names in the phonebook.\n\n```python\n# Initialize an empty phonebook dictionary\nphonebook = {}\n\ndef add_name(name, phone_number):\n    \"\"\"Add a name and phone number to the phonebook.\"\"\"\n    if name in phonebook:\n        print(f\"{name} is already in the phonebook. The phone number is {phonebook[name]}\")\n    else:\n        phonebook[name] = phone_number\n        print(f\"{name} has been added to the phonebook. The phone number is {phonebook[name]}\")\n\ndef remove_name(name):\n    \"\"\"Remove a name and its corresponding phone number from the phonebook.\"\"\"\n    if name in phonebook:\n        del phonebook[name]\n        print(f\"{name} has been removed from the phonebook.\")\n    else:\n        print(f\"{name} is not in the phonebook.\")\n\ndef search_name(name):\n    \"\"\"Search for a name in the phonebook and return the phone number if found.\"\"\"\n    if name in phonebook:\n        print(f\"{name}: {phonebook[name]}\")\n    else:\n        print(f\"{name} not found in the phonebook.\")\n\n# Example usage\nadd_name(\"John\", \"1234567890\")\nadd_name(\"Jane\", \"9876543210\")\nremove_name(\"Jane\")\nsearch_name(\"John\")\n```\n\nThis program will output:\n\n```\nJohn: 1234567890\nJane has been added to the phonebook. The phone number is 9876543210\nJohn: 1234567890\nJane not found in the phonebook.\n```",
+  "error": null,
+  "elapsed_seconds": 4.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

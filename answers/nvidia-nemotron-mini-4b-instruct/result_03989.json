@@ -1,0 +1,9 @@
+{
+  "id": 3989,
+  "title": "Most Frequent Character",
+  "prompt": "Write a program that finds the most frequent character in a given string.\nSample Input: Hello World\nSample Output: l\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the most frequent character in a given string:\n\n```python\ndef most_frequent_char(s):\n    \"\"\"\n    Find the most frequent character in a given string.\n\n    :param s: str - The input string\n    :return: str - The most frequent character in the string\n    \"\"\"\n    # Create a dictionary to store the character counts\n    char_count = {}\n\n    # Iterate over each character in the string\n    for char in s:\n        # If the character is already in the dictionary, increment its count\n        if char in char_count:\n            char_count[char] += 1\n        # Otherwise, add the character to the dictionary with a count of 1\n        else:\n            char_count[char] = 1\n\n    # Find the character with the highest count\n    max_count = max(char_count.values())\n    most_common_chars = [char for char, count in char_count.items() if count == max_count]\n\n    # Return the most frequent character\n    return most_common_chars[0] if most_common_chars else ''\n```\n\nYou can use this function by calling it with a string as an argument, like this:\n\n```python\nprint(most_frequent_char(\"Hello World\"))  # Output: l\n```\n\nThis program first creates a dictionary to store the character counts. Then, it iterates over each character in the string and increments its count in the dictionary. Finally, it finds the character with the highest count and returns it. If there are no characters with the same highest count, the function returns an empty string.",
+  "error": null,
+  "elapsed_seconds": 3.88,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

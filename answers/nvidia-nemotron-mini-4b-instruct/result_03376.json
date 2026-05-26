@@ -1,0 +1,9 @@
+{
+  "id": 3376,
+  "title": "Find the Most Frequent Element in a List",
+  "prompt": "Use a for loop to find the most frequent element in a given list of numbers\nSample Input: [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution using a for loop to find the most frequent element in a given list of numbers:\n\n```python\ndef most_frequent(numbers):\n    # Create a dictionary to store the count of each number\n    count = {}\n\n    # Iterate over each number in the list\n    for num in numbers:\n        # If the number is already a key in the dictionary, increment its value\n        if num in count:\n            count[num] += 1\n        # Otherwise, add the number as a key with a value of 1\n        else:\n            count[num] = 1\n\n    # Find the number with the highest count\n    max_count = max(count.values())\n    most_frequent_num = next((num for num, cnt in count.items() if cnt == max_count), None)\n\n    return most_frequent_num\n```\n\nYou can use this function as follows:\n\n```python\nnumbers = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]\nprint(most_frequent(numbers))  # Output: 4\n```\n\nThis function first creates a dictionary to store the count of each number. Then, it iterates over each number in the list and increments its count in the dictionary. Finally, it finds the number with the highest count and returns it.",
+  "error": null,
+  "elapsed_seconds": 3.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

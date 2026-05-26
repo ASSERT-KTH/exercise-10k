@@ -1,0 +1,9 @@
+{
+  "id": 4950,
+  "title": "Month Checker",
+  "prompt": "Create a program that checks whether a given month number (1-12) is valid and prints out the corresponding month name using conditional statements.\nSample Input: 6\nSample Output: June\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_month_name(month_number):\n    \"\"\"\n    Returns the name of the month corresponding to the given month number.\n\n    :param month_number: The month number (1-12)\n    :return: The name of the month\n    \"\"\"\n    if not isinstance(month_number, int) or month_number < 1 or month_number > 12:\n        raise ValueError(\"Month number must be an integer between 1 and 12.\")\n\n    month_names = [\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\", \"August\", \"September\", \"October\", \"November\", \"December\"]\n\n    return month_names[month_number - 1]\n\n# Get user input and validate it\nwhile True:\n    try:\n        month_number = int(input(\"Enter a month number (1-12): \"))\n        break\n    except ValueError:\n        print(\"That's not a valid month number. Please try again.\")\n\n# Print the corresponding month name\nprint(f\"The month name for {month_number} is {get_month_name(month_number)}.\")\n```\nThis program defines a function `get_month_name` that takes a month number as input and returns the corresponding month name. The function checks if the input is a valid month number and raises a `ValueError` if it's not. The program then gets user input, validates it, and prints the corresponding month name using the `get_month_name` function.",
+  "error": null,
+  "elapsed_seconds": 3.79,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

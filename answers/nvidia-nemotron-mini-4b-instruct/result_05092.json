@@ -1,0 +1,9 @@
+{
+  "id": 5092,
+  "title": "Storyteller",
+  "prompt": "Create a program that takes a series of events as input and generates a story based on the events.\nSample Input: wake up, eat breakfast, go to school\nSample Output: One day, I woke up and ate breakfast. Then, I went to school.\n",
+  "answer": "To create a program that generates a story based on a series of events, we can follow these steps: 1) Define the events as a list, 2) Generate a random starting point, 3) Generate a random event to follow the starting point, 4) Repeat steps 2-3 until a stopping condition is met. Here's a Python program that implements this approach:\n\n```python\nimport random\n\ndef generate_story(events):\n    # Define the events as a list\n    events = events.split(', ')\n\n    # Generate a random starting point\n    starting_point = random.choice(events)\n\n    # Generate a story\n    story = [starting_point]\n\n    while True:\n        # Generate a random event to follow the current point\n        next_event = random.choice(events)\n\n        # Add the next event to the story\n        story.append(next_event)\n\n        # Check if the story has reached a stopping condition (e.g., all events have been used)\n        if story[-1] == story[-2]:\n            break\n\n    return ' '.join(story)\n\n# Example usage\ninput_events = \"wake up, eat breakfast, go to school\"\noutput = generate_story(input_events)\nprint(output)\n```\n\nThis program will generate a random story based on the input events. You can modify the `events` list to include more events or adjust the stopping condition to better suit your needs.",
+  "error": null,
+  "elapsed_seconds": 3.45,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

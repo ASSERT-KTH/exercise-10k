@@ -1,0 +1,9 @@
+{
+  "id": 515,
+  "title": "List Comprehension",
+  "prompt": "Write a program to create a new list by applying a specific operation to each element in a given list.\nSample Input: [1, 2, 3, 4, 5], double\nSample Output: [2, 4, 6, 8, 10]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a list and an operation as input, and returns a new list where each element has been applied the given operation:\n```python\ndef apply_operation(lst, operation):\n    \"\"\"\n    Applies a specific operation to each element in a given list.\n\n    Parameters:\n    lst (list): The list to apply the operation to.\n    operation (callable): A function that takes one argument and returns the result.\n\n    Returns:\n    list: A new list with each element having been applied the given operation.\n    \"\"\"\n    # Use a list comprehension to apply the operation to each element in the input list\n    return [operation(i) for i in lst]\n\n# Example usage: double the elements of the list [1, 2, 3, 4, 5]\ndouble_list = apply_operation([1, 2, 3, 4, 5], lambda x: x * 2)\nprint(double_list)  # Output: [2, 4, 6, 8, 10]\n```\nThis program defines a function `apply_operation` that takes a list and an operation as input, and returns a new list where each element has been applied the given operation. The function uses a list comprehension to apply the operation to each element in the input list. The example usage at the end of the program demonstrates how to use this function to double the elements of the list `[1, 2, 3, 4, 5]`.",
+  "error": null,
+  "elapsed_seconds": 7.53,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

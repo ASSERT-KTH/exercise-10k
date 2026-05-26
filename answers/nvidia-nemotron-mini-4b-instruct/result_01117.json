@@ -1,0 +1,9 @@
+{
+  "id": 1117,
+  "title": "Salary Calculator",
+  "prompt": "Write a program to calculate the salary of an employee given their basic salary, allowances, and deductions\nSample Input: 10000 2000 1000\nSample Output: 12000.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the net salary of an employee given their basic salary, allowances, and deductions:\n\n```python\ndef calculate_net_salary(basic_salary, allowances, deductions):\n    \"\"\"\n    Calculates the net salary of an employee.\n\n    Parameters:\n    basic_salary (float): The employee's basic salary.\n    allowances (float): The total amount of allowances.\n    deductions (float): The total amount of deductions.\n\n    Returns:\n    float: The net salary of the employee.\n    \"\"\"\n\n    # Ensure inputs are non-negative\n    basic_salary = max(0, basic_salary)\n    allowances = max(0, allowances)\n    deductions = max(0, deductions)\n\n    # Calculate the net salary\n    net_salary = basic_salary + allowances - deductions\n\n    return net_salary\n\n# Sample input\nbasic_salary = 10000\nallowances = 2000\ndeductions = 1000\n\n# Calculate and print the net salary\nnet_salary = calculate_net_salary(basic_salary, allowances, deductions)\nprint(f\"The net salary of the employee is {net_salary:.2f}.\")\n```\n\nThis program defines a function `calculate_net_salary` that takes the basic salary, allowances, and deductions as input and returns the net salary. The function checks that all inputs are non-negative and calculates the net salary by adding the basic salary and allowances, and subtracting the deductions. The function then returns the net salary as a float with two decimal places. The program then calls this function with sample input and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

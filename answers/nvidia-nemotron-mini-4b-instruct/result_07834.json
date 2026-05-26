@@ -1,0 +1,9 @@
+{
+  "id": 7834,
+  "title": "Student Grades Dictionary",
+  "prompt": "Create a program that stores student grades in a dictionary. The dictionary should have student names as keys and a list of their grades as values. The program should prompt the user to input a student's name and their grades for a certain number of assignments. It should then calculate the average grade for each student and print out the student's name, grades, and average grade.\nSample Input: John\n3\n90 80 70\nSample Output: John's grades: [90, 80, 70]\nJohn's average grade: 80.0\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef calculate_average(grades):\n    \"\"\"Calculate the average of a list of grades.\"\"\"\n    return sum(grades) / len(grades)\n\ndef main():\n    student_grades = {}\n\n    while True:\n        name = input(\"Enter student name (or 'done' to finish): \").strip()\n        if name.lower() == \"done\":\n            break\n\n        grades = []\n        while True:\n            grade = input(f\"Enter grade for {name} (or 'done' to finish): \")\n            if grade.lower() == \"done\":\n                break\n            grades.append(float(grade))\n\n        student_grades[name] = grades\n\n    for name, grades in student_grades.items():\n        average = calculate_average(grades)\n        print(f\"{name}'s grades: {grades}\")\n        print(f\"{name}'s average grade: {average:.1f}\")\n        print()\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program defines two functions: `calculate_average()` to calculate the average of a list of grades, and `main()` to prompt the user for student names and grades, calculate the average for each student, and print the results. The program continues to prompt the user for student names and grades until the user enters \"done\".",
+  "error": null,
+  "elapsed_seconds": 3.18,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

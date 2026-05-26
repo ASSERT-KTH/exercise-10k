@@ -1,0 +1,9 @@
+{
+  "id": 8205,
+  "title": "SHA-256 Hash",
+  "prompt": "Write a program that calculates the SHA-256 hash of a string using a for loop.\nSample Input: hello\nSample Output: 315f5bdb76d078c43b8ac0064e4a0164612b1fce77c869345bfc94c75894edd3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the SHA-256 hash of a string using a for loop. We'll use the `hashlib` library to perform the SHA-256 hashing. First, make sure you have the library installed by running `pip install hashlib`.\n\n```python\nimport hashlib\n\ndef calculate_sha256(input_string: str) -> str:\n    \"\"\"\n    Calculates the SHA-256 hash of a given string using a for loop.\n\n    :param input_string: The string to calculate the SHA-256 hash for.\n    :return: The SHA-256 hash of the input string as a hexadecimal string.\n    \"\"\"\n\n    # Create a SHA-256 hash object\n    sha256_hash = hashlib.sha256()\n\n    # Iterate over each character in the input string\n    for char in input_string:\n        # Update the hash object with each character\n        sha256_hash.update(char.encode())\n\n    # Return the hexadecimal string representation of the hash\n    return sha256_hash.hexdigest()\n\n# Example usage\ninput_string = \"hello\"\nsha256_hash = calculate_sha256(input_string)\nprint(f\"The SHA-256 hash of '{input_string}' is: {sha256_hash}\")\n```\n\nThis program defines a function `calculate_sha256` that takes an input string and returns its SHA-256 hash as a hexadecimal string. The function uses a for loop to iterate over each character in the input string and updates the SHA-256 hash object with each character. Finally, it returns the hexadecimal string representation of the hash.",
+  "error": null,
+  "elapsed_seconds": 4.16,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

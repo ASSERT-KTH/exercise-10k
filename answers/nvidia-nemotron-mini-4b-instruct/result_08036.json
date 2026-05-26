@@ -1,0 +1,9 @@
+{
+  "id": 8036,
+  "title": "Rock, Paper, Scissors",
+  "prompt": "Write a program that uses an if/else statement to determine the winner of a game of rock, paper, scissors.\nSample Input: rock paper\nSample Output: Paper wins\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef play_rock_paper_scissors():\n    \"\"\"\n    Determines the winner of a game of rock, paper, scissors.\n    \"\"\"\n    # Get user input\n    user_choice = input(\"Enter your choice (rock, paper, scissors): \").lower()\n\n    # Define the possible choices and their outcomes\n    choices = [\"rock\", \"paper\", \"scissors\"]\n    outcomes = {\n        \"rock\": [\"scissors\", \"wins\"],\n        \"paper\": [\"rock\", \"wins\"],\n        \"scissors\": [\"paper\", \"wins\"]\n    }\n\n    # Check if the user's choice is valid\n    if user_choice not in choices:\n        print(\"Invalid choice. Please enter 'rock', 'paper', or 'scissors'.\")\n        return\n\n    # Determine the winner\n    ai_choice = choices[choices.index(max(outcomes, key=outcomes.get))]\n    winner = outcomes[user_choice][1] if user_choice != ai_choice else outcomes[ai_choice][0]\n\n    # Print the result\n    print(f\"{user_choice} {winner}.\")\n\n# Call the function\nplay_rock_paper_scissors()\n```\nThis program defines a function `play_rock_paper_scissors()` that prompts the user for their choice, checks if it's valid, and then determines the winner based on the rules of rock, paper, scissors. The function returns immediately after printing the result, so you can call it multiple times without needing to modify the code.",
+  "error": null,
+  "elapsed_seconds": 3.89,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

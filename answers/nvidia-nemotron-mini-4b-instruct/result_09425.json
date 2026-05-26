@@ -1,0 +1,9 @@
+{
+  "id": 9425,
+  "title": "Function with Map Function",
+  "prompt": "Create a function that takes a list of numbers and returns the square of each number using the map function\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [1, 4, 9, 16, 25]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements using the `map()` function. The `map()` function applies a given function to every item of an iterable (like a list) and returns an iterator of the results. In this case, we'll use a lambda function to square each number and then convert the iterator to a list using the `list()` function.\n\n```python\ndef square_numbers(numbers):\n    \"\"\"\n    Takes a list of numbers and returns the square of each number using the map function.\n\n    :param numbers: List of numbers\n    :return: List of squared numbers\n    \"\"\"\n    if not isinstance(numbers, list):\n        raise TypeError(\"Input should be a list\")\n\n    return list(map(lambda x: x ** 2, numbers))\n```\n\nHere's an example of how to use this function:\n\n```python\nnumbers = [1, 2, 3, 4, 5]\nsquared_numbers = square_numbers(numbers)\nprint(squared_numbers)  # Output: [1, 4, 9, 16, 25]\n```",
+  "error": null,
+  "elapsed_seconds": 2.83,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

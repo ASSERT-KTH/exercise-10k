@@ -1,0 +1,9 @@
+{
+  "id": 597,
+  "title": "Check if a Number is a Perfect Square",
+  "prompt": "Write a program that takes a number as input and returns true if the number is a perfect square, and false otherwise.\nSample Input: 16\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\nimport math\n\ndef is_perfect_square(n):\n    \"\"\"Returns True if n is a perfect square, and False otherwise.\"\"\"\n    if n < 0:\n        return False\n    root = math.isqrt(n)  # isqrt returns the largest integer less than or equal to the square root\n    return root * root == n\n\n# Example usage:\nnumber = int(input(\"Enter a number: \"))\nif is_perfect_square(number):\n    print(f\"{number} is a perfect square.\")\nelse:\n    print(f\"{number} is not a perfect square.\")\n```\nThis program defines a function `is_perfect_square` that takes an integer `n` as input and returns `True` if `n` is a perfect square, and `False` otherwise. The function uses the `math.isqrt` function to compute the largest integer less than or equal to the square root of `n`, and then checks if the product of this integer and itself is equal to `n`.\n\nThe example usage at the end of the program prompts the user to enter a number, calls the `is_perfect_square` function with the user's input, and prints a message indicating whether the number is a perfect square or not.",
+  "error": null,
+  "elapsed_seconds": 3.1,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

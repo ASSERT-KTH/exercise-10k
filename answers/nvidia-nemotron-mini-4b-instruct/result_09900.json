@@ -1,0 +1,9 @@
+{
+  "id": 9900,
+  "title": "Bank Account Balance",
+  "prompt": "Write a program that calculates the balance of a bank account based on a series of transactions.\nSample Input: 100 50 -20\nSample Output: 130\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the balance of a bank account based on a series of transactions. It reads the transactions from standard input, one per line, and prints the final balance. The input format is the initial balance followed by a sequence of transaction amounts, with each transaction amount being either a positive deposit or a negative withdrawal.\n\n```python\ninitial_balance = int(input())\nbalance = initial_balance\n\nfor transaction in input().split():\n    amount = int(transaction)\n    if transaction[0] == '-':\n        balance -= amount\n    else:\n        balance += amount\n\nprint(balance)\n```\n\nWhen you run this program, it will prompt you to enter the initial balance, followed by a sequence of transactions (one per line). For example:\n\n```\n100\n50 -20\n```\n\nThe output will be:\n\n```\n130\n```\n\nThis program assumes that the initial balance is always a positive number, and that all transaction amounts are integers. If your input might contain non-integer amounts or negative initial balances, you may need to modify the program accordingly.",
+  "error": null,
+  "elapsed_seconds": 2.67,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

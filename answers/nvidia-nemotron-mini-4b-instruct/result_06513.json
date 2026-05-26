@@ -1,0 +1,9 @@
+{
+  "id": 6513,
+  "title": "Type Conversion",
+  "prompt": "Write a program to convert between different data types (int, float, str, etc.).\nSample Input: 123\nSample Output: 123.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that can convert between different data types based on user input. This program supports converting between integers (`int`), floats (`float`), strings (`str`), and booleans (`bool`).\n\n```python\ndef convert_type():\n    \"\"\"\n    Converts user input to different data types.\n    \"\"\"\n    while True:\n        user_input = input(\"Enter a value to convert to a different data type (or type 'quit' to exit): \")\n\n        if user_input.lower() == \"quit\":\n            print(\"Exiting the program...\")\n            break\n\n        try:\n            # Convert user input to different data types\n            result = {\"int\": int(user_input), \"float\": float(user_input), \"str\": str(user_input), \"bool\": bool(user_input)}.get(user_input[0], \"Invalid input\")\n\n            # Print the converted value\n            print(f\"{user_input} converted to {result} is {result}.\")\n\n        except ValueError:\n            print(f\"Invalid input. Please enter a number or a valid data type (int, float, str, or bool).\")\n\n\nif __name__ == \"__main__\":\n    convert_type()\n```\n\nThis program will keep asking the user for input until they type \"quit\". The program will then convert the user input to the specified data type and print the result. If the input is not a valid number or data type, the program will print an error message.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

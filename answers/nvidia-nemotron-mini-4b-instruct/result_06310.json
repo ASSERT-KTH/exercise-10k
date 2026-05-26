@@ -1,0 +1,9 @@
+{
+  "id": 6310,
+  "title": "Dictionary Value Sorting",
+  "prompt": "Sort the values of a dictionary in ascending order\nSample Input: {\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}\nSample Output: [\"John\", \"New York\", 30]\n",
+  "answer": "You can use the built-in `items()` method of a dictionary to get a list of tuples where each tuple contains a key and its corresponding value. Then you can sort this list of tuples based on the keys, which will sort the dictionary items in ascending order. Here's how you can do it:\n\n```python\ndef sort_dict(d):\n    return sorted(d.items())\n\n# Sample input\nsample_input = {\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}\n\n# Sort the dictionary and print the result\nsorted_dict = sort_dict(sample_input)\nprint(sorted_dict)  # Output: [('age', 30), ('city', 'New York'), ('name', 'John')]\n```\n\nThis will give you a list of tuples where each tuple contains a key and its corresponding value, sorted in ascending order.",
+  "error": null,
+  "elapsed_seconds": 2.2,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

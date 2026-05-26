@@ -1,0 +1,9 @@
+{
+  "id": 8147,
+  "title": "IP Address Validator",
+  "prompt": "Write a program that validates an IP address using if/else statements\nSample Input: 192.168.1.1\nSample Output: IP address is valid\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that validates an IP address using if/else statements:\n\n```python\ndef validate_ip(ip_address):\n    \"\"\"\n    Validates an IP address using if/else statements.\n\n    :param ip_address: str, the IP address to validate\n    :return: str, \"IP address is valid\" or \"IP address is invalid\"\n    \"\"\"\n\n    # Regular expression pattern for a valid IPv4 address\n    pattern = r'^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$'\n\n    # Check if the input is a string and matches the pattern\n    if isinstance(ip_address, str) and re.match(pattern, ip_address):\n        return \"IP address is valid\"\n    else:\n        return \"IP address is invalid\"\n\n# Example usage\nip_address = input(\"Enter an IP address: \")\nprint(validate_ip(ip_address))\n```\n\nThis program defines a function `validate_ip` that checks if an input string matches a regular expression pattern for a valid IPv4 address. If the input is a string and matches the pattern, the function returns \"IP address is valid\". Otherwise, it returns \"IP address is invalid\". The example usage prompts the user to enter an IP address and prints the validation result.",
+  "error": null,
+  "elapsed_seconds": 3.59,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

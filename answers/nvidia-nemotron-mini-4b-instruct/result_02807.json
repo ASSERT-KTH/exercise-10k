@@ -1,0 +1,9 @@
+{
+  "id": 2807,
+  "title": "Character Counter",
+  "prompt": "Write a program to ask the user for a string and count the number of occurrences of each character.\nSample Input: hello\nSample Output: h: 1, e: 1, l: 2, o: 1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef count_chars(s):\n    \"\"\"Count the number of occurrences of each character in a string.\"\"\"\n    char_counts = {}\n    for char in s:\n        if char in char_counts:\n            char_counts[char] += 1\n        else:\n            char_counts[char] = 1\n    return char_counts\n\n# Get user input\nuser_input = input(\"Enter a string: \")\n\n# Count characters and print results\nchar_counts = count_chars(user_input)\nfor char, count in char_counts.items():\n    print(f'{char}: {count}')\n```\nThis program defines a function `count_chars` that takes a string as input and returns a dictionary where the keys are characters and the values are the number of times each character appears in the string. The program then prompts the user to enter a string, calls the `count_chars` function to get the character counts, and prints the results.\n\nFor example, if the user enters \"hello\", the program will output:\n```yaml\nh: 1\ne: 1\nl: 2\no: 1\n```",
+  "error": null,
+  "elapsed_seconds": 2.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

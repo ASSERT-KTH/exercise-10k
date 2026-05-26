@@ -1,0 +1,9 @@
+{
+  "id": 3732,
+  "title": "Read and Process CSV Data",
+  "prompt": "Create a program that reads a CSV file from the user, processes the data, and prints out the results.\nSample Input: name,age\nJohn,25\nJane,30\nSample Output: Name: John, Age: 25\nName: Jane, Age: 30\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses the `csv` module to read the CSV file and the `pformat` module (which is a part of the `pprint` module) to format the output in a readable way.\n\n```python\nimport csv\nimport pprint\n\ndef process_csv(file_path):\n    \"\"\"\n    Reads a CSV file and prints out the results.\n\n    :param file_path: The path to the CSV file\n    \"\"\"\n\n    # Open the CSV file and read it using a DictReader\n    with open(file_path, newline='') as csvfile:\n        reader = csv.DictReader(csvfile)\n\n        # Process the data and print the results\n        for row in reader:\n            name = row['name']\n            age = row['age']\n            print(f\"Name: {name}, Age: {age}\")\n\n# Get the file path from the user\nfile_path = input(\"Enter the path to the CSV file: \")\n\n# Call the function to process the data\nprocess_csv(file_path)\n```\n\nThis program prompts the user to enter the path to the CSV file, opens the file, reads it using a `DictReader`, and then prints out the results in the specified format.",
+  "error": null,
+  "elapsed_seconds": 3.03,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

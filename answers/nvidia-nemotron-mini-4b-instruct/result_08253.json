@@ -1,0 +1,9 @@
+{
+  "id": 8253,
+  "title": "Quiz Program",
+  "prompt": "Write a program that administers a quiz using if/else statements.\nSample Input: Answer question 1\nSample Output: Correct!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that administers a quiz using if/else statements. In this example, I've created a simple quiz with three questions. You can modify the questions and answers as needed.\n\n```python\ndef administer_quiz():\n    \"\"\"Administers a quiz using if/else statements.\"\"\"\n\n    # Define the questions and answers\n    questions = [\n        (\"What is the capital of France?\", \"Paris\", \"Not Paris\"),\n        (\"Who wrote the Harry Potter series?\", \"J.K. Rowling\", \"Not J.K. Rowling\"),\n        (\"What is the square root of 81?\", \"9\", \"Not 9\")\n    ]\n\n    score = 0\n\n    for question in questions:\n        user_answer = input(f\"Answer question {questions.index(question) + 1}:\\n\")\n\n        if user_answer.lower() == question[2].lower():\n            print(f\"Correct!\")\n            score += 1\n        else:\n            print(f\"Incorrect. The correct answer is {question[1]}.\")\n\n    print(f\"\\nYour score is {score} out of 3.\")\n\n# Call the function to administer the quiz\nadminister_quiz()\n```\n\nThis program defines a list of questions and their answers, then prompts the user to answer each question. It checks the user's answer against the correct answer and provides feedback accordingly. Finally, it calculates the user's score and displays it at the end.",
+  "error": null,
+  "elapsed_seconds": 3.59,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

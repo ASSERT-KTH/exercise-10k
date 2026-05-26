@@ -1,0 +1,9 @@
+{
+  "id": 8533,
+  "title": "Tip Calculator",
+  "prompt": "Write a program to calculate the total cost of a meal after applying a tip percentage.\nSample Input: 100 0.15\nSample Output: 115.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the total cost of a meal after applying a tip percentage:\n```python\ndef calculate_total_cost(meal_cost, tip_percentage):\n    \"\"\"\n    Calculates the total cost of a meal after applying a tip percentage.\n\n    Parameters:\n    meal_cost (float): The cost of the meal before applying the tip.\n    tip_percentage (float): The percentage of the tip as a decimal (e.g., 0.15 for 15%).\n\n    Returns:\n    float: The total cost of the meal after applying the tip.\n    \"\"\"\n\n    # Validate input\n    if not isinstance(meal_cost, (float, int)) or meal_cost < 0:\n        raise ValueError(\"Meal cost must be a non-negative number.\")\n\n    if not isinstance(tip_percentage, (float, int)) or tip_percentage < 0 or tip_percentage > 1:\n        raise ValueError(\"Tip percentage must be a number between 0 and 1 (exclusive).\")\n\n    # Calculate the total cost\n    total_cost = meal_cost + meal_cost * tip_percentage\n\n    return total_cost\n\n# Example usage\nmeal_cost = 100\ntip_percentage = 0.15\ntotal_cost = calculate_total_cost(meal_cost, tip_percentage)\nprint(f\"The total cost of the meal is ${total_cost:.2f}.\")\n```\nThis program defines a function `calculate_total_cost` that takes the cost of the meal and the tip percentage as input, validates the input to ensure it's valid, and calculates the total cost by adding the meal cost and the meal cost multiplied by the tip percentage. The example usage at the end of the program demonstrates how to use the function to calculate the total cost of a meal with a cost of $100 and a tip percentage of 15%.",
+  "error": null,
+  "elapsed_seconds": 4.46,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

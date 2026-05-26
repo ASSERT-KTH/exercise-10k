@@ -1,0 +1,9 @@
+{
+  "id": 2778,
+  "title": "Chatbot",
+  "prompt": "Write a program that takes user input and responds accordingly (e.g. greeting, goodbye, help).\nSample Input: hello\nSample Output: Hi! How can I help you?\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses a simple state machine to handle different user inputs and provide appropriate responses.\n\n```python\ndef main():\n    state = 'greeting'\n\n    while True:\n        user_input = input(\"> \").strip().lower()\n\n        if user_input == 'help':\n            print(\"Available commands:\")\n            print(\"  - greeting: Greet the user.\")\n            print(\"  - goodbye: Exit the program.\")\n            print(\"  - help: Display this help message.\")\n        elif user_input == 'goodbye':\n            print(\"Goodbye!\")\n            exit(0)\n        else:\n            if state == 'greeting':\n                state = 'help'\n                print(\"Hi! How can I help you?\")\n            elif state == 'help':\n                state = 'greeting'\n                print(\"Greeting the user...\")\n\n            # Add more states and corresponding responses as needed\n\n        # Handle other user inputs here\n\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program allows the user to enter any input, and it will respond appropriately based on the current state of the program. You can add more states and corresponding responses as needed to make it more versatile.",
+  "error": null,
+  "elapsed_seconds": 3.09,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

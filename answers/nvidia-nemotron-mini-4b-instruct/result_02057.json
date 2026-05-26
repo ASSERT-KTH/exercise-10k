@@ -1,0 +1,9 @@
+{
+  "id": 2057,
+  "title": "Dictionary Unpivot",
+  "prompt": "Create a function to unpivot a dictionary from a wide format to a long format (e.g., unpivot a dictionary).\nSample Input: {'John': [25, 30], 'Jane': [25]}\nSample Output: [{'name': 'John', 'age': 25}, {'name': 'John', 'age': 30}, {'name': 'Jane', 'age': 25}]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that can unpivot a dictionary from a wide format to a long format using list comprehension and the `dict.items()` method:\n```python\ndef unpivot_dict(wide_dict):\n    \"\"\"\n    Unpivots a dictionary from a wide format to a long format.\n\n    Parameters:\n    wide_dict (dict): A dictionary in wide format.\n\n    Returns:\n    list: A list of dictionaries in long format.\n    \"\"\"\n    return [{'name': key, 'age': value[i]} for key, value in wide_dict.items() for i in range(len(value))]\n```\nHere's an example of how to use this function:\n```python\nwide_dict = {'John': [25, 30], 'Jane': [25]}\nlong_dict = unpivot_dict(wide_dict)\nprint(long_dict)\n# Output: [{'name': 'John', 'age': 25}, {'name': 'John', 'age': 30}, {'name': 'Jane', 'age': 25}]\n```\nThis function first iterates over the items in the input dictionary using a nested `for` loop. For each item (key, value), it creates a new dictionary with the key as the name and the value at index `i` as the age. Finally, it returns a list of these new dictionaries.",
+  "error": null,
+  "elapsed_seconds": 3.44,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

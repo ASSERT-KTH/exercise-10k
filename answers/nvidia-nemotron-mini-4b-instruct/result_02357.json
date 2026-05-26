@@ -1,0 +1,9 @@
+{
+  "id": 2357,
+  "title": "Word Frequency",
+  "prompt": "Write a program to take a string as input and count the frequency of each word in the string\nSample Input: hello world hello\nSample Output: {hello: 2, world: 1}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a string as input and counts the frequency of each word in the string, treating each word as a sequence of non-whitespace characters:\n```python\nfrom collections import Counter\n\ndef count_word_frequencies(input_string):\n    # Split the input string into words, ignoring case and punctuation\n    words = ' '.join(word.lower() for word in input_string.lower().split())\n\n    # Count the frequency of each word using the Counter class from collections\n    word_counts = Counter(words.split())\n\n    return dict(word_counts)\n\n# Example usage\ninput_string = \"hello world hello\"\nresult = count_word_frequencies(input_string)\nprint(result)  # Output: {'hello': 2, 'world': 1}\n```\nThis program first converts the input string to lowercase and splits it into words using the `split()` method. Then, it uses the `Counter` class from the `collections` module to count the frequency of each word in the list of words. Finally, it converts the `Counter` object back into a dictionary and returns it.",
+  "error": null,
+  "elapsed_seconds": 3.55,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

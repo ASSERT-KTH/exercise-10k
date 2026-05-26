@@ -1,0 +1,9 @@
+{
+  "id": 6318,
+  "title": "Dictionary Combine",
+  "prompt": "Combine two dictionaries into one\nSample Input: {\"name\": \"John\"}, {\"age\": 30}\nSample Output: {\"name\": \"John\", \"age\": 30}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that combines two dictionaries into one:\n\n```python\ndef combine_dicts(dict1, dict2):\n    \"\"\"\n    Combines two dictionaries into one.\n\n    :param dict1: The first dictionary\n    :param dict2: The second dictionary\n    :return: A new dictionary containing the key-value pairs from both input dictionaries\n    \"\"\"\n    return {**dict1, **dict2}\n```\n\nYou can use this function as follows:\n\n```python\ndict1 = {\"name\": \"John\"}\ndict2 = {\"age\": 30}\n\ncombined_dict = combine_dicts(dict1, dict2)\nprint(combined_dict)  # Output: {'name': 'John', 'age': 30}\n```\n\nThis function uses the `**` operator to unpack the dictionaries and merge their key-value pairs into a new dictionary. The `dict()` constructor is also used to create a new dictionary, but it has a different behavior when used with dictionaries. Specifically, `dict(dict1, **dict2)` will raise a `TypeError` if `dict2` contains any keys that are also present in `dict1`. To avoid this, we use the `**` operator instead.",
+  "error": null,
+  "elapsed_seconds": 2.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

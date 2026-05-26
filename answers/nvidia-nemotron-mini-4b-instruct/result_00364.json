@@ -1,0 +1,9 @@
+{
+  "id": 364,
+  "title": "Data Type Checker",
+  "prompt": "Write a program that takes a user input and checks its data type. If the input is a string, check if it can be converted to an integer or a float. If it can, print the converted value. If not, print the original string.\nSample Input: 123\nSample Output: Integer: 123\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef check_data_type(user_input):\n    \"\"\"\n    Check the data type of a user input and print the converted value if it can be converted to an integer or a float.\n    Otherwise, print the original string.\n    \"\"\"\n    try:\n        # Try to convert the input to an integer and a float\n        int_value = int(user_input)\n        float_value = float(user_input)\n\n        # Print the converted values\n        print(f\"Integer: {int_value}\")\n        print(f\"Float: {float_value}\")\n\n    except ValueError:\n        # If the input cannot be converted to an integer or a float, print the original string\n        print(f\"Original String: {user_input}\")\n\n# Get user input\nuser_input = input(\"Enter a number: \")\n\n# Call the function with the user input\ncheck_data_type(user_input)\n```\nThis program defines a function `check_data_type` that takes a user input as an argument and checks its data type. If the input can be converted to an integer or a float, it prints the converted value using the `int()` and `float()` functions, respectively. If the input cannot be converted, it prints the original string. The program then gets user input using the `input()` function and calls the `check_data_type` function with the user input.",
+  "error": null,
+  "elapsed_seconds": 3.44,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

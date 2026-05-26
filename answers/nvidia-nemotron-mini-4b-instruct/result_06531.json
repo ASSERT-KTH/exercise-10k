@@ -1,0 +1,9 @@
+{
+  "id": 6531,
+  "title": "Factorial",
+  "prompt": "Create a function that calculates the factorial of a given number.\nSample Input: 5\nSample Output: 120\n",
+  "answer": "Sure, I'd be happy to help you create a function to calculate the factorial of a given number. Here's an example implementation in Python:\n\n```python\ndef factorial(n):\n    \"\"\"\n    Calculates the factorial of a given non-negative integer n.\n\n    :param n: The non-negative integer for which to calculate the factorial.\n    :return: The factorial of n.\n    \"\"\"\n    if n < 0:\n        raise ValueError(\"Input must be a non-negative integer\")\n    elif n == 0:\n        return 1\n    else:\n        return n * factorial(n-1)\n```\n\nThis function uses recursion to calculate the factorial. The base case is when `n` is 0, in which case the function returns 1 (since the factorial of 0 is defined to be 1). For any other positive integer `n`, the function calls itself with `n-1` as the argument, and then multiplies the result by `n`. This continues until `n` reaches 0, at which point the function returns 1.\n\nHere's an example usage of the function:\n\n```python\nprint(factorial(5))  # Output: 120\nprint(factorial(0))  # Output: 1\nprint(factorial(-1))  # Raises ValueError\n```\n\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

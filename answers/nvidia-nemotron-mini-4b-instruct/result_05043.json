@@ -1,0 +1,9 @@
+{
+  "id": 5043,
+  "title": "Division with Remainder",
+  "prompt": "Create a program that takes two numbers as input and returns their quotient and remainder.\nSample Input: 17 5\nSample Output: 3 with a remainder of 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef get_quotient_remainder(num1, num2):\n    \"\"\"\n    This function takes two numbers as input and returns their quotient and remainder.\n\n    :param num1: The first number (dividend).\n    :param num2: The second number (divisor).\n    :return: A tuple containing the quotient and remainder.\n    \"\"\"\n\n    # Check if the divisor is zero, as it would raise a ZeroDivisionError\n    if num2 == 0:\n        raise ValueError(\"The divisor cannot be zero.\")\n\n    quotient = num1 // num2  # Use integer division to ensure no decimal part\n    remainder = num1 % num2  # Use modulus operator to get the remainder\n\n    return quotient, remainder\n\n\n# Get user input\nnum1 = int(input(\"Enter the first number: \"))\nnum2 = int(input(\"Enter the second number: \"))\n\n# Call the function and print the results\nquotient, remainder = get_quotient_remainder(num1, num2)\nprint(f\"{num1} divided by {num2} is {quotient} with a remainder of {remainder}.\")\n```\n\nThis program defines a function `get_quotient_remainder` that takes two numbers as input and returns their quotient and remainder as a tuple. The function checks if the divisor is zero and raises a `ValueError` if it is. The program then gets user input for the two numbers, calls the function, and prints the results.",
+  "error": null,
+  "elapsed_seconds": 3.74,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

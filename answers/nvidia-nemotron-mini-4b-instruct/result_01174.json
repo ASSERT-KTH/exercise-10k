@@ -1,0 +1,9 @@
+{
+  "id": 1174,
+  "title": "Permutation Check",
+  "prompt": "Given two strings, check if they are permutations of each other\nSample Input: ['listen', 'silent']\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if two given strings are permutations of each other:\n\n```python\ndef are_permutations(str1, str2):\n    \"\"\"\n    Check if two given strings are permutations of each other.\n\n    :param str1: The first string to compare.\n    :param str2: The second string to compare.\n    :return: True if the strings are permutations of each other, False otherwise.\n    \"\"\"\n    # Remove any non-alphanumeric characters and convert to lowercase\n    str1 = ''.join(c.lower() for c in str1 if c.isalnum())\n    str2 = ''.join(c.lower() for c in str2 if c.isalnum())\n\n    # Check if the lengths of the strings are equal\n    if len(str1) != len(str2):\n        return False\n\n    # Sort both strings and compare them\n    return sorted(str1) == sorted(str2)\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(are_permutations('listen', 'silent'))  # Output: True\nprint(are_permutations('listen', 'silentl'))  # Output: False\n```\n\nThis function first removes any non-alphanumeric characters and converts both strings to lowercase to ensure that the comparison is case-insensitive. Then, it checks if the lengths of the strings are equal, as permutations must have the same length. Finally, it sorts both strings and compares them to determine if they are permutations of each other.",
+  "error": null,
+  "elapsed_seconds": 3.93,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

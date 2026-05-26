@@ -1,0 +1,9 @@
+{
+  "id": 4795,
+  "title": "Word Scramble",
+  "prompt": "Write a program that asks the user to unscramble a word.\nSample Input: sgnid\nSample Output: The unscrambled word is: dogs\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses a dictionary of common English words to check if the unscrambled word is a valid word. If it is, it displays the unscrambled word and its definition. If not, it displays an error message.\n\n```python\nimport string\n\n# Define a function to unscramble a word\ndef unscramble(word):\n    # Remove any non-alphabetic characters and convert to lowercase\n    cleaned_word = ''.join(c.lower() for c in word if c.isalpha())\n\n    # Check if the word is in the dictionary of common English words\n    if cleaned_word in common_words:\n        # Find the definition of the unscrambled word\n        definition = next((word for word in common_words if cleaned_word in word), None)\n\n        # Display the unscrambled word and its definition\n        print(f\"The unscrambled word is: {cleaned_word}\")\n        print(f\"Its definition is: {definition}\")\n    else:\n        print(\"Sorry, that word could not be unscrambled.\")\n\n# Define a list of common English words\ncommon_words = set(open('words.txt', 'r').read().split())\n\n# Ask the user for a word to unscramble\nuser_word = input(\"Enter a word to unscramble: \")\n\n# Unscramble the word\nunscramble(user_word)\n```\n\nYou can replace `'words.txt'` with the path to your own list of common English words. The program will check if the unscrambled word is in this list before displaying its definition.",
+  "error": null,
+  "elapsed_seconds": 3.88,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

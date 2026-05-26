@@ -1,0 +1,9 @@
+{
+  "id": 554,
+  "title": "Word Reverser",
+  "prompt": "Write a program that takes a string as input and returns the string with each word reversed.\nSample Input: hello world\nSample Output: olleh dlrow\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef reverse_words(input_string: str) -> str:\n    \"\"\"\n    Reverses the order of words in a given string.\n\n    :param input_string: The input string containing words separated by spaces.\n    :return: The string with each word reversed.\n    \"\"\"\n    # Split the input string into words, reverse the order of words,\n    # and then join them back into a single string with spaces in between.\n    return ' '.join(word[::-1] for word in input_string.split())\n\n# Example usage:\ninput_string = \"hello world\"\noutput_string = reverse_words(input_string)\nprint(output_string)  # Output: olleh dlrow\n```\nThis program defines a function `reverse_words` that takes an input string as a parameter and returns a new string with each word reversed. The function first splits the input string into words using the `split()` method, then reverses the order of the words using a generator expression and the slicing syntax (`[::-1]`), and finally joins the reversed words back into a single string with spaces in between using the `join()` method.",
+  "error": null,
+  "elapsed_seconds": 2.81,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

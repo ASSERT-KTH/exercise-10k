@@ -1,0 +1,9 @@
+{
+  "id": 3687,
+  "title": "Bank Account Management",
+  "prompt": "Write a program to manage a bank account with deposit, withdrawal, and balance inquiry operations.\nSample Input: initial balance = 1000, deposit = 500, withdrawal = 200\nSample Output: Final Balance: 1300\n",
+  "answer": "Here's a Python program that meets your requirements. This program uses a class to manage the bank account with deposit, withdrawal, and balance inquiry operations.\n\n```python\nclass BankAccount:\n    def __init__(self, initial_balance):\n        self.balance = initial_balance\n\n    def deposit(self, amount):\n        if amount > 0:\n            self.balance += amount\n            return f\"Deposited ${amount}, Current Balance: ${self.balance}\"\n        else:\n            return \"Deposit amount must be positive.\"\n\n    def withdrawal(self, amount):\n        if amount > 0 and self.balance >= amount:\n            self.balance -= amount\n            return f\"Withdrew ${amount}, Current Balance: ${self.balance}\"\n        elif amount > 0 and self.balance < amount:\n            return f\"Insufficient funds. Current Balance: ${self.balance}\"\n        else:\n            return \"Withdrawal amount must be positive.\"\n\n    def balance_inquiry(self):\n        return f\"Current Balance: ${self.balance}\"\n\n\n# Example usage\naccount = BankAccount(1000)\nprint(account.balance_inquiry())  # Output: Current Balance: 1000\n\nprint(account.deposit(500))  # Output: Deposited 500, Current Balance: 1500\nprint(account.withdrawal(200))  # Output: Withdrew 200, Current Balance: 1300\nprint(account.balance_inquiry())  # Output: Current Balance: 1300\n```",
+  "error": null,
+  "elapsed_seconds": 3.87,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

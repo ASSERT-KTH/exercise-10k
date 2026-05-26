@@ -1,0 +1,9 @@
+{
+  "id": 3963,
+  "title": "Fibonacci Sequence Generator",
+  "prompt": "Write a program that generates the Fibonacci sequence up to the nth term. The program should take an integer n as input and output the Fibonacci sequence as a list.\nSample Input: 10\nSample Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates the Fibonacci sequence up to the nth term:\n\n```python\ndef fibonacci(n):\n    \"\"\"\n    Generate the Fibonacci sequence up to the nth term.\n\n    :param n: The number of terms in the sequence to generate.\n    :return: A list of the first n Fibonacci numbers.\n    \"\"\"\n    if n < 1:\n        raise ValueError(\"Input must be a positive integer\")\n\n    sequence = [0, 1]\n\n    while len(sequence) < n:\n        sequence.append(sequence[-1] + sequence[-2])\n\n    return sequence[:n]\n\n# Get user input for the number of terms\nn = int(input(\"Enter the number of terms in the Fibonacci sequence: \"))\n\n# Generate and print the Fibonacci sequence\nprint(fibonacci(n))\n```\n\nThis program defines a function `fibonacci(n)` that generates the Fibonacci sequence up to the nth term. The function checks if the input is a positive integer, and if not, raises a `ValueError`. Then, it initializes the sequence with the first two Fibonacci numbers (0 and 1), and uses a loop to generate the remaining terms until the sequence has n elements. Finally, the function returns the first n elements of the sequence as a list.\n\nThe program then gets user input for the number of terms, calls the `fibonacci(n)` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.52,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

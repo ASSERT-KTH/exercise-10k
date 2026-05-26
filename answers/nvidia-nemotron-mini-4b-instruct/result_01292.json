@@ -1,0 +1,9 @@
+{
+  "id": 1292,
+  "title": "Dictionary Items",
+  "prompt": "Write a function that returns a list of all key-value pairs in a dictionary.\nSample Input: {'a': 1, 'b': 2}\nSample Output: [('a', 1), ('b', 2)]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_key_value_pairs(dictionary):\n    \"\"\"\n    Returns a list of all key-value pairs in a dictionary.\n\n    :param dictionary: The dictionary to extract key-value pairs from.\n    :return: A list of tuples, where each tuple contains a key and its corresponding value.\n    \"\"\"\n    if not isinstance(dictionary, dict):\n        raise TypeError(\"The input must be a dictionary.\")\n\n    return [(key, dictionary[key]) for key in dictionary.keys()]\n```\nHere's an example of how you can use this function:\n```python\nsample_input = {'a': 1, 'b': 2}\nsample_output = get_key_value_pairs(sample_input)\nprint(sample_output)  # Output: [('a', 1), ('b', 2)]\n```\nThis function first checks if the input is a dictionary. If not, it raises a `TypeError`. Then, it uses a list comprehension to create a list of tuples, where each tuple contains a key and its corresponding value from the dictionary. The `keys()` method is used to get all the keys in the dictionary, and the `values()` method can also be used to get all the values, but in this case, we only need the keys.",
+  "error": null,
+  "elapsed_seconds": 5.25,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

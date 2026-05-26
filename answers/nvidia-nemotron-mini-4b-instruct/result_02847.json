@@ -1,0 +1,9 @@
+{
+  "id": 2847,
+  "title": "Dictionary Merge",
+  "prompt": "Write a function to merge two dictionaries into one.\nSample Input: {'name': 'John', 'age': 30}, {'city': 'New York', 'country': 'USA'}\nSample Output: {'name': 'John', 'age': 30, 'city': 'New York', 'country': 'USA'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that merges two dictionaries into one:\n```python\ndef merge_dicts(dict1, dict2):\n    \"\"\"\n    Merges two dictionaries into one.\n\n    Parameters:\n    dict1 (dict): The first dictionary to merge.\n    dict2 (dict): The second dictionary to merge.\n\n    Returns:\n    dict: The merged dictionary.\n    \"\"\"\n    # Combine the two dictionaries using the update() method\n    dict1.update(dict2)\n\n    return dict1\n```\nHere's an example of how you can use this function:\n```python\ndict1 = {'name': 'John', 'age': 30}\ndict2 = {'city': 'New York', 'country': 'USA'}\n\nmerged_dict = merge_dicts(dict1, dict2)\nprint(merged_dict)  # Output: {'name': 'John', 'age': 30, 'city': 'New York', 'country': 'USA'}\n```\nThis function first combines the two dictionaries using the `update()` method, which adds all key-value pairs from `dict2` to `dict1`. Then, it returns the merged dictionary. If you want to create a new dictionary instead of modifying `dict1`, you can use a different approach, such as:\n```python\ndef merge_dicts(dict1, dict2):\n    \"\"\"\n    Merges two dictionaries into a new dictionary.\n\n    Parameters:\n    dict1 (dict): The first dictionary to merge.\n    dict2 (dict): The second dictionary to merge.\n\n    Returns:\n    dict: The merged dictionary.\n    \"\"\"\n    return {**dict1, **dict2}\n```\nThis approach uses the `**` operator to unpack the two dictionaries and create a new dictionary with their key-value pairs combined.",
+  "error": null,
+  "elapsed_seconds": 4.32,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

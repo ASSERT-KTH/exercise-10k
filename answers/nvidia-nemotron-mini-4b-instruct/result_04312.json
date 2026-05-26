@@ -1,0 +1,9 @@
+{
+  "id": 4312,
+  "title": "Higher-Order Functions",
+  "prompt": "Write a function that takes another function as input and applies it to a list of numbers\nSample Input: [1, 2, 3, 4, 5], double\nSample Output: [2, 4, 6, 8, 10]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef apply_function_to_list(numbers, func):\n    \"\"\"\n    Applies a given function to a list of numbers.\n\n    Parameters:\n    numbers (list): A list of numbers.\n    func (callable): A function that takes a single number as input and returns a new number.\n\n    Returns:\n    list: A new list with the results of applying the function to each number in the input list.\n    \"\"\"\n    return [func(num) for num in numbers]\n```\nHere's an example of how you can use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\ndouble = lambda x: x * 2\nresult = apply_function_to_list(numbers, double)\nprint(result)  # Output: [2, 4, 6, 8, 10]\n```\nThis function uses list comprehension to apply the given function to each number in the input list and returns the resulting list. The `lambda` function `double` is used as an example, but you can replace it with any other callable function that takes a single number as input and returns a new number.",
+  "error": null,
+  "elapsed_seconds": 2.96,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

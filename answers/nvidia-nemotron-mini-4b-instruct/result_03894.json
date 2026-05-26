@@ -1,0 +1,9 @@
+{
+  "id": 3894,
+  "title": "Grade Calculator",
+  "prompt": "Create a program that takes user input for grades and calculates the average grade.\nSample Input: 90, 80, 70\nSample Output: Your average grade is 80\n",
+  "answer": "Sure, I'd be happy to help you create a program that calculates the average grade based on user input. Here's an example Python program that meets your requirements:\n\n```python\ndef calculate_average_grade():\n    \"\"\"\n    This function takes user input for grades and calculates the average grade.\n    \"\"\"\n\n    # Get user input for grades\n    grades = []\n    while True:\n        grade_input = input(\"Enter a grade (or type 'done' to finish): \")\n        if grade_input.lower() == \"done\":\n            break\n        try:\n            grade = float(grade_input)\n            grades.append(grade)\n        except ValueError:\n            print(\"Invalid input. Please enter a number for each grade.\")\n\n    # Calculate the average grade\n    if grades:\n        total_grade = sum(grades)\n        average_grade = total_grade / len(grades)\n        print(f\"Your average grade is {average_grade:.1f}\")\n    else:\n        print(\"No grades were entered. Please try again.\")\n\n# Call the function\ncalculate_average_grade()\n```\n\nThis program defines a function `calculate_average_grade()` that prompts the user to enter grades one by one until they type \"done\". It then calculates the average grade based on the entered grades and prints the result. The function also checks if any grades were entered before calculating the average to avoid a `ZeroDivisionError` if the user enters \"done\" before entering any grades.",
+  "error": null,
+  "elapsed_seconds": 3.62,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

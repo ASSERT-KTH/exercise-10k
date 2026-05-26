@@ -1,0 +1,9 @@
+{
+  "id": 1532,
+  "title": "Find the Median",
+  "prompt": "Write a program that finds the median of an array of integers.\nSample Input: [1 2 3 4 5]\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the median of an array of integers:\n\n```python\ndef find_median(arr):\n    # First, sort the array in ascending order\n    arr.sort()\n\n    # Calculate the length of the array\n    n = len(arr)\n\n    # If the length is even, the median is the average of the middle two numbers\n    if n % 2 == 0:\n        mid1 = arr[n//2 - 1]\n        mid2 = arr[n//2]\n        median = (mid1 + mid2) / 2\n    # If the length is odd, the median is the middle number\n    else:\n        median = arr[n//2]\n\n    return median\n```\n\nYou can use this function by passing a list of integers as an argument, like this:\n\n```python\narr = [1, 2, 3, 4, 5]\nprint(find_median(arr))  # Output: 3\n```\n\nThis program first sorts the array in ascending order using the built-in `sort()` method. Then, it calculates the length of the array and checks if it's even or odd. If it's even, the median is the average of the middle two numbers. If it's odd, the median is the middle number. Finally, it returns the median as the result.",
+  "error": null,
+  "elapsed_seconds": 4.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

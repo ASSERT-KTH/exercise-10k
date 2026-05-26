@@ -1,0 +1,9 @@
+{
+  "id": 1868,
+  "title": "List Mapping",
+  "prompt": "Write a program to apply a transformation to each element of a list and print the resulting list.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [2, 4, 6, 8, 10]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that applies a transformation to each element of a list and prints the resulting list:\n```python\ndef transform_elements(input_list, transformation_function):\n    \"\"\"\n    Applies a transformation function to each element of a list and returns a new list.\n\n    Parameters:\n    input_list (list): The list to transform.\n    transformation_function (callable): A function that takes one argument (the element) and returns the transformed value.\n\n    Returns:\n    list: A new list with each element transformed by the given function.\n    \"\"\"\n    return [transformation_function(element) for element in input_list]\n\n# Example usage:\ninput_list = [1, 2, 3, 4, 5]\ntransformation_function = lambda x: x * 2\nresulting_list = transform_elements(input_list, transformation_function)\nprint(resulting_list)  # Output: [2, 4, 6, 8, 10]\n```\nIn this program, the `transform_elements` function takes an input list and a transformation function as arguments. It uses a list comprehension to apply the transformation function to each element of the input list and returns the resulting list. The example usage shows how to use this function with a lambda function that doubles each element of the input list.",
+  "error": null,
+  "elapsed_seconds": 4.47,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

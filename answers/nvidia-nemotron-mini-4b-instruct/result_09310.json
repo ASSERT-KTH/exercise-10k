@@ -1,0 +1,9 @@
+{
+  "id": 9310,
+  "title": "Regex Pattern Matcher",
+  "prompt": "Create a function that takes a string and a regex pattern as input and returns True if the string matches the pattern, False otherwise.\nSample Input: Hello World\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\nimport re\n\ndef matches_regex(s: str, pattern: str) -> bool:\n    \"\"\"\n    Returns True if the given string matches the given regex pattern, False otherwise.\n\n    :param s: The string to check against the pattern.\n    :param pattern: The regex pattern to match against the string.\n    :return: True if the string matches the pattern, False otherwise.\n    \"\"\"\n    # Ensure the input is a string and the pattern is a regex pattern\n    if not isinstance(s, str) or not isinstance(pattern, str):\n        raise ValueError(\"Both s and pattern must be strings.\")\n\n    # Compile the regex pattern to avoid the need to re-compile it for each call\n    pattern_regex = re.compile(pattern)\n\n    # Check if the string matches the pattern\n    return bool(pattern_regex.search(s))\n```\nHere's an example of how to use this function:\n```python\nprint(matches_regex(\"Hello World\", r\"\\bWorld\\b\"))  # Output: True\nprint(matches_regex(\"Hello World!\", r\"\\bWorld\\b\"))  # Output: False\n```\nThis function first checks if the input is a string and the pattern is a regex pattern. Then, it compiles the pattern into a regular expression object using the `re.compile()` function. Finally, it checks if the string matches the pattern using the `re.search()` function, which returns a match object if a match is found or `None` otherwise. The `bool()` function is used to convert the match object to a boolean value, which is returned by the function.",
+  "error": null,
+  "elapsed_seconds": 3.91,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

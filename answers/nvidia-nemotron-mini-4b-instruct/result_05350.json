@@ -1,0 +1,9 @@
+{
+  "id": 5350,
+  "title": "List Reversal",
+  "prompt": "Write a function that takes a list as input, and returns a new list containing the elements of the input list in reverse order.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [5, 4, 3, 2, 1]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef reverse_list(input_list):\n    \"\"\"\n    Takes a list as input and returns a new list containing the elements of the input list in reverse order.\n\n    :param input_list: The list to reverse\n    :return: A new list with elements in reverse order\n    \"\"\"\n    if not isinstance(input_list, list):\n        raise TypeError(\"Input must be a list\")\n\n    return input_list[::-1].copy()  # Use slicing with a step of -1 to reverse the list, and copy() to avoid modifying the original list\n```\nHere's how you can use this function:\n```python\nsample_input = [1, 2, 3, 4, 5]\nsample_output = reverse_list(sample_input)\nprint(sample_output)  # Output: [5, 4, 3, 2, 1]\n```\nThis function first checks if the input is a list. If not, it raises a `TypeError`. Then, it uses slicing with a step of `-1` to reverse the list, and creates a copy of the reversed list using `copy()` to avoid modifying the original list.",
+  "error": null,
+  "elapsed_seconds": 2.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

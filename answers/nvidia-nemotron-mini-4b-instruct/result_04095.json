@@ -1,0 +1,9 @@
+{
+  "id": 4095,
+  "title": "Async Function",
+  "prompt": "Write an async function that waits for 1 second and then returns a message\nSample Output: Hello, world!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example of an async function in JavaScript that waits for 1 second and then returns a message using the `setTimeout` function, which is a synchronous way to wait for a delay. However, for better performance and to avoid blocking the event loop, it's recommended to use an async function with await and a promise. Here's an example using both approaches:\n\n**Using `setTimeout()`:**\n\n```javascript\nfunction waitAndReturnMessageSync() {\n  return new Promise((resolve) => {\n    setTimeout(() => {\n      resolve('Hello, world!');\n    }, 1000);\n  });\n}\n\nconsole.log(waitAndReturnMessageSync()); // Output: Hello, world!\n```\n\n**Using `async/await`:**\n\n```javascript\nasync function waitAndReturnMessageAsync() {\n try {\n    await new Promise((resolve) => setTimeout(resolve, 1000));\n    return 'Hello, world!';\n  } catch (error) {\n    console.error('Error waiting for 1 second:', error);\n    return 'Failed to wait for 1 second.';\n  }\n}\n\nconsole.log(await waitAndReturnMessageAsync()); // Output: Hello, world!\n```\n\nBoth approaches will wait for 1 second and then return a message. The `async/await` approach is more modern and recommended for better performance and handling of errors.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1193,
+  "title": " avait합니다 Car InsurancePremium Calculator",
+  "prompt": "Write a program that calculates the car insurance premium based on the driver's age and number of accidents.\nSample Input: 30 2\nSample Output: 500.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the car insurance premium based on the driver's age and number of accidents. The program uses a simple formula that increases the premium with age and with each accident.\n\n```python\ndef calculate_car_insurance_premium(age, accidents):\n    \"\"\"\n    Calculates the car insurance premium based on the driver's age and number of accidents.\n\n    :param age: The driver's age.\n    :param accidents: The number of accidents the driver has had.\n    :return: The car insurance premium as a float.\n    \"\"\"\n\n    # Adjust the base premium based on age\n    base_premium = 1000.0\n    if age < 25:\n        base_premium *= 0.9  # discount for younger drivers\n    elif age >= 65:\n        base_premium *= 1.2  # increase for older drivers\n\n    # Add a penalty for each accident\n    penalty = 100.0 * accidents\n\n    # Calculate the final premium\n    premium = base_premium + penalty\n\n    return premium\n\n# Example usage\nage = 30\naccidents = 2\nprint(f\"The car insurance premium for a {age} year old driver with {accidents} accidents is {calculate_car_insurance_premium(age, accidents)}.\")\n```\n\nThis program defines a function `calculate_car_insurance_premium` that takes the driver's age and number of accidents as input and returns the car insurance premium as a float. The example usage at the end of the program demonstrates how to use the function to calculate the premium for a driver with age 30 and accidents 2.",
+  "error": null,
+  "elapsed_seconds": 5.37,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

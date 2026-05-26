@@ -1,0 +1,9 @@
+{
+  "id": 3791,
+  "title": "Remove Duplicates from Sorted Array",
+  "prompt": "Create a function that removes duplicates from a sorted array in-place.\nSample Input: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5]\nSample Output: [1, 2, 3, 4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that removes duplicates from a sorted array in-place using two pointers. This approach has a time complexity of O(n), which is more efficient than sorting the array and then removing duplicates (which has a time complexity of O(n log n)).\n\n```python\ndef remove_duplicates(arr):\n    slow = fast = 0\n    for fast in range(1, len(arr)):\n        if arr[slow] != arr[fast]:\n            slow += 1\n            arr[slow] = arr[fast]\n    return arr[:slow + 1]\n```\n\nYou can use this function as follows:\n\n```python\narr = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5]\nprint(remove_duplicates(arr))  # Output: [1, 2, 3, 4, 5]\n```\n\nThis function works by comparing each element in the array with the next element. If the two elements are not equal, the function increments the slow pointer and stores the new element at the slow position. This effectively moves all non-duplicate elements one position to the right, leaving the duplicates at the end of the array. Finally, the function returns a new list containing only the non-duplicate elements up to the slow pointer.",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

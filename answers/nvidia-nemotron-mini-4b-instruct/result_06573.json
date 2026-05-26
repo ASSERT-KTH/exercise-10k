@@ -1,0 +1,9 @@
+{
+  "id": 6573,
+  "title": "Dictionary Flattening",
+  "prompt": "Create a nested dictionary and flatten it into a single-level dictionary\nSample Input: {'name': 'Liam', 'age': 85, 'address': {'street': 'Main', 'city': 'LA'}}\nSample Output: {'name': 'Liam', 'age': 85, 'street': 'Main', 'city': 'LA'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that takes a nested dictionary as input and flattens it into a single-level dictionary:\n```python\ndef flatten_dict(nested_dict):\n    \"\"\"\n    Flattens a nested dictionary into a single-level dictionary.\n\n    :param nested_dict: The nested dictionary to flatten\n    :return: A single-level dictionary with the same key-value pairs as the input dictionary\n    \"\"\"\n    flat_dict = {}\n    for key, value in nested_dict.items():\n        if isinstance(value, dict):\n            flat_dict.update(flatten_dict(value))\n        else:\n            flat_dict[key] = value\n    return flat_dict\n```\nHere's an example of how to use this function:\n```python\nnested_dict = {'name': 'Liam', 'age': 85, 'address': {'street': 'Main', 'city': 'LA'}}\nflat_dict = flatten_dict(nested_dict)\nprint(flat_dict)  # Output: {'name': 'Liam', 'age': 85, 'street': 'Main', 'city': 'LA'}\n```\nThis function works by recursively traversing the nested dictionary, checking each value to see if it's another dictionary. If it is, the function calls itself to flatten that dictionary and merges its results into the current dictionary. If the value is not a dictionary, it simply adds the key-value pair to the current dictionary. The resulting dictionary is then returned.",
+  "error": null,
+  "elapsed_seconds": 3.53,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

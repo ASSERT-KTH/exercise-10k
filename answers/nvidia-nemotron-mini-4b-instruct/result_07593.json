@@ -1,0 +1,9 @@
+{
+  "id": 7593,
+  "title": "Non-Numeric Validation",
+  "prompt": "Write a program that checks if a given variable is non-numeric.\nSample Input: var = 'hello'\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given variable is non-numeric:\n\n```python\ndef is_non_numeric(var):\n    \"\"\"\n    Check if a given variable is non-numeric.\n\n    :param var: The variable to check.\n    :return: True if the variable is non-numeric, False otherwise.\n    \"\"\"\n    try:\n        float(var)\n        return True\n    except ValueError:\n        return False\n\n# Example usage:\nvar = 'hello'\nprint(is_non_numeric(var))  # Output: True\n```\n\nThis program defines a function `is_non_numeric` that takes a variable as input and checks if it can be converted to a float using the `float` function. If the conversion fails due to a `ValueError`, it means the variable is non-numeric, so the function returns `True`. Otherwise, it returns `False`. The example usage shows how to call the function with a string variable and print the result.",
+  "error": null,
+  "elapsed_seconds": 2.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

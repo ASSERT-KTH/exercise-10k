@@ -1,0 +1,9 @@
+{
+  "id": 5095,
+  "title": "Text Analyzer",
+  "prompt": "Write a program that analyzes a piece of text and prints out statistics about the text, such as the number of words and characters.\nSample Input: This is a test sentence\nSample Output: Number of words: 5, Number of characters: 20\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses the `re` module to split the text into words and then counts the number of words and characters.\n\n```python\nimport re\n\ndef analyze_text(text):\n    \"\"\"Analyzes a piece of text and prints out statistics about the text.\"\"\"\n\n    # Split the text into words using regular expressions\n    words = re.findall(r'\\b\\w+\\b', text.lower())\n\n    # Count the number of words and characters\n    num_words = len(words)\n    num_chars = len(text)\n\n    # Print the results\n    print(f\"Number of words: {num_words}, Number of characters: {num_chars}\")\n\n# Example usage\nanalyze_text(\"This is a test sentence\")\n```\n\nThis program first converts the input text to lowercase to ensure that the analysis is case-insensitive. Then, it uses a regular expression to split the text into words, where each word is defined as a sequence of one or more alphanumeric characters surrounded by word boundaries (`\\b`). Finally, it counts the number of words and characters and prints the results.",
+  "error": null,
+  "elapsed_seconds": 2.87,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3880,
+  "title": "Dictionary Superset",
+  "prompt": "Create two dictionaries with names of countries as keys and their capitals as values. Check if one dictionary is a superset of the other and print the result.\nSample Input: {'USA': 'Washington', 'Canada': 'Ottawa', 'Mexico': 'Mexico City'}, {'USA': 'Washington', 'Canada': 'Ottawa'}\nSample Output: True\n",
+  "answer": "Here's a Python solution for the problem:\n\n```python\ndef is_superset(dict1, dict2):\n    return set(dict1.keys()) >= set(dict2.keys())\n\nsample_input = {'USA': 'Washington', 'Canada': 'Ottawa', 'Mexico': 'Mexico City'}\nsample_output = {'USA': 'Washington', 'Canada': 'Ottawa'}\n\nprint(is_superset(sample_input, sample_output))  # Output: True\n```\n\nIn this solution, we define a function `is_superset()` that checks if the keys of the first dictionary are a superset of the keys in the second dictionary. We convert both dictionaries into sets to compare their keys efficiently. \n\nThen, we test the function with the provided sample input and output. The output will be `True`, as the first dictionary contains all the keys from the second dictionary plus some extra keys.",
+  "error": null,
+  "elapsed_seconds": 2.13,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

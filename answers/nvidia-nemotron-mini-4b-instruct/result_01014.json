@@ -1,0 +1,9 @@
+{
+  "id": 1014,
+  "title": "Pattern Matching",
+  "prompt": "Write a program that takes a string and a pattern as input, and returns whether the string matches the pattern or not.\nSample Input: abc abc\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses the `re` module for regular expressions, which is a powerful tool for pattern matching.\n\n```python\nimport re\n\ndef match_pattern(string, pattern):\n    \"\"\"\n    Returns whether the given string matches the given pattern or not.\n\n    :param string: The string to match against the pattern.\n    :param pattern: The pattern to match against the string.\n    :return: A boolean indicating whether the string matches the pattern.\n    \"\"\"\n    # Ensure the pattern is a string\n    if not isinstance(pattern, str):\n        raise TypeError(\"The pattern must be a string.\")\n\n    # Compile the pattern into a regular expression object\n    pattern_regex = re.compile(pattern)\n\n    # Check if the string matches the pattern\n    return bool(pattern_regex.search(string))\n\n# Example usage\nstring = \"abc abc\"\npattern = \"abc\"\nprint(match_pattern(string, pattern))  # Output: True\n```\n\nThis program first checks if the `pattern` is a string, and then compiles it into a regular expression object using the `re.compile()` function. Finally, it checks if the string matches the pattern using the `re.search()` function, which returns a match object if there's a match, or `None` otherwise. The `bool()` function is then used to convert the match object to a boolean value, indicating whether the string matches the pattern or not.",
+  "error": null,
+  "elapsed_seconds": 3.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

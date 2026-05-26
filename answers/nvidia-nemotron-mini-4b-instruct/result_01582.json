@@ -1,0 +1,9 @@
+{
+  "id": 1582,
+  "title": "Guessing Game",
+  "prompt": "Create a program that generates a random number between 1 and 10, then asks the user to guess the number. After each guess, tell the user if their guess was higher or lower than the actual number.\nSample Input: 5\nSample Output: Your guess is lower than the actual number\n",
+  "answer": "Sure, I'd be happy to help you create a program for that. Here's a Python solution using a while loop to keep asking the user for guesses until they get it right:\n\n```python\nimport random\n\n# Generate a random number between 1 and 10\nactual_number = random.randint(1, 10)\n\nwhile True:\n    # Ask the user for a guess\n    user_guess = int(input(\"Guess a number between 1 and 10: \"))\n\n    # Check if the user guessed the correct number\n    if user_guess == actual_number:\n        print(f\"Congratulations! You guessed the number {actual_number} correctly.\")\n        break\n    else:\n        # Determine if the user's guess is higher or lower than the actual number\n        if user_guess > actual_number:\n            print(f\"Your guess is lower than the actual number. Try again!\")\n        else:\n            print(f\"Your guess is higher than the actual number. Try again!\")\n```\n\nThis program generates a random number between 1 and 10, and then enters a loop where it asks the user to guess the number. After each guess, it checks if the user guessed correctly, and if not, it tells the user if their guess was higher or lower than the actual number. The loop continues until the user guesses the correct number.",
+  "error": null,
+  "elapsed_seconds": 4.42,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

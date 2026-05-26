@@ -1,0 +1,9 @@
+{
+  "id": 9696,
+  "title": "Age Checker",
+  "prompt": "Create a program that checks if a person is eligible to vote based on their age. The program should ask for the person's age and print 'You are eligible to vote' if they are 18 or older, and 'You are not eligible to vote' otherwise.\nSample Input: 19\nSample Output: You are eligible to vote\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef check_voting_eligibility():\n    \"\"\"\n    Asks the user for their age and checks if they are eligible to vote.\n    \"\"\"\n    while True:\n        try:\n            # Ask the user for their age\n            age = int(input(\"Please enter your age: \"))\n\n            # Check if the age is valid (must be a positive integer)\n            if age > 0:\n                break\n            else:\n                print(\"Age must be a positive integer. Please try again.\")\n        except ValueError:\n            print(\"That's not a valid age. Please enter an integer.\")\n\n    # Check if the person is eligible to vote based on their age\n    if age >= 18:\n        print(\"You are eligible to vote.\")\n    else:\n        print(\"You are not eligible to vote.\")\n\n# Call the function to start the program\ncheck_voting_eligibility()\n```\n\nThis program uses a `while` loop to ensure the user enters a valid age (a positive integer). If the user enters a non-integer value or a non-positive integer, the program will prompt them to enter a valid age again. Once the user enters a valid age, the program checks if the age is 18 or older and prints the appropriate message.",
+  "error": null,
+  "elapsed_seconds": 3.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

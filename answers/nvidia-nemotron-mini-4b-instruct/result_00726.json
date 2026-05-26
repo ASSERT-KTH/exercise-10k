@@ -1,0 +1,9 @@
+{
+  "id": 726,
+  "title": "Distance Between Two Points",
+  "prompt": "Write a program that takes the coordinates of two points as input and outputs the distance between them.\nSample Input: 1 2 4 6\nSample Output: 5.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes the coordinates of two points as input (in the format x1 y1 x2 y2) and outputs the Euclidean distance between them:\n```python\nimport math\n\ndef calculate_distance(point1, point2):\n    \"\"\"\n    Calculates the Euclidean distance between two points.\n\n    :param point1: A list of two floats representing the x and y coordinates of the first point.\n    :param point2: A list of two floats representing the x and y coordinates of the second point.\n    :return: A float representing the Euclidean distance between the two points.\n    \"\"\"\n    x1, y1 = point1\n    x2, y2 = point2\n\n    # Calculate the Euclidean distance using the formula: sqrt((x2 - x1)^2 + (y2 - y1)^2)\n    distance = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)\n\n    return distance\n\n# Get user input\nuser_input = input(\"Enter the coordinates of the two points (e.g. 1 2 4 6): \")\npoints = [float(coord) for coord in user_input.split()]\n\n# Calculate and output the distance\ndistance = calculate_distance(points[:2], points[2:])\nprint(f\"The distance between the two points is {distance:.2f}.\")\n```\nThis program defines a function `calculate_distance` that takes two lists of two floats as input and returns the Euclidean distance between them. The main part of the program gets user input, splits it into two points, and then calls the `calculate_distance` function to calculate and output the distance.",
+  "error": null,
+  "elapsed_seconds": 5.85,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

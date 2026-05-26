@@ -1,0 +1,9 @@
+{
+  "id": 5994,
+  "title": "Calculating the Sum of Squares",
+  "prompt": "Write a function that takes a list of numbers as input and returns the sum of their squares\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 55\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef sum_of_squares(numbers):\n    \"\"\"\n    Calculates the sum of the squares of the numbers in the input list.\n\n    Parameters:\n    numbers (list): A list of numbers.\n\n    Returns:\n    int: The sum of the squares of the numbers in the input list.\n    \"\"\"\n    # Check that the input is a non-empty list\n    if not isinstance(numbers, list) or len(numbers) == 0:\n        raise ValueError(\"Input must be a non-empty list of numbers.\")\n\n    # Calculate the sum of the squares of the numbers in the list\n    squared_numbers = [num ** 2 for num in numbers]\n    return sum(squared_numbers)\n```\nHere's an example of how you can use this function:\n```python\nprint(sum_of_squares([1, 2, 3, 4, 5]))  # Output: 55\n```\nThis function first checks that the input is a non-empty list. Then, it uses a list comprehension to create a new list where each number is squared. Finally, it calculates the sum of the squared numbers using the built-in `sum()` function.",
+  "error": null,
+  "elapsed_seconds": 2.93,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

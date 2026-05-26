@@ -1,0 +1,9 @@
+{
+  "id": 1983,
+  "title": "Rock, Paper, Scissors",
+  "prompt": "Develop a program to play Rock, Paper, Scissors using conditional statements to determine the winner\nSample Input: rock paper\nSample Output: Paper wins\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that plays Rock, Paper, Scissors using conditional statements to determine the winner:\n\n```python\ndef play_rock_paper_scissors():\n    \"\"\"\n    Plays Rock, Paper, Scissors and determines the winner using conditional statements.\n    \"\"\"\n\n    # Define the possible moves\n    moves = ['rock', 'paper', 'scissors']\n\n    # Get user input\n    user_move = input(\"Enter your move (rock, paper, scissors): \").lower()\n\n    # Ensure the user input is a valid move\n    while user_move not in moves:\n        print(\"Invalid move. Please enter 'rock', 'paper', or 'scissors'.\")\n        user_move = input(\"Enter your move: \").lower()\n\n    # Computer chooses a random move\n    computer_move = moves[moves.index(random.choice(moves))]\n\n    # Determine the winner\n    if user_move == 'rock' and computer_move == 'scissors':\n        print(f\"{user_move} wins!\")\n    elif user_move == 'scissors' and computer_move == 'paper':\n        print(f\"{user_move} wins!\")\n    elif user_move == 'paper' and computer_move == 'rock':\n        print(f\"{user_move} wins!\")\n    else:\n        print(f\"Computer wins with {computer_move}!\")\n\n# Call the function to play the game\nplay_rock_paper_scissors()\n```\n\nThis program defines a function `play_rock_paper_scissors()` that prompts the user for their move, validates the input, chooses a random move for the computer, and prints the winner based on the rules of Rock, Paper, Scissors. The function is then called to play the game.",
+  "error": null,
+  "elapsed_seconds": 4.14,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

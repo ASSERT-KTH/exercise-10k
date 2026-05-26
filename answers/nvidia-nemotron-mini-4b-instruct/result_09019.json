@@ -1,0 +1,9 @@
+{
+  "id": 9019,
+  "title": "Generators",
+  "prompt": "Create a function that uses generators to produce a sequence of values on-the-fly.\nSample Input: infinite_sequence()\nSample Output: 1, 2, 3, ...\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses generators to produce an infinite sequence of numbers on-the-fly:\n\n```python\ndef infinite_sequence():\n    \"\"\"\n    A generator function that produces an infinite sequence of numbers.\n    \"\"\"\n    i = 1\n    while True:\n        yield i\n        i += 1\n```\n\nThis function uses a `while` loop to keep generating new numbers indefinitely. When you call `infinite_sequence()`, it returns a generator object, which you can then iterate over to get the next number in the sequence. Here's an example of how to use it:\n\n```python\nfor num in infinite_sequence():\n    print(num)\n```\n\nThis will print out the sequence of numbers 1, 2, 3, 4, 5, and so on, without ever running out of numbers. You can also use the `next()` function to get the next number in the sequence without having to iterate over it explicitly:\n\n```python\nprint(next(infinite_sequence()))  # prints 1\nprint(next(infinite_sequence()))  # prints 2\n```\n\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.87,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

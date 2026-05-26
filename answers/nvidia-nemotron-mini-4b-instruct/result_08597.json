@@ -1,0 +1,9 @@
+{
+  "id": 8597,
+  "title": "Dictionary Equality",
+  "prompt": "Write a function to check if two dictionaries are equal\nSample Input: {'name': 'John', 'age': 25}, {'name': 'John', 'age': 25}\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if two dictionaries are equal, meaning they have the same keys and values:\n\n```python\ndef are_dicts_equal(dict1, dict2):\n    \"\"\"\n    Check if two dictionaries are equal.\n\n    :param dict1: The first dictionary to compare.\n    :param dict2: The second dictionary to compare.\n    :return: True if the dictionaries are equal, False otherwise.\n    \"\"\"\n    # Check if the dictionaries have the same length\n    if len(dict1) != len(dict2):\n        return False\n\n    # Iterate over the keys of both dictionaries and check if their values are equal\n    for key in dict1:\n        if key not in dict2 or dict1[key] != dict2[key]:\n            return False\n\n    return True\n```\n\nYou can use this function as follows:\n\n```python\nprint(are_dicts_equal({'name': 'John', 'age': 25}, {'name': 'John', 'age': 25}))  # True\nprint(are_dicts_equal({'name': 'John', 'age': 25}, {'name': 'Alice', 'age': 25}))  # False\n```",
+  "error": null,
+  "elapsed_seconds": 3.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

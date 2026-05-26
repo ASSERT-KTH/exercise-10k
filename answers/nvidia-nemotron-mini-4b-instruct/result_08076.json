@@ -1,0 +1,9 @@
+{
+  "id": 8076,
+  "title": "Function with try-except Block",
+  "prompt": "Write a function that uses a try-except block to handle an exception\nSample Input: None\nSample Output: The result of the function or an error message\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example Python function that uses a `try-except` block to handle a specific exception (in this case, a `ZeroDivisionError`). The function takes a single argument `dividend` and returns the result of dividing it by another argument `divisor`, or an error message if the divisor is zero.\n\n```python\ndef divide(dividend, divisor):\n    \"\"\"\n    Divides two numbers and returns the result or an error message if the divisor is zero.\n\n    :param dividend: The number to be divided.\n    :param divisor: The number that divides the dividend.\n    :return: The result of the division or an error message.\n    \"\"\"\n    try:\n        result = dividend / divisor\n        return result\n    except ZeroDivisionError:\n        return \"Error: Division by zero is not allowed.\"\n    except Exception as e:\n        return f\"An unexpected error occurred: {e}\"\n```\n\nYou can call this function with any two numbers as arguments, and it will return the result of the division or an error message if the divisor is zero. For example:\n\n```python\nprint(divide(10, 2))  # Output: 5\nprint(divide(10, 0))  # Output: Error: Division by zero is not allowed.\nprint(divide(\"10\", 2))  # Output: An unexpected error occurred: 'int' object is not callable\n```",
+  "error": null,
+  "elapsed_seconds": 3.45,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

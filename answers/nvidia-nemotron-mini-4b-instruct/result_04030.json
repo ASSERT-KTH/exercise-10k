@@ -1,0 +1,9 @@
+{
+  "id": 4030,
+  "title": "Single Number",
+  "prompt": "Implement a function to find the single number in an array where every element appears twice except for one\nSample Input: [2, 2, 1]\nSample Output: 1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that implements the described algorithm to find the single number in an array where every element appears twice except for one:\n\n```python\ndef single_number(arr):\n    \"\"\"\n    Find the single number in an array where every element appears twice except for one.\n\n    :param arr: List[int] - The input array\n    :return: int - The single number in the array\n    \"\"\"\n    # XOR all elements in the array to get the single number\n    result = 0\n    for num in arr:\n        result ^= num\n\n    return result\n```\n\nThis function works by XOR-ing all elements in the array. Since every element appears twice except for one, the single number will cancel out all the duplicate appearances of other numbers, leaving only the single number. The resulting XOR value will be the single number.\n\nHere's an example of how to use this function:\n\n```python\nprint(single_number([2, 2, 1]))  # Output: 1\n```\n\nI hope this helps! Let me know if you have any questions or if there's anything else I can assist you with.",
+  "error": null,
+  "elapsed_seconds": 9.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

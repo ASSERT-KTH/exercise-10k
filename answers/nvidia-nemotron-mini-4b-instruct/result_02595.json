@@ -1,0 +1,9 @@
+{
+  "id": 2595,
+  "title": "Finding the First Non-Repeating Character",
+  "prompt": "Write a program to find the first non-repeating character in a given string.\nSample Input: aabbc\nSample Output: c\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the first non-repeating character in a given string:\n```python\ndef first_non_repeating(s):\n    # Create a dictionary to store the count of each character\n    char_count = {}\n    for char in s:\n        if char in char_count:\n            char_count[char] += 1\n        else:\n            char_count[char] = 1\n\n    # Iterate through the string again and find the first character with count 1\n    for char in s:\n        if char_count[char] == 1:\n            return char\n\n    # If no non-repeating character is found, return an empty string\n    return \"\"\n```\nHere's how you can use this function:\n```python\nprint(first_non_repeating(\"aabbc\"))  # Output: c\nprint(first_non_repeating(\"hello world\"))  # Output: \"\"\n```\nThis program works by first creating a dictionary `char_count` that stores the count of each character in the string. Then, it iterates through the string again, checking each character to see if its count in `char_count` is 1. If it is, the character is returned as the result. If no such character is found, an empty string is returned.",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

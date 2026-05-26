@@ -1,0 +1,9 @@
+{
+  "id": 3283,
+  "title": "Multiplication Table",
+  "prompt": "Write a program that prints a multiplication table for a given number using a for loop.\nSample Input: 5\nSample Output: 5 x 1 = 5\n5 x 2 = 10\n5 x 3 = 15\n5 x 4 = 20\n5 x 5 = 25\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef print_multiplication_table(number):\n    \"\"\"Print a multiplication table for a given number using a for loop.\"\"\"\n    # Ensure the input is a positive integer\n    if not isinstance(number, int) or number < 1:\n        raise ValueError(\"Input must be a positive integer.\")\n\n    # Print the header\n    print(f\"{number} x 1 = {number}\")\n\n    # Print the table using a for loop\n    for i in range(2, 6):  # Print values up to 5 (inclusive)\n        product = number * i\n        print(f\"{number} x {i} = {product}\")\n\n# Example usage\nnumber = 5\nprint_multiplication_table(number)\n```\nWhen you run this program with the sample input `5`, it will output:\n```yaml\n5 x 1 = 5\n5 x 2 = 10\n5 x 3 = 15\n5 x 4 = 20\n5 x 5 = 25\n```\nThis program first checks if the input is a positive integer. If not, it raises a `ValueError`. Then, it prints the header row, and uses a `for` loop to print the remaining rows of the multiplication table. The loop iterates from 2 to 5 (inclusive), and for each value of `i`, it calculates the product `number * i` and prints it.",
+  "error": null,
+  "elapsed_seconds": 3.42,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

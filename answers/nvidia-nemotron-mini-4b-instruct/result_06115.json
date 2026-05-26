@@ -1,0 +1,9 @@
+{
+  "id": 6115,
+  "title": "Array Filtering with Predicate",
+  "prompt": "Write a program that takes an array of integers and a predicate function as input, and returns a new array containing only the integers for which the predicate function returns True.\nSample Input: [1, 2, 3, 4, 5], is_even(x)\nSample Output: [2, 4]\n",
+  "answer": "Here's a Python solution using list comprehension and the `is_even` function you provided as an example:\n\n```python\ndef is_even(x):\n    return x % 2 == 0\n\ndef filter_even(arr, predicate):\n    return [num for num in arr if predicate(num)]\n\n# Example usage\narr = [1, 2, 3, 4, 5]\nprint(filter_even(arr, is_even))  # Output: [2, 4]\n```\n\nThis program defines two functions: `is_even` and `filter_even`. The `is_even` function checks if a number is even by checking if the remainder of dividing it by 2 is equal to 0. The `filter_even` function takes an array and a predicate function as input, and returns a new array containing only the elements for which the predicate function returns `True`. The list comprehension inside `filter_even` iterates over each element in the input array, and only includes it in the new array if the predicate function returns `True` for that element.",
+  "error": null,
+  "elapsed_seconds": 2.55,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

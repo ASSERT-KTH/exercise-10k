@@ -1,0 +1,9 @@
+{
+  "id": 138,
+  "title": "Fraction to Decimal",
+  "prompt": "Create a program that converts a given fraction to a decimal number.\nSample Input: 1/2\nSample Output: 0.5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that converts a given fraction to a decimal number:\n\n```python\ndef fraction_to_decimal(fraction):\n    \"\"\"\n    Converts a given fraction (in the form of a string) to a decimal number.\n\n    :param fraction: str, the fraction as a string (e.g., \"1/2\")\n    :return: float, the decimal equivalent of the fraction\n    \"\"\"\n    # Split the fraction string into numerator and denominator\n    numerator, denominator = fraction.split('/')\n\n    # Convert the numerator and denominator to integers\n    numerator = int(numerator)\n    denominator = int(denominator)\n\n    # Calculate the decimal equivalent by dividing the numerator by the denominator\n    decimal = numerator / denominator\n\n    # Round the decimal to a certain number of decimal places (default is 6)\n    return round(decimal, 6)\n\n# Example usage\nfraction = \"1/2\"\ndecimal = fraction_to_decimal(fraction)\nprint(f\"{fraction} = {decimal}\")\n```\n\nWhen you run this program with the input \"1/2\", it will output:\n\n```\n1/2 = 0.5\n```",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

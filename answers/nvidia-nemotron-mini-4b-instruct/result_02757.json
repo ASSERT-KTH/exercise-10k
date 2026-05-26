@@ -1,0 +1,9 @@
+{
+  "id": 2757,
+  "title": "Tax Calculator",
+  "prompt": "Write a program that calculates the tax owed given the income and tax rate.\nSample Input: 50000 25\nSample Output: 12500.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the tax owed given the income and tax rate:\n\n```python\ndef calculate_tax(income, tax_rate):\n    \"\"\"\n    Calculates the tax owed given the income and tax rate.\n\n    :param income: The annual income in dollars.\n    :param tax_rate: The tax rate as a decimal (e.g., 0.25 for 25%).\n    :return: The tax owed in dollars.\n    \"\"\"\n\n    # Validate input\n    if not isinstance(income, (int, float)) or income < 0:\n        raise ValueError(\"Income must be a non-negative number.\")\n    if not isinstance(tax_rate, (float, int)) or tax_rate < 0 or tax_rate > 1:\n        raise ValueError(\"Tax rate must be a number between 0 and 1 (inclusive).\")\n\n    # Calculate tax\n    tax = income * tax_rate\n\n    return tax\n\n# Sample input and output\nincome = 50000\ntax_rate = 0.25\ntax_owed = calculate_tax(income, tax_rate)\nprint(f\"{income} dollars at a tax rate of {tax_rate * 100:.0f}% results in a tax owed of ${tax_owed:.2f}.\")\n```\n\nThis program defines a function `calculate_tax` that takes the annual income and tax rate as input, validates the input to ensure it's non-negative and between 0 and 1, and then calculates the tax owed using the given tax rate. The function returns the tax owed as a float, and the sample input and output demonstrate how to use the function with a sample income and tax rate.",
+  "error": null,
+  "elapsed_seconds": 3.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

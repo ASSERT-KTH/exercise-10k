@@ -1,0 +1,9 @@
+{
+  "id": 7798,
+  "title": "To-Do List",
+  "prompt": "Write a program that allows the user to add and remove items from a to-do list.\nSample Input: buy milk\nSample Output: To-Do List: [buy milk]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses a list to store the to-do items and allows the user to add and remove items using specific commands.\n\n```python\n# Initialize an empty to-do list\nto_do_list = []\n\ndef add_item():\n    \"\"\"Add an item to the to-do list.\"\"\"\n    item = input(\"Enter an item to add to the to-do list: \").strip()\n    if item:\n        to_do_list.append(item)\n        print(f\"To-Do List: [{', '.join(to_do_list)}]\")\n\ndef remove_item():\n    \"\"\"Remove an item from the to-do list.\"\"\"\n    if to_do_list:\n        item_index = int(input(\"Enter the index of the item to remove (0-based): \"))\n        if item_index < len(to_do_list):\n            del to_do_list[item_index]\n            print(f\"To-Do List: [{', '.join(to_do_list)}]\")\n        else:\n            print(\"Item index is out of range.\")\n\ndef main():\n    \"\"\"Main function to handle user input and commands.\"\"\"\n    while True:\n        command = input(\"Enter 'add' to add an item, 'remove' to remove an item, or 'quit' to exit: \").lower()\n\n        if command == 'add':\n            add_item()\n\n        elif command == 'remove':\n            remove_item()\n\n        elif command == 'quit':\n            print(\"Goodbye!\")\n            break\n\n        else:\n            print(\"Invalid command. Please try again.\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program will keep running until the user types 'quit'. Each time the user enters a command, the corresponding function is called to handle the input.",
+  "error": null,
+  "elapsed_seconds": 4.5,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

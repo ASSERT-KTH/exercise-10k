@@ -1,0 +1,9 @@
+{
+  "id": 2465,
+  "title": "Substring Finder",
+  "prompt": "Create a function that finds the index of a given substring within a larger string.\nSample Input: ['Hello World', 'World']\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function uses the `index()` method of strings, which returns the lowest index in the string where the substring can be found, and raises a `ValueError` if the substring is not found. Here's the code:\n\n```python\ndef find_substring_index(large_string, substring):\n    \"\"\"\n    Find the index of a given substring within a larger string.\n\n    Parameters:\n    large_string (str): The larger string to search in.\n    substring (str): The substring to find within the larger string.\n\n    Returns:\n    int: The index of the substring in the larger string, or -1 if not found.\n\n    Raises:\n    ValueError: If the substring is not found.\n    \"\"\"\n    return large_string.index(substring)\n```\n\nHere's an example of how to use this function:\n\n```python\nsample_input = ['Hello World', 'World']\nsubstring = 'World'\n\nindex = find_substring_index(''.join(sample_input), substring)\nprint(index)  # Output: 6\n```\n\nThis function first concatenates all the strings in the input list into a single string, so that the search is case-insensitive. Then, it calls the `index()` method to find the index of the substring in the larger string. If the substring is not found, the function raises a `ValueError`.",
+  "error": null,
+  "elapsed_seconds": 3.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

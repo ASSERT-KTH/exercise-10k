@@ -1,0 +1,9 @@
+{
+  "id": 1956,
+  "title": "List Mode",
+  "prompt": "Write a program that takes a list as input and returns the mode value of the list.\nSample Input: [1, 2, 2, 3, 3, 3]\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a list as input and returns the mode value of the list. The mode is the value that appears most frequently in the list. If there are multiple values with the same maximum frequency, it will return all of them as a list.\n\n```python\nfrom collections import Counter\n\ndef find_mode(lst):\n    \"\"\"\n    Find the mode value(s) of a given list.\n\n    :param lst: List of numbers\n    :return: List of mode values\n    \"\"\"\n    # Count the occurrences of each number in the list\n    count = Counter(lst)\n\n    # Find the maximum frequency\n    max_freq = max(count.values())\n\n    # Filter out numbers with a frequency less than the maximum\n    filtered_lst = [num for num, freq in count.items() if freq == max_freq]\n\n    return filtered_lst\n\n# Example usage\ninput_list = [1, 2, 2, 3, 3, 3]\nprint(find_mode(input_list))  # Output: [3]\n```\n\nThis program first uses the `Counter` class from the `collections` module to count the occurrences of each number in the list. It then finds the maximum frequency of any number in the list, and filters out any numbers with a frequency less than the maximum. Finally, it returns the list of mode values.",
+  "error": null,
+  "elapsed_seconds": 23.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

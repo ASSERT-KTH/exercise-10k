@@ -1,0 +1,9 @@
+{
+  "id": 840,
+  "title": "Text Tokenization",
+  "prompt": "Given a string, split it into individual tokens (words or punctuation) and return them in a list.\nSample Input: hello, world!\nSample Output: ['hello', ',', 'world', '!']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\nimport re\n\ndef split_string_into_tokens(input_string: str) -> list:\n    \"\"\"\n    Given a string, split it into individual tokens (words or punctuation) and return them in a list.\n\n    :param input_string: The input string to be tokenized.\n    :return: A list of tokens.\n    \"\"\"\n    # Use a regular expression to split the string into words and punctuation\n    tokens = re.findall(r'\\w+|[^\\w\\s]', input_string)\n\n    # Remove any empty strings from the list of tokens\n    tokens = [token for token in tokens if token]\n\n    return tokens\n```\nHere's how you can use this function:\n```python\nprint(split_string_into_tokens(\"hello, world!\"))  # Output: ['hello', ',', 'world', '!']\n```\nThis function uses the `re` module to split the input string into words and punctuation using a regular expression that matches either a word character (`\\w+`) or any character that is not a word character (`[^\\w\\s]`). The `re.findall()` function returns a list of all non-overlapping matches, and we use a list comprehension to filter out any empty strings.\n\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.57,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

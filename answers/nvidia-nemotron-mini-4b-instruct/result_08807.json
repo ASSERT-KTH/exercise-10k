@@ -1,0 +1,9 @@
+{
+  "id": 8807,
+  "title": "Complex Numbers",
+  "prompt": "Write a program that takes two complex numbers as input and returns their sum, difference, product, and quotient.\nSample Input: 2+3j 4+5j\nSample Output: (6+8j) (−2−2j) (−7+22j) (0.16-0.12j)\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes two complex numbers as input and returns their sum, difference, product, and quotient using the `cmath` module, which provides additional functions for complex numbers.\n\n```python\nimport cmath\n\ndef complex_operations(num1, num2):\n    \"\"\"\n    Performs four complex number operations (sum, difference, product, and quotient)\n\n    :param num1: First complex number (str or complex)\n    :param num2: Second complex number (str or complex)\n    :return: A tuple containing the results of the four operations\n    \"\"\"\n\n    # Ensure inputs are complex numbers\n    num1 = cmath.complex(num1)\n    num2 = cmath.complex(num2)\n\n    # Perform operations\n    sum_ = num1 + num2\n    diff = num1 - num2\n    prod = num1 * num2\n    quot = num1 / num2\n\n    return sum_, diff, prod, quot\n\n\n# Get user inputs\nnum1 = input(\"Enter the first complex number (e.g. 2+3j): \")\nnum2 = input(\"Enter the second complex number (e.g. 4+5j): \")\n\n# Perform operations and print results\nresult_sum, result_diff, result_prod, result_quot = complex_operations(num1, num2)\nprint(f\"Sum: {result_sum}\")\nprint(f\"Difference: {result_diff}\")\nprint(f\"Product: {result_prod}\")\nprint(f\"Quotient: {result_quot}\")\n```\n\nThis program prompts the user to enter two complex numbers, converts them to `cmath.complex` objects, performs the four operations, and prints the results.",
+  "error": null,
+  "elapsed_seconds": 4.12,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4275,
+  "title": "Dictionary Copy Method",
+  "prompt": "Write a function that takes a dictionary as input and returns a shallow copy of the dictionary using the copy() method\nSample Input: {\"name\": \"John\", \"age\": 25}\nSample Output: {\"name\": \"John\", \"age\": 25}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef shallow_copy(input_dict):\n    \"\"\"\n    Returns a shallow copy of the given dictionary using the copy() method.\n\n    :param input_dict: The dictionary to create a shallow copy of.\n    :return: A shallow copy of the input dictionary.\n    \"\"\"\n    if not isinstance(input_dict, dict):\n        raise TypeError(\"The input must be a dictionary.\")\n\n    return input_dict.copy()\n```\nThis function checks if the input is a dictionary and raises a `TypeError` if it's not. Then, it uses the `copy()` method to create a shallow copy of the input dictionary. Here's an example of how to use this function:\n```python\ninput_dict = {\"name\": \"John\", \"age\": 25}\nshallow_copy_dict = shallow_copy(input_dict)\n\n# The original dictionary remains unchanged\nprint(input_dict)  # Output: {'name': 'John', 'age': 25}\n\n# The shallow copy dictionary is a copy of the original dictionary\nprint(shallow_copy_dict)  # Output: {'name': 'John', 'age': 25}\n```\nThis demonstrates that the function creates a shallow copy of the input dictionary, meaning that any changes made to the shallow copy dictionary will not affect the original dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.37,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

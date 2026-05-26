@@ -1,0 +1,9 @@
+{
+  "id": 9906,
+  "title": "Palindromic Numbers",
+  "prompt": "Write a program that checks whether a given number is palindromic (i.e. reads the same forwards and backwards).\nSample Input: 12321\nSample Output: Palindromic number\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks whether a given number is palindromic:\n\n```python\ndef is_palindrome(n):\n    \"\"\"Check if a given number is palindromic.\n\n    Args:\n        n (int): The number to check.\n\n    Returns:\n        str: A string indicating whether the number is palindromic or not.\n    \"\"\"\n    # Convert the number to a string, reverse it, and compare to the original string\n    reversed_str = str(n)[::-1]\n    return \"Palindromic number\" if str(n) == reversed_str else \"Not a palindromic number\"\n\n# Get user input\nuser_input = int(input(\"Enter a number: \"))\n\n# Check if the number is palindromic and print the result\nprint(is_palindrome(user_input))\n```\n\nThis program defines a function `is_palindrome` that takes an integer `n` as input and returns a string indicating whether `n` is palindromic or not. The function converts `n` to a string, reverses it using slicing (`[::-1]`), and compares the reversed string to the original string. If they are equal, the function returns \"Palindromic number\"; otherwise, it returns \"Not a palindromic number\". The program then gets user input, checks if the number is palindromic using the `is_palindrome` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.47,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

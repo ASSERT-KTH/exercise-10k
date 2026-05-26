@@ -1,0 +1,9 @@
+{
+  "id": 1786,
+  "title": "Dictionary Iteration",
+  "prompt": "Write a function to iterate over the key-value pairs of a dictionary and perform a given operation on each pair.\nSample Input: dictionary = {\"name\": \"John\", \"age\": 30}, operation = lambda x, y: x + str(y)\nSample Output: [\"nameJohn\", \"age30\"]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function, `iter_dict_operation`, takes a dictionary and a function as arguments, and returns a list of strings representing the key-value pairs after applying the given operation to each pair.\n\n```python\ndef iter_dict_operation(dictionary, operation):\n    \"\"\"\n    Iterates over the key-value pairs of a dictionary and applies a given operation to each pair.\n\n    Parameters:\n    dictionary (dict): The dictionary to iterate over.\n    operation (callable): A function that takes two arguments (key, value) and returns a string.\n\n    Returns:\n    list: A list of strings representing the key-value pairs after applying the operation.\n    \"\"\"\n    result = []\n    for key, value in dictionary.items():\n        result.append(operation(key, value))\n    return result\n```\n\nHere's an example of how to use this function:\n\n```python\ndictionary = {\"name\": \"John\", \"age\": 30}\noperation = lambda x, y: x + str(y)\n\nprint(iter_dict_operation(dictionary, operation))  # Output: ['nameJohn', 'age30']\n```\n\nThis function first initializes an empty list `result` to store the processed key-value pairs. Then, it iterates over the key-value pairs of the input dictionary using a `for` loop. For each pair, it applies the given operation using the `items()` method and appends the resulting string to the `result` list. Finally, it returns the `result` list.",
+  "error": null,
+  "elapsed_seconds": 4.89,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

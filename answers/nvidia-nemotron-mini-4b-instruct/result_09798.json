@@ -1,0 +1,9 @@
+{
+  "id": 9798,
+  "title": "Input Processing with Lambda Functions",
+  "prompt": "Write a program that takes an input and processes it using a lambda function.\nSample Input: hello\nSample Output: Hello\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes an input, processes it using a lambda function, and outputs the result:\n\n```python\ndef process_input(input_str):\n    \"\"\"\n    Processes an input string using a lambda function.\n\n    :param input_str: The input string to process.\n    :return: The processed string.\n    \"\"\"\n    # Define the lambda function that converts the first letter to uppercase\n    uppercase_first_letter = lambda s: s[0].upper() + s[1:] if s else ''\n\n    # Process the input string using the lambda function\n    processed_str = uppercase_first_letter(input_str)\n\n    return processed_str\n\n# Get user input\nuser_input = input(\"Enter a string: \")\n\n# Process the input and print the result\nprocessed_str = process_input(user_input)\nprint(f\"The processed string is: {processed_str}\")\n```\n\nWhen you run this program and enter \"hello\" as input, it will output:\n\n```\nEnter a string: hello\nThe processed string is: Hello\n```",
+  "error": null,
+  "elapsed_seconds": 2.76,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

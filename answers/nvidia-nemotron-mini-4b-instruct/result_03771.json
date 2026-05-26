@@ -1,0 +1,9 @@
+{
+  "id": 3771,
+  "title": "Dictionary Validation",
+  "prompt": "Validate a dictionary based on a set of rules.\nSample Input: {'name': 'John', 'age': 30, 'city': 'New York'} and rules to check for presence of 'name' and 'age' keys\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that validates a dictionary based on a set of rules. In this example, we'll check if the dictionary has keys 'name' and 'age'.\n\n```python\ndef validate_dictionary(dictionary, required_keys=('name', 'age')):\n    \"\"\"\n    Validates a dictionary based on a set of rules.\n\n    :param dictionary: The dictionary to validate.\n    :param required_keys: A tuple of keys required in the dictionary (default: ('name', 'age')).\n    :return: True if the dictionary is valid, False otherwise.\n    \"\"\"\n    # Check if all required keys are present\n    if not all(key in dictionary for key in required_keys):\n        return False\n\n    # Check if the values corresponding to the required keys are of the correct type\n    for key in required_keys:\n        if not isinstance(dictionary[key], (str, int)):\n            return False\n\n    return True\n```\n\nYou can use this function as follows:\n\n```python\nsample_input = {'name': 'John', 'age': 30, 'city': 'New York'}\nsample_rules = ('name', 'age')\n\nprint(validate_dictionary(sample_input, sample_rules))  # Output: True\n```\n\nThis function first checks if all required keys are present in the dictionary. Then, it checks if the values corresponding to the required keys are of the correct type (string or integer). You can modify the `required_keys` parameter to add or remove keys as needed.",
+  "error": null,
+  "elapsed_seconds": 3.61,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

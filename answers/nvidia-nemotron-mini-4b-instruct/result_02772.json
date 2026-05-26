@@ -1,0 +1,9 @@
+{
+  "id": 2772,
+  "title": "Dictionary Lookup",
+  "prompt": "Write a program that takes a word as input and prints out its definition from a dictionary.\nSample Input: hello\nSample Output: A greeting or farewell.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses the `wordninja` library to look up the definition of a given word in a dictionary. If you don't have the library installed, you can install it using pip:\n\n```bash\npip install wordninja\n```\n\nHere's the Python code:\n\n```python\nimport wordninja\n\ndef get_word_definition(word):\n    \"\"\"\n    Look up the definition of a given word in a dictionary.\n\n    :param word: The word to look up.\n    :return: The definition of the word, or an error message if the word is not found.\n    \"\"\"\n    try:\n        definition = wordninja.define(word)\n        return f\"{word} is defined as: {definition}\"\n    except wordninja.WordninjaError as e:\n        return f\"Error: {e}. The word '{word}' was not found in the dictionary.\"\n\nif __name__ == \"__main__\":\n    word = input(\"Enter a word: \")\n    definition = get_word_definition(word)\n    print(definition)\n```\n\nThis program defines a function `get_word_definition` that takes a word as input, looks up its definition in the dictionary using the `wordninja` library, and returns the definition as a string. The function also handles any errors that might occur during the lookup. The program then prompts the user to enter a word, calls the function with the user's input, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

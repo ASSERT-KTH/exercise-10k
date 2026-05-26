@@ -1,0 +1,9 @@
+{
+  "id": 2468,
+  "title": "Consonant Counter",
+  "prompt": "Write a function that counts the number of consonants in a given string.\nSample Input: Hello World\nSample Output: 7\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that counts the number of consonants in a given string:\n\n```python\ndef count_consonants(s: str) -> int:\n    \"\"\"\n    Count the number of consonants in a given string.\n\n    :param s: The input string.\n    :return: The number of consonants in the string.\n    \"\"\"\n    # Define a set of consonants (based on the English language)\n    consonants = set(\"bcdfghjklmnpqrstvwxyz\")\n\n    # Count the number of consonants in the string\n    num_consonants = sum(1 for char in s if char.lower() in consonants)\n\n    return num_consonants\n```\n\nThis function first defines a set of consonants, which is a more efficient way to check for consonant characters than using a list or a string. Then, it iterates over each character in the input string, converts it to lowercase to ensure case-insensitive matching, and checks if it's a consonant using the `in` keyword. The `sum` function is used to count the number of consonants found.\n\nHere are some examples of how you can use this function:\n\n```python\nprint(count_consonants(\"Hello World\"))  # Output: 7\nprint(count_consonants(\"Python is great\"))  # Output: 12\nprint(count_consonants(\"This is a test string\"))  # Output: 16\n```",
+  "error": null,
+  "elapsed_seconds": 3.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

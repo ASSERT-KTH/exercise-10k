@@ -1,0 +1,9 @@
+{
+  "id": 6563,
+  "title": "Updating Dictionary Values",
+  "prompt": "Create a dictionary and update the value for a given key\nSample Input: {'name': 'Bob', 'age': 25} and key 'age' with new value 35\nSample Output: {'name': 'Bob', 'age': 35}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that takes a dictionary and a key as input, updates the value for that key with a new value, and returns the updated dictionary:\n```python\ndef update_dict_value(dictionary, key, new_value):\n    \"\"\"\n    Updates the value for a given key in a dictionary.\n\n    Parameters:\n    dictionary (dict): The dictionary to update.\n    key (str): The key to update.\n    new_value (any): The new value to assign to the key.\n\n    Returns:\n    dict: The updated dictionary.\n    \"\"\"\n    # Check if the key exists in the dictionary\n    if key in dictionary:\n        # Update the value for the key\n        dictionary[key] = new_value\n        return dictionary\n    else:\n        # If the key does not exist, raise a KeyError\n        raise KeyError(f\"The key '{key}' does not exist in the dictionary.\")\n```\nHere's an example of how to use this function:\n```python\nupdated_dict = update_dict_value({'name': 'Bob', 'age': 25}, 'age', 35)\nprint(updated_dict)  # Output: {'name': 'Bob', 'age': 35}\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

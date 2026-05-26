@@ -1,0 +1,9 @@
+{
+  "id": 5719,
+  "title": " прост Calculator",
+  "prompt": "Create a прост calculator that takes a mathematical expression as input and evaluates it.\nSample Input: 2 + 3 * 4\nSample Output: 14\n",
+  "answer": "Sure, I'd be happy to help you create a simple calculator that evaluates mathematical expressions. Here's a Python solution using the `re` module for regular expressions to handle parentheses and the `ast` module for evaluating the expression tree:\n\n```python\nimport re\nimport ast\n\ndef evaluate_expression(expression):\n    # Remove spaces and parentheses, and replace with single spaces\n    cleaned_expr = re.sub(r'\\s*\\([^\\)]*\\)', ' ', expression).strip()\n\n    # Evaluate the expression tree\n    try:\n        return ast.literal_eval(cleaned_expr)\n    except (SyntaxError, ValueError):\n        return \"Invalid expression\"\n\n# Test the function\nexpression = input(\"Enter a mathematical expression: \")\nresult = evaluate_expression(expression)\nprint(f\"Result: {result}\")\n```\n\nThis script first removes any extra spaces and replaces nested parentheses with single spaces. Then, it uses `ast.literal_eval()` to evaluate the expression tree, which can handle most mathematical operations and parentheses. If the expression is invalid, it returns an error message.\n\nPlease note that this solution does not handle all possible edge cases, such as division by zero or complex numbers. If you need to handle more complex expressions, you might need to use a more sophisticated parser or a library like `sympy`.",
+  "error": null,
+  "elapsed_seconds": 10.75,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

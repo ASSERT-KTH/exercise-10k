@@ -1,0 +1,9 @@
+{
+  "id": 5693,
+  "title": "Array Checker",
+  "prompt": "Create a program that takes an array as input and checks if it's empty or not using conditional statements.\nSample Input: [1, 2, 3]\nSample Output: Not empty\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses the `len()` function to check if the length of the input array is equal to zero, which indicates that the array is empty. If the length is greater than zero, it outputs \"Not empty\".\n\n```python\ndef check_array_emptiness(arr):\n    \"\"\"\n    Check if an array is empty or not using conditional statements.\n\n    :param arr: The input array\n    :return: A string indicating whether the array is empty or not\n    \"\"\"\n    if not isinstance(arr, list):\n        raise TypeError(\"Input should be a list\")\n\n    if len(arr) == 0:\n        return \"Empty\"\n    else:\n        return \"Not empty\"\n\n# Example usage\nsample_input = [1, 2, 3]\nprint(check_array_emptiness(sample_input))  # Output: Not empty\n\nempty_input = []\nprint(check_array_emptiness(empty_input))  # Output: Empty\n```\n\nThis program also includes a type check to ensure the input is a list, which raises a `TypeError` if it's not.",
+  "error": null,
+  "elapsed_seconds": 2.77,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

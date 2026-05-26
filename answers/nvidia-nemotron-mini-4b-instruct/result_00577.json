@@ -1,0 +1,9 @@
+{
+  "id": 577,
+  "title": "String Intersection",
+  "prompt": "Write a function that finds the common characters between two given strings.\nSample Input: ['hello', 'world']\nSample Output: ['l', 'o']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the common characters between two given strings:\n\n```python\ndef common_chars(str1, str2):\n    \"\"\"\n    Find the common characters between two given strings.\n\n    :param str1: The first string.\n    :param str2: The second string.\n    :return: A list of common characters.\n    \"\"\"\n    # Convert both strings to lowercase to ensure case-insensitive comparison\n    str1 = str1.lower()\n    str2 = str2.lower()\n\n    # Find the intersection of the two strings using set intersection\n    common_chars = set(str1).intersection(str2)\n\n    # Convert the set back to a list and sort it for consistent output\n    common_chars = sorted(list(common_chars))\n\n    return common_chars\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(common_chars('hello', 'world'))  # Output: ['l', 'o']\n```\n\nThis function first converts both input strings to lowercase to ensure case-insensitive comparison. Then, it finds the intersection of the two strings using the `set.intersection()` method, which returns a new set containing only elements that are present in both sets. Finally, it converts the resulting set back to a list and sorts it for consistent output.",
+  "error": null,
+  "elapsed_seconds": 4.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

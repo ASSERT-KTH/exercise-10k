@@ -1,0 +1,9 @@
+{
+  "id": 5183,
+  "title": "Grade Calculator",
+  "prompt": "Write a program that asks the user for their score on a test and calculates their grade based on the following scale: A (90-100), B (80-89), C (70-79), D (60-69), F (below 60).\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_grade():\n    \"\"\"\n    Asks the user for their score on a test and calculates their grade based on the given scale.\n    \"\"\"\n    # Get user input for score\n    score = float(input(\"Enter your test score: \"))\n\n    # Validate the score\n    if score < 0 or score > 100:\n        print(\"Score must be between 0 and 100. Please try again.\")\n        return\n\n    # Calculate and print the grade\n    if score >= 90:\n        grade = \"A\"\n    elif score >= 80:\n        grade = \"B\"\n    elif score >= 70:\n        grade = \"C\"\n    elif score >= 60:\n        grade = \"D\"\n    else:\n        grade = \"F\"\n\n    print(f\"Your grade is {grade}.\")\n\n# Call the function\ncalculate_grade()\n```\nThis program defines a function `calculate_grade()` that prompts the user for their score, validates it to ensure it's between 0 and 100, and then calculates and prints their grade based on the given scale. The function is then called at the end of the script.",
+  "error": null,
+  "elapsed_seconds": 3.1,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

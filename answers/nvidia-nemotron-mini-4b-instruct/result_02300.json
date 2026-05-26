@@ -1,0 +1,9 @@
+{
+  "id": 2300,
+  "title": "Timer",
+  "prompt": "Create a program that acts as a timer, allowing the user to set a time in seconds, minutes, or hours, and then counts down to zero.\nSample Input: 10 seconds\nSample Output: Time's up!\n",
+  "answer": "Sure, I'd be happy to help you create a timer program. Here's a Python solution that meets your requirements. This program uses the `time` module to count down and display the time remaining.\n\n```python\nimport time\n\ndef set_timer():\n    \"\"\"\n    Allows the user to set a time in seconds, minutes, or hours, and then counts down to zero.\n    \"\"\"\n\n    # Get user input for time format and duration\n    time_format = input(\"Enter the time format (s/m/h): \").strip().lower()\n    duration = int(input(\"Enter the duration in seconds: \"))\n\n    # Validate time format\n    if time_format not in ['s', 'm', 'h']:\n        print(\"Invalid time format. Please enter 's' for seconds, 'm' for minutes, or 'h' for hours.\")\n        return\n\n    # Convert duration to seconds\n    seconds = duration\n    if time_format == 'm':\n        seconds = duration * 60\n    elif time_format == 'h':\n        seconds = duration * 3600\n\n    # Start counting down\n    while seconds > 0:\n        minutes, seconds = divmod(seconds, 60)\n        hours, minutes = divmod(minutes, 60)\n\n        print(f\"{hours:02d}:{minutes:02d}:{seconds:02d}\")\n        time.sleep(1)\n\n    print(\"Time's up!\")\n\n# Call the function\nset_timer()\n```\n\nThis program will prompt the user to enter the time format (s/m/h) and the duration in seconds. It will then convert the duration to seconds based on the specified format and start counting down. When the timer reaches zero, it will display \"Time's up!\"",
+  "error": null,
+  "elapsed_seconds": 10.01,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

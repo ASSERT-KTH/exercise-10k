@@ -1,0 +1,9 @@
+{
+  "id": 8340,
+  "title": "Looping Through Numbers",
+  "prompt": "Write a program that uses a loop to print out the numbers from 1 to 10, but only if the number is an even number. After printing the even numbers, the program should print out the sum of all the even numbers.\nSample Input: None\nSample Output: 2\n4\n6\n8\n10\nThe sum of the even numbers is: 30\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\n# Loop to print even numbers\nfor i in range(1, 11):\n    if i % 2 == 0:\n        print(i)\n\n# Calculate and print the sum of even numbers\nsum_of_evens = sum(num for num in range(1, 11) if num % 2 == 0)\nprint(f\"The sum of the even numbers is: {sum_of_evens}\")\n```\n\nThis program uses a `for` loop to iterate from 1 to 10 (inclusive), checking each number `i` modulo 2 (`i % 2`). If the remainder is 0 (i.e., the number is even), it prints the number and adds it to a running sum. After printing all even numbers, it calculates and prints the sum of all even numbers using a generator expression and the built-in `sum()` function.",
+  "error": null,
+  "elapsed_seconds": 2.2,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

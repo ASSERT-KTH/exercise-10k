@@ -1,0 +1,9 @@
+{
+  "id": 4667,
+  "title": "String Compression",
+  "prompt": "Write a program that takes a string as input and compresses it by replacing repeated characters with a single character and a count.\nSample Input: aaaabbbcc\nSample Output: a4b3c2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a string as input and compresses it as described:\n```python\ndef compress_string(s):\n    \"\"\"\n    Compresses a string by replacing repeated characters with a single character and a count.\n\n    :param s: The input string\n    :return: The compressed string\n    \"\"\"\n    compressed = \"\"\n    i = 0\n    while i < len(s) - 1:\n        count = 1\n        while i + 1 < len(s) and s[i] == s[i + 1]:\n            count += 1\n            i += 1\n        compressed += s[i] + str(count)\n        i += 1\n    return compressed\n\n# Example usage:\ninput_string = \"aaaabbbcc\"\noutput_string = compress_string(input_string)\nprint(output_string)  # Output: a4b3c2\n```\nThis program works by iterating over the input string and counting the number of consecutive identical characters. When it encounters a non-identical character, it appends the current character and the count to the compressed string. The `while` loop continues until it encounters a non-identical character or the end of the string.",
+  "error": null,
+  "elapsed_seconds": 3.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

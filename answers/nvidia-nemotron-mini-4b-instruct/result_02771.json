@@ -1,0 +1,9 @@
+{
+  "id": 2771,
+  "title": "Phone Number Formatter",
+  "prompt": "Write a program that takes a phone number as input and formats it according to a specific pattern (e.g. (123) 456-7890).\nSample Input: 1234567890\nSample Output: (123) 456-7890\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a phone number as input and formats it according to the specified pattern:\n```python\ndef format_phone_number(phone_number):\n    \"\"\"\n    Formats a phone number according to the given pattern.\n\n    :param phone_number: str, the phone number to format\n    :return: str, the formatted phone number in the specified pattern\n    \"\"\"\n    # Check if the input is a valid phone number\n    if not phone_number or not phone_number.isdigit():\n        raise ValueError(\"Input must be a valid phone number (e.g. 1234567890)\")\n\n    # Extract the area code, prefix, and local number\n    area_code = phone_number[:3]\n    prefix = phone_number[3:6]\n    local_number = phone_number[6:]\n\n    # Format the area code, prefix, and local number according to the pattern\n    formatted_number = f\"({area_code}) {prefix}-{local_number}\"\n\n    return formatted_number\n\n# Get user input\nuser_input = input(\"Enter a phone number: \")\n\n# Format the phone number and print the result\nformatted_number = format_phone_number(user_input)\nprint(formatted_number)\n```\nThis program defines a function `format_phone_number` that takes a phone number as input and formats it according to the specified pattern. The function first checks if the input is a valid phone number (i.e., a string of digits). If it is, the function extracts the area code, prefix, and local number, formats them according to the pattern, and returns the formatted number. The program then gets user input, calls the function with the input, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 5.42,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

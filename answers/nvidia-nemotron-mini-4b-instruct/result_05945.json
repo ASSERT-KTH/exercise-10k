@@ -1,0 +1,9 @@
+{
+  "id": 5945,
+  "title": "To-Do List",
+  "prompt": "Create a program that allows the user to add and remove items from a to-do list. The program should store the list in memory and print it out after each action.\nSample Input: add buy milk\nSample Output: To-do list: ['buy milk']\n",
+  "answer": "Here's a Python program that meets your requirements. This program uses a list to store the to-do items and appends or removes items based on user input.\n\n```python\n# Initialize an empty to-do list\nto_do_list = []\n\ndef add_item():\n    \"\"\"Add an item to the to-do list.\"\"\"\n    global to_do_list\n    item = input(\"Enter an item to add to the to-do list: \")\n    to_do_list.append(item)\n    print(f\"To-do list: {to_do_list}\")\n\ndef remove_item():\n    \"\"\"Remove an item from the to-do list.\"\"\"\n    global to_do_list\n    item = input(\"Enter an item to remove from the to-do list: \")\n    if item in to_do_list:\n        to_do_list.remove(item)\n        print(f\"Item '{item}' removed from the to-do list: {to_do_list}\")\n    else:\n        print(f\"Item '{item}' not found in the to-do list.\")\n\ndef print_to_do_list():\n    \"\"\"Print the to-do list.\"\"\"\n    print(f\"To-do list: {to_do_list}\")\n\n# Main loop\nwhile True:\n    action = input(\"Enter 'add' to add an item, 'remove' to remove an item, or 'print' to print the to-do list: \").lower()\n\n    if action == 'add':\n        add_item()\n    elif action == 'remove':\n        remove_item()\n    elif action == 'print':\n        print_to_do_list()\n    else:\n        print(\"Invalid action. Please try again.\")\n    continue\n```\n\nThis program will keep running until the user enters 'quit' or any other invalid action.",
+  "error": null,
+  "elapsed_seconds": 4.25,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

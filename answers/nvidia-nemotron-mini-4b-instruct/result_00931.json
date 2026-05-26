@@ -1,0 +1,9 @@
+{
+  "id": 931,
+  "title": "Number Guessing Game",
+  "prompt": "Write a program that plays a number guessing game using if/else statement\nSample Input: 50\nSample Output: The number is higher than 50\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that plays a number guessing game using an `if` statement. This program will ask the user to guess a number between 1 and 100, and then provide feedback based on whether their guess is too high, too low, or correct.\n\n```python\nimport random\n\ndef play_guessing_game():\n    \"\"\"Plays a number guessing game using an if statement.\"\"\"\n\n    # Generate a random number between 1 and 100\n    target_number = random.randint(1, 100)\n\n    # Ask the user to guess a number\n    user_guess = int(input(\"Guess a number between 1 and 100: \"))\n\n    # Check if the user's guess is correct\n    if user_guess == target_number:\n        print(f\"The number is {target_number}! You guessed it correctly.\")\n    # Check if the user's guess is too high\n    elif user_guess > target_number:\n        print(f\"The number is lower than {user_guess}. Try again!\")\n    # Check if the user's guess is too low\n    else:\n        print(f\"The number is higher than {user_guess}. Try again!\")\n\n# Play the game\nplay_guessing_game()\n```\n\nThis program generates a random number between 1 and 100, and then asks the user to guess a number. Based on the user's guess, it provides feedback using an `if` statement. You can modify the range of the random number or add more feedback options as needed.",
+  "error": null,
+  "elapsed_seconds": 3.78,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

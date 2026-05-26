@@ -1,0 +1,9 @@
+{
+  "id": 7693,
+  "title": "Function to Check if String Contains Digit",
+  "prompt": "Write a function that checks if a string contains a digit.\nSample Input: s = 'hello1'\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a given string contains at least one digit:\n\n```python\ndef contains_digit(s: str) -> bool:\n    \"\"\"\n    Check if a string contains at least one digit.\n\n    :param s: The string to check.\n    :return: True if the string contains a digit, False otherwise.\n    \"\"\"\n    return any(c.isdigit() for c in s)\n```\n\nThis function uses a generator expression (`any(c.isdigit() for c in s)`) to check if any character in the string is a digit. The `isdigit()` method checks if a character is a decimal digit (i.e., a digit from 0 to 9). The `any()` function returns True if any of the elements in the iterable (in this case, the characters in the string) is true, and False otherwise.\n\nHere are some examples of how you can use this function:\n\n```python\n>>> contains_digit('hello1')\nTrue\n>>> contains_digit('world')\nFalse\n>>> contains_digit('123abc')\nTrue\n>>> contains_digit('')\nFalse\n```",
+  "error": null,
+  "elapsed_seconds": 2.74,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

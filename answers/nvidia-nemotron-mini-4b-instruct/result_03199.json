@@ -1,0 +1,9 @@
+{
+  "id": 3199,
+  "title": "Age Checker",
+  "prompt": "Create a program that takes a person's age as input and uses if/else statements to determine their age group (e.g., child, adult, senior).\nSample Input: 25\nSample Output: Adult\n",
+  "answer": "Sure, I'd be happy to help you create a program that determines a person's age group based on their age. Here's a Python solution using if/else statements:\n\n```python\ndef age_group(age):\n    \"\"\"\n    Determines the age group of a person based on their age.\n\n    :param age: int - The person's age\n    :return: str - The age group (e.g., 'child', 'adult', 'senior')\n    \"\"\"\n\n    # Define age groups\n    age_groups = {\n        0: 'child',\n        18: 'adult',\n        65: 'senior'\n    }\n\n    # Check if the age is within an age group\n    for start, end in age_groups.items():\n        if age >= start and age < end:\n            return age_groups[start]\n\n    # If the age is not within any age group, return 'unknown'\n    return 'unknown'\n\n\n# Get user input\nage = int(input(\"Enter your age: \"))\n\n# Determine age group\nage_group_name = age_group(age)\n\n# Print the result\nprint(f\"You are a {age_group_name}.\")\n```\n\nThis program defines age groups based on common milestones (child, adult, and senior) and checks if the user's age falls within each range. If the age is not within any age group, it returns 'unknown'. You can adjust the age ranges as needed to fit your specific use case.",
+  "error": null,
+  "elapsed_seconds": 3.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

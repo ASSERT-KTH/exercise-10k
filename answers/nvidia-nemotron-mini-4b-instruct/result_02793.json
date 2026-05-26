@@ -1,0 +1,9 @@
+{
+  "id": 2793,
+  "title": "List Filter",
+  "prompt": "Create a function that takes a list and a condition as input, and returns a new list that includes only the elements that satisfy the condition.\nSample Input: [1, 2, 3, 4, 5], lambda x: x % 2 == 0\nSample Output: [2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef filter_list(lst, condition):\n    \"\"\"\n    Filters a list based on a given condition.\n\n    Parameters:\n    lst (list): The list to filter.\n    condition (callable): A function that takes an element as input and returns a boolean.\n                          The function should return True if the element should be included in the result,\n                          and False otherwise.\n\n    Returns:\n    list: A new list containing only the elements from `lst` that satisfy the condition.\n    \"\"\"\n    return [element for element in lst if condition(element)]\n```\nHere's an example of how to use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\neven_numbers = filter_list(numbers, lambda x: x % 2 == 0)\nprint(even_numbers)  # Output: [2, 4]\n```\nThis function uses a list comprehension to create a new list that only includes the elements from the input list `lst` that satisfy the condition specified by the input `condition` function. The `if condition(element)` part of the list comprehension checks if the element satisfies the condition, and only includes it in the new list if it does.",
+  "error": null,
+  "elapsed_seconds": 4.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

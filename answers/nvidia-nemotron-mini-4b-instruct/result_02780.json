@@ -1,0 +1,9 @@
+{
+  "id": 2780,
+  "title": "Storyteller",
+  "prompt": "Write a program that takes a story with placeholders as input and asks the user to fill in the placeholders.\nSample Input: Once upon a time, there was a __ADJECTIVE__ __NOUN__.\nSample Output: Once upon a time, there was a happy dragon.\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef fill_placeholders(story):\n    \"\"\"\n    Asks the user to fill in the placeholders in the given story.\n\n    :param story: str - The story with placeholders\n    :return: str - The story with filled-in placeholders\n    \"\"\"\n\n    # Split the story into placeholders and content\n    placeholders, content = story.split('__', 1)\n\n    # Ask the user to fill in the placeholders\n    placeholder_values = {}\n    for placeholder in placeholders.split('|'):\n        placeholder_name, placeholder_type = placeholder.strip().split(' ')\n        placeholder_values[placeholder_name] = input(f\"Enter a {placeholder_type} for {placeholder_name}: \").strip()\n\n    # Replace placeholders with user input\n    filled_story = content.replace('__ADJECTIVE__', placeholder_values['__ADJECTIVE__'])\n                           .replace('__NOUN__', placeholder_values['__NOUN__'])\n\n    return filled_story\n\n\n# Example usage\nstory = \"Once upon a time, there was a __ADJECTIVE__ __NOUN__.\"\nprint(fill_placeholders(story))\n```\n\nThis program defines a function `fill_placeholders` that takes a story with placeholders as input and asks the user to fill in the placeholders. The function splits the story into placeholders and content, then asks the user to provide input for each placeholder. Finally, it replaces the placeholders with the user input and returns the filled-in story.",
+  "error": null,
+  "elapsed_seconds": 3.96,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

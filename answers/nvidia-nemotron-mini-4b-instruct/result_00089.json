@@ -1,0 +1,9 @@
+{
+  "id": 89,
+  "title": "Most Frequent Element",
+  "prompt": "Given a list of integers, find the most frequent element\nSample Input: [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution using the built-in `collections.Counter` class to count the occurrences of each element in the list and then finding the most frequent element:\n\n```python\nfrom collections import Counter\n\ndef most_frequent(lst):\n    \"\"\"\n    Given a list of integers, find the most frequent element.\n\n    :param lst: List[int] - The input list of integers\n    :return: int - The most frequent element\n    \"\"\"\n    # Count the occurrences of each element in the list\n    count = Counter(lst)\n\n    # Find the element with the highest count\n    max_count = max(count.values())\n    most_frequent_element = next((element for element, count in count.items() if count == max_count), None)\n\n    return most_frequent_element\n```\n\nYou can use this function as follows:\n\n```python\ninput_list = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]\nprint(most_frequent(input_list))  # Output: 4\n```\n\nThis solution has a time complexity of O(n), where n is the length of the input list, since it uses the `Counter` class, which has an average time complexity of O(n) for counting elements.",
+  "error": null,
+  "elapsed_seconds": 4.71,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

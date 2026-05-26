@@ -1,0 +1,9 @@
+{
+  "id": 4675,
+  "title": "String Intersection",
+  "prompt": "Write a program that takes two strings as input and returns the common characters between the two strings.\nSample Input: ['hello', 'world']\nSample Output: ['l', 'o']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes two strings as input and returns the common characters between them:\n```python\ndef common_chars(str1, str2):\n    # Convert both strings to lowercase to ensure case-insensitive comparison\n    str1 = str1.lower()\n    str2 = str2.lower()\n\n    # Create a set from each string to remove duplicates and perform fast lookup\n    set1 = set(str1)\n    set2 = set(str2)\n\n    # Find the intersection of the two sets (common characters)\n    common = set1 & set2\n\n    # Convert the result back to a list and return it\n    return list(common)\n```\nHere's an example of how you can use this function:\n```python\nprint(common_chars('hello', 'world'))  # Output: ['l', 'o']\n```\nThis program first converts both input strings to lowercase to ensure case-insensitive comparison. Then, it creates sets from each string, which allows for fast lookup of characters and removes any duplicate characters. Finally, it finds the intersection of the two sets (i.e., the common characters) and converts the result back to a list before returning it.",
+  "error": null,
+  "elapsed_seconds": 2.87,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

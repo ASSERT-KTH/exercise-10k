@@ -1,0 +1,9 @@
+{
+  "id": 8390,
+  "title": "Permutation Calculation",
+  "prompt": "Write a program that calculates the permutation of a given number of objects taken a given number at a time.\nSample Input: 5 3\nSample Output: 60\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the permutation of a given number of objects taken a given number at a time using the formula: `nPr = n! / (n-r)!`, where `n` is the total number of objects and `r` is the number of objects taken at a time.\n\n```python\ndef permutation(n, r):\n    \"\"\"\n    Calculates the permutation of a given number of objects taken a given number at a time.\n\n    :param n: The total number of objects.\n    :param r: The number of objects taken at a time.\n    :return: The number of permutations.\n    \"\"\"\n    if n < r or n < 0 or r < 0:\n        raise ValueError(\"Both n and r must be non-negative integers.\")\n\n    return math.factorial(n) // (math.factorial(n - r))\n\n# Sample input: 5 3\nn, r = 5, 3\nprint(f\"{n} taken {r} at a time: {permutation(n, r)}\")\n```\n\nWhen you run this program with the sample input `5 3`, it will output:\n\n```\n5 taken 3 at a time: 60\n```\n\nThis result is calculated using the formula: `5P3 = 5! / (5-3)! = 120 / 2 = 60`.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

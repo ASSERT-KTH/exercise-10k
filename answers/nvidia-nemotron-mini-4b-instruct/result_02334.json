@@ -1,0 +1,9 @@
+{
+  "id": 2334,
+  "title": "Get User Input and Print with Validation and Error Handling",
+  "prompt": "Write a program to take a user's name and age as input and print a greeting message with their name and age, but handle any errors that may occur during input and validation.\nSample Input: John\n25\nSample Output: Hello, John! You are 25 years old.\n",
+  "answer": "Here's a Python program that meets your requirements. It handles user input validation and error handling to ensure the program runs smoothly.\n\n```python\ndef get_positive_integer(prompt):\n    \"\"\"Get a positive integer from user input.\"\"\"\n    while True:\n        try:\n            age = int(input(prompt))\n            if age > 0:\n                return age\n            else:\n                print(\"Please enter a positive integer.\")\n        except ValueError:\n            print(\"That's not a valid integer. Please try again.\")\n\ndef main():\n    name = input(\"Please enter your name: \")\n    age = get_positive_integer(\"Please enter your age: \")\n\n    greeting = f\"Hello, {name}! You are {age} years old.\"\n    print(greeting)\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program defines a helper function `get_positive_integer()` that prompts the user for a positive integer and validates the input until a valid integer is entered. The `main()` function gets the user's name and age, calls the helper function to validate the age, and then prints the greeting message based on the input.",
+  "error": null,
+  "elapsed_seconds": 2.66,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

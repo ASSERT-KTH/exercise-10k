@@ -1,0 +1,9 @@
+{
+  "id": 8861,
+  "title": "Function to Check if a Number is a Harshad Number",
+  "prompt": "Create a function to check if a given number is a Harshad number or not\nSample Input: 18\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! A Harshad number, also known as a Niven number, is an integer that is divisible by the sum of its own digits. Here's a Python function that checks if a given number is a Harshad number:\n\n```python\ndef is_harshad(n: int) -> bool:\n    \"\"\"\n    Check if a given number is a Harshad number.\n\n    :param n: The number to check.\n    :return: True if the number is a Harshad number, False otherwise.\n    \"\"\"\n    # Calculate the sum of the digits of n\n    digit_sum = sum(int(digit) for digit in str(n))\n\n    # Return True if n is divisible by its digit sum\n    return n % digit_sum == 0\n```\n\nYou can use this function to check if a number is a Harshad number, like this:\n\n```python\nprint(is_harshad(18))  # Output: True\nprint(is_harshad(21))  # Output: False\n```\n\nThis function first converts the given number to a string to get access to its digits. Then, it calculates the sum of the digits using a generator expression and the built-in `sum()` function. Finally, it checks if the number is divisible by its digit sum using the modulus operator (`%`).",
+  "error": null,
+  "elapsed_seconds": 3.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

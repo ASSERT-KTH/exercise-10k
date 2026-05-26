@@ -1,0 +1,9 @@
+{
+  "id": 4929,
+  "title": "Percentage Increase Calculator",
+  "prompt": "Create a program that calculates the percentage increase given the original value and new value. The program should use the formula percentage_increase = ((new - original) / original) * 100 to calculate the percentage increase.\nSample Input: 100 120\nSample Output: 20.0\n",
+  "answer": "Sure, I'd be happy to help you create a program that calculates the percentage increase given the original value and new value. Here's a Python program that meets your requirements:\n\n```python\ndef calculate_percentage_increase(original, new):\n    \"\"\"\n    Calculates the percentage increase given the original value and new value.\n\n    :param original: The original value.\n    :param new: The new value.\n    :return: The percentage increase as a float.\n    \"\"\"\n\n    # Check if the inputs are numbers\n    if not isinstance(original, (int, float)) or not isinstance(new, (int, float)):\n        raise ValueError(\"Both original and new values must be numbers.\")\n\n    # Calculate the percentage increase using the formula\n    percentage_increase = ((new - original) / original) * 100\n\n    return percentage_increase\n\n\n# Get user input\noriginal_value = float(input(\"Enter the original value: \"))\nnew_value = float(input(\"Enter the new value: \"))\n\n# Calculate and print the percentage increase\npercentage_increase = calculate_percentage_increase(original_value, new_value)\nprint(f\"The percentage increase is {percentage_increase:.2f}.\")\n```\n\nThis program defines a function `calculate_percentage_increase` that checks if the inputs are numbers, calculates the percentage increase using the given formula, and returns the result as a float. The program then prompts the user to enter the original and new values, calls the function with those values, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.45,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

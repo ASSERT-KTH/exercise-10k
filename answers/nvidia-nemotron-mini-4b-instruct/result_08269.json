@@ -1,0 +1,9 @@
+{
+  "id": 8269,
+  "title": "Date Validator",
+  "prompt": "Develop a program that validates a date using if/else statements.\nSample Input: 2022-02-28\nSample Output: Valid\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that validates a date using if/else statements. This program checks if the input date is valid for a given month and year, and returns a message indicating whether the date is valid or not. In this example, I'll assume the input is in the format 'YYYY-MM-DD'.\n\n```python\ndef validate_date(date_str):\n    \"\"\"\n    Validates a date using if/else statements.\n\n    :param date_str: The date string in the format 'YYYY-MM-DD'\n    :return: A string indicating whether the date is valid or not\n    \"\"\"\n\n    # Split the date string into year, month, and day components\n    year, month, day = map(int, date_str.split('-'))\n\n    # Check if the month is within the valid range for the given year\n    if month < 1 or month > 12:\n        return \"Invalid month. Please enter a month between 1 and 12.\"\n\n    # Check if the day is within the valid range for the given month and year\n    if day < 1 or (month == 2 and day > 29) or (month in (4, 6, 9, 11) and day > 30) or (month == 1 or month == 3 or month == 5 or month == 7 or month == 8 or month == 10 or month == 12 and day > 31):\n        return \"Invalid day. Please enter a day between 1 and the maximum for the given month and year.\"\n\n    # If all checks pass, the date is valid\n    return \"Valid\"\n\n\n# Example usage\ndate_str = \"2022-02-28\"\nprint(validate_date(date_str))  # Output: Valid\n```\n\nThis program checks for valid month and day ranges based on the Gregorian calendar. You can modify this code to suit your specific requirements, such as checking for leap years or other calendars.",
+  "error": null,
+  "elapsed_seconds": 4.64,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

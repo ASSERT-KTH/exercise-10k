@@ -1,0 +1,9 @@
+{
+  "id": 1574,
+  "title": "Lambda Function",
+  "prompt": "Create a function that uses a lambda function to filter a list of numbers and return the numbers greater than a given threshold.\nSample Input: [1, 2, 3, 4, 5], 3\nSample Output: [4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses a lambda function to filter the list of numbers and returns a new list containing only the numbers greater than the given threshold.\n\n```python\ndef filter_greater_than(numbers, threshold):\n    \"\"\"\n    Filters a list of numbers and returns a new list containing only the numbers greater than a given threshold.\n\n    Parameters:\n    numbers (list): A list of numbers.\n    threshold (int): The threshold value to compare against.\n\n    Returns:\n    list: A new list containing only the numbers from the input list that are greater than the threshold.\n    \"\"\"\n    # Use a lambda function to filter the numbers based on the threshold\n    filter_func = lambda x: x > threshold\n\n    # Apply the filter function to the input list and return the result\n    return [num for num in numbers if filter_func(num)]\n```\n\nHere's an example of how to use this function:\n\n```python\nnumbers = [1, 2, 3, 4, 5]\nthreshold = 3\n\nfiltered_numbers = filter_greater_than(numbers, threshold)\nprint(filtered_numbers)  # Output: [4, 5]\n```",
+  "error": null,
+  "elapsed_seconds": 4.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

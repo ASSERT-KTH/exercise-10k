@@ -1,0 +1,9 @@
+{
+  "id": 9910,
+  "title": "Queue Simulation",
+  "prompt": "Write a program that simulates a queue of people waiting in line.\nSample Input: add John, add Mary, remove\nSample Output: Queue: [John, Mary] -> [Mary]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that simulates a queue of people waiting in line. The program uses a list to store the queue and keeps track of the current length using a variable. The `add` and `remove` commands are implemented as methods that add or remove the first person in the queue, respectively.\n\n```python\nclass Queue:\n    def __init__(self):\n        self.queue = []\n        self.length = 0\n\n    def add(self, name):\n        \"\"\"Add a person to the end of the queue.\"\"\"\n        self.queue.append(name)\n        self.length += 1\n\n    def remove(self):\n        \"\"\"Remove and return the first person in the queue.\"\"\"\n        if self.length > 0:\n            person = self.queue[0]\n            del self.queue[0]\n            self.length -= 1\n            return person\n        else:\n            return \"The queue is empty.\"\n\n    def __str__(self):\n        \"\"\"Return a string representation of the queue.\"\"\"\n        return f\"Queue: [{', '.join(self.queue)}]\"\n\n\n# Example usage:\nqueue = Queue()\n\n# Add some people to the queue\nqueue.add(\"John\")\nqueue.add(\"Mary\")\nqueue.add(\"Bob\")\n\n# Simulate some commands\nprint(queue)  # Queue: [John, Mary, Bob]\nprint(queue.remove())  # Queue: [John, Mary] -> [Mary]\nprint(queue)  # Queue: [John]\n```\n\nThis program should meet your requirements. You can modify the `add` and `remove` methods to suit your specific needs.",
+  "error": null,
+  "elapsed_seconds": 3.91,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

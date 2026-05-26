@@ -1,0 +1,9 @@
+{
+  "id": 4054,
+  "title": "Dictionary Filter",
+  "prompt": "Write a function that takes a dictionary and a filter condition as input and returns a new dictionary containing only the key-value pairs that meet the filter condition.\nSample Input: { 'a': 1, 'b': 2, 'c': 3 }, lambda x: x > 1\nSample Output: { 'b': 2, 'c': 3 }\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef filter_dict(d, filter_func):\n    \"\"\"\n    Filters a dictionary based on a given filter condition.\n\n    Parameters:\n    d (dict): The input dictionary.\n    filter_func (callable): A function that takes a single argument (the value of a key-value pair) and returns a boolean.\n                             The function should be applied to each value in the dictionary to determine whether it should be included in the output.\n\n    Returns:\n    dict: A new dictionary containing only the key-value pairs that meet the filter condition.\n    \"\"\"\n    return {k: v for k, v in d.items() if filter_func(v)}\n```\nHere's an example of how to use this function:\n```python\nd = {'a': 1, 'b': 2, 'c': 3}\nfilter_func = lambda x: x > 1\nfiltered_dict = filter_dict(d, filter_func)\nprint(filtered_dict)  # Output: {'b': 2, 'c': 3}\n```\nThis function uses a dictionary comprehension to create a new dictionary that only includes key-value pairs where the value satisfies the filter condition. The `items()` method is used to iterate over the key-value pairs in the input dictionary, and the `if` clause checks whether the value satisfies the filter condition using the `filter_func` argument.",
+  "error": null,
+  "elapsed_seconds": 3.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

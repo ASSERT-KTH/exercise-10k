@@ -1,0 +1,9 @@
+{
+  "id": 7707,
+  "title": "Character Frequency",
+  "prompt": "Count the frequency of each character in a given string.\nSample Input: hello\nSample Output: {h: 1, e: 1, l: 2, o: 1}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution for counting the frequency of each character in a given string:\n\n```python\ndef count_char_freq(s):\n    # Create an empty dictionary to store the character frequencies\n    char_freq = {}\n\n    # Iterate over each character in the string\n    for char in s:\n        # If the character is already a key in the dictionary, increment its value\n        if char in char_freq:\n            char_freq[char] += 1\n        # Otherwise, add the character as a new key with a value of 1\n        else:\n            char_freq[char] = 1\n\n    return char_freq\n\n# Test the function with the sample input\nprint(count_char_freq(\"hello\"))  # Output: {'h': 1, 'e': 1, 'l': 2, 'o': 1}\n```\n\nThis function iterates over each character in the input string and checks if it's already a key in the dictionary. If it is, the value associated with that key is incremented by 1. If it's not, the character is added as a new key with a value of 1. Finally, the function returns the dictionary containing the character frequencies.",
+  "error": null,
+  "elapsed_seconds": 2.95,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

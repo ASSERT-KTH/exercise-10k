@@ -1,0 +1,9 @@
+{
+  "id": 3050,
+  "title": "Person Class",
+  "prompt": "Create a class called Person with attributes for name, age, and occupation. Then, create a function to calculate the person's status based on their age.\nSample Input: John, 25, Developer\nSample Output: Adult\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python class called `Person` with the specified attributes and a function to calculate the person's status based on their age.\n\n```python\nclass Person:\n    \"\"\"\n    A class representing a person with attributes for name, age, and occupation.\n    \"\"\"\n\n    def __init__(self, name, age, occupation):\n        \"\"\"\n        Initialize a new Person object with the given name, age, and occupation.\n\n        :param name: str - The person's name.\n        :param age: int - The person's age.\n        :param occupation: str - The person's occupation.\n        \"\"\"\n        self.name = name\n        self.age = age\n        self.occupation = occupation\n\n    def calculate_status(self):\n        \"\"\"\n        Calculate the person's status based on their age.\n\n        :return: str - The person's status (e.g., 'Child', 'Adult', 'Senior').\n        \"\"\"\n        if self.age < 18:\n            return f\"Child ({self.age})\"\n        elif self.age < 65:\n            return \"Adult\"\n        else:\n            return \"Senior\"\n\n\n# Example usage:\njohn = Person(\"John\", 25, \"Developer\")\nprint(john.calculate_status())  # Output: Adult\n```\n\nThis code defines a `Person` class with an `__init__` method to initialize the object and a `calculate_status` method to calculate the person's status based on their age. The example usage demonstrates how to create a `Person` object and call the `calculate_status` method.",
+  "error": null,
+  "elapsed_seconds": 20.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

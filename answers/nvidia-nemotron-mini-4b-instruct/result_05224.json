@@ -1,0 +1,9 @@
+{
+  "id": 5224,
+  "title": "Temperature Converter",
+  "prompt": "Write a program that takes a temperature as input and prints the equivalent temperature in Celsius or Fahrenheit, depending on the user's choice.\nSample Input: 32 F\nSample Output: 0 C\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef convert_temperature():\n    \"\"\"\n    Converts a temperature from Fahrenheit to Celsius or vice versa.\n    \"\"\"\n    while True:\n        # Get user input\n        temperature_type = input(\"Enter the type of temperature (F or C): \").upper()\n        if temperature_type not in ['F', 'C']:\n            print(\"Invalid input. Please enter 'F' for Fahrenheit or 'C' for Celsius.\")\n            continue\n\n        # Get user input for temperature\n        temperature_value = float(input(\"Enter the temperature: \"))\n\n        # Convert temperature and print result\n        if temperature_type == 'F':\n            celsius = (temperature_value - 32) * 5/9\n            print(f\"{temperature_value} F is equivalent to {celsius:.1f} C.\")\n        elif temperature_type == 'C':\n            fahrenheit = temperature_value * 9/5 + 32\n            print(f\"{temperature_value} C is equivalent to {fahrenheit:.1f} F.\")\n        else:\n            print(\"Invalid input. Please enter 'F' for Fahrenheit or 'C' for Celsius.\")\n\n# Call the function\nconvert_temperature()\n```\nThis program defines a function `convert_temperature()` that prompts the user for the type of temperature (Fahrenheit or Celsius) and the temperature value, then converts the temperature and prints the result. The function continues to prompt the user for input until they enter a valid temperature type.",
+  "error": null,
+  "elapsed_seconds": 3.71,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6688,
+  "title": "Exponentiation",
+  "prompt": "Create a program that takes two numbers as input and returns the result of raising the first number to the power of the second.\nSample Input: 2 3\nSample Output: 8\n",
+  "answer": "Sure, I'd be happy to help you create a program that performs the specified operation. Here's an example solution in Python:\n\n```python\ndef raise_to_power(base, exponent):\n    \"\"\"\n    Raises the base number to the power of the exponent.\n\n    :param base: The base number to raise to a power.\n    :param exponent: The exponent to raise the base to.\n    :return: The result of raising the base to the power of the exponent.\n    \"\"\"\n\n    # Check if the inputs are valid (positive integers)\n    if not isinstance(base, int) or base < 1:\n        raise ValueError(\"The base must be a positive integer.\")\n\n    if not isinstance(exponent, int) or exponent < 1:\n        raise ValueError(\"The exponent must be a positive integer.\")\n\n    # Raise the base to the power of the exponent\n    result = base ** exponent\n\n    return result\n\n# Get user input\nbase = int(input(\"Enter the base number: \"))\nexponent = int(input(\"Enter the exponent: \"))\n\n# Call the function and print the result\nresult = raise_to_power(base, exponent)\nprint(f\"{base} raised to the power of {exponent} is {result}.\")\n```\n\nThis program defines a function `raise_to_power` that checks if the inputs are valid (positive integers) and then raises the base number to the power of the exponent. The program then gets user input for the base and exponent, calls the function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.78,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

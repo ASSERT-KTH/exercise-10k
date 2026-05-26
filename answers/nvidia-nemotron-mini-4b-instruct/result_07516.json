@@ -1,0 +1,9 @@
+{
+  "id": 7516,
+  "title": "Word Scramble Game",
+  "prompt": "Create a Word Scramble game using variables and string manipulation.\nSample Input: listen\nSample Output: The unscrambled word is silent.\n",
+  "answer": "Sure, I'd be happy to help you create a Word Scramble game using variables and string manipulation in Python. Here's a possible implementation:\n\n```python\nimport random\n\n# Define a list of words to scramble\nwords = [\n    \"listen\",\n    \"silent\",\n    \"silentium\",\n    \"listenable\",\n    \"silentness\",\n    \"listeners\",\n    \"silentnesses\",\n    \"silentnesses's\",\n    \"listenings\",\n    \"silentnesses's's\"\n]\n\n# Function to scramble a word\ndef scramble_word(word):\n    # Shuffle the letters in the word\n    shuffled_letters = \"\".join(random.sample(word, len(word)))\n    return shuffled_letters\n\n# Function to play the game\ndef play_word_scramble():\n    # Choose a random word from the list\n    word = random.choice(words)\n\n    # Scramble the word\n    scrambled_word = scramble_word(word)\n\n    # Print the scrambled word and the unscrambled word\n    print(f\"The scrambled word is {scrambled_word}.\")\n    unscrambled_word = \"\".join(sorted(word))\n    print(f\"The unscrambled word is {unscrambled_word}. It is {word}.\")\n\n# Play the game\nplay_word_scramble()\n```\n\nThis code defines a list of words to scramble, a function to scramble a word using random.sample, and a function to play the game. The game chooses a random word from the list, scrambles it, and then prints the scrambled and unscrambled words.\n\nYou can modify the `words` list to add or remove words, and adjust the `random.sample` line in the `scramble_word` function to change the scrambling algorithm if desired.",
+  "error": null,
+  "elapsed_seconds": 4.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

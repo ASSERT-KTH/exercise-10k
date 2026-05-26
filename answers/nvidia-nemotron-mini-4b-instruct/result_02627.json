@@ -1,0 +1,9 @@
+{
+  "id": 2627,
+  "title": "Movie Ratings",
+  "prompt": "Write a program that takes a movie title and rating as input and generates a review.\nSample Input: Inception 8.5\nSample Output: Inception is a great movie with a rating of 8.5.\n",
+  "answer": "Here's a Python program that meets your requirements. This program uses the `input()` function to get user input for the movie title and rating, and then generates a review based on the input.\n\n```python\ndef generate_review():\n    \"\"\"Generate a review for a given movie title and rating.\"\"\"\n\n    # Get user input for movie title and rating\n    movie_title = input(\"Enter the movie title: \")\n    rating = float(input(\"Enter the movie rating (0-10): \"))\n\n    # Validate input\n    if rating < 0 or rating > 10:\n        print(\"Rating must be between 0 and 10. Please try again.\")\n        generate_review()\n\n    # Generate review\n    review = f\"{movie_title} is a great movie with a rating of {rating:.1f}.\\n\"\n\n    return review\n\n\n# Call the function to generate a review\nreview = generate_review()\nprint(review)\n```\n\nThis program will prompt the user to enter a movie title and rating, validate the input to ensure it's within the valid range, and then generate a review based on the input. The output will be a string containing the movie title, rating, and a brief review.",
+  "error": null,
+  "elapsed_seconds": 3.79,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

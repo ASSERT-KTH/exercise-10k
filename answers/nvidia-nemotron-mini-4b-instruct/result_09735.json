@@ -1,0 +1,9 @@
+{
+  "id": 9735,
+  "title": "Science: Acceleration",
+  "prompt": "Write a program that takes the initial velocity, final velocity, and time as input and returns the acceleration.\nSample Input: 0 10 2\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. It calculates the acceleration using the formula `acceleration = (final velocity - initial velocity) / time`.\n\n```python\ndef calculate_acceleration(initial_velocity, final_velocity, time):\n    \"\"\"\n    Calculates the acceleration given the initial velocity, final velocity, and time.\n\n    :param initial_velocity: The initial velocity (m/s)\n    :param final_velocity: The final velocity (m/s)\n    :param time: The time (s)\n    :return: The acceleration (m/s^2)\n    \"\"\"\n\n    # Check if the inputs are valid\n    if not all(isinstance(value, (int, float)) for value in (initial_velocity, final_velocity, time)):\n        raise ValueError(\"All inputs must be numbers.\")\n\n    if initial_velocity < 0 or final_velocity < 0 or time < 0:\n        raise ValueError(\"All inputs must be non-negative.\")\n\n    # Calculate the acceleration\n    acceleration = (final_velocity - initial_velocity) / time\n\n    return acceleration\n\n\n# Example usage\ninitial_velocity = 0\nfinal_velocity = 10\ntime = 2\n\nacceleration = calculate_acceleration(initial_velocity, final_velocity, time)\nprint(f\"The acceleration is {acceleration} m/s^2.\")\n```\n\nThis program checks if the inputs are valid (non-negative numbers) and raises a `ValueError` if they are not. The function then calculates the acceleration and returns it. The example usage at the end of the program demonstrates how to use the function with sample inputs.",
+  "error": null,
+  "elapsed_seconds": 4.1,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

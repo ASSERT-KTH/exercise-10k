@@ -1,0 +1,9 @@
+{
+  "id": 6300,
+  "title": "Dictionary Zip",
+  "prompt": "Create a dictionary from two lists using the zip() function\nSample Input: ['a', 'b', 'c'], [1, 2, 3]\nSample Output: {'a': 1, 'b': 2, 'c': 3}\n",
+  "answer": "Sure, I'd be happy to help you with that! The `zip()` function in Python is used to collect data into a single iterable (like a list or a tuple) from individual iterables (like lists or tuples). In your case, you can use `zip()` to combine the elements of the two input lists and create a dictionary from them. Here's how you can do it:\n\n```python\ndef create_dict_from_lists(list1, list2):\n    \"\"\"\n    Create a dictionary from two lists using the zip() function.\n\n    :param list1: The first list of keys\n    :param list2: The second list of corresponding values\n    :return: A dictionary with keys from list1 and values from list2\n    \"\"\"\n    return dict(zip(list1, list2))\n\n# Sample input\nlist1 = ['a', 'b', 'c']\nlist2 = [1, 2, 3]\n\n# Call the function and print the result\nresult = create_dict_from_lists(list1, list2)\nprint(result)  # Output: {'a': 1, 'b': 2, 'c': 3}\n```\n\nThis function works by iterating over the zip object it returns, which collects the elements of the two input lists in pairs. For each pair, it creates a new key-value pair in the dictionary and adds it to the result. The resulting dictionary has keys from `list1` and values from `list2`.",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

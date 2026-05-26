@@ -1,0 +1,9 @@
+{
+  "id": 7298,
+  "title": "Product of Numbers Function",
+  "prompt": "Create a function that takes a list of numbers as an argument and returns their product\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 120\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef product_of_numbers(numbers):\n    \"\"\"\n    Calculates the product of all numbers in the given list.\n\n    :param numbers: List of numbers\n    :return: Product of all numbers in the list\n    \"\"\"\n    if not isinstance(numbers, list):\n        raise TypeError(\"The input should be a list\")\n\n    product = 1\n    for num in numbers:\n        if not isinstance(num, (int, float)):\n            raise TypeError(\"All elements in the list should be numbers\")\n        product *= num\n\n    return product\n```\nThis function checks if the input is a list and if all its elements are numbers. If the input is valid, it calculates the product of all numbers in the list and returns the result. Here's an example of how to use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\nprint(product_of_numbers(numbers))  # Output: 120\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.77,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

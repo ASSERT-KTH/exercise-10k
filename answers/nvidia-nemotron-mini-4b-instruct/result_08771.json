@@ -1,0 +1,9 @@
+{
+  "id": 8771,
+  "title": "First Non-Repeated Character",
+  "prompt": "Write a function to find the first non-repeated character in a given string.\nSample Input: hello world\nSample Output: h\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the first non-repeated character in a given string. This function uses a dictionary to keep track of the characters and their counts, and then iterates through the string to find the first character with a count of 1.\n\n```python\ndef first_non_repeated(s: str) -> str:\n    \"\"\"\n    Find the first non-repeated character in a given string.\n\n    :param s: The input string.\n    :return: The first non-repeated character in the string, or an empty string if no such character exists.\n    \"\"\"\n    if not s:\n        return \"\"\n\n    char_count = {}\n    for char in s:\n        if char in char_count:\n            char_count[char] += 1\n        else:\n            char_count[char] = 1\n\n    for char in s:\n        if char_count[char] == 1:\n            return char\n\n    return \"\"\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(first_non_repeated(\"hello world\"))  # Output: h\nprint(first_non_repeated(\"aaabbbb\"))      # Output: ''\nprint(first_non_repeated(\"\"))             # Output: ''\n```",
+  "error": null,
+  "elapsed_seconds": 3.15,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

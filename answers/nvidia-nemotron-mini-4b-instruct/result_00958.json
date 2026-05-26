@@ -1,0 +1,9 @@
+{
+  "id": 958,
+  "title": "Calculate GCD",
+  "prompt": "Write a program that calculates the greatest common divisor (GCD) of two numbers using a while loop.\nSample Input: 12, 18\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the greatest common divisor (GCD) of two numbers using a while loop:\n\n```python\ndef gcd_while(a, b):\n    \"\"\"\n    Calculates the greatest common divisor (GCD) of two numbers using a while loop.\n\n    :param a: The first number.\n    :param b: The second number.\n    :return: The greatest common divisor of a and b.\n    \"\"\"\n\n    # Ensure a and b are non-negative\n    a, b = abs(a), abs(b)\n\n    # While b is not zero, continue the loop\n    while b:\n        # Update a and b in a way that ensures a % b = 0\n        a, b = b, a % b\n\n    # Return the value of a, which is the GCD\n    return a\n\n# Example usage\nsample_input = 12, 18\nprint(f\"The GCD of {sample_input[0]} and {sample_input[1]} is {gcd_while(*sample_input)}.\")\n```\n\nWhen you run this program with the sample input `(12, 18)`, it will output:\n\n```\nThe GCD of 12 and 18 is 6.\n```",
+  "error": null,
+  "elapsed_seconds": 13.12,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

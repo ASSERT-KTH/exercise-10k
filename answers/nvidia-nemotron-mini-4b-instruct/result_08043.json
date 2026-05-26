@@ -1,0 +1,9 @@
+{
+  "id": 8043,
+  "title": "Simple Quiz",
+  "prompt": "Write a program that uses an if/else statement to administer a simple quiz based on user input.\nSample Input: answer 1\nSample Output: Correct\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses an `if` statement to administer a simple quiz based on user input. In this example, I'll assume there are only two possible answers for each question. You can modify the `question_answers` dictionary to add more questions and answers.\n\n```python\nquestion_answers = {\n    \"question1\": [\"answer1\", \"answer2\"],\n    \"question2\": [\"answer3\", \"answer4\"],\n    \"question3\": [\"answer5\", \"answer6\"]\n}\n\ndef administer_quiz():\n    \"\"\"Administer a simple quiz based on user input.\"\"\"\n    for question, answers in question_answers.items():\n        print(f\"\\nQuestion: {question}\")\n        user_answer = input(\"Enter your answer: \").lower()\n\n        if user_answer in answers:\n            print(f\"Correct\")\n        else:\n            print(f\"Incorrect. The correct answer is {answers[answers.index(user_answer)]}\")\n\n# Call the function to administer the quiz\nadminister_quiz()\n```\n\nThis program will prompt the user to enter an answer for each question. It will then check if the user's answer matches any of the possible answers for that question. If the answer is correct, it will print \"Correct\". If the answer is incorrect, it will print the correct answer.\n\nYou can modify the `question_answers` dictionary to add more questions and answers, and adjust the `if` statement to check for more conditions if needed.",
+  "error": null,
+  "elapsed_seconds": 3.53,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

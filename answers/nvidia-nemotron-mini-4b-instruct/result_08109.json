@@ -1,0 +1,9 @@
+{
+  "id": 8109,
+  "title": "Special Character Counter",
+  "prompt": "Write a program that takes a string as input and returns the number of special characters in the string.\nSample Input: Hello!@#World$%^\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef count_special_chars(s: str) -> int:\n    \"\"\"\n    Count the number of special characters in a given string.\n\n    :param s: The input string.\n    :return: The number of special characters in the string.\n    \"\"\"\n    # Define a set of special characters to match against\n    special_chars = set(\"!@#$%^&*()-_=+[]{}|;:,.<>?\")\n\n    # Count the number of special characters in the string\n    return sum(1 for char in s if char in special_chars)\n\n# Test the function with a sample input\nsample_input = \"Hello!@#World$%^\"\nprint(f\"The number of special characters in '{sample_input}' is: {count_special_chars(sample_input)}\")\n```\nThis program defines a function `count_special_chars` that takes a string as input and returns the number of special characters in the string. The function uses a set of special characters to match against, and uses the built-in `sum` function to count the number of characters in the string that match the set. The function is then tested with a sample input to verify its behavior.",
+  "error": null,
+  "elapsed_seconds": 2.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

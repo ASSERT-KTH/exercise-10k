@@ -1,0 +1,9 @@
+{
+  "id": 7396,
+  "title": "Validation of User Input",
+  "prompt": "Create a program that prompts the user to enter their name and age. Validate the input to ensure the name is not empty and the age is a positive integer. If the input is valid, print out a greeting message with the user's name and age. Otherwise, print an error message and ask for input again.\nSample Input: John 25\nSample Output: Hello, John! You are 25 years old.\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef get_valid_input():\n    while True:\n        name = input(\"Please enter your name: \")\n        if name.strip():  # Check if the name is not empty\n            break\n        else:\n            print(\"Error: Name cannot be empty. Please try again.\")\n\n    age = input(\"Please enter your age: \")\n    try:\n        age = int(age)\n        if age > 0:\n            return name, age\n        else:\n            print(\"Error: Age must be a positive integer. Please try again.\")\n    except ValueError:\n        print(\"Error: Age must be a number. Please try again.\")\n\ndef greet_user(name, age):\n    print(f\"Hello, {name}! You are {age} years old.\")\n\nname, age = get_valid_input()\ngreet_user(name, age)\n```\n\nThis program defines two functions: `get_valid_input()` and `greet_user()`. The first function prompts the user for input, validates it to ensure it's not empty and a positive integer, and returns the name and age as a tuple. The second function prints a greeting message based on the input received from the user. The program then calls these functions to get the user's name and age, and prints the greeting message.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5037,
+  "title": "Number Sorting",
+  "prompt": "Write a program that sorts a given list of numbers in ascending order using for loops.\nSample Input: [5, 2, 8, 3, 1, 6, 4]\nSample Output: [1, 2, 3, 4, 5, 6, 8]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that sorts a given list of numbers in ascending order using for loops:\n\n```python\ndef sort_list(numbers):\n    \"\"\"\n    Sort a given list of numbers in ascending order using for loops.\n\n    :param numbers: List of numbers to be sorted\n    :return: Sorted list of numbers\n    \"\"\"\n\n    # Create a copy of the input list to avoid modifying the original list\n    sorted_numbers = numbers.copy()\n\n    # Use two for loops to swap elements in the list\n    for i in range(len(sorted_numbers) - 1):\n        for j in range(i + 1, len(sorted_numbers)):\n            # Swap elements if the current element is greater than the next element\n            if sorted_numbers[i] > sorted_numbers[j]:\n                sorted_numbers[i], sorted_numbers[j] = sorted_numbers[j], sorted_numbers[i]\n\n    return sorted_numbers\n\n\n# Test the function with a sample input\nsample_input = [5, 2, 8, 3, 1, 6, 4]\nsorted_output = sort_list(sample_input)\nprint(sorted_output)  # Output: [1, 2, 3, 4, 5, 6, 8]\n```\n\nThis program first creates a copy of the input list to avoid modifying the original list. Then, it uses two nested for loops to compare each pair of elements in the list and swap them if the current element is greater than the next element. Finally, it returns the sorted list of numbers.",
+  "error": null,
+  "elapsed_seconds": 4.0,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

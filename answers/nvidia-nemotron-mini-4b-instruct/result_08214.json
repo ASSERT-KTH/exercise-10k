@@ -1,0 +1,9 @@
+{
+  "id": 8214,
+  "title": "Weather Forecast",
+  "prompt": "Create a program that displays a weather forecast based on the temperature using if/else statements\nSample Input: 25\nSample Output: Sunny\n",
+  "answer": "Sure, I'd be happy to help you create a program that displays a weather forecast based on the temperature using if/else statements. Here's an example Python program that meets your requirements:\n\n```python\ndef display_weather_forecast(temperature):\n    \"\"\"\n    Displays a weather forecast based on the given temperature.\n\n    :param temperature: The temperature as an integer between 0 and 40.\n    \"\"\"\n\n    # Validate the input temperature\n    if not isinstance(temperature, int) or temperature < 0 or temperature > 40:\n        print(\"Error: Temperature must be an integer between 0 and 40.\")\n        return\n\n    # Define the weather conditions based on the temperature\n    if temperature >= 30:\n        weather_condition = \"Sunny\"\n    elif temperature >= 20:\n        weather_condition = \"Partly Cloudy\"\n    else:\n        weather_condition = \"Overcast\"\n\n    # Display the weather forecast\n    print(f\"The weather forecast for today is: {weather_condition}\")\n\n# Example usage\ndisplay_weather_forecast(25)\n```\n\nThis program defines a function `display_weather_forecast` that takes an integer temperature as input, validates it, and then displays the corresponding weather forecast based on the temperature using if/else statements. The function also includes an example usage at the end to demonstrate how to call the function with a sample input.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

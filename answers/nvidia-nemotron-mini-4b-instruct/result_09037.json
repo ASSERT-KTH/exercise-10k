@@ -1,0 +1,9 @@
+{
+  "id": 9037,
+  "title": "Power Function",
+  "prompt": "Create a function that takes two numbers as arguments, the base and the exponent, and returns the result of raising the base to the power of the exponent\nSample Input: 2, 3\nSample Output: 8\n",
+  "answer": "Sure, I'd be happy to help you create a function for that! Here's an example Python function that meets your requirements:\n\n```python\ndef raise_to_power(base, exponent):\n    \"\"\"\n    Raises the base to the power of the exponent and returns the result.\n\n    :param base: The base number to raise to a power.\n    :param exponent: The exponent to raise the base to.\n    :return: The result of raising the base to the power of the exponent.\n    \"\"\"\n    # Check if the exponent is negative, in which case we'll use the reciprocal\n    if exponent < 0:\n        base, exponent = 1 / base, -exponent\n\n    # Perform the power operation and return the result\n    result = 1\n    for _ in range(abs(exponent)):\n        result *= base\n\n    return result\n```\n\nHere's an example of how you can use this function:\n\n```python\nprint(raise_to_power(2, 3))  # Output: 8\nprint(raise_to_power(5, -2))  # Output: 0.3125\n```\n\nThis function first checks if the exponent is negative, in which case it swaps the base and exponent and uses the reciprocal of the base. Then, it uses a loop to multiply the base by itself the required number of times based on the absolute value of the exponent.",
+  "error": null,
+  "elapsed_seconds": 3.27,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

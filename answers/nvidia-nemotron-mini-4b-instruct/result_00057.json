@@ -1,0 +1,9 @@
+{
+  "id": 57,
+  "title": "Find the Maximum Repeating Character",
+  "prompt": "Find the maximum repeating character in a string\nSample Input: aabbbcc\nSample Output: b\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution to find the maximum repeating character in a string:\n\n```python\ndef max_repeating_char(s):\n    count = {}\n    for char in s:\n        if char in count:\n            count[char] += 1\n        else:\n            count[char] = 1\n\n    max_count = max(count.values())\n    return next((char for char, count in count.items() if count == max_count), None)\n\n# Test the function with your sample input\nprint(max_repeating_char(\"aabbbcc\"))  # Output: b\n```\n\nThis function first creates a dictionary `count` to store the count of each character in the string. Then, it iterates through the string and updates the count for each character. Finally, it finds the maximum count and returns the character with the maximum count. The `next()` function is used to find the first character with the maximum count.\n\nIf there are multiple characters with the maximum count, this function will return any one of them. If the string does not contain any repeating characters, it will return `None`.",
+  "error": null,
+  "elapsed_seconds": 2.65,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

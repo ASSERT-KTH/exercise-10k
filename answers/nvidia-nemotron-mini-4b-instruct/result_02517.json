@@ -1,0 +1,9 @@
+{
+  "id": 2517,
+  "title": "Currency Converter",
+  "prompt": "Write a program that takes the amount and exchange rate as input, and returns the converted amount.\nSample Input: 100 1.2\nSample Output: 120.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef convert_amount(amount, exchange_rate):\n    \"\"\"\n    Converts the given amount from the local currency to the target currency.\n\n    Parameters:\n    amount (float): The amount to be converted in the local currency.\n    exchange_rate (float): The current exchange rate from the local currency to the target currency.\n\n    Returns:\n    float: The converted amount in the target currency.\n    \"\"\"\n    # Ensure the input is valid\n    if not isinstance(amount, (float, int)) or amount < 0:\n        raise ValueError(\"Amount must be a non-negative number.\")\n    if not isinstance(exchange_rate, (float, int)) or exchange_rate < 0:\n        raise ValueError(\"Exchange rate must be a non-negative number.\")\n\n    # Perform the conversion\n    converted_amount = amount * exchange_rate\n\n    return converted_amount\n\n# Example usage\nlocal_amount = 100\nexchange_rate = 1.2\nconverted_amount = convert_amount(local_amount, exchange_rate)\nprint(f\"{local_amount} {exchange_rate:.2f} = {converted_amount:.2f}\")\n```\nThis program defines a function `convert_amount` that takes the amount and exchange rate as input, checks for valid input, and returns the converted amount. The example usage at the end of the program demonstrates how to use the function to convert 100 units of a local currency to the target currency at an exchange rate of 1.2.",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

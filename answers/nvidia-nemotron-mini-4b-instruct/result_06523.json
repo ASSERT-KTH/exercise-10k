@@ -1,0 +1,9 @@
+{
+  "id": 6523,
+  "title": "Palindrome Checker",
+  "prompt": "Create a function that takes a string as input and returns True if it's a palindrome, False otherwise.\nSample Input: radar\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n\n```python\ndef is_palindrome(s: str) -> bool:\n    \"\"\"\n    Check if a given string is a palindrome.\n\n    A palindrome is a word, phrase, number, or other sequence of characters that reads the same forward and backward,\n    ignoring spaces, punctuation, and case.\n\n    Parameters:\n    s (str): The string to check for palindromeness.\n\n    Returns:\n    bool: True if the string is a palindrome, False otherwise.\n    \"\"\"\n    # Remove non-alphanumeric characters and convert to lowercase\n    s = ''.join(c.lower() for c in s if c.isalnum())\n\n    # Check if the string is equal to its reverse\n    return s == s[::-1]\n```\n\nThis function first removes all non-alphanumeric characters from the input string and converts it to lowercase. Then, it checks if the string is equal to its reverse (`s[::-1]`), which is a simple way to reverse a string in Python. If the string is equal to its reverse, it's a palindrome, so the function returns `True`. Otherwise, it returns `False`.\n\nHere are some examples of how you can use this function:\n\n```python\nprint(is_palindrome(\"racecar\"))  # True\nprint(is_palindrome(\"hello\"))    # False\nprint(is_palindrome(\"A man a plan a canal Panama\"))  # True\n```",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

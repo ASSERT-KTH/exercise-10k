@@ -1,0 +1,9 @@
+{
+  "id": 8135,
+  "title": "Anagram Checker",
+  "prompt": "Write a program that checks if two given strings are anagrams of each other using if/else statements\nSample Input: listen, silent\nSample Output: The strings are anagrams\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if two given strings are anagrams of each other using if/else statements:\n\n```python\ndef are_anagrams(str1, str2):\n    \"\"\"\n    Check if two given strings are anagrams of each other.\n\n    :param str1: The first string to compare.\n    :param str2: The second string to compare.\n    :return: A string indicating whether the strings are anagrams or not.\n    \"\"\"\n\n    # Check if the strings have the same length\n    if len(str1) != len(str2):\n        return \"The strings are not anagrams as they have different lengths.\"\n\n    # Convert both strings to lowercase and remove any non-alphanumeric characters\n    str1 = ''.join(c.lower() for c in str1 if c.isalnum())\n    str2 = ''.join(c.lower() for c in str2 if c.isalnum())\n\n    # Check if the sorted versions of the strings are equal\n    return \"The strings are anagrams.\" if sorted(str1) == sorted(str2) else \"The strings are not anagrams.\"\n\n# Example usage\ninput_str1 = \"listen\"\ninput_str2 = \"silent\"\nprint(are_anagrams(input_str1, input_str2))  # Output: The strings are anagrams\n```\n\nThis program first checks if the lengths of the two strings are equal, as anagrams must have the same number of characters. Then, it converts both strings to lowercase and removes any non-alphanumeric characters, so that only the alphabetical characters are compared. Finally, it checks if the sorted versions of the strings are equal, which indicates that the strings are anagrams.",
+  "error": null,
+  "elapsed_seconds": 4.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3693,
+  "title": "Tipping Calculator",
+  "prompt": "Write a program to calculate the tip amount for a given bill amount and tip percentage.\nSample Input: bill amount = 100, tip percentage = 15\nSample Output: Tip Amount: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a simple Python program that calculates the tip amount for a given bill amount and tip percentage:\n\n```python\ndef calculate_tip(bill_amount, tip_percentage):\n    \"\"\"\n    Calculates the tip amount for a given bill amount and tip percentage.\n\n    :param bill_amount: The amount of the bill before tax.\n    :param tip_percentage: The percentage of the bill to be tipped as a decimal (e.g., 15% is 0.15).\n    :return: The tip amount as a float.\n    \"\"\"\n\n    # Validate input\n    if not isinstance(bill_amount, (int, float)) or bill_amount < 0:\n        raise ValueError(\"Bill amount must be a non-negative number.\")\n\n    if not isinstance(tip_percentage, (float, int)) or tip_percentage < 0 or tip_percentage > 1:\n        raise ValueError(\"Tip percentage must be a number between 0 and 1 (exclusive).\")\n\n    # Calculate the tip amount\n    tip_amount = bill_amount * tip_percentage\n\n    return tip_amount\n\n\n# Get user input\nbill_amount = float(input(\"Enter the bill amount: $\"))\ntip_percentage = float(input(\"Enter the tip percentage (as a decimal): \"))\n\n# Calculate and display the tip amount\ntip_amount = calculate_tip(bill_amount, tip_percentage)\nprint(f\"Tip Amount: ${tip_amount:.2f}\")\n```\n\nThis program defines a function `calculate_tip` that takes a bill amount and a tip percentage as arguments, validates the input, calculates the tip amount, and returns it. The program then prompts the user for the bill amount and tip percentage, calls the function, and displays the tip amount with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 4.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

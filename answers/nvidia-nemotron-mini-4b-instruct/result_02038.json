@@ -1,0 +1,9 @@
+{
+  "id": 2038,
+  "title": "Employee Benefits",
+  "prompt": "Develop a program that determines an employee's benefits based on their job title and years of service. The program should use if/else statements to determine the employee's benefits.\nSample Input: Manager, 5\nSample Output: Full Benefits\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses a dictionary to map job titles to the corresponding benefits. You can extend this program to add more job titles and benefits as needed.\n\n```python\n# Define a dictionary mapping job titles to benefits\njob_titles = {\n    \"Manager\": \"Full Benefits\",\n    \"Engineer\": \"Partial Benefits\",\n    \"Intern\": \"No Benefits\"\n}\n\n# Get user input for job title and years of service\njob_title = input(\"Enter your job title: \").strip().lower()\nyears_of_service = int(input(\"Enter the number of years you have worked: \"))\n\n# Determine the employee's benefits based on job title and years of service\nif job_title in job_titles:\n    benefits = job_titles[job_title]\n    if years_of_service >= 5:\n        print(f\"{benefits} (with additional benefits for 5+ years of service)\")\n    else:\n        print(benefits)\nelse:\n    print(f\"Sorry, we don't have benefits for '{job_title}'. Please choose from the available options.\")\n```\n\nThis program will prompt the user to enter their job title and years of service, then use an `if/else` statement to determine the employee's benefits based on the job title and years of service. The program will print the appropriate message based on the employee's benefits.",
+  "error": null,
+  "elapsed_seconds": 6.3,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

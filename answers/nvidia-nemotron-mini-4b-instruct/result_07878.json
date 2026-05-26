@@ -1,0 +1,9 @@
+{
+  "id": 7878,
+  "title": "Anagram Checker",
+  "prompt": "Create a program that checks if two words are anagrams using conditional statements.\nSample Input: listen silent\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if two words are anagrams using conditional statements:\n\n```python\ndef are_anagrams(word1, word2):\n    \"\"\"\n    Check if two words are anagrams.\n\n    :param word1: str, the first word\n    :param word2: str, the second word\n    :return: bool, True if the words are anagrams, False otherwise\n    \"\"\"\n\n    # Ensure both inputs are strings and have the same length\n    if not isinstance(word1, str) or not isinstance(word2, str) or len(word1) != len(word2):\n        return False\n\n    # Sort the characters in both words and compare them\n    return sorted(word1) == sorted(word2)\n\n\n# Example usage\nword1 = \"listen\"\nword2 = \"silent\"\n\nif are_anagrams(word1, word2):\n    print(f\"'{word1}' and '{word2}' are anagrams.\")\nelse:\n    print(f\"'{word1}' and '{word2}' are not anagrams.\")\n```\n\nThis program first checks if both inputs are strings and have the same length. If not, it returns False. Then, it sorts the characters in both words and compares them using the `==` operator. If they are equal, the words are anagrams, and the function returns True; otherwise, it returns False.",
+  "error": null,
+  "elapsed_seconds": 3.42,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

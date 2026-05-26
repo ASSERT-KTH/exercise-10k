@@ -1,0 +1,9 @@
+{
+  "id": 8906,
+  "title": "Find the First Duplicate",
+  "prompt": "Write a program to find the first duplicate in a given list.\nSample Input: [1, 2, 3, 4, 2, 5]\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the first duplicate in a given list using a dictionary to keep track of the elements and their counts. The time complexity of this solution is O(n), where n is the length of the input list.\n\n```python\ndef find_first_duplicate(lst):\n    # Create an empty dictionary to store element counts\n    element_counts = {}\n\n    # Iterate through the list and update the element counts\n    for element in lst:\n        if element in element_counts:\n            # If the element is already in the dictionary, it's a duplicate\n            return element\n        else:\n            element_counts[element] = 1\n\n    # If no duplicates are found, return None\n    return None\n\n# Test the function with the sample input\nsample_input = [1, 2, 3, 4, 2, 5]\nprint(find_first_duplicate(sample_input))  # Output: 2\n```\n\nIf you prefer a solution with a different time complexity, such as O(n log n), you can use a sorted list or a binary search to find the first duplicate. However, those solutions have a higher space complexity (O(n) in the worst case) due to the need to store the entire list or perform additional calculations.",
+  "error": null,
+  "elapsed_seconds": 3.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

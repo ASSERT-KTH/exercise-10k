@@ -1,0 +1,9 @@
+{
+  "id": 6240,
+  "title": "Check if Matrix is Symmetric",
+  "prompt": "Write a function that checks if a given matrix is symmetric, i.e., equal to its transpose.\nSample Input: [[1, 2, 3], [2, 4, 5], [3, 5, 6]]\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a given matrix (represented as a 2D list) is symmetric:\n\n```python\ndef is_symmetric(matrix):\n    \"\"\"\n    Check if a given matrix is symmetric, i.e., equal to its transpose.\n\n    :param matrix: A 2D list representing a matrix\n    :return: True if the matrix is symmetric, False otherwise\n    \"\"\"\n    # Check if the matrix is square (i.e., has the same number of rows and columns)\n    n = len(matrix)\n    if n != len(matrix[0]):\n        return False\n\n    # Check if the matrix is symmetric by comparing each element with its transpose\n    for i in range(n):\n        for j in range(i, n):\n            if matrix[i][j] != matrix[j][i]:\n                return False\n\n    return True\n```\n\nHere's how you can use this function:\n\n```python\nmatrix = [[1, 2, 3], [2, 4, 5], [3, 5, 6]]\nprint(is_symmetric(matrix))  # Output: True\n\nmatrix = [[1, 2], [2, 3]]\nprint(is_symmetric(matrix))  # Output: False\n```\n\nThis function first checks if the matrix is square (i.e., has the same number of rows and columns). If it's not square, the function immediately returns `False`. Then, it iterates through each element in the matrix and checks if it's equal to its transpose. If any element is not equal to its transpose, the function returns `False`. If no such element is found, the function returns `True`, indicating that the matrix is symmetric.",
+  "error": null,
+  "elapsed_seconds": 4.2,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

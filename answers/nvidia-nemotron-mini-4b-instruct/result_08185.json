@@ -1,0 +1,9 @@
+{
+  "id": 8185,
+  "title": "Coin Flip Simulator",
+  "prompt": "Write a program that simulates a coin flip using a while loop and asks the user if they want to flip again.\nSample Input: yes\nSample Output: Heads!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that simulates a coin flip using a while loop and asks the user if they want to flip again:\n\n```python\nimport random\n\ndef coin_flip():\n    \"\"\"Simulate a coin flip and return 'Heads' or 'Tails'.\"\"\"\n    return 'Heads' if random.randint(0, 1) == 0 else 'Tails'\n\ndef main():\n    while True:\n        result = coin_flip()\n        print(f\"You flipped a coin and got {result}!\")\n\n        # Ask the user if they want to flip again\n        more_flips = input(\"Do you want to flip again? (yes/no) \").lower()\n        if more_flips != 'yes':\n            break\n\n    print(\"Thanks for playing!\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program defines a function `coin_flip()` that simulates a coin flip by generating a random integer between 0 and 1. The `main()` function contains the main loop that repeatedly calls `coin_flip()` and asks the user if they want to flip again until the user enters 'no'. The program then prints a farewell message.\n\nYou can run this program and enter 'yes' when prompted to flip again to keep playing.",
+  "error": null,
+  "elapsed_seconds": 3.1,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

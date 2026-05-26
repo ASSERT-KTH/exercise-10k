@@ -1,0 +1,9 @@
+{
+  "id": 6311,
+  "title": "Dictionary Filter",
+  "prompt": "Filter a dictionary to include only key-value pairs where the value meets a certain condition\nSample Input: {\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}\nSample Output: {\"age\": 30}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that filters a dictionary to include only key-value pairs where the value meets a certain condition:\n```python\ndef filter_dict(input_dict, condition):\n    \"\"\"\n    Filters a dictionary to include only key-value pairs where the value meets a certain condition.\n\n    Parameters:\n    input_dict (dict): The input dictionary to filter.\n    condition (callable): A function that takes a value as input and returns a boolean indicating whether the value meets the condition.\n\n    Returns:\n    dict: A new dictionary containing only the key-value pairs from the input dictionary where the value meets the condition.\n    \"\"\"\n    return {k: v for k, v in input_dict.items() if condition(v)}\n```\nHere's an example of how you can use this function to filter a dictionary based on a condition that checks if the value is equal to a certain number:\n```python\ndef is_age_equal_to_30(age):\n    return age == 30\n\nfiltered_dict = filter_dict({\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}, is_age_equal_to_30)\nprint(filtered_dict)  # Output: {'age': 30}\n```\nIn this example, the `is_age_equal_to_30` function is passed as the `condition` parameter to the `filter_dict` function. The function returns `True` if the input value is equal to 30, and `False` otherwise. The resulting dictionary contains only the key-value pair for the \"age\" key where the value is equal to 30.",
+  "error": null,
+  "elapsed_seconds": 4.0,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

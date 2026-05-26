@@ -1,0 +1,9 @@
+{
+  "id": 235,
+  "title": "String Permutations",
+  "prompt": "Create a function to generate all permutations of a given string.\nSample Input: abc\nSample Output: ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that generates all permutations of a given string using recursion. This function assumes that the input string contains only lowercase letters.\n\n```python\ndef generate_permutations(s):\n    if len(s) == 1:\n        return [s]\n    else:\n        permutations = []\n        for i in range(len(s)):\n            char = s[i]\n            remaining_chars = s[:i] + s[i+1:]\n            for perm in generate_permutations(remaining_chars):\n                permutations.append(char + perm)\n        return permutations\n```\n\nHere's how you can use this function:\n\n```python\nprint(generate_permutations('abc'))  # Output: ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']\n```\n\nThis function works by recursively generating all permutations of the remaining characters in the string, and then inserting the first character of the original string into each of those permutations. The base case is when the length of the string is 1, in which case there is only one permutation, which is the original string itself.",
+  "error": null,
+  "elapsed_seconds": 2.88,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

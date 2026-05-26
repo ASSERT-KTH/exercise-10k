@@ -1,0 +1,9 @@
+{
+  "id": 2918,
+  "title": "Shortest Word Finder",
+  "prompt": "Develop a program to find the shortest word in a given string.\nSample Input: this is a test string\nSample Output: a\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the shortest word in a given string:\n\n```python\ndef shortest_word(s: str) -> str:\n    \"\"\"\n    Find the shortest word in a given string.\n\n    :param s: The input string.\n    :return: The shortest word in the string.\n    \"\"\"\n    # Split the string into words, remove empty strings, and sort the list\n    words = [word.strip() for word in s.split() if word.strip()]\n    words.sort(key=len)\n\n    # Return the first word (which is the shortest)\n    return words[0]\n\n# Example usage\ninput_string = \"this is a test string\"\nshortest_word_result = shortest_word(input_string)\nprint(f\"The shortest word in the string '{input_string}' is '{shortest_word_result}'.\")\n```\n\nWhen you run this program with the sample input \"this is a test string\", it will output:\n\n```\nThe shortest word in the string 'this is a test string' is 'a'.\n```",
+  "error": null,
+  "elapsed_seconds": 2.65,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

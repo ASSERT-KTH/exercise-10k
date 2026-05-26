@@ -1,0 +1,9 @@
+{
+  "id": 1976,
+  "title": "Bubble Sort Function",
+  "prompt": "Create a function that implements the bubble sort algorithm to sort a list of numbers. The function should take a list as an argument and return the sorted list.\nSample Input: [5, 2, 8, 3, 1]\nSample Output: [1, 2, 3, 5, 8]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that implements the bubble sort algorithm to sort a list of numbers:\n\n```python\ndef bubble_sort(numbers):\n    \"\"\"\n    Sort a list of numbers using the bubble sort algorithm.\n\n    :param numbers: The list of numbers to be sorted.\n    :return: The sorted list of numbers.\n    \"\"\"\n    n = len(numbers)\n\n    # Traverse through all array elements\n    for i in range(n):\n\n        # Last i elements are already in place\n        for j in range(0, n-i-1):\n\n            # Traverse the array from 0 to n-i-1\n            # Swap if the element found is greater\n            # than the next element\n            if numbers[j] > numbers[j+1]:\n                numbers[j], numbers[j+1] = numbers[j+1], numbers[j]\n\n    return numbers\n```\n\nYou can use this function as follows:\n\n```python\nnumbers = [5, 2, 8, 3, 1]\nsorted_numbers = bubble_sort(numbers)\nprint(sorted_numbers)  # Output: [1, 2, 3, 5, 8]\n```\n\nThis function first calculates the length of the list, then iterates through the list multiple times to sort it. In each iteration, it compares adjacent elements and swaps them if they are in the wrong order. This process continues until the list is sorted.",
+  "error": null,
+  "elapsed_seconds": 3.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

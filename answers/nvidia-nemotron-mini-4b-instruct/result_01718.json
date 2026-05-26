@@ -1,0 +1,9 @@
+{
+  "id": 1718,
+  "title": "While Loop Baseball Simulator",
+  "prompt": "Create a program that uses a while loop to simulate a game of Baseball, where the user can pitch and swing until they choose to quit.\nSample Input: pitch\nswing\nquit\nSample Output: You threw a fastball.\nYou hit the ball!\nDo you want to pitch again? (yes/no)\n",
+  "answer": "Sure, I'd be happy to help you create a program for a simulated game of Baseball. Here's an example Python program that meets your requirements:\n\n```python\ndef play_baseball():\n    \"\"\"Simulate a game of Baseball using a while loop.\"\"\"\n\n    # Initialize the score and the user's choice\n    score = 0\n    user_choice = input(\"Do you want to pitch (pitch) or swing (swing)? \").lower()\n\n    while user_choice != \"quit\":\n        if user_choice == \"pitch\":\n            print(\"You threw a pitch.\")\n            user_choice = input(\"Do you want to pitch again? (yes/no) \").lower()\n        elif user_choice == \"swing\":\n            print(\"You hit the ball!\")\n            score += 1\n            user_choice = input(\"Do you want to pitch again? (yes/no) \").lower()\n        else:\n            print(\"Sorry, I didn't understand that choice. Please try again.\")\n            user_choice = input(\"Do you want to pitch (pitch) or swing (swing)? \").lower()\n\n    print(f\"\\nGame over! The final score is {score}.\")\n\n# Call the function to start the game\nplay_baseball()\n```\n\nThis program defines a function `play_baseball()` that simulates a game of Baseball using a while loop. The user can choose to pitch or swing, and the program keeps track of the score. If the user chooses to quit, the program ends. The function is then called to start the game.",
+  "error": null,
+  "elapsed_seconds": 4.82,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

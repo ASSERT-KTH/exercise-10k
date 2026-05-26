@@ -1,0 +1,9 @@
+{
+  "id": 2511,
+  "title": "Area and Perimeter Calculator",
+  "prompt": "Write a program that takes the length and width of a rectangle as input, and returns the area and perimeter.\nSample Input: 5 3\nSample Output: Area: 15, Perimeter: 16\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_rectangle_properties(length, width):\n    \"\"\"\n    Calculates the area and perimeter of a rectangle given its length and width.\n\n    :param length: The length of the rectangle.\n    :param width: The width of the rectangle.\n    :return: A tuple containing the area and perimeter of the rectangle.\n    \"\"\"\n\n    # Check if the inputs are positive numbers\n    if length <= 0 or width <= 0:\n        raise ValueError(\"Both length and width must be positive numbers.\")\n\n    # Calculate the area and perimeter\n    area = length * width\n    perimeter = 2 * (length + width)\n\n    return area, perimeter\n\n# Get user input\nlength = float(input(\"Enter the length of the rectangle: \"))\nwidth = float(input(\"Enter the width of the rectangle: \"))\n\n# Calculate and print the area and perimeter\narea, perimeter = calculate_rectangle_properties(length, width)\nprint(f\"Area: {area}, Perimeter: {perimeter}\")\n```\nThis program defines a function `calculate_rectangle_properties` that takes the length and width as input, checks if they are positive numbers, calculates the area and perimeter, and returns them as a tuple. The program then gets user input for the length and width, calls the function with those values, and prints the area and perimeter.",
+  "error": null,
+  "elapsed_seconds": 3.3,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

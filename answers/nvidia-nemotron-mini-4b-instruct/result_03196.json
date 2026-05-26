@@ -1,0 +1,9 @@
+{
+  "id": 3196,
+  "title": "Even or Odd",
+  "prompt": "Write a program that takes a number as input and uses if/else statements to determine if it's even or odd.\nSample Input: 5\nSample Output: Odd\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef is_even_or_odd(number):\n    \"\"\"\n    Determines if a given number is even or odd using if/else statements.\n\n    :param number: The number to check for evenness or oddness.\n    :return: A string indicating whether the number is even or odd.\n    \"\"\"\n\n    # Check if the input is a number\n    if not isinstance(number, (int, float)):\n        raise TypeError(\"The input must be a number.\")\n\n    # Determine if the number is even or odd using if/else statements\n    if number % 2 == 0:\n        result = \"Even\"\n    else:\n        result = \"Odd\"\n\n    return result\n\n# Get user input and print the result\ntry:\n    user_input = int(input(\"Enter a number: \"))\n    print(f\"The number {user_input} is {is_even_or_odd(user_input)}.\")\nexcept ValueError:\n    print(\"That's not a valid number. Please try again.\")\n```\n\nThis program defines a function `is_even_or_odd` that takes a number as input and returns a string indicating whether it's even or odd. The function checks if the input is a number, and then uses an `if` statement to determine the result. The program then gets user input, calls the function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.51,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9362,
+  "title": "Variable Scope",
+  "prompt": "Write a program that demonstrates the concept of variable scope.\nSample Input: globalVariable, localVariable\nSample Output: globalVariable, localVariable\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that demonstrates the concept of variable scope using global and local variables:\n\n```python\n# Global variable\nglobal_variable = \"Global Variable\"\n\ndef my_function():\n    # Local variable\n    local_variable = \"Local Variable\"\n\n    # Accessing global variable\n    print(f\"Accessing global variable: {global_variable}\")\n\n    # Printing local variable\n    print(f\"Local variable: {local_variable}\")\n\n# Calling the function\nmy_function()\n\n# Printing the global variable again\nprint(f\"Accessing global variable after function call: {global_variable}\")\n```\n\nWhen you run this program, you'll see the following output:\n\n```\nAccessing global variable: Global Variable\nLocal variable: Local Variable\nAccessing global variable after function call: Global Variable\n```\n\nIn this program, we define a global variable `global_variable` outside of any function. Inside the `my_function` function, we define a local variable `local_variable`. When we call `my_function`, it prints the local variable and accesses the global variable using the `global` keyword. After calling the function, we print the global variable again, demonstrating that it remains unchanged.\n\nThis demonstrates how variable scope works in Python, where variables defined outside of functions (`global` variables) have a higher scope than variables defined inside functions (`local` variables).",
+  "error": null,
+  "elapsed_seconds": 3.22,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

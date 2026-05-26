@@ -1,0 +1,9 @@
+{
+  "id": 3964,
+  "title": "Binary Search Implementation",
+  "prompt": "Implement the binary search algorithm to find an element in a sorted list of integers. The program should take a sorted list and a target element as input and output the index of the target element if found, or -1 if not found.\nSample Input: [1, 2, 3, 4, 5, 6, 7, 8, 9], 5\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you implement the binary search algorithm. Here's a Python solution for your problem:\n\n```python\ndef binary_search(sorted_list, target):\n    low = 0\n    high = len(sorted_list) - 1\n\n    while low <= high:\n        mid = (low + high) // 2\n\n        if sorted_list[mid] == target:\n            return mid\n        elif sorted_list[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n\n    return -1\n```\n\nThis function works by repeatedly dividing the search interval in half until the target value is found or the interval becomes empty. If the value is found, the function returns its index. Otherwise, it returns -1.\n\nHere's an example of how to use this function:\n\n```python\nsorted_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]\ntarget = 5\n\nindex = binary_search(sorted_list, target)\n\nif index != -1:\n    print(f\"The target element {target} is at index {index}.\")\nelse:\n    print(f\"The target element {target} is not found.\")\n```\n\nThis will output:\n\n```\nThe target element 5 is at index 4.\n```",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

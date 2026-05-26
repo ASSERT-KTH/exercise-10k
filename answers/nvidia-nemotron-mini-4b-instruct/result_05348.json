@@ -1,0 +1,9 @@
+{
+  "id": 5348,
+  "title": "List Grouping",
+  "prompt": "Write a function that takes a list and a key function as input, and returns a dictionary where the keys are the values returned by the key function, and the values are lists of elements that have the corresponding key.\nSample Input: [1, 2, 2, 3, 3, 3], lambda x: x\nSample Output: {1: [1], 2: [2, 2], 3: [3, 3, 3]}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef group_by_key(data, key_func):\n    \"\"\"\n    Groups elements in a list into dictionaries based on the values returned by a key function.\n\n    Parameters:\n    data (list): The list of elements to group.\n    key_func (callable): A function that takes an element and returns a key value.\n\n    Returns:\n    dict: A dictionary where the keys are the unique key values returned by the key function,\n          and the values are lists of elements that have the corresponding key.\n    \"\"\"\n    # Group elements by key value\n    grouped = {}\n    for item in data:\n        key = key_func(item)\n        if key not in grouped:\n            grouped[key] = []\n        grouped[key].append(item)\n\n    return grouped\n```\nHere's an example of how you can use this function:\n```python\nnumbers = [1, 2, 2, 3, 3, 3]\nkey_func = lambda x: x\n\ngrouped_numbers = group_by_key(numbers, key_func)\nprint(grouped_numbers)  # Output: {1: [1], 2: [2, 2], 3: [3, 3, 3]}\n```\nThis function first groups the elements in the input list using a dictionary to store the key-value pairs. It then iterates through each element in the list and adds it to the corresponding key in the dictionary. Finally, it returns the resulting dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.77,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

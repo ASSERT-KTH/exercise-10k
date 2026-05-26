@@ -1,0 +1,9 @@
+{
+  "id": 8863,
+  "title": "Function to Check if a String is a Repdigit",
+  "prompt": "Create a function to check if a given string is a repdigit or not\nSample Input: 1111\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! A repdigit is a string that consists entirely of the same character. Here's a Python function that checks if a given string is a repdigit or not:\n\n```python\ndef is_repdigit(s):\n    \"\"\"\n    Check if a given string is a repdigit or not.\n\n    :param s: str, the string to check\n    :return: bool, True if the string is a repdigit, False otherwise\n    \"\"\"\n    if not s:  # empty string is not a repdigit\n        return False\n\n    return s == s[0] * len(s)\n```\n\nHere's how you can use this function:\n\n```python\nprint(is_repdigit(\"1111\"))  # True\nprint(is_repdigit(\"abc\"))   # False\nprint(is_repdigit(\"\"))      # False\n```\n\nThis function first checks if the input string is empty, in which case it returns False since an empty string is not a repdigit. Then, it checks if the input string is equal to itself multiplied by its length. If it is, the function returns True, indicating that the string is a repdigit. Otherwise, it returns False.",
+  "error": null,
+  "elapsed_seconds": 2.98,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

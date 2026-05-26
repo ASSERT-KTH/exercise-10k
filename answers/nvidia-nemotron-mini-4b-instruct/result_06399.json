@@ -1,0 +1,9 @@
+{
+  "id": 6399,
+  "title": "Bank Transaction Tracker",
+  "prompt": "Create a program that takes in the transaction type and amount, then prints out the transaction report. If the transaction type is 'deposit', print 'Deposited $X', otherwise print 'Withdrawn $X'\nSample Input: deposit 100\nSample Output: Deposited $100\n",
+  "answer": "Sure, I'd be happy to help you create a program for that. Here's a Python solution that meets your requirements:\n\n```python\ndef print_transaction_report(transaction_type, amount):\n    \"\"\"\n    Print a transaction report based on the given transaction type and amount.\n\n    :param transaction_type: str, either 'deposit' or 'withdrawal'\n    :param amount: float\n    \"\"\"\n    if transaction_type.lower() == 'deposit':\n        print(f\"Deposited ${amount:.2f}\")\n    elif transaction_type.lower() == 'withdrawal':\n        print(f\"Withdrawn ${amount:.2f}\")\n    else:\n        print(f\"Invalid transaction type: {transaction_type}. Please use 'deposit' or 'withdrawal'.\")\n\n# Example usage:\ntransaction_type = input(\"Enter transaction type (deposit/withdrawal): \")\namount = float(input(\"Enter transaction amount: \"))\n\nprint_transaction_report(transaction_type, amount)\n```\n\nThis program defines a function `print_transaction_report` that takes in the transaction type and amount as parameters, and prints the corresponding transaction report. The function checks the transaction type and amount, and prints the appropriate message based on the given conditions. The example usage at the end of the program demonstrates how to call the function and interact with the user for input.",
+  "error": null,
+  "elapsed_seconds": 3.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

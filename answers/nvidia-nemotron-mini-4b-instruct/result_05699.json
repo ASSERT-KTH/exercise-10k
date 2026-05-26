@@ -1,0 +1,9 @@
+{
+  "id": 5699,
+  "title": "Username Validator",
+  "prompt": "Create a program that takes a username as input and checks if it's valid using conditional statements.\nSample Input: john_doe\nSample Output: Valid\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given username is valid based on the following rules:\n\n1. The username should consist of only alphanumeric characters (letters and numbers) and underscores.\n2. The username cannot start or end with an underscore.\n3. The username cannot be empty.\n\nHere's the code:\n\n```python\ndef is_valid_username(username):\n    \"\"\"\n    Check if a given username is valid.\n\n    :param username: str, the username to check\n    :return: bool, True if the username is valid, False otherwise\n    \"\"\"\n    # Check if the username is empty\n    if not username:\n        return False\n\n    # Check if the username consists only of alphanumeric characters and underscores\n    if not username.isalnum() or username[0] == '_' or username[-1] == '_':\n        return False\n\n    return True\n\n# Get user input\nusername = input(\"Enter a username: \")\n\n# Check if the username is valid\nif is_valid_username(username):\n    print(f\"Valid username: {username}\")\nelse:\n    print(\"Invalid username. Please try again.\")\n```\n\nThis program defines a function `is_valid_username` that checks if a given username is valid according to the rules mentioned above. The function is then called to check the user input, and the result is printed based on whether the username is valid or not.",
+  "error": null,
+  "elapsed_seconds": 3.35,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

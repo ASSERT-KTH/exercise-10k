@@ -1,0 +1,9 @@
+{
+  "id": 6163,
+  "title": "Function with Default Values",
+  "prompt": "Create a function that takes a name and an age as input, with the age defaulting to 25 if not provided.\nSample Input: John, 30\nSample Output: John is 30 years old\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_age_message(name, age=25):\n    \"\"\"\n    Create a message with the name and age provided, or default to 25 if only a name is provided.\n\n    :param name: str - The name of the person\n    :param age: int (default: 25) - The age of the person\n    :return: str - A message with the name and age\n    \"\"\"\n    if age < 0:\n        raise ValueError(\"Age must be a non-negative integer\")\n\n    return f\"{name} is {age} years old\"\n```\nHere's an example of how you can use this function:\n```python\nprint(get_age_message(\"John\", 30))  # Output: John is 30 years old\nprint(get_age_message(\"Jane\"))      # Output: Jane is 25 years old\n```\nThis function checks that the age is a non-negative integer and raises a `ValueError` if it's not. It also ensures that the output message is formatted correctly, even if the age is zero or negative.",
+  "error": null,
+  "elapsed_seconds": 2.77,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

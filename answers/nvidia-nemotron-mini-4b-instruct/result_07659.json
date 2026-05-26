@@ -1,0 +1,9 @@
+{
+  "id": 7659,
+  "title": "Function to Check for Perfect Numbers",
+  "prompt": "Create a function to check if a given number is a perfect number.\nSample Input: n = 6\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! A perfect number is a positive integer that is equal to the sum of its proper positive divisors, excluding the number itself. Here's a Python function that checks if a given number is perfect:\n\n```python\ndef is_perfect(n: int) -> bool:\n    \"\"\"\n    Check if a given number is a perfect number.\n\n    :param n: The number to check.\n    :return: True if the number is perfect, False otherwise.\n    \"\"\"\n    if n < 1:\n        return False\n\n    divisors = [i for i in range(1, n) if n % i == 0]\n    return sum(divisors) == n\n```\n\nYou can use this function as follows:\n\n```python\nprint(is_perfect(6))  # Output: True\nprint(is_perfect(28))  # Output: True\nprint(is_perfect(15))  # Output: False\n```\n\nThis function first checks if the input number is less than 1, in which case it returns False since perfect numbers are positive integers. Then, it calculates the list of proper positive divisors of the number using a generator expression and checks if the sum of these divisors is equal to the number itself. If it is, the function returns True, indicating that the number is perfect. Otherwise, it returns False.",
+  "error": null,
+  "elapsed_seconds": 4.2,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

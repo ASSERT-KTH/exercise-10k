@@ -1,0 +1,9 @@
+{
+  "id": 6196,
+  "title": "String EndsWith",
+  "prompt": "Write a function that takes a string and a substring as input and returns True if the string ends with the substring, False otherwise.\nSample Input: hello world, world\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef ends_with(string, substring):\n    \"\"\"\n    Returns True if the given string ends with the given substring, False otherwise.\n\n    :param string: The string to check.\n    :param substring: The substring to look for at the end of the string.\n    :return: True if the string ends with the substring, False otherwise.\n    \"\"\"\n    # Check if the substring is empty, in which case the string cannot end with it\n    if not substring:\n        return False\n\n    # Return True if the length of the string is equal to the length of the substring\n    # and if the last characters of the string and the substring are equal\n    return len(string) >= len(substring) and string[-len(substring):] == substring\n```\nHere's an example of how you can use this function:\n```python\nprint(ends_with(\"hello world\", \"world\"))  # Output: True\nprint(ends_with(\"hello world\", \"universe\"))  # Output: False\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.72,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

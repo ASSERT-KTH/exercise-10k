@@ -1,0 +1,9 @@
+{
+  "id": 9592,
+  "title": "Input Validation",
+  "prompt": "Write a program that asks the user for their age and checks if it's a valid integer\nSample Input: 25\nSample Output: You are 25 years old\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_valid_age():\n    \"\"\"\n    Asks the user for their age and checks if it's a valid integer.\n    \"\"\"\n    while True:\n        try:\n            age = int(input(\"Please enter your age: \"))\n            if age >= 0:\n                return age\n            else:\n                print(\"Age must be a positive integer. Please try again.\")\n        except ValueError:\n            print(\"That's not a valid integer. Please try again.\")\n\n# Call the function to get the user's age\nage = get_valid_age()\n\n# Print a message with the user's age\nprint(f\"You are {age} years old.\")\n```\nThis program defines a function `get_valid_age()` that prompts the user for their age, converts the input to an integer, and checks if it's a positive number. If the input is invalid, it prints an error message and prompts the user to enter their age again. The function returns the valid age when the user enters a positive integer. Finally, the program calls this function and prints a message with the user's age.",
+  "error": null,
+  "elapsed_seconds": 2.79,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

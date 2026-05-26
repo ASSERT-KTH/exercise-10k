@@ -1,0 +1,9 @@
+{
+  "id": 1964,
+  "title": "Maximum Value",
+  "prompt": "Create a function that finds the maximum value in a list of numbers. The function should take a list as an argument and return the maximum value.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef find_max(numbers):\n    \"\"\"\n    Find the maximum value in a list of numbers.\n\n    :param numbers: List of numbers\n    :return: Maximum value in the list\n    \"\"\"\n    if not isinstance(numbers, list):\n        raise TypeError(\"The input should be a list\")\n\n    max_value = numbers[0]\n    for num in numbers:\n        if not isinstance(num, (int, float)):\n            raise TypeError(\"All elements in the list should be numbers\")\n        if num > max_value:\n            max_value = num\n\n    return max_value\n```\nThis function checks if the input is a list and if all its elements are numbers. Then, it iterates through the list to find the maximum value. Here's an example of how to use this function:\n```python\nprint(find_max([1, 2, 3, 4, 5]))  # Output: 5\nprint(find_max([1, 'two', 3, 4, 5]))  # Raises TypeError\nprint(find_max([1, 2, 3, 4, 5.0]))  # Output: 5.0\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.3,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

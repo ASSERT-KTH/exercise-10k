@@ -1,0 +1,9 @@
+{
+  "id": 4837,
+  "title": "Data Type Checking",
+  "prompt": "Write a program to check the data type of a variable, and print out a message indicating its type.\nSample Input: 5\nSample Output: The type of the variable is int\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks the data type of a variable and prints a message indicating its type:\n\n```python\ndef check_data_type(value):\n    \"\"\"Check the data type of a given value and print a message.\"\"\"\n    try:\n        # Check if the value is an integer\n        if isinstance(value, int):\n            print(f\"The type of the variable is int\")\n        # Check if the value is a float\n        elif isinstance(value, float):\n            print(f\"The type of the variable is float\")\n        # Check if the value is a string\n        elif isinstance(value, str):\n            print(f\"The type of the variable is str\")\n        # If the value is not an integer, float, or string, it must be a boolean\n        else:\n            print(f\"The type of the variable is bool\")\n    except TypeError as e:\n        print(f\"An error occurred while checking the data type: {e}\")\n\n# Example usage\nvalue = 5\ncheck_data_type(value)\n```\n\nWhen you run this program with the sample input `5`, it will output:\n\n```\nThe type of the variable is int\n```",
+  "error": null,
+  "elapsed_seconds": 2.98,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

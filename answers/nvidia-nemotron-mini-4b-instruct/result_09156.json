@@ -1,0 +1,9 @@
+{
+  "id": 9156,
+  "title": "Character Encoding",
+  "prompt": "Create a string with non-ASCII characters and encode it using a specific encoding scheme, then print out the encoded string.\nSample Input: None\nSample Output: hÃllo\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution that encodes a string containing non-ASCII characters using the UTF-8 encoding scheme:\n```python\ndef encode_non_ascii(s):\n    \"\"\"Encodes a string containing non-ASCII characters using UTF-8 encoding.\"\"\"\n    return s.encode('utf-8')\n\n# Example usage:\nnon_ascii_string = 'hÃllo'\nencoded_string = encode_non_ascii(non_ascii_string)\nprint(encoded_string)  # Output: b'hÃllo'\n```\nIn this solution, we define a function `encode_non_ascii` that takes a string as input and encodes it using the UTF-8 encoding scheme. The `encode` method is used to convert the string to bytes, and the UTF-8 encoding scheme is specified as the second argument.\n\nWe then define a string `non_ascii_string` containing non-ASCII characters, and call the `encode_non_ascii` function to encode it. The resulting bytes object is then printed out.\n\nNote that when printing the encoded string, we use the `b` prefix to indicate that it is a bytes object, and not a string.",
+  "error": null,
+  "elapsed_seconds": 2.74,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

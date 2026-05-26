@@ -1,0 +1,9 @@
+{
+  "id": 6883,
+  "title": "Conditional Bank Transaction",
+  "prompt": "Create a program that simulates a bank transaction system. The program should ask for the user's current balance and the amount they want to withdraw or deposit. Use conditional statements to determine if the transaction is possible (e.g., sufficient funds for withdrawal) and update the balance accordingly.\nSample Input: 1000\n200\nwithdraw\nSample Output: Transaction successful. New balance: 800\n",
+  "answer": "Here's a Python program that simulates a bank transaction system as described:\n\n```python\ndef bank_transaction():\n    # Initialize the balance\n    balance = 0\n\n    while True:\n        print(\"Enter your current balance:\")\n        balance = float(input())\n\n        # Check if the balance is valid\n        if balance > 0:\n            break\n        else:\n            print(\"Invalid balance. Please enter a positive number.\")\n\n    while True:\n        print(\"Enter the amount you want to withdraw or deposit:\")\n        transaction_amount = float(input())\n\n        # Check if the transaction is possible\n        if transaction_amount > balance:\n            print(\"Insufficient funds. Please try again.\")\n        elif transaction_amount < 0:\n            print(\"Invalid transaction amount. Please enter a non-negative number.\")\n        else:\n            break\n\n    print(\"Transaction successful.\")\n    balance += transaction_amount\n    print(f\"New balance: {balance}\")\n\n# Call the function\nbank_transaction()\n```\n\nThis program prompts the user for their current balance, checks if it's valid, then prompts for the transaction amount. It uses conditional statements to determine if the transaction is possible and updates the balance accordingly.",
+  "error": null,
+  "elapsed_seconds": 2.79,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

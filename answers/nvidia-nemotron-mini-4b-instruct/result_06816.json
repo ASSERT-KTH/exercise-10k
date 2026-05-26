@@ -1,0 +1,9 @@
+{
+  "id": 6816,
+  "title": "Pattern Printer",
+  "prompt": "Write a program that prints a pyramid pattern of asterisks (*) based on the input number of rows. The pattern should be centered and symmetrical. For example, if the input is 5, the output should be a pyramid with 5 rows.\nSample Input: 5\nSample Output:     *\n   ***\n  *****\n *******\n*********\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. It uses a nested loop to generate the pyramid pattern and centers it by adjusting the position of the first row.\n\n```python\ndef print_pyramid(num_rows):\n    \"\"\"Print a pyramid pattern of asterisks centered and symmetrical.\"\"\"\n\n    # Validate the input\n    if num_rows < 1:\n        raise ValueError(\"Number of rows must be a positive integer.\")\n\n    # Calculate the number of spaces required to center the first row\n    num_spaces = (num_rows - 1) // 2\n\n    # Print the first row centered\n    print(\" \" * num_spaces + \"*\")\n\n    # Print the remaining rows using a nested loop\n    for i in range(1, num_rows):\n        # Calculate the number of asterisks in the row\n        num_asterisks = i * 2 - 1\n\n        # Print the row centered\n        print(\" \" * num_spaces + (\"*\" * num_asterisks))\n\n# Example usage\nnum_rows = int(input(\"Enter the number of rows for the pyramid pattern: \"))\nprint_pyramid(num_rows)\n```\n\nThis program will prompt the user to enter the number of rows and then print the corresponding pyramid pattern centered and symmetrical.",
+  "error": null,
+  "elapsed_seconds": 3.02,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

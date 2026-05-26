@@ -1,0 +1,9 @@
+{
+  "id": 9223,
+  "title": "Grade Checker",
+  "prompt": "Create a program that checks a student's grade based on their score. The program should use conditional statements to determine the grade. If the score is 90 or above, the grade is 'A'. If the score is between 80 and 89, the grade is 'B'. If the score is between 70 and 79, the grade is 'C'. If the score is between 60 and 69, the grade is 'D'. If the score is below 60, the grade is 'F'.\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you create a program for that. Here's an example in Python:\n\n```python\ndef check_grade(score):\n    \"\"\"\n    Check a student's grade based on their score.\n\n    :param score: The student's score as an integer between 0 and 100.\n    :return: The corresponding grade as a string ('A', 'B', 'C', 'D', or 'F').\n    \"\"\"\n    # Check for invalid input\n    if not isinstance(score, int) or score < 0 or score > 100:\n        raise ValueError(\"Score must be an integer between 0 and 100.\")\n\n    # Determine the grade based on the score\n    if score >= 90:\n        grade = 'A'\n    elif score >= 80:\n        grade = 'B'\n    elif score >= 70:\n        grade = 'C'\n    elif score >= 60:\n        grade = 'D'\n    else:\n        grade = 'F'\n\n    return grade\n\n# Example usage\nscore = 85\nprint(f\"The grade for a score of {score} is {check_grade(score)}.\")\n```\n\nThis program defines a function `check_grade` that takes a score as an integer argument and returns the corresponding grade as a string. The function checks for invalid input and determines the grade based on the score, using conditional statements. The example usage at the end of the program demonstrates how to use the function to check a student's grade based on their score.",
+  "error": null,
+  "elapsed_seconds": 3.84,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

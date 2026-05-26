@@ -1,0 +1,9 @@
+{
+  "id": 9257,
+  "title": "Array Resizing",
+  "prompt": "Write a program that resizes an array to a new size and prints the result.\nSample Input: arr = [1, 2, 3, 4, 5]\nSample Output: [1, 2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that resizes an array (or list) to a new size and prints the result:\n```python\ndef resize_array(arr, new_size):\n    \"\"\"\n    Resizes an array to a new size and returns the result.\n\n    :param arr: The array to resize.\n    :param new_size: The new size of the array.\n    :return: The resized array.\n    \"\"\"\n    # Check if the new size is valid\n    if new_size < len(arr):\n        raise ValueError(\"New size cannot be less than the current size.\")\n\n    # Create a new array with the new size\n    resized_arr = arr[:new_size]\n\n    return resized_arr\n\n# Example usage\narr = [1, 2, 3, 4, 5]\nnew_size = 3\n\ntry:\n    resized_arr = resize_array(arr, new_size)\n    print(resized_arr)  # Output: [1, 2, 3]\nexcept ValueError as e:\n    print(e)  # Output: New size cannot be less than the current size.\n```\nThis program defines a function `resize_array` that takes an array and a new size as input, checks if the new size is valid, creates a new array with the new size, and returns the resized array. The example usage shows how to call this function and print the result.",
+  "error": null,
+  "elapsed_seconds": 3.6,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

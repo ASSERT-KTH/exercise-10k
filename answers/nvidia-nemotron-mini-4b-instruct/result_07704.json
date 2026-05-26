@@ -1,0 +1,9 @@
+{
+  "id": 7704,
+  "title": "Palindromic String Detection",
+  "prompt": "Determine if a given string is a palindrome (i.e., reads the same backwards as forwards).\nSample Input: madam\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that determines if a given string is a palindrome:\n\n```python\ndef is_palindrome(s: str) -> bool:\n    \"\"\"\n    Determines if a given string is a palindrome.\n\n    :param s: The string to check.\n    :return: True if the string is a palindrome, False otherwise.\n    \"\"\"\n    # Remove non-alphanumeric characters and convert to lowercase\n    s = ''.join(c.lower() for c in s if c.isalnum())\n\n    # Check if the string is equal to its reverse\n    return s == s[::-1]\n```\n\nThis function first removes any non-alphanumeric characters from the input string and converts it to lowercase. Then, it checks if the string is equal to its reverse using slicing (`s[::-1]`). If the string is equal to its reverse, it means that the string reads the same forwards and backwards, so it returns `True`. Otherwise, it returns `False`.\n\nHere are some examples of how you can use this function:\n\n```python\nprint(is_palindrome(\"madam\"))  # True\nprint(is_palindrome(\"hello\"))  # False\nprint(is_palindrome(\"A man, a plan, a canal: Panama\"))  # True\n```",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

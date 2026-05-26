@@ -1,0 +1,9 @@
+{
+  "id": 5782,
+  "title": "Function to Calculate Area and Perimeter",
+  "prompt": "Write a function that calculates the area and perimeter of a rectangle given its length and width.\nSample Input: 4, 5\nSample Output: Area: 20, Perimeter: 18\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that calculates the area and perimeter of a rectangle given its length and width:\n\n```python\ndef rectangle_properties(length, width):\n    \"\"\"\n    Calculates the area and perimeter of a rectangle given its length and width.\n\n    :param length: The length of the rectangle.\n    :param width: The width of the rectangle.\n    :return: A tuple containing the area and perimeter of the rectangle.\n    \"\"\"\n\n    # Check if the inputs are positive numbers\n    if not isinstance(length, (int, float)) or length <= 0:\n        raise ValueError(\"Length must be a positive number.\")\n\n    if not isinstance(width, (int, float)) or width <= 0:\n        raise ValueError(\"Width must be a positive number.\")\n\n    # Calculate the area and perimeter\n    area = length * width\n    perimeter = 2 * (length + width)\n\n    return area, perimeter\n```\n\nYou can use this function by calling it with the length and width as arguments, like this:\n\n```python\narea, perimeter = rectangle_properties(4, 5)\nprint(f\"Area: {area}, Perimeter: {perimeter}\")\n```\n\nThis will output:\n\n```\nArea: 20, Perimeter: 18\n```",
+  "error": null,
+  "elapsed_seconds": 3.11,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4424,
+  "title": "Fibonacci Sequence",
+  "prompt": "Create a program that generates the Fibonacci sequence up to the nth number using a while loop.\nSample Input: 10\nSample Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates the Fibonacci sequence up to the nth number using a while loop:\n\n```python\ndef fibonacci(n):\n    \"\"\"Generate the Fibonacci sequence up to the nth number using a while loop.\"\"\"\n\n    # Initialize the first two numbers in the sequence\n    fib_sequence = [0, 1]\n\n    # Check if the input is valid (greater than 0)\n    if n <= 0:\n        print(\"Input must be a positive integer.\")\n        return\n\n    # Generate the remaining numbers in the sequence up to the nth number\n    while len(fib_sequence) < n:\n        next_number = fib_sequence[-1] + fib_sequence[-2]\n        fib_sequence.append(next_number)\n\n    # Print the Fibonacci sequence up to the nth number\n    print(fib_sequence[:n])\n\n# Get user input for the nth number\nn = int(input(\"Enter the value of n: \"))\n\n# Call the function to generate the Fibonacci sequence\nfibonacci(n)\n```\n\nWhen you run this program and enter `10` as the value for `n`, it will output:\n\n```\n[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]\n```\n\nThis program first initializes the first two numbers in the Fibonacci sequence as 0 and 1. Then, it enters a while loop that continues until the length of the sequence is equal to the input value `n`. In each iteration of the loop, it calculates the next number in the sequence by adding the last two numbers in the sequence. Finally, it prints the sequence up to the nth number.",
+  "error": null,
+  "elapsed_seconds": 4.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

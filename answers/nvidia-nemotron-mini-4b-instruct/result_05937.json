@@ -1,0 +1,9 @@
+{
+  "id": 5937,
+  "title": "Finding the Longest Word",
+  "prompt": "Write a program that takes a string as input and finds the longest word in the string.\nSample Input: hello world this is a test\nSample Output: hello\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a string as input and finds the longest word in the string. This program handles cases where the input string contains multiple spaces or other whitespace characters between words.\n\n```python\ndef find_longest_word(input_string: str) -> str:\n    \"\"\"\n    Find the longest word in the given input string.\n\n    :param input_string: The input string containing words separated by whitespace.\n    :return: The longest word in the input string.\n    \"\"\"\n\n    # Split the input string into words and remove any leading or trailing whitespace\n    words = [word.strip() for word in input_string.split()]\n\n    # Find the longest word by comparing the lengths of each word\n    longest_word = max(words, key=len)\n\n    return longest_word\n\n# Get user input\ninput_string = input(\"Enter a string: \")\n\n# Find and print the longest word\nlongest_word = find_longest_word(input_string)\nprint(f\"The longest word is: {longest_word}\")\n```\n\nWhen you run this program and enter the sample input \"hello world this is a test\", it will output:\n\n```\nThe longest word is: hello\n```",
+  "error": null,
+  "elapsed_seconds": 3.14,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

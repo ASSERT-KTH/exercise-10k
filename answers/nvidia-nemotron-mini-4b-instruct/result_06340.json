@@ -1,0 +1,9 @@
+{
+  "id": 6340,
+  "title": "List Union",
+  "prompt": "Write a function that takes two lists as input, finds their union, and returns the union list.\nSample Input: [1, 2, 3], [3, 4, 5]\nSample Output: [1, 2, 3, 4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function uses the built-in `set` data structure to remove duplicates and then converts the set back to a list before returning it.\n\n```python\ndef union_lists(list1, list2):\n    \"\"\"\n    Takes two lists as input, finds their union, and returns the union list.\n\n    :param list1: The first input list\n    :param list2: The second input list\n    :return: A new list containing the union of the input lists\n    \"\"\"\n    # Convert the input lists to sets to remove duplicates\n    unique_list1 = set(list1)\n    unique_list2 = set(list2)\n\n    # Find the union of the two sets and convert it back to a list\n    union_list = list(unique_list1.union(unique_list2))\n\n    return union_list\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(union_lists([1, 2, 3], [3, 4, 5]))  # Output: [1, 2, 3, 4, 5]\n```",
+  "error": null,
+  "elapsed_seconds": 2.96,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

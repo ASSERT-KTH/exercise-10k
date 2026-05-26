@@ -1,0 +1,9 @@
+{
+  "id": 4337,
+  "title": "Find Difference of Two Arrays",
+  "prompt": "Write a program to find the difference of two arrays.\nSample Input: [1, 2, 3, 4, 5], [4, 5, 6, 7, 8]\nSample Output: [1, 2, 3, 6, 7, 8]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the difference of two arrays (also known as the symmetric difference):\n```python\ndef find_difference(arr1, arr2):\n    # Convert the arrays to sets to remove duplicates and enable fast lookup\n    set1 = set(arr1)\n    set2 = set(arr2)\n\n    # Find the symmetric difference (difference of the two sets)\n    diff = set1 ^ set2\n\n    # Convert the result back to a list and return it\n    return list(diff)\n\n# Test the function with the sample input\narr1 = [1, 2, 3, 4, 5]\narr2 = [4, 5, 6, 7, 8]\nprint(find_difference(arr1, arr2))  # Output: [1, 2, 3, 6, 7, 8]\n```\nThis program first converts the input arrays to sets to remove duplicates and enable fast lookup. Then, it finds the symmetric difference of the two sets using the `^` operator. Finally, it converts the result back to a list and returns it. The `find_difference` function can be used as follows:\n\n```python\nprint(find_difference([1, 2, 3, 4, 5], [4, 5, 6, 7, 8]))  # Output: [1, 2, 3, 6, 7, 8]\n```",
+  "error": null,
+  "elapsed_seconds": 3.52,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

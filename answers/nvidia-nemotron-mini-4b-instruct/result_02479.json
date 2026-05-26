@@ -1,0 +1,9 @@
+{
+  "id": 2479,
+  "title": "String Search",
+  "prompt": "Create a function that searches for a given substring within a larger string.\nSample Input: ['Hello World', 'World']\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef search_substring(string, substring):\n    \"\"\"\n    Searches for a given substring within a larger string.\n\n    Parameters:\n    string (str): The larger string to search in.\n    substring (str): The substring to search for.\n\n    Returns:\n    int: The index of the first occurrence of the substring in the string, or -1 if not found.\n    \"\"\"\n    if not isinstance(string, str) or not isinstance(substring, str):\n        raise TypeError(\"Both string and substring must be strings.\")\n\n    return string.find(substring)\n```\nHere's an example of how to use this function:\n```python\nstrings = ['Hello World', 'World']\nsubstring = 'World'\n\nindex = search_substring(''.join(strings), substring)\nprint(index)  # Output: 6\n```\nThis function checks if the input types are strings, and then uses the built-in `find()` method to search for the substring in the string. If the substring is not found, it returns -1.",
+  "error": null,
+  "elapsed_seconds": 2.72,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9639,
+  "title": "Function with Argparse",
+  "prompt": "Write a function that uses argparse to parse command-line arguments.\nSample Input: --name John --age 30\nSample Output: John is 30 years old.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example Python function that uses `argparse` to parse command-line arguments and formats the output as requested:\n\n```python\nimport argparse\n\ndef main():\n    # Define the parser\n    parser = argparse.ArgumentParser(description=\"Parse command-line arguments and print a message.\")\n\n    # Add required arguments\n    parser.add_argument(\"name\", help=\"The name of the person.\")\n    parser.add_argument(\"age\", type=int, help=\"The age of the person.\")\n\n    # Parse the arguments\n    args = parser.parse_args()\n\n    # Format and print the output\n    print(f\"{args.name} is {args.age} years old.\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\nWhen you run this script with the sample input `--name John --age 30`, it will output:\n\n```\nJohn is 30 years old.\n```\n\nYou can customize the parser to include more arguments, add help messages, and modify the output format as needed.",
+  "error": null,
+  "elapsed_seconds": 2.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

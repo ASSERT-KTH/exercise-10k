@@ -1,0 +1,9 @@
+{
+  "id": 8079,
+  "title": "Function that Uses a Decorator",
+  "prompt": "Write a function that uses a decorator to modify its behavior\nSample Input: None\nSample Output: The result of the function with the decorator applied\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example of how you could write a function that uses a decorator to modify its behavior. In this example, the decorator will add a message to the beginning of the function call.\n\n```python\ndef decorator_message(func):\n    \"\"\"A decorator that adds a message to the beginning of the function call.\"\"\"\n\n    def wrapper(*args, **kwargs):\n        \"\"\"The wrapper function that adds the message.\"\"\"\n        print(\"Calling function: \" + func.__name__)\n        return func(*args, **kwargs)\n\n    return wrapper\n\n# Example function with the decorator applied\n@decorator_message\ndef greet(name):\n    \"\"\"A simple function that greets a person.\"\"\"\n    return \"Hello, \" + name + \"!\"\n\n# Calling the function\ngreet(\"Alice\")\n```\n\nWhen you run this code, you'll see the following output:\n\n```\nCalling function: greet\nHello, Alice!\n```\n\nThis demonstrates how you can use a decorator to modify the behavior of a function without changing its definition. You can create any number of decorators and apply them to functions in any order you like.",
+  "error": null,
+  "elapsed_seconds": 2.66,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 342,
+  "title": "List Filtering",
+  "prompt": "Create a function that filters a list based on a given condition.\nSample Input: [1, 2, 3, 4, 5], condition: x > 3\nSample Output: [4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef filter_list(lst, condition):\n    \"\"\"\n    Filters a list based on a given condition.\n\n    Parameters:\n    lst (list): The list to filter.\n    condition (callable): A function that takes one argument (the element of the list) and returns a boolean value.\n                          The function should be applied to each element of the list to determine whether it should be included in the result.\n\n    Returns:\n    list: A new list containing only the elements from `lst` that satisfy the given condition.\n    \"\"\"\n    return [element for element in lst if condition(element)]\n```\nHere's an example of how to use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\n\ndef is_greater_than_three(x):\n    return x > 3\n\nfiltered_numbers = filter_list(numbers, is_greater_than_three)\nprint(filtered_numbers)  # Output: [4, 5]\n```\nThis function uses a list comprehension to create a new list containing only the elements from the input list that satisfy the given condition. The `condition` parameter can be any callable object, such as a function or a method, that takes one argument (the element of the list) and returns a boolean value.",
+  "error": null,
+  "elapsed_seconds": 4.54,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

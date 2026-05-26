@@ -1,0 +1,9 @@
+{
+  "id": 7181,
+  "title": "Basic LCM Calculation",
+  "prompt": "Write a program that calculates the least common multiple (LCM) of two numbers\nSample Input: 12, 15\nSample Output: 60\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the least common multiple (LCM) of two numbers:\n\n```python\ndef lcm(a, b):\n    \"\"\"\n    Calculate the least common multiple (LCM) of two numbers.\n\n    :param a: The first number.\n    :param b: The second number.\n    :return: The least common multiple of a and b.\n    \"\"\"\n    # Ensure a and b are positive integers\n    a, b = abs(a), abs(b)\n\n    # Calculate the LCM using the formula: LCM(a, b) = |a*b| / GCD(a, b)\n    gcd = lambda a, b: gcd(b, a % b) if b else a\n    lcm_value = abs(a * b) // gcd(a, b)\n\n    return lcm_value\n\n# Example usage\nprint(lcm(12, 15))  # Output: 60\n```\n\nThis program first ensures that the input numbers are positive integers by taking their absolute values. Then, it calculates the LCM using the formula `LCM(a, b) = |a*b| / GCD(a, b)`, where `gcd(a, b)` is the greatest common divisor of `a` and `b`. The `gcd` function is implemented using the Euclidean algorithm. Finally, it returns the calculated LCM.",
+  "error": null,
+  "elapsed_seconds": 3.42,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

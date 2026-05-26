@@ -1,0 +1,9 @@
+{
+  "id": 3571,
+  "title": "Dictionary Searching",
+  "prompt": "Write a function that searches a dictionary for a given key or value\nSample Input: {\"a\": 1, \"b\": 2, \"c\": 3} and search (key \"b\" or value 2)\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function, `search_dict`, takes a dictionary and a key or value as arguments, and returns the corresponding value if found, or `None` if not found.\n\n```python\ndef search_dict(dictionary, key_or_value):\n    \"\"\"\n    Searches a dictionary for a given key or value.\n\n    Parameters:\n    dictionary (dict): The dictionary to search in.\n    key_or_value (any): The key or value to search for.\n\n    Returns:\n    any: The corresponding value if found, or None otherwise.\n    \"\"\"\n\n    # Check if the argument is a key or a value\n    if isinstance(key_or_value, str):\n        # If it's a key, search for it in the dictionary\n        return dictionary.get(key_or_value, None)\n    elif isinstance(key_or_value, int) or isinstance(key_or_value, float):\n        # If it's a value, search for any key with that value\n        return next((value for key, value in dictionary.items() if key_or_value == value), None)\n    else:\n        raise ValueError(\"The 'key_or_value' argument must be a string or an integer/float.\")\n```\n\nHere's an example of how to use this function:\n\n```python\nmy_dict = {\"a\": 1, \"b\": 2, \"c\": 3}\n\nprint(search_dict(my_dict, \"b\"))  # Output: 2\nprint(search_dict(my_dict, 2))     # Output: 2\nprint(search_dict(my_dict, \"d\"))   # Output: None\nprint(search_dict(my_dict, 4))     # Output: None\n```",
+  "error": null,
+  "elapsed_seconds": 4.3,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

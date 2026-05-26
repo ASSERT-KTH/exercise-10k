@@ -1,0 +1,9 @@
+{
+  "id": 6184,
+  "title": "String Indexing",
+  "prompt": "Write a function that takes a string and an index as input and returns the character at the specified index.\nSample Input: Hello World, 3\nSample Output: l\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_char_at_index(s: str, index: int) -> str:\n    \"\"\"\n    Returns the character at the specified index in the input string.\n\n    :param s: The input string.\n    :param index: The index of the character to return.\n    :return: The character at the specified index.\n    \"\"\"\n    if not isinstance(s, str) or not isinstance(index, int):\n        raise TypeError(\"Both 's' and 'index' must be of type str and int, respectively.\")\n\n    if index < 0 or index >= len(s):\n        raise IndexError(\"The specified index is out of bounds for the input string.\")\n\n    return s[index]\n```\nHere's an example of how you can use this function:\n```python\nprint(get_char_at_index(\"Hello World\", 3))  # Output: l\n```\nThis function checks that the input types are correct and that the index is within bounds before returning the character at the specified index.",
+  "error": null,
+  "elapsed_seconds": 2.61,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

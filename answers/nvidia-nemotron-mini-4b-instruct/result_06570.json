@@ -1,0 +1,9 @@
+{
+  "id": 6570,
+  "title": "Dictionary Filtering",
+  "prompt": "Write a function that filters a dictionary based on a given condition\nSample Input: {'name': 'Ivan', 'age': 70, 'city': 'LA'} and condition 'age > 60'\nSample Output: {'age': 70}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef filter_dict_by_condition(dictionary, condition):\n    \"\"\"\n    Filters a dictionary based on a given condition.\n\n    Parameters:\n    dictionary (dict): The dictionary to filter.\n    condition (callable): A function that takes a single argument (the value of a dictionary key) and returns a boolean value.\n\n    Returns:\n    dict: A new dictionary containing only the keys and values that satisfy the given condition.\n    \"\"\"\n    return {key: value for key, value in dictionary.items() if condition(value)}\n```\nHere's an example of how you can use this function:\n```python\ndef is_over_sixty(age):\n    \"\"\"Returns True if the given age is greater than 60, False otherwise.\"\"\"\n    return age > 60\n\nfiltered_dict = filter_dict_by_condition({'name': 'Ivan', 'age': 70, 'city': 'LA'}, is_over_sixty)\nprint(filtered_dict)  # Output: {'age': 70}\n```\nThis function uses a dictionary comprehension to create a new dictionary that only includes keys and values that satisfy the given condition. The `condition` parameter can be any callable function that takes a single argument and returns a boolean value.",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

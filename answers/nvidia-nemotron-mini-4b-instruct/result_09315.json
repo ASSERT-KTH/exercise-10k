@@ -1,0 +1,9 @@
+{
+  "id": 9315,
+  "title": "Spaced String Reverser",
+  "prompt": "Write a function that takes a string as input and returns the string with words reversed and separated by spaces.\nSample Input: Hello World this is a test\nSample Output: test a is this World Hello\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef reverse_words(input_string: str) -> str:\n    \"\"\"\n    Reverses the order of words in a given string and separates them by spaces.\n\n    :param input_string: The input string containing words to be reversed.\n    :return: The string with words reversed and separated by spaces.\n    \"\"\"\n    # Split the input string into words, reverse the order of words, and then join them back together with spaces\n    return ' '.join(word for word in input_string.split()[::-1])\n```\nHere's how you can use this function:\n```python\nsample_input = \"Hello World this is a test\"\nsample_output = reverse_words(sample_input)\nprint(sample_output)  # Output: test a is this World Hello\n```\nThis function first splits the input string into words using the `split()` method, then reverses the order of the words using a generator expression and slicing (`[::-1]`), and finally joins the words back together with spaces using the `join()` method.",
+  "error": null,
+  "elapsed_seconds": 2.63,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

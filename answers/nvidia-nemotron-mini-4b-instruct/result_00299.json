@@ -1,0 +1,9 @@
+{
+  "id": 299,
+  "title": "Rounding Numbers Calculator",
+  "prompt": "Write a program that rounds a given number to the nearest integer or to a specified number of decimal places.\nSample Input: 3.14159 2\nSample Output: 3.14\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef round_number(number, decimal_places=0):\n    \"\"\"\n    Rounds a given number to the nearest integer or to a specified number of decimal places.\n\n    Parameters:\n    number (float): The number to be rounded.\n    decimal_places (int): The number of decimal places to round to. If 0, rounds to the nearest integer.\n\n    Returns:\n    float: The rounded number.\n    \"\"\"\n    if decimal_places < 0:\n        raise ValueError(\"Decimal places must be non-negative\")\n\n    if decimal_places == 0:\n        return int(number) if number == int(number) else number\n    else:\n        return round(number, decimal_places)\n\n# Example usage:\nsample_input = 3.14159\nsample_output = 3.14\n\nprint(round_number(sample_input, 2))  # Output: 3.14\n```\nThis function first checks if the `decimal_places` parameter is non-negative. If it is, the function uses the `round()` function with the specified number of decimal places to round the number. If the number of decimal places is 0, the function rounds to the nearest integer using the `int()` function. The function then returns the rounded number.",
+  "error": null,
+  "elapsed_seconds": 5.04,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9179,
+  "title": "Variable Naming Convention",
+  "prompt": "Declare variables with valid and descriptive names\nSample Input: student_name, student_age\nSample Output: John Doe, 20\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that declares variables with valid and descriptive names:\n\n```python\ndef declare_variables(student_name, student_age):\n    \"\"\"\n    Declares variables with valid and descriptive names.\n\n    :param student_name: The name of the student.\n    :param student_age: The age of the student.\n    :return: A string containing the name and age of the student.\n    \"\"\"\n\n    # Validate the input types\n    if not isinstance(student_name, str) or not isinstance(student_age, int):\n        raise TypeError(\"Both student_name and student_age must be strings or integers.\")\n\n    # Declare the variables with descriptive names\n    student_details = f\"{student_name}, {student_age}\"\n\n    return student_details\n```\n\nYou can use this function like this:\n\n```python\nstudent_name = \"John Doe\"\nstudent_age = 20\n\nstudent_details = declare_variables(student_name, student_age)\nprint(student_details)  # Output: John Doe, 20\n```\n\nThis function checks if the input types are strings or integers, and raises a `TypeError` if they are not. It then declares the variables with descriptive names, which can be easily understood by other developers or users of the code.",
+  "error": null,
+  "elapsed_seconds": 3.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

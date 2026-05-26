@@ -1,0 +1,9 @@
+{
+  "id": 9825,
+  "title": "String Reversal and Validation",
+  "prompt": "Write a program that takes a string input and checks if it is a palindrome. If the string is a palindrome, the program should print the reversed string. Otherwise, it should print a message indicating that the string is not a palindrome. The program should handle strings with spaces and special characters by ignoring them and considering only alphanumeric characters. It should also be case-insensitive.\nSample Input: A man, a plan, a canal: Panama\nSample Output: A man, a plan, a canal: Panama\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\nimport re\n\ndef is_palindrome(s):\n    # Remove non-alphanumeric characters and convert to lowercase\n    s = re.sub(r'\\W+', '', s.lower())\n\n    # Check if the string is equal to its reverse\n    return s == s[::-1]\n\ndef main():\n    input_str = input(\"Enter a string: \")\n\n    if is_palindrome(input_str):\n        reversed_str = input_str[::-1]\n        print(f\"{input_str} is a palindrome. Its reverse is: {reversed_str}\")\n    else:\n        print(f\"{input_str} is not a palindrome.\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program first removes all non-alphanumeric characters from the input string and converts it to lowercase. Then it checks if the string is equal to its reverse, which indicates that it's a palindrome. If it is, the program prints the reversed string; otherwise, it prints a message indicating that the string is not a palindrome.",
+  "error": null,
+  "elapsed_seconds": 2.76,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

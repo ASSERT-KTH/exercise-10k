@@ -1,0 +1,9 @@
+{
+  "id": 7065,
+  "title": "Input Validation",
+  "prompt": "Write a program that takes a input as input and checks whether it is valid or not.\nSample Input: 123\nSample Output: Input is valid.\n",
+  "answer": "Sure, I can help you with that. Here's a Python program that checks if a given input is a valid integer:\n\n```python\ndef is_valid_integer(input_value):\n    \"\"\"\n    Check if the given input is a valid integer.\n\n    :param input_value: The value to check.\n    :return: True if the input is a valid integer, False otherwise.\n    \"\"\"\n    try:\n        int_value = int(input_value)\n        return True\n    except ValueError:\n        return False\n\n# Get user input\nuser_input = input(\"Enter a number: \")\n\n# Check if the input is valid\nif is_valid_integer(user_input):\n    print(f\"Input is valid: {user_input}\")\nelse:\n    print(\"Input is not valid.\")\n```\n\nThis program defines a function `is_valid_integer` that takes an input value and checks if it can be converted to an integer without raising a `ValueError`. If the conversion is successful, the function returns `True`. Otherwise, it returns `False`. The program then prompts the user to enter a number, checks if the input is valid using the `is_valid_integer` function, and prints an appropriate message based on the result.",
+  "error": null,
+  "elapsed_seconds": 2.88,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

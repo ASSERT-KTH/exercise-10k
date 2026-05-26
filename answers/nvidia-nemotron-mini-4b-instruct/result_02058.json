@@ -1,0 +1,9 @@
+{
+  "id": 2058,
+  "title": "Dictionary Merging with Overlapping Keys",
+  "prompt": "Write a function to merge two dictionaries with overlapping keys.\nSample Input: {'a': 1, 'b': 2}, {'b': 3, 'c': 4}\nSample Output: {'a': 1, 'b': 3, 'c': 4}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that merges two dictionaries with overlapping keys, replacing the values of the second dictionary with those of the first one:\n```python\ndef merge_dicts(dict1, dict2):\n    \"\"\"\n    Merges two dictionaries with overlapping keys, replacing the values of the second dictionary with those of the first one.\n\n    Parameters:\n    dict1 (dict): The first dictionary.\n    dict2 (dict): The second dictionary.\n\n    Returns:\n    dict: The merged dictionary.\n    \"\"\"\n    # Create a copy of dict1 to avoid modifying the original dictionary\n    merged_dict = dict1.copy()\n\n    # Update the merged dictionary with the values from dict2\n    merged_dict.update(dict2)\n\n    return merged_dict\n```\nHere's an example of how you can use this function:\n```python\ndict1 = {'a': 1, 'b': 2}\ndict2 = {'b': 3, 'c': 4}\n\nmerged_dict = merge_dicts(dict1, dict2)\nprint(merged_dict)  # Output: {'a': 1, 'b': 3, 'c': 4}\n```\nThis function first creates a copy of the first dictionary to avoid modifying the original one. Then, it updates the merged dictionary with the values from the second dictionary using the `update()` method. The resulting merged dictionary will have the values from the first dictionary for any keys that are not present in the second dictionary, and the values from the second dictionary for any keys that are present in both dictionaries.",
+  "error": null,
+  "elapsed_seconds": 3.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 835,
+  "title": "StringInterleaving",
+  "prompt": "Given three strings, check if the third string is an interleaving of the first two strings.\nSample Input: abc, def, dfeabc\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if the third string is an interleaving of the first two strings:\n```python\ndef is_interleaving(str1, str2, str3):\n    if len(str1) + len(str2) != len(str3):\n        return False\n\n    m, n = len(str1), len(str2)\n    if str3 == str1 + str2:\n        return True\n\n    dp = [[False] * (n + 1) for _ in range(m + 1)]\n    dp[0][0] = True\n\n    for i in range(1, m + 1):\n        dp[i][0] = dp[i - 1][0] and str1[i - 1] == str3[i - 1]\n\n    for j in range(1, n + 1):\n        dp[0][j] = dp[0][j - 1] and str2[j - 1] == str3[j - 1]\n\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            dp[i][j] = dp[i - 1][j] or dp[i][j - 1] or str1[i - 1] == str3[i + j - 1] and dp[i - 1][j - 1]\n\n    return dp[-1][-1]\n```\nThis function uses dynamic programming to build a table `dp` that stores the result of checking if the first `i` characters of `str1` and the first `j` characters of `str2` can form the first `i + j` characters of `str3`. The function then checks if the last row of the table is all `True`, which means that the last `i + j` characters of `str3` can be formed by interleaving the last `i` characters of `str1` and the last `j` characters of `str2`.\n\nHere's an example usage of the function:\n```python\nprint(is_interleaving('abc', 'def', 'dfeabc'))  # Output: True\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 5.23,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

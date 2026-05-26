@@ -1,0 +1,9 @@
+{
+  "id": 9685,
+  "title": "String Validator",
+  "prompt": "Create a function that takes a string as input and checks if it contains only alphanumeric characters and spaces. If the string is valid, return 'Valid', otherwise return 'Invalid'. The function should be case-sensitive.\nSample Input: Hello World123\nSample Output: Valid\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\nimport re\n\ndef is_alphanumeric_and_space(s: str) -> str:\n    \"\"\"\n    Check if a string contains only alphanumeric characters and spaces.\n\n    :param s: The input string.\n    :return: 'Valid' if the string is valid, 'Invalid' otherwise.\n    \"\"\"\n    # Use a regular expression to match only alphanumeric characters and spaces\n    pattern = r'^[a-zA-Z0-9\\s]*$'\n\n    # Compile the pattern into a regular expression object\n    regex = re.compile(pattern)\n\n    # Check if the string matches the pattern\n    if regex.match(s):\n        return 'Valid'\n    else:\n        return 'Invalid'\n```\nHere's how you can use this function:\n```python\nprint(is_alphanumeric_and_space(\"Hello World123\"))  # Output: Valid\nprint(is_alphanumeric_and_space(\"Hello World123!\"))  # Output: Invalid\nprint(is_alphanumeric_and_space(\"   \"))  # Output: Valid\nprint(is_alphanumeric_and_space(\"abcdefghijklmnopqrstuvwxyz\"))  # Output: Valid\nprint(is_alphanumeric_and_space(\"ABCDEFGHIJKLMNOPQRSTUVWXYZ\"))  # Output: Valid\n```\nThis function uses a regular expression to match only alphanumeric characters and spaces, which is case-sensitive. The `re.match()` function is used to check if the entire string matches the pattern, and the function returns 'Valid' or 'Invalid' accordingly.",
+  "error": null,
+  "elapsed_seconds": 4.3,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

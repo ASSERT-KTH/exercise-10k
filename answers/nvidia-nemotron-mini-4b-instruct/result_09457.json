@@ -1,0 +1,9 @@
+{
+  "id": 9457,
+  "title": "Number Sequence",
+  "prompt": "Write a program that generates a sequence of numbers (e.g. Fibonacci, factorial, etc.)\nSample Input: 10\nSample Output: 0 1 1 2 3 5 8 13 21 34\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates a sequence of numbers based on the user's input. In this case, it generates the Fibonacci sequence up to a specified number of terms.\n\n```python\ndef generate_sequence(num_terms):\n    \"\"\"\n    Generates a sequence of numbers based on the user's input.\n\n    :param num_terms: The number of terms in the sequence to generate.\n    :return: A list of the generated sequence numbers.\n    \"\"\"\n\n    # Initialize the first two terms of the sequence\n    sequence = [0, 1]\n\n    # Generate the remaining terms up to the specified number of terms\n    while len(sequence) < num_terms:\n        next_term = sequence[-1] + sequence[-2]\n        sequence.append(next_term)\n\n    return sequence\n\n# Get user input for the number of terms\nnum_terms = int(input(\"Enter the number of terms in the sequence: \"))\n\n# Generate and print the sequence\nsequence = generate_sequence(num_terms)\nprint(\"Sequence:\", *sequence, sep=\" \")\n```\n\nWhen you run this program and enter `10` as the number of terms, it will output:\n\n```\nEnter the number of terms in the sequence: 10\nSequence: 0 1 1 2 3 5 8 13 21 34\n```",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2147,
+  "title": "Hexadecimal to Decimal Conversion",
+  "prompt": "Write a program that converts a given hexadecimal number to decimal.\nSample Input: A\nSample Output: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that converts a given hexadecimal number to decimal:\n\n```python\ndef hex_to_dec(hex_num):\n    \"\"\"\n    Converts a given hexadecimal number to decimal.\n\n    :param hex_num: The hexadecimal number to convert.\n    :return: The decimal equivalent of the given hexadecimal number.\n    \"\"\"\n\n    # Define a dictionary to map hexadecimal digits to their decimal equivalents\n    hex_digits = {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7,\n                  '8': 8, '9': 9, 'A': 10, 'B': 11, 'C': 12, 'D': 13, 'E': 14, 'F': 15}\n\n    # Initialize the decimal value to 0\n    dec_val = 0\n\n    # Iterate through the hexadecimal number from right to left\n    for char in hex_num[::-1]:  # Reverse the string to iterate from right to left\n        # Convert the hexadecimal digit to its decimal equivalent and multiply by the base (2^i)\n        dec_val += hex_digits[char] * (16 ** (len(hex_num) - hex_num.index(char) - 1))\n\n    return dec_val\n\n\n# Test the function with the sample input\nprint(hex_to_dec('A'))  # Output: 10\n```\n\nThis program defines a function `hex_to_dec` that takes a hexadecimal number as input and returns its decimal equivalent. It first defines a dictionary to map hexadecimal digits to their decimal equivalents, then initializes the decimal value to 0 and iterates through the hexadecimal number from right to left, converting each hexadecimal digit to its decimal equivalent and multiplying the result by the base (2^i) for each iteration. Finally, it returns the decimal value.",
+  "error": null,
+  "elapsed_seconds": 5.01,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

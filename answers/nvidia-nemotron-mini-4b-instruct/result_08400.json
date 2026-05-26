@@ -1,0 +1,9 @@
+{
+  "id": 8400,
+  "title": "Grade Checker",
+  "prompt": "Create a program that checks if a student's grade is passing or failing based on their score. If the score is 50 or above, the grade is passing; otherwise, it's failing.\nSample Input: 75\nSample Output: Passing\n",
+  "answer": "Sure, I'd be happy to help you create a program for that. Here's an example Python program that meets your requirements:\n\n```python\ndef check_grade(score):\n    \"\"\"\n    Check if a student's grade is passing or failing based on their score.\n\n    :param score: The student's score as an integer between 0 and 100.\n    :return: A string indicating whether the grade is passing or failing.\n    \"\"\"\n    if 0 <= score <= 49:\n        return \"Failing\"\n    elif score >= 50:\n        return \"Passing\"\n    else:\n        raise ValueError(\"Score must be an integer between 0 and 100.\")\n\n# Example usage:\nscore = 75\nprint(check_grade(score))  # Output: Passing\n```\n\nThis program defines a function `check_grade` that takes a score as input and returns a string indicating whether the grade is passing or failing. It checks if the score is less than 50, in which case it returns \"Failing\". If the score is 50 or above, it returns \"Passing\". If the score is not an integer between 0 and 100, it raises a `ValueError`.",
+  "error": null,
+  "elapsed_seconds": 2.87,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

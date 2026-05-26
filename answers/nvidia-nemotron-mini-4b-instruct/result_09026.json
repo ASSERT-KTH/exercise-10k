@@ -1,0 +1,9 @@
+{
+  "id": 9026,
+  "title": "Distance Between Points",
+  "prompt": "Create a function that takes the coordinates of two points as arguments and returns the distance between them\nSample Input: (1, 2), (4, 6)\nSample Output: 5.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that calculates the Euclidean distance between two points with given coordinates. The Euclidean distance is the straight-line distance between two points in Euclidean space.\n\n```python\nimport math\n\ndef distance_between_points(point1, point2):\n    \"\"\"\n    Calculates the Euclidean distance between two points with given coordinates.\n\n    :param point1: A tuple of two floats representing the x and y coordinates of the first point.\n    :param point2: A tuple of two floats representing the x and y coordinates of the second point.\n    :return: A float representing the Euclidean distance between the two points.\n    \"\"\"\n    if len(point1) != 2 or len(point2) != 2:\n        raise ValueError(\"Both points should have exactly two coordinates.\")\n\n    x1, y1 = point1\n    x2, y2 = point2\n\n    return math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)\n```\n\nYou can use this function as follows:\n\n```python\nprint(distance_between_points((1, 2), (4, 6)))  # Output: 5.0\n```",
+  "error": null,
+  "elapsed_seconds": 2.91,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

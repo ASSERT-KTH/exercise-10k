@@ -1,0 +1,9 @@
+{
+  "id": 9607,
+  "title": "Quiz Program with Multiple Choice",
+  "prompt": "Write a program that asks the user a series of multiple-choice questions and keeps track of the score\nSample Input: answer1\nanswer2\nanswer3\nSample Output: Score: 2/3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_user_answer(question):\n    \"\"\"Get user input for a multiple-choice question.\"\"\"\n    answers = question.splitlines()\n    answer_index = int(input(f\"Which answer is correct? (Enter the number): \")) - 1\n    return answers[answer_index]\n\ndef main():\n    questions = [\n        \"Who is the capital of France? (a) Paris, (b) London, (c) Berlin\",\n        \"What is the largest planet in our solar system? (a) Jupiter, (b) Saturn, (c) Neptune\"\n    ]\n\n    score = 0\n    for question in questions:\n        correct_answer = get_user_answer(question)\n        if correct_answer.lower() == questions[questions.index(question)].splitlines()[-1].lower():\n            score += 1\n\n    print(f\"Score: {score}/{len(questions)}\")\n\nif __name__ == \"__main__\":\n    main()\n```\nThis program defines two functions: `get_user_answer` and `main`. The `get_user_answer` function prompts the user for a multiple-choice question and returns the correct answer. The `main` function iterates through a list of questions, calls `get_user_answer` for each question, and increments the score if the user's answer is correct. Finally, it prints the score and the number of questions answered correctly.\n\nYou can modify the `questions` list to include your own multiple-choice questions. The program will prompt the user for the correct answer for each question, and the score will be updated accordingly.",
+  "error": null,
+  "elapsed_seconds": 3.92,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

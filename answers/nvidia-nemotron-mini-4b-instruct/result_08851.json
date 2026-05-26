@@ -1,0 +1,9 @@
+{
+  "id": 8851,
+  "title": "Function to Check if a String is a Substring of Another String",
+  "prompt": "Create a function to check if a given string is a substring of another string or not\nSample Input: abc, abcdef\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a given string is a substring of another string:\n\n```python\ndef is_substring(string1, string2):\n    \"\"\"\n    Check if string1 is a substring of string2.\n\n    :param string1: The string to check for as a substring.\n    :param string2: The string to search in.\n    :return: True if string1 is a substring of string2, False otherwise.\n    \"\"\"\n    if not isinstance(string1, str) or not isinstance(string2, str):\n        raise TypeError(\"Both inputs must be strings.\")\n\n    return string1 in string2\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(is_substring(\"abc\", \"abcdef\"))  # Output: True\nprint(is_substring(\"hello\", \"world\"))  # Output: False\n```\n\nThis function first checks if both inputs are strings, and raises a `TypeError` if they are not. Then, it uses the built-in `str.in` method to check if the first string is a substring of the second string.",
+  "error": null,
+  "elapsed_seconds": 2.71,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

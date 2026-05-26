@@ -1,0 +1,9 @@
+{
+  "id": 5894,
+  "title": "Array Rotation",
+  "prompt": "Write a function that takes an array and a number of positions as input and returns the array rotated by that number of positions.\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: [4, 5, 1, 2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It takes an array (list) and a number of positions as input, and returns the array rotated by that number of positions. If the number of positions is greater than the length of the array, it will simply wrap around to the beginning of the array.\n\n```python\ndef rotate_array(arr, positions):\n    \"\"\"\n    Rotates an array by the given number of positions.\n\n    Parameters:\n    arr (list): The input array.\n    positions (int): The number of positions to rotate the array by.\n\n    Returns:\n    list: The rotated array.\n    \"\"\"\n\n    # Ensure positions is non-negative\n    positions %= len(arr)\n\n    # Rotate the array by shifting elements to the left\n    return arr[-positions:] + arr[:-positions]\n```\n\nHere's an example of how to use this function:\n\n```python\narr = [1, 2, 3, 4, 5]\npositions = 2\n\nrotated_arr = rotate_array(arr, positions)\nprint(rotated_arr)  # Output: [4, 5, 1, 2, 3]\n```",
+  "error": null,
+  "elapsed_seconds": 3.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

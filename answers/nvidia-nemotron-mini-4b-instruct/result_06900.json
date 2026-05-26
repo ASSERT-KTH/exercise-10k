@@ -1,0 +1,9 @@
+{
+  "id": 6900,
+  "title": "Function Frenzy",
+  "prompt": "Create a function that takes in a list of integers and returns the sum of all the even numbers. The function should also take an optional parameter that, if True, returns the sum of all the odd numbers instead.\nSample Input: [1, 2, 3, 4, 5, 6]\nSample Output: 12\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef sum_of_numbers(numbers, odd_sum=False):\n    \"\"\"\n    Calculates the sum of all the even or odd numbers in the given list.\n\n    Parameters:\n    numbers (list): A list of integers.\n    odd_sum (bool): If True, returns the sum of all the odd numbers; otherwise, returns the sum of all the even numbers.\n\n    Returns:\n    int: The sum of all the even or odd numbers in the given list.\n    \"\"\"\n    # Filter out the numbers based on whether they are even or odd\n    if odd_sum:\n        numbers = [num for num in numbers if num % 2 != 0]\n    else:\n        numbers = [num for num in numbers if num % 2 == 0]\n\n    # Calculate the sum of the filtered numbers\n    total = sum(numbers)\n\n    return total\n```\nHere's an example of how you can use this function:\n```python\nprint(sum_of_numbers([1, 2, 3, 4, 5, 6]))  # Output: 12\nprint(sum_of_numbers([1, 2, 3, 4, 5, 6], odd_sum=True))  # Output: 15\n```\nThis function first filters the input list to only include even or odd numbers based on the `odd_sum` parameter. Then, it calculates the sum of the filtered numbers using the built-in `sum()` function.",
+  "error": null,
+  "elapsed_seconds": 3.64,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

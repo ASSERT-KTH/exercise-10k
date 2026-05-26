@@ -1,0 +1,9 @@
+{
+  "id": 2356,
+  "title": "Character Frequency",
+  "prompt": "Write a program to take a string as input and count the frequency of each character in the string\nSample Input: hello world\nSample Output: {h: 1, e: 1, l: 3, o: 2,  : 1, w: 1, r: 1, d: 1}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a string as input and counts the frequency of each character in the string:\n```python\ndef char_frequency(s):\n    # Create an empty dictionary to store the character frequencies\n    freq = {}\n\n    # Iterate over each character in the string\n    for char in s:\n        # If the character is already in the dictionary, increment its count\n        if char in freq:\n            freq[char] += 1\n        # Otherwise, add the character to the dictionary with a count of 1\n        else:\n            freq[char] = 1\n\n    return freq\n\n# Get user input\ns = input(\"Enter a string: \")\n\n# Call the function and print the result\nprint(char_frequency(s))\n```\nWhen you run this program and enter the sample input \"hello world\", it will output:\n```yaml\n{h: 1, e: 1, l: 3, o: 2,  : 1, w: 1, r: 1, d: 1}\n```\nThis program uses a dictionary to store the character frequencies, where the keys are the characters and the values are their counts. The `for` loop iterates over each character in the input string, and for each character, it checks if it's already in the dictionary. If it is, the count for that character is incremented; otherwise, it's added to the dictionary with a count of 1. Finally, the function returns the dictionary of character frequencies.",
+  "error": null,
+  "elapsed_seconds": 3.94,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

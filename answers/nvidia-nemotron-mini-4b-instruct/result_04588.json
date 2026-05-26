@@ -1,0 +1,9 @@
+{
+  "id": 4588,
+  "title": "Function to Generate Random Password",
+  "prompt": "Write a function that takes a length as input and returns a random password of that length\nSample Input: 10\nSample Output: random password of length 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function uses the `secrets` module to generate a cryptographically strong random password. If you don't have this module installed, you can install it using pip:\n\n```bash\npip install secrets\n```\n\nHere's the function:\n\n```python\nimport secrets\n\ndef generate_random_password(length: int) -> str:\n    \"\"\"\n    Generate a random password of the given length.\n\n    :param length: The desired length of the password.\n    :return: A random password of the given length.\n    \"\"\"\n    if length < 8:\n        raise ValueError(\"Password length must be at least 8 characters.\")\n\n    # Use secrets.choice() to select a character from a set of allowed characters\n    # (e.g., lowercase letters, uppercase letters, digits, and special characters)\n    allowed_chars = \"abcdefghijklmnopqrstuvwxyz\" + \\\n                     \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\" + \\\n                     \"0123456789\" + \\\n                     \"!@#$%^&*()-_=+[]{}|;:,.<>?\"\n\n    return \"\".join(secrets.choice(allowed_chars) for _ in range(length))\n```\n\nYou can use this function like this:\n\n```python\npassword_length = 10\npassword = generate_random_password(password_length)\nprint(f\"A random password of length {password_length}: {password}\")\n```",
+  "error": null,
+  "elapsed_seconds": 3.89,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

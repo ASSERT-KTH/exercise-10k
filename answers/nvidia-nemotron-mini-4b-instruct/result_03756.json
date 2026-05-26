@@ -1,0 +1,9 @@
+{
+  "id": 3756,
+  "title": "Finding the Most Frequent Element",
+  "prompt": "Create a program to find the most frequent element in a given list using a basic algorithm\nSample Input: [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the most frequent element in a given list using a basic algorithm:\n\n```python\ndef find_most_frequent(lst):\n    # Create a dictionary to store the elements and their frequencies\n    element_freq = {}\n\n    # Iterate over each element in the list\n    for element in lst:\n        # If the element is already a key in the dictionary, increment its value\n        if element in element_freq:\n            element_freq[element] += 1\n        # Otherwise, add the element as a new key with a value of 1\n        else:\n            element_freq[element] = 1\n\n    # Find the element with the highest frequency\n    max_freq = max(element_freq.values())\n    most_frequent_elements = [element for element, freq in element_freq.items() if freq == max_freq]\n\n    # Return the most frequent element(s)\n    return most_frequent_elements\n\n# Test the function with the sample input\nsample_input = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]\nprint(find_most_frequent(sample_input))  # Output: [4]\n```\n\nThis program first creates a dictionary to store the elements and their frequencies. Then, it iterates over each element in the list and increments its frequency in the dictionary. Finally, it finds the element(s) with the highest frequency and returns them.",
+  "error": null,
+  "elapsed_seconds": 3.61,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

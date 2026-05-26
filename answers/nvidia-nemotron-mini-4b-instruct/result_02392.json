@@ -1,0 +1,9 @@
+{
+  "id": 2392,
+  "title": "Armstrong Number Checker",
+  "prompt": "Write a program that checks if a given number is an Armstrong number using a while loop.\nSample Input: 371\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! An Armstrong number is a number that is equal to the sum of its own digits each raised to the power of the number of digits. Here's a Python program that checks if a given number is an Armstrong number using a while loop:\n\n```python\ndef is_armstrong(n):\n    \"\"\"Check if a given number is an Armstrong number.\"\"\"\n    # Get the number of digits in n\n    num_digits = len(str(n))\n\n    # Initialize the sum to 0\n    sum_ = 0\n\n    # While n is not zero, extract the last digit and square it\n    # Then subtract it from n and update n with the remaining digits\n    while n > 0:\n        last_digit = n % 10  # Extract the last digit\n        sum_ += last_digit ** num_digits  # Square the last digit and add it to the sum\n        n //= 10  # Remove the last digit from n\n\n    # Return True if the sum is equal to n, False otherwise\n    return sum_ == n\n\n# Get user input\nn = int(input(\"Enter a number: \"))\n\n# Check if the number is an Armstrong number\nif is_armstrong(n):\n    print(f\"{n} is an Armstrong number.\")\nelse:\n    print(f\"{n} is not an Armstrong number.\")\n```\n\nThis program first calculates the number of digits in the given number `n`. Then, it initializes a variable `sum_` to keep track of the sum of the cubes of the digits. It enters a while loop that continues as long as `n` is not zero. In each iteration, it extracts the last digit of `n` using the modulus operator (`%`), squares it, adds it to `sum_`, and then removes the last digit from `n` by integer division (`//`). Finally, it checks if the sum `sum_` is equal to `n` and prints a message accordingly.",
+  "error": null,
+  "elapsed_seconds": 11.71,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

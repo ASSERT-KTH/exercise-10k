@@ -1,0 +1,9 @@
+{
+  "id": 1356,
+  "title": "Random Number Generation",
+  "prompt": "Write a program to generate a random number within a given range\nSample Input: 1, 10\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates a random number within a given range:\n\n```python\nimport random\n\ndef generate_random_number(min_value, max_value):\n    \"\"\"\n    Generate a random number within the given range.\n\n    :param min_value: The minimum value of the range.\n    :param max_value: The maximum value of the range, inclusive.\n    :return: A random integer in the range [min_value, max_value].\n    \"\"\"\n    if min_value > max_value:\n        raise ValueError(\"The minimum value must be less than or equal to the maximum value.\")\n\n    return random.randint(min_value, max_value)\n\n# Example usage:\nmin_value = 1\nmax_value = 10\nrandom_number = generate_random_number(min_value, max_value)\nprint(f\"The generated random number is: {random_number}\")\n```\n\nThis program defines a function `generate_random_number` that takes two arguments: the minimum value and the maximum value of the range. It ensures that the minimum value is less than or equal to the maximum value, and then generates a random integer in the range using the `random.randint` function. The example usage at the end of the program generates a random number between 1 and 10 and prints it.",
+  "error": null,
+  "elapsed_seconds": 4.53,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

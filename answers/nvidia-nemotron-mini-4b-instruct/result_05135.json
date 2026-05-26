@@ -1,0 +1,9 @@
+{
+  "id": 5135,
+  "title": "Find First Duplicate",
+  "prompt": "Write a program to find the first duplicate element in an array.\nSample Input: [1, 2, 3, 2, 4, 5]\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the first duplicate element in an array (or list, as it's called in Python). This program uses a set to keep track of the elements we've seen so far, which allows us to efficiently check if an element is a duplicate or not. If we encounter an element that is already in the set, it means we've found a duplicate, so we return that element. Otherwise, we add the element to the set and continue searching.\n\n```python\ndef find_first_duplicate(arr):\n    \"\"\"\n    Find the first duplicate element in an array.\n\n    :param arr: The input array\n    :return: The first duplicate element in the array, or None if there are no duplicates\n    \"\"\"\n    # Create an empty set to store the elements we've seen so far\n    seen = set()\n\n    # Iterate through the array\n    for num in arr:\n        # If the element is already in the set, it's a duplicate, so return it\n        if num in seen:\n            return num\n        # Otherwise, add the element to the set and continue searching\n        seen.add(num)\n\n    # If we didn't find a duplicate, return None\n    return None\n\n# Test the function with the given sample input\nsample_input = [1, 2, 3, 2, 4, 5]\nprint(find_first_duplicate(sample_input))  # Output: 2\n```\n\nThis program has a time complexity of O(n), where n is the length of the input array, because we only need to iterate through the array once.",
+  "error": null,
+  "elapsed_seconds": 5.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4207,
+  "title": "Array Rotation",
+  "prompt": "Write a function to rotate the elements of an array by a specified number of positions.\nSample Input: [1, 2, 3, 4, 5] and 2\nSample Output: [4, 5, 1, 2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that rotates the elements of an array (or list) by a specified number of positions:\n```python\ndef rotate_array(arr, n):\n    \"\"\"\n    Rotates the elements of an array by a specified number of positions.\n\n    Parameters:\n    arr (list): The array to rotate.\n    n (int): The number of positions to rotate the array.\n\n    Returns:\n    list: The rotated array.\n    \"\"\"\n    # Ensure n is non-negative\n    n %= len(arr)\n\n    # Rotate the array using slicing\n    return arr[-n:] + arr[:-n]\n```\nHere's an example of how to use this function:\n```python\narr = [1, 2, 3, 4, 5]\nn = 2\nrotated_arr = rotate_array(arr, n)\nprint(rotated_arr)  # Output: [4, 5, 1, 2, 3]\n```\nThis function first ensures that `n` is non-negative by taking its modulus with the length of the array. Then, it uses slicing to rotate the array by the specified number of positions. The first slice (`[-n:]`) removes the last `n` elements, and the second slice (`[:-n]`) removes the first `n` elements. The remaining elements are concatenated to form the rotated array.",
+  "error": null,
+  "elapsed_seconds": 3.26,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

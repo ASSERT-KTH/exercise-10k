@@ -1,0 +1,9 @@
+{
+  "id": 6965,
+  "title": "Fibonacci Function",
+  "prompt": "Create a function that takes a number as an argument and returns the corresponding Fibonacci number.\nSample Input: 5\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function uses recursion with memoization to optimize performance, as calculating the same Fibonacci number multiple times can be time-consuming. The memo dictionary stores previously calculated Fibonacci numbers to avoid redundant calculations.\n\n```python\ndef fibonacci(n, memo={}):\n    \"\"\"\n    Returns the nth Fibonacci number.\n\n    :param n: The position of the Fibonacci number to return.\n    :param memo: A dictionary to store previously calculated Fibonacci numbers.\n    :return: The nth Fibonacci number.\n    \"\"\"\n\n    # Base cases\n    if n == 0:\n        return 0\n    elif n == 1:\n        return 1\n\n    # Check if the Fibonacci number is already in the memo dictionary\n    if n in memo:\n        return memo[n]\n\n    # Calculate the Fibonacci number and store it in the memo dictionary\n    fib_num = fibonacci(n - 1, memo) + fibonacci(n - 2, memo)\n    memo[n] = fib_num\n\n    return fib_num\n```\n\nYou can call this function with a number as an argument to get the corresponding Fibonacci number. For example:\n\n```python\nprint(fibonacci(5))  # Output: 5\n```",
+  "error": null,
+  "elapsed_seconds": 3.01,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

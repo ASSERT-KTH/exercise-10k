@@ -1,0 +1,9 @@
+{
+  "id": 2685,
+  "title": "Simple Calculator",
+  "prompt": "Write a program that takes two numbers and an operator as input and performs the specified operation.\nSample Input: 2, 3, +\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef perform_operation(num1, num2, operator):\n    \"\"\"\n    Performs a specified operation on two numbers and returns the result.\n\n    :param num1: The first number.\n    :param num2: The second number.\n    :param operator: The operator to use ('+', '-', '*', or '/').\n    :return: The result of the operation.\n    \"\"\"\n\n    # Ensure the operator is valid\n    valid_operators = {'+': operator.add, '-': operator.sub, '*': operator.mul, '/': operator.truediv}\n    if operator not in valid_operators:\n        raise ValueError(f\"Invalid operator '{operator}'. Supported operators are: {', '.join(valid_operators.keys())}\")\n\n    # Perform the operation\n    result = valid_operators[operator](num1, num2)\n\n    return result\n\n# Example usage\nnum1, num2, operator = map(float, input(\"Enter three numbers separated by spaces: \").split())\nprint(perform_operation(num1, num2, operator))\n```\nThis program defines a function `perform_operation` that takes three arguments: two numbers and an operator. It checks if the operator is valid and then performs the operation using the `operator` module's built-in functions. The example usage at the end of the program demonstrates how to use the function to perform a calculation based on user input.",
+  "error": null,
+  "elapsed_seconds": 5.16,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

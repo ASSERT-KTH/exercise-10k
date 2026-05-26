@@ -1,0 +1,9 @@
+{
+  "id": 9465,
+  "title": "ANAGRAM Checker",
+  "prompt": "Write a program that checks if two given strings are anagrams of each other.\nSample Input: listen silent\nSample Output: The strings are anagrams.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if two given strings are anagrams of each other:\n\n```python\ndef are_anagrams(str1, str2):\n    \"\"\"\n    Check if two given strings are anagrams of each other.\n\n    :param str1: The first string to compare.\n    :param str2: The second string to compare.\n    :return: A string indicating whether the strings are anagrams or not.\n    \"\"\"\n\n    # Ensure both inputs are strings\n    if not isinstance(str1, str) or not isinstance(str2, str):\n        return \"Error: Both inputs must be strings.\"\n\n    # Convert both strings to lowercase and remove any non-alphanumeric characters\n    str1 = ''.join(c.lower() for c in str1 if c.isalnum())\n    str2 = ''.join(c.lower() for c in str2 if c.isalnum())\n\n    # Check if the lengths of the strings are equal and if they contain the same characters\n    return \"The strings are anagrams.\" if str1 == str2 else \"The strings are not anagrams.\"\n\n# Test the function with the given sample input\nprint(are_anagrams(\"listen\", \"silent\"))\n```\n\nThis program first checks if both inputs are strings. Then, it converts both strings to lowercase and removes any non-alphanumeric characters using a list comprehension. Finally, it checks if the lengths of the strings are equal and if they contain the same characters, returning a message indicating whether the strings are anagrams or not.",
+  "error": null,
+  "elapsed_seconds": 3.64,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

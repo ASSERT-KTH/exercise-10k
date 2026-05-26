@@ -1,0 +1,9 @@
+{
+  "id": 4529,
+  "title": "Array Min/Max",
+  "prompt": "Write a program that takes an array as input and returns the minimum and maximum elements in the array.\nSample Input: [5, 2, 8, 1, 9]\nSample Output: [1, 9]\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef find_min_max(arr):\n    \"\"\"\n    Given an array, return the minimum and maximum elements in the array.\n\n    :param arr: The input array\n    :return: A tuple containing the minimum and maximum elements in the array\n    \"\"\"\n    if not arr:  # Check if the input array is empty\n        return (None, None)\n\n    min_val = arr[0]\n    max_val = arr[0]\n\n    for num in arr:\n        if num < min_val:\n            min_val = num\n        elif num > max_val:\n            max_val = num\n\n    return (min_val, max_val)\n\n# Test the function with your sample input\nsample_input = [5, 2, 8, 1, 9]\nprint(find_min_max(sample_input))  # Output: [1, 9]\n```\n\nThis program first checks if the input array is empty, in which case it returns `(None, None)` as the minimum and maximum elements. Then it initializes the minimum and maximum values to the first element of the array. It iterates through the array, updating the minimum and maximum values as needed. Finally, it returns a tuple containing the minimum and maximum elements.",
+  "error": null,
+  "elapsed_seconds": 3.04,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

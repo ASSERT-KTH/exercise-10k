@@ -1,0 +1,9 @@
+{
+  "id": 682,
+  "title": "Multiplication Table",
+  "prompt": "Write a program to print the multiplication table for a given number.\nSample Input: 5\nSample Output: 5 * 1 = 5\n5 * 2 = 10\n5 * 3 = 15\n5 * 4 = 20\n5 * 5 = 25\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that prints the multiplication table for a given number:\n\n```python\ndef print_multiplication_table(number):\n    \"\"\"Print the multiplication table for a given number.\"\"\"\n\n    # Ensure the input is a positive integer\n    if not isinstance(number, int) or number < 1:\n        raise ValueError(\"Input must be a positive integer.\")\n\n    # Print the header\n    print(f\"{number} * 1 = {number}\")\n\n    # Print the table rows\n    for i in range(2, 11):  # Print rows up to 10 (since Python uses 0-based indexing)\n        print(f\"{number} * {i} = {number * i}\")\n\n# Get user input and call the function\nuser_input = int(input(\"Enter a positive integer to see its multiplication table: \"))\nprint_multiplication_table(user_input)\n```\n\nThis program first checks if the input is a positive integer. If not, it raises a `ValueError`. Then, it prints the header row and the table rows (up to 10) using a loop. Finally, it prompts the user to enter a positive integer and calls the `print_multiplication_table` function with the user's input.",
+  "error": null,
+  "elapsed_seconds": 2.98,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 500,
+  "title": "List Fold",
+  "prompt": "Write a program that takes a list and a binary operation as input, and returns the result of applying the binary operation to all elements in the list, accumulating the result.\nSample Input: [1, 2, 3, 4, 5], lambda x, y: x + y\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef accumulate_binary(lst, binary_op):\n    \"\"\"\n    Applies a binary operation to all elements in a list, accumulating the result.\n\n    Parameters:\n    lst (list): The list of elements to operate on.\n    binary_op (callable): A binary operation that takes two arguments and returns a single value.\n\n    Returns:\n    int: The result of applying the binary operation to all elements in the list.\n    \"\"\"\n    # Check that the input is valid\n    if not callable(binary_op):\n        raise ValueError(\"binary_op must be a callable\")\n\n    # Initialize the accumulator to the first element in the list\n    acc = lst[0]\n\n    # Apply the binary operation to each element in the list, accumulating the result\n    for i in range(1, len(lst)):\n        acc = binary_op(acc, lst[i])\n\n    return acc\n```\nHere's an example of how you can use this function:\n```python\n>>> accumulate_binary([1, 2, 3, 4, 5], lambda x, y: x + y)\n15\n```\nThis function takes a list `lst` and a binary operation `binary_op` as input, and returns the result of applying the binary operation to all elements in the list, accumulating the result. The function checks that the input is valid, initializes the accumulator to the first element in the list, and then applies the binary operation to each element in the list, accumulating the result. The final result is returned as an integer.",
+  "error": null,
+  "elapsed_seconds": 3.78,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

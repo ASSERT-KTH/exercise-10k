@@ -1,0 +1,9 @@
+{
+  "id": 8708,
+  "title": "Simple Game",
+  "prompt": "Create a simple game where the user has to collect points by answering questions correctly.\nSample Input: answer1 answer2 answer3\nSample Output: You scored 10 points!\n",
+  "answer": "Sure, I'd be happy to help you create a simple game with that premise. Here's a Python script that you can use as a starting point. This script uses a simple scoring system where each correct answer adds 10 points to the user's score. You can adjust the number of questions and the difficulty of the questions as needed.\n\n```python\nimport random\n\n# Define a list of questions and their answers\nquestions = [\n    (\"What is the capital of France?\", \"Paris\"),\n    (\"Who is the author of Alice's Adventures in Wonderland?\", \"Lewis Carroll\"),\n    (\"What is the name of the first planet in our solar system?\", \"Mercury\"),\n]\n\n# Function to ask a question and check the answer\ndef ask_question():\n    question_index = random.randint(0, len(questions) - 1)\n    question, answer = questions[question_index]\n\n    print(f\"Question: {question}\")\n\n    user_answer = input(\"Answer: \").lower()\n\n    if user_answer.strip() == answer:\n        print(\"Correct!\")\n        return 10\n    else:\n        print(\"Incorrect. The correct answer is\", answer)\n        return 0\n\n# Main game loop\nscore = 0\nwhile score < 3:\n    score += ask_question()\n\nprint(f\"You scored {score} points!\")\n```\n\nThis script defines a list of questions and their answers, and then defines a function `ask_question()` that asks a random question and checks the user's answer. The function returns 10 points for a correct answer and 0 points for an incorrect answer. The main game loop continues until the user scores at least 3 points.",
+  "error": null,
+  "elapsed_seconds": 4.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

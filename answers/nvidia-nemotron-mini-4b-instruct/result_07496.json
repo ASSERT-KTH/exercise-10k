@@ -1,0 +1,9 @@
+{
+  "id": 7496,
+  "title": "List Operations",
+  "prompt": "Perform basic list operations (append, insert, remove) and print out the resulting list.\nSample Input: [1, 2, 3], 4, 0\nSample Output: [1, 2, 3, 4], [4, 1, 2, 3], [1, 2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution for the given problem. This solution uses list methods `append()`, `insert()`, and `remove()` to perform the basic list operations and prints out the resulting list.\n\n```python\ndef perform_list_operations(lst, num, index):\n    # Append the number to the list\n    lst.append(num)\n\n    # Insert the number at the specified index\n    lst.insert(index, num)\n\n    # Remove the number from the list (this will raise an IndexError if the number is not in the list)\n    lst.remove(num)\n\n    return lst\n\nsample_input = [1, 2, 3]\nsample_num = 4\nsample_index = 0\n\nprint(perform_list_operations(sample_input.copy(), sample_num, sample_index))\n```\n\nWhen you run this code with the sample input `[1, 2, 3]`, `4`, `0`, it will output:\n\n```python\n[1, 2, 3, 4]\n```\n\nThis shows that the `append()` method adds `4` to the end of the list, the `insert()` method inserts `4` at index `0`, and the `remove()` method removes `4` from the list (since it's the only number in the list).",
+  "error": null,
+  "elapsed_seconds": 3.27,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

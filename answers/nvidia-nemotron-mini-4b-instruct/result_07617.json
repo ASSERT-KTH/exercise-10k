@@ -1,0 +1,9 @@
+{
+  "id": 7617,
+  "title": "Guessing Game",
+  "prompt": "Write a program that uses a while loop to continuously ask the user to guess a random number until they guess correctly.\nSample Input: 50\nSample Output: Too high! Try again.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\nimport random\n\n# Function to get a random number between min and max (inclusive)\ndef get_random_number(min, max):\n    return random.randint(min, max)\n\n# Main program\nmin_number = 1\nmax_number = 100\n\n# Get a random number within the specified range\nrandom_number = get_random_number(min_number, max_number)\n\n# Continuously ask the user to guess the random number until they guess correctly\nwhile True:\n    user_guess = int(input(f\"Guess a number between {min_number} and {max_number}: \"))\n\n    # Check if the user's guess is correct\n    if user_guess == random_number:\n        print(\"Congratulations! You guessed the number correctly.\")\n        break\n    else:\n        # If the user's guess is too high, tell them to try again\n        if user_guess > random_number:\n            print(\"Too high! Try again.\")\n        # If the user's guess is too low, tell them to try again\n        else:\n            print(\"Too low! Try again.\")\n```\nThis program defines a function `get_random_number` that generates a random integer within a specified range. The main program then gets a random number between 1 and 100, and enters a while loop that continuously asks the user to guess the number until they guess correctly. The program checks if the user's guess is correct, too high, or too low, and provides appropriate feedback to the user.",
+  "error": null,
+  "elapsed_seconds": 3.76,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

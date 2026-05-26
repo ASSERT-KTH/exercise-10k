@@ -1,0 +1,9 @@
+{
+  "id": 7413,
+  "title": "Input Validation and Output Formatting",
+  "prompt": "Create a program that takes in a user's name and age as input. Validate the age to ensure it's within the range of 1 to 120. If the age is valid, output a greeting message with the user's name and age, formatted as 'Hello, {name}! You are {age} years old.' Otherwise, output an error message indicating that the age is invalid.\nSample Input: John 25\nSample Output: Hello, John! You are 25 years old.\n",
+  "answer": "Here's a Python solution for the problem:\n\n```python\ndef greet(name, age):\n    if 1 <= age <= 120:\n        print(\"Hello, \" + name + \"! You are \" + str(age) + \" years old.\")\n    else:\n        print(\"Error: Age is invalid. Please enter an age between 1 and 120.\")\n\n# Get user input\nname = input(\"Enter your name: \")\nage = int(input(\"Enter your age: \"))\n\n# Call the function with user input\ngreet(name, age)\n```\n\nThis program defines a function `greet()` that takes two arguments, `name` and `age`. It checks if the age is within the valid range (1 to 120) and prints a greeting message accordingly. If the age is invalid, it prints an error message. The program then gets user input for `name` and `age`, calls the `greet()` function with the user input, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 2.95,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

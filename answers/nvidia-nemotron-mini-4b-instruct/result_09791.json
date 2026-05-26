@@ -1,0 +1,9 @@
+{
+  "id": 9791,
+  "title": "Writing Output to Network",
+  "prompt": "Write a program that writes output to a network connection.\nSample Input: http://example.com\nSample Output: Network output sent\n",
+  "answer": "Sure, I can help you with that. Here's a Python program that sends a simple message over a network connection using the `socket` module. In this example, I'll assume you're using a TCP connection to a local host (localhost) on port 80, which is the default port for HTTP. You can modify this to connect to a remote host or use a different port.\n\n```python\nimport socket\n\ndef send_network_output(url):\n    # Create a TCP/IP socket\n    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n\n    # Connect the socket to the port where the web server is listening\n    server_address = ('localhost', 80)  # Change this to your desired host and port\n    sock.connect(server_address)\n\n    # Send data\n    message = f\"GET {url} HTTP/1.1\\r\\nHost: localhost\\r\\n\\r\\n\".encode()\n    sock.sendall(message)\n\n    # Receive data\n    amount_received = 0\n    amount_expected = len(message)\n\n    while amount_received < amount_expected:\n        data = sock.recv(16)\n        amount_received += len(data)\n\n    # Close the connection\n    sock.close()\n\n    # Print the network output\n    print(\"Network output sent\")\n\n# Example usage\nsend_network_output(\"http://example.com\")\n```\n\nThis program sends an HTTP GET request to the specified URL, receives the response, and prints the network output. Note that this is a very basic example and doesn't handle errors, redirects, or other complexities of real-world HTTP requests. You may want to expand on this to fit your specific use case.",
+  "error": null,
+  "elapsed_seconds": 3.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

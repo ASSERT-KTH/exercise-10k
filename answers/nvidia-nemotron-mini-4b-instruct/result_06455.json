@@ -1,0 +1,9 @@
+{
+  "id": 6455,
+  "title": "Calculating the Hypotenuse",
+  "prompt": "Write a program that calculates the length of the hypotenuse of a right-angled triangle given the lengths of its other two sides.\nSample Input: 3 4\nSample Output: 5.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the length of the hypotenuse of a right-angled triangle given the lengths of its other two sides:\n\n```python\ndef calculate_hypotenuse(side_a, side_b):\n    \"\"\"\n    Calculates the length of the hypotenuse of a right-angled triangle given the lengths of its other two sides.\n\n    :param side_a: The length of one of the shorter sides of the triangle.\n    :param side_b: The length of the other shorter side of the triangle.\n    :return: The length of the hypotenuse of the triangle.\n    \"\"\"\n\n    # Check that the input values are positive\n    if side_a <= 0 or side_b <= 0:\n        raise ValueError(\"Both sides of a right-angled triangle must be positive numbers.\")\n\n    # Calculate the length of the hypotenuse using the Pythagorean theorem\n    hypotenuse = (side_a**2 + side_b**2)**0.5\n\n    return hypotenuse\n\n# Example usage\nside_a = 3\nside_b = 4\nhypotenuse = calculate_hypotenuse(side_a, side_b)\nprint(f\"{side_a} and {side_b} are the lengths of the shorter sides of a right-angled triangle.\")\nprint(f\"The length of the hypotenuse is {hypotenuse}.\")\n```\n\nWhen you run this program with the sample input `3 4`, it will output:\n\n```\n3 and 4 are the lengths of the shorter sides of a right-angled triangle.\nThe length of the hypotenuse is 5.0.\n```",
+  "error": null,
+  "elapsed_seconds": 3.94,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

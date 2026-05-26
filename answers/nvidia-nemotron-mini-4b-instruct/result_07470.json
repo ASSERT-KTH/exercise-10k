@@ -1,0 +1,9 @@
+{
+  "id": 7470,
+  "title": "Data Type Enumerator",
+  "prompt": "Write a program that enumerates the possible data types in a given programming language\nSample Input: None\nSample Output: Integer, Float, String, Boolean, List, Tuple, Set, Dictionary\n",
+  "answer": "Here's a Python program that enumerates the possible data types in a given programming language. This program uses the `ast` module to parse the language's syntax tree and identify the built-in data types. For this example, I'll assume the input is a Python program, but you can modify the function to accept any programming language.\n\n```python\nimport ast\n\ndef get_data_types(program):\n    \"\"\"\n    Enumerates the possible data types in a given programming language.\n\n    :param program: A Python program string or file-like object\n    :return: A list of data types\n    \"\"\"\n    data_types = []\n\n    def visit_node(node):\n        if isinstance(node, ast.Name):\n            if node.id in ['int', 'float', 'str', 'bool', 'list', 'tuple', 'set', 'dict']:\n                data_types.append(node.id)\n\n    ast.walk(ast.parse(program), visit_node)\n\n    return data_types\n\n# Example usage\nprogram = \"\"\"\ndef main():\n    a = 1\n    b = 2.5\n    c = \"Hello, World!\"\n    d = True\n    e = [1, 2, 3]\n    f = (1, 2, 3)\n    g = {1: 'a', 2: 'b'}\n\"\"\"\n\nprint(get_data_types(program))\n```\n\nThis program defines a function `get_data_types` that takes a Python program as input and returns a list of built-in data types. The function uses an `ast.walk` traversal to visit each node in the syntax tree and identify the data types.",
+  "error": null,
+  "elapsed_seconds": 3.93,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

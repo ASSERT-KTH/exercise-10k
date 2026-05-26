@@ -1,0 +1,9 @@
+{
+  "id": 3734,
+  "title": "Read and Validate Password",
+  "prompt": "Create a program that takes a password as input, checks if it's valid, and prints out a success message if it is.\nSample Input: P@ssw0rd\nSample Output: Password is valid\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\nimport re\n\ndef check_password_validity(password):\n    \"\"\"\n    Check if a given password is valid.\n\n    A valid password should meet the following criteria:\n    - Contain at least 8 characters\n    - Contain at least one uppercase letter\n    - Contain at least one lowercase letter\n    - Contain at least one digit\n    - Not contain any spaces\n\n    :param password: str, the password to check\n    :return: str, a success message or an error message\n    \"\"\"\n\n    # Regular expression pattern to match a valid password\n    pattern = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*()_+{};':\",<>.?\\|`~-])[A-Za-z\\d!@#$%^&*()_+{};':\",<>.?\\|`~-]{8,}$'\n\n    # Check if the password matches the pattern\n    if re.match(pattern, password):\n        return \"Password is valid\"\n    else:\n        return \"Password is invalid\"\n\n# Get user input\npassword = input(\"Enter a password: \")\n\n# Check and print the result\nprint(check_password_validity(password))\n```\n\nThis program defines a function `check_password_validity` that checks if a given password meets the specified criteria. The function uses a regular expression pattern to match a valid password. The program then prompts the user to enter a password, checks its validity using the function, and prints out a success message or an error message.",
+  "error": null,
+  "elapsed_seconds": 3.98,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

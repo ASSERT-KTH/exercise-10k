@@ -1,0 +1,9 @@
+{
+  "id": 6157,
+  "title": "String Isalnum",
+  "prompt": "Write a function to check if a string consists only of letters and digits.\nSample Input: hello123\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a given string consists only of letters (both lowercase and uppercase) and digits:\n\n```python\nimport re\n\ndef is_alphanumeric(s: str) -> bool:\n    \"\"\"\n    Check if a string consists only of letters and digits.\n\n    :param s: The string to check.\n    :return: True if the string consists only of letters and digits, False otherwise.\n    \"\"\"\n    # Use a regular expression to match any character that is a letter (alphanumeric)\n    # and not a whitespace character. This ensures that the function handles both\n    # strings and numbers correctly.\n    return bool(re.match(r'^[a-zA-Z0-9]*$', s))\n```\n\nHere's how you can use this function:\n\n```python\nprint(is_alphanumeric(\"hello123\"))  # True\nprint(is_alphanumeric(\"World! 456\"))  # False\nprint(is_alphanumeric(\"123abc\"))  # True\nprint(is_alphanumeric(\"!@#$%^&*()\"))  # False\n```\n\nThis function uses a regular expression to match any string of zero or more occurrences of either an uppercase or lowercase letter (`[a-zA-Z]`) or a digit (`[0-9]`), followed by a dollar sign (`$`) to ensure that the string ends. This ensures that the function handles both strings and numbers correctly, as well as whitespace characters.",
+  "error": null,
+  "elapsed_seconds": 3.72,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

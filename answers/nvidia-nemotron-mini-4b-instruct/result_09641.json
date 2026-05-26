@@ -1,0 +1,9 @@
+{
+  "id": 9641,
+  "title": "Function with CSV",
+  "prompt": "Write a function that uses the csv module to read and write CSV files.\nSample Input: data.csv\nSample Output: CSV data\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses the `csv` module to read and write CSV files. This function takes a file path as an argument and returns the contents of the file as a string or writes the given data to a CSV file.\n\n```python\nimport csv\n\ndef read_csv(file_path: str) -> str:\n    \"\"\"\n    Reads a CSV file and returns its contents as a string.\n\n    :param file_path: The path to the CSV file.\n    :return: The contents of the CSV file as a string.\n    \"\"\"\n    with open(file_path, newline='') as csvfile:\n        reader = csv.reader(csvfile)\n        return '\\n'.join(row for row in reader)\n\n\ndef write_csv(data: list, file_path: str):\n    \"\"\"\n    Writes a given data to a CSV file.\n\n    :param data: The data to be written to the CSV file as a list of lists.\n    :param file_path: The path to the CSV file.\n    \"\"\"\n    with open(file_path, 'w', newline='') as csvfile:\n        writer = csv.writer(csvfile)\n        writer.writerows(data)\n```\n\nHere's an example of how to use these functions:\n\n```python\n# Read data from a CSV file\ndata = read_csv('data.csv')\nprint(data)\n\n# Write data to a CSV file\ndata = [['Name', 'Age'], ['Alice', 30], ['Bob', 25]]\nwrite_csv(data, 'output.csv')\n```",
+  "error": null,
+  "elapsed_seconds": 4.0,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

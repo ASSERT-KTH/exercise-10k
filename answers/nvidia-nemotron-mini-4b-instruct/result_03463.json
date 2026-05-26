@@ -1,0 +1,9 @@
+{
+  "id": 3463,
+  "title": "Number Input and Output",
+  "prompt": "Create a program that asks for a number and then prints out the number squared.\nSample Input: 5\nSample Output: 25\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a simple Python program that meets your requirements:\n\n```python\ndef get_positive_number():\n    \"\"\"Asks the user for a positive number and returns it.\"\"\"\n    while True:\n        try:\n            number = int(input(\"Please enter a positive number: \"))\n            if number > 0:\n                return number\n            else:\n                print(\"Sorry, that's not a positive number. Please try again.\")\n        except ValueError:\n            print(\"Sorry, that's not a valid number. Please try again.\")\n\ndef square_number(number):\n    \"\"\"Prints the square of the given number.\"\"\"\n    square = number ** 2\n    print(f\"{number} squared is {square}.\")\n\n# Get a positive number from the user\npositive_number = get_positive_number()\n\n# Print the square of the number\nsquare_number(positive_number)\n```\n\nWhen you run this program, it will ask you to enter a positive number. Once you enter a valid number, it will print the square of that number. For example, if you enter the number 5, the output will be:\n\n```\nPlease enter a positive number: 5\n5 squared is 25.\n```",
+  "error": null,
+  "elapsed_seconds": 2.93,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

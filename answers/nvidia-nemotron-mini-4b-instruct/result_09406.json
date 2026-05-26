@@ -1,0 +1,9 @@
+{
+  "id": 9406,
+  "title": "Greatest Common Factor",
+  "prompt": "Create a program that calculates the greatest common factor (GCF) of two given numbers.\nSample Input: 12 15\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the greatest common factor (GCF) of two given numbers using the Euclidean algorithm:\n\n```python\ndef gcf(a, b):\n    \"\"\"\n    Calculate the greatest common factor (GCF) of two given numbers.\n\n    :param a: The first number.\n    :param b: The second number.\n    :return: The greatest common factor of a and b.\n    \"\"\"\n    # Ensure a and b are non-negative\n    a, b = abs(a), abs(b)\n\n    # Euclidean algorithm\n    while b:\n        a, b = b, a % b\n\n    return a\n\n# Get user input\nnum1 = int(input(\"Enter the first number: \"))\nnum2 = int(input(\"Enter the second number: \"))\n\n# Calculate and print the GCF\ngcf_value = gcf(num1, num2)\nprint(f\"The greatest common factor of {num1} and {num2} is {gcf_value}.\")\n```\n\nThis program first ensures that the input numbers are non-negative by taking their absolute values. Then, it applies the Euclidean algorithm to find the GCF. Finally, it prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.14,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

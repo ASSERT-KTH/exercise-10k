@@ -1,0 +1,9 @@
+{
+  "id": 4403,
+  "title": "Print Pattern",
+  "prompt": "Write a program that prints a pattern of asterisks (*) using a for loop. The pattern should have n rows and n columns.\nSample Input: 5\nSample Output: * * * * *\n* * * * *\n* * * * *\n* * * * *\n* * * * *\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef print_pattern(n):\n    \"\"\"Print a pattern of asterisks using a for loop with n rows and n columns.\"\"\"\n    if n <= 0:\n        print(\"Number of rows must be positive. Exiting...\")\n        return\n\n    # Print the top row with n asterisks\n    for _ in range(n):\n        print(\"*\", end=\" \")\n    print()\n\n    # Print the remaining rows with alternating number of asterisks and spaces\n    for i in range(1, n):\n        spaces = n - i - 1\n        asterisks = 2 * i - 1\n        print(\" \" * spaces + \"*\" * asterisks)\n\n    # Print the bottom row with n asterisks\n    for _ in range(n):\n        print(\"*\", end=\" \")\n    print()\n\n# Get user input for the number of rows\nn = int(input(\"Enter the number of rows: \"))\n\n# Call the function to print the pattern\nprint_pattern(n)\n```\n\nThis program first checks if the user input is positive, and if not, it prints an error message and exits. Then, it prints the top row with `n` asterisks, followed by printing the remaining rows with alternating number of asterisks and spaces. Finally, it prints the bottom row with `n` asterisks.",
+  "error": null,
+  "elapsed_seconds": 3.3,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

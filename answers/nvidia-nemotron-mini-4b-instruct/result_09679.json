@@ -1,0 +1,9 @@
+{
+  "id": 9679,
+  "title": "Starts With Checker",
+  "prompt": "Write a program that asks for two strings and checks if the first string starts with the second string.\nSample Input: abcdef, ab\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef starts_with(string1, string2):\n    \"\"\"\n    Check if the first string starts with the second string.\n\n    :param string1: The first string to check.\n    :param string2: The second string to compare against.\n    :return: True if the first string starts with the second, False otherwise.\n    \"\"\"\n    # Ensure both inputs are strings\n    string1 = str(string1)\n    string2 = str(string2)\n\n    # Check if the second string is not empty and starts with the first string\n    return string2 and string1.startswith(string2)\n\n# Get user input\nstring1 = input(\"Enter the first string: \")\nstring2 = input(\"Enter the second string: \")\n\n# Check if the first string starts with the second\nresult = starts_with(string1, string2)\n\n# Print the result\nprint(f\"The first string '{string1}' starts with '{string2}'? {result}\")\n```\nWhen you run this program and enter \"abcdef\" and \"ab\" as input, it will output:\n```yaml\nEnter the first string: abcdef\nEnter the second string: ab\nThe first string 'abcdef' starts with 'ab'? True\n```",
+  "error": null,
+  "elapsed_seconds": 3.42,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

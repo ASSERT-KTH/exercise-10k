@@ -1,0 +1,9 @@
+{
+  "id": 7783,
+  "title": "Simple Calculator",
+  "prompt": "Create a program that takes two numbers and an operator as input and performs the corresponding arithmetic operation. The operator can be '+', '-', '*', or '/'. If the operator is '/' and the second number is 0, the program should display an error message.\nSample Input: 10 + 5\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef perform_operation(num1, num2, operator):\n    \"\"\"\n    Performs the corresponding arithmetic operation on two numbers.\n\n    :param num1: The first number.\n    :param num2: The second number.\n    :param operator: The arithmetic operator ('+', '-', '*', or '/').\n    :return: The result of the operation.\n    \"\"\"\n    if operator == '/' and num2 == 0:\n        return \"Error: Division by zero is not allowed.\"\n\n    try:\n        result = eval(f\"{num1} {operator} {num2}\")\n    except Exception as e:\n        return f\"Error: {str(e)}\"\n\n    return result\n\n# Get user input\nnum1 = float(input(\"Enter the first number: \"))\nnum2 = float(input(\"Enter the second number: \"))\noperator = input(\"Enter the arithmetic operator (+, -, *, or /): \").strip()\n\n# Perform the operation\nresult = perform_operation(num1, num2, operator)\n\n# Display the result\nprint(result)\n```\nThis program defines a function `perform_operation` that takes three arguments: the first number, the second number, and the arithmetic operator. It checks if the operator is '/' and the second number is 0, and returns an error message if that's the case. Otherwise, it uses the `eval` function to perform the operation and returns the result. The program then gets user input for the three arguments, calls the `perform_operation` function, and displays the result.",
+  "error": null,
+  "elapsed_seconds": 3.83,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

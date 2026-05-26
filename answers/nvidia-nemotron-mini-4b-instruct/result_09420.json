@@ -1,0 +1,9 @@
+{
+  "id": 9420,
+  "title": "Function with Dictionary Operations",
+  "prompt": "Create a function that takes a dictionary and returns the sum of its values\nSample Input: {'a': 1, 'b': 2, 'c': 3}\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef sum_of_values(dictionary):\n    \"\"\"\n    This function takes a dictionary as input and returns the sum of its values.\n\n    :param dictionary: The dictionary to calculate the sum of values from.\n    :return: The sum of all values in the dictionary.\n    \"\"\"\n    # Check if the input is a dictionary\n    if not isinstance(dictionary, dict):\n        raise TypeError(\"The input must be a dictionary.\")\n\n    # Calculate the sum of all values in the dictionary\n    total = sum(dictionary.values())\n\n    return total\n```\nHere's an example of how you can use this function:\n```python\nsample_input = {'a': 1, 'b': 2, 'c': 3}\nsample_output = sum_of_values(sample_input)\nprint(sample_output)  # Output: 6\n```\nThis function first checks if the input is a dictionary. If not, it raises a `TypeError`. Then, it calculates the sum of all values in the dictionary using the built-in `sum()` function and the `values()` method of the dictionary. Finally, it returns the sum.",
+  "error": null,
+  "elapsed_seconds": 2.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

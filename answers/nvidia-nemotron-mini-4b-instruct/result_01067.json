@@ -1,0 +1,9 @@
+{
+  "id": 1067,
+  "title": "Simulate a Coin Toss",
+  "prompt": "Write a program that uses a while loop to simulate a coin toss and keep track of the number of heads and tails.\nSample Input: 10\nSample Output: Heads: 5, Tails: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\nimport random\n\n# Function to simulate a coin toss and return 'heads' or 'tails'\ndef coin_toss():\n    return 'heads' if random.randint(0, 1) == 0 else 'tails'\n\n# Get the number of coin tosses from the user\nnum_tosses = int(input(\"Enter the number of coin tosses: \"))\n\n# Initialize counters for heads and tails\nheads = 0\ntails = 0\n\n# Use a while loop to simulate the coin tosses\nwhile num_tosses > 0:\n    # Simulate a coin toss and update counters\n    toss = coin_toss()\n    if toss == 'heads':\n        heads += 1\n    else:\n        tails += 1\n    num_tosses -= 1\n\n# Print the results\nprint(f\"Heads: {heads}, Tails: {tails}\")\n```\nThis program defines a function `coin_toss()` that simulates a coin toss and returns 'heads' or 'tails'. It then prompts the user to enter the number of coin tosses, initializes counters for heads and tails, and uses a while loop to simulate the coin tosses. After all tosses have been made, it prints the final counts of heads and tails.\n\nYou can run this program and enter a number of coin tosses (e.g. 10) to see the output you described in your sample input.",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

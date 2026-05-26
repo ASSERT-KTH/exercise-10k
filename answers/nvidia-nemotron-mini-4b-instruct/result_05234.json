@@ -1,0 +1,9 @@
+{
+  "id": 5234,
+  "title": "Traffic Light Simulator",
+  "prompt": "Write a program that simulates a traffic light. The program should print 'Red', 'Yellow', or 'Green' based on the current state of the light, and allow the user to change the state.\nSample Input: change to green\nSample Output: Green\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that simulates a traffic light and allows the user to change the state:\n```python\nimport time\n\n# Initialize the traffic light to be red\ncurrent_state = 'Red'\n\ndef change_state(new_state):\n    \"\"\"Change the current state of the traffic light to the given state.\"\"\"\n    global current_state\n    current_state = new_state\n    print(f'The traffic light is now {current_state}.')\n\ndef main():\n    \"\"\"Main function to run the traffic light simulation.\"\"\"\n    while True:\n        # Print the current state of the traffic light\n        print(current_state)\n\n        # Allow the user to change the state\n        user_input = input('Change to a new state (Red, Yellow, Green): ').lower()\n        if user_input in ['red', 'yellow', 'green']:\n            change_state(user_input)\n        else:\n            print('Invalid input. Please enter \"Red\", \"Yellow\", or \"Green\".')\n\n        # Simulate a delay between states\n        time.sleep(2)\n\nif __name__ == '__main__':\n    main()\n```\nThis program defines a `change_state` function that updates the current state of the traffic light, and a `main` function that runs the simulation. The program prints the current state of the traffic light every 2 seconds, and allows the user to change the state by entering \"Red\", \"Yellow\", or \"Green\". The program checks for invalid inputs and provides feedback to the user.",
+  "error": null,
+  "elapsed_seconds": 3.71,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

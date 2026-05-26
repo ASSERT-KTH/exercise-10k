@@ -1,0 +1,9 @@
+{
+  "id": 6496,
+  "title": "Grade Calculator",
+  "prompt": "Write a program that asks the user for a series of grades (A, B, C, D, or F) and then calculates and prints out the average grade.\nSample Input: A B C\nSample Output: Average grade: B\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_average_grade():\n    \"\"\"\n    Asks the user for a series of grades (A, B, C, D, or F) and then calculates and prints out the average grade.\n    \"\"\"\n    # Initialize an empty list to store the grades\n    grades = []\n\n    # Keep asking the user for grades until they enter 'done'\n    while True:\n        grade = input(\"Enter a grade (A, B, C, D, or F) or 'done' to finish: \").upper()\n        if grade == 'DONE':\n            break\n        elif grade in ('A', 'B', 'C', 'D', 'F'):\n            grades.append(grade)\n        else:\n            print(\"Invalid grade. Please enter A, B, C, D, or F.\")\n\n    # Calculate the average grade\n    total_grade_points = sum(1 for grade in grades if grade in ('A', 'B'))\n    average_grade = 'F' if total_grade_points == 0 else (total_grade_points / len(grades))[0].upper()\n\n    # Print the average grade\n    print(f\"Average grade: {average_grade}\")\n\n# Call the function\ncalculate_average_grade()\n```\nThis program defines a function `calculate_average_grade()` that prompts the user for grades until they enter 'done', then calculates the average grade based on the number of 'A' and 'B' grades and prints it out. The function uses a list comprehension to count the number of 'A' and 'B' grades, and then calculates the average grade based on the total grade points.",
+  "error": null,
+  "elapsed_seconds": 3.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2015,
+  "title": "Student Grade Book",
+  "prompt": "Write a program that takes a student's grades as input and returns their average grade using conditional statements.\nSample Input: 90 80 70\nSample Output: 80\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_average_grade(grades):\n    \"\"\"\n    Calculates the average grade of a student based on their grades.\n\n    Parameters:\n    grades (list): A list of integers representing the student's grades.\n\n    Returns:\n    int: The average grade as an integer.\n    \"\"\"\n\n    # Check if the input is a non-empty list of integers\n    if not isinstance(grades, list) or not all(isinstance(grade, int) for grade in grades):\n        raise ValueError(\"Input should be a non-empty list of integers.\")\n\n    # Calculate the total grade and the number of grades\n    total_grade = sum(grades)\n    num_grades = len(grades)\n\n    # Calculate the average grade\n    average_grade = total_grade // num_grades\n\n    return average_grade\n\n# Get user input\nuser_input = input(\"Enter a space-separated list of grades: \")\ngrades = [int(grade) for grade in user_input.split()]\n\n# Calculate and print the average grade\naverage_grade = get_average_grade(grades)\nprint(f\"The average grade is {average_grade}.\")\n```\nThis program defines a function `get_average_grade` that checks if the input is valid, calculates the total grade and the number of grades, and then returns the average grade as an integer. The program then gets user input, converts it to a list of integers, and calls the function to calculate and print the average grade.",
+  "error": null,
+  "elapsed_seconds": 3.63,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

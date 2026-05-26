@@ -1,0 +1,9 @@
+{
+  "id": 5671,
+  "title": "Floor and Ceiling",
+  "prompt": "Write a program that takes a number as input and outputs its floor and ceiling values.\nSample Input: 4.7\nSample Output: 4 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a number as input and outputs its floor and ceiling values:\n\n```python\ndef get_floor_and_ceiling(num):\n    \"\"\"\n    Given a number, returns its floor and ceiling values.\n\n    :param num: The number to find the floor and ceiling of.\n    :return: A tuple containing the floor and ceiling values of the input number.\n    \"\"\"\n    # Ensure the input is a number\n    if not isinstance(num, (float, int)):\n        raise TypeError(\"Input must be a number.\")\n\n    # Calculate the floor and ceiling values\n    floor = math.floor(num)\n    ceiling = math.ceil(num)\n\n    return floor, ceiling\n\n# Get user input\ntry:\n    num = float(input(\"Enter a number: \"))\nexcept ValueError:\n    print(\"That's not a valid number. Please try again.\")\n    exit()\n\n# Output the floor and ceiling values\nfloor, ceiling = get_floor_and_ceiling(num)\nprint(f\"{num:.2f} has a floor value of {floor} and a ceiling value of {ceiling}.\")\n```\n\nThis program defines a function `get_floor_and_ceiling` that takes a number as input and returns a tuple containing its floor and ceiling values. The function uses the built-in `math.floor` and `math.ceil` functions to calculate the floor and ceiling values, respectively. The program then gets user input, validates it, and outputs the floor and ceiling values.",
+  "error": null,
+  "elapsed_seconds": 3.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

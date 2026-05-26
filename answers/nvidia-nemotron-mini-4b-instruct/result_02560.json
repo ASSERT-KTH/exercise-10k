@@ -1,0 +1,9 @@
+{
+  "id": 2560,
+  "title": "Partial Application",
+  "prompt": "Create a function to partially apply another function and use it to calculate the sum.\nSample Input: partial(add, 1, 2)\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that partially applies another function (in this case, `add`) to a given set of arguments, and then uses the partially applied function to calculate the sum. We'll use the `functools.partial` function to create the partially applied function.\n\n```python\nimport functools\n\ndef add(a, b):\n    \"\"\"A simple addition function.\"\"\"\n    return a + b\n\ndef partial(func, *args):\n    \"\"\"Partially apply a function with given arguments.\"\"\"\n    return functools.partial(func, *args)\n\n# Test the function\nsample_input = partial(add, 1, 2)\nprint(sample_input())  # Output: 3\n```\n\nIn this example, `partial(add, 1, 2)` creates a new function `sample_input` that takes no arguments but calls `add(1, 2)` when invoked. The `functools.partial` function takes the original function and a variable number of arguments, and returns a new function that calls the original function with the given arguments.",
+  "error": null,
+  "elapsed_seconds": 2.52,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

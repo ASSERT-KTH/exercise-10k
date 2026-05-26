@@ -1,0 +1,9 @@
+{
+  "id": 1975,
+  "title": "Linear Search Function",
+  "prompt": "Create a function that implements the linear search algorithm to find the index of a given element in a list of numbers. The function should take a list and a target element as arguments and return the index of the target element if it exists, or -1 otherwise.\nSample Input: [5, 2, 8, 3, 1], target = 3\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that implements the linear search algorithm as described in your question:\n\n```python\ndef linear_search(lst, target):\n    \"\"\"\n    Performs a linear search for the index of a given element in a list of numbers.\n\n    Parameters:\n    lst (list): The list of numbers to search in.\n    target (any): The element to search for.\n\n    Returns:\n    int: The index of the target element if it exists, or -1 otherwise.\n    \"\"\"\n    for i, num in enumerate(lst):\n        if num == target:\n            return i\n    return -1\n```\n\nThis function takes a list `lst` and a target element `target` as arguments, and iterates over the list using a `for` loop with an `enumerate` function to get both the index and value of each element. If it finds an element with the same value as the target, it returns the index of that element. If it doesn't find any matching elements, it returns -1.\n\nHere's an example of how you can use this function:\n\n```python\nnumbers = [5, 2, 8, 3, 1]\ntarget = 3\nindex = linear_search(numbers, target)\nprint(index)  # Output: 3\n```\n\nThis will output `3`, which is the index of the target element in the list.",
+  "error": null,
+  "elapsed_seconds": 3.59,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4356,
+  "title": "Time Converter",
+  "prompt": "Write a program that converts a time from 12-hour format to 24-hour format (e.g., 3:00 PM to 15:00)\nSample Input: 3:00 PM\nSample Output: 15:00\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that converts a time from 12-hour format to 24-hour format:\n\n```python\ndef twelve_to_twentyfour(time_str: str) -> str:\n    \"\"\"\n    Converts a time from 12-hour format to 24-hour format.\n\n    :param time_str: The time string in the format 'HH:MM AM/PM' (e.g., '3:00 PM')\n    :return: The time string in the format 'HH:MM' (e.g., '15:00')\n    \"\"\"\n    # Split the time string into hour and minute parts\n    hour, minute = time_str.split(':')\n\n    # Determine if the time is in AM or PM format\n    if time_str[-3:] == ' PM':\n        hour = str(int(hour) + 12)\n    elif time_str[-2:] == ' AM':\n        hour = hour\n\n    # Convert the hour part to 24-hour format\n    hour = hour.zfill(2)\n\n    # Return the time string in the desired format\n    return f\"{hour}:{minute}\"\n\n# Test the function with a sample input\ntime_str = \"3:00 PM\"\nresult = twelve_to_twentyfour(time_str)\nprint(f\"Sample Input: {time_str}\")\nprint(f\"Sample Output: {result}\")\n```\n\nThis program defines a function `twelve_to_twentyfour` that takes a time string in the format 'HH:MM AM/PM' (e.g., '3:00 PM') and returns the same time string in the format 'HH:MM' (e.g., '15:00'). The function first splits the time string into hour and minute parts, then determines if the time is in AM or PM format and adjusts the hour accordingly. Finally, it converts the hour part to 24-hour format and returns the time string in the desired format.",
+  "error": null,
+  "elapsed_seconds": 4.73,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

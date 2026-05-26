@@ -1,0 +1,9 @@
+{
+  "id": 5731,
+  "title": "Higher-Order Functions",
+  "prompt": "Write a function that takes a function and a list as arguments and applies the function to each element in the list.\nSample Input: square(x), [1, 2, 3, 4, 5]\nSample Output: [1, 4, 9, 16, 25]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function, `apply_to_list`, takes a function and a list as arguments, applies the function to each element in the list, and returns a new list containing the results.\n\n```python\ndef apply_to_list(func, lst):\n    \"\"\"\n    Applies a function to each element in a list.\n\n    Parameters:\n    func (callable): The function to apply to each element in the list.\n    lst (list): The list of elements to apply the function to.\n\n    Returns:\n    list: A new list containing the results of applying the function to each element in the input list.\n    \"\"\"\n    return [func(item) for item in lst]\n\n# Example usage:\nsquare = lambda x: x**2\nprint(apply_to_list(square, [1, 2, 3, 4, 5]))  # Output: [1, 4, 9, 16, 25]\n```\n\nThis function uses a list comprehension to apply the given function to each element in the input list. The resulting list is then returned.",
+  "error": null,
+  "elapsed_seconds": 3.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9877,
+  "title": "Simple Calculator",
+  "prompt": "Write a program that takes a mathematical expression as input and evaluates it.\nSample Input: 2 + 2\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a mathematical expression as input and evaluates it using the `eval()` function, which allows you to execute arbitrary code. However, I strongly advise against using `eval()` for security reasons, as it can potentially execute malicious code. For a safer alternative, you can use a library like `sympy` to parse and evaluate mathematical expressions. Here's a version of the program that uses `sympy`:\n\n```python\nimport sympy as sp\n\ndef evaluate_expression(expression):\n    \"\"\"\n    Evaluates a mathematical expression using sympy.\n\n    :param expression: str, the mathematical expression to evaluate\n    :return: int or float, the result of evaluating the expression\n    \"\"\"\n    # Ensure the input is a valid sympy expression\n    expr = sp.sympify(expression)\n\n    # Evaluate the expression and return the result\n    return expr.evalf()\n\n# Example usage\nexpression = input(\"Enter a mathematical expression: \")\nresult = evaluate_expression(expression)\nprint(f\"The result of {expression} is {result}.\")\n```\n\nThis program first imports the `sympy` library and defines a function `evaluate_expression()` that takes an expression as input, parses it using `sympy.sympify()`, and evaluates it using `expr.evalf()`. The example usage prompts the user to enter a mathematical expression and prints the result.\n\nPlease note that using `eval()` for security reasons is not recommended, as it can potentially execute arbitrary code. Always use libraries like `sympy` or other safe alternatives when dealing with user input.",
+  "error": null,
+  "elapsed_seconds": 3.65,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

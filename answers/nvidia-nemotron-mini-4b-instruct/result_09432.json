@@ -1,0 +1,9 @@
+{
+  "id": 9432,
+  "title": "Function with Closures",
+  "prompt": "Create a function that returns a closure that adds a given number to its input\nSample Input: 5\nSample Output: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses a closure to create a function that adds a given number to its input.\n\n```python\ndef create_adder(add_value):\n    \"\"\"\n    Create a closure that adds a given number to its input.\n\n    :param add_value: The number to be added to the input.\n    :return: A closure that adds the given number to its input.\n    \"\"\"\n\n    def adder(input_value):\n        \"\"\"\n        The closure that adds the given number to its input.\n\n        :param input_value: The value to be added to the given number.\n        :return: The result of adding the given number to the input value.\n        \"\"\"\n        return input_value + add_value\n\n    return adder\n\n# Example usage:\nadd_five = create_adder(5)\nprint(add_five(10))  # Output: 15\n```\n\nThis function takes a single argument `add_value` and returns a closure (a function that has access to the enclosing function's variables, including `add_value`). The closure then defines an inner function `adder` that takes an input value and adds `add_value` to it.",
+  "error": null,
+  "elapsed_seconds": 2.92,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

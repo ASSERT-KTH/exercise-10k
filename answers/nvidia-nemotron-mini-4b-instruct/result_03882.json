@@ -1,0 +1,9 @@
+{
+  "id": 3882,
+  "title": "Guessing Game",
+  "prompt": "Develop a game where the user has to guess a randomly generated number, and after each guess, the program tells the user if their guess is higher or lower than the number.\nSample Input: 50\nSample Output: Your guess is too high\n",
+  "answer": "Sure, I'd be happy to help you develop a game where the user has to guess a randomly generated number. Here's a Python code snippet that meets your requirements:\n\n```python\nimport random\n\ndef play_guessing_game():\n    \"\"\"\n    Play a guessing game where the user has to guess a randomly generated number.\n    \"\"\"\n\n    # Generate a random number between 1 and 100\n    random_number = random.randint(1, 100)\n\n    # Initialize the number of attempts\n    attempts = 0\n\n    while True:\n        # Get user input and convert it to an integer\n        user_guess = int(input(\"Guess a number between 1 and 100: \"))\n\n        # Increment the number of attempts\n        attempts += 1\n\n        # Check if the user guessed the correct number\n        if user_guess == random_number:\n            print(f\"Congratulations! You guessed the number in {attempts} attempts.\")\n            break\n\n        # Check if the user guessed too high or too low\n        elif user_guess > random_number:\n            print(\"Your guess is too high. Try again!\")\n        else:\n            print(\"Your guess is too low. Try again!\")\n\n# Play the game\nplay_guessing_game()\n```\n\nThis code generates a random number between 1 and 100, and then prompts the user to guess the number. After each guess, the program checks if the user guessed correctly, too high, or too low, and provides feedback accordingly. The game continues until the user guesses the correct number.",
+  "error": null,
+  "elapsed_seconds": 4.29,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

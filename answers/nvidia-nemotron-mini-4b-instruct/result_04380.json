@@ -1,0 +1,9 @@
+{
+  "id": 4380,
+  "title": "Dictionary Matrix Transformation",
+  "prompt": "Write a program that transforms a dictionary into a matrix representation.\nSample Input: {'a': [1, 2, 3], 'b': [4, 5, 6], 'c': [7, 8, 9]}\nSample Output: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that transforms a dictionary into a matrix representation using nested list comprehension:\n```python\ndef dict_to_matrix(d):\n    \"\"\"\n    Transforms a dictionary into a matrix representation.\n\n    Parameters:\n    d (dict): A dictionary where keys are row labels and values are lists of elements.\n\n    Returns:\n    list: A list of lists representing the matrix.\n    \"\"\"\n    return [d[row] for row in d.keys()]\n\n# Example usage:\nsample_input = {'a': [1, 2, 3], 'b': [4, 5, 6], 'c': [7, 8, 9]}\nsample_output = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\n\nprint(dict_to_matrix(sample_input) == sample_output)  # True\n```\nThis function works by iterating over the keys of the input dictionary and using them as row labels for the resulting matrix. The values associated with each key are then extracted and used as the columns of the matrix. The resulting matrix is then returned as a list of lists.\n\nYou can modify the function to suit your specific needs, such as changing the order of the rows or columns, or adding additional formatting to the output.",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

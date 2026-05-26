@@ -1,0 +1,9 @@
+{
+  "id": 9797,
+  "title": "Input Validation with Set Operations",
+  "prompt": "Write a program that takes an input and validates it using set operations.\nSample Input: hello\nSample Output: Valid input\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes an input, validates it using set operations, and outputs a message indicating whether the input is valid or not. We'll use the `set` data structure to check if the input is a unique set of characters.\n\n```python\ndef validate_input():\n    \"\"\"\n    Validates an input using set operations.\n\n    :return: A string indicating whether the input is valid or not.\n    \"\"\"\n    while True:\n        try:\n            # Get user input\n            input_str = input(\"Please enter a string: \")\n\n            # Convert input to lowercase and remove any non-alphanumeric characters\n            cleaned_input = ''.join(c for c in input_str.lower() if c.isalnum())\n\n            # Check if the cleaned input is a unique set of characters\n            if len(set(cleaned_input)) == len(cleaned_input):\n                return \"Valid input\"\n            else:\n                print(\"The input contains duplicate characters. Please try again.\")\n        except ValueError:\n            print(\"Invalid input. Please enter only alphanumeric characters.\")\n\n# Call the function to get the output\nprint(validate_input())\n```\n\nThis program will keep prompting the user for input until they enter a valid string that contains only unique alphanumeric characters.",
+  "error": null,
+  "elapsed_seconds": 3.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

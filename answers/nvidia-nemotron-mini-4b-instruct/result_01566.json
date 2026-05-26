@@ -1,0 +1,9 @@
+{
+  "id": 1566,
+  "title": "Function Composition",
+  "prompt": "Create a function that takes two functions as input and returns their composition.\nSample Input: double, add_one\nSample Output: a function that doubles its input and then adds one\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that takes two functions as input and returns their composition. This function assumes that the input functions are callable and take a single argument. If you need to handle functions with different arities, you can modify the function accordingly.\n\n```python\ndef compose(*functions):\n    \"\"\"\n    Returns the composition of multiple functions.\n\n    :param functions: Variable number of functions to compose.\n    :return: A single function that applies the given functions in order.\n    \"\"\"\n    if not functions:\n        raise ValueError(\"At least one function must be provided.\")\n\n    def composed_function(*args, **kwargs):\n        return functions[-1](functions[-2](*args, **kwargs))\n\n    return composed_function\n```\n\nHere's an example of how to use this function:\n\n```python\ndouble = lambda x: x * 2\nadd_one = lambda x: x + 1\n\ncomposed_function = compose(double, add_one)\n\nprint(composed_function(5))  # Output: 13\n```\n\nThis function creates a new function `composed_function` that applies the second function to the result of applying the first function to its input. The function is defined as a lambda function that takes any number of arguments and applies the last function to the result of applying the remaining functions to the input arguments.",
+  "error": null,
+  "elapsed_seconds": 3.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

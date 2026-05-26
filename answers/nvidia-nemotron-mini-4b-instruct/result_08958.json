@@ -1,0 +1,9 @@
+{
+  "id": 8958,
+  "title": "Boolean Conversion",
+  "prompt": "Write a program to convert a value to a boolean.\nSample Input: 10\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that converts a given integer to a boolean value:\n\n```python\ndef int_to_bool(value):\n    \"\"\"\n    Converts an integer to a boolean value.\n\n    :param value: The integer to convert.\n    :return: The boolean value corresponding to the integer.\n    \"\"\"\n    if not isinstance(value, int):\n        raise TypeError(\"The input must be an integer.\")\n\n    return value != 0\n```\n\nThis function checks if the input is an integer and raises a `TypeError` if it's not. Then, it checks if the integer is non-zero (i.e., it's either positive or negative) and returns `True` for non-zero values and `False` for zero. Here's an example of how to use this function:\n\n```python\nprint(int_to_bool(10))  # Output: True\nprint(int_to_bool(0))   # Output: False\nprint(int_to_bool(-5))  # Output: True\nprint(int_to_bool(-1))  # Output: True\nprint(int_to_bool(1))   # Output: True\nprint(int_to_bool(0.5)) # Raises TypeError\n```",
+  "error": null,
+  "elapsed_seconds": 3.25,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

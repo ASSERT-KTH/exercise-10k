@@ -1,0 +1,9 @@
+{
+  "id": 1583,
+  "title": "Sum of Numbers",
+  "prompt": "Write a program to take a list of numbers as input from the user and calculate the sum of those numbers.\nSample Input: 1 2 3 4 5\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a list of numbers as input from the user and calculates the sum of those numbers:\n\n```python\ndef get_positive_numbers():\n    \"\"\"Get a list of positive numbers from user input.\"\"\"\n    numbers = []\n    while True:\n        try:\n            number = float(input(\"Enter a positive number (or type 'done' to finish): \"))\n            if number > 0:\n                numbers.append(number)\n            elif number == 'done':\n                break\n            else:\n                print(\"That's not a positive number. Please try again.\")\n        except ValueError:\n            print(\"That's not a valid number. Please try again.\")\n    return numbers\n\ndef calculate_sum(numbers):\n    \"\"\"Calculate the sum of a list of numbers.\"\"\"\n    return sum(numbers)\n\nif __name__ == \"__main__\":\n    numbers = get_positive_numbers()\n    sum_of_numbers = calculate_sum(numbers)\n    print(f\"The sum of the numbers is: {sum_of_numbers}\")\n```\n\nThis program defines two functions: `get_positive_numbers()` and `calculate_sum()`. The first function prompts the user to enter a positive number until they type 'done', and then returns the list of numbers. The second function calculates the sum of a list of numbers. The main part of the program calls these functions, gets user input, and prints the sum of the numbers.",
+  "error": null,
+  "elapsed_seconds": 3.46,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

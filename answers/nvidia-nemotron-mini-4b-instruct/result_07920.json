@@ -1,0 +1,9 @@
+{
+  "id": 7920,
+  "title": "Fuel Efficiency",
+  "prompt": "Create a program to calculate the fuel efficiency of a vehicle given the distance traveled and fuel consumed.\nSample Input: 250 10\nSample Output: 25.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the fuel efficiency of a vehicle based on the distance traveled and fuel consumed:\n\n```python\ndef calculate_fuel_efficiency(distance, fuel_consumed):\n    \"\"\"\n    Calculates the fuel efficiency of a vehicle given the distance traveled and fuel consumed.\n\n    :param distance: The distance traveled in kilometers.\n    :param fuel_consumed: The amount of fuel consumed in liters.\n    :return: The fuel efficiency in kilometers per liter.\n    \"\"\"\n\n    # Check if the inputs are valid (positive numbers)\n    if distance <= 0 or fuel_consumed <= 0:\n        raise ValueError(\"Distance and fuel consumed must be positive numbers.\")\n\n    # Calculate fuel efficiency\n    fuel_efficiency = distance / fuel_consumed\n\n    return fuel_efficiency\n\n\n# Example usage\ndistance = 250\nfuel_consumed = 10\n\ntry:\n    fuel_efficiency = calculate_fuel_efficiency(distance, fuel_consumed)\n    print(f\"{distance} km traveled with {fuel_consumed} liters of fuel results in a fuel efficiency of {fuel_efficiency:.2f} km/L.\")\nexcept ValueError as e:\n    print(e)\n```\n\nThis program defines a function `calculate_fuel_efficiency` that checks if the inputs are valid before calculating the fuel efficiency. The example usage shows how to use the function to calculate the fuel efficiency for a given distance and fuel consumed.",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

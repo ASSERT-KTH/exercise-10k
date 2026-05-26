@@ -1,0 +1,9 @@
+{
+  "id": 3182,
+  "title": "Grade Checker",
+  "prompt": "Write a program that takes a student's score as input and uses if/else statements to determine their grade (A-F).\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_grade(score):\n    \"\"\"\n    Determines a letter grade based on a given score.\n\n    :param score: The student's score as an integer between 0 and 100.\n    :return: A string representing the letter grade (A-F).\n    \"\"\"\n    # Define the grade boundaries\n    low_a, low_b, low_c, low_d, low_f = 90, 80, 70, 60, 0\n    high_a, high_b, high_c, high_d, high_f = 100, 89, 79, 69, 0\n\n    # Determine the grade based on the score\n    if score >= high_a:\n        grade = \"A\"\n    elif score >= high_b:\n        grade = \"B\"\n    elif score >= high_c:\n        grade = \"C\"\n    elif score >= high_d:\n        grade = \"D\"\n    else:\n        grade = \"F\"\n\n    # Ensure the grade is a letter (uppercase)\n    grade = grade.upper()\n\n    return grade\n\n# Get user input and print the result\nscore = int(input(\"Enter a score between 0 and 100: \"))\nprint(f\"The grade is {get_grade(score)}.\")\n```\nThis program defines a function `get_grade` that takes a score as input and returns a letter grade based on the score. It uses an `if/else` statement to determine the grade, and ensures that the returned grade is a letter (uppercase). The program then gets user input, calls the `get_grade` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 4.27,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

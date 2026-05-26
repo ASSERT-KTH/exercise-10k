@@ -1,0 +1,9 @@
+{
+  "id": 7752,
+  "title": "Calculating Student Grades",
+  "prompt": "Create a function called 'calculate_grade' that takes in a student's score as a percentage and returns a letter grade based on the following scale: A (90-100%), B (80-89%), C (70-79%), D (60-69%), F (below 60%). The function should also handle cases where the input is not a valid percentage.\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you create the `calculate_grade` function. Here's a Python solution that meets your requirements:\n\n```python\ndef calculate_grade(score: float) -> str:\n    \"\"\"\n    Calculates a letter grade based on a given percentage score.\n\n    :param score: The percentage score as a float.\n    :return: A letter grade as a string (A, B, C, D, or F).\n    \"\"\"\n    if not isinstance(score, (float, int)):\n        return \"Error: Input must be a number.\"\n\n    if score >= 90:\n        return \"A\"\n    elif score >= 80:\n        return \"B\"\n    elif score >= 70:\n        return \"C\"\n    elif score >= 60:\n        return \"D\"\n    else:\n        return \"F\"\n```\n\nThis function checks if the input is a number (float or int) and handles cases where the input is not a valid percentage. It then calculates the letter grade based on the given score and returns it as a string.\n\nHere are some examples of how you can use this function:\n\n```python\nprint(calculate_grade(85))  # Output: B\nprint(calculate_grade(95))  # Output: A\nprint(calculate_grade(65))  # Output: D\nprint(calculate_grade(\"85\"))  # Output: Error: Input must be a number.\n```",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2336,
+  "title": "Input and Print with Case Conversion",
+  "prompt": "Write a program to take a string input from the user and print it to the screen, converting it to uppercase or lowercase.\nSample Input: Hello\nSample Output: hello\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a simple Python program that meets your requirements:\n\n```python\ndef convert_string(input_string):\n    \"\"\"\n    Converts a given string to uppercase or lowercase based on user input.\n\n    :param input_string: The string to be converted.\n    :return: The converted string.\n    \"\"\"\n\n    # Get user input\n    user_input = input(\"Enter a string to convert to uppercase or lowercase: \")\n\n    # Check if the user wants to convert to uppercase or lowercase\n    while True:\n        conversion_choice = input(\"Enter 'U' for uppercase or 'L' for lowercase: \").upper()\n        if conversion_choice in ['U', 'L']:\n            break\n        else:\n            print(\"Invalid input. Please enter 'U' for uppercase or 'L' for lowercase.\")\n\n    # Convert the string and print the result\n    if conversion_choice == 'U':\n        output_string = user_input.upper()\n    else:\n        output_string = user_input.lower()\n\n    print(f\"The converted string is: {output_string}\")\n\n# Call the function\nconvert_string(\"\")\n```\n\nThis program defines a function `convert_string` that prompts the user for input, checks their choice, and then converts the input string to uppercase or lowercase as requested. The function is then called without any arguments, which will prompt the user for input and convert it to uppercase or lowercase.",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3194,
+  "title": "Student Record",
+  "prompt": "Write a program that takes a student's name and grade as input and uses if/else statements to determine their eligibility for a scholarship (e.g., based on grade).\nSample Input: John Doe 90\nSample Output: Eligible for scholarship!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef determine_scholarship_eligibility(name, grade):\n    \"\"\"\n    Determines if a student is eligible for a scholarship based on their name and grade.\n\n    :param name: str, the student's name\n    :param grade: int, the student's grade (0-100)\n    :return: str, a message indicating whether the student is eligible for a scholarship\n    \"\"\"\n    # Define the eligibility criteria based on the grade\n    if grade >= 90:\n        eligibility_message = f\"{name} is eligible for a scholarship!\"\n    elif grade >= 80:\n        eligibility_message = f\"{name} is close to being eligible for a scholarship!\"\n    else:\n        eligibility_message = f\"{name} is not eligible for a scholarship.\"\n\n    return eligibility_message\n\n# Get user input\nname = input(\"Enter the student's name: \")\ngrade = int(input(\"Enter the student's grade (0-100): \"))\n\n# Print the result\nprint(determine_scholarship_eligibility(name, grade))\n```\nThis program defines a function `determine_scholarship_eligibility` that takes a student's name and grade as input and returns a message indicating whether they are eligible for a scholarship. The function uses if/else statements to check the grade and determine the eligibility message. The program then prompts the user to enter a name and grade, calls the function with those values, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.7,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

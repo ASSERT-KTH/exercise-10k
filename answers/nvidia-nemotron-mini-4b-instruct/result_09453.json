@@ -1,0 +1,9 @@
+{
+  "id": 9453,
+  "title": "Password Validator",
+  "prompt": "Write a program that checks if a given password meets certain criteria (e.g. length, characters, etc.)\nSample Input: password123\nSample Output: Password is valid\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given password meets certain criteria such as length, containing at least one uppercase letter, one lowercase letter, one number, and no spaces. The program will output \"Password is valid\" if the password meets all the criteria, and \"Password is invalid\" otherwise.\n\n```python\nimport re\n\ndef check_password(password):\n    # Check if the password is at least 8 characters long\n    if len(password) < 8:\n        return \"Password is invalid (too short)\"\n\n    # Check if the password contains at least one uppercase letter\n    if not re.search(r'[A-Z]', password):\n        return \"Password is invalid (no uppercase letter)\"\n\n    # Check if the password contains at least one lowercase letter\n    if not re.search(r'[a-z]', password):\n        return \"Password is invalid (no lowercase letter)\"\n\n    # Check if the password contains at least one number\n    if not re.search(r'\\d', password):\n        return \"Password is invalid (no number)\"\n\n    # Check if the password does not contain any spaces\n    if re.search(r'\\s', password):\n        return \"Password is invalid (contains spaces)\"\n\n    return \"Password is valid\"\n\n# Get user input\npassword = input(\"Enter a password: \")\n\n# Check and print the result\nresult = check_password(password)\nprint(result)\n```\n\nThis program uses regular expressions to check for the presence of specific characters and patterns in the password. The `re` module provides a powerful set of functions for working with regular expressions in Python.",
+  "error": null,
+  "elapsed_seconds": 3.89,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

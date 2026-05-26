@@ -1,0 +1,9 @@
+{
+  "id": 7008,
+  "title": "Fuel Efficiency Calculator",
+  "prompt": "Write a program that takes the distance and fuel consumption as input and returns the fuel efficiency.\nSample Input: 100 10\nSample Output: 10.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_fuel_efficiency(distance, fuel_consumption):\n    \"\"\"\n    Calculates the fuel efficiency given the distance and fuel consumption.\n\n    :param distance: The distance traveled in miles.\n    :param fuel_consumption: The fuel consumption in miles per gallon.\n    :return: The fuel efficiency in miles per gallon.\n    \"\"\"\n    # Ensure the inputs are non-negative\n    distance = max(0, distance)\n    fuel_consumption = max(0, fuel_consumption)\n\n    # Calculate the fuel efficiency\n    fuel_efficiency = distance / fuel_consumption\n\n    return fuel_efficiency\n\n# Get user input\ndistance = float(input(\"Enter the distance traveled in miles: \"))\nfuel_consumption = float(input(\"Enter the fuel consumption in miles per gallon: \"))\n\n# Calculate and display the fuel efficiency\nfuel_efficiency = calculate_fuel_efficiency(distance, fuel_consumption)\nprint(f\"The fuel efficiency is {fuel_efficiency:.2f} miles per gallon.\")\n```\nThis program defines a function `calculate_fuel_efficiency` that takes the distance and fuel consumption as input and returns the fuel efficiency. The function first ensures that the inputs are non-negative, and then calculates the fuel efficiency by dividing the distance by the fuel consumption. The program then gets user input for the distance and fuel consumption, calls the function with those inputs, and displays the result.",
+  "error": null,
+  "elapsed_seconds": 3.42,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

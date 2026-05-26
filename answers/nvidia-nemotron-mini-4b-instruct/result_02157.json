@@ -1,0 +1,9 @@
+{
+  "id": 2157,
+  "title": "Binary File Input and Output",
+  "prompt": "Write a program that reads a binary file and prints out the file's contents.\nSample Input: Hello World\nSample Output: Hello World\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that reads a binary file and prints out its contents, assuming the file contains only ASCII characters (which is the case for your sample input). This program uses the `io` module to handle binary files and the `struct` module to convert the bytes to a string.\n\n```python\nimport io\nimport struct\n\ndef read_binary_file(file_path):\n    \"\"\"\n    Reads a binary file and prints out its contents.\n\n    :param file_path: The path to the binary file.\n    \"\"\"\n    with open(file_path, 'rb') as file:\n        file_contents = file.read()\n\n    # Convert bytes to a string using struct module\n    string_format = '>%ds' % len(file_contents)\n    string_data = struct.unpack(string_format, file_contents)[0].decode()\n\n    print(string_data)\n\n# Replace 'your_binary_file.bin' with the path to your binary file\nread_binary_file('your_binary_file.bin')\n```\n\nIf the file contains non-ASCII characters, you may need to adjust the string format or use a different encoding. For example, if the file contains UTF-8 encoded characters, you can use `'utf-8'` as the encoding when converting the bytes to a string:\n\n```python\nstring_format = '>%ds' % len(file_contents)\nstring_data = struct.unpack(string_format, file_contents)[0].decode('utf-8')\n```",
+  "error": null,
+  "elapsed_seconds": 10.24,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

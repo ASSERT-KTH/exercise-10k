@@ -1,0 +1,9 @@
+{
+  "id": 3400,
+  "title": "Find the Symmetric Difference of Two Lists",
+  "prompt": "Write a function to find the symmetric difference of two lists.\nSample Input: [1, 2, 3, 4, 5], [4, 5, 6, 7, 8]\nSample Output: [1, 2, 3, 6, 7, 8]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the symmetric difference of two lists using the `set` data structure:\n\n```python\ndef symmetric_difference(list1, list2):\n    # Convert the lists to sets to remove duplicates and enable fast lookup\n    set1 = set(list1)\n    set2 = set(list2)\n\n    # Find the symmetric difference using the symmetric difference of sets\n    return list(set1 ^ set2)\n```\n\nThis function first converts the input lists to sets, which allows for fast lookup and removal of duplicates. Then, it uses the `^` operator (also known as the symmetric difference operator) to find the symmetric difference of the two sets, which is then converted back to a list and returned.\n\nHere's an example of how to use this function:\n\n```python\nprint(symmetric_difference([1, 2, 3, 4, 5], [4, 5, 6, 7, 8]))  # Output: [1, 2, 3, 6, 7, 8]\n```\n\nThis function should work for any two lists, as long as they contain unique elements. If you want to handle lists with duplicate elements, you can modify the function to use a set comprehension instead of converting the lists to sets:\n\n```python\ndef symmetric_difference(list1, list2):\n    return [element for element in list1 if element not in list2 and element not in set(list2)]\n```\n\nThis version of the function checks if each element in `list1` is not in `list2` and not already in the set of elements from `list2`, ensuring that it only includes unique elements.",
+  "error": null,
+  "elapsed_seconds": 3.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

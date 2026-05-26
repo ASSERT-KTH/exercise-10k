@@ -1,0 +1,9 @@
+{
+  "id": 6658,
+  "title": "Arithmetic Progression",
+  "prompt": "Generate an arithmetic progression sequence up to a given number\nSample Input: 5 2 10\nSample Output: 5, 7, 9\n",
+  "answer": "Sure, I'd be happy to help you generate an arithmetic progression sequence up to a given number. Here's a Python function that meets your requirements:\n\n```python\ndef generate_arithmetic_progression(start, common_difference, end):\n    \"\"\"\n    Generate an arithmetic progression sequence up to a given number.\n\n    :param start: The first number in the sequence.\n    :param common_difference: The difference between consecutive numbers in the sequence.\n    :param end: The last number in the sequence.\n    :return: A list of numbers in the sequence.\n    \"\"\"\n    if start > end:\n        raise ValueError(\"The start number must be less than or equal to the end number.\")\n\n    sequence = [start]\n    current = start + common_difference\n\n    while current <= end:\n        sequence.append(current)\n        current += common_difference\n\n    return sequence\n```\n\nHere's an example of how to use this function:\n\n```python\nsequence = generate_arithmetic_progression(5, 2, 10)\nprint(sequence)  # Output: [5, 7, 9]\n```\n\nThis function first checks if the start number is less than or equal to the end number. If not, it raises a `ValueError`. Then, it initializes an empty list to store the sequence and sets the first number in the sequence to the start number. It then enters a loop that continues until the current number is greater than or equal to the end number. In each iteration of the loop, it appends the current number to the sequence and updates the current number to be the next number in the sequence (obtained by adding the common difference to the previous number). Finally, it returns the sequence.",
+  "error": null,
+  "elapsed_seconds": 3.93,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

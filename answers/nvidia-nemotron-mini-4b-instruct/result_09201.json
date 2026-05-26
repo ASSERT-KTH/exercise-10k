@@ -1,0 +1,9 @@
+{
+  "id": 9201,
+  "title": "Grade Checker",
+  "prompt": "Write a program that takes an exam score as input and prints out the corresponding grade based on the following conditions: score 90-100 is A, 80-89 is B, 70-79 is C, 60-69 is D, and below 60 is F.\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_grade(score):\n    \"\"\"\n    Given an exam score, returns the corresponding grade (A, B, C, D, or F).\n\n    :param score: int - The exam score as an integer between 0 and 100.\n    :return: str - The corresponding grade (A, B, C, D, or F).\n    \"\"\"\n    if not isinstance(score, int) or score < 0 or score > 100:\n        raise ValueError(\"Score must be an integer between 0 and 100.\")\n\n    if score >= 90:\n        return \"A\"\n    elif score >= 80:\n        return \"B\"\n    elif score >= 70:\n        return \"C\"\n    elif score >= 60:\n        return \"D\"\n    else:\n        return \"F\"\n\n# Get user input and print the result\ntry:\n    user_score = int(input(\"Enter your exam score: \"))\n    grade = get_grade(user_score)\n    print(f\"Your grade is {grade}.\")\nexcept ValueError as e:\n    print(e)\n```\nThis program defines a function `get_grade` that takes an exam score as input and returns the corresponding grade. The function checks that the input is an integer between 0 and 100, and then uses an `if-elif-elif-else` statement to determine the grade based on the score. The program then gets user input, calls the `get_grade` function, and prints the result. If the user enters an invalid input, the program prints an error message.",
+  "error": null,
+  "elapsed_seconds": 3.96,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

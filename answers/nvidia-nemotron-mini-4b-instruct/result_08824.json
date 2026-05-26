@@ -1,0 +1,9 @@
+{
+  "id": 8824,
+  "title": "Array Rotation",
+  "prompt": "Write a function that takes an array and a number of positions as input, and returns the array rotated to the right by the given number of positions. For example, if the array is [1, 2, 3, 4, 5] and the number of positions is 2, the output should be [4, 5, 1, 2, 3].\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: [4, 5, 1, 2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef rotate_right(arr, positions):\n    \"\"\"\n    Rotates the array to the right by the given number of positions.\n\n    Parameters:\n    arr (list): The input array.\n    positions (int): The number of positions to rotate the array to the right.\n\n    Returns:\n    list: The rotated array.\n    \"\"\"\n    # Ensure the input is a non-negative integer\n    positions = abs(int(positions))\n\n    # Rotate the array by shifting elements to the left\n    return arr[-positions:] + arr[:-positions]\n```\nHere's an example of how to use this function:\n```python\narr = [1, 2, 3, 4, 5]\npositions = 2\nrotated_arr = rotate_right(arr, positions)\nprint(rotated_arr)  # Output: [4, 5, 1, 2, 3]\n```\nThis function first ensures that the input `positions` is a non-negative integer, then rotates the array by shifting elements to the left using slicing. The resulting array is sliced into two parts: the first `positions` elements and the rest of the array, which are then concatenated together.",
+  "error": null,
+  "elapsed_seconds": 3.01,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3867,
+  "title": "Dictionary Value Retrieval",
+  "prompt": "Given a dictionary with names of planets as keys and their diameters as values, write a program to retrieve and print the diameter of a specific planet.\nSample Input: {'Earth': 12756, 'Mars': 6794, 'Jupiter': 142984}\nSample Output: 12756\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_planet_diameter(planet_dict, planet_name):\n    \"\"\"\n    Retrieves the diameter of a specific planet from a given dictionary.\n\n    Parameters:\n    planet_dict (dict): A dictionary with names of planets as keys and their diameters as values.\n    planet_name (str): The name of the planet for which the diameter is to be retrieved.\n\n    Returns:\n    int: The diameter of the specified planet.\n    \"\"\"\n    if planet_name in planet_dict:\n        return planet_dict[planet_name]\n    else:\n        print(f\"'{planet_name}' is not a valid planet name in the given dictionary.\")\n        return None\n\n# Example usage:\nplanet_dict = {'Earth': 12756, 'Mars': 6794, 'Jupiter': 142984}\nplanet_name = 'Earth'\ndiameter = get_planet_diameter(planet_dict, planet_name)\nprint(f\"The diameter of {planet_name} is {diameter}.\")\n```\nWhen you run this program with the sample input you provided, it will output:\n```yaml\nThe diameter of Earth is 12756.\n```",
+  "error": null,
+  "elapsed_seconds": 3.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

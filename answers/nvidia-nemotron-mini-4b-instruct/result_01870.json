@@ -1,0 +1,9 @@
+{
+  "id": 1870,
+  "title": "List Partitioning",
+  "prompt": "Write a program to partition a list into two lists based on a condition and print the resulting lists.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [1, 3, 5] and [2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that partitions a list into two lists based on a condition (in this case, even and odd numbers) and prints the resulting lists:\n```python\ndef partition_list(lst, condition):\n    \"\"\"\n    Partitions a list into two lists based on a condition.\n\n    Parameters:\n    lst (list): The list to partition.\n    condition (callable): A function that takes an element of lst and returns True if the element should be in the first list, False otherwise.\n\n    Returns:\n    tuple: A tuple containing two lists: the first list contains elements that satisfy the condition, and the second list contains elements that do not.\n    \"\"\"\n    even_numbers = []\n    odd_numbers = []\n\n    for num in lst:\n        if condition(num):\n            even_numbers.append(num)\n        else:\n            odd_numbers.append(num)\n\n    return even_numbers, odd_numbers\n\n# Example usage:\nsample_input = [1, 2, 3, 4, 5]\ncondition = lambda x: x % 2 == 0  # Check if a number is even\n\neven_numbers, odd_numbers = partition_list(sample_input, condition)\nprint(f\"{even_numbers} and {odd_numbers}\")\n```\nWhen you run this program with the sample input `[1, 2, 3, 4, 5]`, it will output: `[2, 4] and [1, 3, 5]`. The `condition` function `lambda x: x % 2 == 0` checks if a number is even by checking if the remainder of dividing it by 2 is 0.",
+  "error": null,
+  "elapsed_seconds": 4.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

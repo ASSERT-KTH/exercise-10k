@@ -1,0 +1,9 @@
+{
+  "id": 2570,
+  "title": "Finding the First Duplicate in an Array with While Loop",
+  "prompt": "Write a program that finds the first duplicate in an array using a while loop.\nSample Input: [1, 2, 3, 4, 2, 5]\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the first duplicate in an array (or list) using a while loop:\n\n```python\ndef find_first_duplicate(arr):\n    \"\"\"\n    Find the first duplicate in an array using a while loop.\n\n    :param arr: The input array\n    :return: The first duplicate value or None if no duplicates exist\n    \"\"\"\n    if not arr:  # Check if the array is empty\n        return None\n\n    # Initialize the current element and the visited set\n    current = arr[0]\n    visited = set()\n\n    # Use a while loop to iterate through the array\n    while True:\n        if current not in visited:\n            visited.add(current)\n            current = arr[arr.index(current) + 1]\n        else:\n            return current\n\n# Example usage\narr = [1, 2, 3, 4, 2, 5]\nprint(find_first_duplicate(arr))  # Output: 2\n```\n\nThis program first checks if the input array is empty and returns `None` if it is. Then, it initializes the current element and the visited set to the first element of the array. The while loop continues until it finds a duplicate or reaches the end of the array. For each iteration, it checks if the current element is in the visited set. If it's not, it adds it to the visited set and moves to the next element by finding its index and adding one. If it is, it means we've found a duplicate, so we return it.",
+  "error": null,
+  "elapsed_seconds": 3.79,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

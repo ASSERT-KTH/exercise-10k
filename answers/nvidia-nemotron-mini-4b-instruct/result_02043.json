@@ -1,0 +1,9 @@
+{
+  "id": 2043,
+  "title": "Dictionary Value Retrieval",
+  "prompt": "Create a function to retrieve the value associated with a given key from a dictionary.\nSample Input: {'name': 'John', 'age': 25}, 'name'\nSample Output: John\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_value_from_dict(dictionary, key):\n    \"\"\"\n    Retrieves the value associated with a given key from a dictionary.\n\n    Parameters:\n    dictionary (dict): The dictionary to search in.\n    key (any): The key to look up in the dictionary.\n\n    Returns:\n    any: The value associated with the given key, or None if the key is not found.\n    \"\"\"\n    return dictionary.get(key)\n```\nHere's an example of how you can use this function:\n```python\nmy_dict = {'name': 'John', 'age': 25}\nprint(get_value_from_dict(my_dict, 'name'))  # Output: John\nprint(get_value_from_dict(my_dict, 'city'))  # Output: None\n```\nThis function uses the `dict.get()` method, which is a safer alternative to accessing a key directly, as it returns `None` if the key is not found instead of raising a `KeyError`. The `any` return type is used to indicate that the function can return any type of value, depending on the contents of the dictionary.",
+  "error": null,
+  "elapsed_seconds": 4.04,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

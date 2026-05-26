@@ -1,0 +1,9 @@
+{
+  "id": 9267,
+  "title": "Arithmetic Operations Calculator",
+  "prompt": "Write a program that takes in two numbers and an arithmetic operation (+, -, *, /) as input, and then performs the specified operation on the two numbers and prints the result.\nSample Input: 10 5 +\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef perform_arithmetic(num1, num2, operator):\n    \"\"\"Perform the specified arithmetic operation on two numbers and print the result.\"\"\"\n    if operator == '+':\n        result = num1 + num2\n    elif operator == '-':\n        result = num1 - num2\n    elif operator == '*':\n        result = num1 * num2\n    elif operator == '/':\n        if num2 == 0:\n            print(\"Error: Division by zero is not allowed.\")\n            return\n        result = num1 / num2\n    else:\n        print(\"Error: Invalid arithmetic operation. Please use +, -, *, or /.\")\n        return\n\n    print(f\"{num1} {operator} {num2} = {result}\")\n\n# Get user input\nnum1 = float(input(\"Enter the first number: \"))\nnum2 = float(input(\"Enter the second number: \"))\noperator = input(\"Enter the arithmetic operation (+, -, *, /): \")\n\n# Perform the arithmetic operation\nperform_arithmetic(num1, num2, operator)\n```\nThis program defines a function `perform_arithmetic` that takes three arguments: two numbers and an arithmetic operator. It checks if the operator is valid, performs the operation, and prints the result. The program then gets user input for the three arguments, calls the `perform_arithmetic` function, and prints the result. \n\nPlease note that the program checks for division by zero and prints an error message if the second number is zero. You can modify this part of the code to handle division by zero in a more robust way if needed.",
+  "error": null,
+  "elapsed_seconds": 3.82,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2717,
+  "title": "Email Address Validator",
+  "prompt": "Write a program to validate a given email address.\nSample Input: example@example.com\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that validates a given email address using a regular expression:\n\n```python\nimport re\n\ndef is_valid_email(email):\n    \"\"\"\n    Validates a given email address using a regular expression.\n\n    :param email: str, the email address to validate\n    :return: bool, True if the email is valid, False otherwise\n    \"\"\"\n    # Regular expression pattern for a valid email address\n    pattern = r\"[^@]+@[^@]+\\.[^@]+\"\n\n    # Compile the pattern into a regular expression object\n    regex = re.compile(pattern)\n\n    # Check if the email matches the pattern\n    return bool(regex.match(email))\n\n# Example usage\nemail = \"example@example.com\"\nprint(is_valid_email(email))  # Output: True\n```\n\nThis program defines a function `is_valid_email` that takes an email address as input and returns `True` if the email is valid and `False` otherwise. The function uses a regular expression pattern to match a valid email address, which includes the local part (before the `@` symbol), the domain part (after the `@` symbol), and the top-level domain (before the last dot). The regular expression pattern is defined as a string, and the `re.compile` function is used to compile it into a regular expression object. The `regex.match` method is then used to check if the email matches the pattern.",
+  "error": null,
+  "elapsed_seconds": 3.45,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

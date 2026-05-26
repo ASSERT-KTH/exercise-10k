@@ -1,0 +1,9 @@
+{
+  "id": 3122,
+  "title": "Dictionary Lookup",
+  "prompt": "Write a program that creates a dictionary of words and their meanings. The program should allow the user to look up words and provide their meanings.\nSample Input: hello\nSample Output: A greeting.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef create_word_dict():\n    \"\"\"Create a dictionary of words and their meanings.\"\"\"\n    word_dict = {\n        \"hello\": \"A greeting.\",\n        \"world\": \"The inhabited part of the earth.\",\n        \"python\": \"A popular programming language.\",\n        \"dictionary\": \"A book or electronic database containing words and their meanings.\"\n    }\n    return word_dict\n\ndef lookup_word(word_dict, word):\n    \"\"\"Look up a word in the dictionary and return its meaning.\"\"\"\n    if word in word_dict:\n        return f\"{word} is {word_dict[word]}.\"\n    else:\n        return f\"Sorry, I don't know the meaning of '{word}'.\"\n\n# Create the dictionary of words and their meanings\nword_dict = create_word_dict()\n\n# Get user input and look up the word\nuser_input = input(\"Enter a word to look up its meaning: \")\nprint(lookup_word(word_dict, user_input))\n```\nThis program defines two functions: `create_word_dict()` to create the initial dictionary of words and their meanings, and `lookup_word()` to look up a word in the dictionary and return its meaning. The main part of the program creates the dictionary, gets user input, and calls `lookup_word()` to look up the word and print its meaning.\n\nYou can add more words and their meanings to the `word_dict` dictionary as needed, and modify the `lookup_word()` function to return any additional information you'd like.",
+  "error": null,
+  "elapsed_seconds": 4.61,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

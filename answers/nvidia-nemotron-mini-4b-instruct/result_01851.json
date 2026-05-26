@@ -1,0 +1,9 @@
+{
+  "id": 1851,
+  "title": "Array Union",
+  "prompt": "Write a program that takes two arrays of integers as input, and returns a new array containing all the elements from both arrays, without duplicates.\nSample Input: [1, 2, 3, 4, 5], [4, 5, 6, 7, 8]\nSample Output: [1, 2, 3, 4, 5, 6, 7, 8]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef merge_arrays(arr1, arr2):\n    \"\"\"\n    Merges two arrays of integers into a new array, without duplicates.\n\n    Parameters:\n    arr1 (list): The first input array of integers.\n    arr2 (list): The second input array of integers.\n\n    Returns:\n    list: A new array containing all the elements from both input arrays,\n          without duplicates.\n    \"\"\"\n    # Combine the two arrays into a single set to remove duplicates\n    merged_array = list(set(arr1 + arr2))\n\n    return merged_array\n```\nYou can use this function as follows:\n```python\narr1 = [1, 2, 3, 4, 5]\narr2 = [4, 5, 6, 7, 8]\n\nmerged_array = merge_arrays(arr1, arr2)\nprint(merged_array)  # Output: [1, 2, 3, 4, 5, 6, 7, 8]\n```\nThis program first combines the two input arrays into a single list using the `+` operator, and then converts this list into a set to remove any duplicate elements. Finally, it converts the set back into a list and returns it.",
+  "error": null,
+  "elapsed_seconds": 9.67,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

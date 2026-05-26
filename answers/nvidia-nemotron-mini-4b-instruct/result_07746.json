@@ -1,0 +1,9 @@
+{
+  "id": 7746,
+  "title": "Grade Checker",
+  "prompt": "Create a program that takes a student's grade as input and prints out whether the student passed or failed. The passing grade is 50. If the grade is above 50, print 'Passed'. If the grade is 50 or below, print 'Failed'. Use conditional statements to solve this problem.\nSample Input: 75\nSample Output: Passed\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef check_grade(student_grade):\n    \"\"\"\n    Check if a student passed or failed based on their grade.\n\n    :param student_grade: The grade as an integer between 0 and 100.\n    :return: None\n    \"\"\"\n\n    # Check if the grade is valid (between 0 and 100)\n    if not 0 <= student_grade <= 100:\n        print(\"Error: Grade must be an integer between 0 and 100.\")\n        return\n\n    # Check if the grade is above 50\n    if student_grade >= 50:\n        print(f\"Passed: The student received a grade of {student_grade}.\")\n    else:\n        print(f\"Failed: The student received a grade of {student_grade}.\")\n\n# Get user input for the student's grade\nstudent_grade = int(input(\"Enter the student's grade as an integer between 0 and 100: \"))\n\n# Call the function to check the grade\ncheck_grade(student_grade)\n```\n\nThis program defines a function `check_grade` that takes a student's grade as input and prints whether they passed or failed. The function checks if the grade is valid (between 0 and 100) and then checks if the grade is above 50. The program then gets user input for the student's grade and calls the function with the input grade.",
+  "error": null,
+  "elapsed_seconds": 3.61,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

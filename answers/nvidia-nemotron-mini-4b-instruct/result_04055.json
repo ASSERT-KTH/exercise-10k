@@ -1,0 +1,9 @@
+{
+  "id": 4055,
+  "title": "Dictionary Map",
+  "prompt": "Write a function that takes a dictionary and a map function as input and returns a new dictionary containing the results of applying the map function to each value in the dictionary.\nSample Input: { 'a': 1, 'b': 2, 'c': 3 }, lambda x: x * 2\nSample Output: { 'a': 2, 'b': 4, 'c': 6 }\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef apply_map_function_to_dict(dictionary, map_function):\n    \"\"\"\n    Applies a given map function to each value in a dictionary and returns a new dictionary.\n\n    Parameters:\n    dictionary (dict): The input dictionary.\n    map_function (callable): A function that takes one argument and returns a single value.\n\n    Returns:\n    dict: A new dictionary containing the results of applying the map function to each value in the input dictionary.\n    \"\"\"\n    # Use a dictionary comprehension to create a new dictionary with the results of applying the map function\n    # to each value in the input dictionary\n    return {key: map_function(value) for key, value in dictionary.items()}\n```\nHere's an example of how you can use this function:\n```python\nsample_input = {'a': 1, 'b': 2, 'c': 3}\nsample_map_function = lambda x: x * 2\n\nsample_output = apply_map_function_to_dict(sample_input, sample_map_function)\nprint(sample_output)  # Output: {'a': 2, 'b': 4, 'c': 6}\n```\nThis function uses a dictionary comprehension to create a new dictionary with the results of applying the `map_function` to each value in the input dictionary. The `items()` method is used to iterate over the key-value pairs in the input dictionary, and the `map_function` is applied to each value using the `lambda` function passed as the second argument to the function.",
+  "error": null,
+  "elapsed_seconds": 15.96,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

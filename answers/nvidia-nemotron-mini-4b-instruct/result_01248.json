@@ -1,0 +1,9 @@
+{
+  "id": 1248,
+  "title": "Function Default Arguments",
+  "prompt": "Write a function with default arguments for some of the input parameters.\nSample Input: 4\nSample Output: 20\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example Python function that demonstrates how to use default arguments for some of the input parameters. The function calculates the square of the input number and returns the result.\n\n```python\ndef calculate_square(number, base=10):\n    \"\"\"\n    Calculates the square of the given number using the specified base.\n\n    :param number: The number to calculate the square of.\n    :param base: The base to use for the calculation (default: 10).\n    :return: The square of the given number.\n    \"\"\"\n    if not isinstance(number, (int, float)):\n        raise TypeError(\"The 'number' parameter must be a number (int or float).\")\n\n    return number ** base\n\n# Sample input and output\nprint(calculate_square(4))  # Output: 16\nprint(calculate_square(3, base=2))  # Output: 9\n```\n\nIn this example, the `base` parameter has a default value of 10, which is used by default when the function is called without specifying a value for the `base` parameter. However, if you want to use a different base, you can pass a value for the `base` parameter when calling the function.",
+  "error": null,
+  "elapsed_seconds": 3.71,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

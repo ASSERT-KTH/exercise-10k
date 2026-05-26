@@ -1,0 +1,9 @@
+{
+  "id": 9780,
+  "title": "Reading Input from File",
+  "prompt": "Write a program that reads input from a file and processes it.\nSample Input: example.txt\nSample Output: File contents processed\n",
+  "answer": "Sure, I can help you with that. Here's an example Python program that reads input from a file and processes it. In this example, I'll assume the file contains a list of strings separated by newlines. The program will then print the processed contents of the file. You can modify the `process_file` function to perform any necessary processing on the file contents.\n\n```python\ndef process_file(file_path):\n    \"\"\"\n    Process the contents of a file and print the result.\n\n    :param file_path: The path to the file to be processed.\n    \"\"\"\n    with open(file_path, 'r') as file:\n        lines = file.readlines()\n\n    # Process the file contents here\n    # For example, let's convert all uppercase letters to lowercase\n    processed_lines = [line.lower() for line in lines]\n\n    print(f\"File contents processed:\")\n    for line in processed_lines:\n        print(line.strip())  # Remove leading and trailing whitespace\n\n\nif __name__ == \"__main__\":\n    file_path = \"example.txt\"\n    process_file(file_path)\n    print(f\"Sample Output: File contents processed\")\n```\n\nReplace the `process_file` function with your desired processing logic. The program will then read the contents of the specified file, process them, and print the result.",
+  "error": null,
+  "elapsed_seconds": 3.14,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

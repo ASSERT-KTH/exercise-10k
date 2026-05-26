@@ -1,0 +1,9 @@
+{
+  "id": 6232,
+  "title": "Rotate List by K Positions",
+  "prompt": "Write a function that rotates a given list by k positions to the right.\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: [4, 5, 1, 2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that rotates a given list by `k` positions to the right:\n\n```python\ndef rotate_list(lst, k):\n    \"\"\"\n    Rotates a given list by k positions to the right.\n\n    :param lst: The list to rotate.\n    :param k: The number of positions to rotate the list.\n    :return: The rotated list.\n    \"\"\"\n    # Ensure k is non-negative\n    k %= len(lst)\n\n    # Rotate the list by shifting elements to the right\n    return lst[-k:] + lst[:-k]\n```\n\nHere's an example of how to use this function:\n\n```python\nnumbers = [1, 2, 3, 4, 5]\nk = 2\n\nrotated_numbers = rotate_list(numbers, k)\nprint(rotated_numbers)  # Output: [4, 5, 1, 2, 3]\n```\n\nThis function first ensures that `k` is non-negative by taking its modulus with the length of the list. Then, it rotates the list by shifting elements to the right by using slicing (`[-k:]` for the last `k` elements and `[:-k]` for all elements before the last `k` elements).",
+  "error": null,
+  "elapsed_seconds": 3.27,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

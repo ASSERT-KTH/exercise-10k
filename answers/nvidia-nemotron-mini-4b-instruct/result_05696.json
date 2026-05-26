@@ -1,0 +1,9 @@
+{
+  "id": 5696,
+  "title": "Email Validator",
+  "prompt": "Write a program that takes an email as input and checks if it's valid using conditional statements.\nSample Input: john@example.com\nSample Output: Valid\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if an email address is valid using conditional statements. This program considers the following rules:\n\n1. The email address should start with a local part (name or username) followed by an '@' symbol.\n2. The local part should consist of one or more alphanumeric characters, underscores, or periods.\n3. The domain part should consist of two or more sequences of one or more alphanumeric characters, dots, or hyphens, ending with a top-level domain (TLD) such as '.com', '.org', '.net', etc.\n\nHere's the Python code:\n\n```python\nimport re\n\ndef is_valid_email(email):\n    # Regular expression pattern for a valid email address\n    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$'\n\n    # Check if the email address matches the pattern\n    if re.match(pattern, email):\n        # The email address is valid\n        return \"Valid\"\n    else:\n        # The email address is invalid\n        return \"Invalid\"\n\n# Get user input\nuser_email = input(\"Enter an email address: \")\n\n# Print the result\nprint(is_valid_email(user_email))\n```\n\nThis program defines a function `is_valid_email` that checks if a given email address is valid using a regular expression pattern. The function returns \"Valid\" if the email address matches the pattern, and \"Invalid\" otherwise. The program then gets user input, calls the function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.89,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

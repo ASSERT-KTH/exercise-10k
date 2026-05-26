@@ -1,0 +1,9 @@
+{
+  "id": 6983,
+  "title": "Division with Remainder",
+  "prompt": "Write a program that takes two numbers as input and returns the quotient and remainder.\nSample Input: 17 5\nSample Output: Quotient: 3, Remainder: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_quotient_and_remainder(dividend, divisor):\n    \"\"\"\n    Calculates the quotient and remainder of two numbers.\n\n    :param dividend: The number to be divided.\n    :param divisor: The number that divides the dividend.\n    :return: A tuple containing the quotient and remainder.\n    \"\"\"\n    if divisor == 0:\n        raise ValueError(\"Divisor cannot be zero.\")\n\n    quotient = dividend // divisor\n    remainder = dividend % divisor\n\n    return quotient, remainder\n\n# Get user input\ndividend = int(input(\"Enter the dividend: \"))\ndivisor = int(input(\"Enter the divisor: \"))\n\n# Calculate and print the quotient and remainder\nquotient, remainder = get_quotient_and_remainder(dividend, divisor)\nprint(f\"Quotient: {quotient}, Remainder: {remainder}\")\n```\nThis program defines a function `get_quotient_and_remainder` that takes two numbers as input and returns a tuple containing the quotient and remainder. The function checks if the divisor is zero and raises a `ValueError` if it is, to ensure that the program cannot divide by zero. The function uses the built-in integer division operator `//` to calculate the quotient and the modulus operator `%` to calculate the remainder. The program then gets user input for the dividend and divisor, calls the function with those values, and prints the quotient and remainder.",
+  "error": null,
+  "elapsed_seconds": 3.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

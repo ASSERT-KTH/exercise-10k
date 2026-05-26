@@ -1,0 +1,9 @@
+{
+  "id": 9809,
+  "title": "User Information Input/Output",
+  "prompt": "Create a program that takes a user's name, age, and location as input and then prints out a greeting message with the user's information. The program should handle invalid inputs and ensure that the age is a positive integer.\nSample Input: John Doe\n25\nNew York\nSample Output: Hello, John Doe! You are 25 years old and from New York.\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef get_positive_integer(prompt):\n    \"\"\"Get a positive integer from user input.\"\"\"\n    while True:\n        try:\n            user_input = int(input(prompt))\n            if user_input > 0:\n                return user_input\n            else:\n                print(\"Please enter a positive integer.\")\n        except ValueError:\n            print(\"That's not a valid integer. Please try again.\")\n\ndef greet_user():\n    \"\"\"Get user's name, age, and location, and print a greeting message.\"\"\"\n    user_name = input(\"Please enter your name: \")\n    age = get_positive_integer(\"Please enter your age: \")\n    location = input(\"Please enter your location: \")\n\n    greeting_message = f\"Hello, {user_name}! You are {age} years old and from {location}.\"\n    print(greeting_message)\n\ngreet_user()\n```\n\nThis program defines two functions: `get_positive_integer` and `greet_user`. The `get_positive_integer` function prompts the user for input and ensures that the input is a positive integer. The `greet_user` function gets the user's name, age, and location, calls `get_positive_integer` to get a valid age, and then prints the greeting message. The program calls `greet_user` at the end to start the interaction.",
+  "error": null,
+  "elapsed_seconds": 3.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

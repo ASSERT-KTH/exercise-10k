@@ -1,0 +1,9 @@
+{
+  "id": 5777,
+  "title": "Game Score",
+  "prompt": "Write a program that keeps track of the score in a game. The program should allow the user to add points to their score.\nSample Input: Add 10 points\nSample Output: Score: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that keeps track of the score in a game and allows the user to add points to their score:\n```python\ndef add_points():\n    \"\"\"Add points to the score and display the updated score.\"\"\"\n    global score\n\n    # Get the number of points to add from the user\n    points_to_add = int(input(\"Add points to your score: \"))\n\n    # Ensure the user entered a valid number of points\n    while points_to_add < 0:\n        print(\"Error: Points cannot be negative. Please try again.\")\n        points_to_add = int(input(\"Add points to your score: \"))\n\n    # Update the score and display the updated score\n    score += points_to_add\n    print(f\"Score: {score}\")\n\n# Initialize the score to 0\nscore = 0\n\n# Call the add_points function to add points to the score\nadd_points()\n```\nThis program defines a function `add_points()` that prompts the user to enter the number of points to add, validates the input to ensure it's a positive integer, and then updates the global `score` variable with the new value. The function is then called to add points to the score.\n\nWhen you run this program, it will prompt you to enter the number of points to add to your score. You can enter a positive integer, and the program will display the updated score. For example:\n\n```\nAdd points to your score: 10\nScore: 10\n```",
+  "error": null,
+  "elapsed_seconds": 9.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

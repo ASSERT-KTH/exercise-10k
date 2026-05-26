@@ -1,0 +1,9 @@
+{
+  "id": 3698,
+  "title": "Tax Calculator",
+  "prompt": "Write a program to calculate the tax amount given the income and tax rate.\nSample Input: income = 5000, tax rate = 10\nSample Output: Tax Amount: 500\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the tax amount given the income and tax rate:\n\n```python\ndef calculate_tax(income, tax_rate):\n    \"\"\"\n    Calculates the tax amount given the income and tax rate.\n\n    :param income: The annual income in dollars.\n    :param tax_rate: The tax rate as a decimal (e.g., 10 for 10%).\n    :return: The tax amount in dollars.\n    \"\"\"\n\n    # Validate input\n    if not isinstance(income, (int, float)) or income < 0:\n        raise ValueError(\"Income must be a non-negative number.\")\n\n    if not isinstance(tax_rate, (float, int)) or tax_rate < 0 or tax_rate > 1:\n        raise ValueError(\"Tax rate must be a number between 0 and 1 (inclusive).\")\n\n    # Calculate tax amount\n    tax_amount = income * tax_rate\n\n    return tax_amount\n\n# Sample usage\nincome = 5000\ntax_rate = 0.1  # 10% tax rate\n\ntax_amount = calculate_tax(income, tax_rate)\nprint(f\"Tax Amount: ${tax_amount:.2f}\")\n```\n\nThis program defines a function `calculate_tax` that takes the income and tax rate as arguments, validates the input, calculates the tax amount, and returns it. The sample usage at the end of the program demonstrates how to use the function to calculate the tax amount for a given income and tax rate.",
+  "error": null,
+  "elapsed_seconds": 3.74,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

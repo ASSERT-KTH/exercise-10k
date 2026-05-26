@@ -1,0 +1,9 @@
+{
+  "id": 3435,
+  "title": "String Validation",
+  "prompt": "Write a function that takes a string as input and returns True if it matches a given pattern\nSample Input: hello, ^h.*$\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses the `re` module to match a given pattern against a string. The `re` module provides a rich set of regular expression operations, including pattern matching.\n\n```python\nimport re\n\ndef matches_pattern(input_string: str, pattern: str) -> bool:\n    \"\"\"\n    Returns True if the input string matches the given pattern, False otherwise.\n\n    :param input_string: The string to match against the pattern.\n    :param pattern: The pattern to match against the input string.\n    :return: True if the input string matches the pattern, False otherwise.\n    \"\"\"\n    # Ensure the pattern is a string, not a regular expression object\n    pattern = str(pattern)\n\n    # Compile the pattern into a regular expression object\n    pattern_regex = re.compile(pattern)\n\n    # Check if the input string matches the pattern\n    return pattern_regex.match(input_string) is not None\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(matches_pattern(\"hello\", \"^h.*$\"))  # Output: True\nprint(matches_pattern(\"world\", \"^h.*$\"))  # Output: False\n```\n\nThis function first ensures that the input pattern is a string, not a regular expression object. Then, it compiles the pattern into a regular expression object using the `re.compile()` function. Finally, it checks if the input string matches the pattern using the `re.match()` function, which returns a match object if a match is found, or `None` otherwise.",
+  "error": null,
+  "elapsed_seconds": 3.92,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

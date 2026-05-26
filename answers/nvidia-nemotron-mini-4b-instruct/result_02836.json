@@ -1,0 +1,9 @@
+{
+  "id": 2836,
+  "title": "Bank Account Type Checker",
+  "prompt": "Create a program to determine the type of a bank account based on the account balance. If the account balance is above $10000, it is a premium account. If the account balance is between $1000 and $10000, it is a standard account. If the account balance is below $1000, it is a basic account.\nSample Input: 5000\nSample Output: Standard\n",
+  "answer": "Sure, I'd be happy to help you create a program for this task. Here's an example Python code that meets your requirements:\n\n```python\ndef determine_account_type(balance):\n    \"\"\"\n    Determines the type of a bank account based on the account balance.\n\n    :param balance: The current account balance as a float or int.\n    :return: A string indicating the account type (Basic, Standard, Premium).\n    \"\"\"\n\n    # Check if the input is a number\n    if not isinstance(balance, (float, int)):\n        raise ValueError(\"The account balance must be a number.\")\n\n    # Determine the account type based on the balance\n    if balance > 10000:\n        account_type = \"Premium\"\n    elif 1000 <= balance <= 10000:\n        account_type = \"Standard\"\n    else:\n        account_type = \"Basic\"\n\n    return account_type\n\n\n# Example usage\naccount_balance = 5000\naccount_type = determine_account_type(account_balance)\nprint(f\"The account type is: {account_type}\")\n```\n\nThis code defines a function `determine_account_type` that takes an account balance as input and returns a string indicating the account type. The function checks if the input is a number, determines the account type based on the balance, and returns the appropriate string. The example usage at the end of the code demonstrates how to use the function with a sample input value of 5000.",
+  "error": null,
+  "elapsed_seconds": 3.54,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 441,
+  "title": "Input Validation",
+  "prompt": "Write a program that validates user input to ensure it is a positive integer. If the input is invalid, prompt the user to enter a valid number.\nSample Input: 10\nSample Output: You entered: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that validates user input to ensure it's a positive integer. If the input is invalid, it will prompt the user to enter a valid number.\n\n```python\ndef get_positive_integer():\n    \"\"\"\n    Prompts the user to enter a positive integer and validates the input.\n    \"\"\"\n    while True:\n        try:\n            user_input = int(input(\"Please enter a positive integer: \"))\n            if user_input > 0:\n                return user_input\n            else:\n                print(\"The number must be positive. Please try again.\")\n        except ValueError:\n            print(\"That's not a valid number. Please try again.\")\n\n# Call the function to get user input\npositive_integer = get_positive_integer()\nprint(f\"You entered: {positive_integer}\")\n```\n\nThis program defines a function `get_positive_integer()` that prompts the user for input, validates it as an integer, and checks if it's positive. If the input is invalid, it will prompt the user to enter a valid number. The function continues to prompt the user until a valid positive integer is entered. Finally, the function returns the positive integer entered by the user.",
+  "error": null,
+  "elapsed_seconds": 8.24,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8859,
+  "title": "Function to Check if a String is a Palindrome Ignoring Case and Spaces",
+  "prompt": "Create a function to check if a given string is a palindrome ignoring case and spaces or not\nSample Input: A man a plan a canal Panama\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a given string is a palindrome ignoring case and spaces:\n\n```python\nimport re\n\ndef is_palindrome(s):\n    \"\"\"\n    Check if a given string is a palindrome ignoring case and spaces.\n\n    :param s: str - The string to check.\n    :return: bool - True if the string is a palindrome, False otherwise.\n    \"\"\"\n    # Remove non-alphanumeric characters and convert to lowercase\n    s = re.sub(r'\\W+', '', s.lower())\n\n    # Check if the string is equal to its reverse\n    return s == s[::-1]\n```\n\nHere's how you can use this function:\n\n```python\nprint(is_palindrome(\"A man a plan a canal Panama\"))  # Output: True\nprint(is_palindrome(\"race car\"))                     # Output: True\nprint(is_palindrome(\"hello world\"))                  # Output: False\n```\n\nThis function first removes all non-alphanumeric characters from the input string and converts it to lowercase using a regular expression. Then, it checks if the string is equal to its reverse, which is a simple way to check if a string is a palindrome.",
+  "error": null,
+  "elapsed_seconds": 3.03,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

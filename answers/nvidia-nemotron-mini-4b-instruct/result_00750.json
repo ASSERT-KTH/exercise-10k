@@ -1,0 +1,9 @@
+{
+  "id": 750,
+  "title": "Weather Program",
+  "prompt": "Write a program that takes the current weather as input and prints out a corresponding message\nSample Input: sunny\nSample Output: It's a beautiful day!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes the current weather as input and prints out a corresponding message. You can replace the `weather_dict` variable with a dictionary that maps different weather conditions to their corresponding messages.\n\n```python\nweather_dict = {\n    \"sunny\": \"It's a beautiful day!\",\n    \"cloudy\": \"It's a nice day, but be prepared for some clouds.\",\n    \"rainy\": \"It's raining, bring an umbrella!\",\n    \"snowy\": \"It's snowing, bundle up and stay safe!\"\n}\n\ndef print_weather_message(weather_condition):\n    \"\"\"Print a message based on the given weather condition.\"\"\"\n    if weather_condition in weather_dict:\n        print(weather_dict[weather_condition])\n    else:\n        print(f\"Sorry, I don't have a message for '{weather_condition}' yet.\")\n\n# Get user input\nuser_input = input(\"Enter the current weather condition (e.g., sunny, cloudy, rainy, snowy): \").lower()\n\n# Print the message\nprint_weather_message(user_input)\n```\n\nThis program defines a function `print_weather_message` that takes a weather condition as input and prints out the corresponding message from the `weather_dict`. The function checks if the weather condition is in the dictionary and prints the message if it is, or a message indicating that the dictionary doesn't have a message for that condition. The program then gets user input, calls the function with the user input, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.74,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

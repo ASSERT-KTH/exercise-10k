@@ -1,0 +1,9 @@
+{
+  "id": 8534,
+  "title": "Change Calculator",
+  "prompt": "Create a program to calculate the change owed to a customer after a purchase.\nSample Input: 100 80\nSample Output: 20\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the change owed to a customer after a purchase:\n\n```python\ndef calculate_change(purchase_amount, change_amount):\n    \"\"\"\n    Calculates the change owed to a customer after a purchase.\n\n    :param purchase_amount: The amount of the purchase.\n    :param change_amount: The amount of change given to the customer.\n    :return: The amount of change owed.\n    \"\"\"\n\n    # Ensure the inputs are positive numbers\n    if not isinstance(purchase_amount, (int, float)) or purchase_amount < 0:\n        raise ValueError(\"Purchase amount must be a positive number.\")\n\n    if not isinstance(change_amount, (int, float)) or change_amount < 0:\n        raise ValueError(\"Change amount must be a non-negative number.\")\n\n    # Calculate the change owed\n    change_owed = change_amount - purchase_amount\n\n    return change_owed\n\n\n# Example usage\npurchase_amount = 100\nchange_amount = 80\n\nchange_owed = calculate_change(purchase_amount, change_amount)\n\nprint(f\"Change owed: {change_owed}\")\n```\n\nThis program defines a function `calculate_change` that takes the purchase amount and the change amount as input, checks if they are valid, and calculates the change owed. The example usage at the end of the program demonstrates how to use the function to calculate the change owed in the given sample input.",
+  "error": null,
+  "elapsed_seconds": 3.7,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

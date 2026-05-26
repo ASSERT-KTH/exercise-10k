@@ -1,0 +1,9 @@
+{
+  "id": 8430,
+  "title": "Username Validator",
+  "prompt": "Write a program that takes in a username and checks if it is valid using conditional statements.\nSample Input: john_doe\nSample Output: VALID USERNAME\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given username is valid using conditional statements. This program considers the following rules:\n\n1. The username can only contain letters (both uppercase and lowercase), digits, and underscores ('_').\n2. The username cannot start or end with a digit.\n3. The username cannot be empty.\n\nHere's the code:\n\n```python\ndef is_valid_username(username):\n    \"\"\"\n    Check if a given username is valid.\n\n    :param username: str, the username to check\n    :return: str, \"VALID USERNAME\" if valid, \"INVALID USERNAME\" otherwise\n    \"\"\"\n\n    # Check if the username is empty\n    if not username:\n        return \"INVALID USERNAME\"\n\n    # Check if the username contains only allowed characters\n    if not all(c.isalpha() or c.isdigit() or c == \"_\" for c in username):\n        return \"INVALID USERNAME\"\n\n    # Check if the username starts or ends with a digit\n    if username[0].isdigit() or username[-1].isdigit():\n        return \"INVALID USERNAME\"\n\n    return \"VALID USERNAME\"\n\n# Example usage\nusername = input(\"Enter a username: \")\nprint(is_valid_username(username))\n```\n\nThis program will prompt the user to enter a username and then check if it's valid using the `is_valid_username` function. If the username is valid, it will print \"VALID USERNAME\"; otherwise, it will print \"INVALID USERNAME\".",
+  "error": null,
+  "elapsed_seconds": 3.72,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2440,
+  "title": "Calendar Program",
+  "prompt": "Create a program to display a calendar for a given month and year, using nested for loops to handle each week.\nSample Input: 2024 9\nSample Output:   September 2024\nSu Mo Tu We Th Fr Sa\n 2  3  4  5  6  7  8\n 9 10 11 12 13 14 15\n",
+  "answer": "Here's a Python solution using the `calendar` module which provides a simple interface to generate various calendar objects.\n\n```python\nimport calendar\n\ndef display_calendar(year, month):\n    # Generate the calendar object for the given month and year\n    cal = calendar.Calendar(firstweekday=calendar.SUNDAY)\n    cal.setfirstweekday(calendar.SUNDAY)\n    cal.setyear(year)\n    cal.setmonth(month)\n\n    # Print the calendar\n    print(f\"{calendar.month_name[month]} {year}\")\n    print('\\n'.join([' '.join(row) for row in cal.monthdayslist(year, month)]))\n\n# Example usage\ndisplay_calendar(2024, 9)\n```\n\nThis script first imports the `calendar` module and defines a function `display_calendar()` which takes a year and month as input. It generates a calendar object for the given month and year using the `Calendar()` constructor from the `calendar` module. The `setfirstweekday()` method is used to set the first day of the week as Sunday. The `setyear()` and `setmonth()` methods are used to set the year and month respectively.\n\nThe `monthdayslist()` method is then called to get a list of days in the month. This list is then printed in a tabular format using a nested for loop.\n\nThe example usage at the end of the script calls this function with the year and month as input and prints the resulting calendar.",
+  "error": null,
+  "elapsed_seconds": 3.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

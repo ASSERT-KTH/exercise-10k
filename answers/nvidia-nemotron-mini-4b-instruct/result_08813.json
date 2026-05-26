@@ -1,0 +1,9 @@
+{
+  "id": 8813,
+  "title": "Array Element Reversal",
+  "prompt": "Write a program that takes an array of integers as input, reverses the order of its elements, and then prints the reversed array. The program should handle arrays of varying lengths and should not use any built-in reverse functions.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [5, 4, 3, 2, 1]\n",
+  "answer": "Here's a Python solution for the problem:\n\n```python\ndef reverse_array(arr):\n    # Initialize two pointers, one at the start and one at the end of the array\n    start = 0\n    end = len(arr) - 1\n\n    # Swap elements at the start and end pointers until they meet\n    while start < end:\n        arr[start], arr[end] = arr[end], arr[start]\n        start += 1\n        end -= 1\n\n    return arr\n\n# Test the function with a sample input\nsample_input = [1, 2, 3, 4, 5]\nprint(reverse_array(sample_input))  # Output: [5, 4, 3, 2, 1]\n```\n\nThis function works by using two pointers, one at the start and one at the end of the array. It then swaps the elements at these two pointers, moving the start pointer to the right and the end pointer to the left, until they meet. This effectively reverses the order of the elements in the array.",
+  "error": null,
+  "elapsed_seconds": 2.46,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

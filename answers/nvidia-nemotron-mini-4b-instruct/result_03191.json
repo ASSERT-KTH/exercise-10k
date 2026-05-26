@@ -1,0 +1,9 @@
+{
+  "id": 3191,
+  "title": "Guessing Game",
+  "prompt": "Create a program that generates a random number and allows the user to guess it. Use if/else statements to check if the guess is correct.\nSample Input: 50\nSample Output: Too high! Try again.\n",
+  "answer": "Sure, I'd be happy to help you create a program that generates a random number and allows the user to guess it. Here's a Python solution using if/else statements:\n\n```python\nimport random\n\n# Generate a random number between 1 and 100\nrandom_number = random.randint(1, 100)\n\n# Keep asking the user to guess until they get it right\nwhile True:\n    user_guess = int(input(\"Guess a number between 1 and 100: \"))\n\n    # Check if the guess is correct\n    if user_guess == random_number:\n        print(\"Congratulations! You guessed the number correctly.\")\n        break\n    elif user_guess < random_number:\n        print(\"Too low! Try again.\")\n    else:\n        print(\"Too high! Try again.\")\n```\n\nThis program generates a random number between 1 and 100, and then asks the user to guess the number. It uses an `if/else` statement to check if the user's guess is correct, too low, or too high. If the guess is correct, the program breaks out of the loop and prints a congratulatory message. If not, it continues to ask for a new guess until the user guesses the correct number.",
+  "error": null,
+  "elapsed_seconds": 3.25,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

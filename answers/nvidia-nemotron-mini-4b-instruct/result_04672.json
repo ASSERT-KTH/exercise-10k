@@ -1,0 +1,9 @@
+{
+  "id": 4672,
+  "title": "Character Frequency",
+  "prompt": "Write a program that takes a string as input and returns the frequency of each character in the string.\nSample Input: Hello World\nSample Output: {'H': 1, 'e': 1, 'l': 3, 'o': 2, 'W': 1, 'r': 1, 'd': 1}\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef char_freq(s):\n    # Create an empty dictionary to store character frequencies\n    freq = {}\n\n    # Loop through each character in the input string\n    for char in s:\n        # If the character is already a key in the dictionary, increment its value\n        if char in freq:\n            freq[char] += 1\n        # Otherwise, add the character as a new key with a value of 1\n        else:\n            freq[char] = 1\n\n    return freq\n\n# Test the function with a sample input\nprint(char_freq(\"Hello World\"))  # Output: {'H': 1, 'e': 1, 'l': 3, 'o': 2, 'W': 1, 'r': 1, 'd': 1}\n```\n\nThis program defines a function `char_freq()` that takes a string as input and returns a dictionary containing the frequency of each character in the string. The function works by iterating over each character in the input string, incrementing its count in the dictionary if it already exists, or adding it as a new key with a value of 1. Finally, the function returns the resulting dictionary.",
+  "error": null,
+  "elapsed_seconds": 2.81,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

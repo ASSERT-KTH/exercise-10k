@@ -1,0 +1,9 @@
+{
+  "id": 3743,
+  "title": "Calculating the Sum",
+  "prompt": "Write a program to calculate the sum of all numbers in a list using a basic algorithm\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the sum of all numbers in a list using a basic algorithm:\n\n```python\ndef calculate_sum(numbers):\n    \"\"\"\n    Calculates the sum of all numbers in a list.\n\n    :param numbers: List of numbers\n    :return: Sum of all numbers in the list\n    \"\"\"\n\n    # Check if the input is a non-empty list\n    if not isinstance(numbers, list) or len(numbers) == 0:\n        raise ValueError(\"Input should be a non-empty list\")\n\n    # Initialize the sum to 0\n    total = 0\n\n    # Iterate over each number in the list and add it to the sum\n    for num in numbers:\n        if not isinstance(num, (int, float)):\n            raise ValueError(\"All elements in the list should be numbers\")\n        total += num\n\n    return total\n\n# Example usage\nnumbers = [1, 2, 3, 4, 5]\nprint(calculate_sum(numbers))  # Output: 15\n```\n\nThis program defines a function `calculate_sum` that checks if the input is a non-empty list and if all elements in the list are numbers. Then, it iterates over each number in the list and adds it to the sum. The function returns the final sum. The example usage demonstrates how to use the function with a sample input list.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

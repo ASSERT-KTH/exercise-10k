@@ -1,0 +1,9 @@
+{
+  "id": 6020,
+  "title": "Chatbot",
+  "prompt": "Write a program that simulates a chatbot that responds to basic user queries\nSample Input: what is your name\nSample Output: My name is Chatbot\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a simple Python program that simulates a chatbot that responds to basic user queries:\n\n```python\ndef chatbot():\n    \"\"\"Simulates a chatbot that responds to basic user queries.\"\"\"\n    while True:\n        user_query = input(\"You: \").strip()\n\n        if not user_query:\n            continue\n\n        responses = {\n            \"what is your name\": \"My name is Chatbot\",\n            \"hello\": \"Hello! How can I assist you today?\",\n            \"goodbye\": \"Goodbye! It was a pleasure assisting you. Have a great day!\",\n            \"help\": \"I'm here to help with basic queries. You can ask me questions like 'what is your name' or 'hello'.\"\n        }\n\n        for query, response in responses.items():\n            if query.lower() == user_query.lower():\n                print(f\"Chatbot: {response}\")\n                break\n        else:\n            print(f\"Chatbot: I'm sorry, I didn't understand your query. Please try again.\")\n\n# Run the chatbot\nchatbot()\n```\n\nThis program defines a function `chatbot()` that continuously listens for user input and responds with predefined messages based on the user query. The `responses` dictionary maps user queries to corresponding responses. The program also includes a message to help the user understand how to interact with the chatbot. You can add more queries and responses to the `responses` dictionary to make the chatbot more versatile.",
+  "error": null,
+  "elapsed_seconds": 3.61,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

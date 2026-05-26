@@ -1,0 +1,9 @@
+{
+  "id": 6329,
+  "title": "Array Statistics",
+  "prompt": "Write a program that takes an array as input, calculates and returns its mean, median, and mode.\nSample Input: [1, 2, 2, 3, 4, 4, 4]\nSample Output: [mean: 3, median: 3, mode: 4]\n",
+  "answer": "Here's a Python program that calculates the mean, median, and mode of an array:\n\n```python\ndef calculate_stats(arr):\n    # Calculate mean\n    total = sum(arr)\n    n = len(arr)\n    mean = total / n\n\n    # Calculate median\n    arr.sort()\n    n = len(arr)\n    if n % 2 == 0:\n        median1 = arr[n//2]\n        median2 = arr[n//2 - 1]\n        median = (median1 + median2) / 2\n    else:\n        median = arr[n//2]\n\n    # Calculate mode\n    mode = max(set(arr), key=arr.count)\n\n    return [mean, median, mode]\n\n# Test the function\narr = [1, 2, 2, 3, 4, 4, 4]\nprint(calculate_stats(arr))  # Output: [mean: 3, median: 3, mode: 4]\n```\n\nThis program first calculates the mean by summing up all the elements in the array and dividing by the number of elements. Then it sorts the array and checks if it has an even length. If it does, it calculates the median as the average of the middle two elements. Otherwise, it simply uses the middle element as the median.\n\nNext, it converts the array into a set to remove any duplicates, and then finds the element that appears most frequently (i.e., has the highest count) using the built-in `count` method and the `max` function with a key argument.",
+  "error": null,
+  "elapsed_seconds": 3.64,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

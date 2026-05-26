@@ -1,0 +1,9 @@
+{
+  "id": 9091,
+  "title": "Input Validation and Echo",
+  "prompt": "Write a program that takes a user's name and age as input and then validates the age. If the age is less than 18, print 'You are a minor.' If the age is 18 or above, print 'You are an adult.' Then, echo back the user's name and age. Ensure that the age is a positive integer.\nSample Input: John\n25\nSample Output: You are an adult.\nName: John\nAge: 25\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef validate_age():\n    \"\"\"Get user's name and age, validate age, and echo back the user's name and age.\"\"\"\n\n    # Get user's name\n    user_name = input(\"Please enter your name: \")\n\n    # Validate and get user's age as a positive integer\n    while True:\n        try:\n            user_age = int(input(f\"Please enter your age for {user_name}: \"))\n            if user_age >= 18:\n                break\n            else:\n                print(\"Age must be 18 or above. Please try again.\")\n        except ValueError:\n            print(\"That's not a valid age. Please enter a positive integer.\")\n\n    # Print the result\n    if user_age < 18:\n        print(f\"{user_name}, You are a minor.\")\n    else:\n        print(f\"{user_name}, You are an adult.\")\n\n    # Echo back the user's name and age\n    print(f\"\\nName: {user_name}\\nAge: {user_age}\")\n\n# Call the function\nvalidate_age()\n```\n\nThis program defines a function `validate_age()` that gets the user's name, validates their age as a positive integer, and then prints the result and echoes back the user's name and age. The function uses a `while` loop to ensure the user enters a valid age, and it handles any `ValueError` exceptions that might occur if the user enters a non-integer value.",
+  "error": null,
+  "elapsed_seconds": 3.74,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

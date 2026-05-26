@@ -1,0 +1,9 @@
+{
+  "id": 8014,
+  "title": "Grade Checker",
+  "prompt": "Write a program that checks if a student has passed or failed based on their score. If the score is 50 or above, the student has passed. Otherwise, they have failed.\nSample Input: 45\nSample Output: Failed\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef check_score(score):\n    \"\"\"\n    Check if a student has passed or failed based on their score.\n\n    :param score: The student's score as an integer between 0 and 100.\n    :return: A string indicating whether the student passed or failed.\n    \"\"\"\n    if not isinstance(score, int) or score < 0 or score > 100:\n        raise ValueError(\"Score must be an integer between 0 and 100.\")\n\n    if score >= 50:\n        return \"Passed\"\n    else:\n        return \"Failed\"\n\n# Example usage:\nscore = 45\nresult = check_score(score)\nprint(f\"The student with a score of {score} has {result}.\")\n```\nThis program defines a function `check_score` that takes an integer score as input and returns a string indicating whether the student passed or failed. The function checks if the input is valid (i.e., an integer between 0 and 100), and then returns \"Passed\" if the score is 50 or above, and \"Failed\" otherwise. The example usage at the end of the program demonstrates how to use the function with a sample input of 45.",
+  "error": null,
+  "elapsed_seconds": 3.82,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

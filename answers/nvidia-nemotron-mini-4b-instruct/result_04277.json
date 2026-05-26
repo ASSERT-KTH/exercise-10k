@@ -1,0 +1,9 @@
+{
+  "id": 4277,
+  "title": "Dictionary Keys and Values Length",
+  "prompt": "Write a function that takes a dictionary as input and returns the number of keys and values using the len() function\nSample Input: {\"name\": \"John\", \"age\": 25}\nSample Output: [2, 2]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef count_dict_elements(input_dict):\n    \"\"\"\n    Takes a dictionary as input and returns a list containing the number of keys and values in the dictionary.\n\n    :param input_dict: The dictionary to count elements in\n    :return: A list of two integers representing the number of keys and values\n    \"\"\"\n    if not isinstance(input_dict, dict):\n        raise TypeError(\"Input must be a dictionary\")\n\n    key_count = len(input_dict.keys())\n    value_count = len(input_dict.values())\n\n    return [key_count, value_count]\n```\nHere's an example of how you can use this function:\n```python\nsample_input = {\"name\": \"John\", \"age\": 25}\nresult = count_dict_elements(sample_input)\nprint(result)  # Output: [2, 2]\n```\nThis function first checks if the input is a dictionary. If not, it raises a `TypeError`. Then, it calculates the number of keys and values using the built-in `len()` function, and returns a list containing these two integers.",
+  "error": null,
+  "elapsed_seconds": 2.89,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

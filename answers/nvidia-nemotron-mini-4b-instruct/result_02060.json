@@ -1,0 +1,9 @@
+{
+  "id": 2060,
+  "title": "Dictionary Reduction",
+  "prompt": "Write a function to reduce a dictionary to a single value (e.g., sum, average).\nSample Input: {'a': 1, 'b': 2, 'c': 3}, sum\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that takes a dictionary and a reduction function (e.g., sum, average) as input, and returns the result of applying the reduction function to the dictionary's values.\n\n```python\ndef reduce_dict(d, func):\n    \"\"\"Reduce a dictionary to a single value using a given reduction function.\n\n    Args:\n    d (dict): The dictionary to reduce.\n    func (callable): A function that takes a single argument and returns a single value.\n                     Should be one of the built-in Python functions (e.g., sum, len, min, max)\n                     or a user-defined function.\n\n    Returns:\n    The result of applying the reduction function to the dictionary's values.\n    \"\"\"\n    return func(d.values())\n```\n\nHere's an example of how to use this function:\n\n```python\n# Sample Input: {'a': 1, 'b': 2, 'c': 3}, sum\nsample_input = {'a': 1, 'b': 2, 'c': 3}\nsample_func = sum\n\n# Sample Output: 6\nprint(reduce_dict(sample_input, sample_func))  # Output: 6\n```\n\nIf you want to reduce the dictionary to a single value using an average function, you can modify the `func` parameter to `functools.reduce(lambda x, y: x + y, d.values()) / len(d)`. This uses the `reduce` function from the `functools` module to apply the addition function to all the values in the dictionary, and then divides the result by the number of keys in the dictionary to get the average value.",
+  "error": null,
+  "elapsed_seconds": 4.06,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

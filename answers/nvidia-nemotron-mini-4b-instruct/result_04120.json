@@ -1,0 +1,9 @@
+{
+  "id": 4120,
+  "title": "Data Type Recognition",
+  "prompt": "Write a program that recognizes and prints out the data type of a given variable.\nSample Input: 123, 'hello', 3.14\nSample Output: Integer, String, Float\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that recognizes and prints out the data type of a given variable:\n\n```python\ndef get_data_type(variable):\n    \"\"\"\n    Determines the data type of a given variable.\n\n    :param variable: The variable to determine the data type of.\n    :return: A string indicating the data type (Integer, String, Float).\n    \"\"\"\n    try:\n        int_value = int(variable)\n        return \"Integer\"\n    except ValueError:\n        pass\n\n    try:\n        float_value = float(variable)\n        return \"Float\"\n    except ValueError:\n        pass\n\n    return \"String\"\n\n# Get user input\nuser_input = input(\"Enter a variable: \")\n\n# Determine and print the data type\ndata_type = get_data_type(user_input)\nprint(f\"The data type of {user_input} is {data_type}.\")\n```\n\nThis program defines a function `get_data_type` that attempts to convert the given variable to an integer and a float using the `int()` and `float()` functions, respectively. If the conversion is successful, the function returns \"Integer\" or \"Float\", respectively. If the conversion fails for both types, the function returns \"String\". The program then prompts the user to enter a variable, calls the `get_data_type` function with the user input, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

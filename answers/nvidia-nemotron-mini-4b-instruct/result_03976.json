@@ -1,0 +1,9 @@
+{
+  "id": 3976,
+  "title": "Implementing the HeapSort Algorithm",
+  "prompt": "Implement the heapsort algorithm to sort a list of integers in ascending order. The program should take a list of integers as input and output the sorted list.\nSample Input: [5, 2, 8, 3, 1]\nSample Output: [1, 2, 3, 5, 8]\n",
+  "answer": "Sure, I'd be happy to help you implement the heap sort algorithm. Here's a Python solution for your problem:\n\n```python\nimport heapq\n\ndef heap_sort(arr):\n    # Convert the input list to a min-heap\n    heapq.heapify(arr)\n\n    # Extract elements from the heap one by one\n    # and append them to the output list\n    output = []\n    while arr:\n        output.append(heapq.heappop(arr))\n\n    return output\n\n# Test the function with your sample input\nsample_input = [5, 2, 8, 3, 1]\nprint(heap_sort(sample_input))  # Output: [1, 2, 3, 5, 8]\n```\n\nIn this implementation, we first convert the input list to a min-heap using `heapq.heapify()`. Then, we extract elements from the heap one by one and append them to the output list. The resulting output list is sorted in ascending order.\n\nPlease note that heap sort has a time complexity of O(n log n), which is the same as merge sort and insertion sort. However, it has a slightly better constant factor than merge sort, making it faster in practice for large lists.",
+  "error": null,
+  "elapsed_seconds": 2.9,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7232,
+  "title": "Prime Number Finder",
+  "prompt": "Write a program that uses a while loop to find all prime numbers up to a given number (n) provided by the user. The program should print out each prime number as it is found.\nSample Input: 10\nSample Output: 2 3 5 7\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef is_prime(n):\n    \"\"\"Check if a number is prime.\"\"\"\n    if n < 2:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\ndef find_primes(n):\n    \"\"\"Find all prime numbers up to a given number n.\"\"\"\n    primes = []\n    i = 2\n    while i <= n:\n        if is_prime(i):\n            primes.append(i)\n        i += 1\n    return primes\n\n# Get user input for n\nn = int(input(\"Enter a number: \"))\n\n# Print out each prime number as it is found\nprint(\"Prime numbers up to\", n, \"are:\")\nfor prime in find_primes(n):\n    print(prime, end=\" \")\nprint()\n```\nThis program defines two functions: `is_prime()` and `find_primes()`. The `is_prime()` function checks if a given number is prime by checking for divisibility by all integers from 2 up to the square root of the number. The `find_primes()` function uses a while loop to iterate from 2 up to the given number `n`, checking each number for primality using the `is_prime()` function. If a number is prime, it is added to the `primes` list. When the loop completes, the `primes` list is returned.\n\nThe program then prompts the user to enter a number `n`, and prints out all prime numbers up to `n` using the `find_primes()` function. The `end=\" \"` argument in the `print()` function is used to ensure that each prime number is printed on a separate line.",
+  "error": null,
+  "elapsed_seconds": 4.26,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

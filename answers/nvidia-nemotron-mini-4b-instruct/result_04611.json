@@ -1,0 +1,9 @@
+{
+  "id": 4611,
+  "title": "Compound Interest Calculator",
+  "prompt": "Write a program to calculate the compound interest given the principal amount, rate, and time.\nSample Input: 1000 5 2\nSample Output: Compound Interest: 110.25\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the compound interest given the principal amount, rate, and time:\n\n```python\ndef calculate_compound_interest(principal, rate, time):\n    \"\"\"\n    Calculates the compound interest given the principal amount, rate, and time.\n\n    :param principal: The initial amount of money (float)\n    :param rate: The annual interest rate (float)\n    :param time: The number of years (int)\n    :return: The compound interest (float)\n    \"\"\"\n\n    # Calculate the compound interest using the formula: A = P(1 + r/n)^(nt)\n    # where A is the final amount, P is the principal, r is the annual interest rate, n is the number of times interest is compounded per year, and t is the time in years.\n\n    # Assuming monthly compounding (n = 12)\n    monthly_rate = rate / 12  # Convert annual rate to monthly rate\n    final_amount = principal * (1 + monthly_rate)**(time * 12)\n\n    return final_amount\n\n\n# Sample input and output\nprincipal = 1000\nrate = 5\ntime = 2\n\ncompound_interest = calculate_compound_interest(principal, rate, time)\nprint(f\"Compound Interest: {compound_interest:.2f}\")\n```\n\nThis program defines a function `calculate_compound_interest` that takes the principal amount, rate, and time as input and returns the compound interest. The function assumes monthly compounding (n = 12) and calculates the final amount using the formula `A = P(1 + r/n)^(nt)`. The sample input and output demonstrate how to use the function.",
+  "error": null,
+  "elapsed_seconds": 4.29,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

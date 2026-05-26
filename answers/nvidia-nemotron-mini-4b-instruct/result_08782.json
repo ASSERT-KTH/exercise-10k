@@ -1,0 +1,9 @@
+{
+  "id": 8782,
+  "title": "Multiplication Table",
+  "prompt": "Write a program that takes a number as input and prints its multiplication table.\nSample Input: 5\nSample Output: 5 * 1 = 5\n5 * 2 = 10\n5 * 3 = 15\n5 * 4 = 20\n5 * 5 = 25\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes an integer input and prints its multiplication table:\n\n```python\ndef print_multiplication_table(number):\n    \"\"\"Print the multiplication table for a given number.\"\"\"\n\n    # Ensure the input is an integer\n    if not isinstance(number, int):\n        raise ValueError(\"Input must be an integer.\")\n\n    # Print the header\n    print(f\"{number} * 1 = {number}\")\n\n    # Print the table rows\n    for i in range(2, 7):  # Print rows up to 6 (inclusive)\n        print(f\"{number} * {i} = {number * i}\")\n\n# Get user input\nuser_input = int(input(\"Enter a number: \"))\n\n# Call the function with the user input\nprint_multiplication_table(user_input)\n```\n\nThis program defines a function `print_multiplication_table` that takes an integer as input and prints its multiplication table. It first checks if the input is an integer and raises a `ValueError` if it's not. Then, it prints the header row (where the number is multiplied by 1) and the table rows (where the number is multiplied by numbers from 2 to 6). Finally, it gets user input and calls the function with the user input.",
+  "error": null,
+  "elapsed_seconds": 3.15,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

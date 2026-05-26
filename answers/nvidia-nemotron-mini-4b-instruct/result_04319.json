@@ -1,0 +1,9 @@
+{
+  "id": 4319,
+  "title": "Function Overloading",
+  "prompt": "Create a function that can handle multiple types of input and return the correct output\nSample Input: 5, 2\nSample Output: 7\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that can handle multiple types of input and return the correct output. In this example, I'll assume the input can be integers or floats. If you need to support other data types, you can modify the function accordingly.\n\n```python\ndef add_numbers(*args):\n    \"\"\"\n    A function that can handle multiple types of input and return the correct output.\n\n    :param args: Variable number of arguments, can be integers or floats.\n    :return: The sum of all input arguments.\n    \"\"\"\n\n    # Convert all input arguments to a list and convert to float to avoid TypeError\n    inputs = [float(arg) for arg in args]\n\n    # Calculate the sum of all input arguments\n    total = sum(inputs)\n\n    return total\n```\n\nYou can use this function as follows:\n\n```python\nprint(add_numbers(5, 2))  # Output: 7.0\nprint(add_numbers(5.5, 2))  # Output: 7.5\nprint(add_numbers(5, 2.5))  # Output: 7.5\n```\n\nIf you want to support other data types, you can modify the function to check the type of each input argument and convert it to a common type (e.g., float) before adding them up.",
+  "error": null,
+  "elapsed_seconds": 3.13,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

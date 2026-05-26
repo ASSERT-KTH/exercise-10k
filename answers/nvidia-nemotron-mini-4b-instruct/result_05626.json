@@ -1,0 +1,9 @@
+{
+  "id": 5626,
+  "title": "Implementing Binary Search",
+  "prompt": "Create a program to find an element in a sorted list using the binary search algorithm.\nSample Input: [1, 2, 3, 4, 5, 6, 7, 8, 9]\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you create a program for binary search in a sorted list. Here's an example implementation in Python:\n\n```python\ndef binary_search(sorted_list, target):\n    \"\"\"\n    Performs a binary search on a sorted list to find the target element.\n\n    :param sorted_list: A sorted list of elements\n    :param target: The element to search for\n    :return: The index of the target element if found, otherwise -1\n    \"\"\"\n\n    left, right = 0, len(sorted_list) - 1\n\n    while left <= right:\n        mid = (left + right) // 2\n\n        if sorted_list[mid] == target:\n            return mid\n        elif sorted_list[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n\n    return -1\n\n# Example usage:\nsorted_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]\ntarget = 4\nindex = binary_search(sorted_list, target)\n\nif index != -1:\n    print(f\"The element {target} is at index {index}.\")\nelse:\n    print(f\"The element {target} is not in the list.\")\n```\n\nThis program defines a function `binary_search` that takes a sorted list and a target element as input, and returns the index of the target element if it's found, or -1 if it's not. The example usage shows how to use the function to search for the element 4 in the sorted list [1, 2, 3, 4, 5, 6, 7, 8, 9].",
+  "error": null,
+  "elapsed_seconds": 4.24,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

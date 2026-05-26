@@ -1,0 +1,9 @@
+{
+  "id": 1432,
+  "title": "List Some",
+  "prompt": "Create a function that takes a list and a predicate function as input and returns True if the predicate function returns True for at least one element in the list, False otherwise.\nSample Input: [1, 2, 3, 4, 5], lambda x: x > 3\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef predicate_in_list(lst, predicate):\n    \"\"\"\n    Returns True if the predicate function returns True for at least one element in the list,\n    False otherwise.\n\n    Parameters:\n    lst (list): The list to search in.\n    predicate (callable): A function that takes one argument and returns a boolean.\n\n    Returns:\n    bool: True if the predicate function returns True for at least one element in the list,\n          False otherwise.\n    \"\"\"\n    for item in lst:\n        if predicate(item):\n            return True\n    return False\n```\nHere's an example of how to use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\npredicate = lambda x: x > 3\n\nprint(predicate_in_list(numbers, predicate))  # Output: True\n```\nThis function iterates over each element in the input list and calls the `predicate` function with that element. If the `predicate` function returns `True` for any element, the function returns `True`. If the function iterates through the entire list without finding an element for which the `predicate` function returns `True`, the function returns `False`.",
+  "error": null,
+  "elapsed_seconds": 3.03,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

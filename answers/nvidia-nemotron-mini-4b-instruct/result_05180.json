@@ -1,0 +1,9 @@
+{
+  "id": 5180,
+  "title": "Dictionary Inequality",
+  "prompt": "Write a function to check if two dictionaries are not equal.\nSample Input: {\"a\": 1, \"b\": 2}, {\"a\": 1, \"b\": 3}\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if two dictionaries are not equal:\n```python\ndef are_dicts_equal(dict1, dict2):\n    \"\"\"\n    Check if two dictionaries are not equal.\n\n    :param dict1: The first dictionary\n    :param dict2: The second dictionary\n    :return: True if the dictionaries are not equal, False otherwise\n    \"\"\"\n    # Check if the dictionaries have the same length\n    if len(dict1) != len(dict2):\n        return True\n\n    # Check if the key-value pairs in both dictionaries are equal\n    for key, value in dict1.items():\n        if key not in dict2 or dict1[key] != dict2[key]:\n            return True\n\n    # If we've made it this far, the dictionaries are equal\n    return False\n```\nHere's an example of how you can use this function:\n```python\ndict1 = {\"a\": 1, \"b\": 2}\ndict2 = {\"a\": 1, \"b\": 3}\n\nprint(are_dicts_equal(dict1, dict2))  # Output: True\n```\nThis function first checks if the lengths of the two dictionaries are different, which would indicate that they are not equal. If the lengths are equal, it then checks if the key-value pairs in both dictionaries are equal. If any key-value pair is different, the function returns `True`, indicating that the dictionaries are not equal. If all key-value pairs are equal, the function returns `False`, indicating that the dictionaries are equal.",
+  "error": null,
+  "elapsed_seconds": 3.65,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

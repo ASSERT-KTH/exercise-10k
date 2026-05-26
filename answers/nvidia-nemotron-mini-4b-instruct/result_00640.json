@@ -1,0 +1,9 @@
+{
+  "id": 640,
+  "title": "Currency Converter",
+  "prompt": "Write a program that converts currencies given the exchange rate.\nSample Input: 100 USD to EUR\nSample Output: 88.72 EUR\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that converts currencies given the exchange rate. In this example, I'll use the current exchange rate from the Federal Reserve Bank of St. Louis. You can replace this with any other reliable source.\n\n```python\nimport requests\n\ndef get_exchange_rate():\n    url = \"https://api.stlouisfed.org/currency/data/json\"\n    response = requests.get(url)\n    exchange_rate = response.json()[\"rates\"][\"USD\"][\"rate\"]\n    return exchange_rate\n\ndef convert_currency(amount, from_currency, to_currency):\n    exchange_rate = get_exchange_rate()\n    converted_amount = amount * exchange_rate\n    return f\"{amount} {from_currency} is approximately {converted_amount} {to_currency}.\"\n\n# Example usage\namount = 100\nfrom_currency = \"USD\"\nto_currency = \"EUR\"\n\nprint(convert_currency(amount, from_currency, to_currency))\n```\n\nThis program defines two functions: `get_exchange_rate()` and `convert_currency()`. The first function fetches the current exchange rate from the Federal Reserve Bank of St. Louis. The second function takes an amount, the currency it's being converted from, and the currency it's being converted to as input, and returns the converted amount. The example usage at the end of the program demonstrates how to use these functions.",
+  "error": null,
+  "elapsed_seconds": 4.77,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

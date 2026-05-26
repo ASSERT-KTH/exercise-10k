@@ -1,0 +1,9 @@
+{
+  "id": 6170,
+  "title": "Higher-Order Function",
+  "prompt": "Write a function that takes another function as input and applies it to a given value.\nSample Input: lambda x: x * 2, 5\nSample Output: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function, `apply_function`, takes another function and a value as input, and applies the inner function to the given value.\n\n```python\ndef apply_function(inner_function, value):\n    \"\"\"\n    Applies another function to a given value.\n\n    Parameters:\n    inner_function (callable): The function to apply to the given value.\n    value (any): The value to apply the inner function to.\n\n    Returns:\n    any: The result of applying the inner function to the given value.\n    \"\"\"\n    return inner_function(value)\n```\n\nHere's an example of how to use this function:\n\n```python\ndef double(x):\n    \"\"\"Returns the double of a given value.\"\"\"\n    return x * 2\n\nprint(apply_function(double, 5))  # Output: 10\n```\n\nThis function can be used with any callable object, not just functions. For example, you could use a lambda function or a method of an object.",
+  "error": null,
+  "elapsed_seconds": 2.95,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

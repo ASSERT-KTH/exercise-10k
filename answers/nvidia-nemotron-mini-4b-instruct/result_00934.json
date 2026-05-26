@@ -1,0 +1,9 @@
+{
+  "id": 934,
+  "title": "Simple Browser",
+  "prompt": "Write a program that creates a simple browser using if/else statement\nSample Input: https://www.google.com\nSample Output: The website is loaded\n",
+  "answer": "Sure, I'd be happy to help you create a simple browser using an `if/else` statement in a programming language like Python. Here's an example using the `requests` library to simulate a web request and the `time` library to simulate a loading process. Make sure to install the `requests` library if you haven't already by running `pip install requests`.\n\n```python\nimport requests\nimport time\n\ndef simple_browser(url):\n    \"\"\"\n    Simulate a simple browser that checks if a URL is loaded.\n\n    :param url: The URL to check.\n    :return: A string indicating whether the website is loaded.\n    \"\"\"\n\n    # Simulate a loading process\n    time.sleep(3)  # Adjust the sleep time based on your needs\n\n    # Send a GET request to the URL\n    try:\n        response = requests.get(url, timeout=5)\n\n        # Check if the response is successful\n        if response.status_code == 200:\n            return f\"The website {url} is loaded.\"\n        else:\n            return f\"The website {url} is not loaded. Status code: {response.status_code}\"\n\n    except requests.exceptions.RequestException as e:\n        return f\"An error occurred while loading the website {url}. Error message: {str(e)}\"\n\n\n# Example usage\nurl = \"https://www.google.com\"\nprint(simple_browser(url))\n```\n\nThis program checks if a URL is loaded successfully and returns a message indicating whether the website is loaded or not. You can adjust the sleep time and the timeout value in the `requests.get()` function to simulate a more realistic loading process.",
+  "error": null,
+  "elapsed_seconds": 3.85,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

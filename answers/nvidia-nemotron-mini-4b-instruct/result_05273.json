@@ -1,0 +1,9 @@
+{
+  "id": 5273,
+  "title": "Password Validator",
+  "prompt": "Create a program to validate a password based on its length and content using conditional statements\nSample Input: password123\nSample Output: Valid\n",
+  "answer": "Sure, I'd be happy to help you create a program to validate a password based on its length and content. Here's an example Python program that meets your requirements:\n\n```python\nimport re\n\ndef validate_password(password):\n    \"\"\"\n    Validates a password based on its length and content.\n\n    :param password: str, the password to validate\n    :return: str, \"Valid\" if the password is valid, \"Invalid\" otherwise\n    \"\"\"\n\n    # Check if the password is at least 8 characters long\n    if len(password) < 8:\n        return \"Invalid (too short)\"\n\n    # Check if the password contains at least one uppercase letter, one lowercase letter, one digit, and one special character\n    pattern = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*()_+{};':\"]).{8,}$'\n    if not re.match(pattern, password):\n        return \"Invalid (missing required characters)\"\n\n    return \"Valid\"\n\n# Example usage\npassword = input(\"Enter a password: \")\nprint(validate_password(password))\n```\n\nThis program defines a function `validate_password` that checks if a password meets the following requirements:\n\n* At least 8 characters long\n* Contains at least one uppercase letter, one lowercase letter, one digit, and one special character\n\nThe function uses a regular expression to check for the presence of these characters and returns \"Valid\" if all requirements are met, or \"Invalid (too short)\" or \"Invalid (missing required characters)\" otherwise. The example usage prompts the user to enter a password and prints the validation result.",
+  "error": null,
+  "elapsed_seconds": 3.89,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

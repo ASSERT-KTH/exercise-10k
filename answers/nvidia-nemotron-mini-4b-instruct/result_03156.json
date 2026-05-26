@@ -1,0 +1,9 @@
+{
+  "id": 3156,
+  "title": "Find the Intersection of Two Arrays",
+  "prompt": "Write a function to find the intersection of two arrays.\nSample Input: [1, 2, 3, 4, 5], [4, 5, 6, 7, 8]\nSample Output: [4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the intersection of two arrays (or lists) using set operations. The time complexity of this function is O(min(len1, len2)), which is efficient for large arrays. Here's the code:\n\n```python\ndef find_intersection(arr1, arr2):\n    \"\"\"\n    Find the intersection of two arrays.\n\n    :param arr1: The first array\n    :param arr2: The second array\n    :return: A list containing the common elements between the two arrays\n    \"\"\"\n    # Convert the arrays to sets to remove duplicates and enable fast lookup\n    set1 = set(arr1)\n    set2 = set(arr2)\n\n    # Find the intersection of the two sets\n    intersection = set1 & set2\n\n    # Convert the result back to a list and return it\n    return list(intersection)\n```\n\nYou can use this function as follows:\n\n```python\nprint(find_intersection([1, 2, 3, 4, 5], [4, 5, 6, 7, 8]))  # Output: [4, 5]\n```",
+  "error": null,
+  "elapsed_seconds": 2.95,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6126,
+  "title": " Calculator Program",
+  "prompt": "Create a program that can perform basic arithmetic operations like addition, subtraction, multiplication, and division.\nSample Input: 2 + 2\nSample Output: The result is 4\n",
+  "answer": "Sure, I'd be happy to help you create a program for basic arithmetic operations. Here's an example implementation in Python:\n\n```python\ndef perform_arithmetic(operation, num1, num2):\n    \"\"\"\n    Performs a basic arithmetic operation on two numbers.\n\n    :param operation: str, one of 'add', 'sub', 'mul', or 'div'\n    :param num1: float or int\n    :param num2: float or int\n    :return: float or int, the result of the operation\n    \"\"\"\n    if operation not in ['add', 'sub', 'mul', 'div']:\n        raise ValueError(\"Invalid operation. Choose from 'add', 'sub', 'mul', or 'div'.\")\n\n    if operation == 'add':\n        return num1 + num2\n    elif operation == 'sub':\n        return num1 - num2\n    elif operation == 'mul':\n        return num1 * num2\n    elif operation == 'div':\n        if num2 == 0:\n            raise ZeroDivisionError(\"Cannot divide by zero.\")\n        return num1 / num2\n\n# Example usage:\nprint(perform_arithmetic('add', 2, 2))  # Output: 4\nprint(perform_arithmetic('sub', 5, 3))  # Output: 2\nprint(perform_arithmetic('mul', 4, 2))  # Output: 8\nprint(perform_arithmetic('div', 10, 2))  # Output: 5.0\n```\n\nThis program defines a function `perform_arithmetic` that takes an operation and two numbers as input, and returns the result of performing the operation on those numbers. The function checks for valid operations, handles division by zero, and returns the result as a float or int. The example usage at the end of the code demonstrates how to use this function for basic arithmetic operations.",
+  "error": null,
+  "elapsed_seconds": 4.32,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

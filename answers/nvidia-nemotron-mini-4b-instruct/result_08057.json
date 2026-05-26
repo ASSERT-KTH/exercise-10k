@@ -1,0 +1,9 @@
+{
+  "id": 8057,
+  "title": "Bank Account Manager with Loans",
+  "prompt": "Write a program that uses an if/else statement to manage a bank account with loans based on user input.\nSample Input: apply loan 1000\nSample Output: Loan approved\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program prompts the user to apply for a loan, checks if the loan amount is within the bank's loan limit, and then decides whether to approve or reject the loan based on the user input.\n\n```python\ndef manage_bank_account():\n    \"\"\"Manage a bank account with loans based on user input.\"\"\"\n\n    # Initialize loan limit and loan amount\n    loan_limit = 10000\n    loan_amount = 0\n\n    while True:\n        user_input = input(\"Apply loan [{}]: \".format(loan_amount)).lower()\n\n        if user_input == \"apply loan\":\n            # Get loan amount from user\n            loan_amount = int(input(\"Enter loan amount: \"))\n\n            # Check if loan amount is within loan limit\n            if loan_amount <= loan_limit:\n                print(\"Loan approved\")\n            else:\n                print(\"Loan rejected (amount exceeds loan limit)\")\n\n        elif user_input == \"quit\":\n            print(\"Exiting the program...\")\n            break\n\n        else:\n            print(\"Invalid input. Please try again.\")\n\n\nif __name__ == \"__main__\":\n    manage_bank_account()\n```\n\nThis program will keep prompting the user to apply for a loan until they enter \"quit\". The loan amount will be checked against the loan limit, and the loan will be approved or rejected accordingly.",
+  "error": null,
+  "elapsed_seconds": 3.57,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7063,
+  "title": "Splitting Strings",
+  "prompt": "Write a program that takes a string as input and prints out the string split into substrings based on a delimiter.\nSample Input: hello,world,python\nSample Output: ['hello', 'world', 'python']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef split_string(input_string, delimiter):\n    \"\"\"\n    Splits a given input string into substrings based on a delimiter.\n\n    :param input_string: The input string to split.\n    :param delimiter: The delimiter to use for splitting the string.\n    :return: A list of substrings.\n    \"\"\"\n    # Check that the input is a non-empty string and the delimiter is not empty\n    if not isinstance(input_string, str) or not input_string:\n        raise ValueError(\"Input must be a non-empty string.\")\n    if not isinstance(delimiter, str) or not delimiter:\n        raise ValueError(\"Delimiter must be a non-empty string.\")\n\n    # Split the string into substrings based on the delimiter\n    substrings = input_string.split(delimiter)\n\n    return substrings\n\n# Example usage\ninput_string = \"hello,world,python\"\ndelimiter = \",\"\n\nsubstrings = split_string(input_string, delimiter)\nprint(substrings)\n```\nWhen you run this program with the sample input and output you provided, it will output:\n```python\n['hello', 'world', 'python']\n```\nI hope this helps! Let me know if you have any questions or if there's anything else I can help you with.",
+  "error": null,
+  "elapsed_seconds": 3.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4057,
+  "title": "Dictionary Sort",
+  "prompt": "Write a function that takes a dictionary as input and returns a new dictionary containing the key-value pairs sorted by key.\nSample Input: { 'c': 3, 'b': 2, 'a': 1 }\nSample Output: { 'a': 1, 'b': 2, 'c': 3 }\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef sort_dict_by_key(input_dict):\n    \"\"\"\n    Takes a dictionary as input and returns a new dictionary containing the key-value pairs sorted by key.\n\n    :param input_dict: The input dictionary\n    :return: A new dictionary with key-value pairs sorted by key\n    \"\"\"\n    # Use the built-in sorted() function to sort the key-value pairs in the input dictionary\n    # and then unpack the sorted tuples into a new dictionary\n    return dict(sorted(input_dict.items()))\n```\nHere's an example of how you can use this function:\n```python\ninput_dict = {'c': 3, 'b': 2, 'a': 1}\nsorted_dict = sort_dict_by_key(input_dict)\nprint(sorted_dict)  # Output: {'a': 1, 'b': 2, 'c': 3}\n```\nThis function first uses the `sorted()` function to sort the key-value pairs in the input dictionary based on the keys. The `sorted()` function returns a list of tuples, where each tuple contains a key and its corresponding value. The `dict()` function is then used to unpack these tuples into a new dictionary, which is returned as the result.",
+  "error": null,
+  "elapsed_seconds": 3.16,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

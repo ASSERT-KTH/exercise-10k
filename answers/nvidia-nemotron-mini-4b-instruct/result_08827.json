@@ -1,0 +1,9 @@
+{
+  "id": 8827,
+  "title": "Input Validation and Output Formatting",
+  "prompt": "Create a program that takes a user's name and age as input, validates if the age is within the range of 1 to 120, and then outputs a greeting message with the user's name and age. If the age is not within the valid range, output an error message.\nSample Input: John Doe 25\nSample Output: Hello, John Doe! You are 25 years old.\n",
+  "answer": "Sure, I'd be happy to help you create a program for that. Here's a Python solution that meets your requirements:\n\n```python\ndef greet_user():\n    \"\"\"\n    Gets user's name and age, validates age, and outputs a greeting message.\n    \"\"\"\n\n    # Get user's name\n    user_name = input(\"Please enter your name: \")\n\n    # Get user's age\n    while True:\n        try:\n            user_age = int(input(f\"Please enter your age (between 1 and 120): \"))\n            if 1 <= user_age <= 120:\n                break\n            else:\n                print(\"Age must be between 1 and 120. Please try again.\")\n        except ValueError:\n            print(\"That's not a valid age. Please enter a number.\")\n\n    # Output greeting message\n    greeting_message = f\"Hello, {user_name}! You are {user_age} years old.\"\n    print(greeting_message)\n\n# Call the function\ngreet_user()\n```\n\nThis program defines a function `greet_user()` that prompts the user for their name and age, validates the age to be between 1 and 120, and outputs a greeting message with the user's name and age. The function uses a `while` loop to keep prompting the user for a valid age until a valid input is provided.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

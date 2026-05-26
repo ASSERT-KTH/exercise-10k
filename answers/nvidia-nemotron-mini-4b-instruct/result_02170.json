@@ -1,0 +1,9 @@
+{
+  "id": 2170,
+  "title": "Counting Change",
+  "prompt": "Ask the user for the price of an item and the amount paid, and print the change in dollars and cents.\nSample Input: 10.99 20\nSample Output: 9 dollars and 1 cent\n",
+  "answer": "Sure, I can help you with that. Here's a Python solution for your problem:\n\n```python\ndef calculate_change(price, amount_paid):\n    \"\"\"\n    Calculates the change in dollars and cents.\n\n    :param price: The price of the item.\n    :param amount_paid: The amount paid.\n    :return: A string containing the change in dollars and cents.\n    \"\"\"\n    change = amount_paid - price\n    dollars = change // 1.00\n    cents = change % 1.00 * 100\n\n    if cents < 10:\n        cents = f\"{cents:.0f}\"\n    else:\n        cents = f\"{cents}\"\n\n    return f\"{dollars:.1f} dollars and {cents} cents\"\n\n# Example usage\nprice = float(input(\"Enter the price of the item: \"))\namount_paid = float(input(\"Enter the amount paid: \"))\n\nchange = calculate_change(price, amount_paid)\nprint(change)\n```\n\nThis script defines a function `calculate_change` that takes the price and amount paid as inputs and returns a string containing the change in dollars and cents. The function first calculates the change by subtracting the price from the amount paid. Then, it calculates the number of dollars and the number of cents separately and formats them as strings with the desired precision. Finally, it returns the change in dollars and cents as a single string. The example usage prompts the user to enter the price and amount paid, calls the function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

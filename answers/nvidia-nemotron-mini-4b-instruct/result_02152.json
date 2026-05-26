@@ -1,0 +1,9 @@
+{
+  "id": 2152,
+  "title": "Xml Input and Output",
+  "prompt": "Write a program that reads an XML file and prints out the file's contents.\nSample Input: <person><name>John Doe</name><age>25</age></person>\nSample Output: <person>\n  <name>John Doe</name>\n  <age>25</age>\n</person>\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that reads an XML file and prints out its contents using the built-in `xml.etree.ElementTree` module. This module provides an easy way to parse and traverse XML documents.\n\n```python\nimport xml.etree.ElementTree as ET\n\ndef print_xml_file(file_path):\n    \"\"\"Print the contents of an XML file.\"\"\"\n    tree = ET.parse(file_path)\n    root = tree.getroot()\n\n    # Print the root element (the XML file)\n    print(ET.tostring(root, encoding='unicode', method='xml'))\n\n# Replace 'your_file.xml' with the path to your XML file\nprint_xml_file('your_file.xml')\n```\n\nThis program defines a function `print_xml_file` that takes a file path as an argument and prints out the contents of the XML file. The function uses the `ET.parse` method to load the XML file and then prints out the root element (the XML file) using the `ET.tostring` method. The `encoding='unicode', method='xml'` arguments ensure that the output is in XML format.\n\nYou can replace 'your_file.xml' with the path to your XML file to test the program.",
+  "error": null,
+  "elapsed_seconds": 4.35,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

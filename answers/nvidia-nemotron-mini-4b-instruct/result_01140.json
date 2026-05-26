@@ -1,0 +1,9 @@
+{
+  "id": 1140,
+  "title": "CSV Data Analyzer",
+  "prompt": "Write a program that takes a CSV file as input and analyzes its data (e.g. average, median, mode)\nSample Input: data.csv\nSample Output: Average: 10, Median: 10, Mode: 10\n",
+  "answer": "To create a program that analyzes the data in a CSV file and provides the average, median, and mode, you can use Python with libraries like pandas and numpy. Here's a complete program that meets your requirements:\n\n```python\nimport csv\nimport pandas as pd\nimport numpy as np\n\ndef analyze_csv(file_path):\n    # Read the CSV file into a pandas DataFrame\n    df = pd.read_csv(file_path)\n\n    # Calculate the average, median, and mode\n    avg = df.mean().round(2)\n    median = df.median().round(2)\n    mode = df.mode().iloc[0].round(2)\n\n    # Print the results\n    print(f\"Average: {avg}, Median: {median}, Mode: {mode}\")\n\n# Get user input for the CSV file path\ncsv_file_path = input(\"Enter the path to the CSV file: \")\n\n# Call the analyze_csv function\nanalyze_csv(csv_file_path)\n```\n\nThis program reads the CSV file, calculates the average, median, and mode using pandas, and prints the results. Make sure to install the required libraries if you haven't already by running `pip install pandas numpy`.",
+  "error": null,
+  "elapsed_seconds": 2.79,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

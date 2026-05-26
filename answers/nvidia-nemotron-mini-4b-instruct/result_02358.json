@@ -1,0 +1,9 @@
+{
+  "id": 2358,
+  "title": "Sentence Generator",
+  "prompt": "Write a program to take a set of words as input and generate a random sentence using the words\nSample Input: word1, word2, word3\nSample Output: The quick brown word1 jumped over the lazy word2 and word3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a set of words as input and generates a random sentence using those words. We'll use the `random` module to randomly select words from the input set.\n\n```python\nimport random\n\ndef generate_sentence(words):\n    \"\"\"\n    Generate a random sentence using the given words.\n\n    :param words: A set of words\n    :return: A random sentence using the given words\n    \"\"\"\n    # Ensure the input is a set\n    if not isinstance(words, set):\n        raise ValueError(\"Input should be a set of words\")\n\n    # Ensure there are at least 3 words in the set\n    if len(words) < 3:\n        raise ValueError(\"Input set should contain at least 3 words\")\n\n    # Generate a random sentence using the words\n    sentence = \" \".join(random.sample(words, 3))\n\n    # Add a determiner (the/an/a) and a verb\n    determiner = random.choice([\"the\", \"an\", \"a\"])\n    verb = random.choice(list(words - {determiner}))\n    sentence = f\"{determiner} {verb} {random.choice(list(words - {determiner, verb}))}.\"\n\n    return sentence\n\n# Example usage\nwords = {\"word1\", \"word2\", \"word3\"}\nprint(generate_sentence(words))\n```\n\nThis program first ensures that the input is a set and contains at least 3 words. Then, it generates a random sentence using the first three words in the set, adds a determiner and a verb, and returns the final sentence.",
+  "error": null,
+  "elapsed_seconds": 10.24,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

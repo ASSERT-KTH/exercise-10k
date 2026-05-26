@@ -1,0 +1,9 @@
+{
+  "id": 4692,
+  "title": "Character Frequency Counter",
+  "prompt": "Create a function that takes a string as input and returns a dictionary with the frequency of each character.\nSample Input: hello world\nSample Output: {'h': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'w': 1, 'r': 1, 'd': 1}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\nfrom collections import Counter\n\ndef char_frequency(s: str) -> dict:\n    \"\"\"\n    Returns a dictionary with the frequency of each character in the input string.\n\n    :param s: The input string.\n    :return: A dictionary with character keys and their corresponding frequencies.\n    \"\"\"\n    # Use Counter from collections to count the frequency of each character\n    char_freq = Counter(s)\n\n    # Convert the Counter object to a regular dictionary\n    return dict(char_freq)\n```\nHere's an example of how you can use this function:\n```python\nprint(char_frequency(\"hello world\"))  # Output: {'h': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'w': 1, 'r': 1, 'd': 1}\n```\nThis function first uses the `Counter` class from the `collections` module to count the frequency of each character in the input string. Then, it converts the `Counter` object to a regular dictionary using the `dict()` function. The resulting dictionary has character keys and their corresponding frequencies.",
+  "error": null,
+  "elapsed_seconds": 2.86,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7639,
+  "title": "Binary Search",
+  "prompt": "Write a program that uses a while loop to perform a binary search on a given list of numbers.\nSample Input: [1 2 3 4 5 6 7 8 9]\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that performs a binary search on a given list of numbers using a while loop:\n\n```python\ndef binary_search(sorted_list, target):\n    \"\"\"\n    Performs a binary search on a given sorted list of numbers.\n\n    :param sorted_list: A sorted list of numbers\n    :param target: The number to search for\n    :return: The index of the target number in the list if found, otherwise -1\n    \"\"\"\n    low = 0\n    high = len(sorted_list) - 1\n\n    while low <= high:\n        mid = (low + high) // 2\n\n        if sorted_list[mid] == target:\n            return mid\n        elif sorted_list[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n\n    return -1\n\n# Example usage\nsorted_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]\ntarget = 5\nindex = binary_search(sorted_list, target)\n\nif index != -1:\n    print(f\"The number {target} is at index {index} in the list.\")\nelse:\n    print(f\"The number {target} is not in the list.\")\n```\n\nWhen you run this program with the sample input `[1, 2, 3, 4, 5, 6, 7, 8, 9]` and target value `5`, it will output:\n\n```\nThe number 5 is at index 4 in the list.\n```",
+  "error": null,
+  "elapsed_seconds": 3.85,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

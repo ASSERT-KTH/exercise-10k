@@ -1,0 +1,9 @@
+{
+  "id": 5314,
+  "title": "Exception Handling",
+  "prompt": "Write a function that handles exceptions and returns a meaningful error message\nSample Input: divide(10, 0)\nSample Output: Error: division by zero\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that handles exceptions and returns a meaningful error message when the input is zero for the division operation:\n\n```python\ndef divide(a, b):\n    try:\n        return a / b\n    except ZeroDivisionError:\n        return \"Error: division by zero\"\n```\n\nThis function uses a `try`-`except` block to catch the `ZeroDivisionError` exception that might be raised when trying to divide by zero. If an exception is raised, the function returns a meaningful error message instead of attempting to perform the division.\n\nHere's an example of how you can use this function:\n\n```python\nprint(divide(10, 0))  # Output: Error: division by zero\nprint(divide(10, 2))  # Output: 5.0\n```\n\nYou can replace the `divide` function with any other function that might raise exceptions, and the error handling code will work similarly.",
+  "error": null,
+  "elapsed_seconds": 2.31,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

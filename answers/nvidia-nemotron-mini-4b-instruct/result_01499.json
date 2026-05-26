@@ -1,0 +1,9 @@
+{
+  "id": 1499,
+  "title": "Infinity and NaN",
+  "prompt": "Write a program that demonstrates the use of infinity and NaN values in programming.\nSample Input: variable = float('inf')\nSample Output: The variable is infinity.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that demonstrates the use of infinity (`float('inf')`) and Not a Number (NaN) values in programming. This program uses the `math` module to work with floating-point numbers, including infinity and NaN.\n\n```python\nimport math\n\ndef process_infinity_nan(variable):\n    \"\"\"\n    Demonstrates the use of infinity and NaN values in programming.\n\n    :param variable: The variable to check for infinity or NaN.\n    :return: A string indicating the value of the variable.\n    \"\"\"\n\n    # Check for infinity\n    if variable == float('inf'):\n        return f\"The variable is infinity.\"\n\n    # Check for NaN\n    elif math.isnan(variable):\n        return f\"The variable is NaN.\"\n\n    # If the variable is not infinity or NaN, return its value\n    else:\n        return f\"The variable is {variable}.\"\n\n\n# Test the function with infinity and NaN values\nvariable_inf = float('inf')\nprint(process_infinity_nan(variable_inf))  # Output: The variable is infinity.\n\nvariable_nan = float('nan')\nprint(process_infinity_nan(variable_nan))  # Output: The variable is NaN.\n\n# Test the function with other values\nvariable_other = 123.456\nprint(process_infinity_nan(variable_other))  # Output: The variable is 123.456.\n```\n\nThis program defines a function `process_infinity_nan` that takes a variable as input and returns a string indicating its value or whether it's infinity or NaN. The function uses the `math.isnan` function to check for NaN values.",
+  "error": null,
+  "elapsed_seconds": 4.11,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

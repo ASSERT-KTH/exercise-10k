@@ -1,0 +1,9 @@
+{
+  "id": 6859,
+  "title": "Dictionary Data Analysis",
+  "prompt": "Write a function that analyzes a dictionary containing employee data. The dictionary should have employee IDs as keys and another dictionary as values. The inner dictionary should contain the employee's name, age, and salary. The function should calculate the average salary of all employees and return it. If the dictionary is empty, the function should return 0.\nSample Input: {12345: {'name': 'John Doe', 'age': 30, 'salary': 50000}, 67890: {'name': 'Jane Doe', 'age': 25, 'salary': 60000}}\nSample Output: 55000.0\n",
+  "answer": "Here's a Python function that meets your requirements:\n\n```python\ndef calculate_average_salary(employee_data):\n    \"\"\"\n    Analyzes a dictionary containing employee data. The dictionary should have employee IDs as keys and another dictionary as values.\n    The inner dictionary should contain the employee's name, age, and salary. The function calculates the average salary of all employees\n    and returns it. If the dictionary is empty, the function returns 0.\n\n    :param employee_data: A dictionary containing employee data\n    :return: The average salary of all employees or 0 if the dictionary is empty\n    \"\"\"\n    if not employee_data:  # Check if the dictionary is empty\n        return 0\n\n    total_salary = 0\n    for employee_id, employee_info in employee_data.items():\n        total_salary += employee_info['salary']\n\n    return total_salary / len(employee_data) if employee_data else 0\n```\n\nYou can use this function as follows:\n\n```python\nemployee_data = {12345: {'name': 'John Doe', 'age': 30, 'salary': 50000}, 67890: {'name': 'Jane Doe', 'age': 25, 'salary': 60000}}\nprint(calculate_average_salary(employee_data))  # Output: 55000.0\n\nempty_data = {}\nprint(calculate_average_salary(empty_data))  # Output: 0\n```",
+  "error": null,
+  "elapsed_seconds": 4.0,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

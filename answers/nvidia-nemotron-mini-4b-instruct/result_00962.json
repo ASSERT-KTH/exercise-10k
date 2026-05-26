@@ -1,0 +1,9 @@
+{
+  "id": 962,
+  "title": "Dictionary Key Access",
+  "prompt": "Given a dictionary and a key, write a function to retrieve the value associated with that key. If the key does not exist, return 'Key not found'.\nSample Input: dict = {'name': 'Alice', 'age': 30}, key = 'age'\nSample Output: 30\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_value(dictionary, key):\n    \"\"\"\n    Retrieves the value associated with the given key in the dictionary.\n    If the key does not exist, returns 'Key not found'.\n\n    :param dictionary: The dictionary to search in\n    :param key: The key to look up\n    :return: The value associated with the key, or 'Key not found' if the key does not exist\n    \"\"\"\n    try:\n        return dictionary[key]\n    except KeyError:\n        return 'Key not found'\n```\nHere's how you can use this function:\n```python\ndict_example = {'name': 'Alice', 'age': 30}\nprint(get_value(dict_example, 'age'))  # Output: 30\nprint(get_value(dict_example, 'city'))  # Output: Key not found\n```\nThis function uses a `try`-`except` block to handle the `KeyError` that might be raised when accessing a non-existent key in the dictionary. If the key is found, the function returns the associated value. If the key is not found, the function returns a message indicating that the key was not found.",
+  "error": null,
+  "elapsed_seconds": 3.13,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

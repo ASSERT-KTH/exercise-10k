@@ -1,0 +1,9 @@
+{
+  "id": 9317,
+  "title": "HTML Tag Remover",
+  "prompt": "Write a function that takes a string as input and returns the string with all HTML tags removed.\nSample Input: <p>Hello World</p>\nSample Output: Hello World\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses the built-in `re` module to remove all HTML tags from a given string:\n\n```python\nimport re\n\ndef remove_html_tags(input_string: str) -> str:\n    \"\"\"\n    Remove all HTML tags from the given input string.\n\n    :param input_string: The input string containing HTML tags.\n    :return: The output string with all HTML tags removed.\n    \"\"\"\n    # Use a regular expression to match and remove all HTML tags\n    pattern = r'<.*?>'\n    return re.sub(pattern, '', input_string)\n```\n\nHere's an example of how to use this function:\n\n```python\ninput_string = \"<p>Hello World</p>\"\noutput_string = remove_html_tags(input_string)\nprint(output_string)  # Output: Hello World\n```\n\nThis function first imports the `re` module, which provides regular expression operations. Then, it defines a function `remove_html_tags` that takes an input string and returns a new string with all HTML tags removed using a regular expression. The regular expression `r'<.*?>'` matches any sequence of characters (including whitespace) that are preceded and followed by any HTML tag (i.e., `<` and `>`) and is not part of a comment or a CDATA section. The `re.sub` function replaces all matches with an empty string, effectively removing them from the input string.",
+  "error": null,
+  "elapsed_seconds": 3.44,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

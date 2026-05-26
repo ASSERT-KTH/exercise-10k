@@ -1,0 +1,9 @@
+{
+  "id": 1869,
+  "title": "Array Reducing",
+  "prompt": "Write a program to reduce an array to a single value using a reduction operation and print the result.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that demonstrates how to reduce an array (list) to a single value using the built-in `reduce()` function and prints the result:\n\n```python\nfrom functools import reduce\n\ndef reduce_array(arr):\n    \"\"\"\n    Reduce an array to a single value using a reduction operation.\n\n    :param arr: The input array\n    :return: The reduced value\n    \"\"\"\n\n    # Define the reduction operation as addition\n    reduce_op = lambda x, y: x + y\n\n    # Use reduce() to apply the reduction operation to the array elements\n    reduced_value = reduce(reduce_op, arr)\n\n    return reduced_value\n\n# Example usage\nsample_input = [1, 2, 3, 4, 5]\nprint(reduce_array(sample_input))  # Output: 15\n```\n\nIn this program, we define a function `reduce_array()` that takes an array as input and returns the reduced value. We first define the reduction operation as addition (`reduce_op = lambda x, y: x + y`) and then use the `reduce()` function to apply this operation to all elements in the array. The result is the reduced value, which in this case is the sum of all elements in the array.",
+  "error": null,
+  "elapsed_seconds": 3.02,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

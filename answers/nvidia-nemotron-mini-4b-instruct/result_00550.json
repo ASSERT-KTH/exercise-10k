@@ -1,0 +1,9 @@
+{
+  "id": 550,
+  "title": "Consonant Counter",
+  "prompt": "Write a program that takes a string as input and returns the count of consonants in the string.\nSample Input: hello world\nSample Output: 7\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef count_consonants(s: str) -> int:\n    \"\"\"\n    Count the number of consonants in a given string.\n\n    :param s: The input string.\n    :return: The count of consonants in the string.\n    \"\"\"\n    # Define a set of consonants, ignoring case\n    consonants = set(\"bcdfghjklmnpqrstvwxyz\")\n\n    # Count the number of consonants in the string\n    consonant_count = sum(1 for char in s.lower() if char in consonants)\n\n    return consonant_count\n```\nHere's how this program works:\n\n1. We define a set of consonants, ignoring case, which is a more efficient way to check for consonants than using a string.\n2. We use a generator expression to iterate over each character in the input string, converting it to lowercase to ensure case-insensitive matching.\n3. We use the `sum` function to count the number of times the generator expression is true, which is the number of consonants in the string.\n\nHere's an example of how you can use this function:\n```python\nprint(count_consonants(\"hello world\"))  # Output: 7\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.1,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1946,
+  "title": "List Insertion",
+  "prompt": "Write a program that takes a list, an index, and a value as input and inserts the value at that index in the list.\nSample Input: [1, 2, 3, 4, 5], 2, 10\nSample Output: [1, 2, 10, 3, 4, 5]\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef insert_at_index(lst, index, value):\n    # Check if the index is within the list's bounds\n    if index < 0 or index >= len(lst):\n        raise IndexError(\"Index out of bounds\")\n\n    # Insert the value at the given index\n    lst.insert(index, value)\n\n    return lst\n```\n\nYou can use this function like this:\n\n```python\nprint(insert_at_index([1, 2, 3, 4, 5], 2, 10))  # Output: [1, 2, 10, 3, 4, 5]\n```\n\nThis function checks if the index is within the list's bounds and raises an `IndexError` if it's not. Then, it uses the `insert()` method to add the value at the given index. Finally, it returns the modified list.",
+  "error": null,
+  "elapsed_seconds": 2.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

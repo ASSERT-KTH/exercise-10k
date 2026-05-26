@@ -1,0 +1,9 @@
+{
+  "id": 214,
+  "title": "GetUserAge",
+  "prompt": "Write a function that prompts the user for their age and returns it.\nSample Input: 25\nSample Output: 25\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_age():\n    \"\"\"Prompts the user for their age and returns it as an integer.\n\n    Returns:\n        An integer representing the user's age.\n    \"\"\"\n    while True:\n        try:\n            user_age = int(input(\"Please enter your age: \"))\n            if user_age >= 0:\n                return user_age\n            else:\n                print(\"Age must be a non-negative integer. Please try again.\")\n        except ValueError:\n            print(\"That's not a valid integer. Please try again.\")\n```\nThis function will prompt the user to enter their age, convert the input to an integer, and check if it's non-negative. If the input is valid, the function returns the age. If the input is invalid, the function will prompt the user to try again.\n\nHere's an example of how you can use this function:\n```python\nage = get_age()\nprint(f\"Your age is {age}.\")\n```\nThis will prompt the user to enter their age, convert it to an integer, and then print a message indicating their age.",
+  "error": null,
+  "elapsed_seconds": 2.79,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

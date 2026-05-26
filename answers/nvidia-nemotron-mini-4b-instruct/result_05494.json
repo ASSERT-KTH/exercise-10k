@@ -1,0 +1,9 @@
+{
+  "id": 5494,
+  "title": "Check Symmetric Matrix",
+  "prompt": "Write a program to check if a given matrix is symmetric.\nSample Input: [[1, 2], [2, 1]]\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given matrix is symmetric:\n\n```python\ndef is_symmetric(matrix):\n    \"\"\"Check if a given matrix is symmetric.\n\n    Args:\n        matrix (list of lists): A 2D list representing a matrix.\n\n    Returns:\n        bool: True if the matrix is symmetric, False otherwise.\n    \"\"\"\n\n    # Check if the matrix is empty or has only one row/column\n    if not matrix or len(matrix) != len(matrix[0]):\n        return False\n\n    # Check if the matrix is symmetric by comparing corresponding elements\n    for i in range(len(matrix)):\n        for j in range(i, len(matrix[0])):\n            if matrix[i][j] != matrix[j][i]:\n                return False\n\n    return True\n\n# Test the function with a sample input\nmatrix = [[1, 2], [2, 1]]\nprint(is_symmetric(matrix))  # Output: True\n```\n\nThis program defines a function `is_symmetric` that checks if a given matrix is symmetric by comparing corresponding elements. It first checks if the matrix is empty or has only one row/column, in which case it's not symmetric. Then, it iterates over all pairs of elements in the matrix and checks if they are equal. If any pair is not equal, the function returns False, indicating that the matrix is not symmetric. If all pairs are equal, the function returns True, indicating that the matrix is symmetric.",
+  "error": null,
+  "elapsed_seconds": 3.63,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

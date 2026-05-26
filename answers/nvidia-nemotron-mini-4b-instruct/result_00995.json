@@ -1,0 +1,9 @@
+{
+  "id": 995,
+  "title": "Grade Converter",
+  "prompt": "Write a program that converts a numerical grade to a letter grade. The program uses if-else statements to determine the letter grade based on the numerical grade.\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that converts a numerical grade to a letter grade using if-else statements:\n\n```python\ndef convert_grade(num_grade):\n    \"\"\"\n    Converts a numerical grade to a letter grade.\n\n    :param num_grade: The numerical grade to convert.\n    :return: The corresponding letter grade.\n    \"\"\"\n\n    # Define the mapping between numerical grades and letter grades\n    grade_mapping = {\n        90: 'A',\n        80: 'B',\n        70: 'C',\n        60: 'D',\n        0: 'F'\n    }\n\n    # Check if the numerical grade is within the valid range\n    if 0 <= num_grade <= 100:\n        # Use an if-else statement to determine the letter grade\n        letter_grade = grade_mapping.get(num_grade, 'Invalid grade')\n\n        # Return the letter grade\n        return letter_grade\n    else:\n        # If the numerical grade is not within the valid range, return an error message\n        return 'Invalid grade'\n\n# Test the function with a sample input\nsample_input = 85\nsample_output = convert_grade(sample_input)\nprint(f\"Sample Input: {sample_input}, Sample Output: {sample_output}\")\n```\n\nThis program defines a function `convert_grade` that takes a numerical grade as input and returns the corresponding letter grade. The function uses an if-else statement to check if the numerical grade is within the valid range (0 to 100) and then maps it to the corresponding letter grade using a dictionary. If the numerical grade is invalid, the function returns an error message.",
+  "error": null,
+  "elapsed_seconds": 4.64,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

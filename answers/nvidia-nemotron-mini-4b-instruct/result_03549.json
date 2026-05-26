@@ -1,0 +1,9 @@
+{
+  "id": 3549,
+  "title": "Array Partitioning",
+  "prompt": "Write a program that takes an array and a partition size as input, and returns a new array containing the partitioned sub-arrays.\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: [[1, 2], [3, 4], [5]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef partition_array(arr, partition_size):\n    \"\"\"\n    Partitions an array into sub-arrays of a given size.\n\n    Parameters:\n    arr (list): The input array.\n    partition_size (int): The size of each sub-array.\n\n    Returns:\n    list: A list of sub-arrays, where each sub-array has the given size.\n    \"\"\"\n    if partition_size <= 0 or partition_size > len(arr):\n        raise ValueError(\"Partition size must be positive and less than or equal to the array length.\")\n\n    # Use slicing to create sub-arrays of the given size\n    partitioned_arr = [arr[i:i+partition_size] for i in range(0, len(arr), partition_size)]\n\n    return partitioned_arr\n```\nHere's an example of how to use this function:\n```python\narr = [1, 2, 3, 4, 5]\npartition_size = 2\n\npartitioned_arr = partition_array(arr, partition_size)\nprint(partitioned_arr)  # Output: [[1, 2], [3, 4], [5]]\n```\nThis function first checks if the input partition size is valid. If not, it raises a `ValueError`. Then, it uses a list comprehension to create sub-arrays of the given size by slicing the input array. The resulting list of sub-arrays is returned by the function.",
+  "error": null,
+  "elapsed_seconds": 3.6,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

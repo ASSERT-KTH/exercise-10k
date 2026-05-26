@@ -1,0 +1,9 @@
+{
+  "id": 1259,
+  "title": "Higher-Order Function Reduce",
+  "prompt": "Write a higher-order function that reduces a list to a single value based on a given function.\nSample Input: [1, 2, 3, 4, 5], sum\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a higher-order function in JavaScript that meets your requirements. This function, `reduceListToSingleValue`, takes two arguments: a list and a function to apply to each element of the list. It returns the single value obtained by applying the given function to all elements in the list.\n\n```javascript\nfunction reduceListToSingleValue(list, func) {\n  // Check if the provided function is a function\n  if (!func || typeof func !== 'function') {\n    throw new Error('The second argument must be a function');\n  }\n\n  // Use reduce to apply the function to all elements in the list\n  return list.reduce((acc, item) => {\n    return func(item, acc);\n  }, null);\n}\n\n// Example usage\nconst numbers = [1, 2, 3, 4, 5];\nconst sum = (a, b) => a + b;\n\nconsole.log(reduceListToSingleValue(numbers, sum)); // Output: 15\n```\n\nThis function first checks if the second argument is a function. If not, it throws an error. Then, it uses the built-in `reduce` method to apply the given function to all elements in the list, starting with an accumulator value of `null`. The accumulator value is updated in each iteration using the provided function.",
+  "error": null,
+  "elapsed_seconds": 3.09,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

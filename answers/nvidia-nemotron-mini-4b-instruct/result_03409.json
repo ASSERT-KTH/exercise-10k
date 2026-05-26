@@ -1,0 +1,9 @@
+{
+  "id": 3409,
+  "title": "Dictionary Value Retrieval",
+  "prompt": "Create a program to retrieve all values from a given dictionary.\nSample Input: {'name': 'John', 'age': 25, 'city': 'New York'}\nSample Output: [25, 'John', 'New York']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that retrieves all values from a given dictionary:\n```python\ndef get_dict_values(d):\n    \"\"\"\n    Retrieves all values from a given dictionary.\n\n    :param d: The dictionary to retrieve values from.\n    :return: A list of all values in the dictionary.\n    \"\"\"\n    if not isinstance(d, dict):\n        raise TypeError(\"The input must be a dictionary.\")\n\n    return list(d.values())\n\n# Example usage:\nsample_input = {'name': 'John', 'age': 25, 'city': 'New York'}\nprint(get_dict_values(sample_input))  # Output: [25, 'John', 'New York']\n```\nThis function first checks if the input is a dictionary. If not, it raises a `TypeError`. Then, it uses a list comprehension to create a new list containing all the values in the dictionary. The `values()` method is used to get the values, and the `list()` function is used to convert the resulting generator object to a list.\n\nYou can call this function with any dictionary as the argument, and it will return a list of all its values.",
+  "error": null,
+  "elapsed_seconds": 2.85,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3491,
+  "title": "Distance Between Two Points",
+  "prompt": "Write a program that takes the coordinates of two points as input and returns the distance between them.\nSample Input: 1 2 4 6\nSample Output: 5.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes the coordinates of two points as input (in the format x1 y1 x2 y2) and returns the distance between them using the Euclidean distance formula:\n\n```python\nimport math\n\ndef calculate_distance(point1, point2):\n    \"\"\"\n    Calculates the Euclidean distance between two points.\n\n    :param point1: A tuple of two floats representing the x and y coordinates of the first point.\n    :param point2: A tuple of two floats representing the x and y coordinates of the second point.\n    :return: A float representing the distance between the two points.\n    \"\"\"\n    x1, y1 = point1\n    x2, y2 = point2\n\n    # Calculate the difference in x and y coordinates\n    dx = x2 - x1\n    dy = y2 - y1\n\n    # Calculate the Euclidean distance\n    distance = math.sqrt(dx**2 + dy**2)\n\n    return distance\n\n# Get user input\ninput_points = input(\"Enter the coordinates of two points (e.g. 1 2 4 6): \").strip().split()\n\n# Convert user input to tuples and calculate distance\npoint1 = (float(input_points[0]), float(input_points[1]))\npoint2 = (float(input_points[2]), float(input_points[3]))\ndistance = calculate_distance(point1, point2)\n\n# Print the result\nprint(f\"The distance between the two points is {distance:.2f}.\")\n```\n\nThis program defines a function `calculate_distance` that takes two tuples representing two points and returns their Euclidean distance. It then prompts the user to enter the coordinates of two points, converts the user input to tuples, and calculates and prints the distance between the two points.",
+  "error": null,
+  "elapsed_seconds": 4.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

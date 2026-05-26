@@ -1,0 +1,9 @@
+{
+  "id": 6524,
+  "title": "Calculator",
+  "prompt": "Write a function that takes two numbers and an operator as input and returns the result of the operation.\nSample Input: (2, 3, '+')\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function uses the `math` module to perform basic arithmetic operations (addition, subtraction, multiplication, and division). It also checks if the operator is valid and raises a `ValueError` if it's not.\n\n```python\nimport math\n\ndef perform_operation(num1, num2, operator):\n    \"\"\"\n    Performs an arithmetic operation on two numbers and returns the result.\n\n    :param num1: The first number (float or int)\n    :param num2: The second number (float or int)\n    :param operator: The arithmetic operator ('+', '-', '*', or '/')\n    :return: The result of the operation (float or int)\n    \"\"\"\n\n    # Check if the operator is valid\n    valid_operators = {'+': math.add, '-': math.sub, '*': math.mul, '/': math.pow}\n    if operator not in valid_operators:\n        raise ValueError(f\"Invalid operator '{operator}'. Supported operators are: {', '.join(valid_operators.keys())}\")\n\n    # Perform the operation\n    result = valid_operators[operator](num1, num2)\n\n    return result\n```\n\nHere are some examples of how to use this function:\n\n```python\nprint(perform_operation(2, 3, '+'))  # Output: 5\nprint(perform_operation(2, 3, '-'))  # Output: 1\nprint(perform_operation(2, 3, '*'))  # Output: 6\nprint(perform_operation(2, 3, '/'))  # Output: 0.6666666666666666 (approximately)\n\ntry:\n    print(perform_operation(2, 3, 'invalid'))\nexcept ValueError as e:\n    print(e)  # Output: Invalid operator 'invalid'. Supported operators are: +, -, *, /\n```",
+  "error": null,
+  "elapsed_seconds": 4.61,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

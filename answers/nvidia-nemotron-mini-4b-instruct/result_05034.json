@@ -1,0 +1,9 @@
+{
+  "id": 5034,
+  "title": "String Searching",
+  "prompt": "Write a program that searches for a given substring in a text using for loops.\nSample Input: hello world\nSample Output: Found at position 0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that searches for a given substring in a text using nested for loops:\n```python\ndef search_substring(text, substring):\n    \"\"\"\n    Searches for a given substring in a text using nested for loops.\n\n    Parameters:\n    text (str): The text to search in.\n    substring (str): The substring to search for.\n\n    Returns:\n    int: The position of the first occurrence of the substring in the text, or -1 if not found.\n    \"\"\"\n    for i in range(len(text)):\n        for j in range(i, len(text)):\n            if text[i:j+1] == substring:\n                return i\n    return -1\n\n# Example usage:\ntext = \"hello world\"\nsubstring = \"world\"\nposition = search_substring(text, substring)\n\nif position != -1:\n    print(f\"Found at position {position}\")\nelse:\n    print(f\"Not found in the text.\")\n```\nThis program defines a function `search_substring` that takes a text and a substring as input, and returns the position of the first occurrence of the substring in the text. If the substring is not found, the function returns -1. The function uses nested for loops to iterate over all possible substrings of the text, and checks if each substring matches the given substring. If a match is found, the function returns the starting position of the substring in the text.\n\nYou can replace the `text` and `substring` variables with your own values to test the function.",
+  "error": null,
+  "elapsed_seconds": 3.77,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

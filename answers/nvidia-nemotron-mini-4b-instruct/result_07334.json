@@ -1,0 +1,9 @@
+{
+  "id": 7334,
+  "title": "Input with SSL",
+  "prompt": "Write a program that takes input from the user with SSL encryption and prints out the results.\nSample Input: https://example.com\nSample Output: This is an example web page.\n",
+  "answer": "Sure, I can help you with that. Here's an example Python program that uses the `ssl` and `http.client` modules to establish an SSL connection to a website and print out the HTML content. In this example, I'll use the URL \"https://www.python.org\" as the input.\n\n```python\nimport ssl\nimport http.client\n\n# Set up SSL context\ncontext = ssl.create_default_context()\ncontext.check_hostname = True\ncontext.verify_mode = ssl.CERT_REQUIRED\n\n# Establish SSL connection\nconn = http.client.HTTPSConnection(\"www.python.org\")\n\n# Send request and get response\nconn.request(\"GET\", \"/\")\nresponse = conn.getresponse()\n\n# Print response content\nprint(response.read().decode())\n\n# Close connection\nconn.close()\n```\n\nThis program first creates an SSL context with the necessary settings to verify the server's identity. Then, it establishes an SSL connection to the target website using the `HTTPSConnection` class. After sending a GET request to the root URL (`/`) and receiving the response, it prints out the response content using the `read()` method and the `decode()` method to convert the bytes to a string. Finally, it closes the connection using the `close()` method.\n\nPlease note that this is a simple example and does not include error handling or security measures such as rate limiting or input validation. You should consider implementing these features in a real-world application.",
+  "error": null,
+  "elapsed_seconds": 3.37,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

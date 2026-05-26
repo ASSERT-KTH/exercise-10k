@@ -1,0 +1,9 @@
+{
+  "id": 5308,
+  "title": "Function with Closure",
+  "prompt": "Write a function that returns another function with a closed-over variable\nSample Input: None\nSample Output: A function with a closed-over variable\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example Python function that demonstrates creating a function with a closed-over variable. This function, `create_counter`, returns another function that increments a private counter variable each time it's called.\n\n```python\ndef create_counter():\n    \"\"\"\n    Returns a function with a closed-over variable.\n    \"\"\"\n    counter = 0\n\n    def counter_function():\n        nonlocal counter\n        counter += 1\n        return counter\n\n    return counter_function\n\n# Create an instance of the returned function\ncounter_instance = create_counter()\n\n# Call the function multiple times\nprint(counter_instance())  # Output: 1\nprint(counter_instance())  # Output: 2\nprint(counter_instance())  # Output: 3\n```\n\nIn this example, the `create_counter` function defines a private counter variable `counter` and then returns a new function `counter_function` that increments `counter` each time it's called. The `nonlocal` keyword is used to modify the value of `counter` outside the scope of the `counter_function`. This is possible because the `counter_function` is a nested function, and Python allows for the modification of variables in enclosing scopes.",
+  "error": null,
+  "elapsed_seconds": 3.03,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4408,
+  "title": "Prime Numbers",
+  "prompt": "Create a program that generates all prime numbers up to n using a for loop.\nSample Input: 20\nSample Output: 2 3 5 7 11 13 17 19\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates all prime numbers up to a given number `n` using a for loop:\n\n```python\ndef generate_primes(n):\n    \"\"\"Generate all prime numbers up to n using a for loop.\"\"\"\n    if n < 2:\n        return []\n\n    primes = [True] * (n + 1)\n    primes[0], primes[1] = False, False\n\n    for num in range(2, int(n**0.5) + 1):\n        if primes[num]:\n            for multiple in range(num*num, n+1, num):\n                primes[multiple] = False\n\n    return [num for num in range(2, n+1) if primes[num]]\n\n# Get sample input and output\nn = 20\nprint(f\"All prime numbers up to {n}: {generate_primes(n)}\")\n```\n\nWhen you run this program with `n = 20`, it will output:\n\n```\nAll prime numbers up to 20: [2, 3, 5, 7, 11, 13, 17, 19]\n```\n\nThis program first initializes a boolean array `primes` of size `n+1`, where all elements are set to `True`. It then iterates through all numbers from 2 to the square root of `n`, marking their multiples as `False` to avoid checking them again later. Finally, it returns a list of all prime numbers up to `n`.",
+  "error": null,
+  "elapsed_seconds": 3.65,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

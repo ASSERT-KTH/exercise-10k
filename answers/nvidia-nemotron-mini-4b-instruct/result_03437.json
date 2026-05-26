@@ -1,0 +1,9 @@
+{
+  "id": 3437,
+  "title": "Morse Code Translation",
+  "prompt": "Write a function that takes a string as input and returns the Morse code translation\nSample Input: hello\nSample Output: .... . .-.. .-.. ---\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that translates a given string into Morse code:\n\n```python\ndef string_to_morse(s: str) -> str:\n    \"\"\"\n    Translates a given string into Morse code.\n\n    :param s: The string to translate.\n    :return: The Morse code translation of the input string.\n    \"\"\"\n    morse_code = {\n        'a': '.-', 'b': '-...', 'c': '-.-.', 'd': '-..', 'e': '.',\n        'f': '..-.', 'g': '--.', 'h': '....', 'i': '..', 'j': '.---',\n        'k': '-.-', 'l': '.-..', 'm': '--', 'n': '-.', 'o': '---',\n        'p': '.--.', 'q': '--.-', 'r': '.-.', 's': '...', 't': '-',\n        'u': '..-', 'v': '...-', 'w': '.--', 'x': '-..-', 'y': '-.--',\n        'z': '--..', ' ': '   '\n    }\n\n    return ' '.join(morse_code.get(c, '.') for c in s)\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(string_to_morse('hello'))  # Output: .... . .-.. .-.. ---\n```\n\nThis function uses a dictionary to map each letter of the English alphabet to its corresponding Morse code sequence. The function iterates over each character in the input string and uses the `get()` method to retrieve the Morse code sequence for that character. If the character is not a letter (i.e., it's a space), the function uses a dot as the Morse code sequence. Finally, the function joins all the Morse code sequences together with spaces in between to form the Morse code translation.",
+  "error": null,
+  "elapsed_seconds": 4.63,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

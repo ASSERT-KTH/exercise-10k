@@ -1,0 +1,9 @@
+{
+  "id": 2129,
+  "title": "Array Deletion",
+  "prompt": "Create a function that takes an array and an index as input and returns a new array containing all elements except the one at the specified index.\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: [1, 2, 4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a JavaScript function that meets your requirements:\n```javascript\nfunction removeElementAtIndex(arr, index) {\n  // Check if the input is valid\n  if (index < 0 || index >= arr.length) {\n    throw new Error('Index out of bounds');\n  }\n\n  // Create a new array with all elements except the one at the specified index\n const newArr = [...arr].slice(0, index).concat(arr.slice(index + 1));\n\n  return newArr;\n}\n```\nHere's how you can use this function:\n```javascript\nconst arr = [1, 2, 3, 4, 5];\nconst result = removeElementAtIndex(arr, 2);\nconsole.log(result); // Output: [1, 2, 4, 5]\n```\nThis function uses the spread operator (`...`) to create a shallow copy of the input array, and then slices the copy to remove the element at the specified index. It finally concatenates the sliced elements back into the new array. The function also includes a check to ensure that the index is within the bounds of the array, to prevent any potential errors.",
+  "error": null,
+  "elapsed_seconds": 3.46,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

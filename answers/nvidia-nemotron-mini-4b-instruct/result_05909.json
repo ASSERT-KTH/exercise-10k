@@ -1,0 +1,9 @@
+{
+  "id": 5909,
+  "title": "Split String",
+  "prompt": "Write a function that takes a string and a separator as input and returns a list of substrings split by the separator\nSample Input: ['hello,world', ',']\nSample Output: ['hello', 'world']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef split_string_by_separator(input_string: str, separator: str) -> list:\n    \"\"\"\n    Splits a string into a list of substrings using a given separator.\n\n    :param input_string: The input string to be split.\n    :param separator: The separator character to use when splitting the string.\n    :return: A list of substrings split by the separator.\n    \"\"\"\n    if not isinstance(input_string, str) or not isinstance(separator, str):\n        raise TypeError(\"Both input_string and separator must be strings.\")\n\n    return input_string.split(separator)\n```\nHere's an example of how you can use this function:\n```python\ninput_string = 'hello,world'\nseparator = ','\n\nresult = split_string_by_separator(input_string, separator)\nprint(result)  # Output: ['hello', 'world']\n```\nThis function checks if the input types are strings, and raises a `TypeError` if they are not. Then, it uses the built-in `str.split()` method to split the input string into a list of substrings using the given separator.",
+  "error": null,
+  "elapsed_seconds": 3.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

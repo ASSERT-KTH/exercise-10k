@@ -1,0 +1,9 @@
+{
+  "id": 4806,
+  "title": "Minimize the Maximum Difference",
+  "prompt": "Given an array of integers and a number k, find the minimum possible maximum difference between any two elements in the array after adding k to each element. The function should take in an array of integers and a number k as input and return the minimum possible maximum difference.\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution using the greedy algorithm:\n\n```python\ndef min_max_diff(arr, k):\n    # Sort the array in ascending order\n    arr.sort()\n\n    # Initialize the minimum possible maximum difference\n    min_diff = arr[-1] - arr[0]\n\n    # Add k to each element in the array\n    for i in range(len(arr)):\n        arr[i] += k\n\n    # Update the minimum possible maximum difference if necessary\n    min_diff = min(min_diff, arr[-1] - arr[0])\n\n    return min_diff\n```\n\nThis function first sorts the input array in ascending order. Then, it iterates through the array, adding `k` to each element. After that, it updates the minimum possible maximum difference if the new maximum difference is smaller than the current minimum. Finally, it returns the minimum possible maximum difference.\n\nHere's an example usage of the function:\n\n```python\narr = [1, 2, 3, 4, 5]\nk = 2\nprint(min_max_diff(arr, k))  # Output: 4\n```\n\nThis will output `4`, which is the minimum possible maximum difference after adding `2` to each element in the array.",
+  "error": null,
+  "elapsed_seconds": 3.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

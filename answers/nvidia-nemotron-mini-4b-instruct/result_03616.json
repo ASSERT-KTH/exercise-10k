@@ -1,0 +1,9 @@
+{
+  "id": 3616,
+  "title": "Function Invocation",
+  "prompt": "Write a function that invokes another function with a variable number of arguments\nSample Input: math.sqrt, 4\nSample Output: 2.0\n",
+  "answer": "Sure, I'd be happy to help you with that! In Python, you can use the `*args` syntax to pass a variable number of arguments to a function. Here's a function that takes another function and a variable number of arguments, and then invokes the other function with those arguments:\n\n```python\ndef invoke_function(*args, func):\n    \"\"\"\n    Invokes another function with a variable number of arguments.\n\n    :param func: The function to invoke.\n    :param args: Variable number of arguments to pass to the function.\n    :return: The result of invoking the function.\n    \"\"\"\n    return func(*args)\n\n# Example usage:\ndef my_math_function(x):\n    \"\"\"\n    Returns the square root of x.\n\n    :param x: The number to take the square root of.\n    :return: The square root of x.\n    \"\"\"\n    return math.sqrt(x)\n\nresult = invoke_function(my_math_function, 4)\nprint(result)  # Output: 2.0\n```\n\nIn this example, the `invoke_function` function takes two required arguments (the function to invoke and the variable number of arguments to pass to the function) and one optional argument (`func`). The `*args` syntax allows it to accept any number of arguments, which are then passed to the `func` function as a tuple. The function then returns the result of invoking the `func` function with the given arguments.",
+  "error": null,
+  "elapsed_seconds": 3.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

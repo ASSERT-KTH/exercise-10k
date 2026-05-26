@@ -1,0 +1,9 @@
+{
+  "id": 8290,
+  "title": "Pythagorean Theorem Calculator",
+  "prompt": "Create a program that calculates the length of the hypotenuse of a right triangle.\nSample Input: 3 4\nSample Output: 5.0\n",
+  "answer": "Sure, I'd be happy to help you create a program that calculates the length of the hypotenuse of a right triangle. Here's a Python solution using the Pythagorean theorem:\n\n```python\ndef calculate_hypotenuse(a, b):\n    \"\"\"\n    Calculates the length of the hypotenuse of a right triangle given the lengths of its two legs.\n\n    :param a: The length of one leg of the right triangle.\n    :param b: The length of the other leg of the right triangle.\n    :return: The length of the hypotenuse.\n    \"\"\"\n\n    # Check if the inputs are positive numbers\n    if not (isinstance(a, (int, float)) and isinstance(b, (int, float)) and a > 0 and b > 0):\n        raise ValueError(\"Both inputs must be positive numbers.\")\n\n    # Calculate the hypotenuse using the Pythagorean theorem\n    c = (a**2 + b**2)**0.5\n\n    return c\n\n# Get user input\na = float(input(\"Enter the length of one leg: \"))\nb = float(input(\"Enter the length of the other leg: \"))\n\n# Calculate and print the hypotenuse\nhypotenuse = calculate_hypotenuse(a, b)\nprint(f\"The length of the hypotenuse is {hypotenuse}.\")\n```\n\nThis program defines a function `calculate_hypotenuse` that takes two positive numbers as input and returns the length of the hypotenuse. The function checks if the inputs are valid and then calculates the hypotenuse using the Pythagorean theorem. The program then gets user input for the two legs of a right triangle, calculates the hypotenuse, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.98,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

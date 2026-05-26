@@ -1,0 +1,9 @@
+{
+  "id": 2693,
+  "title": "Username Validator",
+  "prompt": "Write a program that takes a username as input and determines whether it is valid based on the following conditions: the username must be at least 3 characters long and contain only letters and numbers.\nSample Input: john123\nSample Output: Valid username\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef is_valid_username(username):\n    \"\"\"\n    Determines whether a given username is valid based on the following conditions:\n    - The username must be at least 3 characters long.\n    - The username must contain only letters and numbers.\n\n    :param username: str, the username to validate\n    :return: str, \"Valid username\" if valid, \"Invalid username\" otherwise\n    \"\"\"\n    # Check if the username is at least 3 characters long\n    if len(username) < 3:\n        return \"Invalid username (too short)\"\n\n    # Check if the username contains only letters and numbers\n    valid_chars = set(string.ascii_letters + string.digits)\n    if not all(c in valid_chars for c in username):\n        return \"Invalid username (contains invalid characters)\"\n\n    return \"Valid username\"\n\n# Example usage\nusername = input(\"Enter a username: \")\nprint(is_valid_username(username))\n```\nThis program defines a function `is_valid_username` that takes a username as input and returns a message indicating whether the username is valid or not. The function first checks if the username is at least 3 characters long, and then checks if it contains only letters and numbers using a set of valid characters. The example usage at the end of the program prompts the user to enter a username and prints the result of calling the `is_valid_username` function with that username.",
+  "error": null,
+  "elapsed_seconds": 3.52,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

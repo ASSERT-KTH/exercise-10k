@@ -1,0 +1,9 @@
+{
+  "id": 3419,
+  "title": "Dictionary Grouping",
+  "prompt": "Create a program to group a given dictionary by its values.\nSample Input: {'a': 1, 'b': 2, 'c': 1, 'd': 2, 'e': 3}\nSample Output: {1: ['a', 'c'], 2: ['b', 'd'], 3: ['e']}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that groups a given dictionary by its values:\n```python\ndef group_dict_by_values(input_dict):\n    \"\"\"\n    Groups a given dictionary by its values.\n\n    :param input_dict: The input dictionary\n    :return: A new dictionary where keys are values and values are lists of keys\n    \"\"\"\n    # Create an empty dictionary to store the grouped values\n    grouped_dict = {}\n\n    # Iterate over the input dictionary's items\n    for key, value in input_dict.items():\n        # If the value is not already a key in the grouped dictionary, add it as a new key\n        if value not in grouped_dict:\n            grouped_dict[value] = [key]\n        # Otherwise, append the key to the existing list of keys for this value\n        else:\n            grouped_dict[value].append(key)\n\n    return grouped_dict\n```\nHere's an example of how to use this function:\n```python\ninput_dict = {'a': 1, 'b': 2, 'c': 1, 'd': 2, 'e': 3}\noutput_dict = group_dict_by_values(input_dict)\nprint(output_dict)  # Output: {1: ['a', 'c'], 2: ['b', 'd'], 3: ['e']}\n```\nThis function first creates an empty dictionary to store the grouped values. Then, it iterates over the input dictionary's items, checking if the value is already a key in the grouped dictionary. If it's not, the function adds it as a new key with a list containing only the current key. If it is, the function appends the current key to the existing list of keys for this value. Finally, the function returns the grouped dictionary.",
+  "error": null,
+  "elapsed_seconds": 4.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

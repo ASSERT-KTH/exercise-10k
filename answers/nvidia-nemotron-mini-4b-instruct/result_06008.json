@@ -1,0 +1,9 @@
+{
+  "id": 6008,
+  "title": "Personalized Message",
+  "prompt": "Write a program that asks the user for their name and age, and prints out a personalized message including their name and age\nSample Input: John, 25\nSample Output: Hello, John! You are 25 years old\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef print_personalized_message():\n    \"\"\"Asks the user for their name and age, and prints out a personalized message.\"\"\"\n\n    # Ask the user for their name\n    name = input(\"Please enter your name: \")\n\n    # Ask the user for their age\n    while True:\n        try:\n            age = int(input(f\"Please enter your age: \"))\n            break\n        except ValueError:\n            print(\"That's not a valid age. Please try again.\")\n\n    # Print the personalized message\n    print(f\"Hello, {name}! You are {age} years old.\")\n\n# Call the function to start the program\nprint_personalized_message()\n```\n\nThis program defines a function `print_personalized_message()` that prompts the user for their name and age, validates the input to ensure it's a valid integer, and then prints out a personalized message using an f-string to format the user's name and age. The function is then called at the end of the program to start the interaction with the user.",
+  "error": null,
+  "elapsed_seconds": 2.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

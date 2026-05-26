@@ -1,0 +1,9 @@
+{
+  "id": 8118,
+  "title": "Character Frequency Counter",
+  "prompt": "Write a program that takes a string as input and returns a dictionary with the frequency of each character in the string.\nSample Input: Hello World\nSample Output: {'H': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'W': 1, 'r': 1, 'd': 1}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef char_frequency(input_string):\n    \"\"\"\n    Takes a string as input and returns a dictionary with the frequency of each character in the string.\n\n    :param input_string: The input string\n    :return: A dictionary with character frequencies\n    \"\"\"\n    # Create an empty dictionary to store the frequencies\n    char_freq = {}\n\n    # Iterate over each character in the input string\n    for char in input_string:\n        # Check if the character is already in the dictionary. If not, add it with a frequency of 1.\n        # If it is, increment its frequency.\n        if char in char_freq:\n            char_freq[char] += 1\n        else:\n            char_freq[char] = 1\n\n    return char_freq\n```\nHere's an example of how you can use this function:\n```python\ninput_string = \"Hello World\"\nresult = char_frequency(input_string)\nprint(result)  # Output: {'H': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'W': 1, 'r': 1, 'd': 1}\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.3,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1130,
+  "title": "BMI Calculator",
+  "prompt": "Write a program that takes a person's weight and height as input and calculates their BMI\nSample Input: 70 180\nSample Output: Your BMI is 21.6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a person's weight and height as input, calculates their Body Mass Index (BMI), and outputs the result:\n\n```python\ndef calculate_bmi():\n    \"\"\"\n    Calculates a person's BMI based on their weight and height.\n    \"\"\"\n\n    # Get user input for weight and height\n    weight = float(input(\"Enter your weight in pounds: \"))\n    height = float(input(\"Enter your height in inches: \"))\n\n    # Convert height to meters for the BMI calculation\n    height_m = height / 39.37  # 1 inch = 2.54 cm, 1 cm = 0.3937 inches\n\n    # Calculate BMI\n    bmi = weight / (height_m ** 2)\n\n    # Output the result\n    if bmi < 18.5:\n        print(f\"Your BMI is {bmi:.1f}. This is considered underweight.\")\n    elif 18.5 <= bmi < 25:\n        print(f\"Your BMI is {bmi:.1f}. This is considered a healthy weight.\")\n    elif 25 <= bmi < 30:\n        print(f\"Your BMI is {bmi:.1f}. This is considered overweight.\")\n    else:\n        print(f\"Your BMI is {bmi:.1f}. This is considered obese.\")\n\n# Call the function to start the program\ncalculate_bmi()\n```\n\nThis program first prompts the user to enter their weight and height, then converts the height to meters for the BMI calculation. Finally, it outputs the result based on the BMI category.",
+  "error": null,
+  "elapsed_seconds": 3.9,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

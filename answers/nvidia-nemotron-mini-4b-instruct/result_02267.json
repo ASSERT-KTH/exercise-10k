@@ -1,0 +1,9 @@
+{
+  "id": 2267,
+  "title": "Conversion between Units",
+  "prompt": "Write a program that converts temperature from Celsius to Fahrenheit.\nSample Input: 30\nSample Output: 86.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that converts temperature from Celsius to Fahrenheit:\n\n```python\ndef celsius_to_fahrenheit(celsius):\n    \"\"\"\n    Converts temperature from Celsius to Fahrenheit.\n\n    :param celsius: The temperature in Celsius.\n    :return: The temperature in Fahrenheit.\n    \"\"\"\n    if not isinstance(celsius, (float, int)):\n        raise TypeError(\"The input must be a number.\")\n\n    fahrenheit = celsius * 9/5 + 32\n    return fahrenheit\n\n# Get user input\ncelsius_temp = float(input(\"Enter the temperature in Celsius: \"))\n\n# Convert and display the result\nfahrenheit_temp = celsius_to_fahrenheit(celsius_temp)\nprint(f\"{celsius_temp}°C is equivalent to {fahrenheit_temp}°F.\")\n```\n\nThis program defines a function `celsius_to_fahrenheit` that takes a temperature in Celsius as input and returns the equivalent temperature in Fahrenheit. The function checks if the input is a number and raises a `TypeError` if it's not. The program then gets user input for the Celsius temperature, converts it to Fahrenheit using the function, and displays the result.",
+  "error": null,
+  "elapsed_seconds": 2.88,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

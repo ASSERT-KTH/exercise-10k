@@ -1,0 +1,9 @@
+{
+  "id": 3027,
+  "title": "Word Frequency",
+  "prompt": "Write a program that takes a string as input and returns a list of the frequency of each word in the string.\nSample Input: hello world hello\nSample Output: {'hello': 2, 'world': 1}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\nfrom collections import Counter\n\ndef word_frequency(input_string: str) -> dict:\n    \"\"\"\n    Takes a string as input and returns a list of the frequency of each word in the string.\n\n    :param input_string: The input string.\n    :return: A dictionary where keys are words and values are their frequencies.\n    \"\"\"\n    # Split the input string into words, convert to lowercase, and remove any punctuation.\n    words = [word.lower() for word in input_string.lower().split() if word.isalnum()]\n\n    # Use the Counter class from the collections module to count the frequency of each word.\n    word_counts = Counter(words)\n\n    return dict(word_counts)\n```\nHere's an example of how you can use this function:\n```python\nsample_input = \"hello world hello\"\nsample_output = {'hello': 2, 'world': 1}\n\nprint(word_frequency(sample_input))  # Output: {'hello': 2, 'world': 1}\n```\nThis program first splits the input string into words, converts them to lowercase, and removes any punctuation. Then, it uses the `Counter` class to count the frequency of each word in the list. Finally, it converts the `Counter` object to a dictionary and returns it.",
+  "error": null,
+  "elapsed_seconds": 3.35,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

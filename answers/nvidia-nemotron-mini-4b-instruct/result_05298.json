@@ -1,0 +1,9 @@
+{
+  "id": 5298,
+  "title": "Selection Sort",
+  "prompt": "Write a program that implements the selection sort algorithm to sort a list of numbers. Use a for loop to iterate over the list.\nSample Input: [3, 2, 1, 4, 5, 6]\nSample Output: [1, 2, 3, 4, 5, 6]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that implements the selection sort algorithm to sort a list of numbers using a for loop:\n\n```python\ndef selection_sort(arr):\n    \"\"\"\n    Sort a list of numbers using the selection sort algorithm.\n\n    :param arr: The list of numbers to be sorted.\n    :return: The sorted list of numbers.\n    \"\"\"\n    n = len(arr)\n\n    # Iterate over the list, one element at a time\n    for i in range(n):\n\n        # Find the index of the minimum element in the unsorted part of the list\n        min_index = i\n        for j in range(i+1, n):\n            if arr[j] < arr[min_index]:\n                min_index = j\n\n        # Swap the minimum element with the first element of the unsorted part\n        arr[i], arr[min_index] = arr[min_index], arr[i]\n\n    return arr\n\n# Example usage\narr = [3, 2, 1, 4, 5, 6]\nsorted_arr = selection_sort(arr)\nprint(sorted_arr)  # Output: [1, 2, 3, 4, 5, 6]\n```\n\nThis program defines a function `selection_sort` that takes a list of numbers as input and returns the sorted list. The function iterates over the list, one element at a time, and for each element, it finds the index of the minimum element in the unsorted part of the list using a nested loop. Finally, it swaps the minimum element with the current element and continues with the next element. This process is repeated until the entire list is sorted.",
+  "error": null,
+  "elapsed_seconds": 3.93,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6722,
+  "title": "Character Input Output",
+  "prompt": "Write a program that reads and writes individual characters\nSample Input: a\nSample Output: A\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that reads and writes individual characters, taking a single character as input and outputting the corresponding uppercase character:\n```python\ndef char_to_uppercase(char):\n    \"\"\"\n    Converts a single character to its uppercase equivalent.\n\n    :param char: The character to convert.\n    :return: The uppercase equivalent of the input character.\n    \"\"\"\n    if not isinstance(char, str) or len(char) != 1:\n        raise ValueError(\"Input must be a single character string.\")\n\n    uppercase_char = char.upper()\n    return uppercase_char\n\n# Get user input\nuser_input = input(\"Enter a character: \")\n\n# Convert the input character to uppercase and print the result\nuppercase_char = char_to_uppercase(user_input)\nprint(f\"The uppercase equivalent of '{user_input}' is '{uppercase_char}'.\")\n```\nThis program defines a function `char_to_uppercase` that takes a single character as input and returns its uppercase equivalent. The main part of the program gets user input, calls the `char_to_uppercase` function, and prints the result. The function checks that the input is a single character string and raises a `ValueError` if it's not. This ensures that the program handles invalid inputs gracefully.",
+  "error": null,
+  "elapsed_seconds": 3.18,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

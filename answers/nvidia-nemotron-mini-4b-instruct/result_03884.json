@@ -1,0 +1,9 @@
+{
+  "id": 3884,
+  "title": "Number Sequence",
+  "prompt": "Create a program that takes an integer input from the user and prints the sequence of numbers from 1 to the input number.\nSample Input: 5\nSample Output: 1 2 3 4 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef print_sequence(n):\n    \"\"\"Print the sequence of numbers from 1 to n.\"\"\"\n    if n < 1:\n        raise ValueError(\"Input must be a positive integer\")\n\n    for i in range(1, n+1):\n        print(i, end=\" \")\n\n# Get user input and print the sequence\ntry:\n    user_input = int(input(\"Enter an integer: \"))\n    print_sequence(user_input)\nexcept ValueError as e:\n    print(e)\n```\nThis program defines a function `print_sequence` that takes an integer `n` as input and prints the sequence of numbers from 1 to `n`. The function checks if the input is a positive integer and raises a `ValueError` if it's not. The program then gets user input using the `input` function and calls the `print_sequence` function with the user input. If the user input is not an integer, the program catches the `ValueError` and prints an error message.",
+  "error": null,
+  "elapsed_seconds": 2.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

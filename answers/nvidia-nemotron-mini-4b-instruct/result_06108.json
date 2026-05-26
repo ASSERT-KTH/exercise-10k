@@ -1,0 +1,9 @@
+{
+  "id": 6108,
+  "title": "List Reversal",
+  "prompt": "Write a program that takes a list of integers as input, and returns a new list containing the same integers in reverse order.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [5, 4, 3, 2, 1]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef reverse_list(input_list):\n    \"\"\"\n    Takes a list of integers as input and returns a new list containing the same integers in reverse order.\n\n    :param input_list: List of integers\n    :return: List of integers in reverse order\n    \"\"\"\n    # Check if the input is a non-empty list\n    if not isinstance(input_list, list) or len(input_list) == 0:\n        raise ValueError(\"Input should be a non-empty list of integers.\")\n\n    # Reverse the list using slicing and create a new list\n    return input_list[::-1].copy()\n```\nHere's an example of how to use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\nreversed_numbers = reverse_list(numbers)\nprint(reversed_numbers)  # Output: [5, 4, 3, 2, 1]\n```\nThis function first checks if the input is a non-empty list. If not, it raises a `ValueError`. Then, it creates a new list using slicing (`input_list[::-1]`) and returns a copy of the reversed list (`reversed_numbers.copy()`). This ensures that the original list is not modified.",
+  "error": null,
+  "elapsed_seconds": 3.18,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

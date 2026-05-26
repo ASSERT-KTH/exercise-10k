@@ -1,0 +1,9 @@
+{
+  "id": 9736,
+  "title": "Science: Velocity",
+  "prompt": "Write a program that takes the initial position, final position, and time as input and returns the velocity.\nSample Input: 0 10 2\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_velocity(initial_position, final_position, time):\n    \"\"\"\n    Calculates the velocity given the initial position, final position, and time.\n\n    Parameters:\n    initial_position (float): The initial position of the object.\n    final_position (float): The final position of the object.\n    time (float): The time elapsed since the start of the motion.\n\n    Returns:\n    float: The velocity of the object.\n    \"\"\"\n\n    # Check that the final position is greater than the initial position\n    if final_position <= initial_position:\n        raise ValueError(\"The final position must be greater than the initial position.\")\n\n    # Calculate the velocity using the formula: velocity = (final position - initial position) / time\n    velocity = (final_position - initial_position) / time\n\n    return velocity\n```\nHere's an example of how you can use this function:\n```python\ninitial_position = 0\nfinal_position = 10\ntime = 2\n\nvelocity = calculate_velocity(initial_position, final_position, time)\nprint(f\"The velocity is {velocity}.\")\n```\nThis will output:\n```yaml\nThe velocity is 5.\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.37,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

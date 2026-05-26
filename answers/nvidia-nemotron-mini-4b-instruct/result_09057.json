@@ -1,0 +1,9 @@
+{
+  "id": 9057,
+  "title": "Time of Day",
+  "prompt": "Write a program that prints out a greeting based on the current time of day using if statements\nSample Input: 10\nSample Output: Good morning\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that prints a greeting based on the current time of day using if statements:\n```python\nimport datetime\n\ndef print_greeting():\n    # Get the current time\n    current_time = datetime.datetime.now().time()\n\n    # Define the greetings based on the current time\n    greetings = {\n        \"morning\": \"Good morning!\",\n        \"afternoon\": \"Good afternoon!\",\n        \"evening\": \"Good evening!\",\n        \"night\": \"Good night!\"\n    }\n\n    # Print the greeting based on the current time\n    for time, greeting in greetings.items():\n        if current_time.hour >= 6 and current_time.hour < 12:\n            print(greeting)\n            return\n        elif current_time.hour >= 12 and current_time.hour < 18:\n            print(greeting)\n            return\n        elif current_time.hour >= 18:\n            print(greeting)\n            return\n\n# Call the function to print the greeting\nprint_greeting()\n```\nThis program imports the `datetime` module to get the current time, and defines a dictionary of greetings based on the current time of day. The function then iterates over the dictionary, checking if the current time is within the specified time range for each greeting. If it is, the function prints the greeting and returns, so the program only prints one greeting at a time. The program then calls the function to print the current greeting based on the current time.\n\nYou can modify the `greetings` dictionary to include more greetings or to use different time ranges for each greeting.",
+  "error": null,
+  "elapsed_seconds": 3.72,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

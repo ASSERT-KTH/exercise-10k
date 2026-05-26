@@ -1,0 +1,9 @@
+{
+  "id": 8383,
+  "title": "Ackermann Function Calculation",
+  "prompt": "Write a program that calculates the Ackermann function of two given numbers.\nSample Input: 2 3\nSample Output: 9\n",
+  "answer": "Sure, I'd be happy to help you with that! The Ackermann function is a recursive function that grows very quickly, and its definition involves nested recursive calls. Here's a Python program that calculates the Ackermann function of two given numbers using the standard definition:\n\n```python\ndef ack(m, n):\n    if m == 0:\n        return n + 1\n    elif n == 0:\n        return ack(m - 1, 1)\n    else:\n        return ack(m - 1, ack(m, n - 1))\n\n# Get user input\nm, n = map(int, input(\"Enter two numbers separated by a space: \").split())\n\n# Calculate and print the Ackermann function\nresult = ack(m, n)\nprint(f\"The Ackermann function of {m} and {n} is {result}.\")\n```\n\nThis program defines a recursive function `ack()` that takes two arguments `m` and `n`, and returns the Ackermann function of `m` and `n`. The base cases are when `m` is 0 or `n` is 0, in which case the function returns `n + 1` or `ack(m - 1, 1)`, respectively. For any other case, the function calls itself recursively with arguments `m - 1` and `ack(m, n - 1)`.\n\nThe program then gets user input for `m` and `n`, calculates the Ackermann function using the `ack()` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.63,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

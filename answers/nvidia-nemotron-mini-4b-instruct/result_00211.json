@@ -1,0 +1,9 @@
+{
+  "id": 211,
+  "title": "Reduce Function",
+  "prompt": "Create a function that reduces a list to a single value by applying a given function.\nSample Input: [1, 2, 3, 4, 5], add\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses the `reduce` function from the `functools` module, which is a higher-order function that applies a given function to an iterable in a cumulative fashion, reducing it to a single value.\n\n```python\nfrom functools import reduce\n\ndef reduce_list(lst, func):\n    \"\"\"\n    Reduces a list to a single value by applying a given function.\n\n    Parameters:\n    lst (list): The list to reduce.\n    func (callable): The function to apply to each element of the list.\n\n    Returns:\n    int or float: The reduced value.\n    \"\"\"\n\n    # Check if the input is a callable\n    if not callable(func):\n        raise ValueError(\"The 'func' parameter must be a callable function.\")\n\n    # Apply the function to each element of the list using reduce\n    return reduce(func, lst)\n\n# Example usage\nsample_input = [1, 2, 3, 4, 5]\nsample_func = lambda x, y: x + y\n\nreduced_value = reduce_list(sample_input, sample_func)\nprint(reduced_value)  # Output: 15\n```\n\nThis function can be used with any callable function as the second argument, not just addition. For example, you can use the `multiply` function to multiply all elements in the list:\n\n```python\nsample_input = [1, 2, 3, 4, 5]\nsample_func = lambda x, y: x * y\n\nreduced_value = reduce_list(sample_input, sample_func)\nprint(reduced_value)  # Output: 120\n```",
+  "error": null,
+  "elapsed_seconds": 5.44,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

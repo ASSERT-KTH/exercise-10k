@@ -1,0 +1,9 @@
+{
+  "id": 2276,
+  "title": "Surface Area Calculations",
+  "prompt": "Write a program that calculates the surface area of a cube.\nSample Input: 5\nSample Output: 150\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the surface area of a cube given its edge length:\n\n```python\ndef calculate_cube_surface_area(edge_length):\n    \"\"\"\n    Calculates the surface area of a cube with given edge length.\n\n    :param edge_length: The length of one edge of the cube.\n    :return: The surface area of the cube.\n    \"\"\"\n\n    # Validate the input\n    if edge_length <= 0:\n        raise ValueError(\"Edge length must be a positive number.\")\n\n    # Calculate the surface area using the formula: 6 * side^2\n    surface_area = 6 * (edge_length ** 2)\n\n    return surface_area\n\n# Get user input\nedge_length = int(input(\"Enter the edge length of the cube: \"))\n\n# Calculate and print the surface area\nsurface_area = calculate_cube_surface_area(edge_length)\nprint(f\"The surface area of the cube is {surface_area} square units.\")\n```\n\nThis program defines a function `calculate_cube_surface_area` that takes an edge length as input and returns the surface area. The function validates the input to ensure it's a positive number and calculates the surface area using the formula `6 * side^2`. The program then gets user input for the edge length, calls the function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 9.03,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9614,
+  "title": "Program that Generates a To-Do List",
+  "prompt": "Write a program that generates a to-do list based on user input\nSample Input: add task\nSample Output: To-Do List:\ntask1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates a to-do list based on user input. This program uses a simple list to store the tasks and appends each task to the end of the list when a user inputs \"add task\". Here's the code:\n\n```python\n# Initialize an empty to-do list\nto_do_list = []\n\n# Function to add a task to the to-do list\ndef add_task():\n    global to_do_list\n\n    # Get user input for the task\n    task = input(\"Enter a task (add task to add a new task): \")\n\n    # Append the task to the to-do list\n    to_do_list.append(task)\n\n    # Print the updated to-do list\n    print(f\"To-Do List:\")\n    print(\"-\" * 10)\n    print(\"\\n\".join(to_do_list))\n\n# Main loop\nwhile True:\n    # Get user input\n    user_input = input(\"> \").lower()\n\n    # Check for quit command\n    if user_input == \"quit\":\n        break\n\n    # Check for add task command\n    elif user_input == \"add task\":\n        add_task()\n\n    # Handle any other input\n    else:\n        print(f\"I'm sorry, I didn't understand '{user_input}'.\")\n\n# Print the final to-do list\nprint(f\"\\nFinal To-Do List:\")\nprint(\"-\" * 10)\nprint(\"\\n\".join(to_do_list))\n```\n\nThis program will continue to prompt the user for input until they type \"quit\". When the user types \"add task\", the program will add a new task to the to-do list and print the updated list. The final to-do list will be printed after the user types \"quit\".",
+  "error": null,
+  "elapsed_seconds": 4.43,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

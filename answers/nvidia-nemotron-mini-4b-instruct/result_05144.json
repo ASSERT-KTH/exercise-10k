@@ -1,0 +1,9 @@
+{
+  "id": 5144,
+  "title": "Dictionary Deletion",
+  "prompt": "Delete a key-value pair from a dictionary\nSample Input: {'John': 20, 'Emma': 22, 'Oliver': 21, 'Ava': 20, 'William': 22}, 'John'\nSample Output: {'Emma': 22, 'Oliver': 21, 'Ava': 20, 'William': 22}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that takes a dictionary and a key as input, and returns a new dictionary with the specified key-value pair removed:\n```python\ndef delete_key_value_pair(dictionary, key):\n    \"\"\"\n    Deletes a key-value pair from a dictionary.\n\n    Parameters:\n    dictionary (dict): The dictionary to modify.\n    key (any): The key to remove from the dictionary.\n\n    Returns:\n    dict: A new dictionary with the specified key-value pair removed.\n    \"\"\"\n    # Create a copy of the dictionary to avoid modifying the original\n    new_dict = dictionary.copy()\n\n    # Remove the key-value pair from the copy\n    del new_dict[key]\n\n    # Return the new dictionary\n    return new_dict\n```\nHere's an example of how you can use this function:\n```python\nsample_input = {'John': 20, 'Emma': 22, 'Oliver': 21, 'Ava': 20, 'William': 22}\nsample_key = 'John'\n\nresult = delete_key_value_pair(sample_input, sample_key)\nprint(result)  # Output: {'Emma': 22, 'Oliver': 21, 'Ava': 20, 'William': 22}\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.61,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

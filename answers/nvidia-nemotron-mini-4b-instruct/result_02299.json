@@ -1,0 +1,9 @@
+{
+  "id": 2299,
+  "title": "Text Analyzer",
+  "prompt": "Write a program that analyzes a given text and provides statistics such as word count, character count, and average word length.\nSample Input: This is a sample text.\nSample Output: Word count: 5, Character count: 20, Average word length: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\nimport re\n\ndef analyze_text(text):\n    # Remove any non-alphanumeric characters and convert to lowercase\n    words = re.findall(r'\\b\\w+\\b', text.lower())\n\n    # Count the number of words and characters\n    word_count = len(words)\n    char_count = len(text)\n\n    # Calculate the average word length\n    avg_word_length = sum(len(word) for word in words) / word_count\n\n    return {\n        'word_count': word_count,\n        'char_count': char_count,\n        'average_word_length': avg_word_length\n    }\n\n# Example usage\ntext = \"This is a sample text.\"\nresult = analyze_text(text)\nprint(f\"Word count: {result['word_count']}, Character count: {result['char_count']}, Average word length: {result['average_word_length']:.2f}\")\n```\nThis program uses a regular expression to split the text into words, and then counts the number of words and characters. It calculates the average word length by summing the lengths of all the words and dividing by the number of words. The output is then formatted as a dictionary with the required statistics.",
+  "error": null,
+  "elapsed_seconds": 5.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

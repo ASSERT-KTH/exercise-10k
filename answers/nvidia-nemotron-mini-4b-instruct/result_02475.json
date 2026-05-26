@@ -1,0 +1,9 @@
+{
+  "id": 2475,
+  "title": "String Comparator",
+  "prompt": "Create a function that compares two given strings lexicographically.\nSample Input: ['apple', 'banana']\nSample Output: -1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that compares two given strings lexicographically and returns -1 if the first string is less than the second, 1 if the first string is greater than the second, and 0 if they are equal:\n\n```python\ndef compare_strings(str1, str2):\n    \"\"\"\n    Compares two given strings lexicographically.\n\n    :param str1: The first string to compare.\n    :param str2: The second string to compare.\n    :return: -1 if str1 < str2, 1 if str1 > str2, 0 if str1 == str2\n    \"\"\"\n    # Convert the strings to lowercase to ensure a case-insensitive comparison\n    str1 = str1.lower()\n    str2 = str2.lower()\n\n    # Compare the strings lexicographically\n    return -1 if str1 < str2 else 1 if str1 > str2 else 0\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(compare_strings('apple', 'banana'))  # Output: -1\nprint(compare_strings('banana', 'apple'))  # Output: 1\nprint(compare_strings('banana', 'banana')) # Output: 0\n```\n\nThis function first converts both strings to lowercase to ensure a case-insensitive comparison. Then, it compares the strings lexicographically using the `<` operator and returns -1, 1, or 0 accordingly.",
+  "error": null,
+  "elapsed_seconds": 3.51,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

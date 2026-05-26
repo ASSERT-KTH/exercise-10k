@@ -1,0 +1,9 @@
+{
+  "id": 7991,
+  "title": "Intersection of Lists",
+  "prompt": "Write a program that calculates the intersection of two lists of numbers.\nSample Input: [1, 2, 3], [3, 4, 5]\nSample Output: [3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the intersection of two lists of numbers using a set intersection operation, which is more efficient than checking every element in both lists:\n```python\ndef intersection(list1, list2):\n    # Convert the input lists to sets for faster lookup\n    set1 = set(list1)\n    set2 = set(list2)\n\n    # Find the intersection of the two sets\n    intersection_set = set1 & set2\n\n    # Convert the intersection set back to a list and return it\n    return list(intersection_set)\n\n# Test the function with your sample input\nsample_input = [1, 2, 3], [3, 4, 5]\nprint(intersection(*sample_input))  # Output: [3]\n```\nThis program defines a function `intersection` that takes two lists as arguments and returns their intersection as a new list. The function first converts the input lists to sets using the `set()` function, which allows for faster lookup of elements since sets only allow unique elements. The intersection of the two sets is then found using the `&` operator, and the result is converted back to a list using the `list()` function before being returned.\n\nYou can call the function with your sample input as shown in the last line of the code, which will print the list `[3]` as the output.",
+  "error": null,
+  "elapsed_seconds": 3.27,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

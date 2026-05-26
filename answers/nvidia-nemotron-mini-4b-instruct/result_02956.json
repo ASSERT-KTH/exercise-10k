@@ -1,0 +1,9 @@
+{
+  "id": 2956,
+  "title": "Finding the Longest Palindromic Substring",
+  "prompt": "Write a program to find the longest palindromic substring in a given string.\nSample Input: babad\nSample Output: bab\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the longest palindromic substring in a given string using a combination of dynamic programming and checking for palindromes recursively. This solution has a time complexity of O(n^2), where n is the length of the input string.\n\n```python\ndef longest_palindrome(s):\n    n = len(s)\n\n    # Create a table to store lengths of palindromes\n    dp = [[0] * n for _ in range(n)]\n\n    # Initialize the first row and column\n    for i in range(n):\n        dp[i][i] = 1\n\n    # Fill the table in bottom-up manner\n    longest_length = 1\n    start = 0\n\n    for length in range(2, n + 1):\n        for i in range(n - length + 1):\n            j = i + length - 1\n            if s[i] == s[j] and dp[i + 1][j - 1]:\n                dp[i][j] = True\n                if length > longest_length:\n                    longest_length = length\n                    start = i\n\n    return s[start:start + longest_length]\n\n\n# Test the function\ninput_string = \"babad\"\nprint(longest_palindrome(input_string))  # Output: bab\n```\n\nThis program first initializes a table `dp` to store the lengths of palindromes in the input string. Then, it fills the table in a bottom-up manner, checking for palindromes of increasing lengths. Finally, it returns the longest palindromic substring found.",
+  "error": null,
+  "elapsed_seconds": 3.87,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

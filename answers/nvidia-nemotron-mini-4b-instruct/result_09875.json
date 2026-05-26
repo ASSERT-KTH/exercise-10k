@@ -1,0 +1,9 @@
+{
+  "id": 9875,
+  "title": "Dictionary Lookup",
+  "prompt": "Write a program that takes a word as input and prints out its definition from a dictionary.\nSample Input: hello\nSample Output: Hello: a greeting.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a word as input and prints its definition from a dictionary. In this example, I'll assume the dictionary is stored in a file named `word_definitions.txt`. The format of the file is one word per line, followed by a colon and a newline, followed by the definition. Here's the code:\n\n```python\ndef get_definition(word):\n    \"\"\"\n    Returns the definition of a given word from the word_definitions.txt file.\n\n    :param word: str - The word to look up in the dictionary.\n    :return: str - The definition of the word, or an error message if not found.\n    \"\"\"\n    try:\n        with open('word_definitions.txt', 'r') as file:\n            for line in file:\n                word_line = line.strip()\n                if word_line == word:\n                    return line.strip().split(':')[1]\n    except FileNotFoundError:\n        return f\"The file 'word_definitions.txt' was not found.\"\n    except IndexError:\n        return f\"The word '{word}' was not found in the dictionary.\"\n\n\nif __name__ == \"__main__\":\n    word = input(\"Enter a word to look up its definition: \")\n    definition = get_definition(word)\n    print(f\"{word}: {definition}\")\n```\n\nThis program defines a function `get_definition` that reads the dictionary file and returns the definition of a given word. The main part of the program prompts the user for a word, calls the `get_definition` function, and prints the result. You can replace the file name and contents in the example with your own.",
+  "error": null,
+  "elapsed_seconds": 3.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

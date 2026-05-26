@@ -1,0 +1,9 @@
+{
+  "id": 5891,
+  "title": "List Grouping",
+  "prompt": "Write a function that takes a list and a key function as input and returns a dictionary where the keys are the distinct values returned by the key function and the values are lists of elements that correspond to each key.\nSample Input: [1, 2, 3, 4, 5], lambda x: x % 2\nSample Output: {0: [2, 4], 1: [1, 3, 5]}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses the `collections.defaultdict` class from the standard library to automatically create a defaultdict with an initial value of an empty list for each key. This allows you to efficiently add elements to the dictionary based on the key returned by the key function.\n\n```python\nfrom collections import defaultdict\n\ndef group_by_key(lst, key_func):\n    \"\"\"\n    Groups elements in a list into a dictionary based on the values returned by a key function.\n\n    Parameters:\n    lst (list): The input list of elements.\n    key_func (callable): A function that takes an element and returns a value to group it by.\n\n    Returns:\n    dict: A dictionary where the keys are the distinct values returned by the key function and\n         the values are lists of elements that correspond to each key.\n    \"\"\"\n    result = defaultdict(list)\n    for elem in lst:\n        result[key_func(elem)].append(elem)\n    return dict(result)\n```\n\nHere's an example of how to use this function:\n\n```python\nnumbers = [1, 2, 3, 4, 5]\ngrouped_by_evenness = group_by_key(numbers, lambda x: x % 2)\nprint(grouped_by_evenness)  # Output: {0: [2, 4], 1: [1, 3, 5]}\n```",
+  "error": null,
+  "elapsed_seconds": 3.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

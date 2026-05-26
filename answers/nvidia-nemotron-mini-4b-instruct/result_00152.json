@@ -1,0 +1,9 @@
+{
+  "id": 152,
+  "title": "Dictionary Key Case Insensitivity",
+  "prompt": "Create a function that takes in a dictionary and returns a new dictionary containing the same key-value pairs, but with the keys converted to lowercase\nSample Input: dictionary = {'Name': 'John', 'Age': 30}\nSample Output: {'name': 'John', 'age': 30}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef convert_keys_to_lowercase(dictionary):\n    \"\"\"\n    Converts all keys in the given dictionary to lowercase and returns a new dictionary.\n\n    :param dictionary: The input dictionary\n    :return: A new dictionary with lowercase keys\n    \"\"\"\n    return {key.lower(): value for key, value in dictionary.items()}\n```\nHere's an example of how you can use this function:\n```python\ndictionary = {'Name': 'John', 'Age': 30}\nlowercase_dict = convert_keys_to_lowercase(dictionary)\nprint(lowercase_dict)  # Output: {'name': 'john', 'age': 30}\n```\nThis function uses a dictionary comprehension to create a new dictionary with lowercase keys. The `items()` method is used to iterate over the key-value pairs in the input dictionary, and the `lower()` method is called on each key before it is added to the new dictionary.",
+  "error": null,
+  "elapsed_seconds": 2.43,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

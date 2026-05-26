@@ -1,0 +1,9 @@
+{
+  "id": 2659,
+  "title": "Dictionary Filter",
+  "prompt": "Write a function to filter key-value pairs from a dictionary based on a condition\nSample Input: {'name': 'John', 'age': 25} 'age' > 20\nSample Output: {'age': 25}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef filter_dict_by_condition(dictionary, condition):\n    \"\"\"\n    Filters a dictionary based on a given condition.\n\n    Parameters:\n    dictionary (dict): The input dictionary.\n    condition (callable): A function that takes a single argument (a key-value pair) and returns a boolean.\n                          The function should return True if the key-value pair should be kept, False otherwise.\n\n    Returns:\n    dict: A new dictionary containing only the key-value pairs that satisfy the given condition.\n    \"\"\"\n    return {k: v for k, v in dictionary.items() if condition(k, v)}\n```\nHere's an example of how to use this function:\n```python\ndef is_age_greater_than_twenty(key, value):\n    \"\"\"Returns True if the value is greater than 20.\"\"\"\n    return value > 20\n\nfiltered_dict = filter_dict_by_condition({'name': 'John', 'age': 25}, is_age_greater_than_twenty)\nprint(filtered_dict)  # Output: {'age': 25}\n```\nThis function uses a dictionary comprehension to create a new dictionary containing only the key-value pairs that satisfy the given condition. The `condition` parameter can be any callable that takes a single argument (a key-value pair) and returns a boolean.",
+  "error": null,
+  "elapsed_seconds": 3.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1010,
+  "title": "Subsequence Detection",
+  "prompt": "Write a program that takes two strings as input and returns whether the first string is a subsequence of the second string or not.\nSample Input: abc xyzabc\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef is_subsequence(s1, s2):\n    \"\"\"\n    Returns True if s1 is a subsequence of s2, and False otherwise.\n    A subsequence is a sequence that can be derived from another sequence by deleting some elements without changing the order of the remaining elements.\n    \"\"\"\n    i = 0\n    for char in s2:\n        if char == s1[i]:\n            i += 1\n            if i == len(s1):\n                return True\n    return False\n\n# Sample usage:\ninput_str1 = \"abc\"\ninput_str2 = \"xyzabc\"\noutput = is_subsequence(input_str1, input_str2)\nprint(output)  # Output: True\n```\nThis program defines a function `is_subsequence` that takes two strings as input and returns `True` if the first string is a subsequence of the second string, and `False` otherwise. The function iterates through the characters of the second string, checking if each character matches a character in the first string. If a match is found, the function advances to the next character in the second string and the first string. If the function reaches the end of the first string without finding a mismatch, it returns `True`. Otherwise, it returns `False`.\n\nThe sample usage at the end of the program demonstrates how to use the `is_subsequence` function with the provided sample input strings.",
+  "error": null,
+  "elapsed_seconds": 3.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

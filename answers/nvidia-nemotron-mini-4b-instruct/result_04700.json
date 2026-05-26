@@ -1,0 +1,9 @@
+{
+  "id": 4700,
+  "title": "Base64 Encoder",
+  "prompt": "Create a function that encodes a given string using the Base64 encoding scheme.\nSample Input: hello world\nSample Output: aGVsbG8gd29ybGQ=\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that encodes a given string using the Base64 encoding scheme:\n```python\nimport base64\n\ndef encode_base64(input_string: str) -> str:\n    \"\"\"\n    Encodes a given string using the Base64 encoding scheme.\n\n    :param input_string: The string to be encoded.\n    :return: The encoded Base64 string.\n    \"\"\"\n    return base64.b64encode(input_string.encode()).decode()\n```\nThis function uses the built-in `base64` module in Python to encode the input string. The `base64.b64encode()` function encodes the input string using the Base64 encoding scheme and returns the encoded bytes. The `base64.b64encode().decode()` function then converts the bytes back to a string.\n\nHere's an example of how to use this function:\n```python\nencoded_string = encode_base64(\"hello world\")\nprint(encoded_string)  # Output: aGVsbG8gd29ybGQ=\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.79,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

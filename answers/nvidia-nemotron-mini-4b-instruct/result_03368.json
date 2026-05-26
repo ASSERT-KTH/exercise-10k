@@ -1,0 +1,9 @@
+{
+  "id": 3368,
+  "title": "Find the First Duplicate in a List",
+  "prompt": "Use a for loop to find the first duplicate in a given list of numbers\nSample Input: [2, 4, 6, 2, 8, 10]\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution using a for loop to find the first duplicate in a given list of numbers:\n\n```python\ndef find_first_duplicate(numbers):\n    \"\"\"\n    Find the first duplicate in a given list of numbers.\n\n    :param numbers: List of numbers\n    :return: First duplicate number or None if no duplicates found\n    \"\"\"\n    if not numbers:\n        return None\n\n    # Initialize a set to store seen numbers\n    seen = set()\n\n    # Iterate through the list using a for loop\n    for num in numbers:\n        # If the number has been seen before, it's a duplicate\n        if num in seen:\n            return num\n        # Otherwise, mark it as seen\n        seen.add(num)\n\n    # If we didn't find a duplicate, return None\n    return None\n```\n\nYou can use this function as follows:\n\n```python\nnumbers = [2, 4, 6, 2, 8, 10]\nprint(find_first_duplicate(numbers))  # Output: 2\n```\n\nThis function works by iterating through the list of numbers and checking if each number has been seen before. If a number is a duplicate, it immediately returns that number. If no duplicates are found, it returns `None`. The use of a set to store seen numbers allows for efficient lookups and insertions, making the function have a time complexity of O(n).",
+  "error": null,
+  "elapsed_seconds": 3.37,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

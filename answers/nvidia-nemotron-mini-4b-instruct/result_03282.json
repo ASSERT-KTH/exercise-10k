@@ -1,0 +1,9 @@
+{
+  "id": 3282,
+  "title": " EVEN or ODD using While Loop",
+  "prompt": "Write a program that checks whether a given number is even or odd using a while loop.\nSample Input: 10\nSample Output: EVEN\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks whether a given number is even or odd using a while loop:\n\n```python\ndef is_even_or_odd(num):\n    \"\"\"\n    Check whether a given number is even or odd using a while loop.\n\n    :param num: The number to check.\n    :return: 'EVEN' if the number is even, 'ODD' if the number is odd.\n    \"\"\"\n\n    # Initialize a variable to keep track of the number's parity\n    parity = 'UNKNOWN'\n\n    # Continue checking the number's parity while the number is not zero\n    while num != 0:\n        # If the last digit of the number is even, set the parity to 'EVEN'\n        if num % 10 % 2 == 0:\n            parity = 'EVEN'\n            break\n        # Otherwise, set the parity to 'ODD' and move on to the next digit\n        else:\n            parity = 'ODD'\n            num //= 10\n\n    return parity\n\n# Get user input\nnumber = int(input(\"Enter a number: \"))\n\n# Check and print the result\nprint(f\"{number} is {is_even_or_odd(number)}.\")\n```\n\nThis program defines a function `is_even_or_odd` that takes a number as input and returns 'EVEN' if the number is even, 'ODD' if the number is odd, and 'UNKNOWN' if the number is zero. The function uses a while loop to repeatedly check the last digit of the number until it is zero, and updates the parity variable accordingly. Finally, the program gets user input, calls the function with the input number, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 5.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

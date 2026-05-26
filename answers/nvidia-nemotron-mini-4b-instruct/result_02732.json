@@ -1,0 +1,9 @@
+{
+  "id": 2732,
+  "title": "Finding the Most Frequent Element",
+  "prompt": "Write a program to find the most frequent element in an array of integers\nSample Input: [1, 2, 2, 3, 3, 3]\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the most frequent element in an array of integers:\n\n```python\nfrom collections import Counter\n\ndef most_frequent(arr):\n    \"\"\"\n    Find the most frequent element in an array of integers.\n\n    :param arr: List of integers\n    :return: Most frequent element\n    \"\"\"\n    # Count the occurrences of each element in the array\n    count = Counter(arr)\n\n    # Find the element with the highest count\n    max_count = max(count.values())\n    most_frequent_element = next((element for element, count in count.items() if count == max_count), None)\n\n    return most_frequent_element\n```\n\nYou can use this function by passing a list of integers as an argument, like this:\n\n```python\narr = [1, 2, 2, 3, 3, 3]\nprint(most_frequent(arr))  # Output: 3\n```\n\nThis function first counts the occurrences of each element in the array using the `Counter` class from the `collections` module. Then, it finds the element with the highest count by iterating over the `Counter` object and checking if the count is equal to the maximum count. If such an element is found, it's returned as the result. If no element has the maximum count, `None` is returned.",
+  "error": null,
+  "elapsed_seconds": 4.51,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

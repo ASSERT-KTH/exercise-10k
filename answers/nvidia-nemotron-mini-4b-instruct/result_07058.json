@@ -1,0 +1,9 @@
+{
+  "id": 7058,
+  "title": "Anagram Checker",
+  "prompt": "Write a program that takes two strings as input and prints out whether they are anagrams of each other or not.\nSample Input: listen, silent\nSample Output: The strings are anagrams.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if two given strings are anagrams of each other:\n\n```python\ndef are_anagrams(str1, str2):\n    \"\"\"\n    Check if two strings are anagrams of each other.\n\n    :param str1: The first string to compare.\n    :param str2: The second string to compare.\n    :return: A string indicating whether the strings are anagrams or not.\n    \"\"\"\n    # Remove any non-alphanumeric characters and convert to lowercase\n    str1 = ''.join(c.lower() for c in str1 if c.isalnum())\n    str2 = ''.join(c.lower() for c in str2 if c.isalnum())\n\n    # Check if the strings are equal after conversion\n    return str1 == str2\n\n# Get user input\nstr1 = input(\"Enter the first string: \")\nstr2 = input(\"Enter the second string: \")\n\n# Check if they are anagrams\nresult = are_anagrams(str1, str2)\n\n# Print the result\nif result:\n    print(f\"The strings are anagrams.\")\nelse:\n    print(f\"The strings are not anagrams.\")\n```\n\nThis program first converts both strings to lowercase and removes any non-alphanumeric characters. Then it checks if the two strings are equal after conversion, which indicates that they are anagrams. If they are not equal, it means they are not anagrams.",
+  "error": null,
+  "elapsed_seconds": 3.5,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

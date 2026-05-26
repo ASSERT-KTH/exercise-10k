@@ -1,0 +1,9 @@
+{
+  "id": 5637,
+  "title": "Checking for Bipartiteness in a Graph",
+  "prompt": "Write a program to check if a given graph is bipartite or not.\nSample Input: graph: {(A, B): 1, (A, C): 1, (B, D): 1, (C, D): 1}\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given graph is bipartite or not using a depth-first search (DFS) algorithm. We'll represent the graph as an adjacency list.\n\n```python\ndef is_bipartite(graph):\n    \"\"\"Check if a given graph is bipartite or not.\"\"\"\n\n    # Initialize a dictionary to store the color of each node (0 for white, 1 for gray, 2 for black)\n    color = {node: 0 for node in graph}\n\n    def dfs(node, color):\n        \"\"\"Depth-first search helper function.\"\"\"\n        color[node] = 1\n\n        for neighbor in graph[node]:\n            if color[neighbor] == 0:\n                if not dfs(neighbor, 2 - color[node]):\n                    return False\n            elif color[neighbor] == color[node]:\n                return False\n\n        color[node] = 2\n        return True\n\n    # Start DFS from each uncolored node\n    for node in graph:\n        if color[node] == 0:\n            if not dfs(node, 1):\n                return False\n\n    return True\n\n\n# Example usage\ngraph = {\n    'A': ['B', 'C'],\n    'B': ['D'],\n    'C': ['D']\n}\n\nprint(is_bipartite(graph))  # Output: True\n```\n\nThis program first initializes a color dictionary for each node, where the color is either 0 (white), 1 (gray), or 2 (black). Then, it performs a DFS on each uncolored node, checking if there's a cycle (two nodes with the same color). If no cycle is found, the graph is bipartite.",
+  "error": null,
+  "elapsed_seconds": 4.14,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

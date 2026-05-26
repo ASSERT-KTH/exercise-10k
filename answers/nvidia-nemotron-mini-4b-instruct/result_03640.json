@@ -1,0 +1,9 @@
+{
+  "id": 3640,
+  "title": "Find the Determinant of a Matrix",
+  "prompt": "Write a program to find the determinant of a given 2x2 or 3x3 matrix.\nSample Input: [[1, 2], [3, 4]]\nSample Output: -2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that can calculate the determinant of a given 2x2 or 3x3 matrix. The program uses the `numpy` library to perform matrix operations, so make sure to install it if you haven't already (`pip install numpy`).\n\n```python\nimport numpy as np\n\ndef determinant(matrix):\n    \"\"\"\n    Calculate the determinant of a given 2x2 or 3x3 matrix.\n\n    :param matrix: A 2x2 or 3x3 numpy array\n    :return: The determinant of the matrix\n    \"\"\"\n\n    # Check if the input is a 2x2 or 3x3 matrix\n    if matrix.shape != (2, 2) and matrix.shape != (3, 3):\n        raise ValueError(\"Input matrix must be 2x2 or 3x3.\")\n\n    # Calculate the determinant using the Leibniz formula\n    n = matrix.shape[0]\n    if n == 2:\n        return matrix[0, 0] * matrix[1, 1] - matrix[0, 1] * matrix[1, 0]\n    else:\n        return (matrix[0, 0] * determinant(np.delete(matrix, 0, axis=0)) +\n                matrix[0, 1] * determinant(np.delete(matrix, 1, axis=0))) - \\\n               (matrix[1, 0] * determinant(np.delete(matrix, 0, axis=1)) +\n                matrix[1, 1] * determinant(np.delete(matrix, 1, axis=1)))\n\n# Example usage\nmatrix = np.array([[1, 2], [3, 4]])\nprint(determinant(matrix))  # Output: -2\n```\n\nThis program defines a function `determinant` that takes a 2x2 or 3x3 numpy array as input and returns its determinant using the Leibniz formula. The function also checks if the input matrix is valid before calculating its determinant.",
+  "error": null,
+  "elapsed_seconds": 5.22,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

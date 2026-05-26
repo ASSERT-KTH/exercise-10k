@@ -1,0 +1,9 @@
+{
+  "id": 4335,
+  "title": "Find Common Elements in Two Arrays",
+  "prompt": "Write a program to find the common elements in two arrays.\nSample Input: [1, 2, 3, 4, 5], [4, 5, 6, 7, 8]\nSample Output: [4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the common elements in two arrays:\n\n```python\ndef find_common_elements(arr1, arr2):\n    \"\"\"\n    Find the common elements in two arrays.\n\n    :param arr1: The first array\n    :param arr2: The second array\n    :return: A list of common elements\n    \"\"\"\n    # Convert input arrays to sets to remove duplicates and enable fast lookup\n    set1 = set(arr1)\n    set2 = set(arr2)\n\n    # Find the intersection of the two sets\n    common_elements = set1 & set2\n\n    # Convert the result back to a list\n    return list(common_elements)\n\n# Example usage\narr1 = [1, 2, 3, 4, 5]\narr2 = [4, 5, 6, 7, 8]\n\ncommon_elements = find_common_elements(arr1, arr2)\nprint(common_elements)  # Output: [4, 5]\n```\n\nThis program first converts the input arrays to sets, which allows for fast lookup of elements. Then, it finds the intersection of the two sets using the `&` operator, which returns a new set containing only the elements that are present in both sets. Finally, it converts the result back to a list and returns it.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

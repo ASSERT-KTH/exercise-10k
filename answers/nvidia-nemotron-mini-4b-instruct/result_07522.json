@@ -1,0 +1,9 @@
+{
+  "id": 7522,
+  "title": "Dictionary Data Analysis",
+  "prompt": "Create a program that takes a dictionary as input and calculates the total value of all items, assuming each key-value pair represents an item name and its corresponding price. The program should also find the item with the maximum price and the item with the minimum price.\nSample Input: {\"apple\": 10, \"banana\": 20, \"cherry\": 15}\nSample Output: {\"total_value\": 45, \"max_item\": \"banana\", \"min_item\": \"apple\"}\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef calculate_item_info(item_dict):\n    # Calculate the total value of all items\n    total_value = sum(item_dict.values())\n\n    # Find the item with the maximum price\n    max_item = max(item_dict, key=item_dict.get)\n\n    # Find the item with the minimum price\n    min_item = min(item_dict, key=item_dict.get)\n\n    return {\"total_value\": total_value, \"max_item\": max_item, \"min_item\": min_item}\n\n# Sample input\nitem_dict = {\"apple\": 10, \"banana\": 20, \"cherry\": 15}\n\n# Call the function and print the output\nprint(calculate_item_info(item_dict))\n```\n\nWhen you run this program with the sample input `{\"apple\": 10, \"banana\": 20, \"cherry\": 15}`, it will output:\n\n```python\n{\n    \"total_value\": 45,\n    \"max_item\": \"banana\",\n    \"min_item\": \"apple\"\n}\n```",
+  "error": null,
+  "elapsed_seconds": 4.66,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

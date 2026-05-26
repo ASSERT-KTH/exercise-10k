@@ -1,0 +1,9 @@
+{
+  "id": 1511,
+  "title": "Caesar Cipher",
+  "prompt": "Write a program that implements a Caesar cipher, a type of substitution cipher where each letter in the plaintext is 'shifted' a certain number of places down the alphabet.\nSample Input: Hello World, 3\nSample Output: Khoor Zruog\n",
+  "answer": "Sure, I'd be happy to help you implement a Caesar cipher in a programming language. Here's an example in Python:\n\n```python\ndef caesar_cipher(plaintext, shift):\n    \"\"\"\n    Encrypts a given plaintext using a Caesar cipher with the specified shift.\n\n    :param plaintext: The plaintext to encrypt as a string.\n    :param shift: The number of places to shift each letter in the alphabet.\n    :return: The encrypted ciphertext as a string.\n    \"\"\"\n\n    # Ensure shift is within the valid range (0-25)\n    shift %= 26\n\n    # Create a translation table to map plaintext characters to ciphertext characters\n    translation_table = str.maketrans(\n        alphabet,\n        alphabet[shift:] + alphabet[:shift]\n    )\n\n    # Encrypt the plaintext using the translation table\n    encrypted_ciphertext = plaintext.translate(translation_table)\n\n    return encrypted_ciphertext\n\n\n# Define the alphabet for this example\nalphabet = 'abcdefghijklmnopqrstuvwxyz'\n\n# Example usage\nplaintext = \"Hello World\"\nshift = 3\nciphertext = caesar_cipher(plaintext, shift)\nprint(f\"Sample Input: {plaintext}, {shift}\")\nprint(f\"Sample Output: {ciphertext}\")\n```\n\nThis program defines a function `caesar_cipher` that takes a plaintext and a shift as input, and returns the encrypted ciphertext. The example usage at the end of the script demonstrates how to use the function with a sample input and output.",
+  "error": null,
+  "elapsed_seconds": 4.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 106,
+  "title": "Find Prime Numbers",
+  "prompt": "Write a program to find all prime numbers up to a given number.\nSample Input: 20\nSample Output: [2, 3, 5, 7, 11, 13, 17, 19]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds all prime numbers up to a given number:\n\n```python\ndef is_prime(n, primes):\n    \"\"\"Check if a number is prime by checking if it has any divisors in the given list of primes.\"\"\"\n    return all(n % p != 0 for p in primes if p * p <= n)\n\ndef find_primes(n):\n    \"\"\"Find all prime numbers up to a given number.\"\"\"\n    primes = []\n    for num in range(2, n + 1):\n        if num not in primes and is_prime(num, primes):\n            primes.append(num)\n    return primes\n\n# Example usage:\ngiven_number = 20\nprint(find_primes(given_number))\n```\n\nWhen you run this program with the sample input `20`, it will output:\n\n```\n[2, 3, 5, 7, 11, 13, 17, 19]\n```\n\nThis program first defines a helper function `is_prime(n, primes)` that checks if a number `n` is prime by checking if it has any divisors in the given list of primes. Then, the main function `find_primes(n)` iterates over all numbers from 2 to the given number `n`, and for each number, it checks if it's prime using the helper function. If a number is prime and not already in the list of primes, it is added to the list of primes. Finally, the function returns the list of primes up to the given number.",
+  "error": null,
+  "elapsed_seconds": 3.71,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

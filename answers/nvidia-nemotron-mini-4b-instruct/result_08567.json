@@ -1,0 +1,9 @@
+{
+  "id": 8567,
+  "title": "Dictionary to Set of Values",
+  "prompt": "Create a dictionary with 3 key-value pairs and convert it to a set of values.\nSample Input: None\nSample Output: set_of_values\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef create_dict_and_convert_to_set(key_values):\n    \"\"\"\n    Create a dictionary with given key-value pairs and convert it to a set of values.\n\n    :param key_values: List of tuples, where each tuple contains a key and a value\n    :return: Set of values in the dictionary\n    \"\"\"\n    # Create the dictionary from the input list of tuples\n    dict_ = dict(key_values)\n\n    # Convert the dictionary to a set of values\n    set_of_values = set(dict_.values())\n\n    return set_of_values\n```\nHere's an example of how to use this function:\n```python\nkey_values = [('a', 1), ('b', 2), ('c', 3)]\nset_of_values = create_dict_and_convert_to_set(key_values)\nprint(set_of_values)  # Output: {1, 2, 3}\n```\nThis function first creates a dictionary from the input list of tuples using the `dict()` constructor. Then, it converts the dictionary to a set of values using the `set()` constructor. The resulting set contains all the unique values in the dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

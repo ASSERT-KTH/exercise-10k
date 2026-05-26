@@ -1,0 +1,9 @@
+{
+  "id": 8366,
+  "title": "Arithmetic Sequence",
+  "prompt": "Write a program that generates an arithmetic sequence of a given length with a given common difference.\nSample Input: 5 2\nSample Output: 0, 2, 4, 6, 8\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates an arithmetic sequence of a given length with a given common difference:\n```python\ndef generate_arithmetic_sequence(length, common_difference):\n    \"\"\"\n    Generates an arithmetic sequence of a given length with a given common difference.\n\n    Parameters:\n    length (int): The length of the sequence.\n    common_difference (int): The common difference between consecutive terms.\n\n    Returns:\n    list: A list containing the terms of the arithmetic sequence.\n    \"\"\"\n    # Validate input\n    if length < 1 or common_difference == 0:\n        raise ValueError(\"Length must be a positive integer and common_difference cannot be zero.\")\n\n    # Generate the sequence\n    sequence = [0]\n    for _ in range(length - 1):\n        sequence.append(sequence[-1] + common_difference)\n\n    return sequence\n\n# Sample usage\nprint(generate_arithmetic_sequence(5, 2))  # Output: [0, 2, 4, 6, 8]\n```\nThis program defines a function `generate_arithmetic_sequence` that takes two arguments: `length` and `common_difference`. It first validates the input to ensure that `length` is a positive integer and `common_difference` is not zero. Then, it generates the sequence by initializing an empty list and appending the first term (0). It then iterates from 1 to `length - 1`, adding the common difference to the last term in each iteration to generate the subsequent terms. Finally, it returns the generated sequence.",
+  "error": null,
+  "elapsed_seconds": 3.71,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

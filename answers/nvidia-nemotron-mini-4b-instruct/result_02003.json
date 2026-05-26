@@ -1,0 +1,9 @@
+{
+  "id": 2003,
+  "title": "-rock, paper, scissors",
+  "prompt": "Write a program that simulates a game of rock, paper, scissors using conditional statements.\nSample Input: rock paper\nSample Output: paper wins\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that simulates a game of rock, paper, scissors using conditional statements:\n```python\nimport random\n\ndef play_game():\n    \"\"\"Simulate a game of rock, paper, scissors.\"\"\"\n    print(\"Let's play rock, paper, scissors!\")\n\n    # Get user input\n    user_choice = input(\"Enter your choice (rock, paper, scissors): \").lower()\n\n    # Define the possible choices and their outcomes\n    choices = [\"rock\", \"paper\", \"scissors\"]\n    outcomes = {\n        \"rock\": [\"scissors\", \"wins\"],\n        \"paper\": [\"rock\", \"wins\"],\n        \"scissors\": [\"paper\", \"wins\"]\n    }\n\n    # Generate a random choice for the computer\n    computer_choice = random.choice(choices)\n\n    # Determine the winner\n    if user_choice in outcomes[computer_choice]:\n        winner = user_choice\n    else:\n        winner = computer_choice\n\n    # Print the result\n    print(f\"{user_choice} {outcomes[computer_choice][0]}s, you lose!\")\n\n# Play the game\nplay_game()\n```\nThis program defines a function `play_game()` that prompts the user for their choice, generates a random choice for the computer, and determines the winner based on the rules of rock, paper, scissors. The program then calls this function to play a single game.",
+  "error": null,
+  "elapsed_seconds": 3.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

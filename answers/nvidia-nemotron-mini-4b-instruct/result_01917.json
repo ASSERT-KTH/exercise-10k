@@ -1,0 +1,9 @@
+{
+  "id": 1917,
+  "title": "Mode Calculator",
+  "prompt": "Write a program that calculates the mode given a list of numbers.\nSample Input: [1, 2, 2, 3, 3, 3]\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the mode of a given list of numbers:\n\n```python\ndef find_mode(numbers):\n    \"\"\"\n    Calculates the mode of a given list of numbers.\n\n    :param numbers: List of numbers\n    :return: Mode (most frequent number)\n    \"\"\"\n    # Count the occurrences of each number in the list\n    count = {}\n    for num in numbers:\n        if num in count:\n            count[num] += 1\n        else:\n            count[num] = 1\n\n    # Find the number with the highest count (mode)\n    mode = max(count, key=count.get)\n\n    return mode\n\n# Example usage\nnumbers = [1, 2, 2, 3, 3, 3]\nprint(find_mode(numbers))  # Output: 3\n```\n\nThis program first counts the occurrences of each number in the list using a dictionary. Then, it finds the number with the highest count (i.e., the mode) using the `max()` function with a key function that extracts the count value from the dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.15,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

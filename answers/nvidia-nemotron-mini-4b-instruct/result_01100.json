@@ -1,0 +1,9 @@
+{
+  "id": 1100,
+  "title": "Random Number Generator",
+  "prompt": "Write a program that generates a random number between two given numbers.\nSample Input: 1 10\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates a random integer between two given numbers:\n\n```python\nimport random\n\ndef generate_random_number(min_value, max_value):\n    \"\"\"\n    Generates a random integer between min_value and max_value (inclusive).\n\n    :param min_value: The minimum value for the random number.\n    :param max_value: The maximum value for the random number.\n    :return: A random integer between min_value and max_value.\n    \"\"\"\n    if min_value > max_value:\n        raise ValueError(\"The minimum value must be less than or equal to the maximum value.\")\n\n    return random.randint(min_value, max_value)\n\n# Example usage:\nmin_value = 1\nmax_value = 10\nrandom_number = generate_random_number(min_value, max_value)\nprint(f\"The generated random number is: {random_number}\")\n```\n\nWhen you run this program with the sample input `1 10`, it will output a random integer between 1 and 10 (inclusive), such as `5`.",
+  "error": null,
+  "elapsed_seconds": 3.02,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

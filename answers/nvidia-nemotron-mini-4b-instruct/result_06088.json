@@ -1,0 +1,9 @@
+{
+  "id": 6088,
+  "title": "Password Validator",
+  "prompt": "Write a program that uses a while loop to keep asking the user for input until they enter a valid password.\nSample Input: password123\nSample Output: Password is valid\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses a while loop to keep asking the user for input until they enter a valid password. A valid password should meet the following criteria:\n\n1. It should contain at least one uppercase letter.\n2. It should contain at least one lowercase letter.\n3. It should contain at least one digit.\n4. It should be at least 8 characters long.\n\nHere's the code:\n\n```python\ndef get_valid_password():\n    \"\"\"Get a valid password from the user.\"\"\"\n    while True:\n        user_input = input(\"Please enter a valid password (at least 8 characters, containing at least one uppercase letter, one lowercase letter, and one digit): \")\n\n        # Check if the input meets the criteria\n        if len(user_input) >= 8 and any(char.isupper() for char in user_input) and any(char.islower() for char in user_input) and any(digit for digit in user_input if digit.isdigit()):\n            return user_input\n        else:\n            print(\"Password is invalid. Please try again.\")\n\n# Get and print the valid password\nvalid_password = get_valid_password()\nprint(f\"Password is valid: {valid_password}\")\n```\n\nThis program defines a function `get_valid_password()` that prompts the user for input, checks if it meets the criteria, and keeps asking for input until a valid password is entered. The function returns the valid password when it's found. The program then calls this function and prints the valid password.",
+  "error": null,
+  "elapsed_seconds": 3.74,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

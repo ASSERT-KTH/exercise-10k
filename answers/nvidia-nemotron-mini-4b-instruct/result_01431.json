@@ -1,0 +1,9 @@
+{
+  "id": 1431,
+  "title": "Array Every",
+  "prompt": "Create a function that takes an array and a predicate function as input and returns True if the predicate function returns True for all elements in the array, False otherwise.\nSample Input: [1, 2, 3, 4, 5], lambda x: x > 0\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef all_predicate(array, predicate):\n    \"\"\"\n    Returns True if the given predicate function returns True for all elements in the array,\n    False otherwise.\n\n    :param array: The input array\n    :param predicate: A function that takes one argument and returns a boolean\n    :return: True if the predicate function returns True for all elements in the array, False otherwise\n    \"\"\"\n    # Check if the predicate function is callable\n    if not callable(predicate):\n        raise ValueError(\"The 'predicate' argument must be a callable function.\")\n\n    # Iterate over the array and check if the predicate function returns True for each element\n    for element in array:\n        if not predicate(element):\n            return False\n\n    # If we've reached this point, all elements passed the predicate function, so return True\n    return True\n```\nHere's an example of how to use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\npositive_numbers = lambda x: x > 0\n\nprint(all_predicate(numbers, positive_numbers))  # Output: True\n```\nThis function first checks if the `predicate` function is callable, and then iterates over the input array using a `for` loop. For each element, it calls the `predicate` function and checks if its return value is `False`. If any element fails the predicate function, the function returns `False`. If all elements pass the predicate function, the function returns `True`.",
+  "error": null,
+  "elapsed_seconds": 3.75,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

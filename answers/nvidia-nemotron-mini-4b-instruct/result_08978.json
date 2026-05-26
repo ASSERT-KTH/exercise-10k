@@ -1,0 +1,9 @@
+{
+  "id": 8978,
+  "title": "String Is Digit",
+  "prompt": "Write a function that takes a string as input and returns True if the string contains only digits, False otherwise.\nSample Input: ['12345']\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\nimport re\n\ndef is_string_only_digits(s: str) -> bool:\n    \"\"\"\n    Returns True if the given string contains only digits, False otherwise.\n\n    :param s: The string to check.\n    :return: True if s is a string of only digits, False otherwise.\n    \"\"\"\n    return bool(re.match(r'^\\d+$', s))\n```\nThis function uses a regular expression to check if the string contains only digits (i.e., characters that can be represented as integers in the range `[0-9]`). The regular expression `^\\d+$` matches a string that starts and ends with one or more digits. The `bool()` function is used to convert the result of the regular expression match to a boolean value.\n\nHere are some examples of how you can use this function:\n```python\n>>> is_string_only_digits('12345')\nTrue\n>>> is_string_only_digits('abc')\nFalse\n>>> is_string_only_digits('0')\nTrue\n>>> is_string_only_digits('10')\nTrue\n>>> is_string_only_digits('123')\nTrue\n>>> is_string_only_digits('123.4')\nFalse\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.47,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

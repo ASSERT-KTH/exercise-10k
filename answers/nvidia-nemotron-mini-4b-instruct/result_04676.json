@@ -1,0 +1,9 @@
+{
+  "id": 4676,
+  "title": "String Union",
+  "prompt": "Write a program that takes two strings as input and returns the unique characters in both strings.\nSample Input: ['hello', 'world']\nSample Output: ['h', 'e', 'l', 'o', 'w', 'r', 'd']\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef unique_chars(str1, str2):\n    # Convert input strings to sets to remove duplicates\n    unique_chars = set(str1) | set(str2)\n    \n    # Convert the set back to a list and sort it for consistent output\n    unique_chars = sorted(list(unique_chars))\n    \n    return unique_chars\n\n# Test the function with the provided sample input\nprint(unique_chars(['hello', 'world']))  # Output: ['h', 'e', 'l', 'o', 'w', 'r', 'd']\n```\n\nThis program first converts the input strings to sets, which automatically removes any duplicate characters. Then it combines the two sets using the `|` operator, effectively creating a new set containing all unique characters from both input strings. Finally, it converts this set back to a list and sorts it before returning the result.",
+  "error": null,
+  "elapsed_seconds": 2.14,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5228,
+  "title": "Salary Calculator",
+  "prompt": "Write a program that takes an employee's salary and years of service as input, and prints their salary after applying a 10% raise for each year of service.\nSample Input: 50000 5\nSample Output: 75000\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_salary_raise(salary, years_of_service):\n    \"\"\"\n    Calculates the salary after applying a 10% raise for each year of service.\n\n    Parameters:\n    salary (float): The current employee's salary.\n    years_of_service (int): The number of years the employee has been with the company.\n\n    Returns:\n    float: The employee's salary after applying the raise.\n    \"\"\"\n    # Calculate the raise amount\n    raise_amount = salary * 0.1  # 10% of the salary\n\n    # Add the raise to the salary for each year of service\n    adjusted_salary = salary\n    for _ in range(years_of_service):\n        adjusted_salary += raise_amount\n\n    return adjusted_salary\n\n# Get user input\nsalary = float(input(\"Enter the employee's current salary: \"))\nyears_of_service = int(input(\"Enter the number of years the employee has been with the company: \"))\n\n# Calculate and print the adjusted salary\nadjusted_salary = calculate_salary_raise(salary, years_of_service)\nprint(f\"The employee's salary after applying a 10% raise for each year of service is ${adjusted_salary:.2f}.\")\n```\nThis program defines a function `calculate_salary_raise` that takes the employee's current salary and years of service as input, calculates the raise amount, and adds it to the salary for each year of service. The program then gets user input for the current salary and years of service, calls the function, and prints the adjusted salary with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 3.96,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

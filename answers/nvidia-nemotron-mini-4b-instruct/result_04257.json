@@ -1,0 +1,9 @@
+{
+  "id": 4257,
+  "title": "Restaurant Menu System",
+  "prompt": "Develop a program that manages a restaurant menu system. The program should take the menu item, price, and order type as input, and print the order details.\nSample Input: Burger 10.99 Takeout\nSample Output: Order confirmed\n",
+  "answer": "Sure, I'd be happy to help you develop a program for a restaurant menu system. Here's a Python solution that meets your requirements:\n\n```python\ndef order_details(menu_item, price, order_type):\n    \"\"\"\n    Print the order details for a given menu item, price, and order type.\n\n    :param menu_item: str - The name of the menu item.\n    :param price: float - The price of the menu item.\n    :param order_type: str - The type of order (e.g., 'Takeout', 'Delivery', 'In-Store').\n    \"\"\"\n\n    # Ensure the order type is valid\n    valid_order_types = {'Takeout', 'Delivery', 'In-Store'}\n    if order_type.lower() not in valid_order_types:\n        raise ValueError(f\"Invalid order type '{order_type}'. Please use one of the following: {', '.join(valid_order_types)}\")\n\n    # Print the order details\n    print(f\"Order confirmed for {menu_item} at ${price}.\")\n    print(f\"Order type: {order_type.capitalize()}\")\n\n\n# Example usage\norder_details('Burger', 10.99, 'Takeout')\n```\n\nThis program defines a function `order_details` that takes three arguments: the menu item name, price, and order type. It validates the order type and then prints the order details. The example usage at the end of the code demonstrates how to use the function.",
+  "error": null,
+  "elapsed_seconds": 3.59,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

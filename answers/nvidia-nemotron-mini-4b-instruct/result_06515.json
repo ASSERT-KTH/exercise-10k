@@ -1,0 +1,9 @@
+{
+  "id": 6515,
+  "title": "Variable Scope",
+  "prompt": "Write a program to understand the concept of variable scope (local, global).\nSample Input: None\nSample Output: 10\n",
+  "answer": "Sure, I'd be happy to help you understand the concept of variable scope (local and global) with a simple program. Here's an example in Python:\n\n```python\n# Global variable\nglobal_var = 10\n\ndef my_function():\n    # Local variable\n    local_var = 20\n\n    # Accessing global variable\n    print(f\"Local variable: {local_var}, Global variable: {global_var}\")\n\n# Calling the function\nmy_function()\n\n# Output: Local variable: 20, Global variable: 10\n```\n\nIn this example, we define a global variable `global_var` with an initial value of 10. Inside the `my_function` function, we define a local variable `local_var` with a value of 20. When we call `my_function`, it prints the values of both variables.\n\nThe `global` keyword is used to access and modify global variables from within a function. Without the `global` keyword, Python would create a new local variable with the same name, hiding the global variable.\n\nHere's another example to illustrate the difference:\n\n```python\n# Global variable\nglobal_var = 10\n\ndef my_function():\n    # Local variable\n    local_var = 20\n\n    # Trying to modify global variable without global keyword\n    global_var += 1\n    print(f\"Local variable: {local_var}, Global variable: {global_var}\")\n\n# Calling the function\nmy_function()\n\n# Output: Local variable: 20, Global variable: 10\n```\n\nIn this example, trying to modify the global variable `global_var` directly inside the `my_function` function without the `global` keyword will result in a `NameError`, as Python cannot find the global variable in the local scope.",
+  "error": null,
+  "elapsed_seconds": 4.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

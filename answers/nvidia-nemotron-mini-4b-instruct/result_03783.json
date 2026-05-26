@@ -1,0 +1,9 @@
+{
+  "id": 3783,
+  "title": "Longest Common Prefix",
+  "prompt": "Create a function that finds the longest common prefix among an array of strings.\nSample Input: ['flower', 'flow', 'flight']\nSample Output: fl\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the longest common prefix among an array of strings using a two-pointer technique. This approach works by comparing the first characters of each string, then the second characters, and so on, until a mismatch is found. If no mismatch is found, the entire common prefix is the longest common prefix.\n\n```python\ndef longest_common_prefix(strs):\n    if not strs:\n        return \"\"\n\n    shortest_str = min(strs, key=len)\n\n    for i, char in enumerate(shortest_str):\n        for other_str in strs:\n            if i == len(other_str) or other_str[i] != char:\n                return shortest_str[:i]\n\n    return shortest_str\n```\n\nYou can use this function as follows:\n\n```python\nprint(longest_common_prefix(['flower', 'flow', 'flight']))  # Output: fl\n```\n\nThis function has a time complexity of O(n \\* min(m, l)), where n is the number of strings, m is the length of the shortest string, and l is the length of the longest string. This is because we need to iterate over each character of the shortest string and each string in the array.",
+  "error": null,
+  "elapsed_seconds": 2.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

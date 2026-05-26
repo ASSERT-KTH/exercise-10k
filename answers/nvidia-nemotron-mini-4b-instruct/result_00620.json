@@ -1,0 +1,9 @@
+{
+  "id": 620,
+  "title": "Variance Calculator",
+  "prompt": "Write a program to calculate the variance of a set of numbers.\nSample Input: 1 2 3 4 5\nSample Output: 2.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the variance of a set of numbers:\n\n```python\nimport math\n\ndef calculate_variance(numbers):\n    \"\"\"\n    Calculates the variance of a set of numbers.\n\n    :param numbers: A list of numbers\n    :return: The variance of the numbers\n    \"\"\"\n\n    # Check if there are at least two numbers\n    if len(numbers) < 2:\n        raise ValueError(\"At least two numbers are required to calculate variance.\")\n\n    # Calculate the mean (average)\n    mean = sum(numbers) / len(numbers)\n\n    # Calculate the squared differences from the mean\n    squared_diffs = [pow(num - mean, 2) for num in numbers]\n\n    # Calculate the variance\n    variance = sum(squared_diffs) / (len(numbers) - 1)\n\n    return variance\n\n# Example usage\nnumbers = [1, 2, 3, 4, 5]\nvariance = calculate_variance(numbers)\nprint(f\"The variance of {numbers} is {variance}.\")\n```\n\nThis program defines a function `calculate_variance` that takes a list of numbers as input and returns the variance. It first checks if there are at least two numbers, and then calculates the mean and squared differences from the mean. Finally, it calculates the variance by taking the average of the squared differences divided by the number of numbers minus one (to correct for the bias in the sample mean). The example usage at the end of the program demonstrates how to use the function with a sample input.",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

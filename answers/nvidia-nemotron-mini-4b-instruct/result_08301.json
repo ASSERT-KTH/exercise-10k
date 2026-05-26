@@ -1,0 +1,9 @@
+{
+  "id": 8301,
+  "title": "Calculating Grades Using Functions",
+  "prompt": "Create a program that calculates the grade of a student based on their score. The program should have two functions: one to calculate the grade and another to display the result. The grade calculation is as follows: scores 90 and above are Grade A, scores between 80 and 89 are Grade B, scores between 70 and 79 are Grade C, scores between 60 and 69 are Grade D, and scores below 60 are Grade F.\nSample Input: 85\nSample Output: Grade B\n",
+  "answer": "Sure, I'd be happy to help you create a program for this task. Here's an example Python program that meets your requirements:\n\n```python\ndef calculate_grade(score):\n    \"\"\"\n    Calculates the grade of a student based on their score.\n\n    :param score: The score of the student as an integer between 0 and 100.\n    :return: A string representing the student's grade.\n    \"\"\"\n    if 90 <= score <= 100:\n        return \"Grade A\"\n    elif 80 <= score <= 89:\n        return \"Grade B\"\n    elif 70 <= score <= 79:\n        return \"Grade C\"\n    elif 60 <= score <= 69:\n        return \"Grade D\"\n    else:\n        return \"Grade F\"\n\n\ndef display_result(score):\n    \"\"\"\n    Displays the result of the grade calculation.\n\n    :param score: The score of the student as an integer between 0 and 100.\n    \"\"\"\n    grade = calculate_grade(score)\n    print(f\"Grade: {grade}\")\n\n\n# Example usage:\ndisplay_result(85)  # Output: Grade: Grade B\n```\n\nThis program defines two functions: `calculate_grade` and `display_result`. The `calculate_grade` function takes a score as input and returns a string representing the student's grade based on the given criteria. The `display_result` function takes a score as input, calls `calculate_grade` to get the grade, and then prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

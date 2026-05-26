@@ -1,0 +1,9 @@
+{
+  "id": 5454,
+  "title": "Phone Number Formatter",
+  "prompt": "Write a program that takes a phone number as input and prints out the formatted phone number\nSample Input: 1234567890\nSample Output: (123) 456-7890\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a phone number as input and formats it according to the given sample output:\n```python\ndef format_phone_number(phone_number):\n    \"\"\"\n    Formats a phone number in the specified format.\n\n    :param phone_number: str, the phone number to format\n    :return: str, the formatted phone number\n    \"\"\"\n    # Remove any non-digit characters and ensure the length is 10\n    phone_number = ''.join(filter(str.isdigit, phone_number))\n    if len(phone_number) != 10:\n        raise ValueError(\"Phone number must be 10 digits long\")\n\n    # Format the phone number according to the sample output\n    formatted_number = f\"({phone_number[0:3]}) {phone_number[3:6]}-{phone_number[6:10]}\"\n\n    return formatted_number\n\n# Get user input\nuser_input = input(\"Enter a phone number: \")\n\n# Call the function and print the result\nformatted_number = format_phone_number(user_input)\nprint(formatted_number)\n```\nThis program defines a function `format_phone_number` that takes a phone number as input, removes any non-digit characters, and ensures the length is 10. If the length is not 10, it raises a `ValueError`. Otherwise, it formats the phone number according to the sample output and returns the result. The program then gets user input, calls the function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

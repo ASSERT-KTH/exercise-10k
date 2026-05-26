@@ -1,0 +1,9 @@
+{
+  "id": 3147,
+  "title": "Find the First Duplicate",
+  "prompt": "Write a program to find the first duplicate in an array of integers.\nSample Input: [2, 1, 3, 4, 5, 2, 6]\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the first duplicate in an array of integers using a dictionary to keep track of the numbers we've seen so far:\n```python\ndef find_first_duplicate(arr):\n    # Create an empty dictionary to store numbers we've seen so far\n    seen = set()\n\n    # Iterate through the array\n    for num in arr:\n        # If the number is in the set of seen numbers, it's a duplicate\n        if num in seen:\n            return num\n        # Otherwise, add the number to the set of seen numbers\n        else:\n            seen.add(num)\n\n    # If we get to the end of the array without finding a duplicate, return None\n    return None\n```\nHere's how you can use this function:\n```python\narr = [2, 1, 3, 4, 5, 2, 6]\nprint(find_first_duplicate(arr))  # Output: 2\n```\nThis program works by iterating through the array and checking if each number is already in the set of seen numbers. If it is, that means we've seen that number before and it's a duplicate. If it's not, we add it to the set of seen numbers. If we get to the end of the array without finding a duplicate, we return `None`.\n\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 17.43,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

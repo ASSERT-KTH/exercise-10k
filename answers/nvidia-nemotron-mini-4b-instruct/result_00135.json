@@ -1,0 +1,9 @@
+{
+  "id": 135,
+  "title": "Least Common Multiple",
+  "prompt": "Write a program that calculates the least common multiple of two given integers.\nSample Input: 12 15\nSample Output: 60\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the least common multiple (LCM) of two given integers using the Euclidean algorithm:\n\n```python\ndef gcd(a, b):\n    \"\"\"Calculate the greatest common divisor of two integers.\"\"\"\n    while b:\n        a, b = b, a % b\n    return abs(a)\n\ndef lcm(a, b):\n    \"\"\"Calculate the least common multiple of two integers.\"\"\"\n    return abs(a * b) // gcd(a, b)\n\n# Get user input\nnum1 = int(input(\"Enter the first integer: \"))\nnum2 = int(input(\"Enter the second integer: \"))\n\n# Calculate and print the LCM\nlcm_value = lcm(num1, num2)\nprint(f\"The least common multiple of {num1} and {num2} is {lcm_value}.\")\n```\n\nThis program first defines a function `gcd()` to calculate the greatest common divisor (GCD) of two integers using the Euclidean algorithm. Then, it defines a function `lcm()` that calculates the LCM of two integers by taking the absolute value of their product and dividing by their GCD. The program then prompts the user to enter two integers, calculates their LCM, and prints the result.\n\nFor the sample input `12 15`, the program will output:\n\n```\nEnter the first integer: 12\nEnter the second integer: 15\nThe least common multiple of 12 and 15 is 60.\n```",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

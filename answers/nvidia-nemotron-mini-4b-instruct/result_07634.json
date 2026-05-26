@@ -1,0 +1,9 @@
+{
+  "id": 7634,
+  "title": "Fractal Tree",
+  "prompt": "Create a program that uses a while loop to draw a fractal tree of a given size.\nSample Input: 10\nSample Output: ***** \n * * \n ***** \n * *\n",
+  "answer": "Sure, I'd be happy to help you create a program that draws a fractal tree using a while loop. Here's an example Python program that takes an integer input for the size of the tree and prints the corresponding fractal pattern:\n\n```python\ndef draw_fractal_tree(size):\n    \"\"\"Draw a fractal tree of the given size.\"\"\"\n\n    # Base case: a single star\n    if size == 1:\n        print(\"*\")\n        return\n\n    # Draw the tree recursively for half the size\n    draw_fractal_tree(size // 2)\n\n    # Print the top row of the tree\n    print(\"*\" * size)\n\n    # Draw the tree recursively for the other half of the size\n    draw_fractal_tree(size // 2)\n\n# Get user input for the size of the tree\nsize = int(input(\"Enter the size of the fractal tree: \"))\n\n# Draw the fractal tree\ndraw_fractal_tree(size)\n```\n\nThis program defines a recursive function `draw_fractal_tree` that takes the size of the tree as an argument. The base case is when the size is 1, in which case it prints a single star. Otherwise, it recursively calls itself with half the size, prints the top row of the tree, and then recursively calls itself with the other half of the size.\n\nThe program then gets user input for the size of the tree, calls the `draw_fractal_tree` function with the user input, and prints the resulting fractal pattern.",
+  "error": null,
+  "elapsed_seconds": 3.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

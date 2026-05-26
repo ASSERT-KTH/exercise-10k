@@ -1,0 +1,9 @@
+{
+  "id": 7937,
+  "title": "Acceleration Calculator",
+  "prompt": "Write a program to calculate the acceleration given the initial and final velocities and time.\nSample Input: 0 100 5\nSample Output: 20.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the acceleration given the initial and final velocities and time. The formula for acceleration is `a = (v_f - v_i) / t`, where `a` is acceleration, `v_f` is the final velocity, `v_i` is the initial velocity, and `t` is the time.\n\n```python\ndef calculate_acceleration(initial_velocity, final_velocity, time):\n    \"\"\"\n    Calculates the acceleration given the initial and final velocities and time.\n\n    :param initial_velocity: The initial velocity (m/s)\n    :param final_velocity: The final velocity (m/s)\n    :param time: The time (s)\n    :return: The acceleration (m/s^2)\n    \"\"\"\n\n    # Check if the inputs are valid\n    if initial_velocity <= final_velocity:\n        raise ValueError(\"Initial velocity cannot be greater than or equal to final velocity.\")\n\n    if time <= 0:\n        raise ValueError(\"Time must be a positive value.\")\n\n    # Calculate acceleration\n    acceleration = (final_velocity - initial_velocity) / time\n\n    return acceleration\n\n\n# Sample input and output\ninitial_velocity = 0\nfinal_velocity = 100\ntime = 5\n\nacceleration = calculate_acceleration(initial_velocity, final_velocity, time)\nprint(f\"The acceleration is {acceleration:.2f} m/s^2.\")\n```\n\nThis program checks for valid inputs and raises a `ValueError` if any of the conditions are not met. The function returns the calculated acceleration, which is then printed to the console.",
+  "error": null,
+  "elapsed_seconds": 3.88,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

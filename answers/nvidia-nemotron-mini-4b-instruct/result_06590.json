@@ -1,0 +1,9 @@
+{
+  "id": 6590,
+  "title": "Find the Median of All Numbers in an Array",
+  "prompt": "Write a program to find the median of all numbers in an array.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the median of all numbers in an array:\n\n```python\ndef find_median(numbers):\n    \"\"\"\n    Find the median of all numbers in an array.\n\n    :param numbers: List of numbers\n    :return: Median of the numbers\n    \"\"\"\n    # Sort the numbers in ascending order\n    numbers.sort()\n\n    # Calculate the length of the list\n    n = len(numbers)\n\n    # If the length is even, the median is the average of the middle two numbers\n    if n % 2 == 0:\n        mid1 = numbers[n//2 - 1]\n        mid2 = numbers[n//2]\n        return (mid1 + mid2) / 2\n    else:  # If the length is odd, the median is the middle number\n        return numbers[n//2]\n\n# Test the function with the given sample input\nsample_input = [1, 2, 3, 4, 5]\nprint(find_median(sample_input))  # Output: 3\n```\n\nThis program first sorts the input array in ascending order. Then, it calculates the length of the array and checks if it's even or odd. If it's even, the median is the average of the middle two numbers. If it's odd, the median is the middle number. The function returns the calculated median.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

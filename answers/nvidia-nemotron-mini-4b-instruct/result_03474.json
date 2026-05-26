@@ -1,0 +1,9 @@
+{
+  "id": 3474,
+  "title": "24 Game",
+  "prompt": "Write a program that generates four random numbers and asks the user to make an equation that equals 24 using basic arithmetic operations.\nSample Input: equation\nSample Output: Correct! The equation is valid.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\nimport random\n\ndef generate_equation():\n    \"\"\"Generate a random equation with four numbers that equals 24.\"\"\"\n    numbers = [random.randint(1, 9) for _ in range(4)]\n    numbers.sort()  # Ensure the numbers are in ascending order\n\n    # Generate the equation by randomly selecting operators\n    operators = ['+', '-', '*']\n    equation = ' + '.join(str(num) + operators[random.randint(0, 2)] for num in numbers)\n\n    return equation\n\ndef check_equation(equation):\n    \"\"\"Check if the equation equals 24.\"\"\"\n    try:\n        result = eval(equation)\n        return result == 24\n    except Exception:\n        return False\n\ndef main():\n    equation = generate_equation()\n    print(f\"Your equation is: {equation}\")\n\n    while True:\n        user_input = input(\"Please enter the equation that equals 24: \")\n        if check_equation(user_input):\n            print(\"Correct! The equation is valid.\")\n            break\n        else:\n            print(\"Sorry, that's not the correct equation. Please try again.\")\n\nif __name__ == \"__main__\":\n    main()\n```\nThis program generates a random equation with four numbers that equals 24, and then asks the user to enter the equation. It checks if the user's equation equals 24 using Python's built-in `eval()` function, and provides feedback to the user if the equation is correct or not.",
+  "error": null,
+  "elapsed_seconds": 5.06,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

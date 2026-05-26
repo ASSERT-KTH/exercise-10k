@@ -1,0 +1,9 @@
+{
+  "id": 6934,
+  "title": "Function with Type Checking",
+  "prompt": "Create a function that takes a value as an argument and returns its type, with type checking to ensure the input is a number\nSample Input: 5\nSample Output: int\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_type(value):\n    \"\"\"\n    Returns the type of the given value.\n\n    :param value: The value to get the type of.\n    :return: A string indicating the type of the given value.\n    \"\"\"\n    # Check if the input is a number\n    if not isinstance(value, (int, float)):\n        raise TypeError(\"The input must be a number.\")\n\n    # Determine the type based on the value\n    if isinstance(value, int):\n        return \"int\"\n    elif isinstance(value, float):\n        return \"float\"\n    else:\n        raise TypeError(\"The input must be a number.\")\n```\nThis function first checks if the input is a number (either an integer or a float) using the `isinstance()` function. If the input is not a number, it raises a `TypeError` with an appropriate message. Otherwise, it determines the type of the number (integer or float) and returns a string indicating the type.\n\nHere are some examples of how you can use this function:\n```python\n>>> get_type(5)\n'int'\n>>> get_type(3.14)\n'float'\n>>> get_type(\"five\")\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\n  File \"<stdin>\", line 5, in get_type\nTypeError: The input must be a number.\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

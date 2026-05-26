@@ -1,0 +1,9 @@
+{
+  "id": 2017,
+  "title": "Tax Calculator",
+  "prompt": "Write a program that takes a person's income as input and returns their tax using conditional statements.\nSample Input: 50000\nSample Output: 10000\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a person's income as input and returns their tax using conditional statements:\n```python\ndef calculate_tax(income):\n    \"\"\"\n    Calculates the tax based on the person's income.\n\n    :param income: The person's annual income.\n    :return: The tax owed, as an integer.\n    \"\"\"\n\n    # Define the tax brackets and rates\n    tax_brackets = [\n        (0, 9000, 0),\n        (9001, 38000, 19),\n        (38001, 80000, 32),\n        (80001, 190000, 37),\n        (190001, None, 35)\n    ]\n\n    # Find the tax bracket that includes the person's income\n    for bracket in tax_brackets:\n        if income >= bracket[0] and income <= bracket[1]:\n            tax_rate = bracket[2]\n            break\n\n    # Calculate the tax owed\n    tax = income * tax_rate / 100\n\n    return int(tax)\n\n# Get user input\nincome = int(input(\"Enter your annual income: \"))\n\n# Calculate and display the tax\ntax_amount = calculate_tax(income)\nprint(f\"Your tax for the year is ${tax_amount}.\")\n```\nThis program defines a function `calculate_tax` that takes a person's annual income as input and returns their tax based on the tax brackets defined in the function. The function uses a `for` loop to find the tax bracket that includes the person's income, and then calculates the tax owed using the tax rate for that bracket. The function returns the tax as an integer, which is then displayed to the user.",
+  "error": null,
+  "elapsed_seconds": 5.7,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

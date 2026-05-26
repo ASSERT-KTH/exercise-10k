@@ -1,0 +1,9 @@
+{
+  "id": 4660,
+  "title": "Travel Planner",
+  "prompt": "Create a program that plans a trip. The user can input their destination, departure date, and return date, and the program displays the trip details.\nSample Input: destination Paris departure 2024-03-01 return 2024-03-08\nSample Output: Your trip to Paris is from 2024-03-01 to 2024-03-08\n",
+  "answer": "Sure, I'd be happy to help you create a program that plans a trip based on the user's input. Here's a Python solution using the `datetime` module to handle dates and `pprint` to format the output. This program assumes the user will input a date in the format `YYYY-MM-DD`.\n\n```python\nimport pprint\nfrom datetime import datetime\n\ndef plan_trip():\n    destination = input(\"Enter your destination: \")\n    departure_date = input(\"Enter departure date (YYYY-MM-DD): \")\n    return_date = input(\"Enter return date (YYYY-MM-DD): \")\n\n    departure_date_obj = datetime.strptime(departure_date, \"%Y-%m-%d\")\n    return_date_obj = datetime.strptime(return_date, \"%Y-%m-%d\")\n\n    trip_details = {\n        \"destination\": destination,\n        \"departure_date\": departure_date_obj.strftime(\"%Y-%m-%d\"),\n        \"return_date\": return_date_obj.strftime(\"%Y-%m-%d\")\n    }\n\n    pprint.pprint(trip_details)\n    print(f\"Your trip to {destination} is from {trip_details['departure_date']} to {trip_details['return_date']}\")\n\nif __name__ == \"__main__\":\n    plan_trip()\n```\n\nWhen you run this program, it will prompt the user for the destination, departure date, and return date. Then, it will display the trip details in a formatted string.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

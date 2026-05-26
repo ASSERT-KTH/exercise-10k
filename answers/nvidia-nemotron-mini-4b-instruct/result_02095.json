@@ -1,0 +1,9 @@
+{
+  "id": 2095,
+  "title": "Calculate Median",
+  "prompt": "Write a program to calculate the median of a set of numbers.\nSample Input: 1 2 3 4 5\nSample Output: Median: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the median of a set of numbers:\n\n```python\ndef calculate_median(numbers):\n    \"\"\"\n    Calculates the median of a set of numbers.\n\n    :param numbers: List of numbers\n    :return: Median as an integer\n    \"\"\"\n\n    # Sort the list of numbers in ascending order\n    sorted_numbers = sorted(numbers)\n\n    # Calculate the length of the list\n    n = len(sorted_numbers)\n\n    # If the length is even, the median is the average of the two middle numbers\n    if n % 2 == 0:\n        mid1 = sorted_numbers[n // 2 - 1]\n        mid2 = sorted_numbers[n // 2]\n        median = (mid1 + mid2) / 2\n    # If the length is odd, the median is the middle number\n    else:\n        median = sorted_numbers[n // 2]\n\n    return int(median)\n\n\n# Example usage\nnumbers = [1, 2, 3, 4, 5]\nprint(f\"Median: {calculate_median(numbers)}\")\n```\n\nThis program first sorts the list of numbers in ascending order. Then, it calculates the length of the list and checks if it's even or odd. If it's even, it calculates the average of the two middle numbers as the median. If it's odd, it simply returns the middle number as the median. The function returns the median as an integer.",
+  "error": null,
+  "elapsed_seconds": 5.18,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

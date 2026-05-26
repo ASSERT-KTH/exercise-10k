@@ -1,0 +1,9 @@
+{
+  "id": 3612,
+  "title": "Function Arity",
+  "prompt": "Write a function that takes a variable number of arguments and returns their sum, using function arity\nSample Input: 1, 2, 3, 4\nSample Output: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! In JavaScript, you can use the `...args` syntax to capture a variable number of arguments in a function. Here's a function that meets your requirements:\n\n```javascript\nfunction sum(...args) {\n  return args.reduce((accumulator, currentValue) => accumulator + currentValue, 0);\n}\n```\n\nLet's break down this function:\n\n* The `sum` function takes an optional `...args` parameter, which means it can accept any number of arguments.\n* The `reduce` method is used to iterate over the arguments and accumulate their sum. The first argument to `reduce` is the initial value (0 in this case), and each subsequent argument is a value from the array-like object created by the `...args` parameter.\n\nHere's an example of how you can use this function:\n\n```javascript\nconsole.log(sum(1, 2, 3, 4)); // Output: 10\nconsole.log(sum(5, 6, 7)); // Output: 18\nconsole.log(sum()); // Output: 0\n```\n\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.81,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

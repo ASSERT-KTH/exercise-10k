@@ -1,0 +1,9 @@
+{
+  "id": 7003,
+  "title": "Sales Tax Calculator",
+  "prompt": "Write a program that takes the price of an item and the sales tax rate as input and returns the total cost.\nSample Input: 100 8\nSample Output: 108.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_total_cost(item_price, sales_tax_rate):\n    \"\"\"\n    Calculates the total cost of an item after adding sales tax.\n\n    Parameters:\n    item_price (float): The price of the item before tax.\n    sales_tax_rate (float): The sales tax rate as a decimal (e.g., 0.08 for 8%).\n\n    Returns:\n    float: The total cost of the item, including tax.\n    \"\"\"\n\n    # Calculate the sales tax amount\n    sales_tax = item_price * sales_tax_rate\n\n    # Return the total cost\n    return item_price + sales_tax\n\n# Get user input\nitem_price = float(input(\"Enter the price of the item: $\"))\nsales_tax_rate = float(input(\"Enter the sales tax rate as a decimal (e.g., 0.08 for 8%): \"))\n\n# Calculate and print the total cost\ntotal_cost = calculate_total_cost(item_price, sales_tax_rate)\nprint(f\"The total cost is ${total_cost:.2f}.\")\n```\nThis program defines a function `calculate_total_cost` that takes the price of the item and the sales tax rate as input, calculates the sales tax amount, and returns the total cost. The program then prompts the user to enter the item price and sales tax rate, calls the function with those values, and prints the total cost with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 3.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

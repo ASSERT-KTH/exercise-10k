@@ -1,0 +1,9 @@
+{
+  "id": 8136,
+  "title": "Time Converter",
+  "prompt": "Create a program that converts time from 12-hour format to 24-hour format using if/else statements\nSample Input: 10:30 AM\nSample Output: 10:30\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that converts time from 12-hour format to 24-hour format using if/else statements:\n```python\ndef convert_time(time_str: str) -> str:\n    \"\"\"\n    Converts time from 12-hour format to 24-hour format.\n\n    :param time_str: The time string in 12-hour format (e.g., \"10:30 AM\").\n    :return: The time string in 24-hour format (e.g., \"10:30\").\n    \"\"\"\n    # Split the time string into hour and minute components\n    hour, minute = time_str.split(\":\")\n\n    # Convert the hour component to 24-hour format\n    if time_str.startswith(\"PM\"):\n        hour = int(hour) + 12\n    else:\n        hour = int(hour)\n\n    # Construct the 24-hour time string\n    return f\"{hour:02d}:{minute:02d}\"\n\n# Test the function\ntime_str = \"10:30 AM\"\nresult = convert_time(time_str)\nprint(f\"Input: {time_str}\")\nprint(f\"Output: {result}\")\n```\nThis program defines a function `convert_time` that takes a time string in 12-hour format as input and returns the corresponding time string in 24-hour format. The function first splits the input string into hour and minute components, then checks if the hour component is in PM format. If it is, the hour is incremented by 12 to convert it to 24-hour format. Finally, the function constructs the 24-hour time string and returns it. The function is then tested with a sample input and output.",
+  "error": null,
+  "elapsed_seconds": 4.24,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

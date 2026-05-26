@@ -1,0 +1,9 @@
+{
+  "id": 6422,
+  "title": "Guessing Game",
+  "prompt": "Create a game where the user has to guess a random number between 1 and 100. Use a while loop to keep asking for guesses until the correct number is guessed.\nSample Input: 50\nSample Output: Congratulations! You guessed the number.\n",
+  "answer": "Sure, I'd be happy to help you create a game where the user has to guess a random number between 1 and 100. Here's a Python solution using a while loop:\n\n```python\nimport random\n\n# Generate a random number between 1 and 100\nsecret_number = random.randint(1, 100)\n\n# Initialize variables to keep track of the number of guesses\nnum_guesses = 0\nis_correct = False\n\n# Use a while loop to keep asking for guesses until the correct number is guessed\nwhile not is_correct:\n    # Ask the user for a guess\n    user_guess = int(input(\"Guess a number between 1 and 100: \"))\n\n    # Increment the number of guesses\n    num_guesses += 1\n\n    # Check if the user's guess is correct\n    if user_guess == secret_number:\n        is_correct = True\n    elif user_guess < secret_number:\n        print(\"Your guess is too low. Try again!\")\n    else:\n        print(\"Your guess is too high. Try again!\")\n\n# Output a congratulatory message\nprint(f\"Congratulations! You guessed the number in {num_guesses} guesses.\")\n```\n\nThis program generates a random number between 1 and 100, and then uses a while loop to keep asking the user for guesses until the correct number is guessed. The program keeps track of the number of guesses and provides feedback to the user based on whether their guess is too high or too low. Once the correct number is guessed, the program outputs a congratulatory message.",
+  "error": null,
+  "elapsed_seconds": 3.83,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

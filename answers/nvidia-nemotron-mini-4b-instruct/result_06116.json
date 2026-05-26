@@ -1,0 +1,9 @@
+{
+  "id": 6116,
+  "title": "List Grouping",
+  "prompt": "Write a program that takes a list of integers as input, and returns a dictionary where the keys are the unique integers in the list and the values are lists of indices at which each integer appears in the original list.\nSample Input: [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]\nSample Output: {1: [0], 2: [1, 2], 3: [3, 4, 5], 4: [6, 7, 8, 9]}\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef count_indices(lst):\n    unique_nums = set(lst)  # Convert list to set to remove duplicates\n    result = {}\n\n    for i, num in enumerate(lst):  # Iterate over list and its indices\n        if num not in result:\n            result[num] = [i]\n        else:\n            result[num].append(i)\n\n    return {k: v for k, v in result.items() if len(v) > 1}  # Filter out single-element lists\n\n# Test the function with your sample input\nsample_input = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]\nprint(count_indices(sample_input))  # Output: {2: [1, 2], 3: [3, 4, 5], 4: [6, 7, 8, 9]}\n```\n\nThis program first converts the input list to a set to remove any duplicates. Then it iterates over the list and its indices, adding each unique integer to the dictionary with its indices as its value. If an integer is already in the dictionary, its indices are added to its value list. Finally, it filters out any single-element lists from the result dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.13,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

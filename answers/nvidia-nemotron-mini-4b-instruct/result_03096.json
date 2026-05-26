@@ -1,0 +1,9 @@
+{
+  "id": 3096,
+  "title": "Function to Find the First Duplicate",
+  "prompt": "Implement a function to find the first duplicate element in a given list.\nSample Input: [1, 2, 3, 4, 2, 5]\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses a dictionary to keep track of elements and their indices, which allows for constant-time lookups and insertions. This makes it an efficient solution for finding the first duplicate element in a given list.\n\n```python\ndef first_duplicate(lst):\n    \"\"\"\n    Find the first duplicate element in a given list.\n\n    :param lst: List of elements\n    :return: First duplicate element or None if no duplicates exist\n    \"\"\"\n    if not lst:\n        return None\n\n    # Create a dictionary to store elements and their indices\n    element_indices = {}\n\n    # Iterate through the list and update the dictionary\n    for i, elem in enumerate(lst):\n        if elem in element_indices:\n            return elem\n        else:\n            element_indices[elem] = i\n\n    # If we reach the end of the list without finding a duplicate, return None\n    return None\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(first_duplicate([1, 2, 3, 4, 2, 5]))  # Output: 2\n```",
+  "error": null,
+  "elapsed_seconds": 3.85,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

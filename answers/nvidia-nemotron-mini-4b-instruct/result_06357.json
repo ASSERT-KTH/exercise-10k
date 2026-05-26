@@ -1,0 +1,9 @@
+{
+  "id": 6357,
+  "title": "Variable Swapping",
+  "prompt": "Swap the values of two variables without using a temporary variable. Explain the process and provide examples.\nSample Input: 5, 10\nSample Output: 10, 5\n",
+  "answer": "Sure, I'd be happy to help with that! Here's a step-by-step process to swap the values of two variables without using a temporary variable:\n\n1. **XOR (Exclusive OR) Operation**: The XOR operation (^ operator) is a bitwise operation that returns 1 if the two bits are different, and 0 if they are the same. This property can be used to swap the values of two variables. \n\n2. **Calculate the XOR of both variables**: Let's say we have two variables `a` and `b`. To swap their values, we can calculate the XOR of both variables: `a ^= b; b ^= a; a ^= b;`\n\n   For example, if `a = 5` and `b = 10`, the XOR operation would be: `5 ^= 10; 10 ^= 5; 5 ^= 10;`\n\n3. **Explain the process**: The XOR operation has the property that `a ^= b` is equivalent to `b ^= a; a ^= b;`. This means that after the first line, `a` and `b` will have the same value as if we had performed the second and third lines. And after the second line, `b` and `a` will have the same value as if we had performed the first and third lines.\n\n4. **Provide examples**: Let's see how this works in practice. Suppose we have variables `a` and `b` with initial values of `5` and `10`, respectively. After the XOR operation, `a` will be equal to `10` and `b` will be equal to `5`. Here's the complete code:\n\n```python\ndef swap_without_temp(a, b):\n    a ^= b\n    b ^= a\n    a ^= b\n\n# Example usage\na = 5\nb = 10\nswap_without_temp(a, b)\nprint(\"After swapping: a =\", a, \", b =\", b)  # Output: After swapping: a = 10, b = 5\n```\n\nThis method is efficient and can be used in various programming languages, including Python, C, C++, and Java.",
+  "error": null,
+  "elapsed_seconds": 5.32,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4785,
+  "title": "Input Validation",
+  "prompt": "Write a program that asks the user for a number and checks if it is positive, negative, or zero.\nSample Input: 5\nSample Output: The number is positive.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef check_number():\n    \"\"\"Ask the user for a number and check its sign.\"\"\"\n\n    # Ask the user for a number\n    while True:\n        try:\n            number = float(input(\"Please enter a number: \"))\n            break\n        except ValueError:\n            print(\"That's not a valid number. Please try again.\")\n\n    # Check the sign of the number\n    if number > 0:\n        print(f\"The number is positive: {number}\")\n    elif number < 0:\n        print(f\"The number is negative: {number}\")\n    else:\n        print(f\"The number is zero.\")\n\n# Call the function\ncheck_number()\n```\nThis program defines a function `check_number()` that prompts the user to enter a number, validates the input, and then checks its sign. The function prints a message indicating whether the number is positive, negative, or zero. The function is then called at the end of the script.",
+  "error": null,
+  "elapsed_seconds": 2.66,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

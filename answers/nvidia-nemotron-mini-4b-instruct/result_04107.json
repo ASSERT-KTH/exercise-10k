@@ -1,0 +1,9 @@
+{
+  "id": 4107,
+  "title": "Data Type Checker",
+  "prompt": "Write a program that checks the data type of a given variable and prints out the type.\nSample Input: 123, 'hello', 3.14\nSample Output: Integer, String, Float\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks the data type of a given variable and prints out the type:\n```python\ndef check_data_type(var):\n    \"\"\"\n    Check the data type of a given variable and print out the type.\n\n    :param var: The variable to check the data type of.\n    \"\"\"\n    try:\n        # Check if the variable is an integer\n        if isinstance(var, int):\n            print(\"Integer\")\n        # Check if the variable is a string\n        elif isinstance(var, str):\n            print(\"String\")\n        # Check if the variable is a float\n        elif isinstance(var, float):\n            print(\"Float\")\n        else:\n            print(\"Unknown data type\")\n    except Exception as e:\n        print(f\"An error occurred while checking the data type: {e}\")\n\n# Sample input\ninput_data = [123, 'hello', 3.14]\nfor item in input_data:\n    check_data_type(item)\n    print()  # Print a blank line between each item\n```\nThis program defines a function `check_data_type` that takes a variable as input and checks its data type using the `isinstance` function. If the variable is an integer, it prints \"Integer\". If the variable is a string, it prints \"String\". If the variable is a float, it prints \"Float\". If the variable is not an integer, a string, or a float, it prints \"Unknown data type\". The program then calls this function with a list of sample inputs and prints a blank line between each item.",
+  "error": null,
+  "elapsed_seconds": 3.96,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7449,
+  "title": "Data Type Debugger",
+  "prompt": "Given a set of variables with different data types, write a program to identify and print the data type of each variable. The variables will be given as input in the form of a dictionary where keys are variable names and values are the corresponding values.\nSample Input: {\"var1\": 10, \"var2\": \"hello\", \"var3\": 3.14, \"var4\": true}\nSample Output: var1: int, var2: str, var3: float, var4: bool\n",
+  "answer": "Here's a Python solution for the problem:\n\n```python\ndef identify_data_type(variables):\n    result = []\n    for var_name, var_value in variables.items():\n        data_type = type(var_value).__name__\n        result.append(f\"{var_name}: {data_type}\")\n    return \", \".join(result)\n\n# Test the function\nvariables = {\"var1\": 10, \"var2\": \"hello\", \"var3\": 3.14, \"var4\": True}\nprint(identify_data_type(variables))  # Output: var1: int, var2: str, var3: float, var4: bool\n```\n\nThis script defines a function `identify_data_type()` that iterates over the input dictionary and for each variable name and value pair, it uses the `type()` function to get the data type of the value and then appends the variable name and data type to a list. Finally, it returns a string with all the variable names and their corresponding data types separated by commas and a space. The test part of the script demonstrates how to use this function with a sample input dictionary.",
+  "error": null,
+  "elapsed_seconds": 2.76,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

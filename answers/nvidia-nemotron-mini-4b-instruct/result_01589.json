@@ -1,0 +1,9 @@
+{
+  "id": 1589,
+  "title": "Grade Calculator",
+  "prompt": "Write a program to calculate a student's grade based on their scores on different assignments.\nSample Input: 90 80 70\nSample Output: Your average grade is 80\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates a student's average grade based on their scores on multiple assignments:\n```python\ndef calculate_average_grade(scores):\n    \"\"\"\n    Calculates the average grade for a student based on their scores on multiple assignments.\n\n    :param scores: List of scores (int)\n    :return: String indicating the average grade (e.g., \"Your average grade is 80\")\n    \"\"\"\n    # Check if the input is a non-empty list\n    if not scores or not isinstance(scores, list) or len(scores) == 0:\n        raise ValueError(\"Input should be a non-empty list of scores.\")\n\n    # Calculate the sum of scores\n    total_score = sum(scores)\n\n    # Calculate the average grade\n    average_grade = total_score / len(scores)\n\n    # Format the output\n    return f\"Your average grade is {average_grade:.1f}\"\n\n# Example usage\nscores = [90, 80, 70]\nprint(calculate_average_grade(scores))  # Output: Your average grade is 80\n```\nThis program defines a function `calculate_average_grade` that takes a list of scores as input and returns a string indicating the average grade. It checks if the input is valid (non-empty list of scores), calculates the sum and average of the scores, and then formats the output as a string with one decimal place.",
+  "error": null,
+  "elapsed_seconds": 3.36,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

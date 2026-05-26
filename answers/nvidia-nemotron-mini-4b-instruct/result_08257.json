@@ -1,0 +1,9 @@
+{
+  "id": 8257,
+  "title": "Binary Converter",
+  "prompt": "Develop a program that converts decimal numbers to binary using if/else statements.\nSample Input: 10\nSample Output: 1010\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that converts a decimal number to binary using if/else statements:\n\n```python\ndef decimal_to_binary(decimal_number):\n    \"\"\"\n    Converts a decimal number to binary using if/else statements.\n\n    :param decimal_number: The decimal number to convert to binary.\n    :return: The binary representation of the decimal number as a string.\n    \"\"\"\n\n    # Initialize the binary string with the rightmost bit (least significant digit)\n    binary_string = \"\"\n\n    # Continue dividing the decimal number by 2 and adding the remainder to the binary string\n    while decimal_number > 0:\n        if decimal_number % 2 == 0:\n            binary_string = \"0\" + binary_string\n        else:\n            binary_string = \"1\" + binary_string\n        decimal_number //= 2\n\n    return binary_string\n\n\n# Example usage\ndecimal_number = 10\nbinary_string = decimal_to_binary(decimal_number)\nprint(f\"The binary representation of {decimal_number} is {binary_string}.\")\n```\n\nThis program defines a function `decimal_to_binary` that takes a decimal number as input and returns its binary representation as a string. The function uses a while loop to repeatedly divide the decimal number by 2 and add the remainder to the binary string, with each iteration representing a bit of the binary number. The if/else statement checks whether the remainder is 0 or 1, and appends the corresponding binary digit to the binary string. Finally, the function returns the binary string with the least significant bit (rightmost digit) first.",
+  "error": null,
+  "elapsed_seconds": 3.9,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4699,
+  "title": "Credit Card Number Validator",
+  "prompt": "Write a function that checks if a given credit card number is valid using the Luhn algorithm.\nSample Input: 4111111111111111\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a given credit card number is valid using the Luhn algorithm:\n\n```python\ndef is_valid_credit_card_number(card_number: str) -> bool:\n    \"\"\"\n    Check if a given credit card number is valid using the Luhn algorithm.\n\n    :param card_number: The credit card number as a string.\n    :return: True if the number is valid, False otherwise.\n    \"\"\"\n\n    # Remove any non-numeric characters and ensure the length is 16\n    cleaned_number = ''.join(c for c in card_number if c.isdigit())\n    if len(cleaned_number) != 16:\n        return False\n\n    # Calculate the check digit using the Luhn algorithm\n    check_digit = int(cleaned_number[-1]) * 2\n    for i in range(len(cleaned_number) - 2, -1, -1):\n        digit = int(cleaned_number[i])\n        if digit >= 5 and digit <= 9:\n            check_digit += digit - 5\n        else:\n            check_digit += digit\n    check_digit %= 10\n\n    # Ensure the check digit matches the expected value\n    return check_digit == int(cleaned_number[-2])\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(is_valid_credit_card_number(\"4111111111111111\"))  # True\nprint(is_valid_credit_card_number(\"1234567890123456\"))  # False\n```",
+  "error": null,
+  "elapsed_seconds": 4.2,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9976,
+  "title": "Variable Scope",
+  "prompt": "Write a program that demonstrates the concept of variable scope.\nSample Input: variable = 10\nSample Output: The value of the variable is: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a simple program in Python that demonstrates variable scope:\n\n```python\n# Variable scope in Python is determined by the block of code it's defined in\n\n# Global scope\nvariable = 10\n\ndef my_function():\n    # Local scope\n    variable = 20\n    print(f\"The value of the variable is: {variable}\")\n\n# Call the function\nmy_function()\n\n# Print the value of the global variable\nprint(f\"The value of the variable is: {variable}\")\n```\n\nWhen you run this program, you'll see the following output:\n\n```\nThe value of the variable is: 20\nThe value of the variable is: 10\n```\n\nIn this program, we define a global variable `variable` with an initial value of 10. Then, we define a function `my_function()` that modifies the value of `variable` to 20 within its local scope. When we call `my_function()`, the local variable `variable` is used instead of the global one, so the output shows its new value of 20. Finally, we print the value of the global variable again, which still shows its initial value of 10.\n\nThis demonstrates how variable scope works in Python, where variables defined within a function or block of code have a local scope and variables defined outside of any function or block have a global scope.",
+  "error": null,
+  "elapsed_seconds": 3.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

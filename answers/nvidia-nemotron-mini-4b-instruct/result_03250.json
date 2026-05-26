@@ -1,0 +1,9 @@
+{
+  "id": 3250,
+  "title": "Distance Between Points",
+  "prompt": "Create a program that calculates the distance between two points in a 2D plane.\nSample Input: 1 2 3 4\nSample Output: 2.8284271247461903\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the Euclidean distance between two points in a 2D plane given their x and y coordinates:\n\n```python\nimport math\n\ndef calculate_distance(point1, point2):\n    \"\"\"\n    Calculates the Euclidean distance between two points in a 2D plane.\n\n    :param point1: A list or tuple of two floats representing the x and y coordinates of the first point.\n    :param point2: A list or tuple of two floats representing the x and y coordinates of the second point.\n    :return: A float representing the Euclidean distance between the two points.\n    \"\"\"\n    if len(point1) != 2 or len(point2) != 2:\n        raise ValueError(\"Both points must be represented as a list or tuple of two floats.\")\n\n    x1, y1 = point1\n    x2, y2 = point2\n\n    distance = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)\n\n    return distance\n\n# Example usage:\npoint1 = (1, 2)\npoint2 = (3, 4)\n\ndistance = calculate_distance(point1, point2)\nprint(f\"The Euclidean distance between {point1} and {point2} is {distance}.\")\n```\n\nThis program defines a function `calculate_distance` that takes two points as arguments and returns their Euclidean distance. The function checks if the input points have the correct format (a list or tuple of two floats), calculates the distance using the Pythagorean theorem, and returns the result as a float. The example usage demonstrates how to use the function to calculate the distance between two points.",
+  "error": null,
+  "elapsed_seconds": 3.93,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

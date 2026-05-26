@@ -1,0 +1,9 @@
+{
+  "id": 4365,
+  "title": "Dictionary Key Deletion",
+  "prompt": "Write a program that deletes a key-value pair from a dictionary.\nSample Input: {'name': 'John', 'age': 25, 'city': 'New York'}, 'age'\nSample Output: {'name': 'John', 'city': 'New York'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that deletes a key-value pair from a dictionary using the `pop()` method:\n\n```python\ndef delete_key_value_pair(dictionary, key):\n    \"\"\"\n    Deletes a key-value pair from a dictionary.\n\n    :param dictionary: The dictionary to modify.\n    :param key: The key of the key-value pair to delete.\n    :return: The modified dictionary.\n    \"\"\"\n    # Check if the key exists in the dictionary\n    if key in dictionary:\n        # Delete the key-value pair using the pop() method\n        dictionary.pop(key)\n    return dictionary\n\n# Sample input\nsample_dict = {'name': 'John', 'age': 25, 'city': 'New York'}\nkey_to_delete = 'age'\n\n# Sample output\nprint(delete_key_value_pair(sample_dict, key_to_delete))  # Output: {'name': 'John', 'city': 'New York'}\n```\n\nThis function checks if the key exists in the dictionary before attempting to delete it. If the key is found, the `pop()` method is used to remove the key-value pair from the dictionary. The function then returns the modified dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.01,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

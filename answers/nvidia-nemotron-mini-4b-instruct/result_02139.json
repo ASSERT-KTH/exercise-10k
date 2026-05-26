@@ -1,0 +1,9 @@
+{
+  "id": 2139,
+  "title": "Array Unzipping",
+  "prompt": "Create a function that takes a list of tuples as input and returns two new lists, where the first list contains the first element of each tuple, and the second list contains the second element of each tuple.\nSample Input: [(1, 4), (2, 5), (3, 6)]\nSample Output: ([1, 2, 3], [4, 5, 6])\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef extract_elements(tuples_list):\n    \"\"\"\n    Extracts the first and second elements of each tuple in the input list and\n    returns two new lists.\n\n    Parameters:\n    tuples_list (list of tuples): A list of tuples containing two elements each.\n\n    Returns:\n    tuple: A tuple containing two lists: the first list contains the first elements\n          of each tuple, and the second list contains the second elements of each\n          tuple.\n    \"\"\"\n    # Use list comprehension to extract the first and second elements of each tuple\n    # and create two new lists\n    first_elements = [tup[0] for tup in tuples_list]\n    second_elements = [tup[1] for tup in tuples_list]\n\n    return (first_elements, second_elements)\n```\nHere's an example of how you can use this function:\n```python\ntuples_list = [(1, 4), (2, 5), (3, 6)]\nresult = extract_elements(tuples_list)\nprint(result)  # Output: ([1, 2, 3], [4, 5, 6])\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

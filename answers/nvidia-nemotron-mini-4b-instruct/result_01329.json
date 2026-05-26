@@ -1,0 +1,9 @@
+{
+  "id": 1329,
+  "title": "Duplicate Remover",
+  "prompt": "Write a function that takes a string as input and returns the string with all duplicate characters removed.\nSample Input: hello\nSample Output: helo\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef remove_duplicates(s: str) -> str:\n    \"\"\"\n    Remove all duplicate characters from a given string.\n\n    :param s: The input string.\n    :return: The string with all duplicate characters removed.\n    \"\"\"\n    unique_chars = set()\n    result = \"\"\n\n    for char in s:\n        if char not in unique_chars:\n            unique_chars.add(char)\n            result += char\n\n    return result\n```\nHere's how this function works:\n\n1. It initializes two sets: `unique_chars` to store the unique characters encountered so far, and `result` to store the final output string.\n2. It iterates over each character in the input string `s`.\n3. If the character is not already in the `unique_chars` set, it adds the character to the set and appends it to the `result` string.\n4. After iterating over all characters, it returns the `result` string, which contains only the unique characters from the input string.\n\nHere are some examples of how you can use this function:\n```python\nprint(remove_duplicates(\"hello\"))  # Output: \"helo\"\nprint(remove_duplicates(\"abcdefghijklmnopqrstuvwxyz\"))  # Output: \"abcdefghijklmnopqrstuvwxyz\"\nprint(remove_duplicates(\"   abc   def   ghi   jkl   mno   pqrs   tuv   wxyz   \"))  # Output: \"abcdefghijklmnopqrstuvwxyz\"\n```",
+  "error": null,
+  "elapsed_seconds": 4.15,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

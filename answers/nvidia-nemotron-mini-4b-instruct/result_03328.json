@@ -1,0 +1,9 @@
+{
+  "id": 3328,
+  "title": "Array Reduction",
+  "prompt": "Write a program that takes an array of integers as input and returns the sum of all the elements in the array.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef sum_of_array(arr):\n    \"\"\"\n    This function takes an array of integers as input and returns the sum of all the elements in the array.\n\n    :param arr: The input array of integers\n    :return: The sum of all elements in the array\n    \"\"\"\n    # Check if the input is a non-empty list\n    if not isinstance(arr, list) or len(arr) == 0:\n        raise ValueError(\"Input should be a non-empty list of integers.\")\n\n    # Calculate the sum of all elements in the array\n    total = 0\n    for num in arr:\n        if not isinstance(num, int):\n            raise ValueError(\"All elements in the array should be integers.\")\n        total += num\n\n    return total\n```\nHere's an example of how to use this function:\n```python\nprint(sum_of_array([1, 2, 3, 4, 5]))  # Output: 15\nprint(sum_of_array([1, 'a', 3, 4, 5]))  # Raises ValueError\n```\nThis function first checks if the input is a non-empty list. If not, it raises a `ValueError`. Then, it iterates through each element in the array and checks if it's an integer. If not, it also raises a `ValueError`. Finally, it calculates the sum of all elements in the array and returns it.",
+  "error": null,
+  "elapsed_seconds": 3.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

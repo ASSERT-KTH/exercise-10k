@@ -1,0 +1,9 @@
+{
+  "id": 3610,
+  "title": "Function Decorators",
+  "prompt": "Write a function that uses a decorator to measure the execution time of another function\nSample Input: math.sqrt\nSample Output: 0.000123 seconds\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example Python function that uses a decorator to measure the execution time of another function. In this example, I'll use the `time` module to measure the execution time.\n\n```python\nimport time\n\ndef measure_execution_time(func):\n    \"\"\"\n    A decorator to measure the execution time of another function.\n    \"\"\"\n\n    def wrapper(*args, **kwargs):\n        \"\"\"\n        The wrapper function that measures the execution time.\n        \"\"\"\n        start_time = time.time()\n        result = func(*args, **kwargs)\n        end_time = time.time()\n\n        execution_time = end_time - start_time\n        print(f\"{func.__name__} took {execution_time:.6f} seconds to execute.\")\n\n        return result\n\n    return wrapper\n\n@measure_execution_time\ndef math_sqrt(n):\n    \"\"\"\n    A function to calculate the square root of a number.\n    \"\"\"\n    return time.sqrt(n)\n\n# Call the function with a sample input\nmath_sqrt(1000)\n```\n\nWhen you run this code, it will output something like:\n\n```\nmath_sqrt took 0.000123 seconds to execute.\n```\n\nThis indicates that the `math_sqrt` function took approximately 1.23 milliseconds to execute with the sample input of 1000.",
+  "error": null,
+  "elapsed_seconds": 3.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

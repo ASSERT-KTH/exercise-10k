@@ -1,0 +1,9 @@
+{
+  "id": 3754,
+  "title": "Finding the LCM",
+  "prompt": "Create a program to find the least common multiple (LCM) of two given numbers using a basic algorithm\nSample Input: [12, 18]\nSample Output: 36\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the least common multiple (LCM) of two given numbers using a basic algorithm:\n\n```python\ndef find_lcm(num1, num2):\n    \"\"\"\n    Find the least common multiple (LCM) of two given numbers.\n\n    :param num1: The first integer.\n    :param num2: The second integer.\n    :return: The least common multiple of num1 and num2.\n    \"\"\"\n\n    # Ensure num1 and num2 are positive integers\n    num1, num2 = abs(num1), abs(num2)\n\n    # Initialize the result as the product of num1 and num2\n    result = num1 * num2\n\n    # Keep dividing both num1 and result by their greatest common divisor (GCD)\n    # until GCD is 1\n    while num1 != num2:\n        # Find the greatest common divisor (GCD) using the Euclidean algorithm\n        gcd = result % (num1, num2)\n        result = num1 if gcd == num2 else num2\n        num1, num2 = num2, gcd\n\n    return result\n\n# Example usage\nnum1, num2 = 12, 18\nlcm = find_lcm(num1, num2)\nprint(f\"The least common multiple of {num1} and {num2} is {lcm}.\")\n```\n\nThis program first ensures that the input numbers are positive integers. Then, it initializes the result as the product of the two numbers. It then enters a loop that repeatedly calculates the greatest common divisor (GCD) of the two numbers using the Euclidean algorithm, and updates the result and the two numbers accordingly. The loop continues until the GCD is 1, at which point the result is the least common multiple of the two input numbers.",
+  "error": null,
+  "elapsed_seconds": 5.5,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

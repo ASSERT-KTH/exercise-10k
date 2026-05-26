@@ -1,0 +1,9 @@
+{
+  "id": 7346,
+  "title": "Variable Scope",
+  "prompt": "Create a variable inside and outside a function, then print their values to understand the concept of variable scope.\nSample Input: None\nSample Output: outer variable value, inner variable value\n",
+  "answer": "Sure, I'd be happy to help you understand variable scope with an example. Here's a Python function that demonstrates both local and global variable scopes:\n\n```python\ndef outer_function():\n    # Global variable\n    global_var = \"This is a global variable\"\n\n    def inner_function():\n        # Local variable\n        local_var = \"This is a local variable\"\n\n        # Accessing global variable\n        print(f\"Inner variable value: {global_var}\")\n\n        # Accessing local variable\n        print(f\"Inner variable value: {local_var}\")\n\n    # Calling inner function\n    inner_function()\n\n    # Accessing global variable from inside the function\n    print(f\"Outer variable value: {global_var}\")\n\n# Calling outer function\nouter_function()\n```\n\nWhen you run this code, you'll see the following output:\n\n```\nInner variable value: This is a global variable\nInner variable value: This is a local variable\nOuter variable value: This is a global variable\n```\n\nIn this example, the `global_var` is a global variable that can be accessed and modified from inside and outside the `outer_function`. The `local_var` is a local variable that can only be accessed and modified within the `inner_function`. The output shows that both variables are accessible and have the expected values.",
+  "error": null,
+  "elapsed_seconds": 3.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

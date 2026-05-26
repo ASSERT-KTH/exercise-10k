@@ -1,0 +1,9 @@
+{
+  "id": 4573,
+  "title": "Dictionary Subtraction",
+  "prompt": "Write a function that takes two dictionaries and returns a new dictionary with the key-value pairs that exist in the first dictionary but not in the second\nSample Input: {'a': 1, 'b': 2, 'c': 3}, {'b': 2, 'c': 4}\nSample Output: {'a': 1}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef dict_difference(dict1, dict2):\n    \"\"\"\n    Returns a new dictionary with the key-value pairs that exist in the first dictionary but not in the second.\n\n    :param dict1: The first dictionary\n    :param dict2: The second dictionary\n    :return: A new dictionary with the specified key-value pairs\n    \"\"\"\n    # Create a set of keys in the first dictionary to make lookups faster\n    keys_in_dict1 = set(dict1.keys())\n\n    # Filter out keys that are also in the second dictionary\n    diff = {key: dict1[key] for key in keys_in_dict1 if key not in dict2}\n\n    return diff\n```\nHere's an example of how you can use this function:\n```python\ndict1 = {'a': 1, 'b': 2, 'c': 3}\ndict2 = {'b': 2, 'c': 4}\n\nresult = dict_difference(dict1, dict2)\nprint(result)  # Output: {'a': 1}\n```\nThis function first converts the keys of the first dictionary to a set, which allows for faster lookups. It then uses a dictionary comprehension to filter out the keys that are also in the second dictionary, and returns a new dictionary with the remaining key-value pairs.",
+  "error": null,
+  "elapsed_seconds": 3.29,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

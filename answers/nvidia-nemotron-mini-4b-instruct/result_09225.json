@@ -1,0 +1,9 @@
+{
+  "id": 9225,
+  "title": "Input Validation and Parsing",
+  "prompt": "Write a program that takes two integers as input from the user and calculates their sum, difference, product, and quotient. Validate the user input to ensure it is an integer and handle division by zero errors. Print the results in a formatted manner.\nSample Input: 10 2\nSample Output: Sum: 12\nDifference: 8\nProduct: 20\nQuotient: 5.0\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef calculate_operations(num1, num2):\n    try:\n        result = {\n            'sum': num1 + num2,\n            'difference': num1 - num2,\n            'product': num1 * num2,\n            'quotient': num1 / num2 if num2 != 0 else \"Division by zero is not allowed.\"\n        }\n        print(\"Sum: {}\\nDifference: {}\\nProduct: {}\\nQuotient: {}\".format(**result))\n    except TypeError as e:\n        print(\"Error: Please enter integers only.\")\n\n# Get user input\nnum1 = int(input(\"Enter the first integer: \"))\nnum2 = int(input(\"Enter the second integer: \"))\n\ncalculate_operations(num1, num2)\n```\n\nThis program defines a function `calculate_operations()` that takes two integers as arguments and performs the required calculations. It uses a `try`-`except` block to handle division by zero errors and prints the results in a formatted manner. The program then gets user input for the two integers and calls the `calculate_operations()` function with those values.",
+  "error": null,
+  "elapsed_seconds": 2.87,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

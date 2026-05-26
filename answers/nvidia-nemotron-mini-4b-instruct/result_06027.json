@@ -1,0 +1,9 @@
+{
+  "id": 6027,
+  "title": "Function Composition",
+  "prompt": "Create two functions, one that doubles a number and another that adds 1 to a number. Use function composition to create a new function that doubles a number and then adds 1.\nSample Input: 5\nSample Output: 11\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's how you can define the two functions you described and then compose them into a new function that doubles a number and then adds 1.\n\n```python\n# Function to double a number\ndef double(num):\n    return num * 2\n\n# Function to add 1 to a number\ndef add_one(num):\n    return num + 1\n\n# Function composition to double a number and then add 1\ndef double_and_add_one(num):\n    return add_one(double(num))\n\n# Test the new function\nprint(double_and_add_one(5))  # Output: 11\n```\n\nIn this example, we first define the two simple functions `double` and `add_one`. The `double` function simply multiplies its input by 2, and the `add_one` function adds 1 to its input. Then, we define the `double_and_add_one` function using function composition. This function takes a number as input, applies the `double` function to it, and then applies the `add_one` function to the result. The parentheses `(double(num))` indicate that we want to apply the `double` function to the input `num` before passing it to the `add_one` function.\n\nBy composing these functions in this way, we can create a new function that performs a more complex computation by combining the simpler functions.",
+  "error": null,
+  "elapsed_seconds": 11.22,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

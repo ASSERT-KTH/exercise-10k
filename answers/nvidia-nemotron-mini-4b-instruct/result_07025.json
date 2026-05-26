@@ -1,0 +1,9 @@
+{
+  "id": 7025,
+  "title": "String Reversal and Palindrome Checker",
+  "prompt": "Create a program that takes a string input from the user and checks if it's a palindrome. If the string is not a palindrome, the program should reverse the string and output the reversed string. If the string is a palindrome, the program should output a message stating that the string is a palindrome.\nSample Input: madam\nSample Output: The string is a palindrome.\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef is_palindrome(s):\n    \"\"\"Check if a string is a palindrome.\"\"\"\n    return s == s[::-1]\n\ndef main():\n    user_input = input(\"Enter a string: \")\n\n    if is_palindrome(user_input):\n        print(f\"The string '{user_input}' is a palindrome.\")\n    else:\n        reversed_string = user_input[::-1]\n        print(f\"The reversed string '{reversed_string}' is not a palindrome.\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program defines two functions: `is_palindrome()` and `main()`. The `is_palindrome()` function checks if a given string is a palindrome by comparing it to its reverse (`s[::-1]`). The `main()` function prompts the user for input, calls `is_palindrome()`, and prints the result accordingly.",
+  "error": null,
+  "elapsed_seconds": 2.45,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

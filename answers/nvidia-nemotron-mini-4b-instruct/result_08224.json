@@ -1,0 +1,9 @@
+{
+  "id": 8224,
+  "title": "Looping Statement",
+  "prompt": "Create a program that demonstrates the use of a looping statement with if/else statements\nSample Input: 5\nSample Output: 1, 2, 3, 4, 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that demonstrates the use of a looping statement with if/else statements to print the numbers from 1 to a given input. We'll use a `for` loop with an `if` statement to check if the current number is equal to the input. If it is, we'll break the loop and move on to the next iteration.\n\n```python\ndef print_numbers(input_value):\n    \"\"\"Print numbers from 1 to the given input value.\"\"\"\n\n    # Check if the input is a positive integer\n    if not isinstance(input_value, int) or input_value < 1:\n        print(\"Error: Input must be a positive integer.\")\n        return\n\n    # Initialize the current number and the loop counter\n    current_number = 1\n\n    # Loop until the current number is equal to the input value\n    for _ in range(input_value):\n        if current_number == input_value:\n            print(current_number)\n            break\n        else:\n            print(current_number)\n            current_number += 1\n\n# Get user input and call the function\nuser_input = int(input(\"Enter a positive integer: \"))\nprint_numbers(user_input)\n```\n\nWhen you run this program and enter a positive integer as input, it will print the numbers from 1 to that number, one per line, with an `if` statement to stop the loop when the input value is reached.",
+  "error": null,
+  "elapsed_seconds": 3.46,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

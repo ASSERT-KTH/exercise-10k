@@ -1,0 +1,9 @@
+{
+  "id": 4714,
+  "title": "Dictionary Popitem",
+  "prompt": "Remove and return an arbitrary key-value pair from a dictionary using the popitem method\nSample Input: {'name': 'John', 'age': 25}\nSample Output: ('name', 'John')\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that removes and returns an arbitrary key-value pair from a dictionary using the `popitem()` method:\n\n```python\ndef remove_and_return_key_value_pair(dictionary):\n    \"\"\"\n    Remove and return an arbitrary key-value pair from a dictionary using the popitem method.\n\n    :param dictionary: The dictionary to modify.\n    :return: A tuple containing the removed key and value.\n    \"\"\"\n    if not dictionary:\n        raise ValueError(\"The dictionary cannot be empty.\")\n\n    # Remove and return an arbitrary key-value pair using popitem\n    key_value_pair = dictionary.popitem()\n\n    return key_value_pair\n```\n\nHere's an example of how to use this function:\n\n```python\nsample_input = {'name': 'John', 'age': 25}\nsample_output = remove_and_return_key_value_pair(sample_input)\n\nprint(sample_output)  # Output: ('name', 'John')\nprint(sample_input)   # Output: {'age': 25}\n```\n\nThis function first checks if the input dictionary is empty and raises a `ValueError` if it is. Then, it uses the `popitem()` method to remove and return an arbitrary key-value pair from the dictionary. Finally, it returns the removed key and value as a tuple.",
+  "error": null,
+  "elapsed_seconds": 10.26,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

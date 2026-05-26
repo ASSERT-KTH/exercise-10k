@@ -1,0 +1,9 @@
+{
+  "id": 2733,
+  "title": "Checking for Symmetric Matrices",
+  "prompt": "Write a program to check if a given matrix is symmetric\nSample Input: [[1, 2], [2, 1]]\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given matrix is symmetric:\n\n```python\ndef is_symmetric(matrix):\n    \"\"\"Check if a given matrix is symmetric.\n\n    Args:\n        matrix (list of lists): A 2D list representing the matrix.\n\n    Returns:\n        bool: True if the matrix is symmetric, False otherwise.\n    \"\"\"\n\n    # Check if the matrix is square (i.e., has the same number of rows and columns)\n    n = len(matrix)\n    if n != len(matrix[0]):\n        return False\n\n    # Iterate over all elements in the matrix\n    for i in range(n):\n        for j in range(i, n):\n            # If the elements at matrix[i][j] and matrix[j][i] are different, return False\n            if matrix[i][j] != matrix[j][i]:\n                return False\n\n    # If no differences are found, the matrix is symmetric\n    return True\n\n# Test the function with the sample input\nmatrix = [[1, 2], [2, 1]]\nprint(is_symmetric(matrix))  # Output: True\n```\n\nThis program first checks if the matrix is square (i.e., has the same number of rows and columns). Then, it iterates over all elements in the matrix and checks if the elements at matrix[i][j] and matrix[j][i] are equal. If any differences are found, the function returns False. If no differences are found, the function returns True, indicating that the matrix is symmetric.",
+  "error": null,
+  "elapsed_seconds": 11.79,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

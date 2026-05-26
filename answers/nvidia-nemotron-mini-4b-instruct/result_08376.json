@@ -1,0 +1,9 @@
+{
+  "id": 8376,
+  "title": "Geometric Progression",
+  "prompt": "Write a program that generates a geometric progression of a given length with a given common ratio.\nSample Input: 5 2\nSample Output: 1, 2, 4, 8, 16\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates a geometric progression of a given length with a given common ratio:\n```python\ndef geometric_progression(length, common_ratio):\n    \"\"\"\n    Generates a geometric progression of a given length with a given common ratio.\n\n    :param length: The length of the progression.\n    :param common_ratio: The common ratio between consecutive terms.\n    :return: A list of the terms in the progression.\n    \"\"\"\n    if length <= 0 or common_ratio <= 0:\n        raise ValueError(\"Both length and common_ratio must be positive integers.\")\n\n    # Initialize the first term and the list to store the progression\n    first_term = 1\n    progression = [first_term]\n\n    # Generate the remaining terms in the progression\n    for _ in range(length - 1):\n        first_term *= common_ratio\n        progression.append(first_term)\n\n    return progression\n\n# Example usage\nprint(geometric_progression(5, 2))  # Output: [1, 2, 4, 8, 16]\n```\nThis program defines a function `geometric_progression` that takes two arguments: `length` and `common_ratio`. It checks if both arguments are positive integers, and then generates the geometric progression by iteratively multiplying the first term by the common ratio and appending the result to the list. The function returns the list of terms in the progression.",
+  "error": null,
+  "elapsed_seconds": 3.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

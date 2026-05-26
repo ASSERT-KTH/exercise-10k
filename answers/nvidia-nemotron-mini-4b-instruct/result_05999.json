@@ -1,0 +1,9 @@
+{
+  "id": 5999,
+  "title": "Function with Generators",
+  "prompt": "Create a function that takes a list of numbers as input and returns a generator that yields the squares of the numbers\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [1, 4, 9, 16, 25]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses a generator expression to create the generator, which is more memory-efficient than creating a list first.\n\n```python\ndef square_generator(numbers):\n    \"\"\"\n    Takes a list of numbers as input and returns a generator that yields the squares of the numbers.\n\n    :param numbers: list of numbers\n    :return: generator that yields squares of numbers\n    \"\"\"\n    return (num ** 2 for num in numbers)\n```\n\nYou can use this function like this:\n\n```python\nnumbers = [1, 2, 3, 4, 5]\nsquares = square_generator(numbers)\n\n# Print the squares one at a time\nfor square in squares:\n    print(square)\n```\n\nThis will output:\n\n```\n1\n4\n9\n16\n25\n```",
+  "error": null,
+  "elapsed_seconds": 2.14,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

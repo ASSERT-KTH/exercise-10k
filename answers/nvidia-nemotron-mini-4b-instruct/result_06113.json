@@ -1,0 +1,9 @@
+{
+  "id": 6113,
+  "title": "Array Mapping",
+  "prompt": "Write a program that takes an array of integers and a mapping function as input, and returns a new array containing the results of applying the mapping function to each element in the original array.\nSample Input: [1, 2, 3, 4, 5], double(x)\nSample Output: [2, 4, 6, 8, 10]\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef map_array(arr, func):\n    \"\"\"\n    Applies a mapping function to each element in the input array.\n\n    :param arr: The input array of integers\n    :param func: The mapping function to apply (e.g., double(x))\n    :return: A new array containing the results of applying the mapping function\n    \"\"\"\n    return [func(x) for x in arr]\n\n# Example usage:\nnumbers = [1, 2, 3, 4, 5]\ndouble = lambda x: x * 2\nresult = map_array(numbers, double)\nprint(result)  # Output: [2, 4, 6, 8, 10]\n```\n\nThis program defines a function `map_array` that takes an array of integers and a mapping function as input, and returns a new array containing the results of applying the mapping function to each element in the original array. The example usage demonstrates how to use this function with a lambda function that doubles each element in the input array.",
+  "error": null,
+  "elapsed_seconds": 2.76,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

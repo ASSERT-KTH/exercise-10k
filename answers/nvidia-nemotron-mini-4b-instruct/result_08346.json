@@ -1,0 +1,9 @@
+{
+  "id": 8346,
+  "title": "Array Element Retrieval",
+  "prompt": "Write a program that takes an array and an index as input, and returns the element at the specified index. If the index is out of bounds, the program should return a message indicating that the index is invalid.\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_element(arr, index):\n    \"\"\"\n    Given an array and an index, returns the element at the specified index.\n    If the index is out of bounds, returns a message indicating that the index is invalid.\n\n    :param arr: The array to search in\n    :param index: The index to retrieve the element from\n    :return: The element at the specified index, or a message if the index is invalid\n    \"\"\"\n    # Check if the index is within the bounds of the array\n    if 0 <= index < len(arr):\n        return arr[index]\n    else:\n        return f\"The index {index} is out of bounds for the array.\"\n```\nHere's an example of how you can use this function:\n```python\narr = [1, 2, 3, 4, 5]\nindex = 2\n\nelement = get_element(arr, index)\nprint(element)  # Output: 3\n```\nIn this example, the function correctly returns the element at index 2 (which is 3), even though the index is out of bounds for the array. If you try to access an element at an index that is not within the bounds of the array, the function will return a message indicating that the index is invalid.",
+  "error": null,
+  "elapsed_seconds": 3.27,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8568,
+  "title": "Dictionary to String",
+  "prompt": "Create a dictionary with 3 key-value pairs and convert it to a string.\nSample Input: None\nSample Output: string\n",
+  "answer": "Sure, I'd be happy to help! Here's a Python function that meets your requirements:\n\n```python\ndef dict_to_string(d):\n    \"\"\"\n    Converts a dictionary to a string with key-value pairs separated by commas.\n\n    :param d: The dictionary to convert to a string.\n    :return: A string representation of the dictionary.\n    \"\"\"\n    if not isinstance(d, dict):\n        raise ValueError(\"Input must be a dictionary.\")\n\n    return \", \".join(f\"{k}={v}\" for k, v in d.items())\n```\n\nHere's an example of how to use this function:\n\n```python\nd = {\"name\": \"Alice\", \"age\": 30, \"city\": \"New York\"}\nprint(dict_to_string(d))  # Output: \"name=Alice,age=30,city=New York\"\n```\n\nThis function first checks if the input is a dictionary. If not, it raises a `ValueError`. Then, it uses a generator expression to create a list of key-value pairs in the format `\"{k}={v}\"`, and finally converts this list to a string with commas separating the pairs.",
+  "error": null,
+  "elapsed_seconds": 2.88,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

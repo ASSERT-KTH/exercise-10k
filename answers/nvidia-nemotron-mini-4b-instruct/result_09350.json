@@ -1,0 +1,9 @@
+{
+  "id": 9350,
+  "title": "Variable Closure",
+  "prompt": "Write a program to demonstrate the concept of variable closure.\nSample Input: None\nSample Output: Variable values\n",
+  "answer": "Sure, I'd be happy to help you understand the concept of variable closure with a simple program. Variable closure refers to the ability of a function to access and modify variables that are in the lexical scope of that function, even if those variables are declared outside the function's body. Here's a Python program that demonstrates this concept:\n\n```python\ndef outer_function():\n    # Variables declared in the outer scope\n    x = 10\n    y = 20\n\n    def inner_function():\n        # Variables declared in the inner scope\n        z = 30\n\n        # Accessing and modifying variables from the outer scope\n        nonlocal x, y\n        x += 1\n        y *= 2\n\n        # Printing the modified values\n        print(f\"Inner function: x = {x}, y = {y}\")\n\n    # Calling the inner function\n    inner_function()\n\n    # Printing the final values of x and y\n    print(f\"Outer function: x = {x}, y = {y}\")\n\n# Calling the outer function\nouter_function()\n```\n\nWhen you run this program, you'll see the following output:\n\n```\nInner function: x = 11, y = 40\nOuter function: x = 11, y = 40\n```\n\nIn this program, the `outer_function` defines two variables `x` and `y` in its outer scope. The `inner_function` is defined inside the `outer_function` and has its own `z` variable in its inner scope. However, the `inner_function` can modify the values of `x` and `y` using the `nonlocal` statement, which tells Python to look up the variables in the enclosing function's (outer function's) scope. This demonstrates the concept of variable closure.",
+  "error": null,
+  "elapsed_seconds": 4.13,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

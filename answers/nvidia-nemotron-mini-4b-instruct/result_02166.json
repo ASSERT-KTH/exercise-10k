@@ -1,0 +1,9 @@
+{
+  "id": 2166,
+  "title": "Circle Circumference",
+  "prompt": "Ask the user for the radius of a circle and print its circumference.\nSample Input: 4\nSample Output: 25.132741228718345\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution that follows your specifications:\n\n```python\nimport math\n\ndef get_radius():\n    \"\"\"Ask the user for the radius of a circle and validate the input.\"\"\"\n    while True:\n        try:\n            radius = float(input(\"Enter the radius of the circle: \"))\n            return radius\n        except ValueError:\n            print(\"That's not a valid number. Please try again.\")\n\ndef calculate_circumference(radius):\n    \"\"\"Calculate the circumference of a circle given its radius.\"\"\"\n    return 2 * math.pi * radius\n\nif __name__ == \"__main__\":\n    radius = get_radius()\n    circumference = calculate_circumference(radius)\n    print(f\"The circumference of a circle with radius {radius} is {circumference}.\")\n```\n\nWhen you run this script, it will prompt the user to enter the radius of a circle. If the user enters an invalid input, the script will prompt them again until they provide a valid number. Once the radius is obtained, the script calculates and prints the circumference of the circle. The output you provided (25.132741228718345) is the approximate value of the circumference of a circle with radius 4.",
+  "error": null,
+  "elapsed_seconds": 2.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

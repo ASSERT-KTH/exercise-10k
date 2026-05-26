@@ -1,0 +1,9 @@
+{
+  "id": 3969,
+  "title": "Finding the Longest Common Prefix",
+  "prompt": "Write a program that finds the longest common prefix among a list of strings. The program should take a list of strings as input and output the longest common prefix.\nSample Input: ['hello', 'hello world', 'hello python']\nSample Output: hello\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the longest common prefix among a list of strings using a two-pointer technique. This approach works by comparing the first characters of each string in the list, then moving to the next characters if they match, and so on. If at any point the characters don't match, the longest common prefix found so far is returned.\n\n```python\ndef longest_common_prefix(strs):\n    if not strs:\n        return \"\"\n\n    shortest_str = min(strs, key=len)  # Get the shortest string\n\n    for i, char in enumerate(shortest_str):\n        for other_str in strs[1:]:\n            if i == len(other_str) or other_str[i] != char:\n                return shortest_str[:i]\n\n    return shortest_str\n```\n\nYou can use this function as follows:\n\n```python\nprint(longest_common_prefix(['hello', 'hello world', 'hello python']))  # Output: hello\n```\n\nThis program ensures that the longest common prefix is returned even if some strings are empty or have different lengths.",
+  "error": null,
+  "elapsed_seconds": 2.83,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

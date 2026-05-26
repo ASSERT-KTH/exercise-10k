@@ -1,0 +1,9 @@
+{
+  "id": 8774,
+  "title": "Total Number of Letters",
+  "prompt": "Create a function to count the total number of letters in a given string.\nSample Input: hello123world456\nSample Output: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef count_letters(s: str) -> int:\n    \"\"\"\n    Count the total number of letters (both uppercase and lowercase) in a given string.\n\n    :param s: The input string.\n    :return: The total number of letters in the string.\n    \"\"\"\n    return sum(1 for char in s if char.isalpha())\n```\nThis function uses a generator expression to iterate over each character in the input string `s`. The `isalpha()` method checks if a character is a letter (both uppercase and lowercase), and the `sum()` function adds up the number of characters that satisfy this condition.\n\nHere's an example of how you can use this function:\n```python\nprint(count_letters(\"hello123world456\"))  # Output: 10\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.35,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

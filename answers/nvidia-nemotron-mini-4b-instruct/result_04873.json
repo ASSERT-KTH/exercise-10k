@@ -1,0 +1,9 @@
+{
+  "id": 4873,
+  "title": "Generating Random Password with While Loop",
+  "prompt": "Write a program that generates a random password of length 10 using a while loop.\nSample Output: aR5dL8pM2b\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates a random password of length 10 using a while loop and the `random` module:\n\n```python\nimport random\n\ndef generate_password():\n    \"\"\"\n    Generates a random password of length 10.\n    \"\"\"\n    # Define the set of characters to use for the password\n    characters = \"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+[]{}|;:,.<>?\"\n\n    # Initialize an empty string to store the password\n    password = \"\"\n\n    # Use a while loop to generate 10 characters for the password\n    while len(password) < 10:\n        # Choose a random character from the set of characters\n        character = random.choice(characters)\n\n        # Append the character to the password string\n        password += character\n\n    return password\n\n# Generate and print the password\npassword = generate_password()\nprint(password)\n```\n\nWhen you run this program, it will print a random 10-character password, like this:\n\n```\naR5dL8pM2b\n```\n\nYou can adjust the length of the password by changing the value passed to the `generate_password()` function call. For example, to generate a password of length 12, you could call the function like this:\n\n```python\npassword = generate_password()\nprint(password)\n```",
+  "error": null,
+  "elapsed_seconds": 3.63,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3538,
+  "title": "Generating the Pascal's Triangle",
+  "prompt": "Develop a program that generates Pascal's triangle up to n using a while loop.\nSample Input: 5\nSample Output: 1\n1 1\n1 2 1\n1 3 3 1\n1 4 6 4 1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates Pascal's triangle up to `n` using a while loop:\n\n```python\ndef generate_pascals_triangle(n):\n    # Initialize the first row with 1\n    triangle = [1]\n\n    # Generate the remaining rows using a while loop\n    i = 1\n    while i < n:\n        # The number of elements in the current row is one more than the index of the row\n        row_length = len(triangle) + 1\n\n        # Initialize the first and last elements of the current row with 1\n        triangle.append(1)\n\n        # Fill the rest of the elements in the current row using the formula for Pascal's triangle\n        for j in range(1, row_length - 1):\n            triangle[j] = triangle[j - 1] + triangle[j]\n\n        # Move to the next row\n        i += 1\n\n    return triangle\n\n# Get user input for the number of rows in Pascal's triangle\nn = int(input(\"Enter the number of rows in Pascal's triangle: \"))\n\n# Generate and print the triangle\npascals_triangle = generate_pascals_triangle(n)\nfor row in pascals_triangle:\n    print(\" \".join(str(num) for num in row))\n```\n\nThis program defines a function `generate_pascals_triangle` that takes an integer `n` as input and returns a list containing the rows of Pascal's triangle up to `n`. The function uses a while loop to generate each row of the triangle, and the formula for Pascal's triangle to fill in the elements of each row. Finally, the program gets user input for the number of rows in Pascal's triangle, generates the triangle using the function, and prints it to the console.",
+  "error": null,
+  "elapsed_seconds": 4.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

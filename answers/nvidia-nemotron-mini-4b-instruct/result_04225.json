@@ -1,0 +1,9 @@
+{
+  "id": 4225,
+  "title": "Exponentiation",
+  "prompt": "Write a program to calculate the result of a number raised to a power.\nSample Input: 2 3\nSample Output: 8\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the result of a number raised to a power:\n\n```python\ndef power(base, exponent):\n    \"\"\"\n    Calculates the result of a number raised to a power.\n\n    :param base: The base number (the number to be raised to a power).\n    :param exponent: The exponent (the power to which the base number is raised).\n    :return: The result of the base number raised to the exponent.\n    \"\"\"\n\n    # Check if the exponent is negative\n    if exponent < 0:\n        raise ValueError(\"Exponent must be non-negative\")\n\n    # Calculate the result using the mathematical formula: base^exponent\n    result = 1\n    for _ in range(abs(exponent)):\n        result *= base\n\n    # If the exponent was negative, return the reciprocal of the result\n    if exponent < 0:\n        return 1 / result\n\n    return result\n\n# Example usage\nbase = 2\nexponent = 3\nprint(power(base, exponent))  # Output: 8\n```\n\nThis program defines a function `power` that takes two arguments: the base number and the exponent. It first checks if the exponent is negative and raises a `ValueError` if it is. Then, it calculates the result using the mathematical formula `base^exponent` by multiplying the base by itself the required number of times based on the sign of the exponent. Finally, it returns the result. The example usage at the end of the program demonstrates how to use the function to calculate the result of 2 raised to the power of 3.",
+  "error": null,
+  "elapsed_seconds": 3.74,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

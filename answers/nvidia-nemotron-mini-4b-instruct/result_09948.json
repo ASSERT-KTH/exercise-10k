@@ -1,0 +1,9 @@
+{
+  "id": 9948,
+  "title": "Grade Ebook Seller",
+  "prompt": "Create a program that determines the grade of an ebook seller based on the number of ebooks sold. The grade is determined by the following conditions: if the seller sold less than 50 ebooks, they get an F grade; if they sold between 50 and 100 ebooks, they get a D grade; if they sold between 101 and 200 ebooks, they get a C grade; if they sold between 201 and 400 ebooks, they get a B grade; and if they sold more than 400 ebooks, they get an A grade.\nSample Input: 200\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you create a program for that. Here's an example solution in Python:\n\n```python\ndef calculate_grade(ebooks_sold):\n    \"\"\"\n    Determines the grade of an ebook seller based on the number of ebooks sold.\n\n    :param ebooks_sold: int, the number of ebooks sold\n    :return: str, the grade (F, D, C, B, or A)\n    \"\"\"\n    if ebooks_sold < 50:\n        return \"F\"\n    elif 50 <= ebooks_sold < 101:\n        return \"D\"\n    elif 101 <= ebooks_sold < 201:\n        return \"C\"\n    elif 201 <= ebooks_sold < 401:\n        return \"B\"\n    else:\n        return \"A\"\n\n# Get user input\nebooks_sold = int(input(\"Enter the number of ebooks sold: \"))\n\n# Calculate and print the grade\ngrade = calculate_grade(ebooks_sold)\nprint(f\"The grade for {ebooks_sold} ebooks sold is {grade}.\")\n```\n\nThis program defines a function `calculate_grade` that takes the number of ebooks sold as input and returns the corresponding grade. The function checks the range of ebooks sold and returns the corresponding grade letter. The program then prompts the user to enter the number of ebooks sold, calls the function to calculate the grade, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.32,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

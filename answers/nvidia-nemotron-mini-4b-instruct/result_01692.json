@@ -1,0 +1,9 @@
+{
+  "id": 1692,
+  "title": "Function to Find the Most Frequent Element in a List",
+  "prompt": "Write a function to find the most frequent element in a list.\nSample Input: [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the most frequent element in a list using the built-in `collections.Counter` class to count the occurrences of each element:\n\n```python\nfrom collections import Counter\n\ndef most_frequent(lst):\n    \"\"\"\n    Find the most frequent element in a list.\n\n    :param lst: The list to search in\n    :return: The most frequent element\n    \"\"\"\n    # Count the occurrences of each element using Counter\n    count = Counter(lst)\n\n    # Find the element with the highest count\n    most_common = count.most_common(1)[0]\n\n    # Return the most frequent element\n    return most_common[0]\n```\n\nHere's an example of how to use this function:\n\n```python\nsample_input = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]\nprint(most_frequent(sample_input))  # Output: 4\n```\n\nThis function first counts the occurrences of each element in the list using the `Counter` class. Then, it finds the element with the highest count using the `most_common` method and returns the corresponding value. If there are multiple elements with the same highest count, the function will return any one of them.",
+  "error": null,
+  "elapsed_seconds": 4.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

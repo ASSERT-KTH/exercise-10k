@@ -1,0 +1,9 @@
+{
+  "id": 3936,
+  "title": "Percent Increase Calculator",
+  "prompt": "Create a program that takes two numbers as input and returns the percent increase from the first number to the second number.\nSample Input: 10 15\nSample Output: 50.0\n",
+  "answer": "Sure, I'd be happy to help you create a program that calculates the percent increase between two numbers. Here's an example solution in Python:\n\n```python\ndef percent_increase(num1, num2):\n    \"\"\"\n    Calculates the percent increase from num1 to num2.\n\n    :param num1: The first number.\n    :param num2: The second number.\n    :return: The percent increase as a float.\n    \"\"\"\n\n    # Check if num2 is less than num1 to avoid division by zero\n    if num2 < num1:\n        return \"Error: Second number must be greater than or equal to the first.\"\n\n    # Calculate the percent increase\n    increase = (num2 - num1) / num1 * 100\n\n    return increase\n\n# Get user input\nnum1 = float(input(\"Enter the first number: \"))\nnum2 = float(input(\"Enter the second number: \"))\n\n# Calculate and print the result\nresult = percent_increase(num1, num2)\nprint(f\"The percent increase is {result:.2f}%\")\n```\n\nThis program first checks if the second number is less than the first to avoid a division by zero error. Then, it calculates the percent increase by subtracting the first number from the second and dividing by the first number, and multiplying by 100. Finally, it prints the result with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 3.31,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

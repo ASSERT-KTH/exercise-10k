@@ -1,0 +1,9 @@
+{
+  "id": 928,
+  "title": "To-Do List App",
+  "prompt": "Write a program that creates a to-do list app using if/else statement\nSample Input: add task1\nSample Output: Task1 added to the list\n",
+  "answer": "Sure, I'd be happy to help you create a simple to-do list app using an `if/else` statement in Python. Here's a program that meets your requirements:\n\n```python\n# Initialize an empty list to store tasks\ntasks = []\n\n# Function to add a task to the list\ndef add_task(task):\n    # Check if the input is a string and not empty\n    if isinstance(task, str) and task.strip():\n        # Add the task to the list and print a message\n        tasks.append(task)\n        print(f\"{task} added to the list\")\n    else:\n        print(\"Invalid input. Please enter a non-empty string.\")\n\n# Main loop to handle user input\nwhile True:\n    user_input = input(\"Enter 'add' to add a task, 'list' to view the list, or 'quit' to exit: \").lower()\n\n    if user_input == \"add\":\n        task = input(\"Enter the task: \")\n        add_task(task)\n\n    elif user_input == \"list\":\n        if tasks:\n            print(\"Your tasks:\")\n            for i, task in enumerate(tasks, start=1):\n                print(f\"{i}. {task}\")\n        else:\n            print(\"Your list is empty.\")\n\n    elif user_input == \"quit\":\n        print(\"Goodbye!\")\n        break\n\n    else:\n        print(\"Invalid command. Please try again.\")\n```\n\nThis program defines a `tasks` list to store the tasks. The `add_task` function checks if the input is a non-empty string and adds it to the list. The main loop handles user input and calls the appropriate function based on the input. The program also checks if the list is empty before printing it.",
+  "error": null,
+  "elapsed_seconds": 4.1,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

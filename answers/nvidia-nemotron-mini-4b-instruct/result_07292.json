@@ -1,0 +1,9 @@
+{
+  "id": 7292,
+  "title": "Tip Calculator Function",
+  "prompt": "Create a function that takes the total cost of a meal and the tip percentage as arguments and returns the total cost with the tip\nSample Input: 100, 15\nSample Output: 115.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef add_tip(meal_cost, tip_percentage):\n    \"\"\"\n    Calculates the total cost of a meal with a given tip percentage.\n\n    Parameters:\n    meal_cost (float): The total cost of the meal before adding the tip.\n    tip_percentage (float): The percentage of the meal cost to be added as a tip.\n\n    Returns:\n    float: The total cost of the meal with the tip added.\n    \"\"\"\n    # Validate input\n    if not isinstance(meal_cost, (float, int)) or meal_cost < 0:\n        raise ValueError(\"meal_cost must be a non-negative number\")\n    if not isinstance(tip_percentage, (float, int)) or tip_percentage < 0 or tip_percentage > 100:\n        raise ValueError(\"tip_percentage must be a number between 0 and 100\")\n\n    # Calculate the tip amount\n    tip_amount = meal_cost * tip_percentage / 100\n\n    # Return the total cost with the tip added\n    return meal_cost + tip_amount\n```\nHere's an example of how to use this function:\n```python\ntotal_cost = add_tip(100, 15)\nprint(total_cost)  # Output: 115.0\n```\nThis function first validates the input to ensure it meets the required format and range. Then, it calculates the tip amount by multiplying the meal cost by the tip percentage and dividing by 100. Finally, it returns the total cost with the tip added.",
+  "error": null,
+  "elapsed_seconds": 4.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

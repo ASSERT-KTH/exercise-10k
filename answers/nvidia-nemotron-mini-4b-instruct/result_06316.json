@@ -1,0 +1,9 @@
+{
+  "id": 6316,
+  "title": "Dictionary Unflatten",
+  "prompt": "Unflatten a single-level dictionary into a nested dictionary\nSample Input: {\"name\": \"John\", \"address.street\": \"123 Main St\", \"address.city\": \"New York\"}\nSample Output: {\"name\": \"John\", \"address\": {\"street\": \"123 Main St\", \"city\": \"New York\"}}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that unflattens a single-level dictionary into a nested dictionary:\n```python\ndef unflatten_dict(d):\n    \"\"\"\n    Unflattens a single-level dictionary into a nested dictionary.\n\n    Parameters:\n    d (dict): A dictionary with a single level of keys and values.\n\n    Returns:\n    dict: A nested dictionary with the same keys and values as d.\n    \"\"\"\n    result = {}\n    for key, value in d.items():\n        if isinstance(value, dict):\n            result[key] = unflatten_dict(value)\n        else:\n            result[key] = value\n    return result\n```\nHere's an example of how to use this function:\n```python\ninput_dict = {\"name\": \"John\", \"address\": {\"street\": \"123 Main St\", \"city\": \"New York\"}}\noutput_dict = unflatten_dict(input_dict)\nprint(output_dict)  # Output: {'name': 'John', 'address': {'street': '123 Main St', 'city': 'New York'}}\n```\nThis function first initializes an empty result dictionary. Then, it iterates over the items in the input dictionary. If the value associated with a key is a dictionary, the function recursively calls itself to unflatten the nested dictionary. Otherwise, it simply adds the key-value pair to the result dictionary. Finally, it returns the result dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

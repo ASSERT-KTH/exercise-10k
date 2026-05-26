@@ -1,0 +1,9 @@
+{
+  "id": 5712,
+  "title": "Grade Calculator",
+  "prompt": "Calculate a student's grade based on their scores on various assignments.\nSample Input: 90 80 70\nSample Output: 80\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that calculates a student's grade based on their scores on various assignments. In this example, the function assumes that the input is a list of scores, and it returns the average score as the final grade. If you want to calculate a weighted average (e.g., where some assignments are worth more than others), you can modify the function accordingly.\n\n```python\ndef calculate_grade(scores):\n    \"\"\"\n    Calculates a student's grade based on their scores on various assignments.\n\n    :param scores: List of scores (int)\n    :return: Average score as a grade (float)\n    \"\"\"\n\n    # Check if the input is a list\n    if not isinstance(scores, list):\n        raise ValueError(\"Input should be a list of scores.\")\n\n    # Calculate the total score\n    total_score = sum(scores)\n\n    # Calculate the average score\n    avg_score = total_score / len(scores)\n\n    return avg_score\n```\n\nHere's an example of how to use the function:\n\n```python\nscores = [90, 80, 70]\ngrade = calculate_grade(scores)\nprint(grade)  # Output: 80.0\n```",
+  "error": null,
+  "elapsed_seconds": 2.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

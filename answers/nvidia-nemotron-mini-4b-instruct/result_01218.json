@@ -1,0 +1,9 @@
+{
+  "id": 1218,
+  "title": "Function to Check if a Number is a Perfect Square",
+  "prompt": "Write a function that checks if a given number is a perfect square.\nSample Input: is_perfect_square(16)\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a given number is a perfect square:\n\n```python\nimport math\n\ndef is_perfect_square(n):\n    \"\"\"\n    Check if a given number is a perfect square.\n\n    :param n: The number to check.\n    :return: True if n is a perfect square, False otherwise.\n    \"\"\"\n    if n < 0:\n        raise ValueError(\"Input must be non-negative\")\n\n    # Calculate the square root of n and round it down to the nearest integer\n    sqrt_n = math.isqrt(n)\n\n    # Check if the rounded square root is the same as the original number\n    return sqrt_n * sqrt_n == n\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(is_perfect_square(16))  # Output: True\nprint(is_perfect_square(15))  # Output: False\nprint(is_perfect_square(-1))  # Raises ValueError\n```\n\nThis function first checks if the input is non-negative, and then calculates the square root of the number using the `math.isqrt()` function. It rounds the square root down to the nearest integer using the `//` operator. Finally, it checks if the rounded square root is equal to the original number.",
+  "error": null,
+  "elapsed_seconds": 3.27,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

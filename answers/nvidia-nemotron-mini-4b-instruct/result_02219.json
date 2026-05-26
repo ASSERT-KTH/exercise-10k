@@ -1,0 +1,9 @@
+{
+  "id": 2219,
+  "title": "Credit Card Validator",
+  "prompt": "Write a program that takes a credit card number as input and checks if it is valid. Print 'Valid credit card' if the number is valid, otherwise print 'Invalid credit card'\nSample Input: 4111111111111111\nSample Output: Valid credit card\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a credit card number is valid based on the Luhn algorithm. This algorithm is widely used to validate credit card numbers.\n\n```python\ndef check_credit_card(number):\n    \"\"\"\n    Check if a credit card number is valid using the Luhn algorithm.\n\n    :param number: str, credit card number as a string\n    :return: str, 'Valid credit card' or 'Invalid credit card'\n    \"\"\"\n\n    # Reverse the number to apply the algorithm from right to left\n    number = str(int(number[::-1]))\n\n    # Double every second digit starting from the right\n    doubled = [int(digit * 2) if i % 2 == 0 else int(digit) for i, digit in enumerate(number)]\n\n    # Sum all digits, including the doubled ones\n    total = sum(doubled)\n\n    # Check if the total is divisible by 10 (modulo 10 is 0)\n    return 'Valid credit card' if total % 10 == 0 else 'Invalid credit card'\n\n\n# Get user input\ncredit_card_number = input(\"Enter a credit card number: \")\n\n# Check validity\nprint(check_credit_card(credit_card_number))\n```\n\nThis program first reverses the input number to apply the algorithm from right to left. Then, it doubles every second digit starting from the right and sums all digits, including the doubled ones. Finally, it checks if the total is divisible by 10, which indicates a valid credit card number.",
+  "error": null,
+  "elapsed_seconds": 3.84,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

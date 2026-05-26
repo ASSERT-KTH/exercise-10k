@@ -1,0 +1,9 @@
+{
+  "id": 2536,
+  "title": "Coin Change Problem",
+  "prompt": "Write a program to find the minimum number of coins needed to make change for a given amount\nSample Input: 11, [1, 2, 5]\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses dynamic programming to find the minimum number of coins needed to make change for a given amount:\n```python\ndef min_coins(amount, coins):\n    # Initialize a list to store the minimum number of coins needed for each amount\n    min_coins_needed = [float('inf')] * (amount + 1)\n    min_coins_needed[0] = 0\n\n    # Iterate through the coins in descending order of value\n    for coin in coins[::-1]:\n        # Iterate through the remaining amounts\n        for remaining_amount in range(coin, amount + 1):\n            # Update the minimum number of coins needed for the remaining amount\n            min_coins_needed[remaining_amount] = min(min_coins_needed[remaining_amount], min_coins_needed[remaining_amount - coin] + 1)\n\n    # Return the minimum number of coins needed for the given amount\n    return min_coins_needed[amount]\n\n# Test the function with the given sample input\namount = 11\ncoins = [1, 2, 5]\nprint(min_coins(amount, coins))  # Output: 3\n```\nThis program works by iterating through the coins in descending order of value, and for each coin, it iterates through the remaining amounts. For each remaining amount, it updates the minimum number of coins needed by checking the minimum number of coins needed for the remaining amount without using the current coin, and adding 1 if the current coin is needed. Finally, it returns the minimum number of coins needed for the given amount.",
+  "error": null,
+  "elapsed_seconds": 3.93,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

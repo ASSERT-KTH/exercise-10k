@@ -1,0 +1,9 @@
+{
+  "id": 5310,
+  "title": "Function Currying",
+  "prompt": "Write a function that takes multiple arguments and returns a curried version of itself\nSample Input: f(x, y, z) = x + y + z\nSample Output: A curried version of the function\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function, `curried_function`, takes a function as an argument and returns a curried version of it. A curried function takes one argument at a time, returning a new function for each argument.\n\n```python\ndef curried_function(func):\n    \"\"\"\n    Returns a curried version of the given function.\n\n    :param func: The function to be curried.\n    :return: A curried version of the function.\n    \"\"\"\n\n    def curried(*args):\n        \"\"\"\n        Curried version of the function.\n\n        :param args: Variable number of arguments.\n        :return: A new function that takes one argument.\n        \"\"\"\n        if len(args) == len(func.__code__.co_varnames) - 1:\n            return lambda x: func(*args + (x,))\n        else:\n            return curried(*args + (args[-1],))\n\n    return curried\n```\n\nHere's an example of how to use the `curried_function`:\n\n```python\n@curried_function\ndef f(x, y, z):\n    \"\"\"\n    Example function to be curried.\n\n    :param x:\n    :param y:\n    :param z:\n    :return: x + y + z\n    \"\"\"\n    return x + y + z\n\n# Curried version of the function\nf_curried = f(1, 2)\n\n# Call the curried version with an argument\nresult = f_curried(3)\nprint(result)  # Output: 6\n```\n\nThis will output `6`, which is the result of calling `f(1, 2, 3)`.",
+  "error": null,
+  "elapsed_seconds": 4.09,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

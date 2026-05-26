@@ -1,0 +1,9 @@
+{
+  "id": 3329,
+  "title": "List Mapping",
+  "prompt": "Write a program that takes a list of integers as input and returns a new list containing the squares of each element in the original list.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [1, 4, 9, 16, 25]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef square_list(numbers):\n    \"\"\"\n    Takes a list of integers as input and returns a new list containing the squares of each element in the original list.\n\n    :param numbers: list of integers\n    :return: list of squared integers\n    \"\"\"\n    if not isinstance(numbers, list):\n        raise TypeError(\"Input should be a list\")\n\n    squared_numbers = [num ** 2 for num in numbers]\n    return squared_numbers\n```\nThis function first checks if the input is a list. If not, it raises a `TypeError`. Then, it uses a list comprehension to create a new list containing the squares of each element in the original list. The list comprehension iterates over each number in the input list (`num`) and squares it (`num ** 2`). Finally, it returns the new list of squared integers.\n\nHere's an example of how to use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\nsquared_numbers = square_list(numbers)\nprint(squared_numbers)  # Output: [1, 4, 9, 16, 25]\n```",
+  "error": null,
+  "elapsed_seconds": 2.91,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

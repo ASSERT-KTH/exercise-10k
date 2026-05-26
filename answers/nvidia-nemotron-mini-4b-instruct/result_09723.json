@@ -1,0 +1,9 @@
+{
+  "id": 9723,
+  "title": "Binary Arithmetic",
+  "prompt": "Write a program that takes two binary numbers as input and returns their sum.\nSample Input: 1010 1100\nSample Output: 10010\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes two binary numbers as input and returns their sum as a binary number:\n```python\ndef add_binary(num1, num2):\n    \"\"\"\n    Adds two binary numbers and returns the sum as a binary number.\n\n    :param num1: The first binary number as a string.\n    :param num2: The second binary number as a string.\n    :return: The sum of the two binary numbers as a binary string.\n    \"\"\"\n\n    # Pad the shorter binary number with leading zeros to match the length of the longer one\n    max_length = max(len(num1), len(num2))\n    num1 = num1.zfill(max_length)\n    num2 = num2.zfill(max_length)\n\n    # Perform the addition of the binary numbers\n    carry = 0\n    result = ''\n    for i in range(max_length - 1, -1, -1):\n        total = int(num1[i]) + int(num2[i]) + carry\n        carry = total // 2\n        result = str(total % 2) + result\n\n    # Add any remaining carry bits to the beginning of the result\n    if carry:\n        result = '1' + result\n\n    return result\n\n# Example usage\nnum1 = '1010'\nnum2 = '1100'\nprint(add_binary(num1, num2))  # Output: '10010'\n```\nThis program first pads the shorter binary number with leading zeros to match the length of the longer one. Then, it performs the addition of the binary numbers by iterating from the rightmost bit to the leftmost bit. For each bit, it adds the corresponding bits in the two input numbers and the carry bit from the previous iteration. If there is a carry bit, it adds it to the beginning of the result. Finally, it returns the result as a binary string.",
+  "error": null,
+  "elapsed_seconds": 4.5,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

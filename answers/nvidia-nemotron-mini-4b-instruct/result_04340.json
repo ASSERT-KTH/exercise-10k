@@ -1,0 +1,9 @@
+{
+  "id": 4340,
+  "title": "Transpose Array",
+  "prompt": "Write a program to transpose an array.\nSample Input: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nSample Output: [[1, 4, 7], [2, 5, 8], [3, 6, 9]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that transposes an array (or a list of lists) as per your sample input:\n```python\ndef transpose(arr):\n    # Get the number of rows and columns\n    rows = len(arr)\n    cols = len(arr[0]) if arr else 0\n\n    # Initialize a new array with the transposed values\n    transposed_arr = [[0] * rows for _ in range(cols)]\n\n    # Populate the transposed array\n    for i in range(rows):\n        for j in range(cols):\n            transposed_arr[j][i] = arr[i][j]\n\n    return transposed_arr\n\n# Example usage\nsample_input = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nprint(transpose(sample_input))\n```\nWhen you run this program with your sample input, it will output:\n```python\n[[1, 4, 7], [2, 5, 8], [3, 6, 9]]\n```\nThis program first gets the number of rows and columns in the input array (or list of lists). Then, it creates a new array with the same number of columns as the input array and zeros for all rows. Finally, it iterates through the input array and populates the transposed array with the corresponding values. The resulting transposed array is then returned.",
+  "error": null,
+  "elapsed_seconds": 3.53,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

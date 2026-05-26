@@ -1,0 +1,9 @@
+{
+  "id": 2853,
+  "title": "Dictionary Copy",
+  "prompt": "Write a function to create a copy of a dictionary.\nSample Input: {'name': 'John', 'age': 30}\nSample Output: {'name': 'John', 'age': 30}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that creates a deep copy of a dictionary, ensuring that any nested dictionaries or lists are also copied:\n```python\nimport copy\n\ndef copy_dict(input_dict):\n    \"\"\"\n    Create a deep copy of a dictionary.\n\n    :param input_dict: The dictionary to copy.\n    :return: A deep copy of the input dictionary.\n    \"\"\"\n    return copy.deepcopy(input_dict)\n```\nHere's how you can use this function:\n```python\ninput_dict = {'name': 'John', 'age': 30}\ncopied_dict = copy_dict(input_dict)\n\n# You can now modify the copied dictionary without affecting the original\ncopied_dict['age'] = 31\nprint(copied_dict)  # Output: {'name': 'John', 'age': 31}\nprint(input_dict)   # Output: {'name': 'John', 'age': 30}\n```\nThis function uses the `copy.deepcopy()` function from the `copy` module, which recursively copies any nested dictionaries or lists, ensuring that the original dictionary is not modified.",
+  "error": null,
+  "elapsed_seconds": 2.92,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

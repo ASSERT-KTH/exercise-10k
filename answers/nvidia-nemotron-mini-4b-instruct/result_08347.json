@@ -1,0 +1,9 @@
+{
+  "id": 8347,
+  "title": "Arithmetic Operations Calculator",
+  "prompt": "Create a program that takes two numbers and an arithmetic operation as input and returns the result of the operation. The operation can be addition, subtraction, multiplication, or division.\nSample Input: 2 3 +\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you create a program for that. Here's a Python solution using the `input()` function to get user input and the `eval()` function to perform the arithmetic operation. Make sure to use `eval()` with caution, as it can execute potentially dangerous code if the input is not properly sanitized. In this case, we're only using it to perform simple arithmetic operations.\n\n```python\ndef perform_arithmetic(num1, num2, operation):\n    \"\"\"Perform arithmetic operation on two numbers.\"\"\"\n    if operation not in ['+', '-', '*', '/']:\n        raise ValueError(\"Invalid arithmetic operation. Choose from +, -, *, /\")\n\n    try:\n        result = eval(f\"{num1} {operation} {num2}\")\n    except (NameError, ZeroDivisionError):\n        raise ValueError(\"Invalid input. Please provide two numbers and a valid arithmetic operation.\")\n\n    return result\n\n\nif __name__ == \"__main__\":\n    while True:\n        try:\n            num1 = float(input(\"Enter the first number: \"))\n            num2 = float(input(\"Enter the second number: \"))\n            operation = input(\"Enter the arithmetic operation (+, -, *, /): \")\n\n            result = perform_arithmetic(num1, num2, operation)\n            print(f\"The result of {operation} is {result}.\")\n\n        except ValueError as e:\n            print(e)\n        else:\n            break\n```\n\nThis program will keep prompting the user for input until they provide valid numbers and an arithmetic operation.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

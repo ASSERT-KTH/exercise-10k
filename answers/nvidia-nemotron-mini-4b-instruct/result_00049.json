@@ -1,0 +1,9 @@
+{
+  "id": 49,
+  "title": "Validate IP Address",
+  "prompt": "Validate an IP address\nSample Input: 192.168.0.1\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you validate an IP address. Here's a Python function that checks if a given string is a valid IPv4 address:\n\n```python\nimport re\n\ndef is_valid_ipv4(ip_address: str) -> bool:\n    \"\"\"\n    Validate an IPv4 address.\n\n    :param ip_address: The IP address to validate as a string.\n    :return: True if the IP address is valid, False otherwise.\n    \"\"\"\n    # Regular expression pattern for IPv4 addresses\n    pattern = r'^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$'\n\n    # Check if the IP address matches the pattern\n    return bool(re.match(pattern, ip_address))\n```\n\nYou can use this function as follows:\n\n```python\nprint(is_valid_ipv4(\"192.168.0.1\"))  # Output: True\nprint(is_valid_ipv4(\"invalid_ip\"))    # Output: False\n```\n\nThis function uses a regular expression to match the pattern of an IPv4 address, which consists of four octets (groups of three digits, separated by dots) between 0 and 255.",
+  "error": null,
+  "elapsed_seconds": 604.13,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

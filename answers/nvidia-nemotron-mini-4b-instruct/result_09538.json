@@ -1,0 +1,9 @@
+{
+  "id": 9538,
+  "title": "Function Frenzy",
+  "prompt": "Create a function that calculates the sum of all numbers in a list that are divisible by 3 or 5. The function should take a list of integers as input and return the sum of the numbers that meet the condition.\nSample Input: [3, 5, 7, 9, 10, 12, 15]\nSample Output: 54\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef sum_of_divisible_numbers(numbers):\n    \"\"\"\n    Calculates the sum of all numbers in a list that are divisible by 3 or 5.\n\n    Parameters:\n    numbers (list): A list of integers.\n\n    Returns:\n    int: The sum of the numbers in the list that are divisible by 3 or 5.\n    \"\"\"\n    # Filter out non-divisible numbers\n    divisible_numbers = [num for num in numbers if num % 3 == 0 or num % 5 == 0]\n\n    # Calculate the sum of the filtered numbers\n    sum_of_divisible_numbers = sum(divisible_numbers)\n\n    return sum_of_divisible_numbers\n```\nHere's an example of how you can use this function:\n```python\nsample_input = [3, 5, 7, 9, 10, 12, 15]\nprint(sum_of_divisible_numbers(sample_input))  # Output: 54\n```\nThis function first filters out any numbers in the input list that are not divisible by 3 or 5 using a list comprehension. It then calculates the sum of the filtered numbers using the built-in `sum()` function. The function returns the sum of the numbers that meet the condition.",
+  "error": null,
+  "elapsed_seconds": 3.53,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

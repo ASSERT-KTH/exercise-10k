@@ -1,0 +1,9 @@
+{
+  "id": 3338,
+  "title": "Array Modification (Matrix Operations)",
+  "prompt": "Write a program that takes two 2D arrays of integers as input and returns the sum of the two arrays, element-wise.\nSample Input: [[1, 2], [3, 4]], [[5, 6], [7, 8]]\nSample Output: [[6, 8], [10, 12]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes two 2D arrays of integers as input and returns their element-wise sum:\n```python\ndef add_arrays(arr1, arr2):\n    \"\"\"\n    Adds two 2D arrays of integers element-wise and returns the result.\n\n    Parameters:\n    arr1 (list of lists of int): The first 2D array of integers.\n    arr2 (list of lists of int): The second 2D array of integers.\n\n    Returns:\n    list of lists of int: The sum of the two input arrays, element-wise.\n    \"\"\"\n    # Check that the input arrays have the same length\n    if len(arr1) != len(arr2):\n        raise ValueError(\"Both arrays must have the same number of rows.\")\n\n    # Calculate the sum of the corresponding elements in the two arrays\n    result = [[a + b for a, b in zip(row1, row2)] for row1, row2 in zip(arr1, arr2)]\n\n    return result\n```\nHere's an example of how to use this function:\n```python\narr1 = [[1, 2], [3, 4]]\narr2 = [[5, 6], [7, 8]]\n\nprint(add_arrays(arr1, arr2))  # Output: [[6, 8], [10, 12]]\n```\nThis function first checks that the input arrays have the same number of rows. If they do, it uses a list comprehension to calculate the sum of the corresponding elements in the two arrays and returns the result as a new 2D array. The `zip` function is used to iterate over the elements of each row in parallel, and the `+` operator is used to add the corresponding elements in the two arrays.",
+  "error": null,
+  "elapsed_seconds": 4.14,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

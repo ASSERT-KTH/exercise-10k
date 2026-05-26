@@ -1,0 +1,9 @@
+{
+  "id": 2238,
+  "title": "List Union",
+  "prompt": "Write a program that finds the union of two lists.\nSample Input: [1, 2, 3], [2, 3, 4]\nSample Output: [1, 2, 3, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the union of two lists using set operations:\n\n```python\ndef find_union(list1, list2):\n    # Convert the lists to sets to remove duplicates and make operations faster\n    unique_list1 = set(list1)\n    unique_list2 = set(list2)\n\n    # Find the union of the two sets (which is also the union of the original lists)\n    union = unique_list1.union(unique_list2)\n\n    # Convert the union back to a list and return it\n    return list(union)\n\n# Test the function with the sample input\nsample_input = [1, 2, 3], [2, 3, 4]\nprint(find_union(*sample_input))  # Output: [1, 2, 3, 4]\n```\n\nIn this program, we first convert the input lists to sets to remove any duplicate elements. This makes it much faster to find the union of the two lists using the `union()` method, which returns a new set containing all elements that are in either of the input sets. Finally, we convert the resulting set back to a list and return it.",
+  "error": null,
+  "elapsed_seconds": 6.77,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

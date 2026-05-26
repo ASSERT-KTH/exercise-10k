@@ -1,0 +1,9 @@
+{
+  "id": 5640,
+  "title": "Checking for Connectedness in a Graph",
+  "prompt": "Create a program to check if a given graph is connected or not.\nSample Input: graph: {(A, B): 1, (A, C): 1, (B, D): 1, (C, D): 1}\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given graph is connected or not using Depth-First Search (DFS). We'll represent the graph as an adjacency list.\n\n```python\ndef is_connected(graph):\n    \"\"\"Check if a given graph is connected or not using DFS.\"\"\"\n\n    def dfs(node, visited):\n        \"\"\"Depth-First Search helper function.\"\"\"\n        visited.add(node)\n        for neighbor in graph.get(node, []):\n            if neighbor not in visited:\n                dfs(neighbor, visited)\n\n    # Initialize the visited set\n    visited = set()\n\n    # Start DFS from any node\n    for node in graph:\n        if node not in visited:\n            dfs(node, visited)\n\n    # If all nodes are visited, the graph is connected\n    return len(visited) == len(graph)\n\n\n# Example usage\ngraph = {\n    'A': ['B', 'C'],\n    'B': ['D'],\n    'C': ['D'],\n}\n\nprint(is_connected(graph))  # Output: True\n```\n\nThis program first defines a helper function `dfs` for DFS. Then, it initializes a visited set and starts DFS from any node in the graph. If all nodes are visited, the graph is connected; otherwise, it's not.",
+  "error": null,
+  "elapsed_seconds": 3.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

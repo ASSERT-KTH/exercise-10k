@@ -1,0 +1,9 @@
+{
+  "id": 3090,
+  "title": "Higher-Order Function for Sorting",
+  "prompt": "Create a higher-order function that sorts a list of elements based on a custom sorting key.\nSample Input: [\"banana\", \"apple\", \"cherry\"], lambda x: x.lower()\nSample Output: [\"apple\", \"banana\", \"cherry\"]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function, `sort_list_by_key`, takes a list of elements and a sorting key as arguments, and returns a new sorted list based on the given key. The sorting key is expected to be a function that takes an element as input and returns a comparable value. In your example, the sorting key is a lambda function that converts each element to lowercase before comparing them.\n\n```python\ndef sort_list_by_key(elements, key_func):\n    \"\"\"\n    Sort a list of elements based on a custom sorting key.\n\n    :param elements: The list of elements to sort.\n    :param key_func: A function that takes an element as input and returns a comparable value.\n    :return: A new sorted list based on the given key.\n    \"\"\"\n    return sorted(elements, key=key_func)\n\n# Example usage:\nfruits = [\"banana\", \"apple\", \"cherry\"]\nsorted_fruits = sort_list_by_key(fruits, lambda x: x.lower())\nprint(sorted_fruits)  # Output: ['apple', 'banana', 'cherry']\n```\n\nThis function is a higher-order function because it takes another function as an argument and uses it to sort the input list.",
+  "error": null,
+  "elapsed_seconds": 3.04,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

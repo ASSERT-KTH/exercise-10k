@@ -1,0 +1,9 @@
+{
+  "id": 885,
+  "title": "Weather Forecast",
+  "prompt": "Create a program that asks the user for the temperature outside and prints out a weather forecast based on the following conditions: hot (above 80), warm (65-79), cool (50-64), cold (below 50).\nSample Input: 75\nSample Output: Warm\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef get_weather_forecast(temperature):\n    \"\"\"\n    Asks the user for the temperature outside and prints out a weather forecast based on the given temperature.\n\n    :param temperature: The temperature as an integer between 0 and 100.\n    :return: None\n    \"\"\"\n\n    # Validate the input temperature\n    if not isinstance(temperature, int) or temperature < 0 or temperature > 100:\n        print(\"Invalid temperature. Please enter a number between 0 and 100.\")\n        return\n\n    # Determine the weather forecast based on the temperature\n    if temperature >= 80:\n        forecast = \"hot\"\n    elif temperature >= 65:\n        forecast = \"warm\"\n    elif temperature >= 50:\n        forecast = \"cool\"\n    else:\n        forecast = \"cold\"\n\n    # Print the weather forecast\n    print(f\"The weather forecast is {forecast}.\")\n\n# Get user input for the temperature\nuser_temperature = int(input(\"Please enter the temperature outside (between 0 and 100): \"))\n\n# Call the function with the user input\nget_weather_forecast(user_temperature)\n```\n\nThis program defines a function `get_weather_forecast` that takes an integer temperature as input, validates it, and returns a weather forecast based on the temperature. The function is then called with the user's input, printing out the corresponding weather forecast.",
+  "error": null,
+  "elapsed_seconds": 3.59,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

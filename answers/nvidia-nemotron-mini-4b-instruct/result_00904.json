@@ -1,0 +1,9 @@
+{
+  "id": 904,
+  "title": "Variable Validator",
+  "prompt": "Write a program that checks if a given variable is valid according to certain rules (e.g., it must be an integer between 1 and 100).\nSample Input: variable = 50\nSample Output: The variable is valid.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given variable is an integer between 1 and 100:\n\n```python\ndef is_valid(variable):\n    \"\"\"Check if the given variable is an integer between 1 and 100.\"\"\"\n    # Ensure the input is a number\n    if not isinstance(variable, (int, float)):\n        return \"The variable must be a number.\"\n\n    # Check if the number is within the valid range\n    if variable < 1 or variable > 100:\n        return f\"The variable {variable} is not within the valid range (1 to 100).\"\n    else:\n        return \"The variable is valid.\"\n\n# Example usage\nvariable = 50\nprint(is_valid(variable))  # Output: The variable is valid.\n```\n\nThis function first checks if the input is a number (either an integer or a float). If it's not, it returns an error message. Then, it checks if the number is within the valid range (1 to 100). If it is, it returns a success message. Otherwise, it returns an error message.",
+  "error": null,
+  "elapsed_seconds": 2.73,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

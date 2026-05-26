@@ -1,0 +1,9 @@
+{
+  "id": 5207,
+  "title": "Cost Estimator",
+  "prompt": "Write a program that estimates the total cost of items based on their prices and quantities.\nSample Input: 10 5.99 20 9.99\nSample Output: 209.8\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that estimates the total cost of items based on their prices and quantities:\n```python\ndef estimate_total_cost(prices, quantities):\n    \"\"\"\n    Estimates the total cost of items based on their prices and quantities.\n\n    Parameters:\n    prices (list): A list of prices for each item.\n    quantities (list): A list of quantities for each item.\n\n    Returns:\n    float: The estimated total cost of all items.\n    \"\"\"\n\n    # Check that the lengths of prices and quantities are equal\n    if len(prices) != len(quantities):\n        raise ValueError(\"Prices and quantities must be the same length.\")\n\n    # Calculate the total cost for each item\n    total_costs = [price * quantity for price, quantity in zip(prices, quantities)]\n\n    # Calculate the total cost of all items\n    total_cost = sum(total_costs)\n\n    return total_cost\n\n# Sample input\nprices = [5.99, 9.99]\nquantities = [20, 10]\n\n# Estimate the total cost\ntotal_cost = estimate_total_cost(prices, quantities)\n\n# Print the result\nprint(f\"The estimated total cost is {total_cost:.2f}.\")\n```\nThis program defines a function `estimate_total_cost` that takes two lists of prices and quantities as input, checks that they have the same length, calculates the total cost for each item using a list comprehension, and then calculates the total cost of all items by summing the total costs for each item. The function returns the estimated total cost as a float. The program then defines sample input and calls the function to estimate the total cost, and prints the result with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 4.09,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2158,
+  "title": " множеInput Validation with Error Messages",
+  "prompt": "Write a program that asks the user for their age and validates that it is a positive integer, displaying an error message if the input is invalid.\nSample Input: 25\nSample Output: You are 25 years old.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_positive_integer(prompt):\n    \"\"\"Get a positive integer from user input, validating and displaying an error message if invalid.\"\"\"\n    while True:\n        user_input = input(prompt)\n        try:\n            age = int(user_input)\n            if age > 0:\n                return age\n            else:\n                print(\"Error: Age must be a positive integer. Please try again.\")\n        except ValueError:\n            print(\"Error: That's not a valid integer. Please try again.\")\n\n# Call the function to get user input\nage = get_positive_integer(\"Please enter your age: \")\nprint(f\"You are {age} years old.\")\n```\nThis program defines a function `get_positive_integer` that prompts the user for input, validates that it's a positive integer, and displays an error message if it's not. The function uses a `while` loop to keep asking for input until the user enters a valid positive integer. The `try`-`except` block handles any `ValueError` exceptions that might occur when trying to convert the user input to an integer.\n\nWhen you run the program, it will prompt you to enter your age, and if you enter a valid positive integer, it will display a message confirming your age. If you enter an invalid input, it will display an error message and prompt you to try again.",
+  "error": null,
+  "elapsed_seconds": 3.31,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

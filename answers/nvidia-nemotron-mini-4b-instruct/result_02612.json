@@ -1,0 +1,9 @@
+{
+  "id": 2612,
+  "title": "Dictionary Get",
+  "prompt": "Write a program that retrieves the value of a key in a dictionary with a default value if the key is not present\nSample Input: {'name': 'John', 'age': 30}, 'name', 'Unknown'\nSample Output: John\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_value(dictionary, key, default_value):\n    \"\"\"\n    Retrieves the value of a key in a dictionary with a default value if the key is not present.\n\n    :param dictionary: The dictionary to search in.\n    :param key: The key to look up.\n    :param default_value: The value to return if the key is not found.\n    :return: The value associated with the key, or the default value if the key is not found.\n    \"\"\"\n    # Check if the key exists in the dictionary\n    if key in dictionary:\n        return dictionary[key]\n    else:\n        return default_value\n\n# Sample input and output\ninput_data = {'name': 'John', 'age': 30}\nkey = 'name'\ndefault_value = 'Unknown'\n\noutput = get_value(input_data, key, default_value)\nprint(output)  # Output: John\n```\nThis program defines a function `get_value` that takes a dictionary, a key, and a default value as arguments. It checks if the key exists in the dictionary using the `in` keyword, and returns the value associated with the key if it does. If the key is not found, it returns the default value. The function is then called with a sample input dictionary and key, and the output is printed to the console.",
+  "error": null,
+  "elapsed_seconds": 3.37,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9647,
+  "title": "Function with/Threading",
+  "prompt": "Write a function that uses the threading module to run tasks concurrently.\nSample Input: None\nSample Output: Concurrent results\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example Python function that uses the `threading` module to run tasks concurrently. In this example, I'll define a simple task that calculates the square of a number and a function to manage the concurrent execution of these tasks.\n\n```python\nimport threading\nimport time\n\ndef concurrent_task(task_id, num):\n    \"\"\"\n    A simple task that calculates the square of a number.\n    \"\"\"\n    start_time = time.time()\n    result = num ** 2\n    end_time = time.time()\n\n    print(f\"Task {task_id} completed. Time taken: {end_time - start_time:.6f} seconds\")\n\ndef concurrent_tasks(num_tasks, num_threads):\n    \"\"\"\n    Manages the concurrent execution of tasks using the threading module.\n    \"\"\"\n    tasks = []\n\n    # Create tasks and add them to the list\n    for i in range(num_tasks):\n        task_id = i\n        task = threading.Thread(target=concurrent_task, args=(task_id, i * 10 + 1))\n        tasks.append(task)\n        task.start()\n\n    # Wait for all tasks to complete\n    for task in tasks:\n        task.join()\n\n    print(\"Concurrent results:\")\n\n# Example usage\nconcurrent_tasks(10, 3)  # Run 10 tasks concurrently using 3 threads\n```\n\nIn this example, the `concurrent_tasks` function creates a list of `threading.Thread` objects, each corresponding to a task. It then starts each thread and waits for all tasks to complete before printing the results. You can adjust the number of tasks and threads as needed for your specific use case.",
+  "error": null,
+  "elapsed_seconds": 4.25,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7940,
+  "title": "Momentum Calculator",
+  "prompt": "Create a program to calculate the momentum given the mass and velocity.\nSample Input: 10 5\nSample Output: 50.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the momentum given the mass and velocity:\n\n```python\ndef calculate_momentum(mass, velocity):\n    \"\"\"\n    Calculates the momentum given the mass and velocity.\n\n    Parameters:\n    mass (float): The mass of the object.\n    velocity (float): The velocity of the object.\n\n    Returns:\n    float: The momentum of the object.\n    \"\"\"\n\n    # Check that the inputs are valid\n    if not isinstance(mass, (float, int)) or mass <= 0:\n        raise ValueError(\"Mass must be a positive number.\")\n\n    if not isinstance(velocity, (float, int)) or velocity <= 0:\n        raise ValueError(\"Velocity must be a positive number.\")\n\n    # Calculate the momentum\n    momentum = mass * velocity\n\n    return momentum\n\n# Get user input\nmass = float(input(\"Enter the mass: \"))\nvelocity = float(input(\"Enter the velocity: \"))\n\n# Calculate and print the momentum\nmomentum = calculate_momentum(mass, velocity)\nprint(f\"{momentum:.2f}\")\n```\n\nThis program defines a function `calculate_momentum` that checks if the inputs are valid and then calculates the momentum using the formula `momentum = mass * velocity`. The program then gets user input for the mass and velocity, calls the function with those values, and prints the result with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 3.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

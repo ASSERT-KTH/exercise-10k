@@ -1,0 +1,9 @@
+{
+  "id": 7474,
+  "title": "List Comprehension Generator",
+  "prompt": "Write a program that generates a list comprehension given a list and a condition\nSample Input: [1, 2, 3], x > 1\nSample Output: [2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates a list comprehension based on a given list and a condition:\n```python\ndef generate_list_comprehension(lst, condition):\n    \"\"\"\n    Generates a list comprehension based on a given list and a condition.\n\n    Parameters:\n    lst (list): The list for which to generate the list comprehension.\n    condition (callable): A function that takes an element from the list and returns a boolean value.\n\n    Returns:\n    list: A list containing the elements from the input list that satisfy the given condition.\n    \"\"\"\n    # Ensure the condition is callable\n    if not callable(condition):\n        raise ValueError(\"The 'condition' parameter must be a callable function.\")\n\n    # Generate the list comprehension\n    return [element for element in lst if condition(element)]\n```\nHere's an example of how to use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\n\n# Generate a list comprehension that filters elements greater than 1\nfiltered_numbers = generate_list_comprehension(numbers, lambda x: x > 1)\nprint(filtered_numbers)  # Output: [2, 3, 4, 5]\n```\nThis function first checks if the `condition` parameter is callable, and raises a `ValueError` if it's not. Then, it generates a list comprehension based on the input list and the given condition. The function returns the resulting list.",
+  "error": null,
+  "elapsed_seconds": 3.5,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

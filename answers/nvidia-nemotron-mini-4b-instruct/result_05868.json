@@ -1,0 +1,9 @@
+{
+  "id": 5868,
+  "title": "Filter List",
+  "prompt": "Create a new list with only the elements that meet a certain condition.\nSample Input: [1, 2, 3, 4, 5], even\nSample Output: [2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef filter_elements(lst, condition):\n    \"\"\"\n    Filters a list based on a given condition.\n\n    Parameters:\n    lst (list): The list to filter.\n    condition (callable): A function that takes an element as input and returns a boolean value.\n                          The function should return True if the element meets the condition,\n                          and False otherwise.\n\n    Returns:\n    list: A new list containing only the elements from `lst` that meet the condition.\n    \"\"\"\n    return [element for element in lst if condition(element)]\n```\nYou can use this function as follows:\n```python\n# Sample Input: [1, 2, 3, 4, 5], even\neven_numbers = [2, 4]\nprint(filter_elements([1, 2, 3, 4, 5], lambda x: x % 2 == 0))  # Output: [2, 4]\n```\nThis function uses a list comprehension to create a new list containing only the elements that meet the given condition. The `condition` parameter is a callable function that takes an element as input and returns a boolean value. The function checks if the element meets the condition by calling the `condition` function with the element as input and returning the result of the condition.",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

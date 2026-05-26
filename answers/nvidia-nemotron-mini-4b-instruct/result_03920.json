@@ -1,0 +1,9 @@
+{
+  "id": 3920,
+  "title": "Final Grade Calculator",
+  "prompt": "Create a program that calculates the final grade given a list of scores and their respective weights.\nSample Input: 90 10 80 20 70 30\nSample Output: 80.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the final grade given a list of scores and their respective weights:\n```python\ndef calculate_final_grade(scores, weights):\n    # Check that the lengths of scores and weights are equal\n    if len(scores) != len(weights):\n        raise ValueError(\"The lengths of scores and weights must be equal.\")\n\n    # Calculate the total score and final grade\n    total_score = sum(score * weight for score, weight in zip(scores, weights))\n    final_grade = total_score / sum(weights)\n\n    return final_grade\n\n# Example usage\nscores = [90, 10, 80, 20, 70, 30]\nweights = [0.3, 0.2, 0.3, 0.1, 0.1, 0.1]\n\nfinal_grade = calculate_final_grade(scores, weights)\nprint(f\"The final grade is {final_grade:.2f}.\")\n```\nIn this program, the `calculate_final_grade` function takes two arguments: `scores` and `weights`. It first checks that the lengths of `scores` and `weights` are equal, and raises a `ValueError` if they are not. Then, it calculates the total score by summing the product of each score and its corresponding weight. Finally, it calculates the final grade by dividing the total score by the sum of all weights.\n\nThe example usage at the end of the program demonstrates how to use the `calculate_final_grade` function with a sample set of scores and weights, and prints the resulting final grade to two decimal places.",
+  "error": null,
+  "elapsed_seconds": 4.32,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

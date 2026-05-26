@@ -1,0 +1,9 @@
+{
+  "id": 1730,
+  "title": "Finding the Most Frequent Value in a List",
+  "prompt": "Write a program that takes a list of numbers as input and returns the most frequent value.\nSample Input: [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]\nSample Output: 4\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef most_frequent(numbers):\n    # Create a dictionary to store the count of each number\n    number_count = {}\n\n    # Iterate over the input list and update the dictionary with the count of each number\n    for num in numbers:\n        if num in number_count:\n            number_count[num] += 1\n        else:\n            number_count[num] = 1\n\n    # Find the number with the highest count\n    max_count = max(number_count.values())\n    most_frequent_numbers = [num for num, count in number_count.items() if count == max_count]\n\n    # Return the most frequent value\n    return most_frequent_numbers[0] if most_frequent_numbers else None\n```\n\nYou can use this function as follows:\n\n```python\nnumbers = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]\nprint(most_frequent(numbers))  # Output: 4\n```",
+  "error": null,
+  "elapsed_seconds": 3.92,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

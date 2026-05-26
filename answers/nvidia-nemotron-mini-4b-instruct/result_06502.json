@@ -1,0 +1,9 @@
+{
+  "id": 6502,
+  "title": "Data Type Checker",
+  "prompt": "Write a program to check the data type of a given input.\nSample Input: 123\nSample Output: Integer\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks the data type of a given input and outputs the appropriate message:\n```python\ndef get_data_type(input_value):\n    \"\"\"\n    Check the data type of a given input and return a string indicating the type.\n\n    :param input_value: The value to check the data type of.\n    :return: A string indicating the data type (e.g., \"Integer\", \"Float\", \"String\").\n    \"\"\"\n    try:\n        # Check if the input value can be converted to an integer\n        if isinstance(input_value, int):\n            return \"Integer\"\n\n        # Check if the input value can be converted to a float\n        elif isinstance(input_value, float):\n            return \"Float\"\n\n        # Check if the input value is a string\n        elif isinstance(input_value, str):\n            return \"String\"\n\n        # If the input value is not an integer, float, or string, it's likely a custom data type\n        else:\n            return \"Custom Data Type\"\n\n    except ValueError:\n        return \"Not a Number\"\n\n# Example usage\ninput_value = 123\nprint(get_data_type(input_value))  # Output: Integer\n```\nThis program defines a function `get_data_type` that takes an input value and returns a string indicating its data type. It checks if the input value can be converted to an integer, a float, or a string, and returns the appropriate message. If the input value cannot be converted to any of these types, it returns a message indicating that it's likely a custom data type.",
+  "error": null,
+  "elapsed_seconds": 3.88,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5085,
+  "title": "Mad Libs",
+  "prompt": "Write a program that takes a story with blank spaces as input and fills in the blanks with words provided by the user.\nSample Input: Once upon a time, there was a __ADJECTIVE__ __PLURAL_NOUN__.\nSample Output: Once upon a time, there was a happy dog.\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef fill_blanks(story, words):\n    # Split the story into words and blanks\n    words_and_blanks = story.split(' ')\n\n    # Iterate over the words and blanks, replacing blanks with words\n    for i, word in enumerate(words_and_blanks):\n        if word == '__ADJECTIVE__':\n            words_and_blanks[i] = words[0]\n        elif word == '__PLURAL_NOUN__':\n            words_and_blanks[i] = words[1]\n\n    # Join the words and blanks back into a single string\n    filled_story = ' '.join(words_and_blanks)\n\n    return filled_story\n\n# Get user input\nstory = input(\"Enter a story with blanks: \")\nwords = input(\"Enter the words to fill in the blanks (separated by spaces): \").split()\n\n# Fill in the blanks and print the result\nfilled_story = fill_blanks(story, words)\nprint(filled_story)\n```\n\nThis program defines a function `fill_blanks` that takes a story and a list of words as input, and returns a filled-in story. The function splits the story into words and blanks, iterates over the words and blanks, and replaces blanks with words from the list. Finally, it joins the words and blanks back into a single string and returns it.\n\nThe program then gets user input for the story and the words to fill in the blanks, calls the `fill_blanks` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.72,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

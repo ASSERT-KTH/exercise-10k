@@ -1,0 +1,9 @@
+{
+  "id": 5914,
+  "title": "Find Index",
+  "prompt": "Write a function that takes a string and a character as input and returns the index of the first occurrence of the character in the string\nSample Input: ['hello world', 'w']\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef find_index(string, char):\n    \"\"\"\n    Returns the index of the first occurrence of the character in the string.\n\n    :param string: The string to search in.\n    :param char: The character to search for.\n    :return: The index of the first occurrence of the character in the string, or -1 if not found.\n    \"\"\"\n    if not isinstance(string, str) or not isinstance(char, str):\n        raise TypeError(\"Both 'string' and 'char' must be strings.\")\n\n    return string.find(char)\n```\nThis function checks if the input types are correct, and then uses the built-in `str.find()` method to find the index of the first occurrence of the character in the string. If the character is not found, it returns `-1`.\n\nHere's an example of how to use this function:\n```python\nprint(find_index(\"hello world\", \"w\"))  # Output: 6\nprint(find_index(\"hello world\", \"x\"))  # Output: -1\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.14,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

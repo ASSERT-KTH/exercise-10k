@@ -1,0 +1,9 @@
+{
+  "id": 6035,
+  "title": "Recursive List Sum",
+  "prompt": "Create a recursive function to calculate the sum of all numbers in a list. Use the function to calculate the sum of the numbers in the list [1, 2, 3, 4].\nSample Input: [1, 2, 3, 4]\nSample Output: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python recursive function that calculates the sum of all numbers in a list:\n\n```python\ndef sum_list(numbers):\n    \"\"\"\n    Recursive function to calculate the sum of all numbers in a list.\n\n    :param numbers: List of numbers\n    :return: Sum of all numbers in the list\n    \"\"\"\n    if not numbers:  # Base case: empty list\n        return 0\n    else:\n        return numbers[0] + sum_list(numbers[1:])  # Recursive case: sum the first number and the rest of the list\n```\n\nTo use this function to calculate the sum of the numbers in the list `[1, 2, 3, 4]`, you can simply call it with the list as an argument:\n\n```python\nnumbers = [1, 2, 3, 4]\nresult = sum_list(numbers)\nprint(result)  # Output: 10\n```\n\nThis function works by recursively calling itself with the rest of the list (`numbers[1:]`) until it reaches the base case of an empty list, at which point it returns 0. The base case is necessary to avoid an infinite recursion if the list is not empty.",
+  "error": null,
+  "elapsed_seconds": 2.87,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

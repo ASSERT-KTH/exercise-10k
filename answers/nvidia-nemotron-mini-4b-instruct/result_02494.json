@@ -1,0 +1,9 @@
+{
+  "id": 2494,
+  "title": "Checking for Anagrams",
+  "prompt": "Write a program to check if two given strings are anagrams of each other\nSample Input: listen, silent\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if two given strings are anagrams of each other:\n\n```python\ndef are_anagrams(str1, str2):\n    \"\"\"\n    Check if two given strings are anagrams of each other.\n\n    :param str1: The first string to compare.\n    :param str2: The second string to compare.\n    :return: True if the strings are anagrams, False otherwise.\n    \"\"\"\n\n    # Ensure both inputs are strings\n    if not isinstance(str1, str) or not isinstance(str2, str):\n        raise TypeError(\"Both inputs must be strings.\")\n\n    # Convert both strings to lowercase and remove any non-alphabetic characters\n    str1 = ''.join(c.lower() for c in str1 if c.isalpha())\n    str2 = ''.join(c.lower() for c in str2 if c.isalpha())\n\n    # Check if the lengths of the strings are equal\n    if len(str1) != len(str2):\n        return False\n\n    # Sort the characters in both strings and compare them\n    return sorted(str1) == sorted(str2)\n\n# Example usage\nprint(are_anagrams(\"listen\", \"silent\"))  # Output: True\nprint(are_anagrams(\"hello\", \"world\"))    # Output: False\n```\n\nThis program first checks if both inputs are strings. Then, it converts both strings to lowercase and removes any non-alphabetic characters using list comprehensions. Finally, it checks if the lengths of the strings are equal and sorts their characters in both strings. If the sorted characters are equal, the strings are anagrams.",
+  "error": null,
+  "elapsed_seconds": 4.01,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

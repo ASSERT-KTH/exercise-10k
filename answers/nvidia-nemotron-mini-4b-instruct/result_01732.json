@@ -1,0 +1,9 @@
+{
+  "id": 1732,
+  "title": "Finding the Second-Largest Value in a List",
+  "prompt": "Write a program that takes a list of numbers as input and returns the second-largest value.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a list of numbers as input and returns the second-largest value:\n```python\ndef second_largest(numbers):\n    \"\"\"\n    Given a list of numbers, return the second-largest value.\n\n    :param numbers: List[float] - The list of numbers to find the second-largest value from.\n    :return: float - The second-largest value in the input list.\n    \"\"\"\n    # Check if the input is a non-empty list\n    if not isinstance(numbers, list) or len(numbers) < 2:\n        raise ValueError(\"Input should be a non-empty list of numbers.\")\n\n    # Initialize the first and second largest values\n    first_largest = second_largest = float('-inf')\n\n    # Iterate through the input list and update the largest and second-largest values\n    for num in numbers:\n        if num > first_largest:\n            second_largest = first_largest\n            first_largest = num\n        elif num > second_largest and num != first_largest:\n            second_largest = num\n\n    return second_largest\n```\nHere's an example of how to use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\nsecond_largest_value = second_largest(numbers)\nprint(second_largest_value)  # Output: 4\n```\nThis function first checks if the input is a non-empty list. Then, it initializes the first and second largest values to negative infinity. It iterates through the input list and updates the largest and second-largest values as it goes. Finally, it returns the second-largest value.",
+  "error": null,
+  "elapsed_seconds": 3.94,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

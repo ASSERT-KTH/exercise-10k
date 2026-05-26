@@ -1,0 +1,9 @@
+{
+  "id": 7420,
+  "title": "Array Element Replacement",
+  "prompt": "Write a program that takes an array of integers and replaces all occurrences of a specific element with a new value. The program should ask the user for the array size, the array elements, the element to be replaced, and the new value.\nSample Input: Enter array size: 5\nEnter array elements: 1 2 3 2 4\nEnter element to replace: 2\nEnter new value: 10\nSample Output: Original array: [1, 2, 3, 2, 4]\nModified array: [1, 10, 3, 10, 4]\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef replace_elements(arr, element, new_value):\n    \"\"\"Replace all occurrences of a specific element with a new value in the array.\"\"\"\n    for i, num in enumerate(arr):\n        if num == element:\n            arr[i] = new_value\n    return arr\n\ndef main():\n    array_size = int(input(\"Enter array size: \"))\n    arr = list(map(int, input(\"Enter array elements: \").split()))\n    element = int(input(\"Enter element to replace: \"))\n    new_value = int(input(\"Enter new value: \"))\n\n    arr = replace_elements(arr, element, new_value)\n    print(\"Original array:\", arr)\n    print(\"Modified array:\", arr)\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program defines a function `replace_elements` that takes an array, an element to replace, and a new value as arguments. It iterates through the array and replaces all occurrences of the given element with the new value. The `main` function asks the user for the array size, elements, the element to be replaced, and the new value, then calls the `replace_elements` function to modify the array and prints the results.",
+  "error": null,
+  "elapsed_seconds": 3.01,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

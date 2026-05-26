@@ -1,0 +1,9 @@
+{
+  "id": 9380,
+  "title": "Type Checking and Conversion",
+  "prompt": "Write a program that checks the data type of a variable and converts it to another data type.\nSample Input: '10'\nSample Output: number: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks the data type of a variable and converts it to another data type (in this case, converting a string to an integer). You can modify the `if` statement to check for other data types as well.\n\n```python\ndef check_data_type(input_value):\n    \"\"\"\n    Check the data type of a variable and convert it to another data type.\n\n    :param input_value: The value to check and convert.\n    :return: A string indicating the data type of the input value.\n    \"\"\"\n\n    # Check if the input value is a string\n    if isinstance(input_value, str):\n        # Try to convert the string to an integer\n        try:\n            output_value = int(input_value)\n            return f\"number: {output_value}\"\n\n        # If the conversion fails, return an error message\n        except ValueError:\n            return f\"error: Could not convert '{input_value}' to an integer.\"\n\n    # If the input value is not a string, return an error message\n    else:\n        return f\"error: Input value must be a string.\"\n\n\n# Example usage\ninput_value = '10'\nprint(check_data_type(input_value))  # Output: number: 10\n```\n\nThis program defines a function `check_data_type` that takes an input value and returns a string indicating its data type. The function checks if the input value is a string and tries to convert it to an integer. If the conversion is successful, the function returns a string indicating the data type of the output value. If the conversion fails or the input value is not a string, the function returns an error message.",
+  "error": null,
+  "elapsed_seconds": 3.94,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

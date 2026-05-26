@@ -1,0 +1,9 @@
+{
+  "id": 1267,
+  "title": "Array Searching",
+  "prompt": "Write a program to search for an element in an array.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that searches for an element in an array (or list, as it's called in Python). The program will prompt the user to enter an element to search for and then print its index if it's found, or -1 if it's not found.\n\n```python\ndef search_element(arr, element):\n    \"\"\"\n    Search for an element in an array and return its index if found, or -1 if not found.\n\n    :param arr: The array to search in\n    :param element: The element to search for\n    :return: The index of the element if found, or -1 if not found\n    \"\"\"\n    for i, num in enumerate(arr):\n        if num == element:\n            return i\n    return -1\n\n# Get user input\narr = [1, 2, 3, 4, 5]\nelement = int(input(\"Enter an element to search for: \"))\n\n# Search for the element and print the result\nindex = search_element(arr, element)\nif index != -1:\n    print(f\"{element} is at index {index}.\")\nelse:\n    print(f\"{element} is not in the array.\")\n```\n\nWhen you run this program, it will prompt you to enter an element to search for. If you enter 3, it will print \"3 is at index 2.\" If you enter a number that's not in the array, it will print \"The element is not in the array.\"",
+  "error": null,
+  "elapsed_seconds": 5.06,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

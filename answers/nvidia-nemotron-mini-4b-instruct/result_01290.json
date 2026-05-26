@@ -1,0 +1,9 @@
+{
+  "id": 1290,
+  "title": "Dictionary Keys",
+  "prompt": "Write a function that returns a list of all keys in a dictionary.\nSample Input: {'a': 1, 'b': 2}\nSample Output: ['a', 'b']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_dict_keys(d):\n    \"\"\"\n    Returns a list of all keys in a dictionary.\n\n    :param d: The dictionary to get the keys from.\n    :return: A list of all keys in the dictionary.\n    \"\"\"\n    if not isinstance(d, dict):\n        raise TypeError(\"The input must be a dictionary.\")\n\n    return list(d.keys())\n```\nThis function checks if the input is a dictionary and raises a `TypeError` if it's not. Then, it uses the `keys()` method of the dictionary to get a view object that provides access to the keys of the dictionary. Finally, it converts the view object to a list using the `list()` function and returns the list of keys.\n\nHere's an example of how you can use this function:\n```python\nd = {'a': 1, 'b': 2}\nkeys = get_dict_keys(d)\nprint(keys)  # Output: ['a', 'b']\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

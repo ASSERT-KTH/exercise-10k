@@ -1,0 +1,9 @@
+{
+  "id": 2472,
+  "title": "Phone Number Formatter",
+  "prompt": "Write a function that formats a given phone number into a standard format.\nSample Input: 1234567890\nSample Output: (123) 456-7890\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that formats a given phone number into a standard format, which is typically (N) NNN-NNNNN for North American phone numbers. The function handles both 10-digit and 11-digit phone numbers.\n\n```python\ndef format_phone_number(phone_number: str) -> str:\n    \"\"\"\n    Formats a given phone number into a standard format.\n\n    :param phone_number: The phone number as a string (10 or 11 digits).\n    :return: The formatted phone number as a string in the standard format.\n    \"\"\"\n    if len(phone_number) == 10:\n        return f\"({phone_number[:3]}) {phone_number[3:6]}-{phone_number[6:]}\"\n    elif len(phone_number) == 11:\n        return f\"({phone_number[:3]}) {phone_number[3:6]}-{phone_number[6:10]}\"\n    else:\n        raise ValueError(\"Phone number must be 10 or 11 digits.\")\n```\n\nHere are some examples of how to use the function:\n\n```python\nprint(format_phone_number(\"1234567890\"))  # Output: (123) 456-7890\nprint(format_phone_number(\"12345678901\"))  # Output: (123) 456-7890\nprint(format_phone_number(\"1234567890123\"))  # Raises ValueError\n```",
+  "error": null,
+  "elapsed_seconds": 4.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

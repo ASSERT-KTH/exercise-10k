@@ -1,0 +1,9 @@
+{
+  "id": 1407,
+  "title": "Game timer",
+  "prompt": "Write a program that counts down from a given time in seconds. If the time is above 60, print the minutes and seconds, otherwise print only the seconds.\nSample Input: 120\nSample Output: 2:00\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef count_down(seconds):\n    # Convert seconds to minutes and seconds\n    minutes, seconds = divmod(seconds, 60)\n\n    # Print the result\n    if seconds < 60:\n        print(f\"{minutes}:{seconds:02d}\")\n    else:\n        print(f\"{minutes}:{seconds//60:02d}\")\n\n# Get user input\nuser_input = int(input(\"Enter the number of seconds to count down from: \"))\n\n# Call the function with the user input\ncount_down(user_input)\n```\n\nThis program first calculates the number of minutes and seconds from the given number of seconds using the `divmod()` function. Then, it checks if the seconds are less than 60, in which case it prints only the seconds. Otherwise, it prints both the minutes and seconds with leading zeros to ensure two-digit output. Finally, it prompts the user to enter the number of seconds and calls the `count_down()` function with the user input.",
+  "error": null,
+  "elapsed_seconds": 3.77,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

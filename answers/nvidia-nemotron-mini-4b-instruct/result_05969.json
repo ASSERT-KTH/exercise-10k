@@ -1,0 +1,9 @@
+{
+  "id": 5969,
+  "title": "Array Partitioning",
+  "prompt": "Write a program that takes an array and a predicate function as input, and returns two arrays: one containing the elements that satisfy the predicate function, and one containing the elements that do not.\nSample Input: [1, 2, 3, 4, 5], is_even\nSample Output: [[2, 4], [1, 3, 5]]\n",
+  "answer": "Here's a Python solution for the problem using list comprehensions:\n\n```python\ndef filter_array(arr, predicate):\n    return [[x for x in arr if predicate(x)] for predicate in (lambda x: x % 2 == 0, lambda x: x % 2 != 0)]\n\n# Test the function\nprint(filter_array([1, 2, 3, 4, 5], lambda x: x % 2 == 0))  # [[2, 4]]\nprint(filter_array([1, 2, 3, 4, 5], lambda x: x % 2 != 0))  # [[1, 3, 5]]\n```\n\nThis function takes an array and a predicate function as input. It creates two nested list comprehensions: one for even numbers and another for odd numbers. The first list comprehension checks if the element satisfies the predicate function (i.e., it's even), and the second list comprehension checks if the element does not satisfy the predicate function (i.e., it's odd). The function returns a tuple containing these two lists.",
+  "error": null,
+  "elapsed_seconds": 2.7,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

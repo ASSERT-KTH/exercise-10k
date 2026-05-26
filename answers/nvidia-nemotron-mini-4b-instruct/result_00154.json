@@ -1,0 +1,9 @@
+{
+  "id": 154,
+  "title": "Dictionary Inversion",
+  "prompt": "Create a function that takes in a dictionary and returns a new dictionary containing the same values, but with the keys and values swapped\nSample Input: dictionary = {'name': 'John', 'age': 30}\nSample Output: {'John': 'name', 30: 'age'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef swap_keys_and_values(dictionary):\n    \"\"\"\n    Takes in a dictionary and returns a new dictionary containing the same values,\n    but with the keys and values swapped.\n\n    :param dictionary: The input dictionary\n    :return: A new dictionary with swapped keys and values\n    \"\"\"\n    return {value: key for key, value in dictionary.items()}\n```\nHere's how this function works:\n\n* It uses a dictionary comprehension to create a new dictionary with the same values as the input dictionary, but with the keys and values swapped. The `items()` method returns a list of key-value pairs, which is then passed to the dictionary comprehension.\n* The dictionary comprehension uses the `key` and `value` variables to access the key and value of each key-value pair in the input dictionary. The `value` is assigned to the `key` and the `key` is assigned to the `value`.\n\nHere's an example of how you can use this function:\n```python\ndictionary = {'name': 'John', 'age': 30}\nswapped_dict = swap_keys_and_values(dictionary)\nprint(swapped_dict)  # Output: {'John': 'name', 30: 'age'}\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

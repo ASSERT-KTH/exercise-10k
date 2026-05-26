@@ -1,0 +1,9 @@
+{
+  "id": 4513,
+  "title": "Quiz Game",
+  "prompt": "Create a program that plays a quiz game against the user. The user has to answer questions and the program keeps track of the score.\nSample Input: What is the capital of France?\nSample Output: Correct! Your score is 1\n",
+  "answer": "Sure, I'd be happy to help you create a quiz game program. Here's an example Python program that meets your requirements. This program uses a simple scoring system where each correct answer adds one point to the user's score.\n\n```python\nimport random\n\n# Define a list of questions and their answers\nquestions = [\n    {\"question\": \"What is the capital of France?\", \"answer\": \"Paris\"},\n    {\"question\": \"Who is the current Prime Minister of the UK?\", \"answer\": \"Boris Johnson\"},\n    {\"question\": \"What is the name of the world's tallest building?\", \"answer\": \"Baidu Tower\"},\n]\n\n# Initialize the user's score\nscore = 0\n\n# Function to display a question and get the user's answer\ndef get_user_answer():\n    global score\n    question_index = random.randint(0, len(questions) - 1)\n    question = questions[question_index][\"question\"]\n    answer = questions[question_index][\"answer\"]\n\n    print(question)\n    user_answer = input(\"Your answer: \").lower()\n\n    if user_answer.lower() == answer:\n        print(f\"Correct! Your score is now {score + 1}\")\n    else:\n        print(f\"Incorrect. The correct answer was {answer}\")\n\n# Play the quiz game\nwhile score < len(questions):\n    get_user_answer()\n\n# Display the final score\nprint(f\"\\nYour final score is {score}. Well done!\")\n```\n\nYou can customize the questions and answers in the `questions` list to create a quiz game based on your specific needs.",
+  "error": null,
+  "elapsed_seconds": 3.84,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

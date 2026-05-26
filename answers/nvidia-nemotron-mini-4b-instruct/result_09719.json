@@ -1,0 +1,9 @@
+{
+  "id": 9719,
+  "title": "Complex Number Arithmetic",
+  "prompt": "Write a program that takes two complex numbers as input and returns their sum.\nSample Input: 1+2i 3+4i\nSample Output: 4+6i\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes two complex numbers as input and returns their sum:\n\n```python\ndef add_complex_numbers(num1, num2):\n    \"\"\"\n    Adds two complex numbers and returns the result.\n\n    :param num1: A string representing a complex number in the format 'a+bi'\n    :param num2: A string representing a complex number in the same format\n    :return: A string representing the sum of the two complex numbers\n    \"\"\"\n\n    # Parse the input complex numbers into their real and imaginary parts\n    real1, imag1 = map(float, num1.split('+'))\n    real2, imag2 = map(float, num2.split('+'))\n\n    # Calculate the sum of the real and imaginary parts\n    real_sum = real1 + real2\n    imag_sum = imag1 + imag2\n\n    # Format the result as a string in the 'a+bi' format\n    result = f'{real_sum} + {imag_sum}i'\n\n    return result\n\n# Example usage\nnum1 = input(\"Enter the first complex number: \")\nnum2 = input(\"Enter the second complex number: \")\n\nsum_num = add_complex_numbers(num1, num2)\nprint(f\"The sum of {num1} and {num2} is {sum_num}.\")\n```\n\nThis program defines a function `add_complex_numbers` that takes two strings representing complex numbers as input and returns their sum as a string. The function splits the input strings into their real and imaginary parts, calculates the sum of the real and imaginary parts, and formats the result as a string in the 'a+bi' format. The example usage at the end of the program demonstrates how to use the function to add two complex numbers entered by the user.",
+  "error": null,
+  "elapsed_seconds": 4.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

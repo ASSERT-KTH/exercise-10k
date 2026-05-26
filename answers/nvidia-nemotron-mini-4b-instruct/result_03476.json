@@ -1,0 +1,9 @@
+{
+  "id": 3476,
+  "title": "Poetry Generator",
+  "prompt": "Write a program that generates a short poem based on user-inputted words and themes.\nSample Input: word, theme\nSample Output: A {adjective} {noun} in a {location}, {verb} with {object}.\n",
+  "answer": "Here's a Python program that generates a short poem based on user-inputted words and themes. This program uses the `random` module to select adjectives, nouns, locations, verbs, and objects.\n\n```python\nimport random\n\ndef generate_poem(word1, theme):\n    adjectives = [\"beautiful\", \"ugly\", \"happy\", \"sad\", \"bored\", \"excited\"]\n    nouns = [\"cat\", \"dog\", \"tree\", \"book\", \"car\", \"house\"]\n    locations = [\"forest\", \"city\", \"beach\", \"mountains\", \"space\"]\n    verbs = [\"sleeps\", \"runs\", \"reads\", \"writes\", \"draws\", \"cooks\"]\n    objects = [\"ball\", \"cup\", \"pen\", \"pencil\", \"laptop\", \"book\"]\n\n    adjective = random.choice(adjectives)\n    noun = random.choice(nouns)\n    location = random.choice(locations)\n    verb = random.choice(verbs)\n    object = random.choice(objects)\n\n    poem = f\"A {adjective} {noun} in a {location}, {verb} with {object}.\"\n\n    return poem\n\n# Get user input\nword1 = input(\"Enter a word: \")\ntheme = input(\"Enter a theme (e.g. 'nature'): \")\n\n# Generate and print the poem\npoem = generate_poem(word1, theme)\nprint(poem)\n```\n\nThis program prompts the user to input a word and a theme, then generates a short poem based on those inputs. You can customize the lists of adjectives, nouns, locations, verbs, and objects to suit your needs.",
+  "error": null,
+  "elapsed_seconds": 3.81,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

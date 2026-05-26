@@ -1,0 +1,9 @@
+{
+  "id": 9318,
+  "title": "句子中特殊符號處理",
+  "prompt": "Create a function that takes a string as input and returns the string with all special characters removed.\nSample Input: Hello, World! How's it going?\nSample Output: Hello World Hows it going\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\nimport string\n\ndef remove_special_chars(input_string: str) -> str:\n    \"\"\"\n    Remove all special characters from the given input string.\n\n    :param input_string: The input string containing special characters.\n    :return: The output string with all special characters removed.\n    \"\"\"\n    # Define a set of characters to be removed (i.e., special characters)\n    special_chars = set(string.punctuation)\n\n    # Use a list comprehension to filter out special characters and create a new string\n    return ''.join(char for char in input_string if char not in special_chars)\n```\nHere's how you can use this function:\n```python\nsample_input = \"Hello, World! How's it going?\"\nsample_output = remove_special_chars(sample_input)\nprint(sample_output)  # Output: \"Hello World Hows it going\"\n```\nThis function first defines a set of special characters (i.e., punctuation characters) using the `string` module. Then, it uses a list comprehension to filter out any special characters from the input string and create a new string with only the alphanumeric characters. The `join()` method is used to concatenate all the characters in the list into a single string.",
+  "error": null,
+  "elapsed_seconds": 3.32,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

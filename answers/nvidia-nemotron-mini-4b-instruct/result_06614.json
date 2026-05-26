@@ -1,0 +1,9 @@
+{
+  "id": 6614,
+  "title": " SCORE Calculator",
+  "prompt": "Write a program that takes a score as input from the user and prints the grade based on the following scale: 90-100 A, 80-89 B, 70-79 C, 69 and below F.\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_grade(score):\n    \"\"\"\n    Calculates and returns the grade based on a given score.\n\n    :param score: The score as an integer between 0 and 100.\n    :return: The corresponding grade as a string (A, B, C, or F).\n    \"\"\"\n    if not isinstance(score, int) or score < 0 or score > 100:\n        raise ValueError(\"Score must be an integer between 0 and 100.\")\n\n    if score >= 90:\n        return \"A\"\n    elif score >= 80:\n        return \"B\"\n    elif score >= 70:\n        return \"C\"\n    else:\n        return \"F\"\n\n# Get user input\nscore = int(input(\"Enter a score between 0 and 100: \"))\n\n# Print the grade\ngrade = get_grade(score)\nprint(f\"Your grade is {grade}.\")\n```\nThis program defines a function `get_grade` that takes a score as input and returns the corresponding grade. The function checks if the input is valid (an integer between 0 and 100), and then uses an `if` statement to determine the grade based on the score. The program then prompts the user to enter a score, calls the `get_grade` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.42,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7442,
+  "title": "Optimized Bubble Sort Algorithm",
+  "prompt": "Implement an optimized version of the Bubble Sort algorithm that can sort a list of integers in ascending order. The optimization should include stopping the algorithm if no swaps are made in a pass, indicating that the list is already sorted.\nSample Input: [64, 34, 25, 12, 22, 11, 90]\nSample Output: [11, 12, 22, 25, 34, 64, 90]\n",
+  "answer": "Sure, I'd be happy to help you implement an optimized version of the Bubble Sort algorithm. Here's a Python function that meets your requirements:\n\n```python\ndef bubble_sort_optimized(arr):\n    \"\"\"\n    Optimized version of the Bubble Sort algorithm that stops if no swaps are made in a pass.\n\n    :param arr: List of integers to be sorted in ascending order\n    :return: Sorted list of integers\n    \"\"\"\n    n = len(arr)\n\n    # Continue sorting until no swaps are made in a pass\n    for i in range(n):\n        swapped = False\n\n        for j in range(0, n - i - 1):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n                swapped = True\n\n        # If no swaps were made in this pass, the list is already sorted\n        if not swapped:\n            break\n\n    return arr\n```\n\nHere's an example of how to use this function:\n\n```python\narr = [64, 34, 25, 12, 22, 11, 90]\nprint(bubble_sort_optimized(arr))  # Output: [11, 12, 22, 25, 34, 64, 90]\n```\n\nThis optimized version of Bubble Sort has a time complexity of O(n^2), which is not the most efficient sorting algorithm. However, it's a simple and easy-to-understand algorithm that can be useful for educational purposes or when dealing with small to medium-sized datasets.",
+  "error": null,
+  "elapsed_seconds": 3.86,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

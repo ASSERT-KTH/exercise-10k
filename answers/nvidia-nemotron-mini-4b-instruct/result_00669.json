@@ -1,0 +1,9 @@
+{
+  "id": 669,
+  "title": "Removing a Key-Value Pair",
+  "prompt": "Given a dictionary {'name': 'George', 'age': 25, 'city': 'Perth'}, write a program to remove the key-value pair 'age': 25.\nSample Input: {'name': 'George', 'age': 25, 'city': 'Perth'}\nSample Output: {'name': 'George', 'city': 'Perth'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that removes the key-value pair 'age': 25 from the given dictionary:\n\n```python\ndef remove_age_25(dictionary):\n    \"\"\"\n    Remove the key-value pair 'age': 25 from the given dictionary.\n\n    :param dictionary: The input dictionary\n    :return: The modified dictionary with the removed key-value pair\n    \"\"\"\n    # Use a dictionary comprehension to create a new dictionary with the removed key-value pair\n    modified_dict = {k: v for k, v in dictionary.items() if k != 'age' or v != 25}\n\n    return modified_dict\n\n# Example usage\ninput_dict = {'name': 'George', 'age': 25, 'city': 'Perth'}\noutput_dict = remove_age_25(input_dict)\nprint(output_dict)  # Output: {'name': 'George', 'city': 'Perth'}\n```\n\nThis program defines a function `remove_age_25` that uses a dictionary comprehension to create a new dictionary with all key-value pairs except for 'age': 25. The condition `k != 'age' or v != 25` ensures that only key-value pairs with keys not equal to 'age' and values not equal to 25 are included in the new dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

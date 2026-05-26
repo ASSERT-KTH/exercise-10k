@@ -1,0 +1,9 @@
+{
+  "id": 7513,
+  "title": "Simple Chatbot",
+  "prompt": "Create a Simple Chatbot program using variables and conditional statements.\nSample Input: hello\nSample Output: Hello! How can I help you?\n",
+  "answer": "Sure, I'd be happy to help you create a simple chatbot program using variables and conditional statements. Here's a Python code snippet that demonstrates this:\n\n```python\n# Define variables for the chatbot's responses\ngreeting = \"Hello! How can I help you?\"\nhelp_message = \"I'm here to assist you. Please ask your question or provide more details.\"\n\n# Function to handle user input and generate a response\ndef chatbot(user_input):\n    # Check if the user input is \"help\" or \"HELP\"\n    if user_input.lower() == \"help\" or user_input.lower() == \"HELP\":\n        return help_message\n\n    # Otherwise, greet the user and ask for a question\n    return greeting\n\n# Start the chatbot loop\nwhile True:\n    user_input = input(\"You: \").strip().lower()\n\n    # Generate a response based on the user input\n    response = chatbot(user_input)\n\n    # Print the response to the user\n    print(\"Chatbot: \", response)\n```\n\nThis code defines three variables: `greeting`, `help_message`, and a function `chatbot()` that handles user input and generates a response based on the variables. The `while` loop starts the chatbot loop, where the user can input messages and the chatbot will respond accordingly.\n\nYou can customize the chatbot's responses by modifying the `greeting` and `help_message` variables, and the `chatbot()` function can be further extended to include more complex conditional statements and user input validation.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

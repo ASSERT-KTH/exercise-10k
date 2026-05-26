@@ -1,0 +1,9 @@
+{
+  "id": 5263,
+  "title": "Tax Calculator",
+  "prompt": "Develop a program to calculate the tax amount based on the income using conditional statements\nSample Input: 50000\nSample Output: 10000\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the tax amount based on the income using conditional statements (if-else statements). This program assumes that the tax rate is 10% for income up to $50,000 and 15% for income above $50,000.\n\n```python\ndef calculate_tax(income):\n    \"\"\"\n    Calculates the tax amount based on the income using conditional statements.\n\n    :param income: The annual income in dollars.\n    :return: The tax amount in dollars.\n    \"\"\"\n\n    # Validate the input\n    if not isinstance(income, (int, float)):\n        raise TypeError(\"The income must be a number.\")\n\n    # Calculate the tax based on the income\n    tax = 0\n    if income <= 50000:\n        tax = income * 0.1\n    else:\n        tax = 5000 * 0.1 + (income - 50000) * 0.15\n\n    return tax\n\n# Get user input\nincome = float(input(\"Enter your annual income: \"))\n\n# Calculate and display the tax amount\ntax_amount = calculate_tax(income)\nprint(f\"Your tax amount is ${tax_amount}.\")\n```\n\nThis program will prompt the user to enter their annual income, validate the input, calculate the tax based on the income, and display the tax amount.",
+  "error": null,
+  "elapsed_seconds": 3.55,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

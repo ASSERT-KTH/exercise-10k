@@ -1,0 +1,9 @@
+{
+  "id": 132,
+  "title": "Right Triangle Properties",
+  "prompt": "Create a program that calculates the area, perimeter, and hypotenuse of a right triangle given its legs.\nSample Input: 3 4\nSample Output: 6.0 12.0 5.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the area, perimeter, and hypotenuse of a right triangle given its legs:\n\n```python\ndef calculate_triangle(leg1, leg2):\n    \"\"\"\n    Calculates the area, perimeter, and hypotenuse of a right triangle given its legs.\n\n    :param leg1: The length of the first leg of the triangle.\n    :param leg2: The length of the second leg of the triangle.\n    :return: A tuple containing the area, perimeter, and hypotenuse of the triangle.\n    \"\"\"\n\n    # Calculate the area using Heron's formula\n    s = (leg1 + leg2) / 2  # Semi-perimeter\n    area = (s * (s - leg1) * (s - leg2)) ** 0.5\n\n    # Calculate the perimeter\n    perimeter = leg1 + leg2 + area\n\n    # Calculate the hypotenuse using the Pythagorean theorem\n    hypotenuse = (leg1 ** 2 + leg2 ** 2) ** 0.5\n\n    return area, perimeter, hypotenuse\n\n\n# Get user input for the legs of the triangle\nleg1 = float(input(\"Enter the length of the first leg: \"))\nleg2 = float(input(\"Enter the length of the second leg: \"))\n\n# Calculate and print the results\narea, perimeter, hypotenuse = calculate_triangle(leg1, leg2)\nprint(f\"{leg1} {leg2} -> {area:.2f} {perimeter:.2f} {hypotenuse:.2f}\")\n```\n\nThis program defines a function `calculate_triangle` that takes the lengths of the legs as input and returns a tuple containing the area, perimeter, and hypotenuse. The function uses Heron's formula to calculate the area, and the Pythagorean theorem to calculate the hypotenuse. The program then gets user input for the legs of the triangle, calls the function, and prints the results.",
+  "error": null,
+  "elapsed_seconds": 6.2,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

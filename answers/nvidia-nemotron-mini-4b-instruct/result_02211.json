@@ -1,0 +1,9 @@
+{
+  "id": 2211,
+  "title": "Date Printer",
+  "prompt": "Write a program that takes a date as input and prints it in a standard format (MM/DD/YYYY).\nSample Input: 2022-07-25\nSample Output: 07/25/2022\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a date as input in the format 'YYYY-MM-DD' and prints it in the standard format 'MM/DD/YYYY':\n```python\nfrom datetime import datetime\n\ndef format_date(date_str):\n    \"\"\"\n    Formats a date string in the format 'YYYY-MM-DD' to 'MM/DD/YYYY'.\n\n    :param date_str: The date string in the format 'YYYY-MM-DD'\n    :return: The formatted date string in the format 'MM/DD/YYYY'\n    \"\"\"\n    # Parse the input date string into a datetime object\n    date = datetime.strptime(date_str, '%Y-%m-%d')\n\n    # Format the datetime object to the desired output format\n    formatted_date = date.strftime('%m/%d/%Y')\n\n    return formatted_date\n\n# Get user input\nuser_input = input(\"Enter a date in the format 'YYYY-MM-DD': \")\n\n# Format and print the output\nformatted_date = format_date(user_input)\nprint(formatted_date)\n```\nWhen you run this program and enter a date like '2022-07-25', it will output:\n```yaml\n07/25/2022\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 21.65,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

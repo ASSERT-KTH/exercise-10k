@@ -1,0 +1,9 @@
+{
+  "id": 1916,
+  "title": "Variance Calculator",
+  "prompt": "Calculate the variance given a list of numbers.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 2.0\n",
+  "answer": "Sure, I'd be happy to help you calculate the variance given a list of numbers. Variance is a measure of how spread out a set of numbers is. It is calculated as the average of the squared differences from the mean (average) of the numbers. Here's a Python function that calculates the variance given a list of numbers:\n\n```python\ndef calculate_variance(numbers):\n    # Calculate the mean (average) of the numbers\n    mean = sum(numbers) / len(numbers)\n\n    # Calculate the squared differences from the mean\n    squared_diffs = [pow(x - mean, 2) for x in numbers]\n\n    # Calculate the variance\n    variance = sum(squared_diffs) / len(numbers)\n\n    return variance\n```\n\nYou can use this function with your sample input as follows:\n\n```python\nnumbers = [1, 2, 3, 4, 5]\nvariance = calculate_variance(numbers)\nprint(variance)  # Output: 2.0\n```\n\nThis function first calculates the mean of the numbers. Then, it calculates the squared differences from the mean for each number in the list. Finally, it calculates the variance by taking the average of these squared differences.",
+  "error": null,
+  "elapsed_seconds": 3.04,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3216,
+  "title": "Distance Between Two Points",
+  "prompt": "Write a program that takes the coordinates of two points as input and prints the distance between them.\nSample Input: 1 2 4 6\nSample Output: 5.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes the coordinates of two points as input (in the format x1 y1 x2 y2) and prints the Euclidean distance between them:\n```python\nimport math\n\ndef calculate_distance(point1, point2):\n    \"\"\"Calculate the Euclidean distance between two points.\"\"\"\n    x1, y1 = point1\n    x2, y2 = point2\n\n    # Calculate the difference between the x and y coordinates\n    dx = x2 - x1\n    dy = y2 - y1\n\n    # Calculate the Euclidean distance using the Pythagorean theorem\n    distance = math.sqrt(dx**2 + dy**2)\n\n    return distance\n\n# Get user input for the coordinates of the two points\nx1, y1 = map(float, input(\"Enter the coordinates of point 1 (x1 y1): \").split())\nx2, y2 = map(float, input(\"Enter the coordinates of point 2 (x2 y2): \").split())\n\n# Calculate and print the distance between the two points\ndistance = calculate_distance((x1, y1), (x2, y2))\nprint(f\"The distance between the two points is {distance:.2f}.\")\n```\nThis program defines a function `calculate_distance` that takes two tuples representing the coordinates of two points and returns the Euclidean distance between them. The function uses the `math.sqrt` function to calculate the square root of the sum of the squares of the differences between the x and y coordinates. The program then gets user input for the coordinates of the two points, calculates the distance using the `calculate_distance` function, and prints the result with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 3.86,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

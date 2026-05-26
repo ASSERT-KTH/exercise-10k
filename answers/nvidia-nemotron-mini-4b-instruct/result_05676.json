@@ -1,0 +1,9 @@
+{
+  "id": 5676,
+  "title": "Calculating the Sum of Digits",
+  "prompt": "Write a program that takes a number as input and outputs the sum of its digits.\nSample Input: 1234\nSample Output: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes an integer as input and outputs the sum of its digits:\n```python\ndef sum_of_digits(number):\n    \"\"\"\n    Calculates the sum of the digits of a given integer.\n\n    :param number: The integer to calculate the sum of its digits for.\n    :return: The sum of the digits of the given integer.\n    \"\"\"\n    # Convert the number to a string, then back to an integer to remove the leading zero\n    # (since Python considers 0 to be a valid integer, and we want to ignore it)\n    sum_of_digits = sum(int(digit) for digit in str(abs(number)))\n\n    return sum_of_digits\n\n# Get user input\nuser_input = int(input(\"Enter an integer: \"))\n\n# Calculate and print the sum of its digits\nsum_of_digits = sum_of_digits(user_input)\nprint(f\"The sum of the digits of {user_input} is {sum_of_digits}.\")\n```\nThis program first defines a function `sum_of_digits` that takes an integer as input and returns the sum of its digits. It does this by converting the number to a string, then using a generator expression to iterate over each digit as an integer, and finally summing up the results.\n\nThe program then prompts the user to enter an integer, converts their input to an integer, and calls the `sum_of_digits` function to calculate and print the sum of its digits.",
+  "error": null,
+  "elapsed_seconds": 3.67,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3070,
+  "title": "Name Validation",
+  "prompt": "Write a program that takes a person's name as input and prints out whether it is valid or not. A valid name should only contain letters and spaces.\nSample Input: John Doe\nSample Output: Valid name\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef is_valid_name(name):\n    \"\"\"Check if a given name is valid (contains only letters and spaces).\"\"\"\n    # Remove any non-letter or non-space characters from the name\n    name = ' '.join(c for c in name.strip() if c.isalpha() or c == ' ')\n\n    # Check if the name is empty (i.e., only spaces)\n    if not name:\n        return \"Invalid name (can't be empty)\"\n\n    # Check if the name contains only letters and spaces\n    if not name.isalpha() or ' ' not in name:\n        return \"Invalid name (must contain only letters and spaces)\"\n\n    return \"Valid name\"\n\n# Get user input\nname = input(\"Please enter a name: \")\n\n# Print the result\nprint(is_valid_name(name))\n```\nThis program defines a function `is_valid_name` that takes a name as input, removes any non-letter or non-space characters, checks if the name is empty, and then checks if the name contains only letters and spaces. If the name is valid, the function returns a message indicating that it is a valid name. The program then gets user input, calls the function with the user's input, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 8.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

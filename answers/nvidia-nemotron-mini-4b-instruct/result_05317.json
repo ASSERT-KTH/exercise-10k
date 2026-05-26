@@ -1,0 +1,9 @@
+{
+  "id": 5317,
+  "title": "Map Function",
+  "prompt": "Create a function that uses the map function to apply a given function to a list of numbers\nSample Input: [1, 2, 3, 4, 5], f(x) = x^2\nSample Output: [1, 4, 9, 16, 25]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses the `map()` function to apply a given function (in this case, `f(x) = x^2`) to a list of numbers.\n\n```python\ndef apply_function_to_list(numbers, func):\n    \"\"\"\n    Applies a given function to a list of numbers using the map function.\n\n    Parameters:\n    numbers (list): A list of numbers.\n    func (callable): A function that takes one argument and returns a single value.\n\n    Returns:\n    list: A new list containing the results of applying the given function to each number in the input list.\n    \"\"\"\n    return list(map(func, numbers))\n\n# Example usage:\nnumbers = [1, 2, 3, 4, 5]\nf = lambda x: x**2\nresult = apply_function_to_list(numbers, f)\nprint(result)  # Output: [1, 4, 9, 16, 25]\n```\n\nThis function first defines a helper function `apply_function_to_list()` that takes a list of numbers and a function as arguments. It then uses the `map()` function to apply the given function to each number in the input list and returns the resulting list using the `list()` function. The example usage at the end of the code demonstrates how to use this function with a list of numbers and a function that squares each number.",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

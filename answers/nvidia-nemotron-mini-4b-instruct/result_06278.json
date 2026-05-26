@@ -1,0 +1,9 @@
+{
+  "id": 6278,
+  "title": "Dictionary Mapping",
+  "prompt": "Map a function to each value in a dictionary\nSample Input: {'a': 1, 'b': 2, 'c': 3}, lambda x: x ** 2\nSample Output: {'a': 1, 'b': 4, 'c': 9}\n",
+  "answer": "Sure, I'd be happy to help you with that! The function you provided, `lambda x: x ** 2`, squares each input value. Here's how you can apply this function to the given dictionary:\n\n```python\ndef map_function_to_values(dictionary, function):\n    return {key: function(value) for key, value in dictionary.items()}\n\nsample_input = {'a': 1, 'b': 2, 'c': 3}\nsample_function = lambda x: x ** 2\n\nsample_output = map_function_to_values(sample_input, sample_function)\nprint(sample_output)  # Output: {'a': 1, 'b': 4, 'c': 9}\n```\n\nIn the provided code, we define a function `map_function_to_values` that takes a dictionary and a function as input. It then creates a new dictionary by applying the given function to each value in the input dictionary using a dictionary comprehension. The resulting dictionary is returned.",
+  "error": null,
+  "elapsed_seconds": 2.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

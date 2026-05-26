@@ -1,0 +1,9 @@
+{
+  "id": 5857,
+  "title": "Student Record System",
+  "prompt": "Write a program that asks the user for a student's name and grade, and then prints out a message based on the following conditions: If the grade is A, print 'Excellent'; if the grade is B, print 'Good'; if the grade is C, print 'Fair'; if the grade is D or F, print 'Needs improvement'\nSample Input: John A\nSample Output: Excellent\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef print_grade(student_name, grade):\n    \"\"\"Print a message based on the given student's name and grade.\"\"\"\n    if grade.upper() == 'A':\n        print(f\"{student_name}, your grade of A is excellent!\")\n    elif grade.upper() == 'B':\n        print(f\"{student_name}, your grade of B is good!\")\n    elif grade.upper() == 'C':\n        print(f\"{student_name}, your grade of C is fair!\")\n    elif grade.upper() in ['D', 'F']:\n        print(f\"{student_name}, your grade of {grade} needs improvement!\")\n    else:\n        print(f\"Invalid grade. Please enter either A, B, C, D, or F.\")\n\n# Get user input\nstudent_name = input(\"Please enter the student's name: \")\ngrade = input(f\"Please enter the student's grade for {student_name}: \")\n\n# Call the function with the user input\nprint_grade(student_name, grade)\n```\n\nThis program defines a function `print_grade` that takes a student's name and grade as arguments, and prints a message based on the grade. The function checks the grade's upper case value to ensure it's a valid letter (A, B, C, D, or F). If the grade is invalid, the function prints an error message and exits. The program then gets user input for the student's name and grade, and calls the `print_grade` function with the user input.",
+  "error": null,
+  "elapsed_seconds": 3.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

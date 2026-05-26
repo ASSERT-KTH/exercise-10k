@@ -1,0 +1,9 @@
+{
+  "id": 9919,
+  "title": "Weather Program",
+  "prompt": "Write a program that displays the current weather for a given location.\nSample Input: New York\nSample Output: Current weather: sunny, 75°F\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses the OpenWeatherMap API to display the current weather for a given location. You'll need to sign up for a free API key on the OpenWeatherMap website to use this program.\n\n```python\nimport requests\n\ndef get_weather(city):\n    # Replace 'your_api_key' with your actual API key\n    API_KEY = 'your_api_key'\n\n    url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric'\n\n    response = requests.get(url)\n\n    if response.status_code == 200:\n        data = response.json()\n\n        weather_description = data['weather'][0]['description']\n        temperature = data['main']['temp']\n\n        return f'Current weather: {weather_description}, {temperature}°C'\n    else:\n        print(f'Error: Could not fetch weather data for {city}. Status code: {response.status_code}')\n        return None\n\n# Example usage\ncity = 'New York'\nprint(get_weather(city))\n```\n\nReplace `'your_api_key'` with your actual API key. The program will fetch the weather data for the given city and display the current weather description and temperature in Celsius.",
+  "error": null,
+  "elapsed_seconds": 3.22,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

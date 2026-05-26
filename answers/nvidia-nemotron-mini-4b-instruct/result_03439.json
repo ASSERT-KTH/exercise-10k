@@ -1,0 +1,9 @@
+{
+  "id": 3439,
+  "title": "Base64 Encoding",
+  "prompt": "Write a function that takes a string as input and returns the Base64 encoded string\nSample Input: hello\nSample Output: aGVsbG8=\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that takes a string as input and returns its Base64 encoded string:\n```python\nimport base64\n\ndef string_to_base64(input_string: str) -> str:\n    \"\"\"\n    Converts a given string to Base64 encoded string.\n\n    :param input_string: The string to be encoded.\n    :return: The Base64 encoded string.\n    \"\"\"\n    if not isinstance(input_string, str):\n        raise TypeError(\"Input must be a string.\")\n\n    return base64.b64encode(input_string.encode()).decode()\n```\nHere's how you can use this function:\n```python\nencoded_string = string_to_base64(\"hello\")\nprint(encoded_string)  # Output: aGVsbG8=\n```\nThis function first checks if the input is a string. If not, it raises a `TypeError`. Then, it encodes the input string to bytes using the `encode()` method and encodes the bytes to Base64 using the `b64encode()` method. Finally, it decodes the Base64 string to a string using the `decode()` method.",
+  "error": null,
+  "elapsed_seconds": 12.59,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2781,
+  "title": "List Indexing",
+  "prompt": "Create a function that takes a list and an index as input, and returns the element at the specified index. If the index is out of range, return an error message.\nSample Input: [1, 2, 3], 1\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_element_at_index(lst, index):\n    \"\"\"\n    Returns the element at the specified index in the given list.\n    If the index is out of range, returns an error message.\n\n    Parameters:\n    lst (list): The list to search in.\n    index (int): The index to get the element from.\n\n    Returns:\n    int or str: The element at the specified index, or an error message if the index is out of range.\n    \"\"\"\n    if not isinstance(lst, list) or not isinstance(index, int):\n        return \"Error: Both 'lst' and 'index' must be of type 'list' and 'int' respectively.\"\n\n    if index < 0 or index >= len(lst):\n        return f\"Error: Index {index} is out of range for list with length {len(lst)}.\"\n\n    return lst[index]\n```\nHere's an example of how you can use this function:\n```python\nprint(get_element_at_index([1, 2, 3], 1))  # Output: 2\nprint(get_element_at_index([1, 2, 3], 5))  # Output: Error: Index 5 is out of range for list with length 3.\n```\nThis function checks if the input types are correct and if the index is within the valid range of the list. If not, it returns an error message. If the index is valid, it returns the element at that index.",
+  "error": null,
+  "elapsed_seconds": 5.32,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

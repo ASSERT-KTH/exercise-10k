@@ -1,0 +1,9 @@
+{
+  "id": 301,
+  "title": "Array Summation",
+  "prompt": "Write a function that calculates the sum of all elements in a given array.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that calculates the sum of all elements in a given array (or list, as it's called in Python):\n```python\ndef calculate_sum(arr):\n    \"\"\"\n    Calculates the sum of all elements in a given array.\n\n    :param arr: The array or list of numbers to calculate the sum of.\n    :return: The sum of all elements in the array.\n    \"\"\"\n    # Check if the input is a non-empty list\n    if not isinstance(arr, list) or len(arr) == 0:\n        raise ValueError(\"Input should be a non-empty list.\")\n\n    # Calculate the sum using a simple loop\n    total = 0\n    for num in arr:\n        total += num\n\n    return total\n```\nHere's an example of how to use this function:\n```python\nprint(calculate_sum([1, 2, 3, 4, 5]))  # Output: 15\nprint(calculate_sum([]))  # Raises ValueError\n```\nThis function first checks if the input is a non-empty list. If not, it raises a `ValueError`. Then, it calculates the sum using a simple loop, adding each number in the array to a running total. Finally, it returns the total.",
+  "error": null,
+  "elapsed_seconds": 3.18,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

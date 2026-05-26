@@ -1,0 +1,9 @@
+{
+  "id": 3682,
+  "title": "Calculate Area and Perimeter",
+  "prompt": "Write a program to calculate the area and perimeter of a rectangle given its length and breadth.\nSample Input: length = 5, breadth = 3\nSample Output: Area: 15, Perimeter: 16\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the area and perimeter of a rectangle given its length and breadth:\n\n```python\ndef calculate_rectangle(length, breadth):\n    \"\"\"\n    Calculates the area and perimeter of a rectangle given its length and breadth.\n\n    :param length: The length of the rectangle.\n    :param breadth: The breadth of the rectangle.\n    :return: A tuple containing the area and perimeter of the rectangle.\n    \"\"\"\n\n    # Validate input\n    if not isinstance(length, (int, float)) or length <= 0:\n        raise ValueError(\"Length must be a positive number.\")\n\n    if not isinstance(breadth, (int, float)) or breadth <= 0:\n        raise ValueError(\"Breadth must be a positive number.\")\n\n    # Calculate area and perimeter\n    area = length * breadth\n    perimeter = 2 * (length + breadth)\n\n    return area, perimeter\n\n\n# Get user input\nlength = float(input(\"Enter the length of the rectangle: \"))\nbreadth = float(input(\"Enter the breadth of the rectangle: \"))\n\n# Calculate and print results\narea, perimeter = calculate_rectangle(length, breadth)\nprint(f\"Area: {area}, Perimeter: {perimeter}\")\n```\n\nThis program defines a function `calculate_rectangle` that takes the length and breadth as arguments, validates the input, calculates the area and perimeter, and returns them as a tuple. The program then gets user input for the length and breadth, calls the function with the user inputs, and prints the results.",
+  "error": null,
+  "elapsed_seconds": 3.98,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

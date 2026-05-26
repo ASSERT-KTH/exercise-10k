@@ -1,0 +1,9 @@
+{
+  "id": 9081,
+  "title": "User Information Input/Output",
+  "prompt": "Write a program that prompts the user for their name, age, and address, then prints out a formatted string with the provided information. The program should validate the user's age to ensure it is a positive integer.\nSample Input: John Doe\n30\n123 Main St\nSample Output: Name: John Doe\nAge: 30\nAddress: 123 Main St\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_positive_integer(prompt):\n    \"\"\"Prompts the user for a positive integer and validates the input.\"\"\"\n    while True:\n        try:\n            age = int(input(prompt))\n            if age > 0:\n                return age\n            else:\n                print(\"Age must be a positive integer. Please try again.\")\n        except ValueError:\n            print(\"That's not a valid integer. Please try again.\")\n\ndef format_and_print_info():\n    \"\"\"Prompts the user for their name, age, and address, then prints out a formatted string.\"\"\"\n    name = input(\"Name: \")\n    age = get_positive_integer(\"Age: \")\n    address = input(\"Address: \")\n\n    print(f\"Name: {name}\")\n    print(f\"Age: {age}\")\n    print(f\"Address: {address}\")\n\n# Call the function to run the program\nformat_and_print_info()\n```\nThis program defines two functions: `get_positive_integer` to validate and get a positive integer input, and `format_and_print_info` to prompt the user for their name, age, and address, format the information, and print it out. The `get_positive_integer` function uses a while loop to keep prompting the user for input until they enter a valid positive integer.",
+  "error": null,
+  "elapsed_seconds": 3.43,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

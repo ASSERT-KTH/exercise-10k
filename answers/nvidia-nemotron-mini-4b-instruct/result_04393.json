@@ -1,0 +1,9 @@
+{
+  "id": 4393,
+  "title": "Object Properties",
+  "prompt": "Access and manipulate object properties using variables\nSample Input: object = {name: 'John', age: 30}, property_name = 'name'\nSample Output: Object property value\n",
+  "answer": "Sure, I'd be happy to help you with that! Based on your sample input and output, it seems like you're trying to access and manipulate object properties using variables. Here's a Python function that does that:\n```python\ndef access_object_property(object, property_name):\n    \"\"\"\n    Access and manipulate object properties using variables.\n\n    Parameters:\n    object (dict): The object to access properties from.\n    property_name (str): The name of the property to access.\n\n    Returns:\n    str: The value of the specified property.\n    \"\"\"\n    # Check if the input is valid\n    if not isinstance(object, dict) or not isinstance(property_name, str):\n        raise ValueError(\"Both 'object' and 'property_name' must be of type 'dict' and 'str' respectively.\")\n\n    # Access the property value\n    property_value = object.get(property_name)\n\n    # Manipulate the property value (e.g., increment its value)\n    # ...\n\n    return property_value\n```\nHere's an example of how to use this function:\n```python\nobject = {'name': 'John', 'age': 30}\nproperty_name = 'name'\n\nprint(access_object_property(object, property_name))  # Output: John\n```\nThis function checks if the input is valid, accesses the property value using the `get()` method, and allows you to manipulate the property value as needed.",
+  "error": null,
+  "elapsed_seconds": 3.47,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

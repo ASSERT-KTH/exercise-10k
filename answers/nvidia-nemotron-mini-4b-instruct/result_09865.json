@@ -1,0 +1,9 @@
+{
+  "id": 9865,
+  "title": "Rock Paper Scissors",
+  "prompt": "Write a program that plays a game of Rock Paper Scissors with the user.\nSample Input: rock\nSample Output: You win! The computer chose paper.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that plays a game of Rock Paper Scissors with the user:\n\n```python\nimport random\n\ndef play_game():\n    \"\"\"Plays a game of Rock Paper Scissors with the user.\"\"\"\n\n    # Define the possible choices\n    choices = [\"rock\", \"paper\", \"scissors\"]\n\n    # Get the user's choice\n    user_choice = input(\"Enter your choice (rock, paper, or scissors): \").lower()\n\n    # Get a random choice for the computer\n    computer_choice = random.choice(choices)\n\n    # Determine the winner\n    if user_choice == \"rock\":\n        if computer_choice == \"scissors\":\n            print(\"You win!\")\n        else:\n            print(\"The computer wins!\")\n    elif user_choice == \"paper\":\n        if computer_choice == \"rock\":\n            print(\"You win!\")\n        else:\n            print(\"The computer wins!\")\n    elif user_choice == \"scissors\":\n        if computer_choice == \"paper\":\n            print(\"You win!\")\n        else:\n            print(\"The computer wins!\")\n    else:\n        print(\"Sorry, I didn't understand your choice. Please enter 'rock', 'paper', or 'scissors'.\")\n        play_game()  # Recursively call the function if the user enters an invalid choice\n\n# Call the function to start the game\nplay_game()\n```\n\nThis program defines a function `play_game()` that prompts the user for their choice, generates a random choice for the computer, and determines the winner based on the rules of Rock Paper Scissors. The function also includes a recursive call to itself to handle invalid user inputs.",
+  "error": null,
+  "elapsed_seconds": 3.95,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

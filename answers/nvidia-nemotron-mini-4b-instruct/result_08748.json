@@ -1,0 +1,9 @@
+{
+  "id": 8748,
+  "title": "Basic Variable Logging",
+  "prompt": "Log variables to track changes and improve debugging.\nSample Input: 123\nSample Output: logged variable\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that logs a given variable to track changes and improve debugging:\n```python\nimport logging\n\ndef log_variable(var_name, var_value):\n    \"\"\"\n    Logs a given variable to track changes and improve debugging.\n\n    :param var_name: The name of the variable to log.\n    :param var_value: The value of the variable to log.\n    \"\"\"\n    # Set up logging to a file with a timestamp\n    logging.basicConfig(filename='debug.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')\n\n    # Log the variable value\n    logging.debug(f'Logged variable: {var_name} = {var_value}')\n\n    # You can also log the variable value to the console for quick reference\n    print(f'Logged variable: {var_name} = {var_value}')\n```\nTo use this function, you can call it with the name and value of the variable you want to log, like this:\n```python\nvar_name = 'my_variable'\nvar_value = 123\nlog_variable(var_name, var_value)\n```\nThis will create a `debug.log` file in the current directory with a timestamp and the value of the variable. You can also print the value to the console for quick reference.\n\nNote that you can customize the logging format and level by passing additional arguments to the `logging.basicConfig()` function. For example, you can set the log level to `INFO` to only log important messages, or set the log file path to a different location.",
+  "error": null,
+  "elapsed_seconds": 3.88,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

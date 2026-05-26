@@ -1,0 +1,9 @@
+{
+  "id": 3672,
+  "title": "Square Root Function",
+  "prompt": "Create a function that takes a number as input and returns its square root.\nSample Input: 16\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that takes a number as input and returns its square root using the built-in `math.isqrt()` function, which is more efficient than using a loop to calculate the integer square root. If you prefer to use a loop, you can replace the `math.isqrt()` call with the following line:\n\n```python\nimport math\n\ndef square_root(number):\n    if number < 0:\n        raise ValueError(\"Input number must be non-negative\")\n    return math.isqrt(number)\n```\n\nHere's an example of how to use the function:\n\n```python\nprint(square_root(16))  # Output: 4\nprint(square_root(0))   # Output: 0\nprint(square_root(-1))  # Raises ValueError\n```\n\nIf you want to allow negative inputs and return the principal square root (the positive one), you can modify the function as follows:\n\n```python\nimport math\n\ndef square_root(number):\n    if number < 0:\n        return math.copysign(math.isqrt(abs(number)), number)\n    return math.isqrt(number)\n```\n\nThis version of the function returns the positive square root of a non-negative number and the negative square root of a negative number.",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

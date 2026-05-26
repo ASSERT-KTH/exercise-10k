@@ -1,0 +1,9 @@
+{
+  "id": 3060,
+  "title": "Memoization",
+  "prompt": "Create a function to memoize a given function, storing its results to avoid redundant calculations.\nSample Input: fibonacci, 10\nSample Output: 55\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that memoizes a given function using a dictionary to store previously computed results. This way, the function will only compute the result for a given input if it hasn't been computed before.\n\n```python\ndef memoize(func):\n    \"\"\"\n    Memoize a given function by storing its results in a dictionary.\n    \"\"\"\n    cache = {}\n\n    def wrapper(*args):\n        key = str(args)\n        if key not in cache:\n            cache[key] = func(*args)\n        return cache[key]\n\n    return wrapper\n\n@memoize\ndef fibonacci(n):\n    \"\"\"\n    Calculate the nth Fibonacci number.\n    \"\"\"\n    if n < 2:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)\n```\n\nYou can use this memoized function just like any other function. Here's an example:\n\n```python\nprint(fibonacci(10))  # Output: 55\n```\n\nThis function will cache the results of `fibonacci(n)` for a given `n`, so subsequent calls to `fibonacci(n)` will return the cached result instead of recomputing it.",
+  "error": null,
+  "elapsed_seconds": 2.98,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

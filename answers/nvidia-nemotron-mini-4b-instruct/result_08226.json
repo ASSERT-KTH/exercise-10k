@@ -1,0 +1,9 @@
+{
+  "id": 8226,
+  "title": "Password Validator",
+  "prompt": "Create a program that validates a password using if/else statements\nSample Input: password123\nSample Output: Valid password\n",
+  "answer": "Sure, I'd be happy to help you create a program that validates a password using if/else statements. Here's an example Python code that meets your requirements:\n\n```python\ndef validate_password():\n    \"\"\"\n    Validates a password using if/else statements.\n\n    :return: A string indicating whether the password is valid or not.\n    \"\"\"\n\n    # Get user input for the password\n    password = input(\"Please enter a password: \")\n\n    # Define the criteria for a valid password\n    valid_criteria = [\n        len(password) >= 8,  # Minimum length of 8 characters\n        any(char.isupper() for char in password),  # At least one uppercase letter\n        any(char.islower() for char in password),  # At least one lowercase letter\n        any(char.isdigit() for char in password),  # At least one digit\n        not all(char.isalpha() or char.isspace() for char in password),  # No all-alphanumeric characters\n    ]\n\n    # Check if the password meets all criteria\n    valid = all(valid_criteria)\n\n    # Output the result\n    if valid:\n        print(\"Valid password\")\n    else:\n        print(\"Invalid password\")\n\n# Call the function\nvalidate_password()\n```\n\nThis program prompts the user to enter a password, then checks if it meets the following criteria:\n\n1. Minimum length of 8 characters\n2. At least one uppercase letter\n3. At least one lowercase letter\n4. At least one digit\n5. No all-alphanumeric characters (i.e., no characters that are only letters or spaces)\n\nIf the password meets all criteria, the program outputs \"Valid password\"; otherwise, it outputs \"Invalid password\".",
+  "error": null,
+  "elapsed_seconds": 4.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

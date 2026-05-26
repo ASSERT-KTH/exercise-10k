@@ -1,0 +1,9 @@
+{
+  "id": 2932,
+  "title": "Matrix Printing",
+  "prompt": "Create a program that uses nested for loops to print a matrix of numbers.\nSample Input: [[1, 2], [3, 4]]\nSample Output: 1 2\n3 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses nested for loops to print a matrix of numbers:\n```python\ndef print_matrix(matrix):\n    \"\"\"Print a matrix of numbers using nested for loops.\"\"\"\n    # Ensure the input is a list of lists\n    if not all(isinstance(row, list) for row in matrix):\n        raise ValueError(\"Input should be a list of lists\")\n\n    # Print each row of the matrix\n    for row in matrix:\n        # Print each element in the current row\n        for element in row:\n            print(element, end=\" \")\n        print()  # Print a newline after each row\n\n# Example usage\nmatrix = [[1, 2], [3, 4]]\nprint_matrix(matrix)\n```\nWhen you run this program with the sample input `[[1, 2], [3, 4]]`, it will output:\n```yaml\n1 2\n3 4\n```\nThis program first checks if the input is a list of lists. If not, it raises a `ValueError`. Then, it uses nested for loops to iterate over each row and element in the matrix, printing each element with a space as a separator. Finally, it prints a newline character after each row to create a formatted output.",
+  "error": null,
+  "elapsed_seconds": 2.91,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

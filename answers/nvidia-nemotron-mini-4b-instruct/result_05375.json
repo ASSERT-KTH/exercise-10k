@@ -1,0 +1,9 @@
+{
+  "id": 5375,
+  "title": "Array Union",
+  "prompt": "Write a program to find the union of two or more arrays.\nSample Input: [1, 2, 3], [2, 3, 4]\nSample Output: [1, 2, 3, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the union of two or more arrays using set data structure, which automatically removes duplicates and provides fast lookup time.\n\n```python\ndef union(*arrays):\n    \"\"\"\n    Find the union of two or more arrays.\n\n    :param arrays: Variable number of arrays to find the union of.\n    :return: A new array containing the union of the input arrays.\n    \"\"\"\n    # Convert all arrays to sets to remove duplicates and convert back to lists\n    unique_elements = set().union(*[set(arr) for arr in arrays])\n\n    # Convert the set back to a list and return it\n    return list(unique_elements)\n\n# Example usage\narrays = [1, 2, 3], [2, 3, 4]\nprint(union(*arrays))  # Output: [1, 2, 3, 4]\n```\n\nThis program works by first converting all input arrays to sets, which automatically removes any duplicate elements. Then, it uses the `set.union()` method to combine all the unique elements from all the sets into a single set. Finally, it converts the set back to a list and returns it as the result.",
+  "error": null,
+  "elapsed_seconds": 3.01,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

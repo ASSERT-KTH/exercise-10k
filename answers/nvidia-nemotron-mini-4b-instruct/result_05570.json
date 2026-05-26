@@ -1,0 +1,9 @@
+{
+  "id": 5570,
+  "title": "Password Validator",
+  "prompt": "Write a program that takes a password as input and outputs whether it meets certain criteria (e.g. length, special characters, etc.)\nSample Input: password123!\nSample Output: Valid password\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program checks if the password meets the following criteria:\n\n1. Length: The password must be at least 8 characters long.\n2. Special characters: The password must contain at least one special character (e.g., !, @, #, $, %, ^, &, *, (, ), [, ], {, }, ~, -, _, +, =, \\).\n\n```python\nimport re\n\ndef is_valid_password(password):\n    # Check length\n    if len(password) < 8:\n        return False, \"Password must be at least 8 characters long.\"\n\n    # Check special characters\n    special_chars = set(\"!@#$%^&*()_+=-~`{}|:;<>,.?\")\n    if not any(char in special_chars for char in password):\n        return False, \"Password must contain at least one special character.\"\n\n    # Check other criteria (e.g., no consecutive identical characters)\n    # ... (you can add more checks here, e.g., no common words in a dictionary)\n\n    return True, \"Valid password\"\n\n# Get user input\npassword = input(\"Enter a password: \")\n\n# Check validity\nvalid, message = is_valid_password(password)\n\n# Output result\nif valid:\n    print(message)\nelse:\n    print(message)\n```\n\nThis program defines a function `is_valid_password` that takes a password as input and returns a boolean value indicating whether the password is valid and a message describing the validity. You can add more checks to the function as needed.",
+  "error": null,
+  "elapsed_seconds": 3.88,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

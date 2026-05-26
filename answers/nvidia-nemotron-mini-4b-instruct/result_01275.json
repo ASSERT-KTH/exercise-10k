@@ -1,0 +1,9 @@
+{
+  "id": 1275,
+  "title": "Array Transposition",
+  "prompt": "Write a program to transpose a 2D array.\nSample Input: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nSample Output: [[1, 4, 7], [2, 5, 8], [3, 6, 9]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that transposes a 2D array (list of lists) as per your sample input:\n\n```python\ndef transpose(arr):\n    # Get the number of rows and columns\n    n = len(arr)\n    m = len(arr[0])\n\n    # Initialize a new 2D array with the same dimensions as the original array\n    transposed_arr = [[0] * m for _ in range(n)]\n\n    # Populate the transposed array using nested loops\n    for i in range(n):\n        for j in range(m):\n            transposed_arr[j][i] = arr[i][j]\n\n    return transposed_arr\n\n# Example usage\nsample_input = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\ntransposed_output = transpose(sample_input)\n\nfor row in transposed_output:\n    print(row)\n```\n\nWhen you run this program with your sample input, it will output:\n\n```\n[1, 4, 7]\n[2, 5, 8]\n[3, 6, 9]\n```\n\nThis is the transposed version of your sample input. The `transpose()` function first gets the number of rows and columns in the input array, then initializes a new 2D array with the same dimensions as the original array. It then uses nested loops to populate the transposed array with the corresponding values from the original array.",
+  "error": null,
+  "elapsed_seconds": 5.64,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4455,
+  "title": "Word Counter",
+  "prompt": "Create a program that counts the number of occurrences of each word in a given text. The user should be able to input the text and the program should then print out the word counts.\nSample Input: hello world hello\nSample Output: hello: 2, world: 1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses the `collections.Counter` class to count the occurrences of each word in the text, and then prints out the word counts in the desired format.\n\n```python\nfrom collections import Counter\n\ndef count_word_occurrences(text):\n    \"\"\"\n    Count the number of occurrences of each word in a given text.\n\n    :param text: The input text as a string\n    :return: None\n    \"\"\"\n\n    # Split the text into words, convert to lowercase, and remove punctuation\n    words = [word.lower() for word in text.lower().split() if word.isalnum()]\n\n    # Count the occurrences of each word using Counter\n    word_counts = Counter(words)\n\n    # Print the word counts in the desired format\n    for word, count in word_counts.items():\n        print(f\"{word}: {count}\")\n\n# Get user input\nuser_text = input(\"Enter a text: \")\n\n# Call the function with the user input\ncount_word_occurrences(user_text)\n```\n\nWhen you run this program and enter the sample input \"hello world hello\", it will output:\n\n```\nhello: 2\nworld: 1\n```",
+  "error": null,
+  "elapsed_seconds": 3.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

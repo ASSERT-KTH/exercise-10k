@@ -1,0 +1,9 @@
+{
+  "id": 1475,
+  "title": "Input Validation for Floats",
+  "prompt": "Write a program that takes a string input from the user, checks if it can be converted to a floating-point number, and prints a success message if valid.\nSample Input: 3.14\nSample Output: Input is a valid floating-point number.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef is_valid_float(input_str):\n    \"\"\"Check if a string can be converted to a floating-point number.\"\"\"\n    try:\n        float(input_str)\n        return True\n    except ValueError:\n        return False\n\ndef main():\n    user_input = input(\"Please enter a string: \")\n    if is_valid_float(user_input):\n        print(f\"Input is a valid floating-point number: {user_input}\")\n    else:\n        print(\"Input is not a valid floating-point number.\")\n\n# Call the main function\nmain()\n```\nThis program defines a helper function `is_valid_float` that checks if a given string can be converted to a floating-point number using the `float()` function. The `main` function prompts the user for input, checks if it's valid, and prints a success message or an error message accordingly.\n\nWhen you run this program, it will prompt you to enter a string. If you enter a valid floating-point number (e.g., `3.14`), the program will print a success message. If you enter an invalid string (e.g., `hello`), the program will print an error message.",
+  "error": null,
+  "elapsed_seconds": 3.7,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

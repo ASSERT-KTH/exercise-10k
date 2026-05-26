@@ -1,0 +1,9 @@
+{
+  "id": 2810,
+  "title": "Word Scramble",
+  "prompt": "Write a program to scramble a word and ask the user to unscramble it.\nSample Input: tias\nSample Output: The unscrambled word is: cats\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses a simple algorithm to scramble a word by swapping its letters in a random order. Then, it asks the user to unscramble the scrambled word.\n\n```python\nimport random\n\ndef scramble_word(word):\n    \"\"\"Scramble a word by swapping its letters in a random order.\"\"\"\n    scrambled_word = list(word)\n    random.shuffle(scrambled_word)\n    return ''.join(scrambled_word)\n\ndef unscramble_word(scrambled_word):\n    \"\"\"Unscramble a scrambled word by swapping its letters in the original order.\"\"\"\n    word = list(scrambled_word)\n    original_order = list(word)\n    original_order.sort()\n    for i, char in enumerate(original_order):\n        word[i] = char\n    return ''.join(word)\n\n# Get user input\nuser_input = input(\"Enter a word to scramble: \")\n\n# Scramble the word\nscrambled_word = scramble_word(user_input)\n\n# Ask the user to unscramble the word\nprint(f\"The unscrambled word is: {unscramble_word(scrambled_word)}\")\n```\n\nYou can run this program and enter a word like \"tias\" to see the scrambled and unscrambled versions. The program will print the unscrambled word in the format \"The unscrambled word is: [original_word]\".",
+  "error": null,
+  "elapsed_seconds": 3.53,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

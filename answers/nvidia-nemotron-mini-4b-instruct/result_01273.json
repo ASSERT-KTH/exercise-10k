@@ -1,0 +1,9 @@
+{
+  "id": 1273,
+  "title": "Array Chunking",
+  "prompt": "Write a program to split an array into chunks of a specified size.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [[1, 2], [3, 4], [5]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that splits an array into chunks of a specified size:\n```python\ndef split_array_into_chunks(arr, chunk_size):\n    \"\"\"\n    Splits an array into chunks of a specified size.\n\n    Parameters:\n    arr (list): The input array to be split.\n    chunk_size (int): The size of each chunk.\n\n    Returns:\n    list: A list of lists, where each inner list contains elements from the input array in chunks of size chunk_size.\n    \"\"\"\n    # Check if the input is valid\n    if not isinstance(arr, list) or not all(isinstance(x, (int, float)) for x in arr):\n        raise ValueError(\"Input array must be a list of numbers.\")\n    if not isinstance(chunk_size, int) or chunk_size <= 0:\n        raise ValueError(\"Chunk size must be a positive integer.\")\n\n    # Split the array into chunks and return them as a list of lists\n    return [arr[i:i+chunk_size] for i in range(0, len(arr), chunk_size)]\n```\nHere's an example of how to use this function:\n```python\narr = [1, 2, 3, 4, 5]\nchunk_size = 2\n\nresult = split_array_into_chunks(arr, chunk_size)\nprint(result)  # Output: [[1, 2], [3, 4], [5]]\n```\nThis function first checks if the input is valid, and then uses a list comprehension to split the array into chunks of the specified size. The resulting chunks are returned as a list of lists.",
+  "error": null,
+  "elapsed_seconds": 5.45,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

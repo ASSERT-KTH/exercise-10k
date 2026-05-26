@@ -1,0 +1,9 @@
+{
+  "id": 5660,
+  "title": "Function Timer",
+  "prompt": "Create a function that measures the execution time of another function.\nSample Input: example_function\nSample Output: The execution time of example_function\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that measures the execution time of another function using the `time` module. This function, `measure_execution_time`, takes an optional `name` parameter to provide a descriptive output message.\n\n```python\nimport time\n\ndef measure_execution_time(func, name=None):\n    \"\"\"\n    Measures the execution time of a given function.\n\n    Parameters:\n    func (callable): The function to measure the execution time of.\n    name (str, optional): A descriptive name for the function. If not provided,\n                          the function name is used.\n\n    Returns:\n    str: A string containing the execution time of the given function.\n    \"\"\"\n\n    # Measure the execution time\n    start_time = time.time()\n    result = func()\n    end_time = time.time()\n\n    # Calculate and format the execution time\n    execution_time = end_time - start_time\n    execution_time_str = f\"{execution_time:.6f}\" if execution_time > 0 else \"0.000001\"\n\n    if name is None:\n        name = func.__name__\n\n    return f\"The execution time of {name} is {execution_time_str} seconds.\"\n```\n\nHere's an example of how to use this function:\n\n```python\ndef example_function():\n    \"\"\"An example function to measure the execution time of.\"\"\"\n    import random\n\n    for _ in range(1000000):\n        random.randint(0, 1000000)\n\nprint(measure_execution_time(example_function))\n```\n\nThis will output something like:\n\n```\nThe execution time of example_function is 0.000001 seconds.\n```",
+  "error": null,
+  "elapsed_seconds": 4.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

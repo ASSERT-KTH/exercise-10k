@@ -1,0 +1,9 @@
+{
+  "id": 498,
+  "title": "List Partitioning",
+  "prompt": "Write a program that takes a list and a predicate function as input, and returns two separate lists containing elements that satisfy and don't satisfy the predicate function.\nSample Input: [1, 2, 3, 4, 5], lambda x: x % 2 == 0\nSample Output: [2, 4], [1, 3, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef filter_predicate(lst, predicate):\n    \"\"\"\n    Filters a list using a given predicate function.\n\n    Parameters:\n    lst (list): The list to filter.\n    predicate (callable): A function that takes one argument and returns a boolean.\n\n    Returns:\n    tuple: A tuple of two lists, where the first list contains elements that satisfy the predicate,\n          and the second list contains elements that don't satisfy the predicate.\n    \"\"\"\n    # Use a list comprehension to filter the list based on the predicate function\n    satisfied = [item for item in lst if predicate(item)]\n    not_satisfied = [item for item in lst if not predicate(item)]\n\n    return satisfied, not_satisfied\n\n# Example usage\nnumbers = [1, 2, 3, 4, 5]\neven_numbers = lambda x: x % 2 == 0\n\nsatisfied, not_satisfied = filter_predicate(numbers, even_numbers)\nprint(satisfied)  # [2, 4]\nprint(not_satisfied)  # [1, 3, 5]\n```\nThis program defines a function `filter_predicate` that takes a list and a predicate function as input, and returns two separate lists containing elements that satisfy and don't satisfy the predicate function. The function uses a list comprehension to filter the list based on the predicate function, and then returns the two filtered lists as a tuple. The example usage shows how to use the function with a list of numbers and a lambda function that checks if a number is even.",
+  "error": null,
+  "elapsed_seconds": 6.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

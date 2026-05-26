@@ -1,0 +1,9 @@
+{
+  "id": 4432,
+  "title": "Alarm Clock",
+  "prompt": "Create a program that acts as an alarm clock using a while loop to wait for the alarm time.\nSample Input: 08:00\nSample Output: Wake up!\n",
+  "answer": "Sure, I'd be happy to help you create an alarm clock program using a while loop in Python. Here's a simple implementation that waits for the alarm time to be entered and then announces the alarm. Make sure to replace `alarm_time` with the actual alarm time you want to set.\n\n```python\ndef alarm_clock():\n    \"\"\"\n    A simple alarm clock program using a while loop.\n    \"\"\"\n\n    # Get the alarm time from the user\n    alarm_time = input(\"Enter the alarm time (e.g., 08:00): \")\n\n    # Format the alarm time in a 24-hour format\n    alarm_time = alarm_time.replace(':', ' ').strip().lstrip('0').zfill(5)\n\n    # Initialize the current time\n    current_time = 0\n\n    # Main loop to wait for the alarm time\n    while current_time != alarm_time:\n        # Get the current time every second\n        current_time = int(input(\"Current time: \").strip())\n\n    # Announce the alarm\n    print(f\"Wake up! The alarm is set for {alarm_time}.\")\n\n\nif __name__ == \"__main__\":\n    alarm_clock()\n```\n\nThis program will wait for the user to enter the alarm time and then compare it to the current time using a while loop. When the current time matches the alarm time, it will announce the alarm. Make sure to replace `alarm_time` with the actual alarm time you want to set.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

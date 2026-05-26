@@ -1,0 +1,9 @@
+{
+  "id": 8127,
+  "title": "Simple Calculator",
+  "prompt": "Write a program that implements a simple calculator using if/else statements\nSample Input: 2 + 2\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a simple Python program that implements a calculator using if/else statements. This program can perform addition, subtraction, multiplication, and division operations.\n\n```python\ndef calculate(operation, num1, num2):\n    \"\"\"\n    Performs a simple calculator operation using if/else statements.\n\n    :param operation: The operation to perform ('+', '-', '*', or '/').\n    :param num1: The first number.\n    :param num2: The second number.\n    :return: The result of the calculation.\n    \"\"\"\n\n    # Define the calculation functions\n    def add(a, b):\n        return a + b\n\n    def subtract(a, b):\n        return a - b\n\n    def multiply(a, b):\n        return a * b\n\n    def divide(a, b):\n        if b == 0:\n            raise ValueError(\"Cannot divide by zero.\")\n        return a / b\n\n    # Perform the calculation\n    if operation == '+':\n        result = add(num1, num2)\n    elif operation == '-':\n        result = subtract(num1, num2)\n    elif operation == '*':\n        result = multiply(num1, num2)\n    elif operation == '/':\n        result = divide(num1, num2)\n    else:\n        raise ValueError(\"Invalid operation.\")\n\n    return result\n\n# Example usage\nprint(calculate('+', 2, 2))  # Output: 4\nprint(calculate('-', 5, 3))  # Output: 2\nprint(calculate('*', 4, 2))  # Output: 8\nprint(calculate('/', 8, 4))  # Output: 2.0\n```\n\nThis program defines a function `calculate` that takes an operation, two numbers, and performs the calculation using the defined functions. You can extend this program to include more operations and calculation functions as needed.",
+  "error": null,
+  "elapsed_seconds": 4.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5049,
+  "title": "Calculate Variance",
+  "prompt": "Create a program that calculates the variance of a list of numbers.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 2.0\n",
+  "answer": "Sure, I'd be happy to help you create a program that calculates the variance of a list of numbers. Here's a Python solution using the built-in `statistics` module, which provides a function for calculating statistical moments, including variance.\n\n```python\nimport statistics\n\ndef calculate_variance(numbers):\n    \"\"\"\n    Calculates the variance of a list of numbers.\n\n    :param numbers: List of numbers\n    :return: Variance of the numbers\n    \"\"\"\n    if not numbers:\n        raise ValueError(\"Input list cannot be empty\")\n\n    mean = statistics.mean(numbers)\n    variance = statistics.variance(numbers, mean)\n\n    return variance\n\n# Example usage\nsample_input = [1, 2, 3, 4, 5]\nvariance = calculate_variance(sample_input)\nprint(f\"The variance of {sample_input} is {variance}.\")\n```\n\nThis program defines a function `calculate_variance` that takes a list of numbers as input and returns the variance. It first calculates the mean of the numbers using the `statistics.mean` function, and then uses the `statistics.variance` function to calculate the variance. The function checks if the input list is empty and raises a `ValueError` if it is. The example usage demonstrates how to use the function with a sample input list.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

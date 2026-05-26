@@ -1,0 +1,9 @@
+{
+  "id": 3417,
+  "title": "Dictionary Transformation",
+  "prompt": "Create a program to transform a given dictionary into a different data structure, such as a list of tuples.\nSample Input: {'name': 'John', 'age': 25, 'city': 'New York'}\nSample Output: [('name', 'John'), ('age', 25), ('city', 'New York')]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that transforms a given dictionary into a list of tuples, where each tuple contains a key and its corresponding value:\n```python\ndef dict_to_tuples(d):\n    \"\"\"\n    Transforms a given dictionary into a list of tuples, where each tuple contains a key and its corresponding value.\n\n    :param d: The input dictionary\n    :return: A list of tuples representing the key-value pairs in the dictionary\n    \"\"\"\n    return [(k, d[k]) for k in d]\n\n# Example usage\ninput_dict = {'name': 'John', 'age': 25, 'city': 'New York'}\noutput_list = dict_to_tuples(input_dict)\nprint(output_list)  # Output: [('name', 'John'), ('age', 25), ('city', 'New York')]\n```\nThis program defines a function `dict_to_tuples` that takes a dictionary as input and returns a list of tuples representing the key-value pairs in the dictionary. The function uses a list comprehension to iterate over the keys in the dictionary and create a tuple for each key-value pair. The resulting list of tuples is then returned.",
+  "error": null,
+  "elapsed_seconds": 2.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

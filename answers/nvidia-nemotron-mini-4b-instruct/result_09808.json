@@ -1,0 +1,9 @@
+{
+  "id": 9808,
+  "title": "Array Indexing and Slicing",
+  "prompt": "Write a program that takes an array of integers as input and returns the sum of all elements at even indices and the sum of all elements at odd indices. The program should handle arrays of varying lengths and element values.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: Even index sum: 6, Odd index sum: 9\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef split_array(arr):\n    \"\"\"\n    Splits an array into two arrays, one containing elements at even indices,\n    and one containing elements at odd indices.\n    \"\"\"\n    even_indices = [arr[i] for i in range(len(arr)) if i % 2 == 0]\n    odd_indices = [arr[i] for i in range(len(arr)) if i % 2 != 0]\n    return even_indices, odd_indices\n\ndef sum_indices(arr):\n    \"\"\"\n    Calculates the sum of all elements at even indices and the sum of all\n    elements at odd indices.\n    \"\"\"\n    even_sum, odd_sum = 0, 0\n    even_indices, odd_indices = split_array(arr)\n    for num in even_indices:\n        even_sum += num\n    for num in odd_indices:\n        odd_sum += num\n    return even_sum, odd_sum\n\n# Test the function with the provided sample input\narr = [1, 2, 3, 4, 5]\neven_sum, odd_sum = sum_indices(arr)\nprint(\"Even index sum:\", even_sum)\nprint(\"Odd index sum:\", odd_sum)\n```\n\nThis program defines two functions: `split_array` and `sum_indices`. The `split_array` function splits the input array into two arrays based on whether the index is even or odd. The `sum_indices` function calculates the sums of the elements in the two resulting arrays and returns them. The test code at the end of the program demonstrates how to use the `sum_indices` function with a sample input.",
+  "error": null,
+  "elapsed_seconds": 3.94,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

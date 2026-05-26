@@ -1,0 +1,9 @@
+{
+  "id": 3339,
+  "title": "List Filtering (Lambda Functions)",
+  "prompt": "Write a program that takes a list of integers as input and returns a new list containing only the numbers that satisfy a given condition, using a lambda function.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef filter_numbers(numbers, condition):\n    \"\"\"\n    Filters a list of integers based on a given condition using a lambda function.\n\n    Parameters:\n    numbers (list): A list of integers.\n    condition (callable): A lambda function that takes an integer as input and returns a boolean value.\n\n    Returns:\n    list: A new list containing only the numbers that satisfy the given condition.\n    \"\"\"\n    return [num for num in numbers if condition(num)]\n\n# Example usage:\nnumbers = [1, 2, 3, 4, 5]\n\ndef is_even(num):\n    \"\"\"A lambda function that checks if a number is even.\"\"\"\n    return num % 2 == 0\n\nfiltered_numbers = filter_numbers(numbers, is_even)\nprint(filtered_numbers)  # Output: [2, 4]\n```\nIn this program, the `filter_numbers` function takes a list of integers and a lambda function as input. It uses a list comprehension to filter the list based on the condition specified by the lambda function. The example usage demonstrates how to use the function to filter a list of integers based on whether they are even.",
+  "error": null,
+  "elapsed_seconds": 2.93,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

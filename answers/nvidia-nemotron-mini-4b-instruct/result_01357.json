@@ -1,0 +1,9 @@
+{
+  "id": 1357,
+  "title": "Timing and Sleep",
+  "prompt": "Write a program to demonstrate the use of timing and sleep functions\nSample Input: None\nSample Output: Sleeping for 5 seconds...\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that demonstrates the use of the `time` and `timeit` modules to measure the execution time of a function and the `time` module to simulate a delay using the `sleep()` function:\n\n```python\nimport time\nimport timeit\n\ndef task_function():\n    \"\"\"A simple task function to measure execution time.\"\"\"\n    for _ in range(1000000):  # Simulate some work\n        pass\n\n# Measure execution time without delay\nstart_time = time.time()\ntask_function()\nend_time = time.time()\nexecution_time = end_time - start_time\nprint(f\"Execution time without delay: {execution_time:.6f} seconds\")\n\n# Measure execution time with a delay using sleep()\ndelay_time = 5  # In seconds\nprint(f\"Sleeping for {delay_time} seconds...\")\ntime.sleep(delay_time)\n\n# Measure execution time again after delay\nstart_time = time.time()\ntask_function()\nend_time = time.time()\nexecution_time = end_time - start_time\nprint(f\"Execution time with delay: {execution_time:.6f} seconds\")\n\n# Measure execution time using timeit module\n# This version of the task function is faster, so we'll use it for timing\ntask_function_timeit = timeit.timeit(task_function, number=1000)\nprint(f\"Execution time using timeit: {task_function_timeit:.6f} seconds\")\n```\n\nThis program defines a simple task function that simulates some work, and then measures the execution time without a delay (using the `time` module), with a delay using the `sleep()` function, and using the `timeit` module. The output will show the execution time for each version of the task function.",
+  "error": null,
+  "elapsed_seconds": 4.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

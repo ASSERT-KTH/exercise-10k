@@ -1,0 +1,9 @@
+{
+  "id": 9070,
+  "title": "Simple Timer",
+  "prompt": "Create a program that acts as a simple timer and counts down from a given time using if/else statements\nSample Input: 10\nSample Output: Time's up\n",
+  "answer": "Sure, I'd be happy to help you create a simple timer program using if/else statements. Here's an example in Python:\n\n```python\ndef simple_timer(time_in_seconds):\n    \"\"\"\n    A simple timer that counts down from a given time in seconds.\n\n    :param time_in_seconds: The time to count down in seconds.\n    \"\"\"\n\n    # Validate the input\n    if time_in_seconds < 0:\n        raise ValueError(\"Time must be a non-negative integer.\")\n\n    # Initialize the current time and the time to count down\n    current_time = time_in_seconds\n\n    # Main loop to count down\n    while current_time > 0:\n        print(f\"Time remaining: {current_time} seconds\")\n\n        # Check if the time is up\n        if current_time == 1:\n            print(\"Time's up!\")\n            break\n\n        # Decrement the current time\n        current_time -= 1\n\n# Example usage\ntime_to_count = 10\nsimple_timer(time_to_count)\n```\n\nThis program defines a function `simple_timer` that takes an integer representing the time to count down in seconds. It validates the input, initializes the current time, and then enters a loop that decrements the current time by 1 each iteration. When the current time reaches 1, it prints \"Time's up!\" and breaks out of the loop. The example usage at the end of the code demonstrates how to use the function with a time of 10 seconds.",
+  "error": null,
+  "elapsed_seconds": 3.59,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

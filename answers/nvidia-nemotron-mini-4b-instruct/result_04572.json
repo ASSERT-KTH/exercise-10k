@@ -1,0 +1,9 @@
+{
+  "id": 4572,
+  "title": "Dictionary Symmetric Difference",
+  "prompt": "Write a function that takes two dictionaries and returns a new dictionary with the key-value pairs that exist in either dictionary but not in both\nSample Input: {'a': 1, 'b': 2, 'c': 3}, {'b': 2, 'c': 4, 'd': 5}\nSample Output: {'a': 1, 'c': 3, 'd': 5}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function uses the `set` data structure to efficiently check for keys that exist in either dictionary but not in both.\n\n```python\ndef merge_dicts_excluding_common(dict1, dict2):\n    \"\"\"\n    Returns a new dictionary with the key-value pairs that exist in either dictionary but not in both.\n\n    :param dict1: The first dictionary\n    :param dict2: The second dictionary\n    :return: A new dictionary with unique key-value pairs\n    \"\"\"\n    # Convert input dictionaries to sets for efficient lookup\n    set1 = set(dict1.items())\n    set2 = set(dict2.items())\n\n    # Find keys that exist in either set but not in both\n    result = {key: value for key, value in set1.union(set2) if (key, value) not in set1.intersection(set2)}\n\n    return dict(result)\n```\n\nHere's an example of how to use this function:\n\n```python\ndict1 = {'a': 1, 'b': 2, 'c': 3}\ndict2 = {'b': 2, 'c': 4, 'd': 5}\n\nmerged_dict = merge_dicts_excluding_common(dict1, dict2)\nprint(merged_dict)  # Output: {'a': 1, 'c': 3, 'd': 5}\n```",
+  "error": null,
+  "elapsed_seconds": 3.78,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

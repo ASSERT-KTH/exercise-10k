@@ -1,0 +1,9 @@
+{
+  "id": 5485,
+  "title": "Calculate Average Grade",
+  "prompt": "Write a program to calculate the average grade of a student given their grades in different subjects.\nSample Input: [90, 80, 70, 85, 95]\nSample Output: 84\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the average grade of a student given their grades in different subjects:\n\n```python\ndef calculate_average_grade(grades):\n    \"\"\"\n    Calculates the average grade of a student given their grades in different subjects.\n\n    :param grades: List of integers representing the student's grades in different subjects.\n    :return: Float representing the average grade.\n    \"\"\"\n\n    # Check if the input is a non-empty list\n    if not isinstance(grades, list) or len(grades) == 0:\n        raise ValueError(\"Input should be a non-empty list of integers.\")\n\n    # Calculate the sum of all grades\n    total_grade = sum(grades)\n\n    # Calculate the average grade\n    average_grade = total_grade / len(grades)\n\n    return average_grade\n\n\n# Example usage\nsample_input = [90, 80, 70, 85, 95]\naverage_grade = calculate_average_grade(sample_input)\nprint(f\"The average grade is: {average_grade:.2f}\")\n```\n\nThis program defines a function `calculate_average_grade` that checks if the input is a non-empty list of integers, calculates the sum of all grades, and then divides the sum by the number of grades to get the average grade. The example usage at the end of the program demonstrates how to use the function with a sample input.",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

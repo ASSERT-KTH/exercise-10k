@@ -1,0 +1,9 @@
+{
+  "id": 9800,
+  "title": "Input Validation with Recursion",
+  "prompt": "Write a program that takes an input and validates it using recursion.\nSample Input: hello\nSample Output: Valid input\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that validates an input using recursion. This program checks if the input is a non-empty string containing only lowercase letters. If it's valid, it prints \"Valid input\"; otherwise, it prints an error message.\n\n```python\ndef is_valid_input(input_string):\n    \"\"\"\n    Recursively validate an input string.\n\n    :param input_string: The input string to validate.\n    :return: True if the input is valid, False otherwise.\n    \"\"\"\n\n    # Base case: an empty string is invalid\n    if not input_string:\n        return False\n\n    # Recursive case: check if the first character is a lowercase letter\n    if not input_string[0].isalpha() or not input_string[0].islower():\n        return False\n\n    # Recursively validate the remaining characters\n    return is_valid_input(input_string[1:])\n\n\n# Get user input\nuser_input = input(\"Enter a string: \")\n\n# Validate and print the result\nif is_valid_input(user_input):\n    print(\"Valid input\")\nelse:\n    print(\"Invalid input\")\n```\n\nThis program defines a recursive function `is_valid_input` that checks if a given input string is valid. The base case is when the input string is empty, which is invalid. The recursive case checks if the first character of the input string is a lowercase letter and if the remaining characters are also valid. If the input is valid, the function returns `True`, and if it's invalid, it returns `False`. Finally, the program gets user input, validates it using the recursive function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.94,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

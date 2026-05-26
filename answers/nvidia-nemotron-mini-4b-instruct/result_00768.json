@@ -1,0 +1,9 @@
+{
+  "id": 768,
+  "title": "Scope of Variables",
+  "prompt": "Write a program that demonstrates the concept of variable scope by declaring variables inside and outside a function.\nSample Input: None\nSample Output: Variable x is 10, Variable y is 20\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that demonstrates the concept of variable scope by declaring variables inside and outside a function:\n\n```python\n# Variable declared outside the function\nx = 10\n\ndef my_function():\n    # Variable declared inside the function\n    y = 20\n\n    # Accessing the global variable x\n    print(f\"Variable x is {x}\")\n\n    # Returning the local variable y\n    return y\n\n# Calling the function\nresult = my_function()\n\n# Accessing the local variable y (which is no longer in scope after the function returns)\nprint(f\"Variable y is {result}\")\n\n# Accessing the global variable x\nprint(f\"Variable x is {x}\")\n```\n\nWhen you run this program, you'll see the following output:\n\n```\nVariable x is 10\nVariable y is 20\nVariable y is 20\nVariable x is 10\n```\n\nIn this program, we declare a global variable `x` outside the function. Inside the function, we declare a local variable `y`. When we call the function, we store the returned value of `y` in a variable `result`. After the function returns, we can no longer access the local variable `y`, but we can still access the global variable `x`. This demonstrates the concept of variable scope, where variables declared inside a function are local to that function and cannot be accessed outside the function, while global variables can be accessed from anywhere in the program.",
+  "error": null,
+  "elapsed_seconds": 3.47,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4236,
+  "title": "Basketball Game Simulator",
+  "prompt": "Write a program to simulate a basketball game, including scoring and timing.\nSample Input: Team A 10 Team B 5\nSample Output: Team A wins: 10-5\n",
+  "answer": "Here's a Python program that simulates a basketball game and prints the result based on the given input. This program keeps track of the score for both teams and updates it after each score.\n\n```python\ndef play_basketball():\n    team_a_score = 0\n    team_b_score = 0\n\n    while True:\n        print(f\"Team A: {team_a_score}  Team B: {team_b_score}\")\n\n        user_input = input(\"Enter the score for Team A (or type 'end' to finish): \").strip()\n\n        if user_input.lower() == 'end':\n            break\n\n        try:\n            team_a_score += int(user_input)\n        except ValueError:\n            print(\"Invalid input. Please enter a number.\")\n            continue\n\n        user_input = input(\"Enter the score for Team B (or type 'end' to finish): \").strip()\n\n        if user_input.lower() == 'end':\n            break\n\n        try:\n            team_b_score += int(user_input)\n        except ValueError:\n            print(\"Invalid input. Please enter a number.\")\n\n    if team_a_score > team_b_score:\n        print(f\"Team A wins: {team_a_score}-{team_b_score}\")\n    elif team_a_score < team_b_score:\n        print(f\"Team B wins: {team_b_score}-{team_a_score}\")\n    else:\n        print(\"It's a tie!\")\n\n\nif __name__ == \"__main__\":\n    play_basketball()\n```\n\nThis program will keep running until the user enters 'end' for both teams. It will then print the final score and result based on which team has the higher score.",
+  "error": null,
+  "elapsed_seconds": 4.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

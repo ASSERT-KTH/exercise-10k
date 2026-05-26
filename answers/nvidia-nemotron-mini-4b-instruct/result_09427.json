@@ -1,0 +1,9 @@
+{
+  "id": 9427,
+  "title": "Function with Reduce Function",
+  "prompt": "Create a function that takes a list of numbers and returns their product using the reduce function\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 120\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses the `reduce` function from the `functools` module to calculate the product of a list of numbers. The `reduce` function applies a binary function (in this case, multiplication) to an iterable (in this case, the list of numbers), reducing it to a single value.\n\n```python\nfrom functools import reduce\n\ndef product_of_list(numbers):\n    \"\"\"\n    Calculates the product of a list of numbers using the reduce function.\n\n    :param numbers: List of numbers\n    :return: Product of the numbers\n    \"\"\"\n    if not numbers:\n        raise ValueError(\"Input list cannot be empty\")\n\n    return reduce(lambda x, y: x * y, numbers)\n```\n\nHere's an example of how to use this function:\n\n```python\nnumbers = [1, 2, 3, 4, 5]\nresult = product_of_list(numbers)\nprint(result)  # Output: 120\n```\n\nThis function first checks if the input list is empty and raises a `ValueError` if it is. Then, it uses the `reduce` function to calculate the product of the numbers in the list. The lambda function passed to `reduce` multiplies the current value (`x`) with the next number (`y`) in the list.",
+  "error": null,
+  "elapsed_seconds": 3.2,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1904,
+  "title": "Circle Circumference and Area",
+  "prompt": "Calculate and display the circumference and area of a circle given the radius.\nSample Input: 4\nSample Output: Circumference: 25.132741228718345, Area: 50.26548245743669\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution that calculates the circumference and area of a circle given the radius, and displays them with the specified format:\n\n```python\nimport math\n\ndef calculate_circle_properties(radius):\n    \"\"\"\n    Calculate the circumference and area of a circle given the radius.\n\n    :param radius: The radius of the circle.\n    :return: A tuple containing the circumference and area of the circle.\n    \"\"\"\n\n    # Calculate the circumference and area\n    circumference = 2 * math.pi * radius\n    area = math.pi * (radius ** 2)\n\n    # Format the output with two decimal places\n    circumference_formatted = \"{:.2f}\".format(circumference)\n    area_formatted = \"{:.2f}\".format(area)\n\n    return circumference_formatted, area_formatted\n\n# Get the radius from the user\nradius = float(input(\"Enter the radius of the circle: \"))\n\n# Calculate and display the circumference and area\ncircumference, area = calculate_circle_properties(radius)\nprint(f\"Circumference: {circumference}, Area: {area}\")\n```\n\nThis program defines a function `calculate_circle_properties` that takes the radius as an argument, calculates the circumference and area, and returns them as a tuple. The function uses the `math` module to perform the calculations and format the output with two decimal places using the `format` method. The program then gets the radius from the user, calls the function, and displays the results.",
+  "error": null,
+  "elapsed_seconds": 3.7,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

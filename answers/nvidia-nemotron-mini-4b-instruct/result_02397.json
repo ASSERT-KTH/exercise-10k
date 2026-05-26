@@ -1,0 +1,9 @@
+{
+  "id": 2397,
+  "title": "Fractal Tree",
+  "prompt": "Write a program that generates a fractal tree using a while loop.\nSample Input: 10\nSample Output: A visual representation of the fractal tree\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates a fractal tree using a while loop. This program will create a visual representation of the fractal tree using ASCII art. You can adjust the size of the tree by changing the value passed to the function.\n\n```python\nimport os\n\ndef generate_tree(size):\n    \"\"\"\n    Generate a fractal tree using a while loop.\n\n    :param size: The size of the tree (number of levels).\n    :return: A visual representation of the fractal tree.\n    \"\"\"\n\n    # Define the tree structure\n    tree = [\n        ['.' for _ in range(2*size-1)] for _ in range(size)\n    ]\n\n    # Generate the tree using a while loop\n    i = size - 1\n    while i > 0:\n        # Draw the left branch\n        for j in range(i):\n            tree[j][j*2-1] = '|'\n            tree[j][j*2] = ' '\n\n        # Draw the right branch\n        for j in range(i-1, -1, -1):\n            tree[j][j*2+1] = '|'\n            tree[j][j*2+2] = ' '\n\n        # Move to the next level\n        i -= 1\n\n    # Print the tree\n    for row in tree:\n        print(''.join(row))\n\n# Get user input for the size of the tree\nsize = int(input(\"Enter the size of the fractal tree (number of levels): \"))\n\n# Generate and print the tree\ngenerate_tree(size)\n\n# Clear the console to make the output more readable\nos.system('cls' if os.name == 'nt' else 'clear')\n```\n\nThis program will generate a fractal tree with the specified size and print it to the console. You can adjust the size by changing the value passed to the `generate_tree` function.",
+  "error": null,
+  "elapsed_seconds": 4.7,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6478,
+  "title": "List to Dictionary",
+  "prompt": "Write a function that takes a list of key-value pairs as input and returns a dictionary\nSample Input: [['name', 'John'], ['age', 30]]\nSample Output: {'name': 'John', 'age': 30}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef list_to_dict(key_value_pairs):\n    \"\"\"\n    Converts a list of key-value pairs into a dictionary.\n\n    Parameters:\n    key_value_pairs (list): A list of tuples, where each tuple contains a key and a value.\n\n    Returns:\n    dict: A dictionary containing the key-value pairs.\n    \"\"\"\n    # Check if the input is a non-empty list\n    if not key_value_pairs or not isinstance(key_value_pairs, list) or len(key_value_pairs) == 0:\n        raise ValueError(\"Input should be a non-empty list of tuples\")\n\n    # Extract keys and values from the list of tuples\n    keys = [pair[0] for pair in key_value_pairs]\n    values = [pair[1] for pair in key_value_pairs]\n\n    # Create and return the dictionary\n    return dict(zip(keys, values))\n```\nHere's an example of how to use this function:\n```python\nkey_value_pairs = [['name', 'John'], ['age', 30]]\nresult = list_to_dict(key_value_pairs)\nprint(result)  # Output: {'name': 'John', 'age': 30}\n```\nThis function first checks if the input is a non-empty list. If not, it raises a `ValueError`. Then, it extracts the keys and values from the list of tuples using list comprehensions and creates a dictionary using the `dict()` constructor with the `zip()` function.",
+  "error": null,
+  "elapsed_seconds": 4.18,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

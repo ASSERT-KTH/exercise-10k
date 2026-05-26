@@ -1,0 +1,9 @@
+{
+  "id": 4158,
+  "title": "Dictionary Filter",
+  "prompt": "Write a function to filter a dictionary based on a condition.\nSample Input: {'name': 'John', 'age': 30, 'country': 'USA'}, lambda x: x.startswith('J')\nSample Output: {'name': 'John'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It takes a dictionary and a lambda function as input, and returns a new dictionary containing only the items that satisfy the condition defined by the lambda function.\n\n```python\ndef filter_dict(d, condition):\n    \"\"\"\n    Filters a dictionary based on a condition defined by a lambda function.\n\n    Parameters:\n    d (dict): The input dictionary.\n    condition (callable): A lambda function that takes a dictionary item as input and returns a boolean value.\n                           The function should return True if the item should be included in the filtered dictionary,\n                           and False otherwise.\n\n    Returns:\n    dict: A new dictionary containing only the items that satisfy the condition.\n    \"\"\"\n    return {k: v for k, v in d.items() if condition(d[k])}\n```\n\nHere's an example of how to use this function:\n\n```python\npeople = {'name': 'John', 'age': 30, 'country': 'USA', 'city': 'New York'}\n\ndef starts_with_J(item):\n    return item.startswith('J')\n\nfiltered_people = filter_dict(people, starts_with_J)\nprint(filtered_people)  # Output: {'name': 'John'}\n```",
+  "error": null,
+  "elapsed_seconds": 3.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

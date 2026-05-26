@@ -1,0 +1,9 @@
+{
+  "id": 4756,
+  "title": "Absolute Value",
+  "prompt": "Write a program that takes a number as input and returns its absolute value\nSample Input: -5\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a simple Python program that takes a number as input and returns its absolute value:\n\n```python\ndef get_absolute_value(num):\n    \"\"\"\n    This function takes a number as input and returns its absolute value.\n\n    :param num: The number to find the absolute value of.\n    :return: The absolute value of the input number.\n    \"\"\"\n\n    # Check if the input is a number (to avoid errors with non-numeric inputs)\n    if not isinstance(num, (int, float)):\n        raise TypeError(\"The input must be a number.\")\n\n    # Return the absolute value of the input number\n    return abs(num)\n\n# Get user input and call the function\nuser_input = input(\"Enter a number: \")\ntry:\n    absolute_value = get_absolute_value(float(user_input))\n    print(f\"The absolute value of {user_input} is {absolute_value}.\")\nexcept ValueError:\n    print(\"Invalid input. Please enter a number.\")\n```\n\nThis program defines a function `get_absolute_value` that checks if the input is a number, then uses the built-in `abs` function to find its absolute value. The program then prompts the user to enter a number, converts the user input to a float if necessary, and calls the function with the user input to get the absolute value.",
+  "error": null,
+  "elapsed_seconds": 3.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

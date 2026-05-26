@@ -1,0 +1,9 @@
+{
+  "id": 8397,
+  "title": "String Validator",
+  "prompt": "Create a function that takes a string as input and checks if it contains only letters and spaces. If the string is valid, return the string with all letters converted to uppercase. If the string is not valid, return an error message.\nSample Input: Hello World\nSample Output: HELLO WORLD\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\nimport re\n\ndef is_valid_string(s: str) -> str:\n    \"\"\"\n    Check if a string contains only letters and spaces. If valid, convert all letters to uppercase.\n    If not valid, return an error message.\n\n    :param s: The input string\n    :return: The validated and uppercase string, or an error message\n    \"\"\"\n    # Regular expression pattern for a string containing only letters and spaces\n    pattern = r'^[a-zA-Z\\s]*$'\n\n    # Check if the string matches the pattern\n    if re.match(pattern, s):\n        # Convert all letters to uppercase\n        return s.upper()\n    else:\n        return \"Error: The input string does not contain only letters and spaces.\"\n```\nHere's an example of how to use this function:\n```python\nprint(is_valid_string(\"Hello World\"))  # Output: HELLO WORLD\nprint(is_valid_string(\"Hello 123\"))    # Output: Error: The input string does not contain only letters and spaces.\n```\nThis function uses a regular expression pattern to check if the input string contains only letters and spaces. If the string matches the pattern, the function converts all letters to uppercase and returns the validated and uppercase string. If the string does not match the pattern, the function returns an error message.",
+  "error": null,
+  "elapsed_seconds": 3.29,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

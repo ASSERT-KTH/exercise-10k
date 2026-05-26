@@ -1,0 +1,9 @@
+{
+  "id": 2518,
+  "title": "Time Converter",
+  "prompt": "Create a program that takes the time in one unit as input, and returns the time in another unit.\nSample Input: 60 seconds\nSample Output: 1 minute\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a time input in seconds and converts it to the corresponding time in minutes:\n```python\ndef seconds_to_minutes(seconds):\n    \"\"\"\n    Converts a given number of seconds to minutes.\n\n    :param seconds: The number of seconds to convert.\n    :return: The number of minutes represented by the given seconds.\n    \"\"\"\n    if seconds < 0:\n        raise ValueError(\"Input must be a non-negative number of seconds.\")\n\n    minutes = seconds // 60\n    remaining_seconds = seconds % 60\n\n    return minutes, remaining_seconds\n\n# Get user input\nseconds = int(input(\"Enter the number of seconds: \"))\n\n# Convert seconds to minutes and display the result\nminutes, remaining_seconds = seconds_to_minutes(seconds)\nprint(f\"{minutes} minutes and {remaining_seconds} seconds.\")\n```\nThis program defines a function `seconds_to_minutes` that takes a number of seconds as input and returns a tuple containing the number of minutes and the remaining seconds. The function checks if the input is non-negative and then calculates the number of minutes by dividing the input by 60 and taking the remainder to get the remaining seconds. Finally, the program gets user input, calls the function, and displays the result.",
+  "error": null,
+  "elapsed_seconds": 4.24,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

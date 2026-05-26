@@ -1,0 +1,9 @@
+{
+  "id": 1654,
+  "title": "Dictionary Access",
+  "prompt": "Access and print the value associated with a given key in a dictionary.\nSample Input: {'name': 'John', 'age': 30}\nSample Output: John\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that takes a dictionary and a key as input, and returns the value associated with that key:\n```python\ndef get_value(dictionary, key):\n    \"\"\"\n    Access and print the value associated with a given key in a dictionary.\n\n    Parameters:\n    dictionary (dict): The dictionary to search in.\n    key (any): The key to search for in the dictionary.\n\n    Returns:\n    any: The value associated with the given key in the dictionary.\n    \"\"\"\n    # Check if the key exists in the dictionary\n    if key in dictionary:\n        # Access and print the value associated with the key\n        value = dictionary[key]\n        print(value)\n        return value\n    else:\n        # If the key is not found, raise a KeyError\n        raise KeyError(f\"The key '{key}' does not exist in the dictionary.\")\n```\nHere's an example of how to use this function:\n```python\nmy_dict = {'name': 'John', 'age': 30}\nprint(get_value(my_dict, 'name'))  # Output: John\n```\nThis function checks if the key exists in the dictionary before accessing its value, which helps prevent unexpected behavior if the key is not found. If the key is not found, it raises a `KeyError` with an informative message.",
+  "error": null,
+  "elapsed_seconds": 4.45,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

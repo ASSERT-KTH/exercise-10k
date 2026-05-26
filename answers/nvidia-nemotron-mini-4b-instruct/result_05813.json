@@ -1,0 +1,9 @@
+{
+  "id": 5813,
+  "title": "Coin Change",
+  "prompt": "Write a program that uses a while loop to calculate the minimum number of coins required to make change for a given amount.\nSample Input: 10\nSample Output: 1 10-cent coin\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses a while loop to calculate the minimum number of coins required to make change for a given amount:\n```python\ndef make_change(amount):\n    # Initialize the number of coins required to 0\n    num_coins = 0\n\n    # Continue looping while the amount of change is greater than 0\n    while amount > 0:\n        # Determine the smallest coin value that can be used to make change for the remaining amount\n        coin_value = min(amount, 50, 20, 10, 5, 1)\n\n        # Update the amount of change and the number of coins required\n        amount -= coin_value\n        num_coins += 1\n\n    # Return the number of coins required\n    return num_coins\n\n# Get user input for the amount of change\namount = int(input(\"Enter the amount of change: \"))\n\n# Print the result\nprint(f\"{amount} cents can be made with {make_change(amount)} coin(s).\")\n```\nThis program defines a function `make_change` that takes an amount of change as input and returns the minimum number of coins required to make change for that amount. The function uses a while loop to iterate over the possible coin values (50 cents, 20 cents, 10 cents, 5 cents, and 1 cent) and subtracts the smallest value that can be used to make change for the remaining amount. The function continues looping until the amount of change is 0.\n\nThe program then gets user input for the amount of change, calls the `make_change` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.87,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

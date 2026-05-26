@@ -1,0 +1,9 @@
+{
+  "id": 9717,
+  "title": "Least Common Multiple (LCM)",
+  "prompt": "Write a program that takes two numbers as input and returns their LCM.\nSample Input: 12 15\nSample Output: 60\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes two numbers as input and returns their Least Common Multiple (LCM):\n\n```python\ndef lcm(a, b):\n    \"\"\"\n    Calculate the Least Common Multiple (LCM) of two numbers.\n\n    :param a: The first number.\n    :param b: The second number.\n    :return: The LCM of a and b.\n    \"\"\"\n    # Ensure both numbers are positive\n    a, b = abs(a), abs(b)\n\n    # Calculate the LCM using the formula: LCM(a, b) = |a*b| / gcd(a, b)\n    while b:\n        a, b = b, a % b\n\n    return abs(a)\n\n# Get user input\ntry:\n    num1 = int(input(\"Enter the first number: \"))\n    num2 = int(input(\"Enter the second number: \"))\n\n    # Calculate and print the LCM\n    lcm_value = lcm(num1, num2)\n    print(f\"The LCM of {num1} and {num2} is {lcm_value}.\")\n\nexcept ValueError:\n    print(\"Error: Please enter valid integers.\")\n```\n\nThis program first ensures that both input numbers are positive by taking their absolute values. Then, it calculates the LCM using the formula `LCM(a, b) = |a*b| / gcd(a, b)`, where `gcd(a, b)` is the greatest common divisor of `a` and `b`. Finally, it prints the LCM of the two input numbers.",
+  "error": null,
+  "elapsed_seconds": 3.94,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

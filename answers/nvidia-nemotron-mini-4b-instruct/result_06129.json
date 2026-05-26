@@ -1,0 +1,9 @@
+{
+  "id": 6129,
+  "title": "To-Do List",
+  "prompt": "Create a program that allows the user to add and remove items from a to-do list.\nSample Input: add, buy milk\nSample Output: To-do list: buy milk\n",
+  "answer": "Sure, I'd be happy to help you create a simple program for a to-do list. Here's an example implementation in Python that meets your requirements:\n\n```python\n# Initialize an empty to-do list\nto_do_list = []\n\ndef add_item():\n    \"\"\"Add an item to the to-do list.\"\"\"\n    global to_do_list\n\n    # Get user input for the item to add\n    item_to_add = input(\"Enter an item to add to the to-do list (or type 'done' to complete an item): \").lower()\n\n    # Add the item to the to-do list and print the updated list\n    if item_to_add == \"done\":\n        if to_do_list:\n            to_do_list.pop()\n            print(\"To-do list:\", to_do_list)\n        else:\n            print(\"To-do list is already empty.\")\n    else:\n        to_do_list.append(item_to_add)\n        print(\"To-do list:\", to_do_list)\n\n# Main loop\nwhile True:\n    add_item()\n    user_input = input(\"Do you want to add or remove an item? (add/remove): \").lower()\n\n    if user_input == \"done\":\n        break\n```\n\nThis program defines a function `add_item()` that allows the user to add an item to the to-do list. When the user types \"done\", the function removes the last item from the list if it's not empty. The main loop continues until the user types \"done\".\n\nYou can customize this program further by adding more functionality, such as sorting the to-do list, allowing multiple items on a single line, or saving the to-do list to a file.",
+  "error": null,
+  "elapsed_seconds": 4.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

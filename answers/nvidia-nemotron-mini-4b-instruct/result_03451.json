@@ -1,0 +1,9 @@
+{
+  "id": 3451,
+  "title": "Magic 8-Ball",
+  "prompt": "Create a program that simulates a Magic 8-Ball, where the user asks a question and the program provides a random answer (e.g., 'It is certain', 'Reply hazy try again', etc.)\nSample Input: Will I be rich?\nSample Output: It is decidedly so\n",
+  "answer": "Sure, I'd be happy to help you create a program that simulates a Magic 8-Ball. Here's a Python solution using the `random` module:\n\n```python\nimport random\n\nmagic_ball_responses = [\n    \"It is certain\",\n    \"Reply hazy try again\",\n    \"Ask again later\",\n    \"Better not tell you now\",\n    \"Cannot predict now\",\n    \"Concentrate and ask again\",\n    \"Don't count on it\",\n    \"My reply is no\",\n    \"My sources say no\",\n    \"Outlook not so good\",\n]\n\ndef get_random_response():\n    \"\"\"Returns a random response from the magic ball.\"\"\"\n    return random.choice(magic_ball_responses)\n\ndef main():\n    \"\"\"Simulates a Magic 8-Ball and prints the response.\"\"\"\n    question = input(\"Ask a question: \")\n    response = get_random_response()\n    print(f\"{question} - {response}\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program defines a list of possible responses and a function to randomly select one. The `main` function prompts the user for a question, calls the `get_random_response` function, and prints the result.\n\nYou can customize the `magic_ball_responses` list to include more or different responses as needed.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

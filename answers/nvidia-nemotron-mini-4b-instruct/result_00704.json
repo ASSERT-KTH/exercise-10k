@@ -1,0 +1,9 @@
+{
+  "id": 704,
+  "title": "Deleting Dictionary Elements",
+  "prompt": "Write a function to delete a specific key-value pair from a dictionary\nSample Input: {'name': 'John', 'age': 30}, 'age'\nSample Output: {'name': 'John'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that deletes a specific key-value pair from a dictionary:\n```python\ndef delete_key_value(dictionary, key):\n    \"\"\"\n    Deletes a key-value pair from a dictionary.\n\n    Parameters:\n    dictionary (dict): The dictionary to modify.\n    key (any): The key to delete.\n\n    Returns:\n    dict: The modified dictionary with the key-value pair removed.\n    \"\"\"\n    # Check if the key exists in the dictionary\n    if key in dictionary:\n        # Remove the key-value pair using the pop() method\n        dictionary.pop(key)\n    return dictionary\n```\nHere's an example of how you can use this function:\n```python\nmy_dict = {'name': 'John', 'age': 30}\nprint(delete_key_value(my_dict, 'age'))  # Output: {'name': 'John'}\n```\nThis function first checks if the key exists in the dictionary using the `in` keyword. If the key is found, the function removes the key-value pair using the `pop()` method, which returns the value associated with the key. Finally, the function returns the modified dictionary.",
+  "error": null,
+  "elapsed_seconds": 2.81,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

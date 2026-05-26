@@ -1,0 +1,9 @@
+{
+  "id": 3673,
+  "title": "Distance Between Two Points",
+  "prompt": "Write a function that calculates the distance between two points in a 2D plane.\nSample Input: (0, 0), (3, 4)\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that calculates the Euclidean distance between two points in a 2D plane:\n\n```python\nimport math\n\ndef calculate_distance(point1, point2):\n    \"\"\"\n    Calculates the Euclidean distance between two points in a 2D plane.\n\n    Parameters:\n    point1 (tuple): A tuple of two floats representing the x and y coordinates of the first point.\n    point2 (tuple): A tuple of two floats representing the x and y coordinates of the second point.\n\n    Returns:\n    float: The Euclidean distance between the two points.\n    \"\"\"\n\n    # Ensure input points are tuples of two floats\n    if len(point1) != 2 or len(point2) != 2:\n        raise ValueError(\"Both points must be tuples of two floats.\")\n\n    x1, y1 = point1\n    x2, y2 = point2\n\n    # Calculate the Euclidean distance using the formula: sqrt((x2 - x1)^2 + (y2 - y1)^2)\n    distance = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)\n\n    return distance\n```\n\nYou can use this function as follows:\n\n```python\npoint1 = (0, 0)\npoint2 = (3, 4)\n\ndistance = calculate_distance(point1, point2)\nprint(distance)  # Output: 5.0\n```",
+  "error": null,
+  "elapsed_seconds": 3.42,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

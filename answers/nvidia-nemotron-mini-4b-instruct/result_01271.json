@@ -1,0 +1,9 @@
+{
+  "id": 1271,
+  "title": "Array Merging",
+  "prompt": "Write a program to merge two or more arrays into a single array.\nSample Input: [1, 2, 3] [4, 5, 6]\nSample Output: [1, 2, 3, 4, 5, 6]\n",
+  "answer": "Here's a Python solution for the problem:\n\n```python\ndef merge_arrays(*args):\n    return [x for sublist in args for x in sublist]\n\nprint(merge_arrays([1, 2, 3], [4, 5, 6]))\n```\n\nThis program defines a function `merge_arrays` that takes any number of arguments (using the `*args` syntax). It then uses a list comprehension to iterate over all the sublists (which are the individual arrays passed as arguments) and concatenates them into a single list. The resulting list is then returned by the function.\n\nWhen you run this program with the sample input `[1, 2, 3] [4, 5, 6]`, it will print `[1, 2, 3, 4, 5, 6]`, which is the expected output.",
+  "error": null,
+  "elapsed_seconds": 2.13,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

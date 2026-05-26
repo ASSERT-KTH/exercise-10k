@@ -1,0 +1,9 @@
+{
+  "id": 6715,
+  "title": "Input from File",
+  "prompt": "Write a program that reads input from a file and processes it\nSample Input: input.txt\nSample Output: Processed data\n",
+  "answer": "Sure, I can help you with that. Here's an example Python program that reads input from a file and processes it. In this example, I'll assume that the input file contains a list of numbers separated by spaces. The program will then print the sum of all the numbers. You can modify this program to suit your specific needs.\n\n```python\ndef process_file(file_path):\n    \"\"\"\n    Reads input from a file and processes it.\n\n    :param file_path: The path to the input file.\n    \"\"\"\n\n    # Open the file in read mode\n    with open(file_path, 'r') as file:\n\n        # Read the entire file into a single string\n        input_data = file.read()\n\n        # Split the string into a list of numbers\n        numbers = input_data.split()\n\n        # Convert each number to a float and calculate the sum\n        total = sum(float(num) for num in numbers)\n\n        # Print the processed data\n        print(f\"Processed data: {total}\")\n\n# Replace 'input.txt' with the path to your input file\nprocess_file('input.txt')\n```\n\nThis program opens the input file in read mode, reads its contents into a single string, splits the string into a list of numbers, converts each number to a float, calculates the sum using a generator expression, and finally prints the processed data. You can modify this program to process the data in any way you like, such as calculating the average, finding the maximum or minimum value, or performing other mathematical operations.",
+  "error": null,
+  "elapsed_seconds": 3.59,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

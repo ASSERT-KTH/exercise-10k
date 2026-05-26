@@ -1,0 +1,9 @@
+{
+  "id": 1551,
+  "title": "List Insertion",
+  "prompt": "Write a function to insert a new element at a specified position in a given list of integers.\nSample Input: [1, 2, 3, 4, 5], 2, 10\nSample Output: [1, 2, 10, 3, 4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function, `insert_element`, takes three arguments: the list of integers, the position at which to insert the new element, and the value to insert. It uses the `insert()` method of lists to insert the new element at the specified position.\n\n```python\ndef insert_element(lst, pos, value):\n    \"\"\"\n    Inserts a new element at a specified position in a given list of integers.\n\n    :param lst: The list of integers.\n    :param pos: The position at which to insert the new element.\n    :param value: The value to insert at the specified position.\n    :return: The updated list with the new element inserted.\n    \"\"\"\n    # Check if the position is within the valid range\n    if pos < 0 or pos > len(lst):\n        raise IndexError(\"Position out of range\")\n\n    # Insert the new element at the specified position\n    lst.insert(pos, value)\n\n    return lst\n```\n\nHere's an example of how to use this function:\n\n```python\nnumbers = [1, 2, 3, 4, 5]\nnew_number = 10\nposition = 2\n\nupdated_numbers = insert_element(numbers, position, new_number)\nprint(updated_numbers)  # Output: [1, 2, 10, 3, 4, 5]\n```",
+  "error": null,
+  "elapsed_seconds": 3.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

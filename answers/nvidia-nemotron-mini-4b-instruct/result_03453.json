@@ -1,0 +1,9 @@
+{
+  "id": 3453,
+  "title": "Simple Chatbot",
+  "prompt": "Write a program that simulates a simple chatbot, where the user can ask the bot a question and the program provides a pre-defined answer\nSample Input: Hello\nSample Output: Hi! How are you?\n",
+  "answer": "Sure, I'd be happy to help you create a simple chatbot program. Here's a Python solution using the `input()` function for user input and string concatenation for output. You can extend this program by adding more questions and answers, or by using a database to store the conversation history.\n\n```python\ndef chatbot():\n    \"\"\"Simulates a simple chatbot with predefined answers.\"\"\"\n\n    while True:\n        user_input = input(\"You: \").strip()\n\n        if not user_input:\n            continue\n\n        if user_input.lower() == \"quit\":\n            print(\"Goodbye!\")\n            break\n\n        questions = {\n            \"How are you?\": \"I'm doing great, thanks for asking!\",\n            \"What's your favorite color?\": \"My favorite color is blue!\",\n            \"Can you tell me a joke?\": \"Sure, here's a joke: Why don't scientists trust atoms? Because they make up everything!\",\n        }\n\n        for question, answer in questions.items():\n            if question.lower() == user_input.lower():\n                print(f\"Chatbot: {answer}\")\n                break\n        else:\n            print(\"Chatbot: I'm sorry, I didn't understand that question.\")\n\n\nif __name__ == \"__main__\":\n    chatbot()\n```\n\nThis program will keep asking the user for input until the user types \"quit\". It then checks a dictionary of predefined questions and answers to provide a response. You can add more questions and answers to the `questions` dictionary to make the chatbot more interactive.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

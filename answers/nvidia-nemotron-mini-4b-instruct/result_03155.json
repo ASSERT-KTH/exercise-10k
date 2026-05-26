@@ -1,0 +1,9 @@
+{
+  "id": 3155,
+  "title": "Check if a Linked List has a Cycle",
+  "prompt": "Write a function to check if a linked list has a cycle.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: false\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses Floyd's Cycle-Finding Algorithm to check if a linked list has a cycle. This algorithm has a time complexity of O(n), where n is the number of nodes in the linked list.\n\n```python\ndef has_cycle(head):\n    \"\"\"\n    Check if a linked list has a cycle.\n\n    :param head: The head node of the linked list.\n    :return: True if the linked list has a cycle, False otherwise.\n    \"\"\"\n\n    slow = fast = head\n\n    # Move the slow pointer one step at a time,\n    # while the fast pointer moves two steps at a time.\n    while fast and fast.next:\n        slow = slow.next\n        fast = fast.next.next\n\n        # If the slow and fast pointers meet, it means there's a cycle.\n        if slow == fast:\n            return True\n\n    # If the slow pointer reaches the end of the list without meeting the fast pointer,\n    # there's no cycle.\n    return False\n```\n\nHere's an example of how to use this function:\n\n```python\n# Create a linked list with a cycle\nhead = [1, 2, 3, 4, 5, 5]\nhead[5].next = head[1]\n\nprint(has_cycle(head))  # Output: True\n```\n\nThis function first initializes two pointers, `slow` and `fast`, to the head node of the linked list. Then, it enters a loop where it moves the `slow` pointer one step at a time, while the `fast` pointer moves two steps at a time. If the `slow` and `fast` pointers meet (i.e., there's a cycle), the function returns `True`. Otherwise, the function returns `False` after checking if the `slow` pointer has reached the end of the list.",
+  "error": null,
+  "elapsed_seconds": 4.65,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

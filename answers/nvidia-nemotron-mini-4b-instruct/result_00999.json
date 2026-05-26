@@ -1,0 +1,9 @@
+{
+  "id": 999,
+  "title": "Percentage Calculator",
+  "prompt": "Write a program that calculates the percentage of a number based on the user's input. The program uses if-else statements to check for valid input.\nSample Input: 25 100\nSample Output: 25%\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_percentage():\n    \"\"\"\n    Calculates the percentage of a number based on user input.\n    \"\"\"\n    # Get user input\n    num = float(input(\"Enter a number: \"))\n    base = float(input(\"Enter the base number (100): \"))\n\n    # Validate input\n    if num <= 0 or base <= 0:\n        print(\"Both numbers must be positive. Please try again.\")\n        return\n\n    # Calculate percentage\n    percentage = num / base * 100\n\n    # Print result\n    print(f\"{num} is {percentage:.2f}% of {base}.\")\n\n# Call the function\ncalculate_percentage()\n```\nThis program defines a function `calculate_percentage()` that prompts the user to enter a number and a base number (which is assumed to be 100), validates the input to ensure both numbers are positive, calculates the percentage, and prints the result. The function is then called to run the program.\n\nWhen you run the program and enter valid numbers (e.g. `25 100`), it will output:\n```yaml\nEnter a number: 25\nEnter the base number (100): 100\n25 is 25.00% of 100.\n```",
+  "error": null,
+  "elapsed_seconds": 3.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

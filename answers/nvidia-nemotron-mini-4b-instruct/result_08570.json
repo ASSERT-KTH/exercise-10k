@@ -1,0 +1,9 @@
+{
+  "id": 8570,
+  "title": "Dictionary from JSON String",
+  "prompt": "Create a JSON string with 3 key-value pairs and convert it to a dictionary.\nSample Input: json_string\nSample Output: dict\n",
+  "answer": "Sure, I'd be happy to help! Here's a Python function that meets your requirements:\n\n```python\nimport json\n\ndef json_to_dict(json_string):\n    \"\"\"\n    Converts a JSON string to a Python dictionary.\n\n    Parameters:\n    json_string (str): The JSON string to convert.\n\n    Returns:\n    dict: The Python dictionary equivalent of the JSON string.\n    \"\"\"\n    return json.loads(json_string)\n```\n\nYou can use this function to convert a JSON string to a dictionary like this:\n\n```python\njson_string = '{\"key1\": \"value1\", \"key2\": 123, \"key3\": [1, 2, 3]}'\ndict_from_json = json_to_dict(json_string)\nprint(dict_from_json)  # Output: {'key1': 'value1', 'key2': 123, 'key3': [1, 2, 3]}\n```\n\nIf you want to convert a JSON string to a dictionary without loading it into memory, you can use the `json.dumps()` function with the `separators` parameter set to `(', ', ')` to ensure that the dictionary is represented as a JSON object with key-value pairs:\n\n```python\njson_string = json.dumps({\"key1\": \"value1\", \"key2\": 123, \"key3\": [1, 2, 3]}, separators=(', ', ': '))\nprint(json_string)  # Output: \"{\"key1\": \"value1\", \"key2\": 123, \"key3\": [1, 2, 3]}\"\ndict_from_json = json.loads(json_string)\nprint(dict_from_json)  # Output: {'key1': 'value1', 'key2': 123, 'key3': [1, 2, 3]}\n```",
+  "error": null,
+  "elapsed_seconds": 4.7,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3010,
+  "title": "String Validation",
+  "prompt": "Write a program to validate whether a given string contains only alphanumeric characters.\nSample Input: HelloWorld123\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that validates whether a given string contains only alphanumeric characters (letters and numbers):\n\n```python\nimport re\n\ndef is_alphanumeric(s):\n    \"\"\"\n    Returns True if the given string contains only alphanumeric characters, False otherwise.\n    \"\"\"\n    return bool(re.match(r'^[a-zA-Z0-9]*$', s))\n\n# Test the function with your sample input\nsample_input = \"HelloWorld123\"\nprint(is_alphanumeric(sample_input))  # Output: True\n```\n\nThe `re` module is used to perform regular expression operations. The regular expression pattern `^[a-zA-Z0-9]*$` matches any string that contains only alphanumeric characters (letters and numbers) at the beginning and end of the string. The `bool()` function is used to convert the result of the regular expression match to a boolean value.\n\nYou can replace the sample input with any string you want to test, and the function will return `True` if the string contains only alphanumeric characters and `False` otherwise.",
+  "error": null,
+  "elapsed_seconds": 2.6,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

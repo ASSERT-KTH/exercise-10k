@@ -1,0 +1,9 @@
+{
+  "id": 3405,
+  "title": "Dictionary Key Deletion",
+  "prompt": "Create a program to delete a specific key-value pair from a given dictionary.\nSample Input: {'name': 'John', 'age': 25, 'city': 'New York'} and key 'age'\nSample Output: {'name': 'John', 'city': 'New York'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a dictionary and a key as input, and deletes the specified key-value pair from the dictionary:\n```python\ndef delete_key_value(dictionary, key):\n    # Check if the key exists in the dictionary\n    if key in dictionary:\n        # Remove the key-value pair from the dictionary\n        del dictionary[key]\n        return dictionary\n    else:\n        print(f\"The key '{key}' does not exist in the dictionary.\")\n        return dictionary\n\n# Example usage\nsample_dict = {'name': 'John', 'age': 25, 'city': 'New York'}\nkey_to_delete = 'age'\n\nupdated_dict = delete_key_value(sample_dict, key_to_delete)\nprint(updated_dict)  # Output: {'name': 'John', 'city': 'New York'}\n```\nThis program defines a function `delete_key_value` that takes a dictionary and a key as input. It checks if the key exists in the dictionary using the `in` keyword. If the key exists, it removes the key-value pair from the dictionary using the `del` keyword. If the key does not exist, it prints an error message and returns the original dictionary. The example usage at the end of the program demonstrates how to use this function to delete a specific key-value pair from a dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

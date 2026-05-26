@@ -1,0 +1,9 @@
+{
+  "id": 6958,
+  "title": "List Sum Function",
+  "prompt": "Create a function that takes a list of numbers as an argument and returns their sum.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef sum_of_numbers(numbers):\n    \"\"\"\n    This function takes a list of numbers as an argument and returns their sum.\n\n    :param numbers: List[float] - A list of numbers\n    :return: float - The sum of the numbers in the list\n    \"\"\"\n    if not isinstance(numbers, list):\n        raise TypeError(\"The input should be a list\")\n\n    total = 0\n    for num in numbers:\n        if not isinstance(num, (int, float)):\n            raise TypeError(\"All elements in the list should be numbers\")\n        total += num\n\n    return total\n```\nThis function checks if the input is a list and if all its elements are numbers. If not, it raises a `TypeError`. Then, it iterates through the list and adds up all the numbers. The function returns the final sum as a float.\n\nHere's an example of how to use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\nprint(sum_of_numbers(numbers))  # Output: 15\n```",
+  "error": null,
+  "elapsed_seconds": 2.76,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

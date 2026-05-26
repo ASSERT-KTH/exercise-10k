@@ -1,0 +1,9 @@
+{
+  "id": 344,
+  "title": "List Sorting",
+  "prompt": "Create a function that sorts a list in ascending or descending order.\nSample Input: [5, 2, 8, 1], order: ascending\nSample Output: [1, 2, 5, 8]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef sort_list(input_list, order='ascending'):\n    \"\"\"\n    Sort a list in ascending or descending order.\n\n    Parameters:\n    input_list (list): The list to be sorted.\n    order (str): The order of sorting ('ascending' or 'descending').\n\n    Returns:\n    list: The sorted list.\n    \"\"\"\n    if order not in ['ascending', 'descending']:\n        raise ValueError(\"Order must be either 'ascending' or 'descending'.\")\n\n    if order == 'ascending':\n        return sorted(input_list)\n    else:  # order == 'descending'\n        return sorted(input_list, reverse=True)\n```\nHere's an example of how to use this function:\n```python\nnumbers = [5, 2, 8, 1]\nprint(sort_list(numbers))  # Output: [1, 2, 5, 8]\n\nprint(sort_list(numbers, order='descending'))  # Output: [8, 5, 2, 1]\n```\nThis function first checks if the `order` parameter is valid ('ascending' or 'descending'). Then, it uses the built-in `sorted()` function with the appropriate `reverse` parameter to sort the list in ascending or descending order.",
+  "error": null,
+  "elapsed_seconds": 3.59,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7892,
+  "title": "Input/Output Calculator",
+  "prompt": "Create a program that takes in basic arithmetic expressions from the user, evaluates them, and then prints out the result. The program should be able to handle addition, subtraction, multiplication, and division operations. It should also handle invalid inputs and provide meaningful error messages.\nSample Input: 2 + 3 * 4\nSample Output: 14\n",
+  "answer": "Here's a Python program that meets your requirements. It uses the `eval()` function to evaluate the arithmetic expressions, but it also includes input validation and error handling.\n\n```python\ndef evaluate_expression():\n    while True:\n        try:\n            expression = input(\"Enter a basic arithmetic expression: \")\n            result = eval(expression)\n            print(f\"The result is: {result}\")\n            break\n        except (NameError, SyntaxError, ZeroDivisionError) as e:\n            print(f\"Error: {e}. Please enter a valid expression.\")\n\nevaluate_expression()\n```\n\nThis program will keep asking the user for input until a valid expression is entered. It will then evaluate the expression and print the result. If the user enters an invalid expression, the program will display an error message and ask the user to try again.",
+  "error": null,
+  "elapsed_seconds": 1.91,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

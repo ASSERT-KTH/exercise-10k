@@ -1,0 +1,9 @@
+{
+  "id": 6155,
+  "title": "String Isdigit",
+  "prompt": "Write a function to check if a string consists only of digits.\nSample Input: 12345\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a given string consists only of digits (0-9):\n\n```python\nimport re\n\ndef is_string_digits(s: str) -> bool:\n    \"\"\"\n    Check if a string consists only of digits.\n\n    :param s: The string to check.\n    :return: True if the string consists only of digits, False otherwise.\n    \"\"\"\n    # Use a regular expression to match only digits (0-9)\n    return bool(re.match(r'^[0-9]*$', s))\n```\n\nHere's how you can use this function:\n\n```python\nprint(is_string_digits(\"12345\"))  # True\nprint(is_string_digits(\"abc\"))    # False\nprint(is_string_digits(\"0\"))      # True\nprint(is_string_digits(\"100\"))    # True\n```\n\nThis function uses a regular expression to match only strings that consist of one or more occurrences of any digit (0-9) at the beginning or end of the string. If the string does not match this pattern, the function returns `False`. If the string matches the pattern, the function returns `True`.",
+  "error": null,
+  "elapsed_seconds": 2.91,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

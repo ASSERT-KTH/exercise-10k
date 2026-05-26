@@ -1,0 +1,9 @@
+{
+  "id": 5342,
+  "title": "List Filtering",
+  "prompt": "Write a function that takes a list and a predicate function as input, and returns a new list containing only the elements that satisfy the predicate.\nSample Input: [1, 2, 3, 4, 5], lambda x: x % 2 == 0\nSample Output: [2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef filter_list(lst, predicate):\n    \"\"\"\n    Filters a list using a given predicate function.\n\n    Parameters:\n    lst (list): The list to filter.\n    predicate (callable): A function that takes one argument and returns a boolean.\n                           The function should be applied to each element in the list.\n\n    Returns:\n    list: A new list containing only the elements that satisfy the predicate.\n    \"\"\"\n    return [element for element in lst if predicate(element)]\n```\nHere's an example of how to use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\neven_numbers = filter_list(numbers, lambda x: x % 2 == 0)\nprint(even_numbers)  # Output: [2, 4]\n```\nThis function uses a list comprehension to create a new list containing only the elements that satisfy the given predicate function. The `predicate` function is applied to each element in the input list using the `if` keyword.",
+  "error": null,
+  "elapsed_seconds": 2.65,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

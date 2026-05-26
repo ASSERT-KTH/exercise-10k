@@ -1,0 +1,9 @@
+{
+  "id": 3596,
+  "title": "Calculate Total Bill",
+  "prompt": "Create a program that calculates the total bill given the subtotal and the tax percentage.\nSample Input: 100 8\nSample Output: 108.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the total bill given the subtotal and the tax percentage:\n```python\ndef calculate_total_bill(subtotal, tax_percentage):\n    \"\"\"\n    Calculates the total bill given the subtotal and the tax percentage.\n\n    :param subtotal: The subtotal of the bill before tax.\n    :param tax_percentage: The tax percentage as a decimal (e.g., 0.08 for 8%).\n    :return: The total bill as a float.\n    \"\"\"\n\n    # Validate input\n    if not isinstance(subtotal, (float, int)) or subtotal < 0:\n        raise ValueError(\"Subtotal must be a non-negative number.\")\n\n    if not isinstance(tax_percentage, (float, int)) or tax_percentage < 0 or tax_percentage > 1:\n        raise ValueError(\"Tax percentage must be a number between 0 and 1.\")\n\n    # Calculate the tax amount\n    tax_amount = subtotal * tax_percentage\n\n    # Calculate the total bill\n    total_bill = subtotal + tax_amount\n\n    return total_bill\n\n# Example usage\nsubtotal = 100\ntax_percentage = 0.08\ntotal_bill = calculate_total_bill(subtotal, tax_percentage)\nprint(f\"The total bill is {total_bill:.2f}.\")\n```\nThis program defines a function `calculate_total_bill` that takes the subtotal and the tax percentage as arguments, validates the input, calculates the tax amount, and returns the total bill. The example usage at the end of the program demonstrates how to use the function to calculate the total bill for a subtotal of $100 and a tax percentage of 8%.",
+  "error": null,
+  "elapsed_seconds": 4.09,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

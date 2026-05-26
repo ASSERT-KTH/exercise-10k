@@ -1,0 +1,9 @@
+{
+  "id": 5468,
+  "title": "Array Search",
+  "prompt": "Write a program that takes an array and an element as input and returns the index of the element if it is found, or -1 if it is not found.\nSample Input: [1, 2, 3, 4, 5], 3\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef find_element(arr, element):\n    \"\"\"\n    Given an array and an element, return the index of the element if it is found,\n    or -1 if it is not found.\n\n    :param arr: The input array\n    :param element: The element to search for\n    :return: The index of the element if found, or -1 if not found\n    \"\"\"\n    # Check if the input is a non-empty list\n    if not isinstance(arr, list) or len(arr) == 0:\n        raise ValueError(\"Input should be a non-empty list\")\n\n    # Use the built-in index() method to find the index of the element\n    index = arr.index(element)\n\n    # Return the index or -1 if not found\n    return index if index != -1 else -1\n```\nHere's an example of how to use this function:\n```python\narr = [1, 2, 3, 4, 5]\nelement = 3\n\nindex = find_element(arr, element)\n\nif index != -1:\n    print(f\"The element {element} is at index {index}.\")\nelse:\n    print(f\"The element {element} is not found in the array.\")\n```\nThis will output:\n```yaml\nThe element 3 is at index 2.\n```",
+  "error": null,
+  "elapsed_seconds": 3.64,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

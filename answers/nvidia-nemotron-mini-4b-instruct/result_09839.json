@@ -1,0 +1,9 @@
+{
+  "id": 9839,
+  "title": "Maximum Subarray Sum",
+  "prompt": "Write a program to find the maximum contiguous subarray sum of a given one-dimensional array of numbers. The subarray must have at least one element. If the array is empty, return 0.\nSample Input: [-2, -3, 4, -1, -2, 1, 5, -3]\nSample Output: 7\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the maximum contiguous subarray sum of a given one-dimensional array of numbers:\n\n```python\ndef max_subarray_sum(arr):\n    \"\"\"\n    Find the maximum contiguous subarray sum of a given one-dimensional array of numbers.\n\n    :param arr: List[int] - The input array of numbers\n    :return: int - The maximum contiguous subarray sum\n    \"\"\"\n\n    # Check if the array is empty\n    if not arr:\n        return 0\n\n    # Initialize variables to keep track of the current subarray sum and the maximum sum\n    current_sum = max_sum = arr[0]\n\n    # Iterate through the array\n    for num in arr[1:]:\n        # Update the current subarray sum by adding the current number to the previous sum\n        current_sum = max(num, current_sum + num)\n\n        # Update the maximum sum if the current subarray sum is greater than the previous maximum sum\n        max_sum = max(max_sum, current_sum)\n\n    return max_sum\n```\n\nHere's an example of how to use this function:\n\n```python\narr = [-2, -3, 4, -1, -2, 1, 5, -3]\nprint(max_subarray_sum(arr))  # Output: 7\n```\n\nThis function uses a sliding window approach to iterate through the array and keep track of the current subarray sum. It also keeps track of the maximum sum seen so far, updating it whenever a new maximum is found. The time complexity of this function is O(n), where n is the length of the input array, since we only need to iterate through the array once.",
+  "error": null,
+  "elapsed_seconds": 4.06,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

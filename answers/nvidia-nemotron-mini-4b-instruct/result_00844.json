@@ -1,0 +1,9 @@
+{
+  "id": 844,
+  "title": "Curried Functions",
+  "prompt": "Write a function that takes a function with multiple arguments and returns a curried version of the function.\nSample Input: def add(a, b, c): return a + b + c\nSample Output: function that takes one argument at a time\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that takes a function with multiple arguments and returns a curried version of the function. A curried function is a function that takes one argument at a time, and the remaining arguments are stored in an object or a closure.\n\n```python\ndef curry(func):\n    \"\"\"\n    Curries a function with multiple arguments and returns a curried version of the function.\n    \"\"\"\n\n    def curried_func(*args):\n        \"\"\"\n        Curried version of the function that takes one argument at a time.\n        \"\"\"\n        if len(args) >= func.__code__.co_argcount:\n            return func(*args)\n        else:\n            return lambda arg: curried_func(arg, *args[len(args):func.__code__.co_argcount])\n\n    return curried_func\n```\n\nHere's an example of how to use the `curry` function:\n\n```python\n@curry\ndef add(a, b, c):\n    return a + b + c\n\n# Output: <function add.<locals>.<lambda> at 0x...>\n\n# Output: <function add.<locals>.<lambda> at 0x...>\n\n# Output: 10\n```\n\nThis example demonstrates how to use the curried version of the `add` function, which takes one argument at a time.",
+  "error": null,
+  "elapsed_seconds": 3.27,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

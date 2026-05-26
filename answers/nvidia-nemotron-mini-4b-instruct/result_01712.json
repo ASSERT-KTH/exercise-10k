@@ -1,0 +1,9 @@
+{
+  "id": 1712,
+  "title": "While Loop To-Do List App",
+  "prompt": "Create a program that uses a while loop to simulate a To-Do list app, where users can add tasks and view the list until they choose to quit.\nSample Input: Buy milk\nDo homework\nquit\nSample Output: Task added successfully!\nBuy milk\nDo homework\nDo you want to add another task? (yes/no)\n",
+  "answer": "Sure, I'd be happy to help you create a To-Do list app using a while loop. Here's a Python solution that meets your requirements:\n\n```python\ntasks = []\n\ndef add_task():\n    \"\"\"Add a task to the To-Do list.\"\"\"\n    task = input(\"Enter a task to add: \")\n    if task.lower() != \"quit\":\n        tasks.append(task)\n        print(f\"Task added successfully! {task}\")\n    else:\n        print(\"Quitting the app...\")\n\ndef view_tasks():\n    \"\"\"Display the current To-Do list.\"\"\"\n    if tasks:\n        print(\"\\nCurrent To-Do list:\")\n        for i, task in enumerate(tasks, start=1):\n            print(f\"{i}. {task}\")\n    else:\n        print(\"Your To-Do list is empty.\")\n\ndef main():\n    \"\"\"The main loop of the To-Do list app.\"\"\"\n    while True:\n        print(\"Do you want to add another task? (yes/no)\")\n        user_input = input().lower()\n\n        if user_input == \"yes\":\n            add_task()\n        elif user_input == \"no\":\n            break\n        else:\n            print(\"Invalid input. Please enter 'yes' or 'no'.\")\n\n    view_tasks()\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program defines three functions: `add_task()`, `view_tasks()`, and `main()`. The `main()` function is the main loop of the To-Do list app, where the user can add tasks and view the list until they choose to quit. The other two functions handle adding tasks and displaying the current list, respectively.",
+  "error": null,
+  "elapsed_seconds": 4.1,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

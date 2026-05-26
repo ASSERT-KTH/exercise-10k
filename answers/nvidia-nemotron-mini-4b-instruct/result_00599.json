@@ -1,0 +1,9 @@
+{
+  "id": 599,
+  "title": "Check if a String is a Rotation of Another String",
+  "prompt": "Write a program that takes two strings as input and returns true if the first string is a rotation of the second string, and false otherwise.\nSample Input: abcde, cdeab\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef is_rotation(str1, str2):\n    \"\"\"\n    Returns True if str1 is a rotation of str2, and False otherwise.\n    A rotation of a string is formed by taking another string and\n    concatenating it with itself, possibly multiple times.\n    \"\"\"\n    if len(str1) != len(str2):\n        return False\n\n    # Concatenate str2 with itself to create a longer string\n    # that contains all possible rotations of str2\n    long_str = str2 + str2\n\n    # Check if str1 is a substring of the concatenated string\n    return str1 in long_str\n```\nHere's how you can use this function:\n```python\nprint(is_rotation(\"abcde\", \"cdeab\"))  # Output: True\nprint(is_rotation(\"hello\", \"world\"))  # Output: False\n```\nThis function first checks if the lengths of the two input strings are equal, since a rotation must have the same length as the original string. Then, it concatenates `str2` with itself to create a longer string that contains all possible rotations of `str2`. Finally, it checks if `str1` is a substring of this concatenated string, which is true if and only if `str1` is a rotation of `str2`.",
+  "error": null,
+  "elapsed_seconds": 4.01,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

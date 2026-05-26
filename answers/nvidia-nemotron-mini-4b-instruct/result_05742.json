@@ -1,0 +1,9 @@
+{
+  "id": 5742,
+  "title": "Data Type Conversion",
+  "prompt": "Convert a string to an integer and store it in a variable\nSample Input: 123\nSample Output: 123\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that converts a string to an integer and stores it in a variable:\n\n```python\ndef string_to_int(s: str) -> int:\n    \"\"\"\n    Converts a string to an integer and stores it in a variable.\n\n    :param s: The string to convert.\n    :return: The integer value of the string.\n    \"\"\"\n    try:\n        result = int(s)\n        return result\n    except ValueError:\n        raise ValueError(f\"Could not convert '{s}' to an integer.\")\n```\n\nHere's an example of how to use this function:\n\n```python\ns = \"123\"\nresult = string_to_int(s)\nprint(result)  # Output: 123\n```\n\nThis function first attempts to convert the string to an integer using the built-in `int()` function. If the conversion is successful, the function returns the integer value. If the conversion fails due to a non-numeric character in the string, the function raises a `ValueError` with an informative message.",
+  "error": null,
+  "elapsed_seconds": 2.81,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

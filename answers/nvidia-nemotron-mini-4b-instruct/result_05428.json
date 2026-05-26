@@ -1,0 +1,9 @@
+{
+  "id": 5428,
+  "title": "Currency Converter",
+  "prompt": "Write a program that converts currency from USD to EUR or vice versa. If the user chooses to convert from USD to EUR, use the exchange rate 1 USD = 0.88 EUR. If the user chooses to convert from EUR to USD, use the exchange rate 1 EUR = 1.14 USD.\nSample Input: USD 100\nSample Output: 88 EUR\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef convert_currency():\n    \"\"\"Converts currency from USD to EUR or vice versa.\"\"\"\n\n    # Get user input for the amount and currency\n    amount = float(input(\"Enter the amount of currency you want to convert: \"))\n    currency = input(\"Enter 'USD' to convert to EUR or 'EUR' to convert from EUR: \").upper()\n\n    # Validate user input\n    if currency not in ['USD', 'EUR']:\n        print(\"Invalid input. Please enter either 'USD' or 'EUR'.\")\n        return\n\n    # Calculate and print the converted amount\n    exchange_rate = {\n        'USD': 0.88,\n        'EUR': 1.14\n    }[currency]\n\n    converted_amount = amount * exchange_rate\n    print(f\"{amount} {currency} is equal to {converted_amount:.2f} {currency.upper()}.\")\n\n# Call the function to start the program\nconvert_currency()\n```\n\nThis program defines a function `convert_currency()` that prompts the user for the amount and currency, validates the input, calculates the converted amount using the appropriate exchange rate, and prints the result. The function uses a dictionary to map the currency codes to the corresponding exchange rates.",
+  "error": null,
+  "elapsed_seconds": 3.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

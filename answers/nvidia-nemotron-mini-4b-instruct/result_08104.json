@@ -1,0 +1,9 @@
+{
+  "id": 8104,
+  "title": "String Replace",
+  "prompt": "Write a program that takes a string, a character to replace, and a replacement character as input and returns the string with all occurrences of the character replaced.\nSample Input: Hello World, l, x\nSample Output: Hexxo World\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef replace_char(input_string: str, char_to_replace: str, replacement_char: str) -> str:\n    \"\"\"\n    Replaces all occurrences of a character in a string with a replacement character.\n\n    :param input_string: The string to modify.\n    :param char_to_replace: The character to replace.\n    :param replacement_char: The character to replace the target character with.\n    :return: The modified string.\n    \"\"\"\n    # Ensure the input is a string and the replacement character is not the same as the target character\n    if not isinstance(input_string, str) or replacement_char == char_to_replace:\n        raise ValueError(\"Input must be a string and replacement character cannot be the same as the target character.\")\n\n    # Use string slicing to replace all occurrences of the target character\n    return input_string.replace(char_to_replace, replacement_char)\n```\nHere's an example of how to use this function:\n```python\nprint(replace_char(\"Hello World\", \"l\", \"x\"))  # Output: Hexxo World\n```\nThis function checks if the input is a string and if the replacement character is not the same as the target character. If these conditions are not met, it raises a `ValueError`. Otherwise, it uses the `str.replace()` method to replace all occurrences of the target character with the replacement character.",
+  "error": null,
+  "elapsed_seconds": 3.52,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

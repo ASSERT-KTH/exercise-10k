@@ -1,0 +1,9 @@
+{
+  "id": 7535,
+  "title": "Dictionary Data Analysis",
+  "prompt": "You are given a dictionary where the keys are student names and the values are another dictionary containing the student's grades for different subjects. Write a program to calculate the average grade for each student and return a new dictionary with the student names as keys and their average grades as values.\nSample Input: {\"John\": {\"Math\": 90, \"Science\": 85, \"English\": 95}, \"Alice\": {\"Math\": 88, \"Science\": 92, \"English\": 89}}\nSample Output: {\"John\": 90.0, \"Alice\": 89.66666666666667}\n",
+  "answer": "Here's a Python solution for the problem:\n\n```python\ndef calculate_average(students):\n    result = {}\n    for student, grades in students.items():\n        total = sum(grades.values())\n        average = total / len(grades)\n        result[student] = average\n    return result\n\n# Test the function with the sample input\nstudents = {\"John\": {\"Math\": 90, \"Science\": 85, \"English\": 95}, \"Alice\": {\"Math\": 88, \"Science\": 92, \"English\": 89}}\nprint(calculate_average(students))  # Output: {'John': 90.0, 'Alice': 89.66666666666667}\n```\n\nThis function works by iterating over each student and their corresponding grades. For each student, it calculates the total sum of their grades and then divides that by the number of subjects to get the average. It stores this average in a new dictionary with the student's name as the key. Finally, it returns this new dictionary.",
+  "error": null,
+  "elapsed_seconds": 2.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

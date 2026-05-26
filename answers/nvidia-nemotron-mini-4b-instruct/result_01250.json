@@ -1,0 +1,9 @@
+{
+  "id": 1250,
+  "title": "Closure Functions",
+  "prompt": "Write a closure function that returns another function.\nSample Input: None\nSample Output: A new function that adds 5 to the input\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example of a closure function in JavaScript that returns another function that adds 5 to the input:\n\n```javascript\nfunction createAddFiveFunction() {\n  // The inner function 'addFive' captures the value of 'this' (which is the closure's outer function)\n  // and the variable 'five' (which is a local variable in the closure)\n function addFive(input) {\n    return input + five;\n  }\n\n  // Assign the value of 'five' to the inner function 'addFive'\n five = 5;\n\n  return addFive;\n}\n\n// Now you can call the returned function with any input value\nconst addFiveFunction = createAddFiveFunction();\nconsole.log(addFiveFunction(3)); // Output: 8\n```\n\nIn this example, the `createAddFiveFunction` function returns an inner function `addFive` that adds 5 to the input. The inner function `addFive` captures the value of `five` (which is assigned a value of 5 in the outer function) and the value of `this` (which refers to the outer function). The outer function `createAddFiveFunction` also assigns the value of `five` to the inner function `addFive` before returning it.\n\nYou can call the returned function `addFiveFunction` with any input value, and it will always add 5 to that input.",
+  "error": null,
+  "elapsed_seconds": 3.24,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

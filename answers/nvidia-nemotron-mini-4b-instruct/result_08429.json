@@ -1,0 +1,9 @@
+{
+  "id": 8429,
+  "title": "Triangle Checker",
+  "prompt": "Create a program that takes in three sides of a triangle and checks if they form a valid triangle using conditional statements.\nSample Input: 3 4 5\nSample Output: VALID TRIANGLE\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if three given sides form a valid triangle using conditional statements:\n```python\ndef is_valid_triangle(side1, side2, side3):\n    \"\"\"\n    Check if three given sides form a valid triangle.\n\n    :param side1: The first side of the triangle.\n    :param side2: The second side of the triangle.\n    :param side3: The third side of the triangle.\n    :return: True if the sides form a valid triangle, False otherwise.\n    \"\"\"\n\n    # Check if all sides are positive\n    if side1 <= 0 or side2 <= 0 or side3 <= 0:\n        return False\n\n    # Check if the sum of any two sides is greater than the third side\n    return (side1 + side2 > side3) and (side1 + side3 > side2) and (side2 + side3 > side1)\n\n# Get user input\nside1 = float(input(\"Enter the first side of the triangle: \"))\nside2 = float(input(\"Enter the second side of the triangle: \"))\nside3 = float(input(\"Enter the third side of the triangle: \"))\n\n# Check if the sides form a valid triangle\nif is_valid_triangle(side1, side2, side3):\n    print(\"VALID TRIANGLE\")\nelse:\n    print(\"INVALID TRIANGLE\")\n```\nThis program first checks if all three sides are positive. Then, it checks if the sum of any two sides is greater than the third side. If both conditions are met, the program prints \"VALID TRIANGLE\"; otherwise, it prints \"INVALID TRIANGLE\".",
+  "error": null,
+  "elapsed_seconds": 4.03,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

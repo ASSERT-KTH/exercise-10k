@@ -1,0 +1,9 @@
+{
+  "id": 7818,
+  "title": "Character Frequency",
+  "prompt": "Write a program that calculates the frequency of each character in a given string.\nSample Input: hello\nSample Output: h: 1, e: 1, l: 2, o: 1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the frequency of each character in a given string:\n\n```python\ndef char_frequency(s):\n    \"\"\"\n    Calculates the frequency of each character in a given string.\n\n    :param s: str - The input string\n    :return: dict - A dictionary where keys are characters and values are their frequencies\n    \"\"\"\n    # Initialize an empty dictionary to store the character frequencies\n    freq = {}\n\n    # Iterate over each character in the string\n    for char in s:\n        # If the character is already in the dictionary, increment its frequency\n        if char in freq:\n            freq[char] += 1\n        # Otherwise, add the character to the dictionary with a frequency of 1\n        else:\n            freq[char] = 1\n\n    return freq\n\n# Example usage\ninput_string = \"hello\"\nprint(char_frequency(input_string))  # Output: {'h': 1, 'e': 1, 'l': 2, 'o': 1}\n```\n\nThis program first initializes an empty dictionary to store the character frequencies. Then, it iterates over each character in the input string and checks if the character is already in the dictionary. If it is, the frequency of that character is incremented by 1. If it's not, the character is added to the dictionary with a frequency of 1. Finally, the program returns the dictionary containing the character frequencies.",
+  "error": null,
+  "elapsed_seconds": 3.51,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

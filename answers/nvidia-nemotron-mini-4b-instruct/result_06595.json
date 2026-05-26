@@ -1,0 +1,9 @@
+{
+  "id": 6595,
+  "title": "Find the Least Common Multiple (LCM) of Two Numbers",
+  "prompt": "Write a program to find the LCM of two numbers using the formula lcm(a, b) = |a*b| / gcd(a, b).\nSample Input: 12, 15\nSample Output: 60\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the LCM (Least Common Multiple) of two numbers using the formula you provided:\n\n```python\nimport math\n\ndef gcd(a, b):\n    \"\"\"Calculate the greatest common divisor of two numbers.\"\"\"\n    while b:\n        a, b = b, a % b\n    return abs(a)\n\ndef lcm(a, b):\n    \"\"\"Calculate the least common multiple of two numbers.\"\"\"\n    return abs(a * b) // gcd(a, b)\n\n# Get sample input from the user\nsample_input = input(\"Enter two numbers separated by a space: \")\nnumbers = sample_input.split()\n\n# Convert the input to integers and calculate the LCM\na, b = int(numbers[0]), int(numbers[1])\nlcm_value = lcm(a, b)\n\n# Print the result\nprint(f\"The LCM of {a} and {b} is {lcm_value}.\")\n```\n\nWhen you run this program and enter `12 15` as sample input, it will output:\n\n```\nThe LCM of 12 and 15 is 60.\n```",
+  "error": null,
+  "elapsed_seconds": 3.01,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

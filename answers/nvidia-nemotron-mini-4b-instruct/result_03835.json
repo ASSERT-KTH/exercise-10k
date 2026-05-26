@@ -1,0 +1,9 @@
+{
+  "id": 3835,
+  "title": "Clock Program",
+  "prompt": "Write a program that displays the current time and updates it in real-time.\nSample Output: 12:30:00 PM\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that displays the current time in real-time using the `datetime` module. This program will run in an infinite loop, updating the time every second.\n\n```python\nimport time\nfrom datetime import datetime\n\ndef display_time():\n    \"\"\"Display the current time in real-time.\"\"\"\n    while True:\n        current_time = datetime.now().strftime(\"%I:%M:%S %p\")\n        print(current_time)\n        time.sleep(1)  # Sleep for 1 second before the next iteration\n\n# Start the display_time function in a separate thread\nimport threading\nthread = threading.Thread(target=display_time)\nthread.start()\n```\n\nThis program creates a new thread using `threading.Thread` and starts it with the `target` argument set to `display_time`. The `display_time` function is then called in an infinite loop, updating the current time every second and printing it to the console. The `time.sleep(1)` call pauses the execution of the thread for 1 second before the next iteration.\n\nWhen you run this program, you should see the current time displayed in real-time, e.g., `12:30:00 PM` every 60 seconds.",
+  "error": null,
+  "elapsed_seconds": 3.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

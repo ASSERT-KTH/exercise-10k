@@ -1,0 +1,9 @@
+{
+  "id": 558,
+  "title": "String Comparator",
+  "prompt": "Write a program that takes two strings as input and returns an integer value indicating the lexicographic order of the strings.\nSample Input: hello, world\nSample Output: -1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef compare_strings(str1, str2):\n    \"\"\"\n    Compares two strings lexicographically and returns an integer value indicating their order.\n\n    :param str1: The first string to compare.\n    :param str2: The second string to compare.\n    :return: An integer value indicating the order of the strings (1 for str1 > str2, -1 for str1 < str2, 0 for str1 == str2).\n    \"\"\"\n    # Ensure both inputs are strings\n    if not isinstance(str1, str) or not isinstance(str2, str):\n        raise TypeError(\"Both inputs must be strings.\")\n\n    # Compare the strings lexicographically and return the result as an integer\n    return -1 if str1 < str2 else (1 if str1 > str2 else 0)\n\n# Example usage\ninput_str = input(\"Enter two strings separated by a comma: \")\nstr1, str2 = input_str.split(\",\")\nprint(compare_strings(str1, str2))\n```\nThis program defines a function `compare_strings` that takes two strings as input and returns an integer value indicating their lexicographic order. The function first checks if both inputs are strings, and raises a `TypeError` if they are not. Then, it compares the strings lexicographically using the `<`, `>`, and `==` operators, and returns the result as an integer. The example usage at the end of the program demonstrates how to use the function to compare two user-provided strings.",
+  "error": null,
+  "elapsed_seconds": 3.64,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

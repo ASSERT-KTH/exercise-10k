@@ -1,0 +1,9 @@
+{
+  "id": 5151,
+  "title": "Count Students By Age",
+  "prompt": "Count the number of students for each age in a dictionary where keys are student names and values are their corresponding ages\nSample Input: {'John': 20, 'Emma': 22, 'Oliver': 21, 'Ava': 20, 'William': 22}\nSample Output: {20: 2, 21: 1, 22: 2}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution for your problem:\n```python\nstudent_ages = {'John': 20, 'Emma': 22, 'Oliver': 21, 'Ava': 20, 'William': 22}\n\n# Create an empty dictionary to store the result\nage_counts = {}\n\n# Iterate over the student ages dictionary\nfor student, age in student_ages.items():\n    # If the age is already a key in the result dictionary, increment its value by 1\n    if age in age_counts:\n        age_counts[age] += 1\n    # Otherwise, add the age as a new key with a value of 1\n    else:\n        age_counts[age] = 1\n\nprint(age_counts)\n```\nWhen you run this code with the sample input, it will output:\n```python\n{20: 2, 21: 1, 22: 2}\n```\nThis solution first creates an empty dictionary `age_counts` to store the result. Then, it iterates over the keys and values of the input dictionary `student_ages`, checking if the current age is already a key in `age_counts`. If it is, the value is incremented by 1. Otherwise, it is added as a new key with a value of 1. Finally, the `age_counts` dictionary is printed.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

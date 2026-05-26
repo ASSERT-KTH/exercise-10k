@@ -1,0 +1,9 @@
+{
+  "id": 7410,
+  "title": "Longest Increasing Subsequence",
+  "prompt": "Given an array of integers, find the length of the longest increasing subsequence. A subsequence is a sequence that can be derived from another sequence by deleting some elements without changing the order of the remaining elements.\nSample Input: [10, 22, 9, 33, 21, 50, 41, 60, 80]\nSample Output: 6\n",
+  "answer": "Here's a Python solution using dynamic programming:\n\n```python\ndef longest_increasing_subsequence(nums):\n    n = len(nums)\n    dp = [1]*n\n    max_length = 1\n\n    for i in range(1, n):\n        for j in range(i):\n            if nums[j] < nums[i]:\n                dp[i] = max(dp[i], dp[j]+1)\n                max_length = max(max_length, dp[i])\n\n    return max_length\n```\n\nThis function works by iterating through the array and for each element, it checks all previous elements to see if it can be part of a longer increasing subsequence. If so, it updates the `dp` array and the maximum length. Finally, it returns the maximum length found.\n\nYou can test this function with your sample input like this:\n\n```python\nprint(longest_increasing_subsequence([10, 22, 9, 33, 21, 50, 41, 60, 80]))  # Output: 6\n```",
+  "error": null,
+  "elapsed_seconds": 2.73,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6137,
+  "title": "Password Validator",
+  "prompt": "Ask the user for a password and check if it meets certain requirements like length and character types.\nSample Input: P@ssw0rd\nSample Output: The password is valid.\n",
+  "answer": "Sure, I can help you with that. Here's a Python function that meets your requirements. This function will ask the user for a password, check if it meets the length and character type requirements, and provide an appropriate output.\n\n```python\nimport re\n\ndef check_password_validity(password):\n    \"\"\"\n    Check if a password meets certain requirements.\n\n    :param password: str - The password to check.\n    :return: str - A message indicating whether the password is valid.\n    \"\"\"\n\n    # Check if the password is at least 8 characters long\n    if len(password) < 8:\n        return \"The password must be at least 8 characters long.\"\n\n    # Check if the password contains at least one uppercase letter, one lowercase letter, one digit, and one special character\n    pattern = r'^[a-zA-Z0-9!@#$%^&*(),.?\":{}|<>~-_`.,;]*$'\n    if not re.match(pattern, password):\n        return \"The password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character.\"\n\n    return \"The password is valid.\"\n```\n\nYou can use this function like this:\n\n```python\npassword = input(\"Enter a password: \")\nprint(check_password_validity(password))\n```",
+  "error": null,
+  "elapsed_seconds": 3.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

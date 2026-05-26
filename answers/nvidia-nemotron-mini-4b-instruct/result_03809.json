@@ -1,0 +1,9 @@
+{
+  "id": 3809,
+  "title": "Powers of 2",
+  "prompt": "Write a program to calculate the first n powers of 2 using a for loop.\nSample Input: 5\nSample Output: 1 2 4 8 16\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the first `n` powers of 2 using a for loop:\n\n```python\ndef calculate_powers_of_two(n):\n    \"\"\"\n    Calculates the first n powers of 2 using a for loop.\n\n    :param n: The number of powers of 2 to calculate.\n    :return: A list of the first n powers of 2.\n    \"\"\"\n    if n < 1:\n        raise ValueError(\"n must be a positive integer\")\n\n    result = []\n    power = 1\n\n    for _ in range(n):\n        result.append(power)\n        power *= 2\n\n    return result\n\n# Example usage:\nn = 5\nprint(calculate_powers_of_two(n))  # Output: [1, 2, 4, 8, 16]\n```\n\nThis function first checks if the input `n` is a positive integer. If not, it raises a `ValueError`. Then, it initializes an empty list `result` and a variable `power` to keep track of the current power of 2. It then uses a for loop to iterate `n` times, appending each power of 2 to the `result` list and multiplying `power` by 2 after each iteration. Finally, it returns the `result` list.",
+  "error": null,
+  "elapsed_seconds": 3.84,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

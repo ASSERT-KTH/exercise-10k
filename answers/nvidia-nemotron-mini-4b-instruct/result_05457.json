@@ -1,0 +1,9 @@
+{
+  "id": 5457,
+  "title": "Tip Calculator",
+  "prompt": "Write a program that takes a bill amount as input and prints out the calculated tip\nSample Input: 25\nSample Output: Tip: $3.75\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a simple Python program that meets your requirements:\n\n```python\ndef calculate_tip(bill_amount):\n    \"\"\"\n    Calculates the tip amount based on a given bill amount.\n\n    :param bill_amount: The total amount of the bill.\n    :return: A string containing the tip amount.\n    \"\"\"\n    # Calculate the tip percentage based on the bill amount\n    tip_percentage = 0.15  # 15% tip\n    tip_amount = bill_amount * tip_percentage\n\n    # Format the tip amount as a string with two decimal places\n    tip_amount_formatted = \"{:.2f}\".format(tip_amount)\n\n    # Construct the output string\n    output_string = f\"Tip: ${tip_amount_formatted}\"\n\n    return output_string\n\n# Get user input for the bill amount\nbill_amount = float(input(\"Enter the bill amount: $\"))\n\n# Calculate and print the tip amount\ntip_amount = calculate_tip(bill_amount)\nprint(tip_amount)\n```\n\nThis program defines a function `calculate_tip` that takes a bill amount as input and returns a string containing the calculated tip amount. The function calculates the tip percentage based on a common tip rate (15%) and then formats the tip amount as a string with two decimal places. The program then prompts the user to enter the bill amount, calls the `calculate_tip` function, and prints the resulting tip amount.",
+  "error": null,
+  "elapsed_seconds": 3.42,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

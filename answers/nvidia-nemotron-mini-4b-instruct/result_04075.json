@@ -1,0 +1,9 @@
+{
+  "id": 4075,
+  "title": "String Encoding",
+  "prompt": "Write a program that takes a string as input and returns the string encoded in a specified encoding (e.g. ASCII, UTF-8).\nSample Input: hello\nSample Output: b'hello'\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a string as input and returns the string encoded in a specified encoding (e.g. ASCII, UTF-8):\n```python\ndef encode_string(input_string: str, encoding: str) -> bytes:\n    \"\"\"\n    Encodes a given string in a specified encoding.\n\n    :param input_string: The string to encode.\n    :param encoding: The encoding to use for encoding. Can be 'ascii', 'utf-8', or any other encoding supported by the platform.\n    :return: The encoded bytes object.\n    \"\"\"\n    # Ensure the input encoding is valid\n    if encoding not in ['ascii', 'utf-8', 'latin-1', 'windows-1252', 'iso-8859-1', 'utf-32', 'utf-32-be', 'utf-32-le']:\n        raise ValueError(f\"Invalid encoding '{encoding}'. Supported encodings are 'ascii', 'utf-8', 'latin-1', 'windows-1252', 'iso-8859-1', 'utf-32', 'utf-32-be', 'utf-32-le'.\")\n\n    # Encode the string using the specified encoding\n    encoded_bytes = input_string.encode(encoding)\n\n    return encoded_bytes\n\n# Example usage\ninput_string = \"hello\"\nencoding = \"utf-8\"\nencoded_bytes = encode_string(input_string, encoding)\nprint(f\"Sample Output: {encoded_bytes}\")  # Output: Sample Output: b'hello'\n```\nThis program defines a function `encode_string` that takes an input string and an encoding as arguments, and returns the encoded bytes object using the specified encoding. The function checks if the input encoding is valid and raises a `ValueError` if it's not. The example usage at the end of the program demonstrates how to use the function to encode a string in UTF-8 encoding.",
+  "error": null,
+  "elapsed_seconds": 4.61,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

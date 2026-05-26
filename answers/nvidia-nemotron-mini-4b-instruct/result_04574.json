@@ -1,0 +1,9 @@
+{
+  "id": 4574,
+  "title": "Dictionary Inverse",
+  "prompt": "Write a function that takes a dictionary and returns a new dictionary with the key-value pairs inverted\nSample Input: {'a': 1, 'b': 2, 'c': 3}\nSample Output: {1: 'a', 2: 'b', 3: 'c'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef invert_dict(d):\n    \"\"\"\n    Inverts the key-value pairs of a dictionary and returns a new dictionary.\n\n    :param d: The dictionary to invert.\n    :return: A new dictionary with the key-value pairs inverted.\n    \"\"\"\n    return {value: key for key, value in d.items()}\n```\nHere's how this function works:\n\n* It uses a dictionary comprehension to create a new dictionary with the same keys as the input dictionary, but with the values inverted.\n* The `items()` method is used to get an iterator over the key-value pairs of the input dictionary.\n* The comprehension iterates over each key-value pair in the iterator, and assigns the value to the new key and the key to the new value.\n\nHere's an example of how you can use this function:\n```python\ninput_dict = {'a': 1, 'b': 2, 'c': 3}\noutput_dict = invert_dict(input_dict)\nprint(output_dict)  # Output: {1: 'a', 2: 'b', 3: 'c'}\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

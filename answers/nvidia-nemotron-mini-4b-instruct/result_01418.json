@@ -1,0 +1,9 @@
+{
+  "id": 1418,
+  "title": "Phone number validator",
+  "prompt": "Create a program that checks if a given phone number is valid. If the number is in the format XXX-XXX-XXXX, print 'Valid', otherwise print 'Invalid'.\nSample Input: 123-456-7890\nSample Output: Valid\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given phone number is in the format XXX-XXX-XXXX and prints 'Valid' or 'Invalid' accordingly:\n```python\ndef is_valid_phone_number(phone_number):\n    # Check if the phone number has the correct format\n    if len(phone_number) != 12 or not all(char.isdigit() for char in phone_number[:3]):\n        return False\n    if not all(char in '-' for char in phone_number[3:6]):\n        return False\n    if not all(char.isdigit() for char in phone_number[6:]):\n        return False\n    return True\n\n# Get user input\nuser_input = input(\"Enter a phone number (XXX-XXX-XXXX format): \")\n\n# Check if the phone number is valid\nif is_valid_phone_number(user_input):\n    print(\"Valid\")\nelse:\n    print(\"Invalid\")\n```\nThis program defines a function `is_valid_phone_number` that checks if a given phone number has the correct format (three digits followed by a hyphen, then three digits, and finally four digits). The function uses list comprehensions and the `all` function to check if each part of the phone number has the correct format. If the phone number is valid, the function returns `True`, and the program prints 'Valid'. Otherwise, it returns `False` and prints 'Invalid'.\n\nYou can test the program with different phone numbers to ensure it works as expected.",
+  "error": null,
+  "elapsed_seconds": 4.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

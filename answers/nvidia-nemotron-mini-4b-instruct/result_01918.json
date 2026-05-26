@@ -1,0 +1,9 @@
+{
+  "id": 1918,
+  "title": "Median Calculator",
+  "prompt": "Calculate the median given a list of numbers.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you calculate the median of a given list of numbers! Here's a simple Python function that calculates the median:\n\n```python\ndef calculate_median(numbers):\n    # Sort the list of numbers in ascending order\n    sorted_numbers = sorted(numbers)\n\n    # Calculate the length of the sorted list\n    n = len(sorted_numbers)\n\n    # If the length is even, the median is the average of the middle two numbers\n    if n % 2 == 0:\n        median = (sorted_numbers[n//2 - 1] + sorted_numbers[n//2]) / 2\n    # If the length is odd, the median is the middle number\n    else:\n        median = sorted_numbers[n//2]\n\n    return median\n```\n\nYou can use this function with a sample input like this:\n\n```python\nnumbers = [1, 2, 3, 4, 5]\nprint(calculate_median(numbers))  # Output: 3\n```\n\nThis function first sorts the list of numbers in ascending order. Then, it calculates the length of the sorted list. If the length is even, it calculates the average of the middle two numbers as the median. If the length is odd, it simply returns the middle number as the median.",
+  "error": null,
+  "elapsed_seconds": 3.11,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

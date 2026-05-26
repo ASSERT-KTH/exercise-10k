@@ -1,0 +1,9 @@
+{
+  "id": 6273,
+  "title": "Dictionary Filtering",
+  "prompt": "Filter a dictionary to only include key-value pairs where the value meets a certain condition\nSample Input: {'name': 'John', 'age': 25, 'city': 'New York'}, lambda x: x == 'New York'\nSample Output: {'city': 'New York'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef filter_dict(input_dict, condition):\n    \"\"\"\n    Filters a dictionary to only include key-value pairs where the value meets a certain condition.\n\n    Parameters:\n    input_dict (dict): The input dictionary to filter.\n    condition (callable): A function that takes a single argument (the value) and returns a boolean.\n                          The function should return True if the value should be included in the output,\n                          and False otherwise.\n\n    Returns:\n    dict: A new dictionary containing only the key-value pairs from the input dictionary where the value\n          meets the condition.\n    \"\"\"\n    return {k: v for k, v in input_dict.items() if condition(v)}\n```\nHere's an example of how to use this function:\n```python\ninput_dict = {'name': 'John', 'age': 25, 'city': 'New York'}\ncondition = lambda x: x == 'New York'\noutput_dict = filter_dict(input_dict, condition)\nprint(output_dict)  # Output: {'city': 'New York'}\n```\nThis function uses a dictionary comprehension to create a new dictionary containing only the key-value pairs where the value meets the condition. The `condition` parameter is passed as a lambda function, which is then used to filter the input dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.27,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

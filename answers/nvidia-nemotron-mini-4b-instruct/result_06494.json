@@ -1,0 +1,9 @@
+{
+  "id": 6494,
+  "title": "Average Calculator",
+  "prompt": "Write a program that asks the user for a series of numbers and then calculates and prints out the average of the numbers.\nSample Input: 1 2 3 4 5\nSample Output: Average: 3.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_average():\n    \"\"\"\n    Asks the user for a series of numbers and calculates and prints out the average.\n    \"\"\"\n    # Initialize a list to store the numbers\n    numbers = []\n\n    # Keep asking the user for numbers until they enter 'done'\n    while True:\n        user_input = input(\"Enter a number (or 'done' to finish): \")\n\n        # Check if the user entered 'done'\n        if user_input.lower() == \"done\":\n            break\n\n        # Try to convert the user input to a float and add it to the list\n        try:\n            number = float(user_input)\n            numbers.append(number)\n        except ValueError:\n            print(f\"Invalid input: '{user_input}' is not a number. Please try again.\")\n\n    # Calculate the average and print it\n    total = sum(numbers)\n    average = total / len(numbers)\n    print(f\"Average: {average:.2f}\")\n\n# Call the function to start the program\nget_average()\n```\nThis program defines a function `get_average()` that prompts the user for a series of numbers until they enter 'done'. It then calculates the average of the numbers and prints it out. The program also includes error handling to ensure that the user input is always a number.",
+  "error": null,
+  "elapsed_seconds": 3.67,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

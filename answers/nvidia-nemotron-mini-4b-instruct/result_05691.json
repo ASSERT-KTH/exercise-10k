@@ -1,0 +1,9 @@
+{
+  "id": 5691,
+  "title": "Number Checker",
+  "prompt": "Create a program that takes a number as input and checks if it's positive, negative, or zero using conditional statements.\nSample Input: 5\nSample Output: Positive\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef check_number(number):\n    \"\"\"\n    This function takes a number as input and checks if it's positive, negative, or zero using conditional statements.\n\n    :param number: The number to check.\n    :return: A string indicating whether the number is positive, negative, or zero.\n    \"\"\"\n\n    # Check if the input is a number\n    if not isinstance(number, (int, float)):\n        raise TypeError(\"The input must be a number.\")\n\n    # Check if the number is positive, negative, or zero\n    if number > 0:\n        return \"Positive\"\n    elif number < 0:\n        return \"Negative\"\n    else:\n        return \"Zero\"\n\n# Get user input\ntry:\n    user_input = float(input(\"Enter a number: \"))\nexcept ValueError:\n    print(\"That's not a valid number. Please try again.\")\n    exit()\n\n# Call the function and print the result\nresult = check_number(user_input)\nprint(f\"The number {user_input} is {result}.\")\n```\n\nThis program defines a function `check_number` that takes a number as input and returns a string indicating whether it's positive, negative, or zero. The program then gets user input, checks if it's a number, and calls the function to get the result. The result is then printed to the user.",
+  "error": null,
+  "elapsed_seconds": 3.43,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

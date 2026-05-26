@@ -1,0 +1,9 @@
+{
+  "id": 1971,
+  "title": "Coin Change Problem",
+  "prompt": "Create a function that calculates the minimum number of coins needed to make a certain amount of change. The function should take the amount of change and the denominations of the coins as arguments and return the minimum number of coins.\nSample Input: amount = 10, coins = [1, 2, 5]\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function uses dynamic programming to solve the change-making problem by storing the minimum number of coins needed to make each amount of change up to the given amount.\n\n```python\ndef min_coins(amount, coins):\n    # Initialize a list to store the minimum number of coins needed for each amount\n    min_coins_needed = [float('inf')] * (amount + 1)\n\n    # Base case: the minimum number of coins needed to make 0 change is 0\n    min_coins_needed[0] = 0\n\n    # Iterate through each coin denomination\n    for coin in coins:\n        # Iterate through each amount of change\n        for change in range(coin, amount + 1):\n            # Update the minimum number of coins needed for the current amount\n            min_coins_needed[change] = min(min_coins_needed[change], min_coins_needed[change - coin] + 1)\n\n    # Return the minimum number of coins needed for the given amount\n    return min_coins_needed[amount]\n```\n\nYou can use this function as follows:\n\n```python\nprint(min_coins(10, [1, 2, 5]))  # Output: 2\n```\n\nThis function has a time complexity of O(amount * num_coins) due to the nested loops, where amount is the amount of change and num_coins is the number of coin denominations.",
+  "error": null,
+  "elapsed_seconds": 3.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

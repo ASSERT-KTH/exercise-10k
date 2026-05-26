@@ -1,0 +1,9 @@
+{
+  "id": 3142,
+  "title": "Maximum Value in an Array",
+  "prompt": "Write a function to find the maximum value in an array of integers.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the maximum value in an array (or list) of integers:\n\n```python\ndef find_max(arr):\n    \"\"\"\n    Find the maximum value in an array of integers.\n\n    :param arr: The array of integers\n    :return: The maximum value in the array\n    \"\"\"\n    if not arr:  # Check if the input is empty\n        raise ValueError(\"Input array cannot be empty\")\n\n    # Initialize the maximum value to the first element in the array\n    max_val = arr[0]\n\n    # Iterate through the array to find the maximum value\n    for num in arr[1:]:\n        if num > max_val:\n            max_val = num\n\n    return max_val\n```\n\nYou can use this function as follows:\n\n```python\nprint(find_max([1, 2, 3, 4, 5]))  # Output: 5\nprint(find_max([]))  # Raises ValueError: Input array cannot be empty\n```\n\nThis function first checks if the input array is empty and raises a `ValueError` if it is. Then, it initializes the maximum value to the first element in the array. Finally, it iterates through the array and updates the maximum value if it encounters a larger number.",
+  "error": null,
+  "elapsed_seconds": 3.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

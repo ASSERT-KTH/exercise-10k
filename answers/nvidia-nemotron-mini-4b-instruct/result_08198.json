@@ -1,0 +1,9 @@
+{
+  "id": 8198,
+  "title": "Binary Search",
+  "prompt": "Write a program that implements binary search using a while loop.\nSample Input: [1, 2, 3, 4, 5], 3\nSample Output: Index: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that implements binary search using a while loop:\n\n```python\ndef binary_search(arr, target):\n    low = 0\n    high = len(arr) - 1\n\n    while low <= high:\n        mid = (low + high) // 2\n\n        if arr[mid] == target:\n            return f\"Index: {mid}\"\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n\n    return \"Element not found\"\n\n# Sample input\narr = [1, 2, 3, 4, 5]\ntarget = 3\n\nresult = binary_search(arr, target)\nprint(result)  # Output: Index: 2\n```\n\nIn this program, we define a function `binary_search` that takes an array `arr` and a target value `target` as input. We initialize two pointers, `low` and `high`, to the beginning and end of the array, respectively. Then, we enter a while loop that continues until `low` is greater than or equal to `high`.\n\nInside the loop, we calculate the middle index `mid` and check if the element at `mid` is equal to the target. If it is, we return the index. If it's less than the target, we update `low` to be one more than `mid`. Otherwise, we update `high` to be one less than `mid`.\n\nIf the loop completes without finding the target, we return a message indicating that the element was not found.",
+  "error": null,
+  "elapsed_seconds": 3.93,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

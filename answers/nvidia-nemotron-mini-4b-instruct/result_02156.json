@@ -1,0 +1,9 @@
+{
+  "id": 2156,
+  "title": "Text File Input and Output",
+  "prompt": "Write a program that reads a text file and prints out the file's contents.\nSample Input: Hello World\nSample Output: Hello World\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that reads a text file and prints its contents:\n\n```python\ndef read_file(file_path):\n    \"\"\"\n    Reads a text file and prints its contents.\n\n    :param file_path: The path to the text file.\n    \"\"\"\n    try:\n        with open(file_path, 'r') as file:\n            file_contents = file.read()\n            print(file_contents)\n    except FileNotFoundError:\n        print(f\"The file '{file_path}' was not found.\")\n\n# Replace 'your_file.txt' with the path to your text file\nread_file('your_file.txt')\n```\n\nThis program defines a function `read_file` that takes a file path as an argument. It opens the file using the `open` function in a `try`-`except` block, which catches any `FileNotFoundError` that might be raised if the file is not found. If the file is found, the function reads its contents using the `read()` method and prints them to the console.\n\nYou can replace `'your_file.txt'` with the path to your actual text file. The program will then read the file's contents and print them to the console.",
+  "error": null,
+  "elapsed_seconds": 15.71,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7002,
+  "title": "Monthly Payment Calculator",
+  "prompt": "Write a program that takes the loan amount, interest rate, and number of years as input and returns the monthly payment.\nSample Input: 10000 6 2\nSample Output: 434.49\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes the loan amount, interest rate, and number of years as input and returns the monthly payment using the formula:\n\nMonthly Payment = (Loan Amount * Interest Rate / 12) / (1 - (1 + Interest Rate / 12) ^ (-Number of Years * 12))\n\n```python\ndef calculate_monthly_payment(loan_amount, interest_rate, years):\n    \"\"\"\n    Calculates the monthly payment for a loan.\n\n    :param loan_amount: The loan amount.\n    :param interest_rate: The annual interest rate as a decimal (e.g., 6% is 0.06).\n    :param years: The number of years for the loan.\n    :return: The monthly payment as a float.\n    \"\"\"\n\n    # Convert the interest rate to a decimal\n    interest_rate_decimal = interest_rate / 12\n\n    # Calculate the monthly payment\n    monthly_payment = (loan_amount * interest_rate_decimal) / (1 - (1 + interest_rate_decimal) ** (-years * 12))\n\n    return round(monthly_payment, 2)\n\n# Example usage\nloan_amount = 10000\ninterest_rate = 6\nyears = 2\n\nmonthly_payment = calculate_monthly_payment(loan_amount, interest_rate, years)\nprint(f\"The monthly payment is {monthly_payment}.\")\n```\n\nThis program defines a function `calculate_monthly_payment` that takes the loan amount, interest rate, and number of years as input and returns the monthly payment. The example usage at the end of the program demonstrates how to use the function to calculate the monthly payment for a loan of $10,000 with an annual interest rate of 6% and a term of 2 years.",
+  "error": null,
+  "elapsed_seconds": 4.59,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

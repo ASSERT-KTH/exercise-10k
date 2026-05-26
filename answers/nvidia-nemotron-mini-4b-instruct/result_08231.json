@@ -1,0 +1,9 @@
+{
+  "id": 8231,
+  "title": "Employee Salary",
+  "prompt": "Write a program that calculates an employee's salary using if/else statements\nSample Input: John, 50000, 10\nSample Output: Salary: 55000\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates an employee's salary using if/else statements based on the given sample input:\n\n```python\n# Function to calculate the employee's salary\ndef calculate_salary():\n    # Get the employee's name, base salary, and bonus percentage\n    employee_name = input(\"Enter the employee's name: \")\n    base_salary = float(input(\"Enter the employee's base salary: $\"))\n    bonus_percentage = float(input(\"Enter the bonus percentage: \"))\n\n    # Validate the input\n    if base_salary < 0 or bonus_percentage < 0 or bonus_percentage > 100:\n        print(\"Invalid input. Please enter a positive number between 0 and 100 for the bonus percentage.\")\n        return\n\n    # Calculate the salary based on the given conditions\n    if bonus_percentage <= 5:\n        salary = base_salary\n    elif bonus_percentage <= 20:\n        salary = base_salary + (base_salary * bonus_percentage / 100)\n    else:\n        salary = base_salary + (base_salary * (bonus_percentage - 20) / 100 * 1.2)\n\n    # Print the result\n    print(f\"Salary: ${salary:.2f}\")\n\n# Call the function\ncalculate_salary()\n```\n\nThis program defines a function `calculate_salary()` that prompts the user to enter the employee's name, base salary, and bonus percentage. It then validates the input and calculates the salary based on the given conditions. The function prints the result with two decimal places. Finally, the program calls the function and runs it.",
+  "error": null,
+  "elapsed_seconds": 4.13,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

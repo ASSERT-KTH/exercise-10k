@@ -1,0 +1,9 @@
+{
+  "id": 6361,
+  "title": "Array Indexing",
+  "prompt": "Write a program that takes an array and an index as input and returns the element at that index\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_element_at_index(arr, index):\n    \"\"\"\n    Given an array and an index, returns the element at that index.\n\n    :param arr: The input array\n    :param index: The index of the element to retrieve\n    :return: The element at the given index\n    \"\"\"\n    # Check if the index is within the bounds of the array\n    if index < 0 or index >= len(arr):\n        raise IndexError(\"Index out of bounds\")\n\n    # Return the element at the given index\n    return arr[index]\n```\nHere's an example of how you can use this function:\n```python\narr = [1, 2, 3, 4, 5]\nindex = 2\n\ntry:\n    element = get_element_at_index(arr, index)\n    print(f\"The element at index {index} is {element}.\")\nexcept IndexError as e:\n    print(e)\n```\nThis will output:\n```yaml\nThe element at index 2 is 3.\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.11,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

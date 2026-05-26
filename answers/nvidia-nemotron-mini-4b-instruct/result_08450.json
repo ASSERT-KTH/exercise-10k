@@ -1,0 +1,9 @@
+{
+  "id": 8450,
+  "title": "Tip Calculator",
+  "prompt": "Write a program that takes in a bill amount and calculates the corresponding tip using conditional statements.\nSample Input: 100\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_tip(bill_amount):\n    \"\"\"\n    Calculates the corresponding tip for a given bill amount.\n\n    :param bill_amount: The amount of the bill.\n    :return: The tip amount as an integer.\n    \"\"\"\n    # Check if the bill amount is positive\n    if bill_amount <= 0:\n        raise ValueError(\"Bill amount must be positive.\")\n\n    # Calculate the tip based on a 15% tip rate\n    tip_rate = 0.15\n    tip_amount = int(bill_amount * tip_rate)\n\n    return tip_amount\n\n# Get user input for the bill amount\nbill_amount = int(input(\"Enter the bill amount: \"))\n\n# Calculate and display the tip amount\ntip_amount = calculate_tip(bill_amount)\nprint(f\"The tip amount is ${tip_amount}.\")\n```\nThis program defines a function `calculate_tip` that takes in a bill amount and returns the corresponding tip amount as an integer. The function first checks if the bill amount is positive, and raises a `ValueError` if it's not. Then, it calculates the tip amount based on a 15% tip rate. The program then prompts the user to enter the bill amount, calls the `calculate_tip` function, and displays the tip amount.",
+  "error": null,
+  "elapsed_seconds": 3.26,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9650,
+  "title": "Function with/Websocket",
+  "prompt": "Create a function that uses the websocket module to establish a WebSocket connection and send/receive data.\nSample Input: None\nSample Output: Received data\n",
+  "answer": "Sure, I'd be happy to help you create a function that uses the `websockets` module to establish a WebSocket connection and send/receive data. Here's an example function that demonstrates this:\n\n```python\nimport asyncio\nimport websockets\n\nasync def send_and_receive(url: str) -> str:\n    \"\"\"\n    Establishes a WebSocket connection and sends/receives data.\n\n    :param url: The URL of the WebSocket server.\n    :return: The received data as a string.\n    \"\"\"\n\n    # Connect to the WebSocket server\n    async with websockets.connect(url) as websocket:\n\n        # Send a message to the server\n        await websocket.send(\"Hello, server!\")\n\n        # Receive data from the server\n        received_data = await websocket.recv()\n\n        # Print the received data\n        print(f\"Received data: {received_data}\")\n\n        # Close the connection to release resources\n        await websocket.close()\n\n    return received_data\n```\n\nYou can use this function as follows:\n\n```python\n# Example usage\nsend_and_receive(\"wss://your-websocket-server.com\")\n```\n\nThis function establishes a WebSocket connection to the specified URL, sends a message to the server, and then receives and prints the data sent back by the server. Note that you should replace `wss://your-websocket-server.com` with the actual URL of your WebSocket server.\n\nAdditionally, you can modify the function to handle errors and exceptions as needed. For example, you can add error handling to the `try`-`except` block to catch and handle any exceptions that might occur during the connection process.",
+  "error": null,
+  "elapsed_seconds": 4.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

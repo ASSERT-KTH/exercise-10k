@@ -1,0 +1,9 @@
+{
+  "id": 9347,
+  "title": "Variable Hoisting",
+  "prompt": "Write a program to demonstrate the concept of variable hoisting.\nSample Input: None\nSample Output: Variable values\n",
+  "answer": "Sure, I'd be happy to help you understand the concept of variable hoisting! Here's a simple JavaScript program that demonstrates this behavior:\n\n```javascript\n// Variable hoisting: variables are moved to the top of their scope before execution\n\n// Non-hoisted variables\nlet x = 10;\nlet y = 20;\n\n// Hoisted variables\nconsole.log(x); // 10\nconsole.log(y); // 20\n\n// Function expression\nfunction addNumbers() {\n let z = 30;\n console.log(z); // 30\n}\n\n// Call the function\naddNumbers();\n\n// Non-hoisted variables in a block scope\n{\n let a = 40;\n console.log(a); // 40\n}\n\nconsole.log(x); // ReferenceError: x is not defined\nconsole.log(y); // ReferenceError: y is not defined\n```\n\nIn this program, we define several variables and functions with different scopes. The `x` and `y` variables are defined outside any function or block scope, so they are not hoisted. The `z` variable in the `addNumbers` function is hoisted, meaning it is moved to the top of the function's scope before execution.\n\nThe `a` variable in the block scope is also hoisted, so it is available before the `console.log` statement. However, the `x` and `y` variables are not hoisted, so they are not available before the `console.log` statements that reference them.\n\nThis behavior helps to ensure that variables are initialized before they are used, which can help prevent certain types of bugs. However, it can also lead to unexpected behavior in some cases, so it's essential to understand how variables are hoisted in JavaScript.",
+  "error": null,
+  "elapsed_seconds": 4.03,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

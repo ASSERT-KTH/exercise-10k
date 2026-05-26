@@ -1,0 +1,9 @@
+{
+  "id": 2240,
+  "title": "List Subset",
+  "prompt": "Write a program that checks if one list is a subset of another.\nSample Input: [1, 2], [1, 2, 3]\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if one list is a subset of another:\n\n```python\ndef is_subset(list1, list2):\n    \"\"\"\n    Check if list1 is a subset of list2.\n\n    :param list1: The first list to check.\n    :param list2: The second list to compare against.\n    :return: True if list1 is a subset of list2, False otherwise.\n    \"\"\"\n    # Check if list1 is a subset of list2 by comparing their lengths and elements\n    if len(list1) > len(list2):\n        return False\n\n    for element in list1:\n        if element not in list2:\n            return False\n\n    return True\n\n# Sample input and output\nlist1 = [1, 2]\nlist2 = [1, 2, 3]\nprint(is_subset(list1, list2))  # Output: True\n```\n\nThis program first checks the lengths of the two lists to ensure that list1 is not longer than list2. If it is, then list1 cannot be a subset of list2, so the function immediately returns `False`. Otherwise, it iterates over each element in list1 and checks if it exists in list2 using the `in` keyword. If any element is not found in list2, the function returns `False`. If all elements are found in list2, the function returns `True`.",
+  "error": null,
+  "elapsed_seconds": 3.63,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

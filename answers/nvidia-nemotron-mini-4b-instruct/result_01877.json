@@ -1,0 +1,9 @@
+{
+  "id": 1877,
+  "title": "Array Searching for Multiple Elements",
+  "prompt": "Write a program to search for multiple elements in an array and print their indices if found.\nSample Input: [1, 2, 3, 4, 5] and target elements [2, 4]\nSample Output: [1, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that searches for multiple elements in an array (or list) and prints their indices if found:\n```python\ndef search_multiple(arr, targets):\n    \"\"\"\n    Search for multiple elements in an array and print their indices if found.\n\n    :param arr: The array to search in\n    :param targets: The target elements to search for\n    :return: None\n    \"\"\"\n    # Check if the input is valid\n    if not arr or not targets:\n        print(\"Input array or target elements cannot be empty.\")\n        return\n\n    # Search for each target element in the array\n    for target in targets:\n        # Use list.index() to find the index of the target element\n        index = arr.index(target)\n\n        # Print the index if the target element is found\n        if index != -1:\n            print(f\"The target element {target} is found at index {index}.\")\n        else:\n            print(f\"The target element {target} is not found in the array.\")\n\n# Example usage\narr = [1, 2, 3, 4, 5]\ntargets = [2, 4]\nsearch_multiple(arr, targets)\n```\nWhen you run this program with the sample input `[1, 2, 3, 4, 5]` and `[2, 4]`, it will output:\n```yaml\nThe target element 2 is found at index 1.\nThe target element 4 is found at index 3.\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 10.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

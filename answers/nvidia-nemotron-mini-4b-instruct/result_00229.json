@@ -1,0 +1,9 @@
+{
+  "id": 229,
+  "title": "String Validation",
+  "prompt": "Create a function to validate if a given string contains only digits.\nSample Input: 12345\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that validates if a given string contains only digits (i.e., numbers from 0 to 9):\n\n```python\nimport re\n\ndef is_string_only_digits(s: str) -> bool:\n    \"\"\"\n    Validate if a given string contains only digits.\n\n    :param s: The string to validate.\n    :return: True if the string contains only digits, False otherwise.\n    \"\"\"\n    # Use a regular expression to match only digits (0-9)\n    return bool(re.match(r'^[0-9]*$', s))\n```\n\nThis function uses a regular expression to check if the string only contains digits. The regular expression `^[0-9]*$` matches any string that consists of one or more occurrences of the digit characters (0-9), surrounded by word boundaries (`^` and `$`) to ensure a full match. The `bool()` function is used to convert the regular expression match object to a boolean value.\n\nHere are some examples of how to use this function:\n\n```python\nprint(is_string_only_digits('12345'))  # True\nprint(is_string_only_digits('abc'))    # False\nprint(is_string_only_digits('0'))     # True\nprint(is_string_only_digits('1000000000'))  # True\n```",
+  "error": null,
+  "elapsed_seconds": 3.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

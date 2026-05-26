@@ -1,0 +1,9 @@
+{
+  "id": 2851,
+  "title": "Dictionary Pop",
+  "prompt": "Write a function to remove and return the value associated with a given key from a dictionary.\nSample Input: {'name': 'John', 'age': 30}, 'age'\nSample Output: 30\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef remove_value(dictionary, key):\n    \"\"\"\n    Remove and return the value associated with a given key from a dictionary.\n\n    :param dictionary: The dictionary to search in.\n    :param key: The key to search for.\n    :return: The value associated with the given key, or None if not found.\n    \"\"\"\n    value = dictionary.get(key)\n    if value is not None:\n        del dictionary[key]\n    return value\n```\nHere's how you can use this function:\n```python\nsample_dict = {'name': 'John', 'age': 30}\nprint(remove_value(sample_dict, 'age'))  # Output: 30\n\n# This will raise a KeyError since the key 'name' is not found in the dictionary\nprint(remove_value(sample_dict, 'name'))\n```\nThis function uses the `get()` method of the dictionary to safely retrieve the value associated with the given key, and then deletes the key-value pair if it exists. If the key is not found, it returns `None`.",
+  "error": null,
+  "elapsed_seconds": 2.96,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

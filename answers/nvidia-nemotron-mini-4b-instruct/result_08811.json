@@ -1,0 +1,9 @@
+{
+  "id": 8811,
+  "title": "Student Grades Dictionary",
+  "prompt": "Create a program that takes in a dictionary of student names and their corresponding grades for three subjects: Math, Science, and English. The program should calculate the average grade for each student and store it in a new dictionary. Then, it should print out the student names along with their average grades.\nSample Input: { 'John': {'Math': 85, 'Science': 90, 'English': 78}, 'Emma': {'Math': 92, 'Science': 88, 'English': 95} }\nSample Output: { 'John': 84.33, 'Emma': 91.67 }\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef calculate_average(students):\n    # Calculate average for each student\n    averages = {}\n    for student in students:\n        total = 0\n        for subject in students[student]:\n            total += students[student][subject]\n        average = total / 3\n        averages[student] = average\n    return averages\n\n# Example usage\nstudents = { 'John': {'Math': 85, 'Science': 90, 'English': 78}, 'Emma': {'Math': 92, 'Science': 88, 'English': 95} }\naverages = calculate_average(students)\n\n# Print student names and their average grades\nfor student, average in averages.items():\n    print(f\"{student}: {average:.2f}\")\n```\n\nThis program first defines a function `calculate_average()` that calculates the average grade for each student by summing up their grades for each subject and then dividing by 3. It then uses this function to calculate the averages for the given dictionary of students. Finally, it prints out the student names and their average grades.",
+  "error": null,
+  "elapsed_seconds": 2.6,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

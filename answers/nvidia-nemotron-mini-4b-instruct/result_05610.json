@@ -1,0 +1,9 @@
+{
+  "id": 5610,
+  "title": "Chatbot",
+  "prompt": "Write a program that simulates a simple chatbot, taking the user's input as messages and responding with pre-defined responses.\nSample Input: hello\nSample Output: Hello! How can I assist you today?\n",
+  "answer": "Sure, I'd be happy to help you create a simple chatbot. Here's a Python program using the `input()` function and if-else statements to simulate a chatbot that responds with predefined messages. You can expand this program by adding more responses or using a more advanced framework like Flask or Dialogflow.\n\n```python\ndef chatbot():\n    \"\"\"Simulate a simple chatbot.\"\"\"\n    while True:\n        user_input = input(\"You: \").strip().lower()\n\n        if not user_input:\n            continue\n\n        responses = {\n            \"hello\": \"Hello! How can I assist you today?\",\n            \"hi\": \"Hi there! I'm here to help. What's on your mind?\",\n            \"how are you\": \"I'm doing well, thank you for asking. How can I assist you today?\",\n            \"goodbye\": \"It was a pleasure assisting you. Have a great day!\",\n        }\n\n        for message, response in responses.items():\n            if message in user_input:\n                print(f\"Chatbot: {response}\")\n                break\n        else:\n            print(\"Chatbot: I'm sorry, I didn't understand that. Please try again.\")\n\n\nif __name__ == \"__main__\":\n    chatbot()\n```\n\nThis program will continuously listen for user input and respond with predefined messages. You can add more responses to the `responses` dictionary to make the chatbot more interactive.",
+  "error": null,
+  "elapsed_seconds": 3.26,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

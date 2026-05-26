@@ -1,0 +1,9 @@
+{
+  "id": 7132,
+  "title": "Array Indexing and Slicing",
+  "prompt": "Write a function that takes an array of integers and returns the sum of all elements at even indices and the sum of all elements at odd indices separately. The function should return a list or array with two elements, where the first element is the sum of elements at even indices and the second element is the sum of elements at odd indices.\nSample Input: [1, 2, 3, 4, 5, 6]\nSample Output: [9, 12]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef split_indices(arr):\n    \"\"\"\n    Given an array of integers, return a list with two elements:\n    - The first element is the sum of all elements at even indices.\n    - The second element is the sum of all elements at odd indices.\n    \"\"\"\n    even_sums = [arr[i] for i in range(len(arr)) if i % 2 == 0]\n    odd_sums = [arr[i] for i in range(len(arr)) if i % 2 != 0]\n    return [sum(even_sums), sum(odd_sums)]\n```\nHere's how you can use this function:\n```python\nsample_input = [1, 2, 3, 4, 5, 6]\nresult = split_indices(sample_input)\nprint(result)  # Output: [9, 12]\n```\nThis function first defines two empty lists, `even_sums` and `odd_sums`, to store the sums of elements at even and odd indices, respectively. It then uses list comprehensions to iterate over each index in the input array and add the corresponding element to the appropriate list based on whether the index is even or odd. Finally, it returns a list with the two sums as its elements.",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

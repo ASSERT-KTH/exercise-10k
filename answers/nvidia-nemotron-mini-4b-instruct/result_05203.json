@@ -1,0 +1,9 @@
+{
+  "id": 5203,
+  "title": "$headers Calculator",
+  "prompt": "Develop a program that calculates the result of a mathematical expression provided by the user.\nSample Input: 2 + 3 * 4\nSample Output: 14\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the result of a mathematical expression provided by the user using the `eval()` function, which allows you to execute arbitrary code strings. However, for security reasons, it's generally better to use a library like `sympy` or `sympy-parser` for more complex expressions, as they provide better control over the evaluation process and can handle more advanced mathematical operations. Here's the program:\n\n```python\ndef calculate_expression():\n    \"\"\"\n    Calculates the result of a mathematical expression provided by the user.\n    \"\"\"\n    while True:\n        user_expression = input(\"Enter a mathematical expression (or type 'quit' to exit): \")\n\n        if user_expression.lower() == \"quit\":\n            print(\"Goodbye!\")\n            break\n\n        try:\n            result = eval(user_expression)\n            print(f\"The result of {user_expression} is {result}.\")\n        except Exception as e:\n            print(f\"Error: {e}. Please enter a valid mathematical expression.\")\n\n\nif __name__ == \"__main__\":\n    calculate_expression()\n```\n\nThis program will keep prompting the user for mathematical expressions until they type \"quit\". It will then evaluate the expression using `eval()` and print the result. Note that `eval()` has some security risks, so it's recommended to use a safer alternative like `sympy` or `sympy-parser` for more complex expressions.",
+  "error": null,
+  "elapsed_seconds": 3.36,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

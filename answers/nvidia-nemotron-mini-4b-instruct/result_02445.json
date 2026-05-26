@@ -1,0 +1,9 @@
+{
+  "id": 2445,
+  "title": "Array Reduction",
+  "prompt": "Write a program that takes an array and a reduction function as input and returns the result of applying the reduction function to all elements in the array.\nSample Input: [1, 2, 3, 4, 5], lambda x, y: x + y\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. It uses the built-in `reduce` function from the `functools` module, which applies a binary function (in this case, a lambda function) to an iterable (in this case, an array) from left to right, reducing it to a single value.\n\n```python\nfrom functools import reduce\n\ndef apply_reduction_function(array, reduction_function):\n    \"\"\"\n    Applies a reduction function to all elements in an array.\n\n    Parameters:\n    array (list): The array to apply the reduction function to.\n    reduction_function (callable): A lambda function that takes two arguments and returns a single value.\n\n    Returns:\n    int: The result of applying the reduction function to all elements in the array.\n    \"\"\"\n    return reduce(reduction_function, array)\n\n# Sample input and output\narray = [1, 2, 3, 4, 5]\nreduction_function = lambda x, y: x + y\nresult = apply_reduction_function(array, reduction_function)\nprint(result)  # Output: 15\n```\n\nIf you don't have the `functools` module installed, you can install it using pip:\n\n```\npip install functools\n```",
+  "error": null,
+  "elapsed_seconds": 3.02,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 839,
+  "title": "Regex Pattern Matching",
+  "prompt": "Given a string and a regex pattern, check if the string matches the pattern and return True or False.\nSample Input: hello, ^h.*o$\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses the `re` module to match the given string against the regular expression pattern.\n\n```python\nimport re\n\ndef match_string_regex(s, pattern):\n    \"\"\"\n    Check if a string matches a given regular expression pattern.\n\n    Parameters:\n    s (str): The string to match against the pattern.\n    pattern (str): The regular expression pattern to match against the string.\n\n    Returns:\n    bool: True if the string matches the pattern, False otherwise.\n    \"\"\"\n    # Compile the regular expression pattern to avoid the need to compile it every time\n    regex = re.compile(pattern)\n\n    # Check if the string matches the pattern\n    return regex.match(s) is not None\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(match_string_regex(\"hello\", \"^h.*o$\"))  # Output: True\nprint(match_string_regex(\"world\", \"^h.*o$\"))  # Output: False\n```\n\nThis function first compiles the regular expression pattern using the `re.compile()` function to avoid the need to compile it every time. Then, it checks if the string matches the pattern using the `re.match()` function, which returns a match object if a match is found, or `None` otherwise. The function returns `True` if the match object is not `None`, and `False` otherwise.",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1024,
+  "title": "Palindrome Checker",
+  "prompt": "Create a program to check if a given string is a palindrome.\nSample Input: madam\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you create a program to check if a given string is a palindrome. Here's a Python solution using a simple approach:\n\n```python\ndef is_palindrome(s):\n    \"\"\"Check if a given string is a palindrome.\"\"\"\n    # Remove non-alphanumeric characters and convert to lowercase\n    s = ''.join(c.lower() for c in s if c.isalnum())\n\n    # Check if the string is equal to its reverse\n    return s == s[::-1]\n\n# Test the function\nprint(is_palindrome(\"madam\"))  # Output: True\nprint(is_palindrome(\"hello world\"))  # Output: False\n```\n\nThis function first removes all non-alphanumeric characters from the input string and converts it to lowercase. Then, it checks if the string is equal to its reverse (`s[::-1]`). If they are equal, the function returns `True`, indicating that the string is a palindrome. Otherwise, it returns `False`.\n\nYou can modify the function to handle other edge cases, such as handling non-alphanumeric characters in the input string, or checking for palindromes of different lengths.",
+  "error": null,
+  "elapsed_seconds": 5.45,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

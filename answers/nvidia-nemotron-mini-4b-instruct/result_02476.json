@@ -1,0 +1,9 @@
+{
+  "id": 2476,
+  "title": "Anagram Generator",
+  "prompt": "Write a function that generates all possible anagrams of a given string.\nSample Input: abc\nSample Output: ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that generates all possible anagrams of a given string using the `itertools.permutations` function:\n```python\nimport itertools\n\ndef generate_anagrams(s):\n    \"\"\"\n    Generates all possible anagrams of a given string.\n\n    :param s: The input string.\n    :return: A list of all anagrams.\n    \"\"\"\n    # Ensure the input is a string\n    if not isinstance(s, str):\n        raise TypeError(\"Input must be a string.\")\n\n    # Generate all permutations of the input string\n    permutations = itertools.permutations(s)\n\n    # Filter out duplicates (since anagrams are just different orderings of the same characters)\n    anagrams = list(set(''.join(p) for p in permutations))\n\n    return anagrams\n```\nHere's an example of how to use this function:\n```python\nprint(generate_anagrams('abc'))  # Output: ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']\n```\nThis function first checks if the input is a string, and raises a `TypeError` if it's not. Then, it uses the `itertools.permutations` function to generate all permutations of the input string. Finally, it filters out duplicates by converting each permutation to a string and joining the characters, and then taking the set of unique strings.",
+  "error": null,
+  "elapsed_seconds": 4.67,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

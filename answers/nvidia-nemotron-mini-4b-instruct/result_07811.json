@@ -1,0 +1,9 @@
+{
+  "id": 7811,
+  "title": "ISBN Validator",
+  "prompt": "Write a program that checks whether an ISBN (International Standard Book Number) is valid.\nSample Input: 978-3-16-148410-0\nSample Output: Valid ISBN\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if an ISBN is valid. The ISBN format is defined by the International Organization for Standardization (ISO) and consists of 10 or 13 digits, with a check digit (also known as a modulus 11 check digit) calculated using a specific algorithm.\n\n```python\ndef check_isbn(isbn):\n    # Remove the '-' characters and convert to integers\n    isbn_digits = [int(digit) for digit in isbn.replace('-', '')]\n\n    # Calculate the check digit using the modulus 11 algorithm\n    check_digit = 11 - sum(digit * position for position, digit in enumerate(reversed(isbn_digits))) % 11\n\n    # Ensure the check digit matches the last digit of the ISBN\n    if isbn_digits[-1] != check_digit:\n        return False\n\n    return all(0 <= digit <= 9 for digit in isbn_digits) and check_digit == isbn_digits[-1]\n\n# Test the function with a valid ISBN\nisbn = '978-3-16-148410-0'\nprint(f'Valid ISBN: {check_isbn(isbn)}')\n\n# Test the function with an invalid ISBN\nisbn = '978-3-16-148410-1'\nprint(f'Invalid ISBN: {check_isbn(isbn)}')\n```\n\nThis program defines a function `check_isbn` that takes an ISBN as a string and returns `True` if it's valid and `False` otherwise. The function first removes the '-' characters and converts all digits to integers. Then, it calculates the check digit using the modulus 11 algorithm and checks if it matches the last digit of the ISBN. Finally, it checks if all digits are between 0 and 9 (inclusive) and if the check digit is equal to the last digit.",
+  "error": null,
+  "elapsed_seconds": 4.53,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7973,
+  "title": "Grade Calculator",
+  "prompt": "Write a program that calculates the grade of a student based on their score.\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates a letter grade based on a student's score:\n\n```python\ndef calculate_grade(score):\n    \"\"\"\n    Calculates a letter grade based on a student's score.\n\n    :param score: The student's score as an integer between 0 and 100.\n    :return: A string representing the letter grade (e.g., 'A', 'B', 'C', 'D', or 'F').\n    \"\"\"\n\n    # Define the letter grades and their corresponding scores\n    grades = {\n        90: 'A',\n        80: 'B',\n        70: 'C',\n        60: 'D',\n        0: 'F'\n    }\n\n    # Check if the score is within the valid range\n    if 0 <= score <= 100:\n        # Find the corresponding letter grade\n        for grade, letter in grades.items():\n            if score >= grade:\n                return letter\n\n    # If the score is not within the valid range, return an error message\n    return \"Error: Score must be an integer between 0 and 100.\"\n\n\n# Test the function with a sample input\nscore = 85\ngrade = calculate_grade(score)\nprint(f\"The letter grade for a score of {score} is {grade}.\")\n```\n\nThis program defines a function `calculate_grade` that takes a student's score as an integer between 0 and 100 and returns a corresponding letter grade. The function checks if the score is within the valid range and returns an error message if it's not. If the score is valid, the function iterates through a dictionary of letter grades and their corresponding scores to find the letter grade that matches the student's score.",
+  "error": null,
+  "elapsed_seconds": 4.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

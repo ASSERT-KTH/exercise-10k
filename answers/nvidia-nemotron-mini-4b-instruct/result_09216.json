@@ -1,0 +1,9 @@
+{
+  "id": 9216,
+  "title": "Student Grades Dictionary",
+  "prompt": "Create a program that uses a dictionary to store student grades. The program should take in a student's name and their grades for three subjects: math, science, and English. The program should then calculate the average grade and store it in the dictionary. Finally, the program should print out the student's name, their grades for each subject, and their average grade.\nSample Input: John 90 80 95\nSample Output: John's grades: math - 90, science - 80, English - 95, average - 88.33\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef calculate_average(grades):\n    \"\"\"Calculate the average of a list of numbers.\"\"\"\n    return sum(grades) / len(grades)\n\ndef main():\n    student_grades = {}\n\n    # Get student name and grades\n    student_name = input(\"Enter student's name: \")\n    student_grades[student_name] = {}\n\n    for subject in [\"math\", \"science\", \"english\"]:\n        grade = int(input(f\"Enter grade for {subject}: \"))\n        student_grades[student_name][subject] = grade\n\n    # Calculate and store average grade\n    average_grade = calculate_average(list(student_grades[student_name].values()))\n    student_grades[student_name][\"average\"] = average_grade\n\n    # Print results\n    print(f\"{student_name}'s grades:\")\n    for subject, grade in student_grades[student_name].items():\n        print(f\"\\t{subject} - {grade}\")\n    print(f\"\\nAverage - {average_grade:.2f}\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program defines a helper function `calculate_average` to calculate the average of a list of numbers. The main part of the program gets the student's name and grades, calculates the average, and prints the results. The output will be similar to the sample input/output you provided.",
+  "error": null,
+  "elapsed_seconds": 3.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8656,
+  "title": "Function to Find Minimum in List of Lists",
+  "prompt": "Write a function that finds the minimum element in a list of lists.\nSample Input: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nSample Output: 1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the minimum element in a list of lists:\n```python\ndef min_element(list_of_lists):\n    \"\"\"\n    Find the minimum element in a list of lists.\n\n    :param list_of_lists: The list of lists to search in\n    :return: The minimum element in the list of lists\n    \"\"\"\n    # Check if the input is a non-empty list\n    if not list_of_lists or not isinstance(list_of_lists, list) or len(list_of_lists) == 0:\n        raise ValueError(\"Input should be a non-empty list of lists\")\n\n    # Initialize the minimum element to the first element in the first list\n    min_element = list_of_lists[0][0]\n\n    # Iterate through each list in the list of lists\n    for sublist in list_of_lists:\n        # If the current element is smaller than the minimum element found so far, update it\n        if min(sublist) < min_element:\n            min_element = min(sublist)\n\n    return min_element\n```\nHere's an example of how to use this function:\n```python\nsample_input = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nprint(min_element(sample_input))  # Output: 1\n```\nThis function first checks if the input is a non-empty list. If not, it raises a `ValueError`. Then, it initializes the minimum element to the first element in the first list. Finally, it iterates through each list in the list of lists, checking if the minimum element among the elements in each sublist is smaller than the current minimum element. If it is, the current minimum element is updated. The function returns the final minimum element.",
+  "error": null,
+  "elapsed_seconds": 4.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

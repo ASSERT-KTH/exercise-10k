@@ -1,0 +1,9 @@
+{
+  "id": 8381,
+  "title": "Trigonometric Functions Calculation",
+  "prompt": "Write a program that calculates the sine, cosine, and tangent of a given angle using the Taylor series expansion.\nSample Input: 1.57\nSample Output: 1, 0, 1.557407724654902\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the sine, cosine, and tangent of a given angle using the Taylor series expansion. The Taylor series for sine, cosine, and tangent are:\n\n- Sine: sin(x) = x - (x^3/3!) + (x^5/5!) - ...\n- Cosine: cos(x) = 1 - (x^2/2!) + (x^4/4!) - ...\n- Tangent: tan(x) = sin(x) / cos(x) = (x - (x^3/3!) + (x^5/5!) - ...) / (1 - (x^2/2!) + (x^4/4!) - ...)\n\nHere's the code:\n\n```python\nimport math\n\ndef taylor_series(x, n):\n    \"\"\"\n    Calculate the nth-order Taylor series approximation of sine, cosine, and tangent.\n    \"\"\"\n    sine = 0\n    cosine = 1\n    tangent = 0\n\n    for i in range(1, n + 1):\n        sine += (-1) ** i * x ** (2 * i + 1) / math.factorial(2 * i + 1)\n        cosine += (-1) ** i * x ** (2 * i + 1) / math.factorial(2 * i + 1) ** 2\n        tangent += (-1) ** i * x ** (2 * i + 1) / math.factorial(2 * i + 1) ** 3\n\n    return sine, cosine, tangent\n\n# Example usage\nangle = 1.57\nn = 10  # number of terms in the Taylor series\nsine, cosine, tangent = taylor_series(angle, n)\n\nprint(f\"Sine: {sine:.6f}\")\nprint(f\"Cosine: {cosine:.6f}\")\nprint(f\"Tangent: {tangent:.6f}\")\n```\n\nThis program defines a function `taylor_series` that takes an angle `x` and the number of terms `n` in the Taylor series as input and returns the sine, cosine, and tangent of the angle as a tuple. The example usage at the end of the code calculates the sine, cosine, and tangent of an angle of 1.57 radians using 10 terms in the Taylor series.",
+  "error": null,
+  "elapsed_seconds": 5.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

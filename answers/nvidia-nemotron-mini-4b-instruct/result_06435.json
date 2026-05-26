@@ -1,0 +1,9 @@
+{
+  "id": 6435,
+  "title": "To-Do List App",
+  "prompt": "Create a program to manage a to-do list. Use a while loop to keep adding tasks and displaying the list until the user decides to quit.\nSample Input: Buy milk\nSample Output: To-Do List: \n1. Buy milk\n",
+  "answer": "Sure, I'd be happy to help you create a simple to-do list program using a while loop in Python. Here's an example implementation:\n\n```python\ndef add_task():\n    \"\"\"Add a new task to the to-do list.\"\"\"\n    task = input(\"Enter a task to add to the to-do list (or type 'quit' to exit): \")\n\n    if task.lower() == \"quit\":\n        print(\"Goodbye!\")\n        return\n\n    task_list.append(task)\n    print(f\"To-Do List:\")\n    print((f\"{len(task_list)+1}. {task}\\n\"))\n\ndef display_list():\n    \"\"\"Display the current to-do list.\"\"\"\n    if not task_list:\n        print(\"To-Do List is empty.\")\n        return\n\n    print(f\"To-Do List:\")\n    for i, task in enumerate(task_list):\n        print((f\"{i+1}. {task}\\n\"))\n\ntask_list = []\n\nwhile True:\n    print(\"\\n1. Add Task\\n2. Display List\\n3. Quit\\n\")\n    choice = input(\"Enter your choice: \")\n\n    if choice == \"1\":\n        add_task()\n    elif choice == \"2\":\n        display_list()\n    elif choice == \"3\":\n        break\n    else:\n        print(\"Invalid choice. Please try again.\")\n```\n\nThis program defines two functions: `add_task()` and `display_list()`. The `add_task()` function adds a new task to the to-do list and displays the updated list. The `display_list()` function displays the current to-do list. The `while` loop keeps running until the user chooses to quit (by selecting option 3).",
+  "error": null,
+  "elapsed_seconds": 4.31,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

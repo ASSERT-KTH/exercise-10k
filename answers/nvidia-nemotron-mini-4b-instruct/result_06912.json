@@ -1,0 +1,9 @@
+{
+  "id": 6912,
+  "title": "Sum of Even Numbers",
+  "prompt": "Write a program that calculates the sum of all even numbers from 1 to a given number n using a for loop.\nSample Input: 10\nSample Output: 30\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the sum of all even numbers from 1 to a given number `n` using a for loop:\n\n```python\ndef sum_of_even_numbers(n):\n    \"\"\"\n    Calculates the sum of all even numbers from 1 to a given number n using a for loop.\n\n    :param n: The upper limit for the range of even numbers to sum.\n    :return: The sum of all even numbers from 1 to n.\n    \"\"\"\n\n    # Check if the input is a positive integer\n    if not isinstance(n, int) or n < 1:\n        raise ValueError(\"Input must be a positive integer.\")\n\n    # Initialize the sum to 0\n    sum_of_even_numbers = 0\n\n    # Iterate from 2 to n (inclusive)\n    for i in range(2, n + 1):\n        # If the number is even, add it to the sum\n        if i % 2 == 0:\n            sum_of_even_numbers += i\n\n    return sum_of_even_numbers\n\n# Example usage\nn = 10\nresult = sum_of_even_numbers(n)\nprint(f\"The sum of all even numbers from 1 to {n} is {result}.\")\n```\n\nWhen you run this program with `n = 10`, it will output:\n\n```\nThe sum of all even numbers from 1 to 10 is 30.\n```",
+  "error": null,
+  "elapsed_seconds": 3.63,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

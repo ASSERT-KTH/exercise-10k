@@ -1,0 +1,9 @@
+{
+  "id": 7568,
+  "title": "Function with Compiler",
+  "prompt": "Write a function that uses the compiler to compile a string as Python code into bytecode.\nSample Input: 1 + 2\n",
+  "answer": "To create a function that compiles a string as Python code into bytecode, you can use a library like `py_compile` which is part of the Python standard library. Here's an example of how you could write such a function:\n\n```python\nimport py_compile\n\ndef compile_string_to_bytecode(code_str: str) -> bytes:\n    \"\"\"\n    Compiles a string as Python code into bytecode.\n\n    :param code_str: The string containing Python code to compile.\n    :return: The compiled bytecode as bytes.\n    \"\"\"\n\n    # Ensure the input is a string\n    if not isinstance(code_str, str):\n        raise TypeError(\"Input must be a string\")\n\n    # Compile the string into bytecode\n    bytecode = py_compile.compile(code_str, mode=\"exec\")\n\n    return bytecode.co_code\n```\n\nThis function takes a string as input, compiles it into bytecode using the `py_compile` library, and returns the compiled bytecode as bytes. Here's an example of how you could use this function:\n\n```python\nbytecode = compile_string_to_bytecode(\"1 + 2\")\nprint(bytecode)\n```\n\nThis will output the compiled bytecode for the given string, which you can then execute using the `exec()` function:\n\n```python\nexec(bytecode, globals(), locals())\n```\n\nPlease note that executing compiled bytecode can potentially execute arbitrary code, so it's important to use this function responsibly and only for trusted inputs.",
+  "error": null,
+  "elapsed_seconds": 3.55,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

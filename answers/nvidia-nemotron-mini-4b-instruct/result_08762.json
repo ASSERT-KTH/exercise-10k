@@ -1,0 +1,9 @@
+{
+  "id": 8762,
+  "title": " Caesar Cipher",
+  "prompt": "Create a function to encrypt or decrypt a given string using the Caesar cipher algorithm.\nSample Input: ['hello world', 3, 'encrypt']\nSample Output: khoor zruog\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that implements the Caesar cipher algorithm for encrypting or decrypting a given string. The function takes three arguments: the string to encrypt/decrypt, the shift value (which is the number of positions to shift the alphabet), and a flag indicating whether to encrypt or decrypt.\n\n```python\ndef caesar_cipher(text, shift, encrypt=True):\n    \"\"\"\n    Encrypt or decrypt a given string using the Caesar cipher algorithm.\n\n    :param text: The string to encrypt/decrypt.\n    :param shift: The number of positions to shift the alphabet.\n    :param encrypt: A boolean flag indicating whether to encrypt (True) or decrypt (False).\n    :return: The encrypted/decrypted string.\n    \"\"\"\n\n    # Ensure the shift value is within the valid range\n    shift %= 26\n\n    # Create a translation table based on the encrypt flag\n    translation_table = str.maketrans(\n        string.ascii_lowercase,\n        string.ascii_lowercase[shift:] + string.ascii_lowercase[:shift]\n    ) if encrypt else str.maketrans(\n        string.ascii_lowercase[shift:] + string.ascii_lowercase[:shift],\n        string.ascii_lowercase\n    )\n\n    # Encrypt/decrypt the text using the translation table\n    return text.translate(translation_table)\n```\n\nHere's an example of how to use the function:\n\n```python\nprint(caesar_cipher('hello world', 3, encrypt=True))  # Output: khoor zruog\nprint(caesar_cipher('khoor zruog', 3, encrypt=False))  # Output: hello world\n```",
+  "error": null,
+  "elapsed_seconds": 4.1,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

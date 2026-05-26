@@ -1,0 +1,9 @@
+{
+  "id": 8240,
+  "title": "Weather Alert",
+  "prompt": "Create a program that sends a weather alert using if/else statements\nSample Input: Rain\nSample Output: Weather alert: Rain\n",
+  "answer": "Sure, I'd be happy to help you create a program that sends a weather alert based on user input. Here's an example Python program using if/else statements to handle different weather conditions:\n\n```python\ndef send_weather_alert(weather_condition):\n    \"\"\"\n    Send a weather alert based on the given weather condition.\n\n    :param weather_condition: str, the weather condition (e.g., 'Rain', 'Sunny', 'Cloudy')\n    \"\"\"\n\n    # Define weather alerts based on the given condition\n    weather_alerts = {\n        'Rain': 'Weather alert: Rain',\n        'Sunny': 'Weather alert: Sunny',\n        'Cloudy': 'Weather alert: Cloudy'\n    }\n\n    # Check if the weather condition is in the dictionary\n    if weather_condition in weather_alerts:\n        # Send the weather alert\n        print(weather_alerts[weather_condition])\n    else:\n        # If the condition is not recognized, print a generic alert\n        print('Weather alert: Unknown weather condition. Please check the input.')\n\n# Example usage\nsend_weather_alert('Rain')  # Output: Weather alert: Rain\nsend_weather_alert('Sunny')  # Output: Weather alert: Sunny\nsend_weather_alert('Cloudy')  # Output: Weather alert: Cloudy\nsend_weather_alert('Misty')  # Output: Weather alert: Unknown weather condition. Please check the input.\n```\n\nThis program defines a function `send_weather_alert` that takes a weather condition as input and checks if it's in the dictionary of weather alerts. If the condition is recognized, the function prints the corresponding weather alert. If the condition is not recognized, the function prints a generic alert indicating that the input is invalid.",
+  "error": null,
+  "elapsed_seconds": 4.02,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

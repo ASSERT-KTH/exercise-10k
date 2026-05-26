@@ -1,0 +1,9 @@
+{
+  "id": 2393,
+  "title": "GCD Calculator",
+  "prompt": "Write a program that calculates the greatest common divisor (GCD) of two given numbers using a while loop.\nSample Input: 48 18\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the greatest common divisor (GCD) of two given numbers using a while loop:\n\n```python\ndef gcd_while(a, b):\n    \"\"\"\n    Calculate the greatest common divisor of two numbers using a while loop.\n\n    :param a: The first number.\n    :param b: The second number.\n    :return: The greatest common divisor of a and b.\n    \"\"\"\n\n    # Ensure a and b are non-negative\n    a, b = abs(a), abs(b)\n\n    # Continue dividing b by a until b becomes zero\n    while b:\n        a, b = b, a % b\n\n    return a\n\n# Get user input\nnum1 = int(input(\"Enter the first number: \"))\nnum2 = int(input(\"Enter the second number: \"))\n\n# Calculate and print the GCD\ngcd = gcd_while(num1, num2)\nprint(f\"The greatest common divisor of {num1} and {num2} is {gcd}.\")\n```\n\nThis program first ensures that the input numbers are non-negative by taking their absolute values. Then, it enters a while loop that continues as long as `b` is not zero. In each iteration, it updates `a` and `b` so that `b` is the remainder of dividing `a` by `b`, and `a` is now `b`. When the loop terminates, `a` contains the GCD of the original numbers. Finally, the program prints the result.",
+  "error": null,
+  "elapsed_seconds": 4.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6047,
+  "title": "Password Validator",
+  "prompt": "Create a program that takes in a password and checks its validity using conditional statements, considering factors such as length and character type.\nSample Input: P@ssw0rd\nSample Output: Valid password\n",
+  "answer": "Sure, I'd be happy to help you create a program that checks the validity of a password based on length and character type. Here's an example Python program that meets your requirements:\n\n```python\nimport re\n\ndef is_valid_password(password):\n    \"\"\"\n    Check if a password is valid based on length and character type.\n\n    :param password: str, the password to check\n    :return: str, \"Valid password\" or \"Invalid password\"\n    \"\"\"\n\n    # Check length\n    if len(password) < 8:\n        return \"Invalid password (too short)\"\n\n    # Check character type\n    if not re.search(r'[a-zA-Z]', password):\n        return \"Invalid password (no uppercase letters)\"\n    if not re.search(r'[0-9]', password):\n        return \"Invalid password (no digits)\"\n    if not re.search(r'[!@#$%^&*(),.?\":{}|<>]', password):\n        return \"Invalid password (no special characters)\"\n\n    return \"Valid password\"\n\n# Example usage\npassword = input(\"Enter a password: \")\nprint(is_valid_password(password))\n```\n\nThis program defines a function `is_valid_password` that checks the length and character type of a password. The function first checks if the password is too short (less than 8 characters). If not, it checks if the password contains at least one uppercase letter, one digit, and at least one special character. If all checks pass, the function returns \"Valid password\". Otherwise, it returns an error message. The example usage at the end of the program prompts the user to enter a password and prints the validity result.",
+  "error": null,
+  "elapsed_seconds": 5.11,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

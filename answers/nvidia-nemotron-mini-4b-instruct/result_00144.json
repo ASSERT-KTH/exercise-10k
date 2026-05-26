@@ -1,0 +1,9 @@
+{
+  "id": 144,
+  "title": "Dictionary Deletion",
+  "prompt": "Create a function that takes in a dictionary and a key, and removes the key-value pair from the dictionary if it exists\nSample Input: dictionary = {'name': 'John', 'age': 30}, key = 'age'\nSample Output: {'name': 'John'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef remove_key_value_pair(dictionary, key):\n    \"\"\"\n    Removes the key-value pair from the given dictionary if it exists.\n\n    Parameters:\n    dictionary (dict): The dictionary to modify.\n    key (any): The key to remove from the dictionary.\n\n    Returns:\n    dict: The modified dictionary with the key-value pair removed.\n    \"\"\"\n    if key in dictionary:\n        del dictionary[key]\n    return dictionary\n```\nHere's an example of how you can use this function:\n```python\ndictionary = {'name': 'John', 'age': 30}\nprint(remove_key_value_pair(dictionary, 'age'))  # Output: {'name': 'John'}\n```\nThis function first checks if the given key exists in the dictionary using the `in` keyword. If it does, the function uses the `del` statement to remove the key-value pair from the dictionary. Finally, the function returns the modified dictionary.",
+  "error": null,
+  "elapsed_seconds": 2.52,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

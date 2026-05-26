@@ -1,0 +1,9 @@
+{
+  "id": 2012,
+  "title": "Phone Number Validator",
+  "prompt": "Create a program that takes a phone number as input and checks whether it is valid or not using conditional statements.\nSample Input: 123-456-7890\nSample Output: valid\n",
+  "answer": "Sure, I'd be happy to help you create a program that checks if a given phone number is valid or not. Here's a Python solution using conditional statements:\n\n```python\ndef is_valid_phone_number(phone_number):\n    # Regular expression pattern for a US phone number\n    pattern = r'\\d{3}[-\\.\\s]?\\d{3}[-\\.\\s]?\\d{4}'\n\n    # Check if the input matches the pattern\n    if re.match(pattern, phone_number):\n        return \"valid\"\n    else:\n        return \"invalid\"\n\n# Get user input\nuser_input = input(\"Enter a phone number: \")\n\n# Call the function and print the result\nprint(is_valid_phone_number(user_input))\n```\n\nThis program defines a function `is_valid_phone_number` that uses a regular expression pattern to check if the given phone number matches the format of a US phone number (XXX-XXX-XXXX). The function returns either \"valid\" or \"invalid\" based on the match. The program then gets user input, calls the function, and prints the result.\n\nPlease note that this program only checks for the format of a US phone number. For other countries or formats, you may need to adjust the regular expression pattern accordingly.",
+  "error": null,
+  "elapsed_seconds": 4.06,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

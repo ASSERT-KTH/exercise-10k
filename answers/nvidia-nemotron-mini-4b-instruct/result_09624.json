@@ -1,0 +1,9 @@
+{
+  "id": 9624,
+  "title": "Function with Default Arguments",
+  "prompt": "Create a function that takes a name and age as arguments, with age defaulting to 25 if not provided.\nSample Input: 'Jane', 30\nSample Output: Jane is 30 years old.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef describe_person(name, age=25):\n    \"\"\"\n    Describes a person with their name and age.\n\n    Args:\n    name (str): The name of the person.\n    age (int): The age of the person. If not provided, defaults to 25.\n\n    Returns:\n    str: A string describing the person.\n    \"\"\"\n    if not isinstance(name, str) or not name:\n        raise ValueError(\"Name must be a non-empty string.\")\n\n    if not isinstance(age, int) or age < 0:\n        raise ValueError(\"Age must be a non-negative integer.\")\n\n    return f\"{name} is {age} years old.\"\n```\nHere's an example of how you can use this function:\n```python\nprint(describe_person('Jane', 30))  # Output: Jane is 30 years old.\nprint(describe_person('Bob'))       # Output: Bob is 25 years old.\n```\nThis function checks that the `name` argument is a non-empty string and that the `age` argument is a non-negative integer. If the `age` argument is not provided, it defaults to 25. If any of the arguments are invalid, the function raises a `ValueError`.",
+  "error": null,
+  "elapsed_seconds": 3.27,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

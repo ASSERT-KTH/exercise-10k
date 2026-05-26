@@ -1,0 +1,9 @@
+{
+  "id": 4817,
+  "title": "Validate IP Address",
+  "prompt": "Given a string, validate whether it is a valid IP address or not. The function should take in a string as input and return true if it is a valid IP address and false otherwise.\nSample Input: 192.168.0.1\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a given string is a valid IP address:\n\n```python\nimport re\n\ndef is_valid_ip(ip):\n    \"\"\"\n    Check if a given string is a valid IP address.\n\n    :param ip: str, the IP address to validate\n    :return: bool, True if valid, False otherwise\n    \"\"\"\n    # Regular expression pattern for a valid IP address\n    pattern = r'^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$'\n\n    # Check if the input string matches the pattern\n    return bool(re.match(pattern, ip))\n```\n\nThis function uses a regular expression to define a pattern for a valid IP address. The pattern checks that the string consists of four parts, each separated by a single dot, and that each part is a sequence of one to three digits between 0 and 255. The `re.match()` function checks if the input string starts with the pattern, and returns `True` if it does, or `False` otherwise.\n\nHere are some examples of how you can use this function:\n\n```python\nprint(is_valid_ip(\"192.168.0.1\"))  # True\nprint(is_valid_ip(\"192.168.0.111\"))  # True\nprint(is_valid_ip(\"192.168.0.abc\"))  # False\nprint(is_valid_ip(\"192.168.0.1.2\"))  # False\n```",
+  "error": null,
+  "elapsed_seconds": 4.23,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

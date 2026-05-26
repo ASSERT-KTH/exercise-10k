@@ -1,0 +1,9 @@
+{
+  "id": 4685,
+  "title": "Word Frequency Counter",
+  "prompt": "Write a function that takes a string as input and returns a dictionary with the frequency of each word.\nSample Input: this is a test this is a test\nSample Output: {'this': 2, 'is': 2, 'a': 2, 'test': 2}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function uses the `collections.Counter` class to count the frequency of each word in the input string.\n\n```python\nfrom collections import Counter\n\ndef word_frequency(text: str) -> dict:\n    \"\"\"\n    Returns a dictionary with the frequency of each word in the input text.\n\n    :param text: The input text as a string.\n    :return: A dictionary with words as keys and their frequencies as values.\n    \"\"\"\n    # Split the text into words, convert to lowercase, and remove punctuation\n    words = [word.lower() for word in text.lower().split() if word.isalnum()]\n\n    # Count the frequency of each word using Counter\n    word_freq = Counter(words)\n\n    return dict(word_freq)\n```\n\nHere's an example of how to use this function:\n\n```python\ntext = \"this is a test this is a test\"\nresult = word_frequency(text)\nprint(result)  # Output: {'this': 2, 'is': 2, 'a': 2, 'test': 2}\n```",
+  "error": null,
+  "elapsed_seconds": 2.84,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

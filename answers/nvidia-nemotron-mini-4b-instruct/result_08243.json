@@ -1,0 +1,9 @@
+{
+  "id": 8243,
+  "title": "Weather Advisor",
+  "prompt": "Create a program that advises the user to take an umbrella or sunscreen based on the weather condition using if/else statements.\nSample Input: Rainy\nSample Output: Take an umbrella\n",
+  "answer": "Sure, I'd be happy to help you create a program that advises the user based on weather conditions using if/else statements. Here's an example Python program that meets your requirements:\n\n```python\ndef weather_advice():\n    \"\"\"\n    Asks the user for weather conditions and provides advice accordingly.\n    \"\"\"\n\n    # Define weather conditions and their corresponding advice\n    weather_conditions = {\n        \"sunny\": \"Take sunscreen\",\n        \"cloudy\": \"Take an umbrella or consider sunscreen\",\n        \"rainy\": \"Take an umbrella\",\n        \"snowy\": \"Take an umbrella and gloves\",\n    }\n\n    # Get user input\n    weather_condition = input(\"Enter the weather condition (sunny, cloudy, rainy, snowy): \").lower()\n\n    # Check if the weather condition is valid\n    if weather_condition in weather_conditions:\n        # Provide advice based on the weather condition\n        print(f\"Take {weather_conditions[weather_condition]}.\")\n    else:\n        print(\"Sorry, I don't recognize that weather condition. Please try again.\")\n\n\n# Call the function\nweather_advice()\n```\n\nThis program defines a dictionary containing weather conditions and their corresponding advice. The function then prompts the user for a weather condition, checks if it's valid, and provides the appropriate advice using an `if`-`else` statement.",
+  "error": null,
+  "elapsed_seconds": 3.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

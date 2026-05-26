@@ -1,0 +1,9 @@
+{
+  "id": 6331,
+  "title": "Array Mapping",
+  "prompt": "Write a program that takes an array and a function as input, applies the function to each element of the array, and returns a new array with the results.\nSample Input: [1, 2, 3, 4, 5], square\nSample Output: [1, 4, 9, 16, 25]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef apply_function_to_array(arr, func):\n    \"\"\"\n    Applies a function to each element of a given array and returns a new array with the results.\n\n    Parameters:\n    arr (list): The input array.\n    func (callable): A function that takes one argument and returns a value.\n\n    Returns:\n    list: A new array with the results of applying the function to each element of the input array.\n    \"\"\"\n    # Use a list comprehension to apply the function to each element and create a new list\n    return [func(x) for x in arr]\n\n# Example usage:\narr = [1, 2, 3, 4, 5]\nsquare = lambda x: x**2\nresult = apply_function_to_array(arr, square)\nprint(result)  # Output: [1, 4, 9, 16, 25]\n```\nThis program defines a function `apply_function_to_array` that takes an array and a function as input, applies the function to each element of the array using a list comprehension, and returns a new array with the results. The example usage shows how to use this function with a lambda function that squares its input.",
+  "error": null,
+  "elapsed_seconds": 3.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

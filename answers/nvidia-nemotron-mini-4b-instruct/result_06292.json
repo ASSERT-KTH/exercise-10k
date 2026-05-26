@@ -1,0 +1,9 @@
+{
+  "id": 6292,
+  "title": "Dictionary Pop Method",
+  "prompt": "Remove a key-value pair from a dictionary using the pop() method\nSample Input: {'name': 'John', 'age': 25}, 'age'\nSample Output: 25\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's how you can remove a key-value pair from a dictionary using the `pop()` method:\n\n```python\ndef remove_key_value_pair(dictionary, key):\n    \"\"\"\n    Remove a key-value pair from a dictionary using the pop() method.\n\n    :param dictionary: The dictionary to modify.\n    :param key: The key of the key-value pair to remove.\n    :return: The value associated with the removed key.\n    \"\"\"\n    # Check if the key exists in the dictionary\n    if key in dictionary:\n        # Remove the key-value pair using pop() and return the value\n        value = dictionary.pop(key)\n        return value\n    else:\n        # If the key does not exist, raise a KeyError\n        raise KeyError(f\"The key '{key}' does not exist in the dictionary.\")\n\n# Sample input\ndictionary = {'name': 'John', 'age': 25}\nkey = 'age'\n\n# Call the function and print the result\nresult = remove_key_value_pair(dictionary, key)\nprint(result)  # Output: 25\n```\n\nThis function checks if the key exists in the dictionary before removing it. If the key does not exist, it raises a `KeyError` with an appropriate error message.",
+  "error": null,
+  "elapsed_seconds": 3.15,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

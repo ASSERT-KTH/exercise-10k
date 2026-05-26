@@ -1,0 +1,9 @@
+{
+  "id": 3797,
+  "title": "Unique Paths",
+  "prompt": "Create a function that finds the number of unique paths from the top-left corner to the bottom-right corner of a grid.\nSample Input: 3, 7\nSample Output: 28\n",
+  "answer": "Sure, I'd be happy to help you with that! The number of unique paths from the top-left corner to the bottom-right corner of a grid with dimensions `m x n` is given by the formula:\n\n`C(m + n - 2, m - 1)`\n\nwhere `C(a, b)` represents the binomial coefficient, which is the number of ways to choose `b` objects out of `a` distinct objects. In this case, `a = m + n - 2` and `b = m - 1`.\n\nHere's a Python function that calculates the number of unique paths given the dimensions `m` and `n`:\n\n```python\nfrom math import comb\n\ndef num_unique_paths(m, n):\n    \"\"\"\n    Calculates the number of unique paths from the top-left corner to the bottom-right corner of a grid with dimensions m x n.\n\n    :param m: The number of rows in the grid.\n    :param n: The number of columns in the grid.\n    :return: The number of unique paths.\n    \"\"\"\n    if m < 1 or n < 1:\n        raise ValueError(\"Both m and n must be positive integers.\")\n\n    return comb(m + n - 2, m - 1)\n```\n\nYou can use this function to get the number of unique paths for your sample input:\n\n```python\nprint(num_unique_paths(3, 7))  # Output: 28\n```\n\nThis function first checks if the input dimensions are valid (i.e., both `m` and `n` are positive integers). Then, it uses the `comb` function from the `math` module to calculate the binomial coefficient.",
+  "error": null,
+  "elapsed_seconds": 4.15,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

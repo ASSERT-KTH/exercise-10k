@@ -1,0 +1,9 @@
+{
+  "id": 564,
+  "title": "Anagram Checker",
+  "prompt": "Write a function that checks if two given strings are anagrams of each other.\nSample Input: ['listen', 'silent']\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if two given strings are anagrams of each other. An anagram is a word, phrase, or other sequence of characters that can be formed by rearranging the letters of a different word, phrase, or sequence of characters, typically using all the original letters exactly once.\n\n```python\ndef are_anagrams(str1, str2):\n    \"\"\"\n    Check if two given strings are anagrams of each other.\n\n    :param str1: The first string to check.\n    :param str2: The second string to check.\n    :return: True if the strings are anagrams, False otherwise.\n    \"\"\"\n\n    # Check if the strings have the same length. If not, they cannot be anagrams.\n    if len(str1) != len(str2):\n        return False\n\n    # Convert both strings to lowercase and remove any non-alphanumeric characters.\n    str1 = ''.join(c.lower() for c in str1 if c.isalnum())\n    str2 = ''.join(c.lower() for c in str2 if c.isalnum())\n\n    # Sort both strings and compare them. If they are equal, they are anagrams.\n    return sorted(str1) == sorted(str2)\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(are_anagrams('listen', 'silent'))  # Output: True\nprint(are_anagrams('hello', 'world'))   # Output: False\n```",
+  "error": null,
+  "elapsed_seconds": 3.62,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

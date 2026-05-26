@@ -1,0 +1,9 @@
+{
+  "id": 5352,
+  "title": "List Searching",
+  "prompt": "Write a function that takes a list and a target value as input, and returns the index of the first occurrence of the target value in the list, or -1 if the target value is not found.\nSample Input: [1, 2, 3, 4, 5], 3\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef find_index(lst, target):\n    \"\"\"\n    Given a list and a target value, return the index of the first occurrence of the target value in the list,\n    or -1 if the target value is not found.\n\n    :param lst: The list to search in\n    :param target: The target value to find\n    :return: The index of the first occurrence of the target value in the list, or -1 if not found\n    \"\"\"\n    for i, item in enumerate(lst):\n        if item == target:\n            return i\n    return -1\n```\nHere's an example of how you can use this function:\n```python\nprint(find_index([1, 2, 3, 4, 5], 3))  # Output: 2\nprint(find_index([1, 2, 3, 4, 5], 6))  # Output: -1\n```\nThis function uses a `for` loop to iterate over the list and check each item against the target value. If a match is found, the function returns the index of the first occurrence of the target value. If no match is found after checking all items in the list, the function returns -1.",
+  "error": null,
+  "elapsed_seconds": 3.02,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9775,
+  "title": "Character Input",
+  "prompt": "Write a program that takes a character as input and prints its ASCII value.\nSample Input: A\nSample Output: 65\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a simple Python program that meets your requirements:\n\n```python\ndef get_ascii_value(char):\n    \"\"\"\n    Returns the ASCII value of the given character.\n\n    :param char: str, a single character\n    :return: int, the ASCII value of the character\n    \"\"\"\n    if not isinstance(char, str) or len(char) != 1:\n        raise ValueError(\"Input should be a single character string.\")\n\n    return ord(char)\n\n\n# Get user input and print the ASCII value\nchar = input(\"Enter a character: \")\nascii_value = get_ascii_value(char)\nprint(f\"The ASCII value of '{char}' is {ascii_value}.\")\n```\n\nThis program defines a function `get_ascii_value` that checks if the input is a single character string and then returns its ASCII value using the `ord` function. The main part of the program prompts the user to enter a character, calls the function with the user input, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 2.46,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

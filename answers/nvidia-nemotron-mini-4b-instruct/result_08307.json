@@ -1,0 +1,9 @@
+{
+  "id": 8307,
+  "title": "Array Reversal",
+  "prompt": "Write a function that takes an array as input and returns the reversed array. The function should not use the built-in reverse method.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [5, 4, 3, 2, 1]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef reverse_array(arr):\n    \"\"\"\n    Reverses the order of elements in an array without using the built-in reverse method.\n\n    Parameters:\n    arr (list): The input array to be reversed.\n\n    Returns:\n    list: The reversed array.\n    \"\"\"\n    # Use a loop to iterate through the array and swap elements with their indices\n    # in reverse order\n    reversed_arr = []\n    for i in range(len(arr) - 1, -1, -1):\n        reversed_arr.append(arr[i])\n\n    return reversed_arr\n```\nHere's an example of how to use this function:\n```python\narr = [1, 2, 3, 4, 5]\nreversed_arr = reverse_array(arr)\nprint(reversed_arr)  # Output: [5, 4, 3, 2, 1]\n```\nThis function works by iterating through the array in reverse order (`for i in range(len(arr) - 1, -1, -1)`) and appending each element to a new list (`reversed_arr.append(arr[i])`). This way, the order of elements is reversed without using the built-in reverse method.",
+  "error": null,
+  "elapsed_seconds": 3.18,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

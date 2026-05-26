@@ -1,0 +1,9 @@
+{
+  "id": 1060,
+  "title": "List Average",
+  "prompt": "Write a program that takes a list as input, and returns the average of the elements of the list.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a list as input and returns the average of its elements:\n\n```python\ndef calculate_average(numbers):\n    \"\"\"\n    Calculates the average of a list of numbers.\n\n    :param numbers: List of numbers\n    :return: Average of the numbers in the list\n    \"\"\"\n\n    # Check if the input is a non-empty list\n    if not isinstance(numbers, list) or len(numbers) == 0:\n        raise ValueError(\"Input should be a non-empty list\")\n\n    # Calculate the sum of the numbers in the list\n    total = sum(numbers)\n\n    # Calculate the average by dividing the sum by the number of elements in the list\n    average = total / len(numbers)\n\n    return average\n```\n\nYou can use this function as follows:\n\n```python\nsample_input = [1, 2, 3, 4, 5]\naverage = calculate_average(sample_input)\nprint(average)  # Output: 3\n```\n\nThis function first checks if the input is a non-empty list. If not, it raises a `ValueError`. Then, it calculates the sum of the numbers in the list using the built-in `sum()` function. Finally, it calculates the average by dividing the sum by the number of elements in the list and returns the result.",
+  "error": null,
+  "elapsed_seconds": 3.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

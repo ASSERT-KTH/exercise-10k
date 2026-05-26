@@ -1,0 +1,9 @@
+{
+  "id": 1792,
+  "title": "Dictionary Flattening",
+  "prompt": "Write a function to flatten a nested dictionary and return a new dictionary containing all key-value pairs at the top level.\nSample Input: nested_dict = {\"name\": \"John\", \"inner\": {\"age\": 30, \"city\": \"New York\"}}\nSample Output: {\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that flattens a nested dictionary and returns a new dictionary containing all key-value pairs at the top level:\n```python\ndef flatten_dict(nested_dict):\n    \"\"\"\n    Flattens a nested dictionary and returns a new dictionary containing all key-value pairs at the top level.\n\n    :param nested_dict: The nested dictionary to flatten\n    :return: A new dictionary containing all key-value pairs at the top level\n    \"\"\"\n    result = {}\n    for key, value in nested_dict.items():\n        if isinstance(value, dict):\n            result.update(flatten_dict(value))\n        else:\n            result[key] = value\n    return result\n```\nHere's an example of how you can use this function:\n```python\nnested_dict = {\"name\": \"John\", \"inner\": {\"age\": 30, \"city\": \"New York\"}}\nflat_dict = flatten_dict(nested_dict)\nprint(flat_dict)  # Output: {'name': 'John', 'age': 30, 'city': 'New York'}\n```\nThis function uses recursion to traverse the nested dictionary and add each key-value pair to a new dictionary. If it encounters a value that is itself a dictionary, it calls itself recursively to flatten that dictionary and adds its key-value pairs to the result dictionary. This continues until all nested dictionaries have been flattened.",
+  "error": null,
+  "elapsed_seconds": 4.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

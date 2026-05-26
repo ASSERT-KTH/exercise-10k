@@ -1,0 +1,9 @@
+{
+  "id": 6805,
+  "title": "Arithmetic Operation Debugger",
+  "prompt": "Create a program that takes in a mathematical expression as a string, evaluates it, and then checks if the result matches the expected output. The expression will only contain integer values and the four basic arithmetic operations (+, -, *, /). If the result does not match the expected output, the program should provide a step-by-step breakdown of how it evaluated the expression.\nSample Input: (2 + 3) * 4, expected output: 20\nSample Output: The expression (2 + 3) * 4 evaluates to 20. Step-by-step breakdown: 2 + 3 = 5, 5 * 4 = 20\n",
+  "answer": "Here's a Python solution using the `eval()` function, which is not recommended for security reasons. Instead, you can use a library like `sympy` to parse and evaluate mathematical expressions. Here's a safe solution using `sympy`:\n\n```python\nimport sympy as sp\n\ndef evaluate_expression(expression, expected_output):\n    # Parse the expression\n    variables = sp.symbols('x')\n    expr = sp.sympify(expression)\n\n    # Evaluate the expression\n    result = expr.evalf()\n\n    # Check if the result matches the expected output\n    if result == expected_output:\n        print(f\"The expression '{expression}' evaluates to {result}. Correct!\")\n    else:\n        print(f\"The expression '{expression}' evaluates to {result}. Incorrect!\")\n        print(\"Step-by-step breakdown:\")\n        print(expr.as_string())\n\n# Example usage\nevaluate_expression(\"(2 + 3) * 4\", 20)\n```\n\nThis solution first parses the input expression using `sympy.sympify()` and then evaluates it using `expr.evalf()`. If the result matches the expected output, it prints a success message. Otherwise, it prints a failure message and a step-by-step breakdown of the expression using `expr.as_string()`.",
+  "error": null,
+  "elapsed_seconds": 3.04,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

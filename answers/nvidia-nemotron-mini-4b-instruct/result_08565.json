@@ -1,0 +1,9 @@
+{
+  "id": 8565,
+  "title": "Dictionary to List of Lists",
+  "prompt": "Create a dictionary with 3 key-value pairs and convert it to a list of lists.\nSample Input: None\nSample Output: list_of_lists\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef dict_to_list(d):\n    \"\"\"\n    Converts a dictionary to a list of lists.\n\n    Parameters:\n    d (dict): The dictionary to convert.\n\n    Returns:\n    list: A list of lists representing the key-value pairs in the input dictionary.\n    \"\"\"\n    if not isinstance(d, dict):\n        raise TypeError(\"Input must be a dictionary.\")\n\n    return list(d.items())\n```\nHere's an example of how you can use this function:\n```python\nmy_dict = {'a': 1, 'b': 2, 'c': 3}\nlist_of_lists = dict_to_list(my_dict)\nprint(list_of_lists)  # Output: [('a', 1), ('b', 2), ('c', 3)]\n```\nThis function first checks if the input is a dictionary. If not, it raises a `TypeError`. Then, it uses the `items()` method to convert the dictionary to a list of tuples (key-value pairs), which are then converted to a list using the `list()` function.",
+  "error": null,
+  "elapsed_seconds": 2.93,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

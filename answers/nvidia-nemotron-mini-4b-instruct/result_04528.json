@@ -1,0 +1,9 @@
+{
+  "id": 4528,
+  "title": "List Element Replacement",
+  "prompt": "Write a program that takes a list, an index, and a new element as input and replaces the element at the specified index with the new element.\nSample Input: [1, 2, 3, 4, 5], 2, 6\nSample Output: [1, 2, 6, 4, 5]\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef replace_element(lst, index, new_element):\n    \"\"\"\n    Replaces the element at the specified index with the new element.\n\n    :param lst: The list to modify\n    :param index: The index of the element to replace\n    :param new_element: The new element to replace the old one with\n    :return: None (modifies the input list in-place)\n    \"\"\"\n\n    # Check if the index is within the list bounds\n    if index < 0 or index >= len(lst):\n        raise IndexError(\"Index out of bounds\")\n\n    # Replace the element at the specified index with the new element\n    lst[index] = new_element\n\n# Example usage\nmy_list = [1, 2, 3, 4, 5]\nreplace_element(my_list, 2, 6)\nprint(my_list)  # Output: [1, 2, 6, 4, 5]\n```\n\nThis program defines a function `replace_element` that takes a list, an index, and a new element as input. It checks if the index is within the list bounds and then replaces the element at the specified index with the new element. The function modifies the input list in-place, so no need to return anything.",
+  "error": null,
+  "elapsed_seconds": 3.09,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

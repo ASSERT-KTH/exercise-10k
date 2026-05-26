@@ -1,0 +1,9 @@
+{
+  "id": 7114,
+  "title": "Function Composition",
+  "prompt": "Write a program that takes two functions as input and returns their composition. The composition of two functions f and g, denoted as (f ∘ g)(x), is defined as f(g(x)).\nSample Input: def f(x): return x ** 2; def g(x): return x + 1; f; g\nSample Output: (f ∘ g)(x) = (x + 1) ** 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes two functions as input and returns their composition:\n\n```python\ndef compose(*functions):\n    \"\"\"\n    Composes multiple functions in a single function call.\n\n    Parameters:\n    *functions (callable): Variable number of functions to compose.\n\n    Returns:\n    callable: A new function that applies the given functions in order.\n    \"\"\"\n\n    # Check if there are at least two functions to compose\n    if len(functions) < 2:\n        raise ValueError(\"At least two functions are required to compose.\")\n\n    # Define the composition function as a lambda function\n    # that takes an argument and applies the given functions\n    # in order to the argument\n    def composition(*args, **kwargs):\n        return functions[-1](functions[-2](*args, **kwargs))\n\n    # Return the composition function\n    return composition\n```\n\nHere's an example of how to use this function:\n\n```python\ndef f(x):\n    return x ** 2\n\ndef g(x):\n    return x + 1\n\ncompose(f, g)(5)  # Output: 36\n```\n\nThis program defines a `compose` function that takes any number of functions as arguments and returns their composition as a new function. The composition function takes any number of arguments and applies the given functions in order to the last argument, just like the mathematical definition of composition.",
+  "error": null,
+  "elapsed_seconds": 3.84,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

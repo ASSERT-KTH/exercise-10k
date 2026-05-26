@@ -1,0 +1,9 @@
+{
+  "id": 7820,
+  "title": "Shortest Word",
+  "prompt": "Write a program that finds the shortest word in a given string.\nSample Input: This is a test\nSample Output: a\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the shortest word in a given string:\n\n```python\ndef shortest_word(text):\n    \"\"\"\n    Find the shortest word in a given string.\n\n    :param text: str, the input string\n    :return: str, the shortest word in the input string\n    \"\"\"\n    # Split the input string into words, remove any empty strings, and convert to lowercase\n    words = [word.lower() for word in text.split() if word]\n\n    # Find the shortest word in the list of words\n    shortest_word = min(words, key=len)\n\n    return shortest_word\n\n# Example usage\ninput_text = \"This is a test\"\nshortest_word_found = shortest_word(input_text)\nprint(f\"The shortest word in '{input_text}' is '{shortest_word_found}'\")\n```\n\nWhen you run this program with the sample input \"This is a test\", it will output:\n\n```\nThe shortest word in 'This is a test' is 'a'\n```",
+  "error": null,
+  "elapsed_seconds": 2.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

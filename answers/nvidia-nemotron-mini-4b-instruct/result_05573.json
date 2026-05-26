@@ -1,0 +1,9 @@
+{
+  "id": 5573,
+  "title": "Anagram Generator",
+  "prompt": "Create a program that takes a word as input and generates all possible anagrams of the word.\nSample Input: listen\nSample Output: ['listen', 'silent', 'enlist', ...]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates all possible anagrams of a given word:\n\n```python\nfrom collections import Counter\n\ndef generate_anagrams(word):\n    \"\"\"\n    Generate all possible anagrams of a given word.\n\n    :param word: str - The word to generate anagrams for.\n    :return: list of str - A list of all possible anagrams of the input word.\n    \"\"\"\n    # Count the occurrences of each character in the word\n    char_counts = Counter(word)\n\n    # Generate all permutations of the characters in the word\n    permutations = ''.join(c for c in ''.join(sorted(word)) for _ in char_counts[c])\n\n    # Filter out any invalid permutations (i.e., those that don't form a valid word)\n    valid_permutations = [p for p in permutations if all(char_counts[c] > 0 for c in p)]\n\n    # Return the list of anagrams\n    return [word] + list(set(valid_permutations))\n\n# Example usage\nword = input(\"Enter a word: \")\nanagrams = generate_anagrams(word)\nprint(anagrams)\n```\n\nThis program first counts the occurrences of each character in the input word using the `Counter` class from the `collections` module. It then generates all permutations of the characters in the word by sorting them and using a generator expression to create a string with each possible combination of characters. Finally, it filters out any invalid permutations by checking that each character in the permutation occurs at least once in the word. The anagrams are then returned as a list, with the original word included as the first element.",
+  "error": null,
+  "elapsed_seconds": 4.04,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

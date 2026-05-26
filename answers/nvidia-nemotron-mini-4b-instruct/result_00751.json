@@ -1,0 +1,9 @@
+{
+  "id": 751,
+  "title": "Timer",
+  "prompt": "Write a program that takes a time interval as input and counts down to zero\nSample Input: 10\nSample Output: Time's up!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a time interval as input (in seconds) and counts down to zero, displaying a message when it reaches zero:\n\n```python\ndef countdown(seconds):\n    \"\"\"Count down from the given number of seconds to zero.\"\"\"\n    while seconds > 0:\n        print(f\"{seconds} seconds remaining...\")\n        seconds -= 1\n    print(\"Time's up!\")\n\n# Get user input for the time interval in seconds\ntry:\n    time_interval = int(input(\"Enter the time interval in seconds: \"))\n    if time_interval < 0:\n        raise ValueError(\"Time interval must be non-negative.\")\nexcept ValueError as e:\n    print(e)\nelse:\n    countdown(time_interval)\n```\n\nThis program defines a function `countdown` that takes a time interval in seconds as an argument. It uses a `while` loop to count down from the given number of seconds to zero, printing a message for each second remaining. When it reaches zero, it prints the message \"Time's up!\". The program then gets user input for the time interval and calls the `countdown` function with the user's input. If the user enters a non-positive value, the program catches the `ValueError` exception and prints an error message.",
+  "error": null,
+  "elapsed_seconds": 3.0,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

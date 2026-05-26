@@ -1,0 +1,9 @@
+{
+  "id": 6693,
+  "title": "Square Root",
+  "prompt": "Create a program that takes a number as input and returns its square root.\nSample Input: 16\nSample Output: 4.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a number as input and returns its square root:\n\n```python\ndef get_square_root(number):\n    \"\"\"\n    This function takes a number as input and returns its square root.\n\n    :param number: The number for which the square root is to be calculated.\n    :return: The square root of the given number.\n    \"\"\"\n\n    # Check if the input is a non-negative number\n    if number < 0:\n        raise ValueError(\"Input number must be non-negative.\")\n\n    # Calculate the square root using the math.isqrt function\n    sqrt = math.isqrt(number)\n\n    # If the square root is an integer, return it\n    if sqrt * sqrt == number:\n        return sqrt\n\n    # Otherwise, calculate the square root using the math.sqrt function\n    return math.sqrt(number)\n```\n\nYou can use this function by calling it with a number as an argument, like this:\n\n```python\nsquare_root = get_square_root(16)\nprint(square_root)  # Output: 4.0\n```\n\nThis program checks if the input number is non-negative and raises a `ValueError` if it's not. Then, it calculates the square root using the `math.isqrt` function, which is more efficient for large numbers. If the square root is an integer, the function returns it. Otherwise, it calculates the square root using the `math.sqrt` function and returns the result.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

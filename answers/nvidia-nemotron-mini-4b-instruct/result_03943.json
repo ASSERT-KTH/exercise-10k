@@ -1,0 +1,9 @@
+{
+  "id": 3943,
+  "title": "Guess the Number",
+  "prompt": "Write a program to generate a random number between 1 and 100 and ask the user to guess it. After each guess, print out a message indicating if the guess is higher or lower than the actual number.\nSample Input: 50\nSample Output: Your guess is too high. Try again!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\nimport random\n\n# Generate a random number between 1 and 100\nsecret_number = random.randint(1, 100)\n\n# Ask the user to guess the number and keep track of their guesses\nnum_guesses = 0\nwhile True:\n    # Get user input and convert it to an integer\n    user_guess = int(input(\"Guess a number between 1 and 100: \"))\n\n    # Increment the number of guesses\n    num_guesses += 1\n\n    # Print a message indicating if the guess is higher or lower than the actual number\n    if user_guess < secret_number:\n        print(f\"Your guess is too low. Try again!\")\n    elif user_guess > secret_number:\n        print(f\"Your guess is too high. Try again!\")\n    else:\n        # If the user guesses correctly, break the loop\n        print(f\"Congratulations! You guessed the number in {num_guesses} guesses.\")\n        break\n```\nThis program generates a random number between 1 and 100, and then asks the user to guess the number. After each guess, the program checks if the guess is higher or lower than the actual number, and prints a message accordingly. If the user guesses the number correctly, the program breaks out of the loop and prints a message indicating how many guesses it took.",
+  "error": null,
+  "elapsed_seconds": 3.51,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

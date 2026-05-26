@@ -1,0 +1,9 @@
+{
+  "id": 3953,
+  "title": "Chatbot",
+  "prompt": "Write a program to simulate a chatbot that responds to basic user queries.\nSample Input: hello\nSample Output: Hello! How can I assist you today?\n",
+  "answer": "Sure, I'd be happy to help you create a simple chatbot for basic user queries. Here's a Python program using the `re` module for regular expressions to handle user inputs and responses. This program assumes the chatbot will only respond to \"hello\" and \"goodbye\" inputs. You can extend this to handle more complex queries by adding more patterns to the `user_input` variable.\n\n```python\nimport re\n\n# Regular expressions for user inputs\nuser_input = r'(hello|goodbye)'\n\n# Chatbot responses\nresponses = {\n    'hello': 'Hello! How can I assist you today?',\n    'goodbye': 'Goodbye! Have a great day!'\n}\n\ndef chatbot():\n    while True:\n        user_input = input('You: ').strip()\n\n        # Check if the user input matches any of the predefined responses\n        if re.match(user_input, user_input):\n            print(responses[user_input])\n        else:\n            print('Sorry, I didn''t understand that. Please try again.')\n\n# Start the chatbot\nchatbot()\n```\n\nThis program will continuously listen for user inputs and respond with the appropriate message. You can customize the chatbot by adding more patterns to the `user_input` variable and updating the `responses` dictionary.",
+  "error": null,
+  "elapsed_seconds": 2.98,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

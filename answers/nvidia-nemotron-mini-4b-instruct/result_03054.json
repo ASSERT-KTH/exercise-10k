@@ -1,0 +1,9 @@
+{
+  "id": 3054,
+  "title": "Recursive Function",
+  "prompt": "Create a recursive function to calculate the factorial of a number.\nSample Input: 5\nSample Output: 120\n",
+  "answer": "Sure, I'd be happy to help you create a recursive function to calculate the factorial of a number. Here's an example implementation in Python:\n\n```python\ndef factorial(n):\n    \"\"\"\n    Calculate the factorial of a non-negative integer n using recursion.\n\n    :param n: Non-negative integer\n    :return: Factorial of n\n    \"\"\"\n    # Base case: factorial of 0 is 1\n    if n == 0:\n        return 1\n    # Recursive case: factorial of n is n * factorial of n-1\n    else:\n        return n * factorial(n-1)\n```\n\nThis function works by recursively calling itself with a smaller value of `n` until it reaches the base case of `n == 0`, at which point it returns 1 (since the factorial of 0 is defined to be 1). The recursive call is made with the argument `n-1` to reduce the value of `n` by 1 in each recursive step.\n\nHere's an example of how you can use this function:\n\n```python\nprint(factorial(5))  # Output: 120\n```\n\nThis will calculate the factorial of 5 and print the result, which is 120.",
+  "error": null,
+  "elapsed_seconds": 5.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

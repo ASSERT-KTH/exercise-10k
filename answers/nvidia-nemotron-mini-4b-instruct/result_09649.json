@@ -1,0 +1,9 @@
+{
+  "id": 9649,
+  "title": "Function with/TCP",
+  "prompt": "Write a function that uses the socket module to establish a TCP connection and send/receive data.\nSample Input: None\nSample Output: Received data\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses the `socket` module to establish a TCP connection, send data, and receive data. This function assumes you want to connect to a remote host and port.\n\n```python\nimport socket\n\ndef tcp_connection(host, port):\n    \"\"\"\n    Establishes a TCP connection and sends/receives data.\n\n    :param host: The remote host to connect to.\n    :param port: The remote port to connect to.\n    :return: None\n    \"\"\"\n\n    # Create a TCP/IP socket\n    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n\n    # Connect the socket to the port where the server is listening\n    server_address = (host, port)\n    print(f\"Connecting to {server_address}...\")\n    sock.connect(server_address)\n\n    # Send some data\n    message = \"Hello, server!\"\n    print(f\"Sending: {message}\")\n    sock.sendall(message.encode())\n\n    # Receive data\n    print(\"Waiting to receive data...\")\n    received = b\"\"\n    while True:\n        data = sock.recv(16)\n        if not data:\n            break\n        received += data\n\n    print(f\"Received: {received.decode().strip('\\n')}\")\n\n    # Close the connection\n    sock.close()\n\n# Example usage\ntcp_connection(\"example.com\", 80)\n```\n\nReplace `\"example.com\"` and `80` with the remote host and port you want to connect to. The function will send a message, wait for a response, and then close the connection.",
+  "error": null,
+  "elapsed_seconds": 4.25,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

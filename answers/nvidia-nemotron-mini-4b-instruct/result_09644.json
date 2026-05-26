@@ -1,0 +1,9 @@
+{
+  "id": 9644,
+  "title": "Function with Regular Expressions",
+  "prompt": "Create a function that uses regular expressions to validate and extract data from strings.\nSample Input: 'hello world'\nSample Output: Extracted data\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses regular expressions to validate and extract data from strings. This function assumes that the input string will always contain a specific format, such as a name followed by a space and then a city.\n\n```python\nimport re\n\ndef extract_data(input_string: str) -> str:\n    \"\"\"\n    Extracts data from a string using regular expressions.\n\n    :param input_string: The input string to extract data from.\n    :return: The extracted data as a string.\n    \"\"\"\n    # Regular expression pattern to match a name followed by a space and then a city\n    pattern = r'(\\w+)\\s+(\\w+)'\n\n    # Use the re.search function to find the first match of the pattern in the input string\n    match = re.search(pattern, input_string)\n\n    # If a match is found, extract the name and city from the match groups\n    if match:\n        name, city = match.groups()\n        return f'Extracted data: {name}, {city}'\n    else:\n        return 'No data extracted'\n\n# Example usage\ninput_string = 'hello world'\nprint(extract_data(input_string))  # Output: Extracted data: ,\n```\n\nThis function first defines a regular expression pattern that matches a name followed by a space and then a city. It then uses the `re.search` function to find the first match of this pattern in the input string. If a match is found, the function extracts the name and city from the match groups and returns the extracted data as a string. If no match is found, the function returns a message indicating that no data was extracted.",
+  "error": null,
+  "elapsed_seconds": 3.89,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

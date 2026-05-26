@@ -1,0 +1,9 @@
+{
+  "id": 1330,
+  "title": "Capitalizer",
+  "prompt": "Write a function that takes a string as input and returns the string with the first letter of each word capitalized.\nSample Input: hello world\nSample Output: Hello World\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef capitalize_words(s: str) -> str:\n    \"\"\"\n    Capitalizes the first letter of each word in the input string.\n\n    :param s: The input string.\n    :return: The string with the first letter of each word capitalized.\n    \"\"\"\n    # Split the input string into words, capitalize the first letter of each word,\n    # and then join them back together with spaces in between.\n    return ' '.join(word.capitalize() for word in s.split())\n```\nHere's an example of how you can use this function:\n```python\nprint(capitalize_words(\"hello world\"))  # Output: Hello World\nprint(capitalize_words(\"Python is a great language\"))  # Output: Python Is A Great Language\n```\nThis function first splits the input string into words using the `split()` method, then uses a generator expression to capitalize the first letter of each word using the `capitalize()` method, and finally joins the words back together into a single string using the `join()` method.",
+  "error": null,
+  "elapsed_seconds": 2.59,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1671,
+  "title": "Day of the Week",
+  "prompt": "Develop a program that takes the day of the month and the month as input and determines the day of the week (Monday to Sunday) using if/else statements\nSample Input: 15 8\nSample Output: Wednesday\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef day_of_week(day_of_month, month):\n    \"\"\"\n    Determines the day of the week for a given day of the month and month.\n\n    :param day_of_month: The day of the month (1-31)\n    :param month: The month (1-12)\n    :return: The day of the week as a string (Monday, Tuesday, etc.)\n    \"\"\"\n\n    # Validate input\n    if not (1 <= day_of_month <= 31):\n        raise ValueError(\"Day of the month must be between 1 and 31.\")\n    if not (1 <= month <= 12):\n        raise ValueError(\"Month must be between 1 and 12.\")\n\n    # Calculate the day of the week using Zeller's congruence\n    zeller = (13 * month + day_of_month + int(day_of_month / 4) + int((100 * day_of_month / 4) / 4) - int((100 * day_of_month / 4) / 100) + 5 * int(day_of_month / 4) + 1) % 7\n\n    # Map Zeller's congruence to a day of the week\n    days = [\"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\", \"Sunday\"]\n    return days[zeller]\n\n\n# Example usage\nday_of_week_str = day_of_week(15, 8)\nprint(f\"The day of the week is {day_of_week_str}.\")\n```\n\nThis program defines a function `day_of_week` that takes the day of the month and month as input, validates the input, calculates the day of the week using Zeller's congruence, and returns the day of the week as a string. The example usage at the end of the program demonstrates how to use the function.",
+  "error": null,
+  "elapsed_seconds": 4.73,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

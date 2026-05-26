@@ -1,0 +1,9 @@
+{
+  "id": 8608,
+  "title": "Caesar Cipher",
+  "prompt": "Write a program that takes a string and an integer as input, and returns the string with each character shifted by the integer.\nSample Input: hello 3\nSample Output: khoor\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef shift_string(s: str, n: int) -> str:\n    \"\"\"\n    Shifts each character in the input string by the given integer.\n\n    :param s: The input string.\n    :param n: The integer to shift each character by.\n    :return: The shifted string.\n    \"\"\"\n    # Ensure the input is a string and the integer is non-negative\n    if not isinstance(s, str) or not isinstance(n, int) or n < 0:\n        raise ValueError(\"Input must be a string and the integer must be non-negative.\")\n\n    # Shift each character by the given integer\n    shifted_chars = [chr((ord(c) + n) % 128) for c in s]\n\n    # Join the shifted characters to form the shifted string\n    return ''.join(shifted_chars)\n\n# Example usage\nprint(shift_string(\"hello\", 3))  # Output: khoor\n```\nThis program defines a function `shift_string` that takes a string `s` and an integer `n` as input, and returns the string with each character shifted by the integer. The function first checks that the input is a string and the integer is non-negative, raising a `ValueError` if not. Then, it uses a list comprehension to iterate over each character in the input string, shifts it by the given integer using the `ord` and `chr` functions, and joins the shifted characters to form the shifted string. The `% 128` operation is used to ensure that the shifted character is within the range of printable ASCII characters.",
+  "error": null,
+  "elapsed_seconds": 3.86,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 979,
+  "title": "Dictionary Invert",
+  "prompt": "Given a dictionary, write a function to invert it, i.e., swap the keys and values. If the dictionary has non-unique values, the resulting dictionary should contain lists of keys that correspond to each value.\nSample Input: dict = {'name': 'Quinn', 'age': 125, 'city': 'New York'}\nSample Output: {'Quinn': ['name'], 125: ['age'], 'New York': ['city']}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\nfrom collections import defaultdict\n\ndef invert_dict(d):\n    \"\"\"\n    Inverts a dictionary, swapping keys and values. If the dictionary has non-unique values,\n    the resulting dictionary contains lists of keys that correspond to each value.\n    \"\"\"\n    # Use a defaultdict to group keys by value, and store lists of keys for each value\n    result = defaultdict(list)\n    for key, value in d.items():\n        result[value].append(key)\n\n    # Convert the defaultdict back to a regular dictionary\n    return dict(result)\n```\nHere's an example of how you can use this function:\n```python\ndict_input = {'name': 'Quinn', 'age': 125, 'city': 'New York'}\ndict_output = invert_dict(dict_input)\nprint(dict_output)  # Output: {'Quinn': ['name'], 125: ['age'], 'New York': ['city']}\n```\nThis function uses a `defaultdict` from the `collections` module to group keys by value. The `defaultdict` automatically initializes each cell to a list, so we can append keys to the list for each value. Finally, we convert the `defaultdict` back to a regular dictionary using the `dict()` function.",
+  "error": null,
+  "elapsed_seconds": 3.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4796,
+  "title": "Anagram Checker",
+  "prompt": "Write a program that checks if two words are anagrams of each other.\nSample Input: listen silent\nSample Output: The words are anagrams.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if two words are anagrams of each other:\n\n```python\ndef are_anagrams(word1, word2):\n    \"\"\"\n    Check if two words are anagrams of each other.\n\n    :param word1: str - The first word to compare.\n    :param word2: str - The second word to compare.\n    :return: str - A message indicating whether the words are anagrams or not.\n    \"\"\"\n    # Ensure both inputs are strings and have the same length\n    if not isinstance(word1, str) or not isinstance(word2, str) or len(word1) != len(word2):\n        return \"Error: Both inputs must be strings.\"\n\n    # Convert both words to lowercase and remove any non-alphanumeric characters\n    word1 = ''.join(c.lower() for c in word1 if c.isalnum())\n    word2 = ''.join(c.lower() for c in word2 if c.isalnum())\n\n    # Check if the two words are anagrams by sorting their characters\n    return \"The words are anagrams.\" if sorted(word1) == sorted(word2) else \"The words are not anagrams.\"\n\n# Example usage\nprint(are_anagrams(\"listen\", \"silent\"))  # Output: The words are anagrams.\nprint(are_anagrams(\"hello\", \"world\"))    # Output: The words are not anagrams.\n```\n\nThis program first checks if both inputs are strings and have the same length. Then, it converts both words to lowercase and removes any non-alphanumeric characters using a list comprehension. Finally, it checks if the sorted characters of the two words are equal, which indicates that they are anagrams.",
+  "error": null,
+  "elapsed_seconds": 4.24,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

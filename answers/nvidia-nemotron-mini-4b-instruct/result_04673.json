@@ -1,0 +1,9 @@
+{
+  "id": 4673,
+  "title": "Most Frequent Character",
+  "prompt": "Write a program that takes a string as input and returns the most frequent character in the string.\nSample Input: Hello World\nSample Output: l\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\nfrom collections import Counter\n\ndef most_frequent_char(input_str: str) -> str:\n    \"\"\"\n    Given a string, return the most frequent character in the string.\n\n    :param input_str: The input string\n    :return: The most frequent character in the string\n    \"\"\"\n    # Count the occurrences of each character in the string\n    char_counts = Counter(input_str)\n\n    # Find the character with the highest count\n    most_common = char_counts.most_common(1)[0]\n\n    # Return the most frequent character\n    return most_common[0]\n```\nHere's an example of how you can use this function:\n```python\nprint(most_frequent_char(\"Hello World\"))  # Output: l\n```\nThis program uses the `Counter` class from the `collections` module to count the occurrences of each character in the input string. The `most_common()` method is then used to find the character with the highest count, and the first element of the resulting list is returned as the most frequent character.",
+  "error": null,
+  "elapsed_seconds": 2.71,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

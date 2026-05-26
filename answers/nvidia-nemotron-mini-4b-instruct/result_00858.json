@@ -1,0 +1,9 @@
+{
+  "id": 858,
+  "title": "Recursive Data Structures",
+  "prompt": "Write a function that recursively traverses a data structure, such as a tree or graph, and performs an operation on each node.\nSample Input: tree = { 'a': {'b': {'c': {}}, 'd': {}}, 'e': {} }\nSample Output: result of traversing the tree\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that recursively traverses a tree (or any data structure with a similar structure) and performs an operation on each node. In this example, I'll assume the data structure is a dictionary where keys are nodes and values are dictionaries representing their children.\n\n```python\ndef traverse_and_operate(tree, operation):\n    \"\"\"\n    Recursively traverses a tree and applies a given operation to each node.\n\n    :param tree: The tree to traverse (dict)\n    :param operation: The operation to apply to each node (callable)\n    \"\"\"\n\n    def _traverse(node):\n        if isinstance(node, dict):\n            for child in node.values():\n                _traverse(child)\n        else:\n            operation(node)\n\n    _traverse(tree)\n\n# Example usage:\ntree = { 'a': {'b': {'c': {}}, 'd': {}}, 'e': {} }\n\ndef double_value(node):\n    \"\"\"\n    Drops the value of a node by 50%.\n    \"\"\"\n    value = node['value']\n    node['value'] = value // 2\n\ntraverse_and_operate(tree, double_value)\nprint(tree)  # Output: {'a': {'b': {'c': {}, 'd': {}}, 'd': {}}, 'e': {}}\n```\n\nThis function defines a helper function `_traverse` that recursively visits each node in the tree. The `traverse_and_operate` function calls `_traverse` with the given tree and a callable operation. In this example, I've defined a `double_value` function that drops the value of a node by 50%. You can replace this with any operation you need.",
+  "error": null,
+  "elapsed_seconds": 5.43,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5374,
+  "title": "List Intersection",
+  "prompt": "Write a program to find the intersection of two or more lists.\nSample Input: [1, 2, 3], [2, 3, 4]\nSample Output: [2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the intersection of two or more lists using a set data structure, which allows for efficient lookup and removal of elements:\n```python\ndef find_intersection(*lists):\n    \"\"\"\n    Find the intersection of two or more lists.\n\n    :param lists: Variable number of lists to find the intersection of.\n    :return: A list containing the common elements between all input lists.\n    \"\"\"\n    # Convert each list to a set to remove duplicates and enable fast lookup\n    all_elements = set().union(*lists)\n\n    # Find the intersection of the sets and convert it back to a list\n    intersection = list(set(all_elements).intersection(*lists))\n\n    return intersection\n\n# Example usage\nprint(find_intersection([1, 2, 3], [2, 3, 4]))  # Output: [2, 3]\n```\nThis program defines a function `find_intersection` that takes any number of lists as arguments and returns a list containing the common elements between all input lists. The function first converts each list to a set to remove duplicates and enable fast lookup. Then, it finds the intersection of the sets using the `intersection` method and converts the result back to a list. The example usage demonstrates how to use the function with two lists.",
+  "error": null,
+  "elapsed_seconds": 3.29,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

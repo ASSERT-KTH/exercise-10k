@@ -1,0 +1,9 @@
+{
+  "id": 2508,
+  "title": "Arithmetic Expression Evaluator",
+  "prompt": "Create a program that takes an arithmetic expression as input and evaluates it.\nSample Input: 2 + 3 * 4\nSample Output: 14\n",
+  "answer": "Sure, I'd be happy to help you create a program that evaluates arithmetic expressions. Here's a Python solution using a stack to perform operations in the reverse Polish notation (LPN) order, which is more straightforward for arithmetic operations. This approach ensures that the expression is evaluated from left to right, and it handles both integers and floating-point numbers.\n\n```python\nimport re\n\ndef is_number(s):\n    \"\"\"Check if a string represents a number.\"\"\"\n    try:\n        float(s)\n        return True\n    except ValueError:\n        return False\n\ndef evaluate(expression):\n    \"\"\"Evaluate an arithmetic expression in LPN order.\"\"\"\n    stack = []\n    operators = {'+': lambda x, y: x + y, '-': lambda x, y: x - y, '*': lambda x, y: x * y, '/': lambda x, y: x / y}\n\n    for token in re.findall(r'[-+\\*/]|\\d+', expression):\n        if is_number(token):\n            stack.append(float(token))\n        else:\n            operand2 = stack.pop()\n            operand1 = stack.pop()\n            result = operators[token](operand1, operand2)\n            stack.append(result)\n\n    return stack[0]\n\n# Example usage\nexpression = input(\"Enter an arithmetic expression: \")\nprint(evaluate(expression))\n```\n\nThis program defines two functions: `is_number()` to check if a string represents a number and `evaluate()` to evaluate an arithmetic expression in LPN order. The `evaluate()` function uses a stack to perform operations and checks for numbers and operators in the input expression.",
+  "error": null,
+  "elapsed_seconds": 3.78,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

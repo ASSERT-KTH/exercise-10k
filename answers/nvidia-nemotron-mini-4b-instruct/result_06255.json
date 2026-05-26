@@ -1,0 +1,9 @@
+{
+  "id": 6255,
+  "title": "Dictionary Items",
+  "prompt": "Write a function that takes a dictionary as input and returns a view object that displays a list of all key-value pairs\nSample Input: {'a': 1, 'b': 2, 'c': 3}\nSample Output: [('a', 1), ('b', 2), ('c', 3)]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\nfrom collections.abc import Mapping\n\ndef display_dict_view(d):\n    \"\"\"\n    Returns a view object that displays a list of all key-value pairs in a dictionary.\n\n    :param d: The dictionary to view.\n    :return: A view object that can be iterated over to display key-value pairs.\n    \"\"\"\n    if not isinstance(d, Mapping):\n        raise ValueError(\"Input must be a dictionary.\")\n\n    return iter(d.items())\n```\nThis function checks if the input is a dictionary and raises a `ValueError` if it's not. Then, it uses the `items()` method to create a view object that returns a list of tuples containing the key-value pairs. Here's an example of how you can use this function:\n```python\nd = {'a': 1, 'b': 2, 'c': 3}\nview = display_dict_view(d)\n\n# Display the view object\nfor key, value in view:\n    print((key, value))\n```\nThis will output:\n```yaml\n('a', 1)\n('b', 2)\n('c', 3)\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.36,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

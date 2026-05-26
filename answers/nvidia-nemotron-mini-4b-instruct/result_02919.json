@@ -1,0 +1,9 @@
+{
+  "id": 2919,
+  "title": "Most Frequent Character Finder",
+  "prompt": "Write a program to find the most frequent character in a given string.\nSample Input: programming\nSample Output: g\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the most frequent character in a given string:\n\n```python\nfrom collections import Counter\n\ndef most_frequent_char(s: str) -> str:\n    \"\"\"\n    Find the most frequent character in a given string.\n\n    :param s: The input string.\n    :return: The most frequent character as a string.\n    \"\"\"\n    # Count the occurrences of each character in the string\n    char_counts = Counter(s)\n\n    # Find the character with the highest count\n    most_common_char = char_counts.most_common(1)[0][0]\n\n    return most_common_char\n\n# Example usage\ninput_string = \"programming\"\nprint(most_frequent_char(input_string))  # Output: g\n```\n\nThis program uses the `Counter` class from the `collections` module to count the occurrences of each character in the string. The `most_common()` method is then used to find the character with the highest count. The function returns this character as a string.",
+  "error": null,
+  "elapsed_seconds": 2.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

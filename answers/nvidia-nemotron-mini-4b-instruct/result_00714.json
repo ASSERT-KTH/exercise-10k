@@ -1,0 +1,9 @@
+{
+  "id": 714,
+  "title": "Finding the Most Common Value",
+  "prompt": "Write a function to find the most common value in a dictionary\nSample Input: {'a': 1, 'b': 2, 'c': 1, 'd': 2, 'e': 1}\nSample Output: 1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that takes a dictionary as input and returns the most common value:\n```python\nfrom collections import Counter\n\ndef most_common_value(dictionary):\n    \"\"\"\n    Given a dictionary, return the most common value.\n\n    :param dictionary: The input dictionary\n    :return: The most common value\n    \"\"\"\n    # Count the occurrences of each value in the dictionary\n    value_counts = Counter(dictionary.values())\n\n    # Find the value with the highest count\n    most_common_value = value_counts.most_common(1)[0][0]\n\n    return most_common_value\n```\nHere's an example of how you can use this function:\n```python\nsample_input = {'a': 1, 'b': 2, 'c': 1, 'd': 2, 'e': 1}\nprint(most_common_value(sample_input))  # Output: 1\n```\nThis function first counts the occurrences of each value in the dictionary using the `Counter` class from the `collections` module. Then, it finds the value with the highest count using the `most_common` method and returns it. If there are multiple values with the same highest count, the function will return any one of them.",
+  "error": null,
+  "elapsed_seconds": 2.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

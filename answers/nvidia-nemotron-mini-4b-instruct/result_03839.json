@@ -1,0 +1,9 @@
+{
+  "id": 3839,
+  "title": "Number Sequence",
+  "prompt": "Write a program that generates a sequence of numbers based on a given formula (e.g., Fibonacci sequence).\nSample Input: 10\nSample Output: Fibonacci sequence: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates a sequence of numbers based on a given formula, such as the Fibonacci sequence. In this example, I'll create a function `generate_sequence` that takes an integer `n` as input and returns the first `n` numbers in the Fibonacci sequence.\n\n```python\ndef fibonacci(n):\n    \"\"\"Generate the first n numbers in the Fibonacci sequence.\"\"\"\n    sequence = [0, 1]\n    while len(sequence) < n:\n        sequence.append(sequence[-1] + sequence[-2])\n    return sequence[:n]\n\n\ndef generate_sequence(formula, n):\n    \"\"\"Generate a sequence of numbers based on a given formula.\"\"\"\n    if formula == \"fibonacci\":\n        return fibonacci(n)\n    else:\n        raise ValueError(f\"Invalid formula. Supported formulas are 'fibonacci'.\")\n\n\n# Example usage\nn = 10\nprint(f\"Fibonacci sequence: {generate_sequence('fibonacci', n)}\")\n```\n\nThis program defines two functions: `fibonacci` and `generate_sequence`. The `fibonacci` function generates the first `n` numbers in the Fibonacci sequence, and the `generate_sequence` function generates a sequence of numbers based on a given formula. The example usage at the end of the program demonstrates how to use the `generate_sequence` function with the Fibonacci sequence formula.",
+  "error": null,
+  "elapsed_seconds": 3.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

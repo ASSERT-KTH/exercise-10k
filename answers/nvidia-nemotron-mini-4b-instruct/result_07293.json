@@ -1,0 +1,9 @@
+{
+  "id": 7293,
+  "title": "Discount Calculator Function",
+  "prompt": "Create a function that takes the original price and the discount percentage as arguments and returns the price after the discount\nSample Input: 100, 20\nSample Output: 80.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef calculate_discounted_price(original_price, discount_percentage):\n    \"\"\"\n    Calculates the price after a discount given the original price and discount percentage.\n\n    Parameters:\n    original_price (float): The original price before any discount.\n    discount_percentage (float): The discount percentage as a decimal (e.g., 0.2 for 20%).\n\n    Returns:\n    float: The price after the discount.\n    \"\"\"\n    # Ensure the discount percentage is a decimal\n    discount_percentage = discount_percentage / 100\n\n    # Calculate the discounted price\n    discounted_price = original_price - (original_price * discount_percentage)\n\n    return discounted_price\n```\nHere's an example of how to use this function:\n```python\noriginal_price = 100\ndiscount_percentage = 20\n\ndiscounted_price = calculate_discounted_price(original_price, discount_percentage)\nprint(f\"The price after the discount is {discounted_price:.2f}.\")  # Output: The price after the discount is 80.00.\n```\nThis function first ensures that the `discount_percentage` argument is a decimal by dividing it by 100. Then, it calculates the discounted price by subtracting the original price from the product of the original price and the discount percentage. Finally, it returns the discounted price with two decimal places using the `:.2f` format specifier.",
+  "error": null,
+  "elapsed_seconds": 3.75,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

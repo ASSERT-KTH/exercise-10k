@@ -1,0 +1,9 @@
+{
+  "id": 9660,
+  "title": "Replacer",
+  "prompt": "Write a program that asks for a string and replaces a substring with another string.\nSample Input: hello world\nSample Output: hello python\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef replace_substring(input_string, old_substring, new_substring):\n    \"\"\"\n    Replaces a substring with another string in a given input string.\n\n    :param input_string: The string to modify.\n    :param old_substring: The substring to replace.\n    :param new_substring: The substring to replace the old substring with.\n    :return: The modified string.\n    \"\"\"\n    # Ensure the old substring is not an empty string\n    if not old_substring:\n        raise ValueError(\"The 'old_substring' cannot be an empty string.\")\n\n    # Perform the replacement and return the modified string\n    return input_string.replace(old_substring, new_substring)\n\n# Get user input\ninput_string = input(\"Enter a string: \")\nold_substring = input(\"Enter the substring to replace: \")\nnew_substring = input(\"Enter the substring to replace the old substring with: \")\n\n# Print the modified string\nprint(replace_substring(input_string, old_substring, new_substring))\n```\nThis program defines a function `replace_substring` that takes three arguments: the input string, the old substring, and the new substring. The function checks if the old substring is not an empty string and then replaces it with the new substring using the `replace` method. Finally, the program gets user input for the input string, old substring, and new substring, calls the `replace_substring` function, and prints the modified string.",
+  "error": null,
+  "elapsed_seconds": 3.63,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

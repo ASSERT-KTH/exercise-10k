@@ -1,0 +1,9 @@
+{
+  "id": 5968,
+  "title": "List Reducing",
+  "prompt": "Write a program that takes a list and a reducing function as input, and returns the result of applying the reducing function to all elements of the list.\nSample Input: [1, 2, 3, 4, 5], sum\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses the built-in `reduce` function from the `functools` module, but if you don't have it installed, you can use a custom loop to achieve the same result. Here's the code:\n\n```python\nfrom functools import reduce\n\ndef custom_reduce(func, iterable):\n    \"\"\"\n    A custom reduce function that works similarly to the built-in reduce function.\n    \"\"\"\n    result = iterable[0]\n    for element in iterable[1:]:\n        result = func(result, element)\n    return result\n\ndef sum_list(lst):\n    \"\"\"\n    Returns the sum of all elements in a list.\n    \"\"\"\n    return custom_reduce(lambda x, y: x + y, lst)\n\n# Sample input and output\nsample_input = [1, 2, 3, 4, 5]\nsample_output = sum_list(sample_input)\nprint(f\"Sample Output: {sample_output}\")  # Sample Output: 15\n```\n\nIf you prefer to use the built-in `reduce` function, you can modify the `sum_list` function as follows:\n\n```python\nfrom functools import reduce\n\ndef sum_list(lst):\n    \"\"\"\n    Returns the sum of all elements in a list.\n    \"\"\"\n    return reduce(lambda x, y: x + y, lst, 0)\n```\n\nBoth functions will give you the same output for the given sample input.",
+  "error": null,
+  "elapsed_seconds": 4.01,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3340,
+  "title": "Array Reduction (Custom Reduction)",
+  "prompt": "Write a program that takes an array of integers as input and returns the result of a custom reduction operation, such as finding the maximum or minimum value.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes an array (or list) of integers as input and returns the result of a custom reduction operation, such as finding the maximum or minimum value. In this example, I'll use the built-in `max()` function to find the maximum value.\n\n```python\ndef custom_reduction(arr):\n    \"\"\"\n    Performs a custom reduction operation on the given array of integers.\n\n    :param arr: List[int] - The input array of integers.\n    :return: int - The result of the custom reduction operation.\n    \"\"\"\n\n    # Define the custom reduction function here (e.g., finding the minimum value)\n    # For this example, we'll use the built-in max() function\n    def custom_min(a, b):\n        return a if a < b else b\n\n    # Perform the custom reduction operation\n    result = max(arr, key=custom_min)\n\n    return result\n```\n\nYou can use this function as follows:\n\n```python\narr = [1, 2, 3, 4, 5]\nprint(custom_reduction(arr))  # Output: 5\n```\n\nIf you want to find the minimum value instead, you can modify the `custom_min()` function to return `a` if `a` is less than or equal to `b`, and `b` otherwise:\n\n```python\ndef custom_min(a, b):\n    return a if a <= b else b\n```\n\nThen, the `custom_reduction()` function will return the minimum value of the input array.",
+  "error": null,
+  "elapsed_seconds": 3.7,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1440,
+  "title": "List Flat Map",
+  "prompt": "Create a function that takes a list of lists and a mapping function as input and returns a new list with all elements mapped and flattened into a single list.\nSample Input: [[1, 2], [3, 4], [5, 6]], lambda x: x * 2\nSample Output: [2, 4, 6, 8, 10, 12]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef map_and_flatten(lists, mapping_function):\n    \"\"\"\n    Maps a function over a list of lists and flattens the results into a single list.\n\n    Parameters:\n    lists (list): A list of lists to map over.\n    mapping_function (callable): A function that takes one argument and returns a single value.\n\n    Returns:\n    list: A flattened list of the results of applying the mapping function to each element in the input list of lists.\n    \"\"\"\n    # Flatten the input list of lists using a list comprehension\n    flat_lists = [item for sublist in lists for item in sublist]\n\n    # Apply the mapping function to each element in the flattened list\n    mapped_list = [mapping_function(item) for item in flat_lists]\n\n    return mapped_list\n```\nHere's an example of how to use this function:\n```python\nlists = [[1, 2], [3, 4], [5, 6]]\nmapping_function = lambda x: x * 2\n\nresult = map_and_flatten(lists, mapping_function)\nprint(result)  # Output: [2, 4, 6, 8, 10, 12]\n```\nThis function first flattens the input list of lists using a list comprehension. Then, it applies the mapping function to each element in the flattened list using another list comprehension. The resulting list is returned as the output.",
+  "error": null,
+  "elapsed_seconds": 3.62,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

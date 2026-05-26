@@ -1,0 +1,9 @@
+{
+  "id": 2366,
+  "title": "Exponentiation",
+  "prompt": "Create a program that calculates the result of a number raised to a power.\nSample Input: 2 3\nSample Output: 8\n",
+  "answer": "Sure, I'd be happy to help you create a program that calculates the result of a number raised to a power. Here's an example Python program that meets your requirements:\n\n```python\ndef power(base, exponent):\n    \"\"\"\n    Calculates the result of a number raised to a power.\n\n    :param base: The base number (float or int).\n    :param exponent: The exponent (int).\n    :return: The result of the base raised to the power of the exponent.\n    \"\"\"\n\n    # Check if the exponent is non-negative\n    if exponent < 0:\n        raise ValueError(\"Exponent must be non-negative\")\n\n    # Calculate the result using the math module's pow() function\n    result = pow(base, exponent)\n\n    return result\n\n# Get user input\nbase = float(input(\"Enter the base number: \"))\nexponent = int(input(\"Enter the exponent (int): \"))\n\n# Calculate and print the result\nresult = power(base, exponent)\nprint(f\"{base} raised to the power of {exponent} is {result}.\")\n```\n\nThis program defines a function `power()` that takes two arguments, `base` and `exponent`, and returns the result of raising `base` to the power of `exponent`. The function checks if the exponent is non-negative and uses the built-in `math.pow()` function to calculate the result. The program then prompts the user to enter the base number and exponent, calculates the result using the `power()` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.62,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

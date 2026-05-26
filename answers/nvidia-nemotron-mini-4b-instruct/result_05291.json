@@ -1,0 +1,9 @@
+{
+  "id": 5291,
+  "title": "Pascal's Triangle",
+  "prompt": "Create a program that generates Pascal's triangle up to the nth row, where n is a user-inputted value. Use a for loop to iterate over the rows.\nSample Input: 5\nSample Output: [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates Pascal's triangle up to the nth row using a for loop:\n\n```python\ndef generate_pascals_triangle(n):\n    \"\"\"\n    Generates Pascal's triangle up to the nth row.\n\n    :param n: The number of rows to generate.\n    :return: A list of lists representing the nth row of Pascal's triangle.\n    \"\"\"\n    # Initialize the first row with a single 1\n    triangle = [[1]]\n\n    # Iterate over the remaining rows\n    for i in range(1, n):\n        # Create a new row by appending the sum of the previous row's elements\n        # to the end of the previous row\n        new_row = [1]\n        for j in range(1, len(triangle[i-1])):\n            new_row.append(triangle[i-1][j-1] + triangle[i-1][j])\n        new_row.append(1)\n        triangle.append(new_row)\n\n    return triangle\n\n# Get user input for the number of rows\nn = int(input(\"Enter the number of rows to generate: \"))\n\n# Generate and print the Pascal's triangle\npascals_triangle = generate_pascals_triangle(n)\nfor row in pascals_triangle:\n    print(row)\n```\n\nWhen you run this program and enter 5 as the number of rows, it will output:\n\n```\n[1]\n[1, 1]\n[1, 2, 1]\n[1, 3, 3, 1]\n[1, 4, 6, 4, 1]\n```\n\nThis matches the sample output you provided.",
+  "error": null,
+  "elapsed_seconds": 4.11,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

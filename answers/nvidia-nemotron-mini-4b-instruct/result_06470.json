@@ -1,0 +1,9 @@
+{
+  "id": 6470,
+  "title": "Dictionary Copy",
+  "prompt": "Write a function that takes a dictionary as input and returns a copy of the dictionary\nSample Input: {'name': 'John', 'age': 30}\nSample Output: {'name': 'John', 'age': 30}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses the `copy()` method of the built-in `dict` class to create a shallow copy of the input dictionary, which means it creates a new dictionary object that shares the same keys with the original dictionary but has its own values. This way, changes to the original dictionary won't affect the copied dictionary.\n\n```python\ndef copy_dict(input_dict):\n    \"\"\"\n    Returns a copy of the input dictionary.\n\n    :param input_dict: The dictionary to be copied.\n    :return: A copy of the input dictionary.\n    \"\"\"\n    return input_dict.copy()\n```\n\nHere's an example of how to use this function:\n\n```python\ninput_dict = {'name': 'John', 'age': 30}\ncopied_dict = copy_dict(input_dict)\n\n# Change the value in the original dictionary\ninput_dict['age'] = 31\n\n# The copied dictionary still has the original value\nprint(copied_dict)  # Output: {'name': 'John', 'age': 30}\n```",
+  "error": null,
+  "elapsed_seconds": 2.71,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1834,
+  "title": "Find Element with Maximum Frequency",
+  "prompt": "Write a program to find the element with the maximum frequency in a given array.\nSample Input: [1, 2, 2, 3, 3, 3]\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the element with the maximum frequency in a given array:\n\n```python\ndef find_max_frequency(arr):\n    # Create a dictionary to store elements as keys and their frequencies as values\n    element_freq = {}\n    for elem in arr:\n        if elem in element_freq:\n            element_freq[elem] += 1\n        else:\n            element_freq[elem] = 1\n\n    # Find the element with the maximum frequency\n    max_freq = max(element_freq.values())\n    max_element = next((elem for elem, freq in element_freq.items() if freq == max_freq), None)\n\n    return max_element\n\n# Test the function with the given sample input\narr = [1, 2, 2, 3, 3, 3]\nprint(find_max_frequency(arr))  # Output: 3\n```\n\nThis program first creates a dictionary `element_freq` that maps each element in the array to its frequency. Then, it finds the maximum frequency by using the built-in `max()` function with the values in the dictionary. Finally, it iterates through the dictionary again to find the element that has the maximum frequency. The `next()` function is used to return the first element that satisfies the condition `freq == max_freq`.",
+  "error": null,
+  "elapsed_seconds": 4.51,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

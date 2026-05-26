@@ -1,0 +1,9 @@
+{
+  "id": 9957,
+  "title": "Data Type Conversion Error Handler",
+  "prompt": "Write a program that attempts to convert a string to an integer and handles potential errors.\nSample Input: string = 'abc'\nSample Output: Error: unable to convert string to integer\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that attempts to convert a string to an integer and handles potential errors using a `try`-`except` block:\n```python\ndef convert_to_int(s):\n    try:\n        return int(s)\n    except ValueError:\n        return \"Error: unable to convert string to integer\"\n\n# Test the function with a sample input\nsample_input = 'abc'\nprint(convert_to_int(sample_input))\n```\nWhen you run this program with the sample input `'abc'`, it will output:\n```yaml\nError: unable to convert string to integer\n```\nThis is because the `int()` function can only convert a string to an integer if it can be represented as a non-negative integer. If the string cannot be represented as an integer, a `ValueError` will be raised, which we catch and return an error message.",
+  "error": null,
+  "elapsed_seconds": 2.25,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1417,
+  "title": "Airport codes",
+  "prompt": "Write a program that checks if a given airport code is valid. If the code is in a dictionary of valid codes, print 'Valid', otherwise print 'Invalid'.\nSample Input: JFK\nSample Output: Valid\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given airport code is valid by looking it up in a dictionary of valid codes:\n```python\n# Dictionary of valid airport codes\nvalid_codes = {\n    \"JFK\": \"John F. Kennedy International Airport\",\n    \"LAX\": \"Los Angeles International Airport\",\n    \"SFO\": \"San Francisco International Airport\",\n    # Add more codes as needed\n}\n\ndef is_valid_airport_code(code):\n    \"\"\"Check if a given airport code is valid.\"\"\"\n    if code in valid_codes:\n        return f'Valid: {valid_codes[code]}'\n    else:\n        return 'Invalid'\n\n# Get user input\nuser_input = input(\"Enter an airport code: \")\n\n# Print the result\nprint(is_valid_airport_code(user_input))\n```\nThis program defines a function `is_valid_airport_code` that takes an airport code as input and checks if it's in the `valid_codes` dictionary. If the code is valid, the function returns a string indicating that the code is valid and its corresponding airport name. If the code is not valid, the function returns the string 'Invalid'. The program then gets user input, calls the function with the user input, and prints the result.\n\nYou can add more codes to the `valid_codes` dictionary as needed to make the program more comprehensive.",
+  "error": null,
+  "elapsed_seconds": 3.29,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

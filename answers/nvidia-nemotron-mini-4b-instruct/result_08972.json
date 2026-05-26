@@ -1,0 +1,9 @@
+{
+  "id": 8972,
+  "title": "String Count",
+  "prompt": "Write a function that takes a string and a character as input and returns the count of the character in the string.\nSample Input: ['Hello World', 'o']\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef count_char(string, char):\n    \"\"\"\n    This function takes a string and a character as input and returns the count of the character in the string.\n\n    :param string: The input string.\n    :param char: The character to count in the string.\n    :return: The count of the character in the string.\n    \"\"\"\n    # Ensure the input is a string and the character is a single character\n    if not isinstance(string, str) or len(char) != 1:\n        raise ValueError(\"Both input parameters must be a string and a single character.\")\n\n    # Return the count of the character in the string\n    return string.count(char)\n```\nHere's an example of how to use this function:\n```python\nprint(count_char('Hello World', 'o'))  # Output: 2\nprint(count_char('Python is great', 'n'))  # Output: 3\n```\nThis function first checks if the input parameters are of the correct type and length. If not, it raises a `ValueError`. Then, it uses the built-in `str.count()` method to count the occurrences of the character in the string.",
+  "error": null,
+  "elapsed_seconds": 2.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

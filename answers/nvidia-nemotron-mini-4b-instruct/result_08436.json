@@ -1,0 +1,9 @@
+{
+  "id": 8436,
+  "title": "Time of Day",
+  "prompt": "Write a program that takes in an hour and outputs the corresponding time of day using conditional statements.\nSample Input: 12\nSample Output: NOON\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_time_of_day(hour):\n    \"\"\"\n    Takes in an hour (between 1 and 12) and outputs the corresponding time of day.\n\n    :param hour: int, the hour of the day (between 1 and 12)\n    :return: str, the time of day as a string (e.g., 'NOON', 'MIDNIGHT', 'AM', or 'PM')\n    \"\"\"\n    # Ensure the input is within the valid range\n    if not 1 <= hour <= 12:\n        raise ValueError(\"Hour must be between 1 and 12\")\n\n    # Determine the time of day based on the hour\n    if hour == 12:\n        return \"NOON\"\n    elif hour >= 13:\n        return f\"{hour - 12} PM\"\n    else:\n        return f\"{hour} AM\"\n\n# Example usage\nhour = 12\ntime_of_day = get_time_of_day(hour)\nprint(f\"The time of day is: {time_of_day}\")\n```\nThis program defines a function `get_time_of_day` that takes in an hour as input and returns the corresponding time of day as a string. The function checks that the input is within the valid range (between 1 and 12) and then determines the time of day based on the hour. The function returns one of the following strings:\n\n* \"NOON\" if the hour is 12\n* The hour minus 12 as a string followed by \" PM\" if the hour is greater than or equal to 13\n* The hour as a string followed by \" AM\" if the hour is less than 12",
+  "error": null,
+  "elapsed_seconds": 4.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

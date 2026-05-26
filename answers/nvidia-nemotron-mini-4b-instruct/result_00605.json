@@ -1,0 +1,9 @@
+{
+  "id": 605,
+  "title": "Division Explorer",
+  "prompt": "Write a program to divide two numbers and print the result, including the remainder.\nSample Input: 17 5\nSample Output: 3 with a remainder of 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef divide_and_get_remainder(dividend, divisor):\n    \"\"\"\n    Divides two numbers and returns both the quotient and the remainder.\n\n    :param dividend: The number to be divided.\n    :param divisor: The number that divides the dividend.\n    :return: A tuple containing the quotient and the remainder.\n    \"\"\"\n    quotient = dividend // divisor\n    remainder = dividend % divisor\n\n    # Ensure the remainder is returned as a non-negative integer\n    remainder = max(0, remainder)\n\n    return quotient, remainder\n\n\n# Get sample input from the user\ndividend = int(input(\"Enter the dividend: \"))\ndivisor = int(input(\"Enter the divisor: \"))\n\n# Call the function and print the result\nquotient, remainder = divide_and_get_remainder(dividend, divisor)\nprint(f\"{dividend} divided by {divisor} is {quotient} with a remainder of {remainder}.\")\n```\n\nThis program defines a function `divide_and_get_remainder` that takes two numbers as arguments and returns a tuple containing the quotient and the remainder. The function uses the built-in `//` operator for integer division and the `%` operator for finding the remainder. The function also ensures that the remainder is returned as a non-negative integer by using the `max()` function.\n\nThe program then gets sample input from the user, calls the function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.64,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

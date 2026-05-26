@@ -1,0 +1,9 @@
+{
+  "id": 8427,
+  "title": "Student Eligibility",
+  "prompt": "Create a program that takes in a student's age and score, and checks if they are eligible for a scholarship using conditional statements.\nSample Input: 18 90\nSample Output: ELIGIBLE\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef check_eligibility(age, score):\n    \"\"\"\n    Check if a student is eligible for a scholarship based on their age and score.\n\n    :param age: The student's age as an integer.\n    :param score: The student's score as an integer between 0 and 100.\n    :return: A string indicating whether the student is eligible for the scholarship.\n    \"\"\"\n    # Check if the age is valid\n    if not isinstance(age, int) or age < 18:\n        return \"INVALID AGE\"\n\n    # Check if the score is valid\n    if not isinstance(score, int) or score < 0 or score > 100:\n        return \"INVALID SCORE\"\n\n    # Check if the student is eligible for the scholarship\n    if score >= 90 and age >= 18:\n        return \"ELIGIBLE\"\n    else:\n        return \"NOT ELIGIBLE\"\n\n# Get user input\nage = int(input(\"Enter the student's age: \"))\nscore = int(input(\"Enter the student's score: \"))\n\n# Check eligibility and print the result\neligibility = check_eligibility(age, score)\nprint(f\"{eligibility}\")\n```\nThis program defines a function `check_eligibility` that takes in a student's age and score as arguments, checks if they are valid, and returns a string indicating whether the student is eligible for the scholarship. The program then gets user input for the age and score, calls the function to check eligibility, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 4.09,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

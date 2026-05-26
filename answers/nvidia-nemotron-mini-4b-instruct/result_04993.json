@@ -1,0 +1,9 @@
+{
+  "id": 4993,
+  "title": "Local Variables",
+  "prompt": "Declare a local variable 'localVar' within a function and demonstrate its scope.\nSample Input: None\nSample Output: localVar = 20\n",
+  "answer": "Sure, I'd be happy to help with that! Here's an example of declaring and demonstrating the scope of a local variable within a function in Python:\n\n```python\ndef my_function():\n    \"\"\"\n    This function demonstrates the scope of a local variable.\n    \"\"\"\n\n    # Declare a local variable 'localVar' within the function\n    localVar = 20\n\n    # Print the value of 'localVar' within the function\n    print(f\"localVar = {localVar}\")\n\n    # Try to access 'localVar' outside the function (it will raise an error)\n    # print(f\"globalVar = {globalVar}\")  # This will raise a NameError\n\n# Declare a global variable 'globalVar' outside the function\nglobalVar = 10\n\n# Call the function\nmy_function()\n\n# Print the value of 'globalVar' outside the function\nprint(f\"globalVar = {globalVar}\")\n```\n\nWhen you run this code, you'll see the following output:\n\n```\nlocalVar = 20\nglobalVar = 10\n```\n\nIn this example, the local variable 'localVar' is only accessible within the `my_function()` function. When you try to access it outside the function, you'll get a `NameError` because Python does not allow you to access local variables from outside their scope. On the other hand, the global variable 'globalVar' is accessible anywhere in the script because it is declared outside any function.",
+  "error": null,
+  "elapsed_seconds": 3.51,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 454,
+  "title": "Magic 8-Ball",
+  "prompt": "Write a program that simulates a Magic 8-Ball, a toy used for fortune-telling.\nSample Input: Will I have a good day?\nSample Output: Signs point to yes.\n",
+  "answer": "Sure, I'd be happy to help you create a Magic 8-Ball simulator program in Python. Here's a simple and fun implementation:\n\n```python\nimport random\n\n# Magic 8-Ball responses\nresponses = [\n    \"It is certain\",\n    \"Without a doubt\",\n    \"Yes definitely\",\n    \"You may rely on it\",\n    \"As I see it, yes\",\n    \"Most likely\",\n    \"Outlook good\",\n    \"Yes\",\n    \"Signs point to yes\",\n    \"Reply hazy try again\",\n    \"Ask again later\",\n    \"Better not tell you now\",\n    \"Cannot predict now\",\n    \"Concentrate and ask again\",\n    \"Don't count on it\",\n    \"My reply is no\",\n    \"My sources say no\",\n    \"Outlook not so good\",\n    \"Very doubtful\"\n]\n\ndef get_response():\n    \"\"\"Get a random response from the Magic 8-Ball.\"\"\"\n    return random.choice(responses)\n\ndef main():\n    \"\"\"Simulate the Magic 8-Ball.\"\"\"\n    while True:\n        question = input(\"Ask a question: \").strip().lower()\n        if not question:\n            print(\"Please enter a question.\")\n            continue\n\n        response = get_response()\n        print(f\"{question.capitalize()}: {response}\")\n\n        repeat = input(\"Do you want to ask another question? (yes/no): \").strip().lower()\n        if repeat != \"yes\":\n            break\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program defines a list of Magic 8-Ball responses and a function to get a random response. The `main` function simulates the 8-Ball by prompting the user for a question, getting a random response, and printing it. The user can then decide whether to ask another question or not.",
+  "error": null,
+  "elapsed_seconds": 6.37,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

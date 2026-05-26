@@ -1,0 +1,9 @@
+{
+  "id": 207,
+  "title": "Calculate Grade",
+  "prompt": "Create a function that calculates a student's grade based on their score.\nSample Input: 80\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that calculates a student's grade based on their score, as you described in your sample input and output. This function uses the standard letter grades for a 100-point scale: A (90-100), B (80-89), C (70-79), D (60-69), and F (0-59).\n\n```python\ndef calculate_grade(score):\n    \"\"\"\n    Calculates a student's grade based on their score.\n\n    :param score: The student's score as an integer between 0 and 100.\n    :return: The student's letter grade as a string (A, B, C, D, or F).\n    \"\"\"\n    if not isinstance(score, int) or score < 0 or score > 100:\n        raise ValueError(\"Score must be an integer between 0 and 100.\")\n\n    if score >= 90:\n        return \"A\"\n    elif score >= 80:\n        return \"B\"\n    elif score >= 70:\n        return \"C\"\n    elif score >= 60:\n        return \"D\"\n    else:\n        return \"F\"\n```\n\nYou can call this function with a score as an argument to get the corresponding letter grade:\n\n```python\nprint(calculate_grade(80))  # Output: B\nprint(calculate_grade(95))  # Output: A\nprint(calculate_grade(65))  # Output: D\nprint(calculate_grade(50))  # Output: F\n```",
+  "error": null,
+  "elapsed_seconds": 4.02,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

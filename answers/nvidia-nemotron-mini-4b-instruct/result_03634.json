@@ -1,0 +1,9 @@
+{
+  "id": 3634,
+  "title": "Find the First Occurrence of a Character",
+  "prompt": "Write a program to find the first occurrence of a given character in a string.\nSample Input: hello, l\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the first occurrence of a given character in a string:\n```python\ndef find_first_occurrence(string, char):\n    \"\"\"\n    Find the first occurrence of a given character in a string.\n\n    :param string: The string to search in.\n    :param char: The character to search for.\n    :return: The index of the first occurrence of the character, or -1 if not found.\n    \"\"\"\n    # Use the index method to find the first occurrence of the character\n    # and return the index if it's found, otherwise return -1\n    return string.index(char, 0)\n\n# Example usage\ninput_string = \"hello, l\"\nchar = \"l\"\nindex = find_first_occurrence(input_string, char)\n\nif index != -1:\n    print(f\"The first occurrence of '{char}' is at index {index}.\")\nelse:\n    print(f\"'{char}' was not found in the string.\")\n```\nWhen you run this program with the sample input \"hello, l\" and \"l\", it will output:\n```yaml\nThe first occurrence of 'l' is at index 2.\n```\nThis program uses the `index()` method of the string class, which returns the index of the first occurrence of a specified value. The method takes two arguments: the value to search for, and the starting index to search from. If the value is not found, the method raises a `ValueError`. To avoid this, we provide a default value of 0 for the second argument, which means the method will start searching from the beginning of the string. If the value is still not found, the method returns -1.",
+  "error": null,
+  "elapsed_seconds": 5.57,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

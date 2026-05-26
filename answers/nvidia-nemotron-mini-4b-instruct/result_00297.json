@@ -1,0 +1,9 @@
+{
+  "id": 297,
+  "title": "Maximum and Minimum Calculator",
+  "prompt": "Write a program that calculates the maximum and minimum of two given numbers.\nSample Input: 10 20\nSample Output: Max: 20, Min: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the maximum and minimum of two given numbers:\n\n```python\ndef calculate_min_max(num1, num2):\n    \"\"\"\n    Calculates the maximum and minimum of two given numbers.\n\n    :param num1: The first number.\n    :param num2: The second number.\n    :return: A tuple containing the maximum and minimum numbers.\n    \"\"\"\n    # Check if the inputs are numbers\n    if not isinstance(num1, (int, float)) or not isinstance(num2, (int, float)):\n        raise TypeError(\"Both inputs must be numbers.\")\n\n    # Calculate the maximum and minimum numbers\n    max_num = max(num1, num2)\n    min_num = min(num1, num2)\n\n    # Return the maximum and minimum numbers as a tuple\n    return max_num, min_num\n\n# Get user input\nnum1 = float(input(\"Enter the first number: \"))\nnum2 = float(input(\"Enter the second number: \"))\n\n# Calculate and print the minimum and maximum numbers\nmax_num, min_num = calculate_min_max(num1, num2)\nprint(f\"Max: {max_num}, Min: {min_num}\")\n```\n\nThis program defines a function `calculate_min_max` that checks if the inputs are numbers and then calculates the maximum and minimum numbers. The function returns a tuple containing the maximum and minimum numbers. The program then gets user input for the two numbers, calls the function, and prints the results.",
+  "error": null,
+  "elapsed_seconds": 3.92,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

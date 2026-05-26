@@ -1,0 +1,9 @@
+{
+  "id": 8853,
+  "title": "Function to Check if a Number is a Power of 2",
+  "prompt": "Create a function to check if a given number is a power of 2 or not\nSample Input: 8\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a given number is a power of 2:\n\n```python\ndef is_power_of_two(n: int) -> bool:\n    \"\"\"\n    Check if a given number is a power of 2.\n\n    :param n: The number to check.\n    :return: True if n is a power of 2, False otherwise.\n    \"\"\"\n    if n < 1:\n        return False\n    return n & (n - 1) == 0\n```\n\nThis function works by taking advantage of the fact that a power of 2 has only one bit set to 1. Specifically, if you subtract 1 from a power of 2, all the bits except the least significant set bit will be 0. Therefore, if the result of subtracting 1 from a number `n` is equal to `n` itself (`n & (n - 1) == 0`), then `n` must be a power of 2.\n\nHere's an example of how you can use this function:\n\n```python\nprint(is_power_of_two(8))  # Output: True\nprint(is_power_of_two(9))  # Output: False\nprint(is_power_of_two(0))  # Output: False\nprint(is_power_of_two(1))  # Output: True\n```",
+  "error": null,
+  "elapsed_seconds": 3.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

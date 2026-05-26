@@ -1,0 +1,9 @@
+{
+  "id": 7488,
+  "title": "List Reverser",
+  "prompt": "Write a program that reverses a given list\nSample Input: [1, 2, 3]\nSample Output: [3, 2, 1]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that reverses a given list:\n\n```python\ndef reverse_list(input_list):\n    \"\"\"\n    Reverses a given list in-place.\n\n    :param input_list: The list to be reversed.\n    :return: None (the original list is modified)\n    \"\"\"\n    # Reverse the list by iterating from the end to the start\n    for i in range(len(input_list) // 2):\n        input_list[i], input_list[-i - 1] = input_list[-i - 1], input_list[i]\n\n# Example usage:\ninput_list = [1, 2, 3]\nreverse_list(input_list)\nprint(input_list)  # Output: [3, 2, 1]\n```\n\nThis program defines a function `reverse_list` that takes an input list as a parameter and modifies it in-place to reverse its elements. The function uses a two-pointer technique to iterate through the list from both ends, swapping the elements at each iteration. The time complexity of this algorithm is O(n), where n is the length of the input list.",
+  "error": null,
+  "elapsed_seconds": 3.03,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

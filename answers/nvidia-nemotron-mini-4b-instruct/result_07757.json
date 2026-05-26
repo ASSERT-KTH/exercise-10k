@@ -1,0 +1,9 @@
+{
+  "id": 7757,
+  "title": "Input Validation and Output Formatting",
+  "prompt": "Create a program that takes a user's name and age as input and outputs a greeting message with the user's name and their age in a specific format. The program should also include input validation to ensure the user's age is within a valid range (1-120 years). If the age is not valid, the program should prompt the user to re-enter their age until a valid age is provided.\nSample Input: John Doe\n25\nSample Output: Hello, John Doe! You are 25 years old.\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef get_valid_age():\n    while True:\n        try:\n            age = int(input(\"Please enter your age (1-120): \"))\n            if 1 <= age <= 120:\n                return age\n            else:\n                print(\"Age must be between 1 and 120. Please try again.\")\n        except ValueError:\n            print(\"That's not a valid number. Please try again.\")\n\ndef greet_user():\n    name = input(\"Please enter your name: \")\n    age = get_valid_age()\n    greeting = f\"Hello, {name}! You are {age} years old.\"\n    print(greeting)\n\ngreet_user()\n```\n\nThis program defines two functions: `get_valid_age()` and `greet_user()`. The `get_valid_age()` function prompts the user for their age, validates it, and returns the age if it's within the valid range. The `greet_user()` function prompts the user for their name, calls `get_valid_age()` to get their age, and then prints a greeting message with their name and age. The program calls `greet_user()` to start the interaction.",
+  "error": null,
+  "elapsed_seconds": 2.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

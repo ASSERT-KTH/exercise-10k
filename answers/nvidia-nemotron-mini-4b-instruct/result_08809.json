@@ -1,0 +1,9 @@
+{
+  "id": 8809,
+  "title": "Roots of a Quadratic Equation",
+  "prompt": "Write a program that takes the coefficients of a quadratic equation as input and returns its roots.\nSample Input: 1 4 4\nSample Output: (−2+0j) (−2+0j)\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes the coefficients of a quadratic equation as input (in the form of a list or a tuple) and returns its roots in the form of a complex number (or a list/tuple of complex numbers if there are multiple roots). The program uses the quadratic formula to calculate the roots.\n\n```python\nimport cmath  # for complex number handling\n\ndef quadratic_roots(a, b, c):\n    \"\"\"\n    Calculates the roots of a quadratic equation ax^2 + bx + c = 0.\n\n    :param a: coefficient of x^2\n    :param b: coefficient of x\n    :param c: constant term\n    :return: roots of the quadratic equation as complex numbers\n    \"\"\"\n    discriminant = b**2 - 4*a*c\n    root1 = (-b + cmath.sqrt(discriminant)) / (2*a)\n    root2 = (-b - cmath.sqrt(discriminant)) / (2*a)\n    return [root1, root2]\n\n# Get coefficients as input\ncoefficients = list(map(float, input(\"Enter coefficients (a, b, c) separated by spaces: \").split()))\na, b, c = coefficients\n\n# Calculate and print roots\nroots = quadratic_roots(a, b, c)\nprint(\"Roots:\", roots)\n```\n\nThis program defines a function `quadratic_roots` that takes the coefficients `a`, `b`, and `c` as input and returns their roots as a list of complex numbers. The function uses the quadratic formula to calculate the roots and handles complex numbers using the `cmath` module. The main part of the program gets the coefficients as input, calls the function, and prints the roots.",
+  "error": null,
+  "elapsed_seconds": 3.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

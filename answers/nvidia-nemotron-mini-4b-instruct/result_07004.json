@@ -1,0 +1,9 @@
+{
+  "id": 7004,
+  "title": "Tip Calculator",
+  "prompt": "Write a program that takes the total bill and the tip percentage as input and returns the total amount to pay.\nSample Input: 100 15\nSample Output: 115.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_tip_amount(total_bill, tip_percentage):\n    \"\"\"\n    Calculates the total amount to pay, including the tip.\n\n    Parameters:\n    total_bill (float): The total bill before the tip.\n    tip_percentage (float): The percentage of the tip as a decimal (e.g., 15% is 0.15).\n\n    Returns:\n    float: The total amount to pay, including the tip.\n    \"\"\"\n\n    # Validate input\n    if not isinstance(total_bill, (float, int)) or total_bill < 0:\n        raise ValueError(\"Total bill must be a non-negative number.\")\n\n    if not isinstance(tip_percentage, (float, int)) or tip_percentage < 0 or tip_percentage > 1:\n        raise ValueError(\"Tip percentage must be a number between 0 and 1 (exclusive).\")\n\n    # Calculate the tip amount\n    tip_amount = total_bill * tip_percentage\n\n    # Return the total amount to pay\n    return total_bill + tip_amount\n\n\n# Example usage\ntotal_bill = 100\ntip_percentage = 15\n\ntotal_amount_to_pay = calculate_tip_amount(total_bill, tip_percentage)\nprint(f\"{total_bill} + {tip_percentage * 100}% tip = {total_amount_to_pay:.2f}\")\n```\nThis program defines a function `calculate_tip_amount` that takes the total bill and the tip percentage as input and returns the total amount to pay, including the tip. It also includes input validation to ensure that the total bill and tip percentage are valid. The example usage at the end of the program demonstrates how to use the function to calculate the total amount to pay for a bill with a 15% tip.",
+  "error": null,
+  "elapsed_seconds": 4.5,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

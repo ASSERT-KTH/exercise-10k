@@ -1,0 +1,9 @@
+{
+  "id": 7106,
+  "title": "Student Grades Dictionary",
+  "prompt": "Create a program that takes a dictionary where keys are student names and values are lists of their grades. Calculate the average grade for each student, then return a new dictionary with the student names as keys and their average grades as values.\nSample Input: {\"John\": [90, 85, 95], \"Alice\": [88, 92, 89]}\nSample Output: {\"John\": 90.0, \"Alice\": 89.66666666666667}\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef calculate_average(students):\n    # Create an empty dictionary to store the average grades\n    averages = {}\n\n    # Loop through each student\n    for student, grades in students.items():\n        # Calculate the sum of the grades for the student\n        total = sum(grades)\n\n        # Calculate the average grade for the student\n        avg = total / len(grades)\n\n        # Add the student's name and average grade to the dictionary\n        averages[student] = avg\n\n    return averages\n```\n\nYou can use this function like this:\n\n```python\nstudents = {\"John\": [90, 85, 95], \"Alice\": [88, 92, 89]}\naverages = calculate_average(students)\nprint(averages)  # Output: {'John': 90.0, 'Alice': 89.66666666666667}\n```",
+  "error": null,
+  "elapsed_seconds": 2.46,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5152,
+  "title": "Find Common Keys",
+  "prompt": "Find the common keys between two dictionaries\nSample Input: {'John': 20, 'Emma': 22, 'Oliver': 21}, {'Emma': 22, 'Oliver': 21, 'Ava': 20}\nSample Output: ['Emma', 'Oliver']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution using the built-in `dict.keys()` method to get the keys from both dictionaries, and then using a set to remove any duplicate keys:\n\n```python\ndef common_keys(dict1, dict2):\n    return list(set(dict1.keys() & dict2.keys()))\n\n# Sample input\ndict1 = {'John': 20, 'Emma': 22, 'Oliver': 21}\ndict2 = {'Emma': 22, 'Oliver': 21, 'Ava': 20}\n\n# Sample output\nprint(common_keys(dict1, dict2))  # Output: ['Emma', 'Oliver']\n```\n\nThis function first gets the keys from both dictionaries using `dict1.keys()` and `dict2.keys()`, and then uses a set to remove any duplicate keys. Finally, it converts the resulting set back to a list and returns it.",
+  "error": null,
+  "elapsed_seconds": 2.27,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

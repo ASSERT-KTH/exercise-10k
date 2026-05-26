@@ -1,0 +1,9 @@
+{
+  "id": 843,
+  "title": "Function Compositor",
+  "prompt": "Create a function that takes two functions as arguments and returns a new function that is the composition of the two.\nSample Input: def add(a): return a + 1; def multiply(a): return a * 2\nSample Output: function that adds 1 and then multiplies by 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef compose(*functions):\n    \"\"\"\n    Returns a new function that is the composition of the given functions.\n\n    :param functions: Variable number of functions to compose.\n    :return: A new function that takes an argument and returns the result of applying\n             the given functions to it in order.\n    \"\"\"\n\n    def composed_function(arg):\n        result = arg\n        for func in reversed(functions):\n            result = func(result)\n        return result\n\n    return composed_function\n```\nHere's an example of how to use this function:\n```python\nadd = lambda a: a + 1\nmultiply = lambda a: a * 2\n\ncomposed_function = compose(add, multiply)\n\nprint(composed_function(5))  # Output: 11\n```\nIn this example, `add` and `multiply` are defined as lambda functions that add 1 and multiply by 2, respectively. The `compose` function takes these two functions as arguments and returns a new function that adds 1 and then multiplies by 2. When we call `composed_function(5)`, it first adds 1 to 5 (resulting in 6), and then multiplies 6 by 2 (resulting in 11).",
+  "error": null,
+  "elapsed_seconds": 3.15,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6668,
+  "title": "Tax Calculator",
+  "prompt": "Write a program to calculate the tax on an income\nSample Input: 50000 0.2\nSample Output: 10000\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the tax on an income based on the given sample input:\n\n```python\ndef calculate_tax(income, tax_rate):\n    \"\"\"\n    Calculates the tax on an income.\n\n    Parameters:\n    income (float): The annual income before tax.\n    tax_rate (float): The tax rate as a decimal (e.g., 0.2 for 20%).\n\n    Returns:\n    float: The tax amount.\n    \"\"\"\n\n    # Ensure the tax rate is between 0 and 1\n    if tax_rate < 0 or tax_rate > 1:\n        raise ValueError(\"Tax rate must be between 0 and 1.\")\n\n    # Calculate the tax amount\n    tax = income * tax_rate\n\n    return tax\n\n\n# Sample input\nincome = 50000\ntax_rate = 0.2\n\n# Calculate and print the tax amount\ntax_amount = calculate_tax(income, tax_rate)\nprint(f\"The tax on an income of ${income} is ${tax_amount:.2f}.\")\n```\n\nWhen you run this program with the sample input `50000 0.2`, it will output:\n\n```\nThe tax on an income of $50000 is $10000.00.\n```",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

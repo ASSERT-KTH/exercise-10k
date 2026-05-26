@@ -1,0 +1,9 @@
+{
+  "id": 4680,
+  "title": "Unique Character Count",
+  "prompt": "Write a program that takes a string as input and returns the number of unique characters in the string.\nSample Input: hello\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef count_unique_chars(s: str) -> int:\n    \"\"\"\n    Count the number of unique characters in a given string.\n\n    :param s: The input string.\n    :return: The number of unique characters in the string.\n    \"\"\"\n    # Use a set to store unique characters, which has O(1) time complexity for add/remove operations\n    unique_chars = set()\n\n    # Iterate through each character in the string\n    for char in s:\n        # Add the character to the set if it's not already there\n        unique_chars.add(char)\n\n    # Return the number of elements in the set, which is the same as the number of unique characters\n    return len(unique_chars)\n```\nHere's an example of how you can use this function:\n```python\nprint(count_unique_chars(\"hello\"))  # Output: 4\nprint(count_unique_chars(\"abcdefghijklmnopqrstuvwxyz\"))  # Output: 26\n```\nThis program first converts the input string to a set, which automatically removes any duplicate characters. Then, it returns the length of the set, which is the number of unique characters in the string. The time complexity of this approach is O(n), where n is the length of the input string, since we need to iterate through each character once.",
+  "error": null,
+  "elapsed_seconds": 3.54,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

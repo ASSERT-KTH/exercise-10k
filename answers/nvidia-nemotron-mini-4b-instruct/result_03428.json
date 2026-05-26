@@ -1,0 +1,9 @@
+{
+  "id": 3428,
+  "title": "Duplicate Character Detection",
+  "prompt": "Write a function that takes a string as input and returns True if it contains any duplicate characters\nSample Input: hello\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef has_duplicate_chars(s: str) -> bool:\n    \"\"\"\n    Returns True if the given string contains any duplicate characters, and False otherwise.\n\n    :param s: The input string.\n    :return: True if s contains any duplicate characters, False otherwise.\n    \"\"\"\n    # Create a set from the string's characters to check for duplicates more efficiently\n    unique_chars = set(s)\n\n    # Check if the set has fewer elements than the string (i.e., some characters are duplicates)\n    return len(unique_chars) != len(s)\n```\nHere's how you can use this function:\n```python\nprint(has_duplicate_chars(\"hello\"))  # Output: True\nprint(has_duplicate_chars(\"world\"))  # Output: False\n```\nThis function works by converting the input string to a set of characters, which automatically removes any duplicate characters since sets only allow unique elements. Then, it checks if the length of the set is equal to the length of the original string (i.e., if all characters are unique). If they are not equal, it means that some characters were duplicates, so the function returns `True`. Otherwise, it returns `False`.",
+  "error": null,
+  "elapsed_seconds": 3.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9676,
+  "title": "Prefix Checker",
+  "prompt": "Write a program that asks for two strings and checks if the first string is a prefix of the second string.\nSample Input: abc, abcdef\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef is_prefix(str1, str2):\n    \"\"\"\n    Check if str1 is a prefix of str2.\n\n    :param str1: The first string to check.\n    :param str2: The second string to compare against.\n    :return: True if str1 is a prefix of str2, False otherwise.\n    \"\"\"\n    if not isinstance(str1, str) or not isinstance(str2, str):\n        raise TypeError(\"Both inputs must be strings.\")\n\n    return str1 in str2\n\n# Get user input\nstr1 = input(\"Enter the first string: \")\nstr2 = input(\"Enter the second string: \")\n\n# Check if str1 is a prefix of str2\nresult = is_prefix(str1, str2)\n\n# Print the result\nif result:\n    print(f\"'{str1}' is a prefix of '{str2}'.\")\nelse:\n    print(f\"'{str1}' is not a prefix of '{str2}'.\")\n```\nThis program defines a function `is_prefix` that checks if one string is a prefix of another. It then prompts the user to enter two strings, calls the `is_prefix` function with those strings, and prints the result. The function checks that both inputs are strings and raises a `TypeError` if they are not.",
+  "error": null,
+  "elapsed_seconds": 3.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

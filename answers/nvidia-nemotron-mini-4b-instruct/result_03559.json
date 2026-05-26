@@ -1,0 +1,9 @@
+{
+  "id": 3559,
+  "title": "Array Element Frequency",
+  "prompt": "Write a program that takes an array as input, and returns a dictionary containing the frequency of each element in the array.\nSample Input: [1, 2, 2, 3, 3, 3]\nSample Output: {1: 1, 2: 2, 3: 3}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef count_elements(arr):\n    \"\"\"\n    Takes an array as input and returns a dictionary containing the frequency of each element in the array.\n\n    :param arr: The input array\n    :return: A dictionary with element values as keys and their frequencies as values\n    \"\"\"\n    element_counts = {}\n    for element in arr:\n        if element in element_counts:\n            element_counts[element] += 1\n        else:\n            element_counts[element] = 1\n    return element_counts\n\n# Example usage:\nsample_input = [1, 2, 2, 3, 3, 3]\nprint(count_elements(sample_input))  # Output: {1: 1, 2: 2, 3: 3}\n```\nThis function works by iterating over each element in the input array and checking if it's already a key in the `element_counts` dictionary. If it is, we increment its value by 1. Otherwise, we add the element and its initial frequency of 1 to the dictionary. The function returns the final dictionary containing the element counts.",
+  "error": null,
+  "elapsed_seconds": 3.24,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

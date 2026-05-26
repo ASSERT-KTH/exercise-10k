@@ -1,0 +1,9 @@
+{
+  "id": 264,
+  "title": "Volume of a Cube",
+  "prompt": "Write a program that calculates the volume of a cube given its side length.\nSample Input: 5\nSample Output: Volume: 125\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the volume of a cube given its side length:\n\n```python\ndef calculate_cube_volume(side_length):\n    \"\"\"\n    Calculates the volume of a cube given its side length.\n\n    :param side_length: The side length of the cube.\n    :return: A string containing the volume of the cube.\n    \"\"\"\n\n    # Validate the input to ensure it's a positive number\n    if not isinstance(side_length, (int, float)) or side_length <= 0:\n        raise ValueError(\"Side length must be a positive number.\")\n\n    # Calculate the volume of the cube\n    volume = side_length ** 3\n\n    # Format the output as a string\n    volume_str = f\"Volume: {volume}\"\n\n    return volume_str\n\n# Get user input for the side length\nside_length = float(input(\"Enter the side length of the cube: \"))\n\n# Calculate and display the volume\nvolume_str = calculate_cube_volume(side_length)\nprint(volume_str)\n```\n\nThis program defines a function `calculate_cube_volume` that takes the side length as input, validates it to ensure it's a positive number, calculates the volume, and returns it as a formatted string. The program then gets user input for the side length, calls the function with the input value, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.42,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

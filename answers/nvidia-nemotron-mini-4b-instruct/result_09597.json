@@ -1,0 +1,9 @@
+{
+  "id": 9597,
+  "title": "Output Redirection",
+  "prompt": "Write a program that reads user input and writes it to a file instead of printing to the console\nSample Input: hello\nSample Output: File written successfully\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that reads user input and writes it to a file instead of printing it to the console. This program uses the `input()` function to get user input, the `open()` function to create and write to a file, and the `write()` method to append the user input to the file.\n\n```python\n# Function to get user input and write it to a file\ndef write_to_file():\n    # Get user input\n    user_input = input(\"Enter some text to write to the file: \")\n\n    # Create a file to write to (or overwrite an existing file)\n    file_name = \"user_input.txt\"\n    with open(file_name, \"a\") as file:\n        # Write the user input to the file\n        file.write(user_input + \"\\n\")\n\n    # Print a success message\n    print(f\"File written successfully: {file_name}\")\n\n# Call the function\nwrite_to_file()\n```\n\nWhen you run this program, it will prompt the user to enter some text. The user input will be written to a file named \"user\\_input.txt\" in the same directory as the script. The file will be appended with a newline character (`\\n`) at the end of each line of user input.",
+  "error": null,
+  "elapsed_seconds": 3.02,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

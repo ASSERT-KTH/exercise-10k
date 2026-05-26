@@ -1,0 +1,9 @@
+{
+  "id": 2510,
+  "title": "Compound Interest Calculator",
+  "prompt": "Create a program that takes the principal amount, interest rate, and time as input, and returns the compound interest.\nSample Input: 1000 5 2\nSample Output: 110.25\n",
+  "answer": "Sure, I'd be happy to help you create a program for calculating compound interest. Here's an example Python program that meets your requirements:\n\n```python\ndef calculate_compound_interest():\n    \"\"\"\n    Calculates the compound interest given the principal amount, interest rate, and time.\n\n    Returns:\n        float: The compound interest amount.\n    \"\"\"\n\n    # Get user input\n    principal = float(input(\"Enter the principal amount: \"))\n    interest_rate = float(input(\"Enter the annual interest rate (as a decimal): \"))\n    time = float(input(\"Enter the time in years: \"))\n\n    # Validate input\n    if principal <= 0 or interest_rate <= 0 or time <= 0:\n        print(\"Error: All inputs must be positive numbers.\")\n        return\n\n    # Calculate compound interest\n    compound_interest = principal * (1 + interest_rate) ** time\n\n    # Format and return result\n    result = f\"{compound_interest:.2f}\"\n    print(f\"The compound interest is ${result}.\")\n    return compound_interest\n\n# Call the function\ncalculate_compound_interest()\n```\n\nThis program prompts the user to enter the principal amount, annual interest rate, and time in years. It validates the input to ensure all values are positive numbers. Then, it calculates the compound interest using the formula `A = P(1 + r/n)^(nt)`, where `A` is the compound amount, `P` is the principal amount, `r` is the annual interest rate, `n` is the number of times the interest is compounded per year, and `t` is the time in years. Finally, it formats and prints the result with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 3.91,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

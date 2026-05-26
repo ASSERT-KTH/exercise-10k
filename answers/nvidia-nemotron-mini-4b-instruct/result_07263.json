@@ -1,0 +1,9 @@
+{
+  "id": 7263,
+  "title": "String Reversal and Palindrome Check",
+  "prompt": "Write a program that takes a string as input, reverses the string, and checks if the original string is a palindrome. A palindrome is a word, phrase, number, or other sequences of characters that reads the same forward and backward (ignoring spaces, punctuation, and capitalization).\nSample Input: Madam\nSample Output: The reversed string is: madam. The original string is a palindrome.\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef is_palindrome(s):\n    # Remove non-alphanumeric characters and convert to lowercase\n    s = ''.join(c.lower() for c in s if c.isalnum())\n    return s == s[::-1]\n\ndef reverse_and_check(input_string):\n    reversed_string = input_string[::-1]\n    if is_palindrome(input_string):\n        print(f\"The reversed string is: {reversed_string}. The original string is a palindrome.\")\n    else:\n        print(f\"The reversed string is: {reversed_string}. The original string is not a palindrome.\")\n\n# Get user input\ninput_string = input(\"Enter a string: \")\nreverse_and_check(input_string)\n```\n\nThis program defines two functions: `is_palindrome()` and `reverse_and_check()`. The `is_palindrome()` function checks if a given string is a palindrome by comparing it to its reverse. The `reverse_and_check()` function gets user input, reverses the string, calls `is_palindrome()`, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 2.95,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

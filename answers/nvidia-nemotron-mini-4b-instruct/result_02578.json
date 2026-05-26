@@ -1,0 +1,9 @@
+{
+  "id": 2578,
+  "title": "Checking if a Number is a Perfect Square with While Loop",
+  "prompt": "Write a program that checks if a number is a perfect square using a while loop.\nSample Input: 25\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a number is a perfect square using a while loop:\n\n```python\ndef is_perfect_square(n):\n    \"\"\"Check if a number is a perfect square using a while loop.\"\"\"\n    if n < 0:\n        return False\n    i = 1\n    while i * i <= n:\n        if i * i == n:\n            return True\n        i += 1\n    return False\n\n# Test the function with sample input\nnumber = 25\nif is_perfect_square(number):\n    print(f\"{number} is a perfect square.\")\nelse:\n    print(f\"{number} is not a perfect square.\")\n```\n\nWhen you run this program with the sample input `25`, it will output:\n\n```\n25 is a perfect square.\n```\n\nThis program first checks if the input number is negative, in which case it immediately returns `False` since perfect squares are only non-negative integers. Then, it uses a while loop to iterate over increasing integers `i`, checking if `i * i` is equal to the input number `n`. If it is, the function returns `True`, indicating that the number is a perfect square. Otherwise, the loop continues until `i * i` exceeds the input number, at which point the function returns `False`.",
+  "error": null,
+  "elapsed_seconds": 9.1,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

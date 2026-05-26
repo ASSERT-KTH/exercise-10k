@@ -1,0 +1,9 @@
+{
+  "id": 1963,
+  "title": "Function Calculator",
+  "prompt": "Create a function that calculates the result of a mathematical expression. The function should take a string as an argument, where the string is a mathematical expression, and return the result.\nSample Input: 2 + 3 * 4\nSample Output: 14\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function uses the `eval()` function to evaluate the mathematical expression, but be careful when using this function as it can execute potentially dangerous code if the input is not properly sanitized. In this case, we're only using it for mathematical operations, so it's safe to use.\n\n```python\nimport re\n\ndef calculate_expression(expression: str) -> int:\n    \"\"\"\n    Calculates the result of a mathematical expression given as a string.\n\n    :param expression: A string representing a mathematical expression.\n    :return: The result of the mathematical expression as an integer.\n    \"\"\"\n\n    # Remove any whitespace and ensure the input is a string\n    expression = str(expression).strip()\n\n    # Ensure the input is a valid mathematical expression\n    if not re.match(r'^[-+*/() \\s]+$', expression):\n        raise ValueError(\"Invalid mathematical expression\")\n\n    # Evaluate the expression using eval()\n    try:\n        result = eval(expression)\n    except (SyntaxError, NameError, TypeError) as e:\n        raise ValueError(f\"Error evaluating expression: {str(e)}\")\n\n    return result\n```\n\nThis function checks if the input is a valid mathematical expression, removes any whitespace, and then evaluates the expression using `eval()`. It returns the result as an integer.",
+  "error": null,
+  "elapsed_seconds": 3.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8087,
+  "title": "Function that Uses Memoization",
+  "prompt": "Write a function that uses memoization to cache the results of expensive function calls\nSample Input: None\nSample Output: The result of the function with memoization applied\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example Python function that uses memoization to cache the results of expensive function calls. In this example, I'll use a dictionary to store the results and a decorator to apply memoization to the function.\n\n```python\ndef memoize(func):\n    \"\"\"\n    Decorator to memoize the results of a function.\n    \"\"\"\n    cache = {}\n\n    def memoized_func(*args, **kwargs):\n        key = str(args) + str(kwargs)\n        if key not in cache:\n            cache[key] = func(*args, **kwargs)\n        return cache[key]\n\n    return memoized_func\n\n@memoize\ndef expensive_function(n):\n    \"\"\"\n    An expensive function that takes a long time to compute.\n    \"\"\"\n    import time\n    time.sleep(1)  # Simulate expensive computation\n    return n * n\n\n# Test the memoized function\nprint(expensive_function(10))  # Output: 100\nprint(expensive_function(10))  # Output: 100 (from cache)\n```\n\nIn this example, the `memoize` decorator creates a dictionary to store the results of the function calls. When the function is called with a specific set of arguments, it checks if the result is already in the cache. If it is, the cached result is returned. Otherwise, the function is called with the arguments and the result is stored in the cache before being returned.\n\nBy using memoization, we can significantly reduce the number of expensive computations required to evaluate the function for a given set of arguments, leading to faster execution times and reduced memory usage.",
+  "error": null,
+  "elapsed_seconds": 3.91,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

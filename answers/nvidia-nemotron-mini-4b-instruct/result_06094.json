@@ -1,0 +1,9 @@
+{
+  "id": 6094,
+  "title": "Binary Search",
+  "prompt": "Write a program to find an element in a sorted list using binary search with a while loop.\nSample Input: [1, 2, 3, 4, 5, 6, 7, 8, 9]\n5\nSample Output: Element found at index 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds an element in a sorted list using binary search with a while loop. The function `binary_search()` takes three arguments: the sorted list, the target value, and the lower bound index. It returns the index of the target value if found, otherwise it returns -1.\n\n```python\ndef binary_search(arr, target, low=0, high=None):\n    \"\"\"\n    Performs binary search to find an element in a sorted list.\n\n    :param arr: Sorted list\n    :param target: Target value\n    :param low: Lower bound index (default: 0)\n    :param high: Upper bound index (default: len(arr) - 1)\n    :return: Index of the target value if found, otherwise -1\n    \"\"\"\n    if high is None:\n        high = len(arr) - 1\n\n    while low <= high:\n        mid = (low + high) // 2\n\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n\n    return -1\n\n\n# Example usage\narr = [1, 2, 3, 4, 5, 6, 7, 8, 9]\ntarget = 5\nindex = binary_search(arr, target)\n\nif index != -1:\n    print(f\"Element found at index {index}\")\nelse:\n    print(f\"Element not found in the list\")\n```\n\nThis program will output:\n\n```\nElement found at index 4\n```",
+  "error": null,
+  "elapsed_seconds": 3.87,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

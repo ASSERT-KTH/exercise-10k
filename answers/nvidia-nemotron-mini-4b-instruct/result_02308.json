@@ -1,0 +1,9 @@
+{
+  "id": 2308,
+  "title": "Quiz Program",
+  "prompt": "Write a program that asks the user a series of questions and prints out their score at the end.\nSample Input: A\nSample Output: Your score is 2/3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program asks the user a series of questions (in this case, a single question with a binary choice) and calculates their score based on their answers.\n\n```python\ndef get_score(answer):\n    \"\"\"Calculate the score based on the given answer.\"\"\"\n    if answer.upper() == 'A':\n        return 2\n    else:\n        return 0\n\ndef ask_and_print_score():\n    \"\"\"Ask the user a question and print their score.\"\"\"\n    user_answer = input(\"Enter 'A' or 'B': \").upper()\n    score = get_score(user_answer)\n\n    if score > 0:\n        print(f\"Your score is {score}/{score}.\")\n    else:\n        print(f\"Your score is 0/0.\")\n\n# Call the function to ask the user a question and print their score\nask_and_print_score()\n```\n\nThis program defines a function `get_score` that calculates the score based on the given answer (in this case, 'A'). The main function `ask_and_print_score` asks the user for their answer, calls `get_score` to calculate their score, and prints the result. You can modify the `ask_and_print_score` function to ask different questions and calculate different scores as needed.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

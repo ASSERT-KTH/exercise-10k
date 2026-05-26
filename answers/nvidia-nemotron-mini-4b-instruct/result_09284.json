@@ -1,0 +1,9 @@
+{
+  "id": 9284,
+  "title": "Array Element Replacement",
+  "prompt": "Write a function that replaces the elements at the even indices of a given array with the elements at the corresponding odd indices, and vice versa, without using any additional data structures. The function should modify the original array in-place.\nSample Input: [1, 2, 3, 4, 5, 6]\nSample Output: [2, 1, 4, 3, 6, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses slicing to swap the elements at even and odd indices, without creating any additional data structures.\n\n```python\ndef swap_even_odd(arr):\n    \"\"\"\n    Swaps the elements at the even indices with the elements at the corresponding odd indices,\n    and vice versa, without using any additional data structures. Modifies the original array in-place.\n\n    :param arr: The input array\n    :return: None (the original array is modified)\n    \"\"\"\n    n = len(arr)\n\n    # Swap elements at even and odd indices\n    for i in range(n // 2):\n        arr[2*i], arr[2*i+1] = arr[2*i+1], arr[2*i]\n\n# Example usage\narr = [1, 2, 3, 4, 5, 6]\nswap_even_odd(arr)\nprint(arr)  # Output: [2, 1, 4, 3, 6, 5]\n```\n\nThis function first calculates the length of the array `n` and then iterates over half of the indices (`n // 2`). For each even index, it swaps the element with its corresponding odd index. The function assumes that the input array has an even number of elements, but it can be modified to handle arrays with an odd number of elements by adding an additional condition to handle the last element.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

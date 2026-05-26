@@ -1,0 +1,9 @@
+{
+  "id": 4531,
+  "title": "Array Searching with Conditions",
+  "prompt": "Write a program that takes an array and a condition as input and returns the indices of the elements that satisfy the condition.\nSample Input: [1, 2, 3, 4, 5], x > 3\nSample Output: [3, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef find_indices(arr, condition):\n    \"\"\"\n    Given an array and a condition, return the indices of the elements that satisfy the condition.\n\n    Parameters:\n    arr (list): The input array.\n    condition (callable): A function that takes an element as input and returns a boolean indicating whether the element satisfies the condition.\n\n    Returns:\n    list: A list of indices of the elements that satisfy the condition.\n    \"\"\"\n    # Filter the array using a list comprehension with the condition function\n    indices = [i for i, x in enumerate(arr) if condition(x)]\n\n    return indices\n\n# Example usage:\narr = [1, 2, 3, 4, 5]\ndef greater_than_three(x):\n    return x > 3\n\nindices = find_indices(arr, greater_than_three)\nprint(indices)  # Output: [3, 4]\n```\nThis program defines a function `find_indices` that takes an array and a condition as input, and returns a list of indices of the elements that satisfy the condition. The function uses a list comprehension to filter the array based on the condition function. The example usage shows how to use the function with an array and a condition that checks if an element is greater than 3.",
+  "error": null,
+  "elapsed_seconds": 3.18,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

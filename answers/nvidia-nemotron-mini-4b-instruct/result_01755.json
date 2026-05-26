@@ -1,0 +1,9 @@
+{
+  "id": 1755,
+  "title": "List Subset",
+  "prompt": "Given a list of integers, write a program to determine if it is a subset of another list.\nSample Input: [1, 2, 3], [1, 2, 3, 4, 5]\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that determines if one list is a subset of another:\n\n```python\ndef is_subset(subset, superset):\n    \"\"\"\n    Determines if the elements in the 'subset' list are also in the 'superset' list.\n\n    Parameters:\n    subset (list): The list to check for being a subset of the 'superset' list.\n    superset (list): The list to check against.\n\n    Returns:\n    bool: True if the 'subset' list is a subset of the 'superset' list, False otherwise.\n    \"\"\"\n\n    # Check if the 'subset' list is empty\n    if not subset:\n        return True\n\n    # Iterate over the elements in the 'superset' list\n    for element in superset:\n        # Check if the 'element' is in the 'subset' list\n        if element in subset:\n            # If it is, remove it from the 'subset' list\n            subset.remove(element)\n        else:\n            # If it's not, return False immediately\n            return False\n\n    # If we've made it this far, the 'subset' list is a subset of the 'superset' list\n    return True\n\n# Example usage\nsubset = [1, 2, 3]\nsuperset = [1, 2, 3, 4, 5]\nprint(is_subset(subset, superset))  # Output: True\n```\n\nThis program works by iterating over the elements in the `superset` list and checking if each element is also in the `subset` list. If an element is found in both lists, it is removed from the `subset` list. If the `subset` list is empty after the iteration, it is a subset of the `superset` list.",
+  "error": null,
+  "elapsed_seconds": 4.26,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

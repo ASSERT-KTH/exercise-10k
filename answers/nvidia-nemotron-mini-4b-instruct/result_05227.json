@@ -1,0 +1,9 @@
+{
+  "id": 5227,
+  "title": "Voltage Checker",
+  "prompt": "Write a program that takes a voltage as input and prints 'Safe' if the voltage is between 0 and 12, and 'Danger' if the voltage is outside this range.\nSample Input: 10\nSample Output: Safe\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef check_voltage(voltage):\n    \"\"\"\n    Check if the given voltage is safe (between 0 and 12 volts).\n\n    :param voltage: The voltage to check as a float.\n    :return: A string indicating whether the voltage is safe ('Safe') or dangerous ('Danger').\n    \"\"\"\n    if not isinstance(voltage, float):\n        raise ValueError(\"Input must be a float value.\")\n\n    if voltage < 0 or voltage > 12:\n        return \"Danger\"\n    else:\n        return \"Safe\"\n\n# Get user input and print the result\nvoltage = float(input(\"Enter the voltage (in volts): \"))\nprint(check_voltage(voltage))\n```\nThis program defines a function `check_voltage` that takes a voltage as input and returns a string indicating whether it's safe or dangerous. The function checks if the input is a float, and then checks if the voltage is within the safe range (0 to 12 volts). If the voltage is safe, the function returns \"Safe\", otherwise it returns \"Danger\". The program then gets user input, calls the `check_voltage` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 2.9,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

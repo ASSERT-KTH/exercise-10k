@@ -1,0 +1,9 @@
+{
+  "id": 2640,
+  "title": "Phone Number Validator",
+  "prompt": "Create a program that takes a phone number as input and generates a validation message.\nSample Input: 123-456-7890\nSample Output: Phone number is valid\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a phone number as input and generates a validation message based on the format and length of the number. This program assumes that the phone number is in the North American format (XXX-XXX-XXXX).\n\n```python\nimport re\n\ndef validate_phone_number(phone_number):\n    \"\"\"\n    Validates a phone number and returns a validation message.\n\n    :param phone_number: str, the phone number to validate\n    :return: str, a validation message (either \"Phone number is valid\" or \"Phone number is invalid\")\n    \"\"\"\n    # Regular expression pattern for a valid North American phone number\n    pattern = r'\\d{3}-\\d{3}-\\d{4}'\n\n    # Check if the phone number matches the pattern\n    if re.match(pattern, phone_number):\n        return \"Phone number is valid\"\n    else:\n        return \"Phone number is invalid\"\n\n# Get user input\nuser_input = input(\"Enter a phone number (XXX-XXX-XXXX): \")\n\n# Validate the input\nvalidation_message = validate_phone_number(user_input)\n\n# Print the validation message\nprint(validation_message)\n```\n\nThis program defines a function `validate_phone_number` that takes a phone number as input and checks if it matches the regular expression pattern for a valid North American phone number. The function returns a validation message based on the result of the validation. The program then gets user input, validates it, and prints the validation message.",
+  "error": null,
+  "elapsed_seconds": 3.67,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

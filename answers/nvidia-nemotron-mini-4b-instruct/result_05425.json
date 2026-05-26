@@ -1,0 +1,9 @@
+{
+  "id": 5425,
+  "title": "Age Checker",
+  "prompt": "Create a program that checks if a person is eligible to vote based on their age. If the age is above 18, the person is eligible to vote. If the age is below 18, the person is not eligible to vote.\nSample Input: 25\nSample Output: Eligible to vote\n",
+  "answer": "Sure, I'd be happy to help you create a program for that. Here's a simple Python program that meets your requirements:\n\n```python\ndef check_voting_eligibility(age):\n    \"\"\"\n    Check if a person is eligible to vote based on their age.\n\n    :param age: The age of the person as an integer.\n    :return: A string indicating whether the person is eligible to vote (Eligible to vote) or not (Not eligible to vote).\n    \"\"\"\n    if not isinstance(age, int) or age < 0:\n        raise ValueError(\"Age must be a non-negative integer.\")\n\n    if age >= 18:\n        return \"Eligible to vote\"\n    else:\n        return \"Not eligible to vote\"\n\n# Example usage:\nage = 25\nprint(check_voting_eligibility(age))  # Output: Eligible to vote\n```\n\nThis program defines a function `check_voting_eligibility` that takes an age as input and returns a string indicating whether the person is eligible to vote or not. The function checks if the input is a non-negative integer and raises a `ValueError` if it's not. Then, it checks if the age is greater than or equal to 18 and returns the appropriate message. The example usage at the end of the program demonstrates how to use the function with a valid age.",
+  "error": null,
+  "elapsed_seconds": 3.14,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

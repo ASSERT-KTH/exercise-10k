@@ -1,0 +1,9 @@
+{
+  "id": 3912,
+  "title": "Salary Calculator",
+  "prompt": "Create a program that calculates the salary of an employee given their annual salary and number of months worked.\nSample Input: 40000 6\nSample Output: 20000\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the salary of an employee given their annual salary and the number of months worked:\n\n```python\ndef calculate_salary(annual_salary, months_worked):\n    \"\"\"\n    Calculates the salary of an employee given their annual salary and the number of months worked.\n\n    :param annual_salary: The annual salary of the employee.\n    :param months_worked: The number of months the employee worked.\n    :return: The monthly salary of the employee.\n    \"\"\"\n\n    # Validate input\n    if not isinstance(annual_salary, (int, float)) or annual_salary <= 0:\n        raise ValueError(\"Annual salary must be a positive number.\")\n\n    if not isinstance(months_worked, int) or months_worked < 1:\n        raise ValueError(\"Number of months worked must be a positive integer.\")\n\n    # Calculate monthly salary\n    monthly_salary = annual_salary / 12\n\n    # Return the result\n    return int(monthly_salary * months_worked)\n\n\n# Example usage\nannual_salary = 40000\nmonths_worked = 6\n\nsalary = calculate_salary(annual_salary, months_worked)\nprint(f\"The monthly salary of the employee is: {salary}\")\n```\n\nThis program defines a function `calculate_salary` that takes the annual salary and the number of months worked as input and returns the monthly salary. The function validates the input to ensure it's a positive number and an integer, respectively. The example usage at the end of the program demonstrates how to use the function to calculate the monthly salary of an employee with an annual salary of $40,000 and 6 months worked.",
+  "error": null,
+  "elapsed_seconds": 4.81,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

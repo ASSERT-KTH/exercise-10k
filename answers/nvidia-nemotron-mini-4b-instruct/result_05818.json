@@ -1,0 +1,9 @@
+{
+  "id": 5818,
+  "title": "Anagram Checker",
+  "prompt": "Create a program that uses a while loop to check whether two given strings are anagrams of each other.\nSample Input: listen, silent\nSample Output: Anagrams\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks whether two given strings are anagrams of each other using a while loop:\n\n```python\ndef are_anagrams(str1, str2):\n    \"\"\"\n    Check if two given strings are anagrams of each other.\n\n    :param str1: The first string to compare.\n    :param str2: The second string to compare.\n    :return: True if the strings are anagrams, False otherwise.\n    \"\"\"\n\n    # Check if the strings have the same length. If not, they cannot be anagrams.\n    if len(str1) != len(str2):\n        return False\n\n    # Use a while loop to count the occurrences of each character in both strings.\n    # If the counts are equal, the strings are anagrams.\n    i = 0\n    while i < len(str1):\n        char = str1[i]\n        str1_count = str1.count(char)\n        str2_count = str2.count(char)\n\n        if str1_count != str2_count:\n            return False\n\n        i += 1\n\n    return True\n\n\n# Example usage:\nstr1 = \"listen\"\nstr2 = \"silent\"\n\nif are_anagrams(str1, str2):\n    print(f\"'{str1}' and '{str2}' are anagrams.\")\nelse:\n    print(f\"'{str1}' and '{str2}' are not anagrams.\")\n```\n\nThis program first checks if the lengths of the two strings are equal, as anagrams must have the same number of characters. Then, it uses a while loop to count the occurrences of each character in both strings. If the counts are equal for all characters, the strings are anagrams, and the function returns `True`. Otherwise, it returns `False`.",
+  "error": null,
+  "elapsed_seconds": 4.35,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

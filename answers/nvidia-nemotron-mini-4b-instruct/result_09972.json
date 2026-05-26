@@ -1,0 +1,9 @@
+{
+  "id": 9972,
+  "title": "Raw Strings",
+  "prompt": "Write a program that uses raw strings to ignore escape sequences.\nSample Input: string = r'Hello\\nWorld'\nSample Output: Hello\\nWorld\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses raw strings (also known as prefixed strings) to ignore escape sequences and print the given string as is:\n```python\ndef print_string(string):\n    \"\"\"Print the given string with escape sequences ignored.\"\"\"\n    if not isinstance(string, str):\n        raise TypeError(\"The input must be a string.\")\n\n    print(string, end=\"\")\n\n# Example usage:\nstring = r'Hello\\nWorld'\nprint_string(string)\n```\nWhen you run this program with the given sample input `string = r'Hello\\nWorld'`, it will print:\n```\nHello\\nWorld\n```\nThis is because raw strings ignore escape sequences by default. The `r` prefix in the string literal indicates that it's a raw string, which means that backslashes (`\\`) are treated literally and not as escape characters.",
+  "error": null,
+  "elapsed_seconds": 2.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2232,
+  "title": "List Reduction",
+  "prompt": "Write a program that reduces a list of numbers to a single value by applying a specified operation (e.g. sum, product, etc.).\nSample Input: [1, 2, 3, 4, 5], sum\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef reduce_list(numbers, operation):\n    \"\"\"\n    Reduces a list of numbers to a single value by applying a specified operation.\n\n    Parameters:\n    numbers (list): The list of numbers to reduce.\n    operation (str): The operation to apply, e.g. 'sum', 'product', etc.\n\n    Returns:\n    int or float: The reduced value.\n    \"\"\"\n\n    # Ensure the input is a list and the operation is valid\n    if not isinstance(numbers, list):\n        raise TypeError(\"Input should be a list.\")\n\n    if operation not in ['sum', 'product', 'min', 'max']:\n        raise ValueError(\"Operation should be either 'sum', 'product', 'min', or 'max'.\")\n\n    # Apply the specified operation to the list of numbers\n    if operation == 'sum':\n        return sum(numbers)\n    elif operation == 'product':\n        return reduce(lambda x, y: x * y, numbers, 1)\n    elif operation == 'min':\n        return min(numbers)\n    elif operation == 'max':\n        return max(numbers)\n\n# Example usage\nnumbers = [1, 2, 3, 4, 5]\noperation = 'sum'\nresult = reduce_list(numbers, operation)\nprint(f\"The reduced value of {numbers} using {operation} is {result}.\")\n```\nThis program defines a function `reduce_list` that takes a list of numbers and an operation as input, and returns the reduced value by applying the specified operation. The example usage at the end of the program demonstrates how to use this function with the `sum` operation.",
+  "error": null,
+  "elapsed_seconds": 4.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

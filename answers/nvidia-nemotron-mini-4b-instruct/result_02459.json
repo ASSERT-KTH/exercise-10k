@@ -1,0 +1,9 @@
+{
+  "id": 2459,
+  "title": "Array Superset",
+  "prompt": "Write a program that takes two arrays as input and returns a new array containing all elements that are in either array.\nSample Input: [1, 2, 3], [2, 3, 4]\nSample Output: [1, 2, 3, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef combine_arrays(arr1, arr2):\n    \"\"\"\n    Combines two input arrays and returns a new array containing all elements that are in either array.\n\n    :param arr1: The first input array\n    :param arr2: The second input array\n    :return: A new array containing all elements from both input arrays\n    \"\"\"\n    # Use a set to remove duplicates and then convert it back to a list\n    return list(set(arr1 + arr2))\n```\nHere's how you can use this function:\n```python\narr1 = [1, 2, 3]\narr2 = [2, 3, 4]\nresult = combine_arrays(arr1, arr2)\nprint(result)  # Output: [1, 2, 3, 4]\n```\nThis program works by first combining the two input arrays using the `+` operator, which concatenates the arrays and adds any duplicate elements. Then, it converts the resulting set back to a list to remove any duplicate elements that may have been introduced by converting to a set.",
+  "error": null,
+  "elapsed_seconds": 2.71,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

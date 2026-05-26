@@ -1,0 +1,9 @@
+{
+  "id": 8384,
+  "title": "Fibonacci Sequence Calculation",
+  "prompt": "Write a program that calculates the nth Fibonacci number using dynamic programming.\nSample Input: 10\nSample Output: 55\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the nth Fibonacci number using dynamic programming:\n\n```python\ndef fibonacci(n, memo={}):\n    \"\"\"\n    Calculate the nth Fibonacci number using dynamic programming.\n\n    :param n: The position of the Fibonacci number to calculate.\n    :param memo: A dictionary to store previously calculated Fibonacci numbers.\n    :return: The nth Fibonacci number.\n    \"\"\"\n\n    # Base cases\n    if n == 0:\n        return 0\n    elif n == 1:\n        return 1\n\n    # Check if the nth Fibonacci number has already been calculated\n    if n in memo:\n        return memo[n]\n\n    # Calculate the nth Fibonacci number using dynamic programming\n    fib_n = fibonacci(n - 1, memo) + fibonacci(n - 2, memo)\n\n    # Store the result in the memo dictionary for future reference\n    memo[n] = fib_n\n\n    return fib_n\n\n# Test the function with sample input\nn = 10\nprint(f\"The {n}th Fibonacci number is: {fibonacci(n)}\")\n```\n\nWhen you run this program with `n = 10`, it will output:\n\n```\nThe 10th Fibonacci number is: 55\n```\n\nThis program uses a dictionary (`memo`) to store previously calculated Fibonacci numbers, which allows it to avoid redundant calculations and improve performance.",
+  "error": null,
+  "elapsed_seconds": 3.37,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

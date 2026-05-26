@@ -1,0 +1,9 @@
+{
+  "id": 1171,
+  "title": "Word Frequency",
+  "prompt": "Given a string, count the frequency of each word\nSample Input: hello world hello\nSample Output: {'hello': 2, 'world': 1}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution using the `collections` module to count the frequency of each word in a string:\n\n```python\nfrom collections import Counter\n\ndef count_word_frequencies(input_string: str) -> dict:\n    \"\"\"\n    Given a string, count the frequency of each word.\n\n    :param input_string: The input string.\n    :return: A dictionary where keys are words and values are their frequencies.\n    \"\"\"\n    # Split the input string into words, convert to lowercase, and remove punctuation\n    words = [word.lower() for word in input_string.translate(str.maketrans('', '', string.punctuation)).split()]\n\n    # Count the frequency of each word using Counter\n    word_counts = Counter(words)\n\n    return dict(word_counts)\n\n# Example usage\ninput_string = \"hello world hello\"\nprint(count_word_frequencies(input_string))  # Output: {'hello': 2, 'world': 1}\n```\n\nThis function first splits the input string into words, converts them to lowercase, and removes any punctuation. Then, it uses the `Counter` class from the `collections` module to count the frequency of each word. Finally, it returns a dictionary where keys are words and values are their frequencies.",
+  "error": null,
+  "elapsed_seconds": 3.11,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

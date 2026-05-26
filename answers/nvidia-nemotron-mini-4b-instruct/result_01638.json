@@ -1,0 +1,9 @@
+{
+  "id": 1638,
+  "title": "Finding the Index of the Maximum Value",
+  "prompt": "Develop a program that takes a list of numbers as input and returns the index of the maximum value.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef find_max_index(numbers):\n    \"\"\"\n    Given a list of numbers, return the index of the maximum value.\n\n    :param numbers: List[int] - The list of numbers to search in.\n    :return: int - The index of the maximum value in the list.\n    \"\"\"\n    # Check if the input is a non-empty list\n    if not isinstance(numbers, list) or len(numbers) == 0:\n        raise ValueError(\"Input should be a non-empty list of numbers.\")\n\n    # Initialize the maximum value and its index to the first element\n    max_value = numbers[0]\n    max_index = 0\n\n    # Iterate through the list to find the maximum value and its index\n    for i, num in enumerate(numbers):\n        if num > max_value:\n            max_value = num\n            max_index = i\n\n    return max_index\n```\nHere's an example of how to use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\nmax_index = find_max_index(numbers)\nprint(f\"The index of the maximum value is {max_index}.\")  # Output: The index of the maximum value is 4.\n```\nThis function checks if the input is a non-empty list, initializes the maximum value and its index to the first element, and then iterates through the list to find the maximum value and its index. Finally, it returns the index of the maximum value.",
+  "error": null,
+  "elapsed_seconds": 3.72,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

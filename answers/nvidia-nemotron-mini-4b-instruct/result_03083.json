@@ -1,0 +1,9 @@
+{
+  "id": 3083,
+  "title": "Higher-Order Function Filter",
+  "prompt": "Create a higher-order function that filters a list of numbers based on a given condition.\nSample Input: [1, 2, 3, 4, 5], lambda x: x % 2 == 0\nSample Output: [2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function, `filter_numbers`, takes a list of numbers and a lambda function as input, which defines the condition for filtering the numbers. It returns a new list containing only the numbers that satisfy the given condition.\n\n```python\ndef filter_numbers(numbers, condition):\n    \"\"\"\n    Filters a list of numbers based on a given condition.\n\n    Parameters:\n    numbers (list): A list of numbers.\n    condition (callable): A lambda function that takes a number as input and returns a boolean.\n\n    Returns:\n    list: A new list containing only the numbers that satisfy the given condition.\n    \"\"\"\n    return [num for num in numbers if condition(num)]\n```\n\nHere's an example of how to use this function:\n\n```python\nnumbers = [1, 2, 3, 4, 5]\nfiltered_numbers = filter_numbers(numbers, lambda x: x % 2 == 0)\nprint(filtered_numbers)  # Output: [2, 4]\n```\n\nThis function uses list comprehension to filter the numbers based on the given condition. The `if condition(num)` part ensures that only the numbers that satisfy the condition are included in the new list.",
+  "error": null,
+  "elapsed_seconds": 2.98,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

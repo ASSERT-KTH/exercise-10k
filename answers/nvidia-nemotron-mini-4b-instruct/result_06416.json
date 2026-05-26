@@ -1,0 +1,9 @@
+{
+  "id": 6416,
+  "title": "Weather Forecast",
+  "prompt": "Write a program that takes the current weather as input and prints out a forecast. Use if/else statements to determine the forecast.\nSample Input: sunny\nSample Output: It will be sunny tomorrow\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef forecast(current_weather):\n    \"\"\"\n    Given the current weather, prints out a forecast for the next day.\n\n    :param current_weather: str, the current weather (e.g. 'sunny', 'rainy', 'cloudy')\n    :return: None\n    \"\"\"\n    # Define the forecast for each weather condition\n    forecasts = {\n        'sunny': 'It will be sunny tomorrow',\n        'rainy': 'It will rain tomorrow',\n        'cloudy': 'It will be partly cloudy tomorrow'\n    }\n\n    # Check if the current weather is in the dictionary\n    if current_weather in forecasts:\n        print(forecasts[current_weather])\n    else:\n        print(f\"Sorry, I don't have a forecast for '{current_weather}'.\")\n\n# Example usage\nforecast('sunny')  # Output: It will be sunny tomorrow\nforecast('rainy')  # Output: It will rain tomorrow\nforecast('cloudy')  # Output: It will be partly cloudy tomorrow\nforecast('foggy')  # Output: Sorry, I don't have a forecast for 'foggy'.\n```\nThis program defines a dictionary `forecasts` that maps each weather condition to a corresponding forecast. The `forecast` function then checks if the current weather is in the dictionary and prints out the corresponding forecast if it is. If the weather condition is not in the dictionary, the function prints a message indicating that it doesn't have a forecast for that condition.",
+  "error": null,
+  "elapsed_seconds": 3.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

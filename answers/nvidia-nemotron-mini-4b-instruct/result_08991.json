@@ -1,0 +1,9 @@
+{
+  "id": 8991,
+  "title": "Function Basics",
+  "prompt": "Create a function that takes a name as an argument and returns a greeting message.\nSample Input: John\nSample Output: Hello, John!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef greet(name):\n    \"\"\"\n    This function takes a name as an argument and returns a greeting message.\n\n    :param name: str - The name of the person to greet.\n    :return: str - A greeting message for the specified name.\n    \"\"\"\n    if not isinstance(name, str) or not name:\n        raise ValueError(\"The 'name' argument must be a non-empty string.\")\n\n    greeting = f\"Hello, {name.capitalize()}!\"\n    return greeting\n```\nThis function checks if the input is a non-empty string, and raises a `ValueError` if it's not. Then, it formats the greeting message using an f-string, ensuring that the first letter of the name is capitalized. Here are some examples of how you can use this function:\n\n```python\n>>> greet(\"John\")\n'Hello, John!'\n\n>>> greet(\"\")\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\n  File \"<stdin>\", line 6, in greet\nValueError: The 'name' argument must be a non-empty string.\n\n>>> greet(123)\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\n  File \"<stdin>\", line 6, in greet\nValueError: The 'name' argument must be a non-empty string.\n```",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

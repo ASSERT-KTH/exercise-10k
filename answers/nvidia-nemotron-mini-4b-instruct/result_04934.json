@@ -1,0 +1,9 @@
+{
+  "id": 4934,
+  "title": "Perimeter Calculator",
+  "prompt": "Write a program that calculates the perimeter of a rectangle given its length and width. The program should use the formula perimeter = 2 * (length + width) to calculate the perimeter.\nSample Input: 5 10\nSample Output: 30\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the perimeter of a rectangle given its length and width:\n\n```python\ndef calculate_rectangle_perimeter(length, width):\n    \"\"\"\n    Calculates the perimeter of a rectangle given its length and width.\n\n    :param length: The length of the rectangle.\n    :param width: The width of the rectangle.\n    :return: The perimeter of the rectangle.\n    \"\"\"\n\n    # Validate input\n    if not isinstance(length, (int, float)) or length < 0:\n        raise ValueError(\"Length must be a non-negative number.\")\n\n    if not isinstance(width, (int, float)) or width < 0:\n        raise ValueError(\"Width must be a non-negative number.\")\n\n    # Calculate the perimeter using the formula perimeter = 2 * (length + width)\n    perimeter = 2 * (length + width)\n\n    return perimeter\n\n# Get sample input from the user\nlength = float(input(\"Enter the length of the rectangle: \"))\nwidth = float(input(\"Enter the width of the rectangle: \"))\n\n# Calculate and display the perimeter\nperimeter = calculate_rectangle_perimeter(length, width)\nprint(f\"The perimeter of the rectangle is {perimeter}.\")\n```\n\nThis program defines a function `calculate_rectangle_perimeter` that takes the length and width as input and validates them to ensure they are non-negative numbers. It then calculates the perimeter using the formula `perimeter = 2 * (length + width)` and returns the result. The program then gets sample input from the user, calculates the perimeter, and displays the result.",
+  "error": null,
+  "elapsed_seconds": 3.81,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

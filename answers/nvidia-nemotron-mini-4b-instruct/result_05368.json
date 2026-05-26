@@ -1,0 +1,9 @@
+{
+  "id": 5368,
+  "title": "List Mapping",
+  "prompt": "Write a program to apply a function to each element of a list.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [2, 4, 6, 8, 10]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that applies a given function to each element of a list:\n```python\ndef apply_function_to_list(lst, func):\n    \"\"\"\n    Applies a given function to each element of a list.\n\n    Parameters:\n    lst (list): The list to apply the function to.\n    func (callable): The function to apply to each element of the list.\n\n    Returns:\n    list: The list with the function applied to each element.\n    \"\"\"\n    # Use a list comprehension to apply the function to each element\n    return [func(element) for element in lst]\n\n# Example usage:\nnumbers = [1, 2, 3, 4, 5]\ndouble_numbers = apply_function_to_list(numbers, lambda x: x * 2)\nprint(double_numbers)  # Output: [2, 4, 6, 8, 10]\n```\nIn this program, the `apply_function_to_list` function takes a list `lst` and a callable `func` as input, and returns a new list with the function applied to each element of `lst`. The function uses a list comprehension to apply the function to each element in `lst`, and returns the resulting list.\n\nYou can replace the `lambda x: x * 2` function with any other callable that takes one argument and returns a value. For example, you could use a lambda function that adds 10 to each element of the list:\n```python\nadd_ten = lambda x: x + 10\nresult = apply_function_to_list(numbers, add_ten)\nprint(result)  # Output: [11, 12, 13, 14, 15]\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 4.42,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

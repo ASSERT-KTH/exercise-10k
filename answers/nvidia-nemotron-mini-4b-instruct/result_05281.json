@@ -1,0 +1,9 @@
+{
+  "id": 5281,
+  "title": "Guessing Game",
+  "prompt": "Create a program that plays a guessing game with the user, where the user has to guess a number between 1 and 100. The program should use a while loop to keep asking the user for input until they guess the correct number.\nSample Input: 50\nSample Output: Higher!\n",
+  "answer": "Sure, I'd be happy to help you create a guessing game program. Here's an example Python program that meets your requirements:\n\n```python\nimport random\n\ndef play_guessing_game():\n    \"\"\"Plays a guessing game with the user.\"\"\"\n\n    # Generate a random number between 1 and 100\n    secret_number = random.randint(1, 100)\n\n    # Initialize variables to keep track of the user's guesses\n    user_guesses = 0\n    while True:\n        user_guess = int(input(\"Guess a number between 1 and 100: \"))\n        user_guesses += 1\n\n        # Check if the user guessed the correct number\n        if user_guess == secret_number:\n            print(f\"Congratulations! You guessed the number in {user_guesses} tries!\")\n            break\n        elif user_guess < secret_number:\n            print(\"Higher!\")\n        else:\n            print(\"Lower!\")\n\n# Call the function to start the game\nplay_guessing_game()\n```\n\nThis program generates a random number between 1 and 100, and then enters a while loop that continues until the user guesses the correct number. The program provides feedback to the user based on whether their guess is too high or too low. Once the user guesses the correct number, the program prints a congratulatory message and breaks out of the loop.",
+  "error": null,
+  "elapsed_seconds": 13.62,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

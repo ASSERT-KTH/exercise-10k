@@ -1,0 +1,9 @@
+{
+  "id": 7318,
+  "title": "Output to File",
+  "prompt": "Write a program that takes input from the user and writes it to a file.\nSample Input: Hello, World!\nSample Output: example.txt\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes input from the user and writes it to a file named `example.txt`:\n\n```python\n# Get user input\nuser_input = input(\"Enter some text to save in the file: \")\n\n# Create a file object and write the user input to it\nwith open(\"example.txt\", \"w\") as file:\n    file.write(user_input)\n\nprint(f\"The input '{user_input}' has been saved to 'example.txt'.\")\n```\n\nWhen you run this program, it will prompt the user to enter some text. Once the user enters their input and presses Enter, the program will create a new text file named `example.txt` and write the user's input to it. The program will then display a message confirming that the input has been saved to the file.\n\nIf you want to append to the existing file instead of overwriting it, you can change the `'w'` mode to `'a'` (for append) in the `open()` function call:\n\n```python\nwith open(\"example.txt\", \"a\") as file:\n    file.write(user_input + \"\\n\")  # Add a newline character after the input\n```\n\nThis will append the user's input to the end of the file, appending a newline character after each input.",
+  "error": null,
+  "elapsed_seconds": 3.26,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

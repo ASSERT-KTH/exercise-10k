@@ -1,0 +1,9 @@
+{
+  "id": 3103,
+  "title": "Dictionary Filtering",
+  "prompt": "Create a dictionary with 10 key-value pairs. Filter out the key-value pairs where the value is greater than 10.\nSample Input: None\nSample Output: Filtered dictionary\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution for your problem:\n\n```python\ndef filter_dict(input_dict):\n    \"\"\"\n    Filters a dictionary to keep only key-value pairs where the value is less than or equal to 10.\n\n    :param input_dict: The input dictionary\n    :return: A new dictionary with filtered key-value pairs\n    \"\"\"\n    return {k: v for k, v in input_dict.items() if v <= 10}\n\n# Example usage:\ninput_dict = {'a': 15, 'b': 5, 'c': 12, 'd': 3, 'e': 1}\nfiltered_dict = filter_dict(input_dict)\nprint(filtered_dict)  # Output: {'a': 15, 'b': 5, 'd': 3, 'e': 1}\n```\n\nThis function uses a dictionary comprehension to create a new dictionary with only the key-value pairs where the value is less than or equal to 10. The `items()` method is used to iterate over the key-value pairs in the input dictionary.",
+  "error": null,
+  "elapsed_seconds": 2.76,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

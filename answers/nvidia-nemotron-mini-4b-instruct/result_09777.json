@@ -1,0 +1,9 @@
+{
+  "id": 9777,
+  "title": "Output Formatting",
+  "prompt": "Write a program that takes a string as input and prints it with a specific format (e.g. title case, uppercase, etc.).\nSample Input: hello world\nSample Output: Hello World\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a string as input and prints it with a specific format (title case in this case):\n```python\ndef format_string(input_str):\n    \"\"\"\n    Formats a given string in title case (uppercase first letter of each word).\n\n    :param input_str: The string to format.\n    :return: The formatted string.\n    \"\"\"\n    # Split the input string into words, convert to title case, and join back together\n    formatted_str = ' '.join(word.title() for word in input_str.split())\n\n    return formatted_str\n\n# Get user input\nuser_input = input(\"Enter a string: \")\n\n# Print the formatted string\nprint(format_string(user_input))\n```\nWhen you run this program and enter \"hello world\" as input, it will output:\n```yaml\nHello World\n```\nYou can modify the `format_string` function to change the format of the output string as desired. For example, to change it to uppercase, you could modify the function like this:\n```python\ndef format_string(input_str):\n    \"\"\"\n    Formats a given string in uppercase.\n\n    :param input_str: The string to format.\n    :return: The formatted string.\n    \"\"\"\n    return input_str.upper()\n```\nAnd when you run the program with \"hello world\" as input, it will output:\n```yaml\nHELLO WORLD\n```",
+  "error": null,
+  "elapsed_seconds": 3.52,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

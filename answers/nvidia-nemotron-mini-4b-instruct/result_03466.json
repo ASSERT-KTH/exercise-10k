@@ -1,0 +1,9 @@
+{
+  "id": 3466,
+  "title": "Calculator Program",
+  "prompt": "Write a program that asks for two numbers and an operator, and then prints out the result of the operation.\nSample Input: 2, 3, +\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef perform_operation(num1, num2, operator):\n    \"\"\"Perform a calculation based on the given operator and numbers.\"\"\"\n    if operator == '+':\n        result = num1 + num2\n    elif operator == '-':\n        result = num1 - num2\n    elif operator == '*':\n        result = num1 * num2\n    elif operator == '/':\n        if num2 == 0:\n            raise ValueError(\"Cannot divide by zero.\")\n        result = num1 / num2\n    else:\n        raise ValueError(f\"Invalid operator: {operator}. Please use +, -, *, or /.\")\n    return result\n\n# Get user input\nnum1 = float(input(\"Enter the first number: \"))\nnum2 = float(input(\"Enter the second number: \"))\noperator = input(\"Enter the operator (+, -, *, or /): \")\n\n# Perform the calculation and print the result\ntry:\n    result = perform_operation(num1, num2, operator)\n    print(f\"{num1} {operator} {num2} = {result}\")\nexcept ValueError as e:\n    print(e)\n```\nThis program defines a function `perform_operation` that takes three arguments: the first and second numbers, and the operator. It checks if the operator is valid and performs the calculation accordingly. The program then gets user input for the three arguments, calls the `perform_operation` function, and prints the result. If the operator is invalid, the program catches the `ValueError` exception and prints an error message.",
+  "error": null,
+  "elapsed_seconds": 5.0,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

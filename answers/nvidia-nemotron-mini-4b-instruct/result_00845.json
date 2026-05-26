@@ -1,0 +1,9 @@
+{
+  "id": 845,
+  "title": " Memoization",
+  "prompt": "Create a function that memoizes another function, caching its results to avoid redundant computation.\nSample Input: def fibonacci(n): ...\nSample Output: function that calculates fibonacci numbers efficiently\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that memoizes another function, caching its results to avoid redundant computation. In this example, I'll use the Fibonacci sequence function as the function to memoize.\n\n```python\ndef memoize(func):\n    \"\"\"\n    Memoize a function by caching its results.\n    \"\"\"\n    cache = {}\n\n    def wrapper(*args):\n        key = str(args)\n        if key not in cache:\n            cache[key] = func(*args)\n        return cache[key]\n\n    return wrapper\n\n# Example usage: memoize the Fibonacci function\n@memoize\ndef fibonacci(n):\n    \"\"\"\n    Calculate the nth Fibonacci number.\n    \"\"\"\n    if n < 2:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n```\n\nNow, you can use the memoized Fibonacci function as follows:\n\n```python\nprint(fibonacci(10))  # Output: 55\nprint(fibonacci(10))  # Output: 55 (since the result is already cached)\n```\n\nThis memoization technique ensures that the Fibonacci function calculates each number only once, making it more efficient for larger input values.",
+  "error": null,
+  "elapsed_seconds": 2.94,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

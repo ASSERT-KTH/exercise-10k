@@ -1,0 +1,9 @@
+{
+  "id": 3548,
+  "title": "List Aggregation",
+  "prompt": "Write a program that takes a list and an aggregation function as input, and returns the aggregated value.\nSample Input: [1, 2, 3, 4, 5], sum\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses the built-in `reduce` function from the `functools` module to aggregate a list using a given function. The `sum` function is used as the aggregation function in this example, but you can replace it with any other aggregation function you like.\n\n```python\nfrom functools import reduce\n\ndef aggregate_list(lst, func):\n    \"\"\"\n    Aggregates a list using a given function.\n\n    Parameters:\n    lst (list): The list to aggregate.\n    func (callable): The aggregation function to apply.\n\n    Returns:\n    any: The aggregated value.\n    \"\"\"\n    return reduce(func, lst)\n\n# Example usage:\nsample_input = [1, 2, 3, 4, 5]\naggregation_func = 'sum'\n\nresult = aggregate_list(sample_input, globals()[aggregation_func])\nprint(result)  # Output: 15\n```\n\nIf you prefer a more explicit approach without using the `reduce` function, you can implement it yourself using a for loop. Here's an example:\n\n```python\ndef aggregate_list_explicit(lst, func):\n    \"\"\"\n    Aggregates a list using a given function.\n\n    Parameters:\n    lst (list): The list to aggregate.\n    func (callable): The aggregation function to apply.\n\n    Returns:\n    any: The aggregated value.\n    \"\"\"\n    total = 0\n    for num in lst:\n        total += func(num)\n    return total\n\n# Example usage:\nsample_input = [1, 2, 3, 4, 5]\naggregation_func = 'sum'\n\nresult = aggregate_list_explicit(sample_input, globals()[aggregation_func])\nprint(result)  # Output: 15\n```",
+  "error": null,
+  "elapsed_seconds": 4.51,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

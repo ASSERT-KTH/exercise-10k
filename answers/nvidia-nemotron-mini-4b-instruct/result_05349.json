@@ -1,0 +1,9 @@
+{
+  "id": 5349,
+  "title": "Array Reduction",
+  "prompt": "Create a function that takes an array and a reduction function as input, and returns the reduced value of the array elements.\nSample Input: [1, 2, 3, 4, 5], lambda x, y: x + y\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses the built-in `reduce` function from the `functools` module, which applies a binary function to an iterable, reducing it to a single value. In this case, the binary function is addition (`+`).\n\n```python\nfrom functools import reduce\n\ndef reduce_array(arr, func):\n    \"\"\"\n    Reduces the elements of an array to a single value using a given reduction function.\n\n    Parameters:\n    arr (list): The input array of elements.\n    func (callable): The binary function to apply to each pair of elements in the array.\n\n    Returns:\n    int or any other type that can be converted to an integer: The reduced value of the array elements.\n    \"\"\"\n    return reduce(func, arr, 0)\n\n# Sample usage:\nsample_input = [1, 2, 3, 4, 5]\nsample_func = lambda x, y: x + y\n\nreduced_value = reduce_array(sample_input, sample_func)\nprint(reduced_value)  # Output: 15\n```\n\nThis function can be easily adapted to work with other types of binary functions and other languages that support the `reduce` function or a similar concept.",
+  "error": null,
+  "elapsed_seconds": 3.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

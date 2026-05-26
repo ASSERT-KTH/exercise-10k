@@ -1,0 +1,9 @@
+{
+  "id": 4835,
+  "title": "Variable Scope",
+  "prompt": "Write a program to demonstrate the scope of a variable, including local and global variables.\nSample Input: 5\nSample Output: The global value is 5 and the local value is 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that demonstrates the scope of a variable, including local and global variables:\n\n```python\n# Global variable\nglobal_value = 5\n\ndef local_function():\n    # Local variable\n    local_value = 10\n\n    # Accessing global variable\n    print(f\"The global value is {global_value} and the local value is {local_value}\")\n\n# Calling the local function\nlocal_function()\n\n# Output: The global value is 5 and the local value is 10\n```\n\nIn this program, we define a global variable `global_value` and a local variable `local_value` within the `local_function` function. When we call `local_function()`, it prints the values of both variables. Since `local_value` is defined within the function, it is a local variable and its scope is limited to the function. However, `global_value` is defined outside the function, so it is a global variable and its scope is the entire script.\n\nIf you try to modify a global variable within a function without using the `global` keyword, Python will raise an error. For example:\n\n```python\ndef local_function():\n    global global_value\n    global_value = 15  # This will raise an error\n\n# Calling the local function\nlocal_function()\n```\n\nThis will result in a `NameError` because `global_value` is not defined within the function.",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

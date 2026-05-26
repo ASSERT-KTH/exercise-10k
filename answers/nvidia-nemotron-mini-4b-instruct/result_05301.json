@@ -1,0 +1,9 @@
+{
+  "id": 5301,
+  "title": "Simple Function",
+  "prompt": "Create a function that takes a name as input and returns a greeting message\nSample Input: John\nSample Output: Hello, John!\n",
+  "answer": "Sure, I'd be happy to help you create a function that returns a greeting message based on the input name. Here's an example Python function that follows your requirements:\n\n```python\ndef greet(name):\n    \"\"\"\n    This function takes a name as input and returns a greeting message.\n\n    :param name: str - The name of the person to greet.\n    :return: str - A greeting message with the person's name.\n    \"\"\"\n    if not isinstance(name, str) or not name:\n        raise ValueError(\"Input must be a non-empty string.\")\n\n    return f\"Hello, {name.capitalize()}!\"\n```\n\nThis function checks if the input is a non-empty string and raises a `ValueError` if it's not. Then, it capitalizes the first letter of the name and returns a greeting message with the name. Here are some examples of how you can use this function:\n\n```python\nprint(greet(\"John\"))  # Output: Hello, John!\nprint(greet(\"\"))     # Raises ValueError: Input must be a non-empty string.\nprint(greet(123))    # Raises ValueError: Input must be a non-empty string.\n```",
+  "error": null,
+  "elapsed_seconds": 2.77,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

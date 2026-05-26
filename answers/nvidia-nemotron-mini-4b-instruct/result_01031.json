@@ -1,0 +1,9 @@
+{
+  "id": 1031,
+  "title": "Binary Search",
+  "prompt": "Write a program to find an element in a sorted list using binary search.\nSample Input: [1, 2, 3, 4, 5], 3\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that implements binary search on a sorted list to find an element:\n\n```python\ndef binary_search(sorted_list, target):\n    \"\"\"\n    Performs binary search on a sorted list to find the target element.\n\n    :param sorted_list: A sorted list of elements\n    :param target: The element to search for\n    :return: The index of the target element if found, otherwise -1\n    \"\"\"\n\n    left, right = 0, len(sorted_list) - 1\n\n    while left <= right:\n        mid = (left + right) // 2\n\n        if sorted_list[mid] == target:\n            return mid\n        elif sorted_list[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n\n    return -1\n\n\n# Example usage\nsorted_list = [1, 2, 3, 4, 5]\ntarget = 3\nresult = binary_search(sorted_list, target)\nprint(f\"The index of the target element {target} is {result}.\")\n```\n\nWhen you run this program with the sample input `[1, 2, 3, 4, 5]` and `3`, it will output `2`, which is the index of the target element in the sorted list.",
+  "error": null,
+  "elapsed_seconds": 3.24,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

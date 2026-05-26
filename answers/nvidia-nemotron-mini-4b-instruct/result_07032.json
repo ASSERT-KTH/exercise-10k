@@ -1,0 +1,9 @@
+{
+  "id": 7032,
+  "title": "Student Grades Dictionary",
+  "prompt": "Create a program that takes in a dictionary of students and their respective grades, and calculates the average grade for each student. The grades should be stored in a list for each student. The program should then return a new dictionary with the average grade for each student.\nSample Input: {\"John\": [90, 85, 95], \"Alice\": [88, 92, 89], \"Bob\": [95, 90, 92]}\nSample Output: {\"John\": 90.0, \"Alice\": 89.66666666666667, \"Bob\": 92.33333333333333}\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef calculate_average(students):\n    # Create a new dictionary to store the average grades\n    averages = {}\n\n    # Loop through each student\n    for student, grades in students.items():\n        # Calculate the average grade for the student\n        avg_grade = sum(grades) / len(grades)\n\n        # Add the student's average grade to the dictionary\n        averages[student] = avg_grade\n\n    return averages\n\n# Example usage\nstudents = {\"John\": [90, 85, 95], \"Alice\": [88, 92, 89], \"Bob\": [95, 90, 92]}\nprint(calculate_average(students))\n```\n\nThis program defines a function `calculate_average` that takes in a dictionary of students and their respective grades. It then loops through each student, calculates the average grade for that student, and adds it to a new dictionary. Finally, it returns the new dictionary with the average grade for each student. The example usage at the end of the program demonstrates how to use this function with the sample input.",
+  "error": null,
+  "elapsed_seconds": 2.66,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

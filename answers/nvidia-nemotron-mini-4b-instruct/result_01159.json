@@ -1,0 +1,9 @@
+{
+  "id": 1159,
+  "title": "Anagram Generator",
+  "prompt": "Write a program that generates anagrams of a given word.\nSample Input: listen\nSample Output: silent\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates anagrams of a given word using the `itertools.permutations()` function. This function generates all permutations of a given sequence (in this case, the characters of the word). Then, it checks if each permutation is also a valid word in a dictionary (in this case, the `wordlist` dictionary, which you can replace with any word list you prefer).\n\n```python\nimport itertools\nimport string\n\n# Define the word list (you can replace this with any word list you prefer)\nwordlist = {\n    \"listen\",\n    \"silent\",\n    # Add more words here\n}\n\ndef is_valid_word(word):\n    \"\"\"Check if a word is in the word list.\"\"\"\n    return word.lower() in wordlist\n\ndef generate_anagrams(word):\n    \"\"\"Generate anagrams of a given word.\"\"\"\n    # Remove non-alphanumeric characters and convert to lowercase\n    word = ''.join(c.lower() for c in word if c.isalnum())\n\n    # Generate all permutations of the word\n    permutations = itertools.permutations(word)\n\n    # Filter permutations that are valid words\n    anagrams = [word for word in permutations if is_valid_word(''.join(word))]\n\n    return ''.join(anagrams)\n\n# Example usage\nword = input(\"Enter a word: \")\nanagram = generate_anagrams(word)\nprint(f\"Anagrams of '{word}': {anagram}\")\n```\n\nThis program will prompt the user to enter a word, then generate all anagrams of that word and print them out. You can customize the `wordlist` dictionary to include any words you want to consider for anagrams.",
+  "error": null,
+  "elapsed_seconds": 4.12,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

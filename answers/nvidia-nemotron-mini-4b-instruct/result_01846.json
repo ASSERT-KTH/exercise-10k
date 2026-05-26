@@ -1,0 +1,9 @@
+{
+  "id": 1846,
+  "title": "List Filter",
+  "prompt": "Write a program that takes a list of integers and a predicate function as input, and returns a new list containing only the elements for which the predicate function returns True.\nSample Input: [1, 2, 3, 4, 5], lambda x: x % 2 == 0\nSample Output: [2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef filter_list(numbers, predicate):\n    \"\"\"\n    Filters a list of integers based on a given predicate function.\n\n    Parameters:\n    numbers (list): A list of integers.\n    predicate (callable): A function that takes an integer as input and returns a boolean.\n\n    Returns:\n    list: A new list containing only the elements for which the predicate function returns True.\n    \"\"\"\n    return [num for num in numbers if predicate(num)]\n\n# Example usage:\nnumbers = [1, 2, 3, 4, 5]\npredicate = lambda x: x % 2 == 0\nfiltered_numbers = filter_list(numbers, predicate)\nprint(filtered_numbers)  # Output: [2, 4]\n```\nThis program defines a function `filter_list` that takes a list of integers and a predicate function as input, and returns a new list containing only the elements for which the predicate function returns True. The function uses a list comprehension to filter the input list, which is a concise and efficient way to perform this operation.\n\nThe example usage at the end of the program demonstrates how to use the `filter_list` function with a sample input list and predicate function. When you run this code, it will output the filtered list `[2, 4]`, which contains only the even numbers from the input list `[1, 2, 3, 4, 5]`.",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

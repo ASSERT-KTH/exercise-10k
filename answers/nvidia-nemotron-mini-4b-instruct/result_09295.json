@@ -1,0 +1,9 @@
+{
+  "id": 9295,
+  "title": "Word Counter",
+  "prompt": "Write a function that takes a string as input and returns the number of words in the string.\nSample Input: Hello World this is a test\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\nimport re\n\ndef count_words(input_string: str) -> int:\n    \"\"\"\n    This function takes a string as input and returns the number of words in the string.\n\n    :param input_string: The input string to count words in.\n    :return: The number of words in the input string.\n    \"\"\"\n    # Use a regular expression to split the string into words,\n    # and then count the number of words using the length of the list.\n    return len(re.split(r'\\s+', input_string))\n```\nHere's how you can use this function:\n```python\nprint(count_words(\"Hello World this is a test\"))  # Output: 6\n```\nThis function uses the `re` module to split the input string into words using a regular expression that matches one or more whitespace characters (`\\s+`). The `len()` function is then used to count the number of words in the resulting list.\n\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.57,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

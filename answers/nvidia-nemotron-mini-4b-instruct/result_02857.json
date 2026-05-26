@@ -1,0 +1,9 @@
+{
+  "id": 2857,
+  "title": "Dictionary From Keys",
+  "prompt": "Write a function to create a dictionary from a list of keys and a list of values.\nSample Input: ['name', 'age'], ['John', 30]\nSample Output: {'name': 'John', 'age': 30}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef create_dict_from_lists(keys, values):\n    \"\"\"\n    Create a dictionary from a list of keys and a list of values.\n\n    Parameters:\n    keys (list): A list of keys for the dictionary.\n    values (list): A list of corresponding values for the keys.\n\n    Returns:\n    dict: A dictionary with the specified keys and values.\n    \"\"\"\n    if len(keys) != len(values):\n        raise ValueError(\"The lengths of keys and values lists must be equal.\")\n\n    return dict(zip(keys, values))\n```\nHere's an example of how to use this function:\n```python\nkeys = ['name', 'age']\nvalues = ['John', 30]\n\nresult = create_dict_from_lists(keys, values)\nprint(result)  # Output: {'name': 'John', 'age': 30}\n```\nThis function first checks if the lengths of the `keys` and `values` lists are equal. If they are not, it raises a `ValueError`. Then, it uses the `zip` function to create a dictionary with the specified keys and values by pairing each key with its corresponding value.",
+  "error": null,
+  "elapsed_seconds": 3.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

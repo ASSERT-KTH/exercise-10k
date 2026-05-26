@@ -1,0 +1,9 @@
+{
+  "id": 2653,
+  "title": "Dictionary Popitem",
+  "prompt": "Write a function to remove and return the last inserted key-value pair from a dictionary using the popitem() method\nSample Input: {'name': 'John', 'age': 25}\nSample Output: ('age', 25)\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef remove_last_inserted_pair(dictionary):\n    \"\"\"\n    Remove and return the last inserted key-value pair from a dictionary.\n\n    :param dictionary: The dictionary to remove the last inserted pair from.\n    :return: A tuple containing the key and value of the last inserted pair.\n    \"\"\"\n    # Check if the dictionary is empty\n    if not dictionary:\n        return None\n\n    # Get the last inserted key-value pair using popitem()\n    last_inserted_pair = dictionary.popitem(last=False)\n\n    return last_inserted_pair\n```\nHere's how you can use this function:\n```python\nmy_dict = {'name': 'John', 'age': 25}\nlast_pair = remove_last_inserted_pair(my_dict)\nprint(last_pair)  # Output: ('age', 25)\n```\nThis function first checks if the input dictionary is empty, in which case it returns `None`. Otherwise, it uses the `popitem()` method to get the last inserted key-value pair. The `last` parameter is set to `False` to ensure that the last pair is returned instead of the first pair. Finally, it returns the key and value of the last inserted pair as a tuple.",
+  "error": null,
+  "elapsed_seconds": 3.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

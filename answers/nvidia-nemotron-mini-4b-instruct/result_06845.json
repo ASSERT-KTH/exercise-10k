@@ -1,0 +1,9 @@
+{
+  "id": 6845,
+  "title": "Conditional Statement Challenge",
+  "prompt": "Create a program that determines whether a given number is positive, negative, or zero using conditional statements. The program should take an integer as input and print out 'Positive' if the number is greater than 0, 'Negative' if the number is less than 0, and 'Zero' if the number is equal to 0.\nSample Input: 5\nSample Output: Positive\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef determine_number_type(number):\n    \"\"\"Determines whether a given number is positive, negative, or zero.\"\"\"\n\n    # Check if the input is an integer\n    if not isinstance(number, int):\n        raise TypeError(\"The input must be an integer.\")\n\n    # Determine the number type based on the input value\n    if number > 0:\n        number_type = \"Positive\"\n    elif number < 0:\n        number_type = \"Negative\"\n    else:\n        number_type = \"Zero\"\n\n    return number_type\n\n# Get user input\nuser_input = int(input(\"Enter an integer: \"))\n\n# Print the result\nprint(determine_number_type(user_input))\n```\n\nThis program defines a function `determine_number_type` that takes an integer as input and returns a string indicating whether the number is positive, negative, or zero. The function checks if the input is an integer, raises a `TypeError` if it's not, and then determines the number type based on the input value. The program then gets user input, calls the function with the input value, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.12,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

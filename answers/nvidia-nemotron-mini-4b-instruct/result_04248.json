@@ -1,0 +1,9 @@
+{
+  "id": 4248,
+  "title": "Body Mass Index (BMI) Calculator",
+  "prompt": "Create a program that calculates the BMI of a person based on their weight and height. The program should take the weight and height as input, and print the corresponding BMI category (underweight, normal, overweight, obese).\nSample Input: 70 1.75\nSample Output: Normal\n",
+  "answer": "Sure, I'd be happy to help you create a program that calculates BMI and categorizes it based on the given ranges. Here's a Python solution:\n\n```python\ndef calculate_bmi(weight, height):\n    \"\"\"Calculate BMI and categorize it based on given ranges.\"\"\"\n    # Convert height from meters to centimeters\n    cm_height = int(height * 100)\n\n    # Calculate BMI\n    bmi = weight / (height / 100) ** 2\n\n    # Categorize BMI\n    if bmi < 18.5:\n        category = \"underweight\"\n    elif 18.5 <= bmi < 25:\n        category = \"normal\"\n    elif 25 <= bmi < 30:\n        category = \"overweight\"\n    else:\n        category = \"obese\"\n\n    return f\"The corresponding BMI category is {category}.\"\n\n\n# Get user input\nweight = float(input(\"Enter weight in kg: \"))\nheight = float(input(\"Enter height in meters: \"))\n\n# Calculate and print BMI category\nprint(calculate_bmi(weight, height))\n```\n\nThis program first calculates the BMI by converting the height from meters to centimeters, then squares the weight divided by the height squared. Finally, it checks the calculated BMI against the given ranges to determine the corresponding category and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.26,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

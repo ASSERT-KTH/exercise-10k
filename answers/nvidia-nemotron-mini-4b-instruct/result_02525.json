@@ -1,0 +1,9 @@
+{
+  "id": 2525,
+  "title": "Binary Search Algorithm",
+  "prompt": "Implement a binary search algorithm to find a specific element in a sorted list of numbers\nSample Input: [1, 2, 3, 4, 5], target = 4\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you implement a binary search algorithm to find a specific element in a sorted list of numbers. Here's a Python function that meets your requirements:\n\n```python\ndef binary_search(sorted_list, target):\n    \"\"\"\n    Performs a binary search on a sorted list to find the target element.\n\n    :param sorted_list: A sorted list of numbers\n    :param target: The target element to find\n    :return: The index of the target element if found, otherwise -1\n    \"\"\"\n\n    left, right = 0, len(sorted_list) - 1\n\n    while left <= right:\n        mid = (left + right) // 2\n\n        if sorted_list[mid] == target:\n            return mid\n        elif sorted_list[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n\n    return -1\n```\n\nHere's an example of how to use this function:\n\n```python\nsorted_list = [1, 2, 3, 4, 5]\ntarget = 4\nindex = binary_search(sorted_list, target)\nprint(index)  # Output: 3\n```\n\nThis function works by repeatedly dividing the search interval in half until the target element is found or the interval is empty. It uses a while loop to handle the edge cases where the list is empty or contains only one element.",
+  "error": null,
+  "elapsed_seconds": 3.32,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

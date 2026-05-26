@@ -1,0 +1,9 @@
+{
+  "id": 2126,
+  "title": "List Comprehension",
+  "prompt": "Write a function that takes a list and a transformation function as input and returns a new list containing the transformed elements.\nSample Input: ([1, 2, 3], lambda x: x**2)\nSample Output: [1, 4, 9]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef transform_list(lst, transform_func):\n    \"\"\"\n    Applies a transformation function to each element in a list and returns a new list.\n\n    Parameters:\n    lst (list): The list to transform.\n    transform_func (callable): A function that takes one argument and returns a transformed value.\n\n    Returns:\n    list: A new list containing the transformed elements.\n    \"\"\"\n    return [transform_func(element) for element in lst]\n```\nHere's an example of how you can use this function:\n```python\nsample_input = ([1, 2, 3], lambda x: x**2)\ntransformed_list = transform_list(sample_input[0], sample_input[1])\nprint(transformed_list)  # Output: [1, 4, 9]\n```\nThis function uses list comprehension to apply the `transform_func` to each element in the input list and creates a new list containing the transformed elements. The function is designed to be flexible and can handle any type of callable object as the `transform_func`, not just lambda functions.",
+  "error": null,
+  "elapsed_seconds": 2.76,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

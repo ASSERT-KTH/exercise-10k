@@ -1,0 +1,9 @@
+{
+  "id": 5829,
+  "title": "String Permutation",
+  "prompt": "Write a function to generate all permutations of a given string\nSample Input: abc\nSample Output: ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that generates all permutations of a given string using recursion and backtracking. This approach has a time complexity of O(n!) and space complexity of O(n), where n is the length of the input string.\n\n```python\ndef generate_permutations(s):\n    if len(s) == 1:\n        return [s]\n\n    result = []\n    for i in range(len(s)):\n        for perm in generate_permutations(s[:i] + s[i+1:]):\n            result.append(s[i] + perm)\n\n    return result\n```\n\nYou can use this function as follows:\n\n```python\nprint(generate_permutations('abc'))  # Output: ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']\n```\n\nIf you want to generate permutations in lexicographic order (i.e., the first permutation is the original string), you can modify the function as follows:\n\n```python\ndef generate_permutations(s):\n    if len(s) == 1:\n        return [s]\n\n    result = []\n    for i in range(len(s)):\n        for perm in generate_permutations(s[:i] + s[i+1:]):\n            result.append(s[i] + perm)\n\n    return result[:-1]\n```\n\nThis modified function returns the permutations in lexicographic order by removing the last element from the list before returning it.",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

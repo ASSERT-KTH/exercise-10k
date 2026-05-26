@@ -1,0 +1,9 @@
+{
+  "id": 1428,
+  "title": "List Last Index Of",
+  "prompt": "Create a function that takes a list and an element as input and returns the index of the last occurrence of the element in the list. If the element is not found, return -1.\nSample Input: [1, 2, 3, 2, 4], 2\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef last_occurrence_index(lst, elem):\n    \"\"\"\n    Returns the index of the last occurrence of the element in the list.\n    If the element is not found, returns -1.\n\n    :param lst: The list to search in\n    :param elem: The element to search for\n    :return: The index of the last occurrence of elem in lst, or -1 if not found\n    \"\"\"\n    # Use a list comprehension to find the indices of all occurrences of elem\n    # and then find the last one using the index() method\n    indices = [i for i, x in enumerate(lst) if x == elem]\n    return indices[-1] if indices else -1\n```\nHere's an example of how you can use this function:\n```python\nprint(last_occurrence_index([1, 2, 3, 2, 4], 2))  # Output: 3\nprint(last_occurrence_index([1, 2, 3, 2, 4], 5))  # Output: -1\n```\nThis function first uses a list comprehension to find all the indices of the element in the list. It then uses the index() method to find the last index in the list of indices, and returns that index if it exists, or -1 otherwise.",
+  "error": null,
+  "elapsed_seconds": 4.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

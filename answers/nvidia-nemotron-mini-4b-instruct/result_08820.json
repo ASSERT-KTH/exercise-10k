@@ -1,0 +1,9 @@
+{
+  "id": 8820,
+  "title": "Maximum Subarray Sum",
+  "prompt": "Given an array of integers, write a program to find the maximum contiguous subarray sum. The program should take an array of integers as input and return the maximum sum of a contiguous subarray.\nSample Input: [−2, 1, −3, 4, −1, 2, 1, −5, 4]\nSample Output: 6\n",
+  "answer": "Here's a Python solution using Kadane's algorithm for finding the maximum contiguous subarray sum:\n\n```python\ndef max_subarray_sum(arr):\n    max_so_far = curr_max = arr[0]\n    for num in arr[1:]:\n        curr_max = max(num, curr_max + num)\n        max_so_far = max(max_so_far, curr_max)\n    return max_so_far\n\n# Test the function with your sample input\nsample_arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]\nprint(max_subarray_sum(sample_arr))  # Output: 6\n```\n\nThis function works by initializing two variables `max_so_far` and `curr_max` to the first element of the array. Then it iterates over the rest of the array, updating `curr_max` to be the maximum of the current number and the sum of the current number and the previous `curr_max`. Finally, it updates `max_so_far` to be the maximum of the current `curr_max` and the previous `max_so_far`. This ensures that we keep track of the maximum subarray sum encountered so far.",
+  "error": null,
+  "elapsed_seconds": 3.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

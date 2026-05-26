@@ -1,0 +1,9 @@
+{
+  "id": 2951,
+  "title": "Checking for Cycles in a Graph",
+  "prompt": "Write a program to check if a graph contains a cycle using depth-first search.\nSample Input: ([(0, 1), (1, 2), (2, 0), (0, 3), (3, 4)])\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given graph (represented as a list of edges) contains a cycle using Depth-First Search (DFS):\n\n```python\ndef dfs(graph, node, visited, rec_stack):\n    visited.add(node)\n    rec_stack[node] = True\n\n    for neighbor in graph[node]:\n        if neighbor not in visited:\n            if dfs(graph, neighbor, visited, rec_stack):\n                return True\n        elif rec_stack[neighbor]:\n            return True\n\n    rec_stack[node] = False\n    return False\n\ndef has_cycle(graph):\n    visited = set()\n    rec_stack = {}\n\n    for node in graph:\n        if node not in visited:\n            if dfs(graph, node, visited, rec_stack):\n                return True\n\n    return False\n\n# Test the function with your sample input\nedges = ([(0, 1), (1, 2), (2, 0), (0, 3), (3, 4)])\nprint(has_cycle(edges))  # Output: True\n```\n\nThis program defines two helper functions: `dfs` and `has_cycle`. The `dfs` function performs a DFS starting from a given node and checks if it finds a cycle. The `has_cycle` function calls `dfs` for each node in the graph and returns `True` if it finds a cycle, and `False` otherwise.\n\nThe sample input `[(0, 1), (1, 2), (2, 0), (0, 3), (3, 4)]` represents a graph with a cycle (0 -> 1 -> 2 -> 0). The output `True` indicates that the graph contains a cycle.",
+  "error": null,
+  "elapsed_seconds": 5.43,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

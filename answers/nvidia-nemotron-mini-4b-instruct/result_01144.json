@@ -1,0 +1,9 @@
+{
+  "id": 1144,
+  "title": "Password Validator",
+  "prompt": "Create a program that checks if a given password is valid. A password is valid if it is at least 8 characters long and contains at least one uppercase letter, one lowercase letter, and one digit.\nSample Input: Password123\nSample Output: Valid password\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given password is valid:\n\n```python\nimport re\n\ndef is_valid_password(password):\n    \"\"\"\n    Check if a given password is valid.\n\n    A password is valid if it is at least 8 characters long and contains at least one uppercase letter,\n    one lowercase letter, and one digit.\n\n    :param password: str - The password to check.\n    :return: bool - True if the password is valid, False otherwise.\n    \"\"\"\n\n    # Check if the password is at least 8 characters long\n    if len(password) < 8:\n        return False\n\n    # Check if the password contains at least one uppercase letter, one lowercase letter, and one digit\n    if not re.search(r'[A-Z]', password):\n        return False\n    if not re.search(r'[a-z]', password):\n        return False\n    if not re.search(r'\\d', password):\n        return False\n\n    return True\n\n# Example usage\npassword = input(\"Enter a password: \")\nif is_valid_password(password):\n    print(f\"Valid password: {password}\")\nelse:\n    print(\"Invalid password\")\n```\n\nThis program uses regular expressions to check if the password contains at least one uppercase letter, one lowercase letter, and one digit. The `re.search()` function is used to check for the presence of these characters in the password. The function returns `True` if the password is valid and `False` otherwise. The example usage prompts the user to enter a password and prints whether it is valid or not.",
+  "error": null,
+  "elapsed_seconds": 5.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

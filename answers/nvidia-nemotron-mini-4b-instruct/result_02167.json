@@ -1,0 +1,9 @@
+{
+  "id": 2167,
+  "title": "Distance Between Two Points",
+  "prompt": "Ask the user for the coordinates of two points and print the distance between them.\nSample Input: 1 2 4 6\nSample Output: 5.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution that uses the Euclidean distance formula to calculate the distance between two points given their x and y coordinates:\n\n```python\ndef get_coordinates():\n    \"\"\"Ask the user for the coordinates of two points and return them as a list.\"\"\"\n    x1, y1, x2, y2 = map(float, input(\"Enter the coordinates of the first point (x1, y1): \").split())\n    return [x1, y1, x2, y2]\n\ndef calculate_distance(coordinates):\n    \"\"\"Calculate the Euclidean distance between two points given their coordinates.\"\"\"\n    x1, y1, x2, y2 = coordinates\n    distance = ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5\n    return distance\n\nif __name__ == \"__main__\":\n    coordinates = get_coordinates()\n    distance = calculate_distance(coordinates)\n    print(f\"The distance between the two points is {distance:.2f}.\")\n```\n\nThis script defines two functions: `get_coordinates()` to ask the user for the coordinates of two points and return them as a list, and `calculate_distance()` to calculate the Euclidean distance between two points given their coordinates. The script then calls these functions, calculates the distance, and prints the result.\n\nYou can run this script and enter the coordinates of two points (e.g., `1 2 4 6`) to get the distance between them. The output will be `5.0`, which is the Euclidean distance between the points (1, 2) and (4, 6).",
+  "error": null,
+  "elapsed_seconds": 3.75,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

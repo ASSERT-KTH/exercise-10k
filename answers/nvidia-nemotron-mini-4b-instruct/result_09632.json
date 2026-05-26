@@ -1,0 +1,9 @@
+{
+  "id": 9632,
+  "title": "Function with Decorator",
+  "prompt": "Create a function that uses a decorator to log its execution time.\nSample Input: None\nSample Output: Execution time of the function\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example Python function that uses a decorator to log its execution time:\n\n```python\nimport time\n\ndef log_execution_time(func):\n    \"\"\"\n    A decorator to log the execution time of a function.\n    \"\"\"\n    def wrapper(*args, **kwargs):\n        start_time = time.time()\n        result = func(*args, **kwargs)\n        end_time = time.time()\n        execution_time = end_time - start_time\n        print(f\"Execution time of {func.__name__}: {execution_time:.6f} seconds\")\n        return result\n    return wrapper\n\n# Example usage:\n@log_execution_time\ndef factorial(n):\n    \"\"\"\n    Calculate the factorial of a given number.\n    \"\"\"\n    if n == 0:\n        return 1\n    else:\n        return n * factorial(n-1)\n\n# Call the function with a sample input\nfactorial(10)\n```\n\nWhen you run this code, it will output the execution time of the `factorial` function every time it's called. The decorator `log_execution_time` calculates the execution time by subtracting the current time from the time when the function was called. The `:.6f` format specifier in the output string ensures that the execution time is displayed with six decimal places.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

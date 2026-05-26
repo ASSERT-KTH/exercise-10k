@@ -1,0 +1,9 @@
+{
+  "id": 4174,
+  "title": "Calendar Program",
+  "prompt": "Write a program that takes a month and year as input and prints the calendar for that month.\nSample Input: January 2022\nSample Output: January 2022\nMo Tu We Th Fr Sa Su\n 3  4  5  6  7  8  9\n",
+  "answer": "Sure, I can help you with that. Here's a Python program that takes a month and year as input, and prints the calendar for that month. This program uses the `calendar` module to generate the calendar, which is a built-in module in Python.\n\n```python\nimport calendar\n\ndef print_calendar(month, year):\n    # Generate the calendar for the given month and year\n    cal = calendar.month(year, month)\n\n    # Print the header for the calendar\n    print(f\"\\n{calendar.month_name[month]} {year}\")\n\n    # Print the calendar rows\n    for row in cal:\n        print(' '.join(row))\n\n# Get user input for month and year\nmonth = int(input(\"Enter the month (1-12): \"))\nyear = int(input(\"Enter the year: \"))\n\n# Validate the input\nwhile month < 1 or month > 12 or year < 1900:\n    print(\"Invalid input. Please enter a valid month and year.\")\n    month = int(input(\"Enter the month (1-12): \"))\n    year = int(input(\"Enter the year: \"))\n\n# Print the calendar\nprint_calendar(month, year)\n```\n\nThis program will prompt the user to enter a month and year, validate the input, and then print the calendar for that month and year. The output will look like the sample output you provided.",
+  "error": null,
+  "elapsed_seconds": 3.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

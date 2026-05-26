@@ -1,0 +1,9 @@
+{
+  "id": 3171,
+  "title": "Function Composition",
+  "prompt": "Create a function that composes two other functions together.\nSample Input: double(x), add_one(x)\nSample Output: function composition result\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example implementation in Python that composes two other functions, `double` and `add_one`, to create a new function that doubles a number and then adds one to it.\n\n```python\ndef compose(*functions):\n    \"\"\"\n    Composes a variable number of functions into a single function.\n\n    :param functions: Variable number of functions to compose.\n    :return: A single function that applies the composed functions in order.\n    \"\"\"\n\n    def composed_function(x):\n        for func in reversed(functions):\n            x = func(x)\n        return x\n\n    return composed_function\n\n\n# Example usage: double(x) + add_one(x)\ndouble = lambda x: x * 2\nadd_one = lambda x: x + 1\n\nresult = compose(double, add_one)\nprint(result(10))  # Output: 23\n```\n\nThis implementation defines a `compose` function that takes any number of functions as arguments and returns a single function that applies the composed functions in order. The example usage demonstrates how to use this function to compose `double` and `add_one` into a new function that doubles a number and then adds one to it.",
+  "error": null,
+  "elapsed_seconds": 3.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

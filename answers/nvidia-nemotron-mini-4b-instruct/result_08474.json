@@ -1,0 +1,9 @@
+{
+  "id": 8474,
+  "title": "BMI Calculator",
+  "prompt": "Write a program to calculate a person's body mass index (BMI) given their weight and height\nSample Input: 70 1.75\nSample Output: 22.86\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates a person's Body Mass Index (BMI) given their weight and height:\n\n```python\ndef calculate_bmi(weight, height):\n    \"\"\"\n    Calculates a person's Body Mass Index (BMI) given their weight and height.\n\n    :param weight: float or int - The person's weight in kilograms.\n    :param height: float - The person's height in meters.\n    :return: float - The person's BMI.\n    \"\"\"\n\n    # Ensure input values are valid\n    if not isinstance(weight, (float, int)) or weight < 0:\n        raise ValueError(\"Weight must be a non-negative number.\")\n\n    if not isinstance(height, float) or height < 0:\n        raise ValueError(\"Height must be a non-negative number.\")\n\n    # Calculate BMI\n    bmi = weight / (height ** 2)\n\n    return bmi\n\n# Example usage\nweight = 70\nheight = 1.75\n\nbmi = calculate_bmi(weight, height)\nprint(f\"The BMI is {bmi:.2f}\")\n```\n\nThis program defines a function `calculate_bmi` that checks if the input values are valid, calculates the BMI, and returns the result. The example usage at the end of the program demonstrates how to use the function to calculate a person's BMI given their weight and height.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

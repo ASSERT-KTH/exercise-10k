@@ -1,0 +1,9 @@
+{
+  "id": 7006,
+  "title": "Speed Calculator",
+  "prompt": "Write a program that takes the distance and time as input and returns the speed.\nSample Input: 100 2\nSample Output: 50.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_speed(distance, time):\n    \"\"\"\n    Calculates the speed given the distance and time as input.\n\n    :param distance: The distance traveled in meters.\n    :param time: The time taken in seconds.\n    :return: The speed in meters per second.\n    \"\"\"\n\n    # Validate input\n    if distance <= 0 or time <= 0:\n        raise ValueError(\"Both distance and time must be positive numbers.\")\n\n    # Calculate speed\n    speed = distance / time\n\n    return speed\n\n# Get user input\ndistance = float(input(\"Enter the distance traveled in meters: \"))\ntime = float(input(\"Enter the time taken in seconds: \"))\n\n# Calculate and print speed\nspeed = calculate_speed(distance, time)\nprint(f\"{speed:.2f}\")\n```\nThis program defines a function `calculate_speed` that takes the distance and time as input and returns the speed. It validates the input to ensure that both distance and time are positive numbers. The function then calculates the speed using the formula `speed = distance / time` and returns the result. The program then gets user input for distance and time, calls the function with those values, and prints the speed with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 3.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5972,
+  "title": "List Deletion",
+  "prompt": "Write a program that takes a list and an index as input, and removes the element at the specified index.\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: [1, 2, 4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef remove_element(lst, index):\n    \"\"\"\n    Remove the element at the specified index from the list.\n\n    Parameters:\n    lst (list): The input list.\n    index (int): The index of the element to remove.\n\n    Returns:\n    list: The updated list with the element at the specified index removed.\n    \"\"\"\n    # Check if the index is within the valid range\n    if index < 0 or index >= len(lst):\n        raise IndexError(\"Index out of range\")\n\n    # Remove the element at the specified index\n    return lst[:index] + lst[index+1:]\n```\nHere's an example of how to use this function:\n```python\nsample_input = [1, 2, 3, 4, 5]\nsample_index = 2\n\nupdated_list = remove_element(sample_input, sample_index)\nprint(updated_list)  # Output: [1, 2, 4, 5]\n```\nThis function first checks if the index is within the valid range of the list. If not, it raises an `IndexError`. Then, it uses slicing to remove the element at the specified index and returns the updated list.",
+  "error": null,
+  "elapsed_seconds": 3.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3011,
+  "title": "String Parsing",
+  "prompt": "Write a program to parse a given string into an integer or float value.\nSample Input: 123.45\nSample Output: 123.45\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that can parse a given string into an integer or float value:\n\n```python\nimport numbers\n\ndef parse_to_number(s: str) -> float:\n    \"\"\"Parse a given string into an integer or float value.\n\n    :param s: The string to parse.\n    :return: The parsed number as a float.\n    \"\"\"\n    try:\n        return float(s)\n    except ValueError:\n        # If the string cannot be parsed as a float, try parsing it as an integer\n        return int(s)\n\n# Example usage:\nsample_input = \"123.45\"\nsample_output = parse_to_number(sample_input)\nprint(sample_output)  # Output: 123.45\n```\n\nThis function uses a `try`-`except` block to handle both integer and float parsing. If the string cannot be parsed as a float, it tries to parse it as an integer instead. The function returns the parsed number as a float.\n\nYou can modify the function to suit your specific needs, such as handling other number bases or allowing for a specific number of decimal places.",
+  "error": null,
+  "elapsed_seconds": 2.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

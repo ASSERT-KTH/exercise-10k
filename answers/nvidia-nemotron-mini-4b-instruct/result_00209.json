@@ -1,0 +1,9 @@
+{
+  "id": 209,
+  "title": "Map Function",
+  "prompt": "Create a function that applies a given function to each element of a list.\nSample Input: [1, 2, 3], square\nSample Output: [1, 4, 9]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that applies a given function to each element of a list:\n```python\ndef apply_function_to_list(input_list, func):\n    \"\"\"\n    Applies a given function to each element of a list.\n\n    Parameters:\n    input_list (list): The list to apply the function to.\n    func (callable): The function to apply to each element of the list.\n\n    Returns:\n    list: A new list with the results of applying the function to each element of the input list.\n    \"\"\"\n    # Use a list comprehension to apply the function to each element and create a new list\n    return [func(element) for element in input_list]\n```\nHere's an example of how you can use this function:\n```python\n# Sample Input: [1, 2, 3]\n# Sample Output: [1, 4, 9]\nprint(apply_function_to_list([1, 2, 3], square))  # square(x) = x^2\n# Output: [1, 4, 9]\n```\nIn this example, the `square` function is defined as:\n```python\ndef square(x):\n    return x**2\n```\nYou can replace this function with any other callable object, such as a lambda function or a custom function.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8968,
+  "title": "String Split",
+  "prompt": "Write a function that takes a string and a delimiter as input and returns a list of substrings split by the delimiter.\nSample Input: ['Hello World', ' ']\nSample Output: ['Hello', 'World']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef split_string_by_delimiter(input_string: str, delimiter: str) -> list:\n    \"\"\"\n    Splits a given string into a list of substrings using a delimiter.\n\n    :param input_string: The input string to be split.\n    :param delimiter: The delimiter to use for splitting the string.\n    :return: A list of substrings split by the delimiter.\n    \"\"\"\n    if not isinstance(input_string, str) or not isinstance(delimiter, str):\n        raise TypeError(\"Both input_string and delimiter must be strings.\")\n\n    return input_string.split(delimiter)\n```\nHere's an example of how to use this function:\n```python\ninput_string = 'Hello World'\ndelimiter = ' '\n\nsplit_string = split_string_by_delimiter(input_string, delimiter)\nprint(split_string)  # Output: ['Hello', 'World']\n```\nThis function checks if the input types are strings, and raises a `TypeError` if they are not. It then uses the built-in `str.split()` method to split the input string by the delimiter, and returns the resulting list of substrings.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

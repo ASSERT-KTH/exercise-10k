@@ -1,0 +1,9 @@
+{
+  "id": 288,
+  "title": "Currency Converter",
+  "prompt": "Create a program that converts a given amount of money from one currency to another.\nSample Input: 100 USD EUR\nSample Output: 88.72\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that converts a given amount of money from one currency to another using the current exchange rates. You can replace the `API_KEY` variable with your own API key if you're using a different currency exchange API. For this example, I'll use the Google Finance API.\n\n```python\nimport requests\n\n# Replace with your own API key\nAPI_KEY = \"your_api_key\"\n\ndef convert_currency(amount, from_currency, to_currency):\n    url = f\"https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency={from_currency}&to_currency={to_currency}&apikey={API_KEY}\"\n    response = requests.get(url)\n    response.raise_for_status()\n\n    data = response.json()\n    exchange_rate = data[\"Realtime Currency Exchange Rate\"][\"01. exchange_rate\"]\n\n    return amount * float(exchange_rate)\n\n# Sample input\namount = 100\nfrom_currency = \"USD\"\nto_currency = \"EUR\"\n\nresult = convert_currency(amount, from_currency, to_currency)\nprint(f\"{amount} {from_currency} {to_currency}: {result:.2f}\")\n```\n\nThis program defines a function `convert_currency` that takes an amount, the source currency, and the target currency as input and returns the converted amount. The function uses the Google Finance API to get the current exchange rate and performs the conversion. The sample input and output are provided for demonstration purposes.",
+  "error": null,
+  "elapsed_seconds": 3.67,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

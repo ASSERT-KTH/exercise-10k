@@ -1,0 +1,9 @@
+{
+  "id": 3669,
+  "title": "Even or Odd Function",
+  "prompt": "Write a function that takes a number as input and returns 'even' if it is even and 'odd' if it is odd.\nSample Input: 4\nSample Output: even\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n\n```python\ndef is_even_or_odd(number):\n    \"\"\"\n    Takes a number as input and returns 'even' if it is even and 'odd' if it is odd.\n\n    :param number: The number to check for evenness or oddness.\n    :return: 'even' or 'odd' based on the input number.\n    \"\"\"\n    if not isinstance(number, (int, float)):  # Check if the input is a number\n        raise TypeError(\"The input must be a number.\")\n\n    if number % 2 == 0:  # Check if the number is even\n        return \"even\"\n    else:\n        return \"odd\"\n```\n\nHere's an example of how you can use this function:\n\n```python\nprint(is_even_or_odd(4))  # Output: even\nprint(is_even_or_odd(5))  # Output: odd\nprint(is_even_or_odd(\"five\"))  # Raises TypeError\n```\n\nThis function first checks if the input is a number (either an integer or a float). If not, it raises a `TypeError`. Then, it checks if the number is even by checking if the remainder of dividing the number by 2 is 0. Based on this check, it returns either \"even\" or \"odd\".",
+  "error": null,
+  "elapsed_seconds": 3.55,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

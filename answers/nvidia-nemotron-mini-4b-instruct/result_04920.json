@@ -1,0 +1,9 @@
+{
+  "id": 4920,
+  "title": "Simple Alarm Clock",
+  "prompt": "Write a program that takes a time as input and prints whether it is time to wake up (current time is equal to or later than the alarm time) or not.\nSample Input: 08:00\nSample Output: Wake up\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef is_time_to_wake_up(current_time, alarm_time):\n    \"\"\"\n    Determines whether it is time to wake up based on the current time and alarm time.\n\n    Parameters:\n    current_time (str): The current time in the format 'HH:MM'.\n    alarm_time (str): The alarm time in the format 'HH:MM'.\n\n    Returns:\n    str: A message indicating whether it is time to wake up or not.\n    \"\"\"\n    # Convert the input times to integers representing minutes\n    current_minutes = int(current_time.split(':')[1])\n    alarm_minutes = int(alarm_time.split(':')[1])\n\n    # Determine whether it is time to wake up\n    is_time_to_wake_up = current_minutes >= alarm_minutes\n\n    # Format the result as a message\n    result = \"Wake up\" if is_time_to_wake_up else \"Not time to wake up\"\n\n    return result\n\n# Example usage\ncurrent_time = \"08:00\"\nalarm_time = \"07:00\"\nprint(is_time_to_wake_up(current_time, alarm_time))  # Output: Wake up\n```\nThis program defines a function `is_time_to_wake_up` that takes the current time and alarm time as input, converts them to integers representing minutes, and then determines whether it is time to wake up based on these values. The function returns a message indicating whether it is time to wake up or not, formatted as a string. The example usage shows how to use the function with sample input and output.",
+  "error": null,
+  "elapsed_seconds": 4.02,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

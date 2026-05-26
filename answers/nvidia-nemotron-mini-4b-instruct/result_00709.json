@@ -1,0 +1,9 @@
+{
+  "id": 709,
+  "title": "Sorting Dictionary by Keys",
+  "prompt": "Write a function to return a dictionary sorted by its keys\nSample Input: {'name': 'John', 'age': 30, 'city': 'New York'}\nSample Output: {'age': 30, 'city': 'New York', 'name': 'John'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef sort_dict_by_keys(input_dict):\n    \"\"\"\n    Sort a dictionary by its keys in ascending order.\n\n    :param input_dict: The dictionary to sort.\n    :return: A new dictionary with the same keys but sorted in ascending order.\n    \"\"\"\n    return dict(sorted(input_dict.items()))\n```\nThis function works by first converting the input dictionary to a list of tuples, where each tuple contains a key-value pair. It then sorts this list using the `sorted()` function, which sorts the tuples based on the first element (the key) in each tuple. Finally, it converts the sorted list of tuples back into a dictionary using the `dict()` constructor.\n\nHere's an example of how you can use this function:\n```python\ninput_dict = {'name': 'John', 'age': 30, 'city': 'New York'}\nsorted_dict = sort_dict_by_keys(input_dict)\nprint(sorted_dict)  # Output: {'age': 30, 'city': 'New York', 'name': 'John'}\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.94,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8236,
+  "title": "Product Inventory",
+  "prompt": "Create a program that manages a product inventory using if/else statements\nSample Input: ProductA, 100\nSample Output: Inventory: 100\n",
+  "answer": "Sure, I'd be happy to help you create a program that manages a product inventory using if/else statements. Here's an example Python program that meets your requirements:\n\n```python\ndef manage_inventory(product, quantity):\n    \"\"\"\n    Manages the product inventory by updating the quantity.\n\n    :param product: The name of the product.\n    :param quantity: The new quantity of the product.\n    \"\"\"\n\n    # Define a dictionary to store the inventory\n    inventory = {\n        \"ProductA\": 100\n    }\n\n    # Check if the product exists in the inventory\n    if product in inventory:\n        # Update the quantity using if/else statements\n        if quantity > 0:\n            inventory[product] += quantity\n            print(f\"Inventory: {inventory[product]}\")\n        else:\n            print(\"Invalid quantity. Please enter a positive number.\")\n    else:\n        print(f\"Product '{product}' not found in the inventory.\")\n\n\n# Example usage\nmanage_inventory(\"ProductA\", 50)\nmanage_inventory(\"ProductB\", -10)\nmanage_inventory(\"ProductA\", 0)\n```\n\nThis program defines a function `manage_inventory` that takes a product name and a quantity as input. It checks if the product exists in the inventory dictionary, and then updates the quantity using if/else statements. The example usage at the end of the program demonstrates how to use the function to manage the inventory of a product named \"ProductA\".",
+  "error": null,
+  "elapsed_seconds": 3.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

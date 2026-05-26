@@ -1,0 +1,9 @@
+{
+  "id": 4249,
+  "title": "Temperature Converter",
+  "prompt": "Develop a program that converts a temperature from Celsius to Fahrenheit or vice versa. The program should take the temperature and conversion type as input, and print the converted temperature.\nSample Input: 30 C\nSample Output: 86.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef convert_temperature(celsius, conversion_type):\n    \"\"\"\n    Converts a temperature from Celsius to Fahrenheit or vice versa.\n\n    :param celsius: The temperature in Celsius.\n    :param conversion_type: The type of conversion to perform ('c_to_f' or 'f_to_c').\n    :return: The converted temperature.\n    \"\"\"\n\n    # Define the conversion factor based on the conversion type\n    if conversion_type == 'c_to_f':\n        conversion_factor = 9/5\n    elif conversion_type == 'f_to_c':\n        conversion_factor = 5/9\n    else:\n        raise ValueError(\"Invalid conversion type. Choose either 'c_to_f' or 'f_to_c'.\")\n\n    # Perform the conversion and return the result\n    return celsius * conversion_factor\n\n\n# Get user input\ncelsius = float(input(\"Enter the temperature in Celsius: \"))\nconversion_type = input(\"Enter the conversion type ('c_to_f' or 'f_to_c'): \").lower()\n\n# Convert the temperature and print the result\nresult = convert_temperature(celsius, conversion_type)\nprint(f\"{celsius} {conversion_type} is {result}.\")\n```\n\nThis program defines a function `convert_temperature` that takes a temperature in Celsius and a conversion type as input, and returns the converted temperature. The program then gets user input for the temperature and conversion type, calls the function, and prints the result. The program checks that the conversion type is valid and raises a `ValueError` if it's not.",
+  "error": null,
+  "elapsed_seconds": 3.96,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

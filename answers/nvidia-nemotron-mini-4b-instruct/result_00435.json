@@ -1,0 +1,9 @@
+{
+  "id": 435,
+  "title": "Caesar Cipher",
+  "prompt": "Ask the user for a string and a shift number, and print out the encrypted string.\nSample Input: Hello 3\nSample Output: Khoor\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution that follows your specifications:\n\n```python\ndef encrypt(s, shift):\n    \"\"\"\n    Encrypts a string using a Caesar cipher with the given shift number.\n\n    :param s: The string to encrypt.\n    :param shift: The number of positions to shift each character.\n    :return: The encrypted string.\n    \"\"\"\n    encrypted = \"\"\n    alphabet = \"abcdefghijklmnopqrstuvwxyz\"\n\n    for char in s:\n        if char.isalpha():  # Check if the character is a letter\n            index = alphabet.index(char.lower()) + shift\n            if index >= len(alphabet):\n                index -= len(alphabet)\n            encrypted += alphabet[index].upper()\n        else:\n            encrypted += char\n\n    return encrypted\n\n# Get user input\ns = input(\"Enter a string: \")\nshift = int(input(\"Enter the shift number: \"))\n\n# Encrypt the string and print the result\nencrypted_s = encrypt(s, shift)\nprint(f\"Encrypted string: {encrypted_s}\")\n```\n\nThis script defines a function `encrypt` that takes a string `s` and a shift number `shift`, and returns the encrypted string. The function iterates over each character in the input string, checks if it's a letter, and then shifts it by the given number of positions. If the shifted index is out of bounds, it wraps around to the beginning of the alphabet. The function also handles non-letter characters and adds them to the encrypted string as they are.\n\nThe script then prompts the user for a string and a shift number, encrypts the string using the given shift number, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 5.29,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

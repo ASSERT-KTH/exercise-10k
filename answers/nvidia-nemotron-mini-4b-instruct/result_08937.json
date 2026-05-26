@@ -1,0 +1,9 @@
+{
+  "id": 8937,
+  "title": "Type Checking",
+  "prompt": "Check the type of a variable and print out the result.\nSample Input: 10\nSample Output: Integer\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution that checks the type of a variable and prints out the result:\n\n```python\ndef check_type(var):\n    \"\"\"Check the type of a variable and print out the result.\"\"\"\n    try:\n        # Try to convert the variable to different types and check if it raises a TypeError\n        int_result = int(var)\n        float_result = float(var)\n        str_result = str(var)\n\n        if isinstance(int_result, int) and isinstance(float_result, float) and isinstance(str_result, str):\n            return \"Integer\"\n        elif isinstance(int_result, int):\n            return \"Integer\"\n        elif isinstance(float_result, float):\n            return \"Float\"\n        elif isinstance(str_result, str):\n            return \"String\"\n        else:\n            return \"Unknown\"\n\n    except TypeError:\n        return \"Unknown\"\n\n# Call the function with a sample input\nsample_input = 10\nprint(check_type(sample_input))\n```\n\nWhen you run this code with the sample input `10`, it will print out `\"Integer\"`, indicating that the variable is an integer. You can replace the sample input with any other variable to check its type.",
+  "error": null,
+  "elapsed_seconds": 2.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7319,
+  "title": "Multiple Input",
+  "prompt": "Write a program that takes multiple inputs from the user and prints out the results.\nSample Input: 1 2 3 4 5\nSample Output: [1, 2, 3, 4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes multiple inputs from the user and prints out the results in a list format:\n```python\n# Get user input, one number at a time\nnumbers = []\nwhile True:\n    try:\n        user_input = int(input(\"Enter a number (or type 'done' to finish): \"))\n        if user_input == 'done':\n            break\n        numbers.append(user_input)\n    except ValueError:\n        print(\"That's not a valid number. Please try again.\")\n\n# Print the list of numbers\nif numbers:\n    print(f\"[\", end=\"\")\n    for i, num in enumerate(numbers):\n        if i == len(numbers) - 1:\n            print(f\"{num}\", end=\"\")\n        else:\n            print(f\"{num}, \", end=\"\")\n    print(f\"]\")\nelse:\n    print(\"No numbers were entered.\")\n```\nThis program uses a `while` loop to keep asking the user for input until they type 'done'. It then converts each input to an integer and appends it to a list. Finally, it prints out the list of numbers using a loop that adds commas and spaces between each number to make it more readable. If no numbers were entered, it prints a message saying so.",
+  "error": null,
+  "elapsed_seconds": 3.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

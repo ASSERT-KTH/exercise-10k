@@ -1,0 +1,9 @@
+{
+  "id": 2611,
+  "title": "Dictionary Copy",
+  "prompt": "Create a copy of a dictionary\nSample Input: {'name': 'John', 'age': 30}\nSample Output: {'name': 'John', 'age': 30}\n",
+  "answer": "Sure, I'd be happy to help you with that! In Python, you can create a copy of a dictionary using the `copy()` method. Here's how you can do it:\n\n```python\nsample_dict = {'name': 'John', 'age': 30}\ncopied_dict = sample_dict.copy()\n\nprint(copied_dict)  # Output: {'name': 'John', 'age': 30}\n```\n\nIn this example, we first define a dictionary `sample_dict`. Then, we call the `copy()` method on `sample_dict` to create a new dictionary `copied_dict`. The `copy()` method returns a shallow copy of the original dictionary, meaning that it creates a new object with the same keys and values as the original dictionary, but it does not create a new object for any nested dictionaries or lists.\n\nIf you need a deep copy of the dictionary, which includes copying all nested dictionaries and lists, you can use the `deepcopy()` method from the `copy` module:\n\n```python\nfrom copy import deepcopy\n\nsample_dict = {'name': 'John', 'age': 30, 'address': {'city': 'New York', 'state': 'NY'}}\ncopied_dict = deepcopy(sample_dict)\n\nprint(copied_dict)  # Output: {'name': 'John', 'age': 30, 'address': {'city': 'New York', 'state': 'NY'}}\n```\n\nIn this example, we define a dictionary `sample_dict` with a nested dictionary `address`. The `deepcopy()` method creates a deep copy of the original dictionary, including the nested dictionaries and lists.",
+  "error": null,
+  "elapsed_seconds": 5.22,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

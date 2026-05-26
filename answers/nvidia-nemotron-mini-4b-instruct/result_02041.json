@@ -1,0 +1,9 @@
+{
+  "id": 2041,
+  "title": "Dictionary Initialization",
+  "prompt": "Create a function to initialize an empty dictionary and add key-value pairs to it.\nSample Input: name, age, city\nSample Output: {'name': 'John', 'age': 25, 'city': 'New York'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef initialize_dict():\n    \"\"\"\n    Initialize an empty dictionary and add key-value pairs to it.\n\n    Returns:\n        dict: A dictionary with no initial values.\n    \"\"\"\n    return {}\n\ndef add_key_value_pairs(dictionary, key_value_pairs):\n    \"\"\"\n    Add key-value pairs to an existing dictionary.\n\n    Args:\n        dictionary (dict): The dictionary to add key-value pairs to.\n        key_value_pairs (list): A list of tuples containing keys and values.\n\n    Returns:\n        dict: The modified dictionary with the added key-value pairs.\n    \"\"\"\n    for key, value in key_value_pairs:\n        dictionary[key] = value\n    return dictionary\n```\nHere's an example of how you can use this function:\n```python\nname = 'John'\nage = 25\ncity = 'New York'\n\nkey_value_pairs = [('name', name), ('age', age), ('city', city)]\n\ninitialized_dict = initialize_dict()\nupdated_dict = add_key_value_pairs(initialized_dict, key_value_pairs)\n\nprint(updated_dict)  # Output: {'name': 'John', 'age': 25, 'city': 'New York'}\n```\nThis function first initializes an empty dictionary using the `initialize_dict()` function. Then, it defines a new function `add_key_value_pairs()` that takes an existing dictionary and a list of key-value pairs as arguments. It iterates through the key-value pairs, adds the key-value pair to the dictionary, and returns the modified dictionary.",
+  "error": null,
+  "elapsed_seconds": 4.11,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

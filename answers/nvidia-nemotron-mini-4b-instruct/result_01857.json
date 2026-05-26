@@ -1,0 +1,9 @@
+{
+  "id": 1857,
+  "title": "Array Unzip",
+  "prompt": "Write a program that takes a list of pairs of integers as input, and returns two separate lists containing the first and second elements of each pair, respectively.\nSample Input: [(1, 4), (2, 5), (3, 6)]\nSample Output: [1, 2, 3], [4, 5, 6]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef split_pairs(pairs):\n    \"\"\"\n    Given a list of pairs of integers, return two separate lists containing the first and second elements of each pair.\n\n    :param pairs: List[Tuple[int, int]] - A list of pairs of integers\n    :return: Tuple[List[int], List[int]] - A tuple containing two lists of integers\n    \"\"\"\n    # Split the input list into two lists based on the first element of each pair\n    first_elements, second_elements = zip(*pairs)\n\n    # Convert the resulting tuples into lists\n    first_elements_list = list(first_elements)\n    second_elements_list = list(second_elements)\n\n    return first_elements_list, second_elements_list\n```\nHere's an example of how you can use this function:\n```python\npairs = [(1, 4), (2, 5), (3, 6)]\nfirst_elements, second_elements = split_pairs(pairs)\nprint(first_elements)  # Output: [1, 2, 3]\nprint(second_elements)  # Output: [4, 5, 6]\n```\nThis program uses the `zip` function to iterate over the pairs and split them into two separate lists based on the first element of each pair. The resulting tuples are then converted into lists using the `list` function.",
+  "error": null,
+  "elapsed_seconds": 4.73,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

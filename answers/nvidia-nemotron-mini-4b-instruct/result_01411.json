@@ -1,0 +1,9 @@
+{
+  "id": 1411,
+  "title": " 》Calculator",
+  "prompt": "Write a program that performs basic arithmetic operations. If the user inputs 'add', add two numbers, if 'subtract', subtract two numbers, and so on.\nSample Input: add 5 3\nSample Output: 8\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that performs basic arithmetic operations based on the user's input. It supports addition, subtraction, multiplication, and division.\n\n```python\ndef perform_operation(operation, num1, num2):\n    \"\"\"Perform a basic arithmetic operation based on the user's input.\"\"\"\n    if operation.lower() == 'add':\n        return num1 + num2\n    elif operation.lower() == 'subtract':\n        return num1 - num2\n    elif operation.lower() == 'multiply':\n        return num1 * num2\n    elif operation.lower() == 'divide':\n        if num2 == 0:\n            return \"Error: Division by zero is not allowed.\"\n        return num1 / num2\n    else:\n        return \"Error: Invalid operation. Please enter 'add', 'subtract', 'multiply', or 'divide'.\"\n\n\nwhile True:\n    user_input = input(\"Enter an operation (add, subtract, multiply, divide, or quit): \").lower()\n\n    if user_input == 'quit':\n        break\n\n    num1, operation, num2 = user_input.split()\n\n    try:\n        result = perform_operation(operation, float(num1), float(num2))\n        print(f\"{num1} {operation} {num2} = {result}\")\n    except ValueError:\n        print(\"Error: Please enter valid numbers.\")\n```\n\nThis program will keep asking the user for an operation until they enter 'quit'. It will then perform the requested operation and display the result.",
+  "error": null,
+  "elapsed_seconds": 3.67,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

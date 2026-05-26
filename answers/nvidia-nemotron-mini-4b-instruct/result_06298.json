@@ -1,0 +1,9 @@
+{
+  "id": 6298,
+  "title": "Dictionary Mapping",
+  "prompt": "Apply a function to each value in a dictionary using dictionary comprehension\nSample Input: {'a': 1, 'b': 2, 'c': 3}, lambda x: x * 2\nSample Output: {'a': 2, 'b': 4, 'c': 6}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's how you can apply a function to each value in a dictionary using dictionary comprehension in Python:\n\n```python\ndef apply_function_to_dict(dictionary, function):\n    \"\"\"\n    Applies a function to each value in a dictionary using dictionary comprehension.\n\n    Parameters:\n    dictionary (dict): The dictionary to apply the function to.\n    function (callable): A function that takes a single argument (the value) and returns a new value.\n\n    Returns:\n    dict: A new dictionary with the same keys as the input dictionary, but with each value replaced by the result of applying the function to the original value.\n    \"\"\"\n    return {key: function(value) for key, value in dictionary.items()}\n\n# Sample input and output as per your question\nsample_input = {'a': 1, 'b': 2, 'c': 3}\nsample_function = lambda x: x * 2\nsample_output = apply_function_to_dict(sample_input, sample_function)\nprint(sample_output)  # Output: {'a': 2, 'b': 4, 'c': 6}\n```\n\nIn this example, the `apply_function_to_dict` function takes a dictionary and a function as input, and returns a new dictionary with the same keys as the input dictionary, but with each value replaced by the result of applying the function to the original value. The dictionary comprehension used in the function body iterates over the items in the input dictionary, applies the function to each value, and creates a new key-value pair for each item in the output dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.79,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

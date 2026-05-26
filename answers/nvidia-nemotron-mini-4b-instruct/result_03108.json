@@ -1,0 +1,9 @@
+{
+  "id": 3108,
+  "title": "Dictionary Value Counting",
+  "prompt": "Create a dictionary with 10 key-value pairs. Count the occurrences of each value in the dictionary.\nSample Input: None\nSample Output: Dictionary with value counts\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that creates a dictionary with 10 key-value pairs, counts the occurrences of each value, and returns the result as a dictionary with value counts:\n```python\ndef create_dict_with_value_counts():\n    # Create a dictionary with 10 key-value pairs\n    my_dict = {\n        'apple': 3,\n        'banana': 2,\n        'orange': 1,\n        'pear': 4,\n        'grape': 1,\n        'kiwi': 2,\n        'mango': 3,\n        'pineapple': 1,\n        'strawberry': 2,\n        'blueberry': 1\n    }\n\n    # Count the occurrences of each value in the dictionary\n    value_counts = {}\n    for value in my_dict.values():\n        if value in value_counts:\n            value_counts[value] += 1\n        else:\n            value_counts[value] = 1\n\n    return value_counts\n```\nHere's an example of how you can use this function:\n```python\nvalue_counts = create_dict_with_value_counts()\nprint(value_counts)\n```\nOutput:\n```python\n{3: 2, 2: 2, 1: 3}\n```\nThis means that the values 'apple', 'banana', 'orange', 'pear', 'grape', 'kiwi', 'mango', 'pineapple', 'strawberry', and 'blueberry' each appear twice in the dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.78,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

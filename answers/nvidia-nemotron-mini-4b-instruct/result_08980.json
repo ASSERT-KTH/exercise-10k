@@ -1,0 +1,9 @@
+{
+  "id": 8980,
+  "title": "String Is Upper",
+  "prompt": "Write a function that takes a string as input and returns True if the string contains only uppercase characters, False otherwise.\nSample Input: ['HELLOWORLD']\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef contains_uppercase(s: str) -> bool:\n    \"\"\"\n    Returns True if the given string contains only uppercase characters, False otherwise.\n\n    :param s: The string to check.\n    :return: True if s contains only uppercase characters, False otherwise.\n    \"\"\"\n    return all(c.isupper() for c in s)\n```\nThis function uses a generator expression and the `all()` function to check if every character in the input string is an uppercase letter. The `isupper()` method checks if a character is an uppercase letter, and the `all()` function returns `True` if all elements in an iterable are true, and `False` otherwise.\n\nHere's an example of how you can use this function:\n```python\nprint(contains_uppercase('HELLOWORLD'))  # Output: True\nprint(contains_uppercase('hello world'))  # Output: False\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.51,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

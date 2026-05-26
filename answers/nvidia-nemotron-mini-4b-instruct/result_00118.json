@@ -1,0 +1,9 @@
+{
+  "id": 118,
+  "title": "Delete Duplicate Elements",
+  "prompt": "Write a program to delete duplicate elements from an array.\nSample Input: [1, 2, 2, 3, 3, 3]\nSample Output: [1, 2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that deletes duplicate elements from an array (or list in Python terminology):\n\n```python\ndef remove_duplicates(arr):\n    \"\"\"Remove duplicate elements from an array and return a new array.\"\"\"\n    unique_arr = []\n    for num in arr:\n        if num not in unique_arr:\n            unique_arr.append(num)\n    return unique_arr\n\n# Test the function with the given sample input\nsample_input = [1, 2, 2, 3, 3, 3]\nprint(remove_duplicates(sample_input))  # Output: [1, 2, 3]\n```\n\nThis function works by iterating through the input array and checking if each number is already in the `unique_arr` list. If it's not, it adds the number to the `unique_arr` list. Finally, it returns the `unique_arr` list, which contains only the unique elements from the input array.\n\nYou can modify the function to modify the input array directly instead of creating a new one, if you prefer. Here's how you can do that:\n\n```python\ndef remove_duplicates_inplace(arr):\n    \"\"\"Remove duplicate elements from an array in-place and return the modified array.\"\"\"\n    i = 0\n    for j in range(1, len(arr)):\n        if arr[i] != arr[j]:\n            i += 1\n            arr[i] = arr[j]\n    return arr[:i+1]\n\n# Test the function with the given sample input\nsample_input = [1, 2, 2, 3, 3, 3]\nprint(remove_duplicates_inplace(sample_input))  # Output: [1, 2, 3]\n```\n\nThis function works similarly to the previous one, but instead of creating a new list, it modifies the input array directly by moving the unique elements to the beginning of the array.",
+  "error": null,
+  "elapsed_seconds": 6.24,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

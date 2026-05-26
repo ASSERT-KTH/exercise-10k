@@ -1,0 +1,9 @@
+{
+  "id": 397,
+  "title": "Calculating the Variance",
+  "prompt": "Write a program that calculates the variance of a set of numbers.\nSample Input: 1 2 3 4 5\nSample Output: Variance: 2.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the variance of a set of numbers:\n\n```python\nimport math\n\ndef calculate_variance(numbers):\n    \"\"\"\n    Calculates the variance of a set of numbers.\n\n    :param numbers: A list of numbers\n    :return: The variance as a float\n    \"\"\"\n\n    # Check if there are at least two numbers in the list\n    if len(numbers) < 2:\n        raise ValueError(\"At least two numbers are required to calculate variance.\")\n\n    # Calculate the mean (average)\n    mean = sum(numbers) / len(numbers)\n\n    # Calculate the squared differences from the mean\n    squared_diffs = [pow(num - mean, 2) for num in numbers]\n\n    # Calculate the variance\n    variance = sum(squared_diffs) / (len(numbers) - 1)  # Correct formula for variance (n-1) instead of n\n\n    return variance\n\n# Example usage\nnumbers = [1, 2, 3, 4, 5]\nvariance = calculate_variance(numbers)\nprint(f\"Variance: {variance:.2f}\")\n```\n\nThis program first checks if there are at least two numbers in the list, and then calculates the mean and squared differences from the mean. Finally, it calculates the variance by taking the average of the squared differences. The `:.2f` format specifier is used to display the variance with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 5.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

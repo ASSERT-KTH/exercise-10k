@@ -1,0 +1,9 @@
+{
+  "id": 36,
+  "title": "Function to Check for Symmetric Matrices",
+  "prompt": "Write a function that takes a 2D list as input and returns True if it's a symmetric matrix, False otherwise.\nSample Input: [[1, 2], [2, 1]]\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a 2D list (or matrix) is symmetric:\n\n```python\ndef is_symmetric(matrix):\n    \"\"\"\n    Check if a 2D list is symmetric.\n\n    :param matrix: A 2D list representing a matrix\n    :return: True if the matrix is symmetric, False otherwise\n    \"\"\"\n    # Check if the matrix is square (i.e., has the same number of rows and columns)\n    n = len(matrix)\n    if n != len(matrix[0]):\n        return False\n\n    # Check if each element in the first half of the matrix is equal to its corresponding element in the second half\n    for i in range(n // 2):\n        for j in range(i, n - i - 1):\n            if matrix[i][j] != matrix[j][i]:\n                return False\n\n    return True\n```\n\nThis function first checks if the input matrix is square (i.e., has the same number of rows and columns). Then, it checks if each element in the first half of the matrix is equal to its corresponding element in the second half. If any element in the first half is not equal to its corresponding element in the second half, the function returns False. Otherwise, it returns True, indicating that the matrix is symmetric.\n\nHere's an example of how to use the function:\n\n```python\nmatrix = [[1, 2], [2, 1]]\nprint(is_symmetric(matrix))  # Output: True\n```",
+  "error": null,
+  "elapsed_seconds": 16.1,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

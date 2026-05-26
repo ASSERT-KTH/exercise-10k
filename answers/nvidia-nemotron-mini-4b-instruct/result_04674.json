@@ -1,0 +1,9 @@
+{
+  "id": 4674,
+  "title": "Least Frequent Character",
+  "prompt": "Write a program that takes a string as input and returns the least frequent character in the string.\nSample Input: Hello World\nSample Output: H\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\nfrom collections import Counter\n\ndef least_frequent_char(s: str) -> str:\n    \"\"\"\n    Given a string, return the least frequent character in the string.\n\n    :param s: The input string.\n    :return: The least frequent character in the string.\n    \"\"\"\n    # Count the occurrences of each character in the string\n    char_counts = Counter(s)\n\n    # Find the character with the lowest count (i.e., the least frequent)\n    least_frequent = min(char_counts, key=char_counts.get)\n\n    return least_frequent\n```\nHere's how you can use this function:\n```python\nprint(least_frequent_char(\"Hello World\"))  # Output: H\n```\nThis program uses the `Counter` class from the `collections` module to count the occurrences of each character in the input string. It then uses the `min` function with a `key` argument set to `char_counts.get` to find the character with the lowest count (i.e., the least frequent). Finally, it returns this least frequent character.",
+  "error": null,
+  "elapsed_seconds": 2.89,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

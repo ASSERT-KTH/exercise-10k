@@ -1,0 +1,9 @@
+{
+  "id": 7187,
+  "title": "Basic Selection Sort",
+  "prompt": "Write a program that sorts an array using the selection sort algorithm\nSample Input: [5, 2, 8, 1, 9]\nSample Output: [1, 2, 5, 8, 9]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that sorts an array using the selection sort algorithm:\n\n```python\ndef selection_sort(arr):\n    \"\"\"\n    Sort the given array using the selection sort algorithm.\n\n    :param arr: The array to be sorted\n    :return: The sorted array\n    \"\"\"\n    n = len(arr)\n\n    # Traverse through all array elements\n    for i in range(n):\n\n        # Find the minimum element in remaining unsorted array\n        min_idx = i\n        for j in range(i+1, n):\n            if arr[min_idx] > arr[j]:\n                min_idx = j\n\n        # Swap the found minimum element with the first element\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]\n\n    return arr\n\n# Test the function with the given sample input\narr = [5, 2, 8, 1, 9]\nprint(\"Original array:\", arr)\nsorted_arr = selection_sort(arr)\nprint(\"Sorted array:\", sorted_arr)\n```\n\nWhen you run this program with the sample input `[5, 2, 8, 1, 9]`, it will output:\n\n```\nOriginal array: [5, 2, 8, 1, 9]\nSorted array: [1, 2, 5, 8, 9]\n```",
+  "error": null,
+  "elapsed_seconds": 4.64,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

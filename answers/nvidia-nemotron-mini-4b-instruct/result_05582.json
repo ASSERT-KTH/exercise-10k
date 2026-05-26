@@ -1,0 +1,9 @@
+{
+  "id": 5582,
+  "title": "Greeting Function",
+  "prompt": "Write a function that takes a name as an argument and returns a personalized greeting.\nSample Input: greet('John')\nSample Output: Hello, John!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef greet(name):\n    \"\"\"\n    Returns a personalized greeting for the given name.\n\n    Parameters:\n    name (str): The name of the person to greet.\n\n    Returns:\n    str: A personalized greeting in the format \"Hello, [name]!\".\n    \"\"\"\n    if not isinstance(name, str):\n        raise TypeError(\"The 'name' argument must be a string.\")\n\n    return f\"Hello, {name}!\"\n```\nThis function checks if the input is a string, and raises a `TypeError` if it's not. Then, it constructs and returns a personalized greeting using an f-string. Here are some examples of how you can use this function:\n\n```python\n>>> greet('John')\n'Hello, John!'\n\n>>> greet('Jane')\n'Hello, Jane!'\n\n>>> greet(123)\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\n  File \"<stdin>\", line 5, in greet\nTypeError: The 'name' argument must be a string.\n```",
+  "error": null,
+  "elapsed_seconds": 2.79,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9404,
+  "title": "Is Perfect Square",
+  "prompt": "Create a program that checks if a given integer is a perfect square.\nSample Input: 16\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given integer is a perfect square:\n\n```python\nimport math\n\ndef is_perfect_square(n):\n    \"\"\"Check if a given integer is a perfect square.\"\"\"\n    if n < 0:\n        return False\n    root = math.isqrt(n)  # isqrt returns the largest integer less than or equal to the square root of n\n    return root * root == n\n\n# Example usage:\nnumber = 16\nif is_perfect_square(number):\n    print(f\"{number} is a perfect square.\")\nelse:\n    print(f\"{number} is not a perfect square.\")\n```\n\nThis program defines a function `is_perfect_square()` that takes an integer `n` as input and returns `True` if `n` is a perfect square, and `False` otherwise. The function uses the `math.isqrt()` function to compute the largest integer less than or equal to the square root of `n`, and then checks if the square of this integer is equal to `n`.\n\nThe example usage shows how to call the function with a sample input of 16, and print the result.",
+  "error": null,
+  "elapsed_seconds": 2.82,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

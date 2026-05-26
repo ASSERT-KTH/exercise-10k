@@ -1,0 +1,9 @@
+{
+  "id": 1780,
+  "title": "Finding the Strongly Connected Components",
+  "prompt": "Write a function to find the strongly connected components of a given graph.\nSample Input: [[0, 1, 0], [0, 0, 1], [1, 0, 0]]\nSample Output: [[0, 1, 2]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses Depth-First Search (DFS) to find the strongly connected components of a given graph. We can represent the graph as a 2D list where `graph[i][j]` is 1 if there's an edge from node i to node j, and 0 otherwise.\n\n```python\nfrom collections import defaultdict, deque\n\ndef strongly_connected_components(graph):\n    # Step 1: Create a reverse graph\n    reverse_graph = defaultdict(list)\n    for i, row in enumerate(graph):\n        for j, edge in enumerate(row):\n            if edge:\n                reverse_graph[j].append(i)\n\n    # Step 2: Perform DFS on the reverse graph\n    def dfs(node, visited, stack):\n        visited.add(node)\n        for neighbor in reverse_graph[node]:\n            if neighbor not in visited:\n                dfs(neighbor, visited, stack)\n        stack.append(node)\n\n    components = []\n    visited = set()\n    stack = deque()\n\n    for node in range(len(graph)):\n        if node not in visited:\n            component = []\n            dfs(node, visited, stack)\n            while stack:\n                node = stack.pop()\n                component.append(node)\n            components.append(component[::-1])  # Reverse the component for DFS order\n\n    return components\n```\n\nHere's an example of how to use the function:\n\n```python\ngraph = [[0, 1, 0], [0, 0, 1], [1, 0, 0]]\nprint(strongly_connected_components(graph))  # Output: [[0, 1, 2]]\n```",
+  "error": null,
+  "elapsed_seconds": 5.47,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

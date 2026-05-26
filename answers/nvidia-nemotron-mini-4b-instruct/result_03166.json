@@ -1,0 +1,9 @@
+{
+  "id": 3166,
+  "title": "Highest Number",
+  "prompt": "Create a function that identifies the highest number in a given array.\nSample Input: [10, 25, 3, 56, 12]\nSample Output: 56\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that identifies the highest number in a given array (or list, as it's called in Python):\n```python\ndef find_highest(numbers):\n    \"\"\"\n    Identifies the highest number in a given array.\n\n    :param numbers: List of numbers\n    :return: The highest number in the array\n    \"\"\"\n    if not numbers:  # Check if the input is empty\n        raise ValueError(\"Input array cannot be empty\")\n\n    # Initialize the highest number to the first element in the array\n    highest = numbers[0]\n\n    # Iterate through the array to find the highest number\n    for num in numbers:\n        if num > highest:\n            highest = num\n\n    return highest\n```\nHere's an example of how to use this function:\n```python\nsample_input = [10, 25, 3, 56, 12]\nprint(find_highest(sample_input))  # Output: 56\n```\nThis function first checks if the input is empty and raises a `ValueError` if it is. Then, it initializes the `highest` variable to the first element in the array. Finally, it iterates through the array, comparing each number to the current `highest` value and updating it if a higher number is found. The function returns the final `highest` value.",
+  "error": null,
+  "elapsed_seconds": 3.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

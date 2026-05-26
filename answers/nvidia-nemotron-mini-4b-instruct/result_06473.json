@@ -1,0 +1,9 @@
+{
+  "id": 6473,
+  "title": "Dictionary Pop",
+  "prompt": "Write a function that takes a dictionary and a key as input and removes and returns the corresponding value\nSample Input: {'name': 'John', 'age': 30}, 'age'\nSample Output: 30\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef remove_value(dictionary, key):\n    \"\"\"\n    Removes and returns the value corresponding to the given key in the dictionary.\n\n    Parameters:\n    dictionary (dict): The input dictionary.\n    key (any): The key to look up in the dictionary.\n\n    Returns:\n    any: The value corresponding to the given key, or None if the key is not found.\n    \"\"\"\n    # Check if the key exists in the dictionary\n    if key in dictionary:\n        # Remove the key-value pair and return the value\n        return dictionary.pop(key)\n    else:\n        # If the key is not found, return None\n        return None\n```\nHere's an example of how you can use this function:\n```python\nsample_input = {'name': 'John', 'age': 30}\nkey = 'age'\n\nvalue = remove_value(sample_input, key)\nprint(value)  # Output: 30\n```\nThis function first checks if the given key exists in the dictionary using the `in` keyword. If the key is found, the function removes the key-value pair using the `pop()` method and returns the value. If the key is not found, the function returns `None`.",
+  "error": null,
+  "elapsed_seconds": 3.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1176,
+  "title": " Rotation Check",
+  "prompt": "Given two strings, check if the second string is a rotation of the first string\nSample Input: ['hello', 'llohe']\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if the second string is a rotation of the first string:\n\n```python\ndef is_rotation(str1, str2):\n    \"\"\"\n    Check if the second string is a rotation of the first string.\n\n    :param str1: The first string.\n    :param str2: The second string.\n    :return: True if the second string is a rotation of the first string, False otherwise.\n    \"\"\"\n\n    # Check if the lengths of the strings are equal\n    if len(str1) != len(str2):\n        return False\n\n    # Concatenate the first string with itself\n    concatenated = str1 + str1\n\n    # Check if the concatenated string contains the second string as a substring\n    return str2 in concatenated\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(is_rotation('hello', 'llohe'))  # Output: True\nprint(is_rotation('world', 'hello'))  # Output: False\n```\n\nThis function first checks if the lengths of the two strings are equal. If not, it immediately returns `False` since a rotation of a string must have the same length as the original string. Then, it concatenates the first string with itself to create a new string that contains the original string twice. Finally, it checks if the second string is a substring of this new string using the `in` keyword. If it is, the function returns `True`, indicating that the second string is a rotation of the first string. Otherwise, it returns `False`.",
+  "error": null,
+  "elapsed_seconds": 3.65,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

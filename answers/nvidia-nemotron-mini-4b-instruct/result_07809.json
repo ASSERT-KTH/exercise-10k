@@ -1,0 +1,9 @@
+{
+  "id": 7809,
+  "title": "Email Validator",
+  "prompt": "Write a program that checks whether an email address is valid.\nSample Input: example@example.com\nSample Output: Valid email address\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if an email address is valid using the `re` module for regular expressions. This program considers various email address formats, including those with and without a domain name.\n\n```python\nimport re\n\ndef is_valid_email(email):\n    \"\"\"\n    Check if an email address is valid.\n\n    :param email: str, the email address to validate\n    :return: str, \"Valid email address\" if valid, \"Invalid email address\" otherwise\n    \"\"\"\n    # Regular expression pattern for a valid email address\n    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$'\n\n    # Compile the pattern into a regular expression object\n    regex = re.compile(pattern)\n\n    # Check if the email address matches the pattern\n    if regex.fullmatch(email):\n        return \"Valid email address\"\n    else:\n        return \"Invalid email address\"\n\n# Test the function with sample input\nemail = \"example@example.com\"\nprint(is_valid_email(email))  # Output: Valid email address\n```\n\nThis program checks for the following validations:\n\n1. The email address should start with a letter, underscore, dot, or percent sign.\n2. It should contain one or more letters, digits, underscores, dots, or percent signs.\n3. It should be followed by an at sign (`@`).\n4. The part after the `@` sign should contain one or more letters, digits, or dots.\n5. It should be followed by a dot (`.`).\n6. The part after the dot should contain two or more letters.\n\nYou can modify this function to include additional validations or error messages as needed.",
+  "error": null,
+  "elapsed_seconds": 4.24,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

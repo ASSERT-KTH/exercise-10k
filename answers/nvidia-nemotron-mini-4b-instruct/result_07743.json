@@ -1,0 +1,9 @@
+{
+  "id": 7743,
+  "title": "Dictionary Data Analysis",
+  "prompt": "Create a program that takes a dictionary of student grades as input, where each key is a student's name and each value is another dictionary containing the grades for different subjects. The program should calculate the average grade for each subject across all students and return the results as a dictionary where the keys are the subject names and the values are the average grades.\nSample Input: {\"John\": {\"Math\": 85, \"Science\": 90}, \"Alice\": {\"Math\": 90, \"Science\": 85}}\nSample Output: {\"Math\": 87.5, \"Science\": 87.5}\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef calculate_average_grades(student_grades):\n    # Initialize an empty dictionary to store the average grades\n    avg_grades = {}\n\n    # Iterate over each student's grades\n    for student_name, student_info in student_grades.items():\n        # Iterate over each subject in the student's info\n        for subject, grade in student_info.items():\n            # If the subject is not already a key in the avg_grades dictionary, add it with a value of 0\n            if subject not in avg_grades:\n                avg_grades[subject] = 0\n\n            # Add the grade to the running total for this subject\n            avg_grades[subject] += grade\n\n    # Calculate the average grade for each subject by dividing the running total by the number of students\n    for subject, total in avg_grades.items():\n        avg_grades[subject] = total / len(student_grades)\n\n    return avg_grades\n```\n\nYou can use this function as follows:\n\n```python\nstudent_grades = {\"John\": {\"Math\": 85, \"Science\": 90}, \"Alice\": {\"Math\": 90, \"Science\": 85}}\nprint(calculate_average_grades(student_grades))  # Output: {'Math': 87.5, 'Science': 87.5}\n```",
+  "error": null,
+  "elapsed_seconds": 3.36,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8312,
+  "title": "Data Type Checker",
+  "prompt": "Create a program that checks the data type of a given input and prints out whether it is an integer, float, or string. Use variables to store the input and its corresponding data type.\nSample Input: 123\nSample Output: The input is an integer.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef check_data_type(input_value):\n    \"\"\"\n    Check the data type of a given input and print out whether it is an integer, float, or string.\n\n    :param input_value: The value to check the data type of.\n    \"\"\"\n\n    # Convert the input value to a string so we can use the built-in data type functions\n    input_str = str(input_value)\n\n    # Check if the input is an integer\n    if input_str.isdecimal():\n        print(f\"The input is an integer: {input_value}\")\n    # Check if the input is a float\n    elif '.' in input_str:\n        print(f\"The input is a float: {input_value}\")\n    # Check if the input is a string\n    else:\n        print(f\"The input is a string: {input_value}\")\n\n# Get user input and call the function\nuser_input = input(\"Enter a value: \")\ncheck_data_type(user_input)\n```\nThis program defines a function `check_data_type` that takes an input value as a parameter and checks its data type. It first converts the input value to a string so that it can use the built-in data type functions. Then, it checks if the input is an integer using the `isdecimal` method, if it contains a decimal point using a regular expression, or if it's a string. Finally, it prints out a message indicating the data type of the input. The program then gets user input and calls the function with the user input.",
+  "error": null,
+  "elapsed_seconds": 3.89,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

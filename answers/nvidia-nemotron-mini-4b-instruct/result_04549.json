@@ -1,0 +1,9 @@
+{
+  "id": 4549,
+  "title": "Caesar Cipher",
+  "prompt": "Create a program that implements a Caesar cipher to encrypt and decrypt a given string.\nSample Input: Hello, 3\nSample Output: Khoor\n",
+  "answer": "Sure, I'd be happy to help you create a Caesar cipher program. Here's an example implementation in Python:\n\n```python\ndef caesar_cipher(text, shift):\n    \"\"\"\n    Encrypts or decrypts a given string using a Caesar cipher.\n\n    :param text: The string to encrypt/decrypt.\n    :param shift: The number of positions to shift each character.\n    :return: The encrypted/decrypted string.\n    \"\"\"\n\n    # Ensure shift is within the valid range (0-25)\n    shift %= 26\n\n    # Create a translation table for encryption\n    if shift > 0:\n        translation_table = str.maketrans(\n            alphabet[:shift] + alphabet[shift:],\n            alphabet[shift:] + alphabet[:shift]\n        )\n    else:\n        translation_table = str.maketrans(\n            alphabet[shift:] + alphabet[:shift],\n            alphabet[:shift] + alphabet[shift:]\n        )\n\n    # Encrypt/decrypt the text\n    return text.translate(translation_table)\n\n\n# Define the alphabet for Caesar cipher\nalphabet = 'abcdefghijklmnopqrstuvwxyz'\n\n# Test the function with the given sample input\ntext = 'Hello, 3'\nshift = 3\nprint(f\"Original text: {text}\")\nprint(f\"Encrypted text (shift={shift}): {caesar_cipher(text, shift)}\")\n```\n\nThis program defines a `caesar_cipher` function that takes a string and a shift value as input and returns the encrypted/decrypted string using a Caesar cipher. The function ensures that the shift value is within the valid range (0-25) and creates a translation table for encryption or decryption. The example test at the end of the program demonstrates how to use the function with the given sample input.",
+  "error": null,
+  "elapsed_seconds": 4.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

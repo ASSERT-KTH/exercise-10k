@@ -1,0 +1,9 @@
+{
+  "id": 9706,
+  "title": "Array Element Retrieval",
+  "prompt": "Write a function to retrieve the middle element of an array. If the array has an even number of elements, return the average of the two middle elements.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_middle_element(arr):\n    \"\"\"\n    Retrieves the middle element of an array. If the array has an even number of elements,\n    returns the average of the two middle elements.\n\n    :param arr: The input array\n    :return: The middle element of the array\n    \"\"\"\n    # Check if the array has any elements\n    if not arr:\n        return None\n\n    # Calculate the index of the middle element\n    middle_index = len(arr) // 2\n\n    # If the array has an even number of elements, calculate the average of the two middle elements\n    if len(arr) % 2 == 0:\n        middle_elements = arr[middle_index - 1], arr[middle_index]\n        return sum(middle_elements) / 2\n\n    # Return the single middle element\n    return arr[middle_index]\n```\nHere's an example of how to use this function:\n```python\nprint(get_middle_element([1, 2, 3, 4, 5]))  # Output: 3\nprint(get_middle_element([1, 2, 3, 4]))     # Output: 3.0\nprint(get_middle_element([]))               # Output: None\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.42,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5409,
+  "title": "Find the Index of a Specific Element in a List",
+  "prompt": "Create a function named 'find_index' that finds and returns the index of a specific element in a given list.\nSample Input: [1, 2, 3, 4, 5], 3\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you create the `find_index` function. Here's a Python function that meets your requirements:\n\n```python\ndef find_index(lst, target):\n    \"\"\"\n    Finds and returns the index of a specific element in a given list.\n\n    Parameters:\n    lst (list): The list to search in.\n    target (any): The element to find in the list.\n\n    Returns:\n    int: The index of the target element if found, otherwise -1.\n    \"\"\"\n    try:\n        return lst.index(target)\n    except ValueError:\n        return -1\n```\n\nThis function uses the built-in `list.index()` method to find the index of the target element in the list. If the element is not found, it raises a `ValueError`, which is caught and returned as -1. Here's an example of how to use this function:\n\n```python\nprint(find_index([1, 2, 3, 4, 5], 3))  # Output: 2\nprint(find_index([1, 2, 3, 4, 5], 6))  # Output: -1\n```",
+  "error": null,
+  "elapsed_seconds": 2.77,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

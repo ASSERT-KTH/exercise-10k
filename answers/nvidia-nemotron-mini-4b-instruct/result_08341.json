@@ -1,0 +1,9 @@
+{
+  "id": 8341,
+  "title": "List Manipulation",
+  "prompt": "Write a program that takes a list of integers as input, sorts it in ascending order, and then removes the first and last elements. The program should then print the resulting list.\nSample Input: [5, 2, 8, 1, 9]\nSample Output: [2, 8, 1]\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef process_list(input_list):\n    \"\"\"\n    Takes a list of integers as input, sorts it in ascending order,\n    removes the first and last elements, and prints the resulting list.\n\n    :param input_list: List of integers\n    :return: None\n    \"\"\"\n\n    # Sort the input list in ascending order\n    sorted_list = sorted(input_list)\n\n    # Remove the first and last elements from the sorted list\n    processed_list = sorted_list[1:-1]\n\n    # Print the resulting list\n    print(processed_list)\n\n# Get user input\nuser_input = [int(x) for x in input(\"Enter a list of integers separated by spaces: \").split()]\n\n# Call the function with the user input\nprocess_list(user_input)\n```\n\nThis program first sorts the input list in ascending order using the `sorted()` function. Then, it removes the first and last elements from the sorted list using slicing (`[1:-1]`) and prints the resulting list. The user is prompted to enter a list of integers separated by spaces, and the program calls the `process_list()` function with this input.",
+  "error": null,
+  "elapsed_seconds": 2.9,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

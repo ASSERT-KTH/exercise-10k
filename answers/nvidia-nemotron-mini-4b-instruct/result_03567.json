@@ -1,0 +1,9 @@
+{
+  "id": 3567,
+  "title": "Dictionary Reduction",
+  "prompt": "Write a function that reduces a dictionary to a single value\nSample Input: {\"a\": 1, \"b\": 2, \"c\": 3} and reduction (sum of values)\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that reduces a dictionary to a single value based on the specified reduction function (in this case, sum of values).\n\n```python\ndef reduce_dict(d, reduction_func):\n    \"\"\"\n    Reduces a dictionary to a single value using a given reduction function.\n\n    Parameters:\n    d (dict): The input dictionary.\n    reduction_func (callable): A function that takes a single argument (the value of a dictionary key) and returns a single value.\n\n    Returns:\n    The single value resulting from applying the reduction function to all values in the dictionary.\n    \"\"\"\n    return reduction_func(d.values())\n\n# Example usage:\ninput_dict = {\"a\": 1, \"b\": 2, \"c\": 3}\nreduction_func = sum\noutput = reduce_dict(input_dict, reduction_func)\nprint(output)  # Output: 6\n```\n\nThis function first converts the dictionary's values to a list using the `values()` method. Then, it applies the given reduction function to the list of values. The reduction function is applied to the list of values using the `reduce()` function from the `functools` module, which is a higher-order function that applies a binary function (in this case, the reduction function) to an iterable (in this case, the list of values).",
+  "error": null,
+  "elapsed_seconds": 3.47,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

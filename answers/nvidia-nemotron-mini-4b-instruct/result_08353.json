@@ -1,0 +1,9 @@
+{
+  "id": 8353,
+  "title": "String Reversal and Palindrome Check",
+  "prompt": "Write a program that takes a string as input, reverses it, and checks if the reversed string is a palindrome. If it is, print 'Palindrome' otherwise print 'Not a palindrome'. The program should handle strings with spaces and special characters by removing them before checking for palindrome.\nSample Input: A man, a plan, a canal: Panama\nSample Output: Palindrome\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\nimport re\n\ndef is_palindrome(s):\n    \"\"\"Check if a string is a palindrome, ignoring spaces and special characters.\"\"\"\n    # Remove spaces and special characters\n    s = re.sub(r'\\W+', '', s.lower())\n    return s == s[::-1]\n\ndef main():\n    input_string = input(\"Enter a string: \")\n    if is_palindrome(input_string):\n        print(\"Palindrome\")\n    else:\n        print(\"Not a palindrome\")\n\nif __name__ == \"__main__\":\n    main()\n```\nThis program defines a helper function `is_palindrome` that takes a string as input and checks if it's a palindrome by ignoring spaces and special characters. The `main` function gets user input, calls `is_palindrome`, and prints the result. The program handles strings with spaces and special characters by removing them using a regular expression before checking for palindrome.\n\nHere's an example of how the program works:\n```\nEnter a string: A man, a plan, a canal: Panama\nPalindrome\n```",
+  "error": null,
+  "elapsed_seconds": 3.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

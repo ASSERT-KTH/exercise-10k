@@ -1,0 +1,9 @@
+{
+  "id": 1620,
+  "title": "Distance Calculator",
+  "prompt": "Create a program that takes the coordinates of two points as input and outputs the distance between them.\nSample Input: (1, 2) (4, 6)\nSample Output: 5.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes the coordinates of two points as input and outputs the distance between them using the Euclidean distance formula:\n\n```python\nimport math\n\ndef get_distance(point1, point2):\n    \"\"\"\n    Calculates the Euclidean distance between two points.\n\n    :param point1: A tuple of two floats representing the x and y coordinates of the first point.\n    :param point2: A tuple of two floats representing the x and y coordinates of the second point.\n    :return: A float representing the Euclidean distance between the two points.\n    \"\"\"\n    x1, y1 = point1\n    x2, y2 = point2\n\n    return math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)\n\n# Get user input\npoint1 = tuple(map(float, input(\"Enter the coordinates of the first point (x, y): \").split(\", \")))\npoint2 = tuple(map(float, input(\"Enter the coordinates of the second point (x, y): \").split(\", \")))\n\n# Calculate and print the distance\ndistance = get_distance(point1, point2)\nprint(f\"The distance between the two points is {distance:.2f}.\")\n```\n\nThis program defines a function `get_distance` that calculates the Euclidean distance between two points using the formula `sqrt((x2 - x1) ^ 2 + (y2 - y1) ^ 2)`. The program then prompts the user to enter the coordinates of two points and calculates the distance between them before printing the result.",
+  "error": null,
+  "elapsed_seconds": 3.72,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

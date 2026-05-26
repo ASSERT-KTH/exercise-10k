@@ -1,0 +1,9 @@
+{
+  "id": 1675,
+  "title": "Username Validator",
+  "prompt": "Create a program that takes a username as input and checks if it is valid based on the following criteria: the username should have at least 3 characters, should not have any spaces, and should not contain any special characters using if/else statements\nSample Input: john\nSample Output: valid\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef is_valid_username(username):\n    \"\"\"\n    Check if a given username is valid based on the criteria:\n    - should have at least 3 characters\n    - should not have any spaces\n    - should not contain any special characters\n    \"\"\"\n    # Check if the username has at least 3 characters\n    if len(username) < 3:\n        return False\n\n    # Check if the username contains any spaces\n    if \" \" in username:\n        return False\n\n    # Check if the username contains any special characters\n    import re\n    pattern = r'[^a-zA-Z0-9_]'\n    if re.search(pattern, username):\n        return False\n\n    return True\n\n# Get user input\nusername = input(\"Enter a username: \")\n\n# Check if the username is valid\nif is_valid_username(username):\n    print(f\"'{username}' is a valid username.\")\nelse:\n    print(f\"'{username}' is not a valid username.\")\n```\n\nThis program defines a function `is_valid_username` that checks if a given username is valid based on the specified criteria. The function first checks if the username has at least 3 characters, then checks if it contains any spaces, and finally checks if it contains any special characters (except for underscores). If all checks pass, the function returns `True`, indicating that the username is valid. The program then gets user input, calls the function to check its validity, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 5.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

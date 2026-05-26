@@ -1,0 +1,9 @@
+{
+  "id": 2755,
+  "title": "Mortgage Calculator",
+  "prompt": "Write a program that calculates the monthly payment for a mortgage given the principal, rate, and term.\nSample Input: 200000 4 30\nSample Output: 955.66\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the monthly payment for a mortgage given the principal, rate, and term:\n\n```python\ndef calculate_monthly_payment(principal, rate, term):\n    \"\"\"\n    Calculates the monthly payment for a mortgage.\n\n    Parameters:\n    principal (float): The principal amount of the mortgage.\n    rate (float): The annual interest rate as a decimal (e.g., 4% is 0.04).\n    term (int): The number of months in the mortgage term.\n\n    Returns:\n    float: The monthly payment for the mortgage.\n    \"\"\"\n\n    # Convert the term from months to years for the interest calculation\n    term_years = term / 12\n\n    # Calculate the monthly interest rate\n    monthly_rate = rate / 12\n\n    # Calculate the monthly payment using the formula:\n    # P * (r / (1 - (1 + r) ** (-n)))\n    monthly_payment = principal * (monthly_rate / (1 - (1 + monthly_rate) ** (-term_years))))\n\n    return monthly_payment\n\n# Sample input and output\nprincipal = 200000\nrate = 4\nterm = 30\n\nmonthly_payment = calculate_monthly_payment(principal, rate, term)\nprint(f\"The monthly payment for a mortgage of ${principal} with a rate of {rate}% for a term of {term} months is {monthly_payment:.2f}.\")\n```\n\nThis program first converts the term from months to years for the interest calculation, then calculates the monthly interest rate by dividing the annual rate by 12. Finally, it uses the formula for the monthly payment to calculate the monthly payment for the mortgage. The output is formatted to display two decimal places.",
+  "error": null,
+  "elapsed_seconds": 5.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3736,
+  "title": "Read and Process JSON Data",
+  "prompt": "Create a program that reads a JSON file from the user, processes the data, and prints out the results.\nSample Input: {\"name\": \"John\", \"age\": 25}\nSample Output: Name: John, Age: 25\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses the `json` module to read and parse the JSON data from a file, and then prints out the processed data in a formatted string.\n\n```python\nimport json\n\ndef process_json(file_path):\n    \"\"\"\n    Reads a JSON file, processes the data, and prints out the results.\n\n    :param file_path: The path to the JSON file\n    \"\"\"\n    try:\n        # Open the JSON file and read its contents\n        with open(file_path, 'r') as file:\n            json_data = json.load(file)\n\n        # Process the data by extracting the 'name' and 'age' keys\n        name = json_data.get('name')\n        age = json_data.get('age')\n\n        # Print out the results in a formatted string\n        print(f\"Name: {name}, Age: {age}\")\n\n    except FileNotFoundError:\n        print(f\"The file '{file_path}' was not found.\")\n    except json.JSONDecodeError as e:\n        print(f\"An error occurred while processing the JSON data: {e}\")\n\n# Get the file path from the user\nfile_path = input(\"Enter the path to the JSON file: \")\n\n# Call the function to process the data\nprocess_json(file_path)\n```\n\nYou can run this program and provide the path to your JSON file as input when prompted. The program will then print out the processed data in the desired format.",
+  "error": null,
+  "elapsed_seconds": 3.65,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

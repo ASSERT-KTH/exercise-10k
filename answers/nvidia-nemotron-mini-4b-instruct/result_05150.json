@@ -1,0 +1,9 @@
+{
+  "id": 5150,
+  "title": "Find Youngest Student",
+  "prompt": "Find the youngest student in a dictionary where keys are student names and values are their corresponding ages\nSample Input: {'John': 20, 'Emma': 22, 'Oliver': 21, 'Ava': 20, 'William': 22}\nSample Output: John\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution using a dictionary comprehension:\n```python\ndef find_youngest(students):\n    return min(students, key=students.get)\n\n# Sample input and output as per your question\nstudents = {'John': 20, 'Emma': 22, 'Oliver': 21, 'Ava': 20, 'William': 22}\nprint(find_youngest(students))  # Output: John\n```\nIn this solution, we define a function `find_youngest` that takes a dictionary of students as input. We use a dictionary comprehension to iterate over the keys and values of the input dictionary, and then use the `min` function with a key function that extracts the corresponding age from the dictionary. The `key` function is set to `students.get`, which returns the value associated with the key if it exists, and `None` otherwise. This ensures that we only consider students who have an age in the dictionary. Finally, we return the key corresponding to the minimum age.\n\nThis solution has a time complexity of O(n), where n is the number of students in the dictionary, because we only need to iterate over the dictionary once.",
+  "error": null,
+  "elapsed_seconds": 2.85,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

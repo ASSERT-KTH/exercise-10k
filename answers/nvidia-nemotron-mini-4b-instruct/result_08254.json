@@ -1,0 +1,9 @@
+{
+  "id": 8254,
+  "title": "Expense Tracker",
+  "prompt": "Develop a program that tracks expenses using if/else statements.\nSample Input: Add expense 50\nSample Output: Total expenses: 50\n",
+  "answer": "Sure, I'd be happy to help you develop a program that tracks expenses using if/else statements. Here's a simple Python program that meets your requirements:\n\n```python\n# Initialize the total expenses\ntotal_expenses = 0\n\n# Function to add an expense\ndef add_expense(amount):\n    global total_expenses\n\n    # Validate the input\n    if not isinstance(amount, (int, float)):\n        print(\"Error: Please enter a valid number.\")\n        return\n\n    # Add the expense to the total\n    total_expenses += amount\n\n    # Print the updated total expenses\n    print(f\"Total expenses: {total_expenses}\")\n\n# Main loop\nwhile True:\n    user_input = input(\"Enter 'add' to add an expense or 'quit' to exit: \").lower()\n\n    if user_input == \"add\":\n        expense_amount = float(input(\"Enter the expense amount: \"))\n        add_expense(expense_amount)\n    elif user_input == \"quit\":\n        break\n    else:\n        print(\"Error: Invalid input. Please enter 'add' or 'quit'.\")\n\n# Print the final total expenses\nprint(f\"Final total expenses: {total_expenses}\")\n```\n\nThis program defines a `add_expense` function that validates the input, adds the expense to the total, and prints the updated total expenses. The main loop allows the user to add expenses until they choose to quit. Finally, the program prints the final total expenses.",
+  "error": null,
+  "elapsed_seconds": 3.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

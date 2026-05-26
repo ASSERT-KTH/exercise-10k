@@ -1,0 +1,9 @@
+{
+  "id": 2944,
+  "title": "Generating Fibonacci Numbers",
+  "prompt": "Write a program to generate the first n Fibonacci numbers.\nSample Input: 10\nSample Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates the first `n` Fibonacci numbers:\n\n```python\ndef fibonacci(n):\n    \"\"\"Generate the first n Fibonacci numbers.\"\"\"\n    if n < 1:\n        raise ValueError(\"n must be at least 1\")\n\n    fib_sequence = [0, 1]\n\n    while len(fib_sequence) < n:\n        fib_sequence.append(sum(fib_sequence[-2:]))\n\n    return fib_sequence[:n]\n\n# Example usage:\nn = 10\nprint(fibonacci(n))  # Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]\n```\n\nThis program defines a function `fibonacci(n)` that generates the first `n` Fibonacci numbers. It first checks if `n` is at least 1, and raises a `ValueError` if it's not. Then, it initializes a list `fib_sequence` with the first two Fibonacci numbers, 0 and 1. It enters a loop that continues until the length of `fib_sequence` is equal to `n`. In each iteration of the loop, it calculates the next Fibonacci number by summing the last two numbers in the sequence, and appends it to the end of the sequence. Finally, it returns the first `n` numbers in the sequence.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

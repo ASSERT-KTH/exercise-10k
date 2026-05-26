@@ -1,0 +1,9 @@
+{
+  "id": 5762,
+  "title": "Grade Calculator",
+  "prompt": "Create a program that takes a student's score as input and prints out their grade based on the following scale: A (90-100), B (80-89), C (70-79), D (60-69), F (below 60).\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you create a program for that. Here's a Python solution that follows your specifications:\n\n```python\ndef get_grade(score):\n    \"\"\"\n    Given a student's score, return their corresponding grade.\n\n    :param score: int - The student's score between 0 and 100.\n    :return: str - The student's grade (A, B, C, D, or F).\n    \"\"\"\n    if score < 0 or score > 100:\n        raise ValueError(\"Score must be between 0 and 100.\")\n\n    if score >= 90:\n        return \"A\"\n    elif score >= 80:\n        return \"B\"\n    elif score >= 70:\n        return \"C\"\n    elif score >= 60:\n        return \"D\"\n    else:\n        return \"F\"\n\n# Get user input\nscore = int(input(\"Enter a student's score between 0 and 100: \"))\n\n# Print the grade\ngrade = get_grade(score)\nprint(f\"The grade is: {grade}\")\n```\n\nThis program defines a function `get_grade` that takes a student's score as input and returns their corresponding grade. The function checks if the input is valid (between 0 and 100) and raises a `ValueError` if it's not. Then, it uses an `if-elif-else` statement to determine the grade based on the score. Finally, the program gets user input, calls the `get_grade` function, and prints the grade.",
+  "error": null,
+  "elapsed_seconds": 4.9,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

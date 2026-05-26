@@ -1,0 +1,9 @@
+{
+  "id": 7087,
+  "title": "Character Frequency",
+  "prompt": "Read a string from the user and calculate the frequency of each character\nSample Input: hello\nSample Output: h: 1\ne: 1\nl: 2\no: 1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution using a dictionary to keep track of the frequency of each character:\n\n```python\ndef char_frequency(s):\n    char_freq = {}\n    for char in s:\n        if char in char_freq:\n            char_freq[char] += 1\n        else:\n            char_freq[char] = 1\n    return char_freq\n\n# Example usage:\ninput_string = input(\"Enter a string: \")\nchar_freq = char_frequency(input_string)\nfor char, freq in char_freq.items():\n    print(f\"{char}: {freq}\")\n```\n\nThis function goes through each character in the input string and increments its frequency in the `char_freq` dictionary. After iterating through all characters, it returns the dictionary containing the character frequencies. The example usage prompts the user to enter a string, calls the `char_frequency` function, and then prints out the character frequencies.",
+  "error": null,
+  "elapsed_seconds": 2.36,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

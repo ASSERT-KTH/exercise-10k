@@ -1,0 +1,9 @@
+{
+  "id": 1570,
+  "title": "Function Memoization",
+  "prompt": "Create a function that uses memoization to optimize the calculation of a recursive function.\nSample Input: fibonacci, 10\nSample Output: 55\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example Python function that uses memoization to optimize the calculation of the Fibonacci sequence. The `memo` dictionary is used to store previously calculated values, so that subsequent calls with the same input can be returned directly from the dictionary, without recalculating the value.\n\n```python\ndef fibonacci(n, memo={}):\n    \"\"\"\n    Calculate the nth Fibonacci number using memoization.\n\n    :param n: The position of the Fibonacci number to calculate.\n    :param memo: A dictionary to store previously calculated values.\n    :return: The nth Fibonacci number.\n    \"\"\"\n\n    # Base cases\n    if n == 0:\n        return 0\n    elif n == 1:\n        return 1\n\n    # Check if the value is already in the memo dictionary\n    if n in memo:\n        return memo[n]\n\n    # Calculate the Fibonacci number and store it in the memo dictionary\n    fib_num = fibonacci(n - 1, memo) + fibonacci(n - 2, memo)\n    memo[n] = fib_num\n\n    return fib_num\n```\n\nYou can use this function to calculate the Fibonacci number for a given position `n`, as shown in the sample input:\n\n```python\nprint(fibonacci(10))  # Output: 55\n```\n\nThis function will be much faster for larger values of `n` compared to a naive recursive implementation, as it avoids recalculating the same Fibonacci numbers multiple times.",
+  "error": null,
+  "elapsed_seconds": 3.54,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

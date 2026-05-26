@@ -1,0 +1,9 @@
+{
+  "id": 1419,
+  "title": " للحASM converter",
+  "prompt": "Write a program that converts a number from decimal to binary or vice versa. If the user inputs 'dec', convert to binary, if 'bin', convert to decimal.\nSample Input: dec 10\nSample Output: 1010\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef decimal_to_binary(decimal):\n    \"\"\"Converts a decimal number to binary.\"\"\"\n    if decimal == 0:\n        return \"0\"\n    else:\n        binary = \"\"\n        while decimal > 0:\n            binary = str(decimal % 2) + binary\n            decimal //= 2\n        return binary\n\ndef binary_to_decimal(binary):\n    \"\"\"Converts a binary number to decimal.\"\"\"\n    return int(binary, 2)\n\ndef main():\n    while True:\n        user_input = input(\"Enter 'dec' to convert from decimal to binary, or 'bin' to convert from binary to decimal: \").lower()\n        if user_input == \"dec\":\n            decimal = int(input(\"Enter a decimal number: \"))\n            print(decimal_to_binary(decimal))\n        elif user_input == \"bin\":\n            binary = input(\"Enter a binary number: \")\n            print(binary_to_decimal(binary))\n        else:\n            print(\"Invalid input. Please enter 'dec' or 'bin'.\")\n            break\n\nif __name__ == \"__main__\":\n    main()\n```\nThis program defines two functions: `decimal_to_binary()` and `binary_to_decimal()`, which perform the conversions between decimal and binary. The `main()` function handles user input and calls the appropriate conversion function based on the user's input. The program continues to run until the user enters an invalid input.",
+  "error": null,
+  "elapsed_seconds": 5.51,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

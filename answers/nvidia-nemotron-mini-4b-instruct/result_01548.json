@@ -1,0 +1,9 @@
+{
+  "id": 1548,
+  "title": "Array Element Replacement",
+  "prompt": "Given an array of strings, write a function to replace a specified element with a new value.\nSample Input: ['apple', 'banana', 'cherry'], 1, 'mango'\nSample Output: ['apple', 'mango', 'cherry']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function takes three arguments: the array of strings, the index of the element to replace, and the new value. It then modifies the original array in-place by replacing the element at the specified index with the new value.\n\n```python\ndef replace_element(arr, index, new_value):\n    \"\"\"\n    Replace a specified element in an array of strings with a new value.\n\n    :param arr: The array of strings to modify.\n    :param index: The index of the element to replace.\n    :param new_value: The new value to replace the element with.\n    :return: None (modifies the original array in-place)\n    \"\"\"\n    if not isinstance(arr, list) or not all(isinstance(s, str) for s in arr):\n        raise ValueError(\"Input array must be a list of strings.\")\n\n    if not isinstance(index, int) or index < 0 or index >= len(arr):\n        raise IndexError(\"Index must be a non-negative integer less than the length of the array.\")\n\n    if not isinstance(new_value, str):\n        raise ValueError(\"New value must be a string.\")\n\n    arr[index] = new_value\n```\n\nHere's an example of how to use this function:\n\n```python\narr = ['apple', 'banana', 'cherry']\nreplace_element(arr, 1, 'mango')\nprint(arr)  # Output: ['apple', 'mango', 'cherry']\n```",
+  "error": null,
+  "elapsed_seconds": 4.9,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

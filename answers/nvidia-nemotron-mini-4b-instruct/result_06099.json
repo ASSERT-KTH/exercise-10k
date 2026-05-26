@@ -1,0 +1,9 @@
+{
+  "id": 6099,
+  "title": "Selection Sort",
+  "prompt": "Create a program that uses nested for loops to sort a list using the selection sort algorithm.\nSample Input: [4, 2, 7, 1, 3]\nSample Output: [1, 2, 3, 4, 7]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses nested for loops to sort a list using the selection sort algorithm:\n\n```python\ndef selection_sort(arr):\n    \"\"\"\n    Sort a list using the selection sort algorithm.\n\n    :param arr: The list to be sorted\n    :return: The sorted list\n    \"\"\"\n    n = len(arr)\n\n    # Iterate through all elements and find the minimum element\n    for i in range(n):\n        min_idx = i\n        for j in range(i+1, n):\n            if arr[j] < arr[min_idx]:\n                min_idx = j\n\n        # Swap the minimum element with the first element\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]\n\n    return arr\n\n# Example usage\narr = [4, 2, 7, 1, 3]\nsorted_arr = selection_sort(arr)\nprint(sorted_arr)  # Output: [1, 2, 3, 4, 7]\n```\n\nThis program defines a function `selection_sort` that takes a list as input and returns the sorted list. The function uses two nested loops to find the minimum element in each subarray and then swaps it with the first element of the subarray. The process is repeated for each subarray in the list.",
+  "error": null,
+  "elapsed_seconds": 3.22,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

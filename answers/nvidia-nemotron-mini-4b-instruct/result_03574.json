@@ -1,0 +1,9 @@
+{
+  "id": 3574,
+  "title": "Dictionary Expanding",
+  "prompt": "Write a function that expands a flat dictionary into a nested dictionary\nSample Input: {\"a\": 1, \"b.c\": 2, \"b.d\": 3}\nSample Output: {\"a\": 1, \"b\": {\"c\": 2, \"d\": 3}}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that expands a flat dictionary into a nested dictionary based on dot notation:\n```python\ndef expand_dict(flat_dict):\n    \"\"\"\n    Expands a flat dictionary into a nested dictionary using dot notation.\n\n    :param flat_dict: The flat dictionary to expand\n    :return: A nested dictionary with the same structure as the input\n    \"\"\"\n    nested_dict = {}\n\n    for key, value in flat_dict.items():\n        # Split the key into a list of parts\n        parts = key.split(\".\")\n\n        # Create a new dictionary for each part of the key\n        current_dict = nested_dict\n        for part in parts[:-1]:  # Exclude the last part (the value)\n            current_dict = current_dict.setdefault(part, {})\n\n        # Set the last part as the value in the current dictionary\n        current_dict[parts[-1]] = value\n\n    return nested_dict\n```\nHere's an example of how to use this function:\n```python\nflat_dict = {\"a\": 1, \"b.c\": 2, \"b.d\": 3}\nnested_dict = expand_dict(flat_dict)\nprint(nested_dict)  # Output: {'a': 1, 'b': {'c': 2, 'd': 3}}\n```\nThis function works by iterating over the key-value pairs in the input dictionary. For each pair, it splits the key into a list of parts using the dot notation, and creates a new dictionary for each part of the key. It then sets the last part of the key as the value in the current dictionary. This process continues recursively until all parts of the key have been processed, resulting in a nested dictionary with the same structure as the input.",
+  "error": null,
+  "elapsed_seconds": 4.14,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

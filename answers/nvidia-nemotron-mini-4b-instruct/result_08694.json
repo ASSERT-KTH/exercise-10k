@@ -1,0 +1,9 @@
+{
+  "id": 8694,
+  "title": "String Repeater",
+  "prompt": "Ask the user for a string and an integer, then print out the string repeated that many times.\nSample Input: hello 3\nSample Output: hellohellohello\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution for your problem:\n\n```python\ndef repeat_string(string, times):\n    \"\"\"\n    Repeats the given string the specified number of times.\n\n    :param string: The string to repeat.\n    :param times: The number of times to repeat the string.\n    :return: A string containing the original string repeated the specified number of times.\n    \"\"\"\n    if not isinstance(string, str) or not isinstance(times, int):\n        raise TypeError(\"Both 'string' and 'times' must be of type str and int, respectively.\")\n\n    return string * times\n\n# Get user input\nuser_input = input(\"Enter a string and an integer separated by a space: \")\nstring, times = user_input.split()\n\n# Convert the string to an integer\ntimes = int(times)\n\n# Print the result\nprint(repeat_string(string, times))\n```\n\nThis function checks if the input types are correct, and then uses string multiplication (`string * times`) to repeat the string the specified number of times. The function also handles edge cases where the input types are not correct. Finally, the function prompts the user for input, splits it into separate strings, converts the second string to an integer, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

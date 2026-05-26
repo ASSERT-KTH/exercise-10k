@@ -1,0 +1,9 @@
+{
+  "id": 6716,
+  "title": "Data Serialization",
+  "prompt": "Write a program that takes user-provided data and serializes it to a file\nSample Input: {name: John, age: 25}\nSample Output: Data serialized to file\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes user-provided data in JSON format and serializes it to a file. Make sure you have the `json` library installed, which you can install using pip:\n\n```bash\npip install json\n```\n\nHere's the Python code:\n\n```python\nimport json\n\ndef serialize_data_to_file(data, filename):\n    \"\"\"\n    Serializes user-provided data to a file in JSON format.\n\n    :param data: The data to be serialized as a Python dictionary.\n    :param filename: The name of the file to save the serialized data.\n    \"\"\"\n\n    # Ensure the data is a dictionary\n    if not isinstance(data, dict):\n        raise ValueError(\"The provided data must be a dictionary.\")\n\n    # Serialize the data to JSON format\n    with open(filename, 'w') as f:\n        json.dump(data, f, indent=4)  # Indentation for better readability\n\n    print(f\"Data serialized to {filename}.\")\n\n# Example usage\nuser_data = {\"name\": \"John\", \"age\": 25}\nserialize_data_to_file(user_data, \"user_data.json\")\n```\n\nThis program defines a function `serialize_data_to_file` that takes a dictionary as input and serializes it to a file named `filename` in JSON format. The function checks if the input is a dictionary and raises a `ValueError` if it's not. The example usage at the end of the script demonstrates how to use the function to serialize a user-provided dictionary to a file named `user_data.json`.",
+  "error": null,
+  "elapsed_seconds": 3.82,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4652,
+  "title": "Student Grade Book",
+  "prompt": "Create a program that manages a student's grades. The program stores the student's grades in a dictionary and calculates the average grade.\nSample Input: Math 90\nSample Output: Your average grade is 90.0\n",
+  "answer": "Sure, I'd be happy to help you create a program that manages a student's grades. Here's a Python solution using a dictionary to store the grades:\n\n```python\ndef calculate_average_grade():\n    # Initialize an empty dictionary to store grades\n    grades = {}\n\n    while True:\n        # Get the subject and grade from user input\n        subject = input(\"Enter the subject (or type 'done' to finish): \").lower()\n        if subject == \"done\":\n            break\n        grade = float(input(f\"Enter the grade for {subject}: \"))\n\n        # Add the grade to the dictionary\n        grades[subject] = grade\n\n    # Calculate the average grade\n    total = sum(grades.values())\n    num_subjects = len(grades)\n    average = total / num_subjects\n\n    # Print the result\n    print(f\"Your average grade is {average:.1f}.\")\n\n# Call the function\ncalculate_average_grade()\n```\n\nThis program defines a function `calculate_average_grade()` that prompts the user to enter subjects and grades until the user types 'done'. Once all grades are entered, the function calculates the average grade and prints it.\n\nHere's an example of how the program might interact with the user:\n\n```\nEnter the subject (or type 'done' to finish): Math\nEnter the grade for Math: 90\nEnter the subject (or type 'done' to finish): Science\nEnter the grade for Science: 85\nEnter the subject (or type 'done' to finish): done\nYour average grade is 88.0.\n```",
+  "error": null,
+  "elapsed_seconds": 10.06,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

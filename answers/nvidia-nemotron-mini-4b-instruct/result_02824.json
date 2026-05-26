@@ -1,0 +1,9 @@
+{
+  "id": 2824,
+  "title": "Discount Calculator",
+  "prompt": "Create a program to calculate the discount amount based on the total price of an item. If the total price is above $100, a 10% discount is applied. If the total price is between $50 and $100, a 5% discount is applied. If the total price is below $50, no discount is applied.\nSample Input: 75\nSample Output: 3.75\n",
+  "answer": "Here's a Python program that calculates the discount amount based on the total price of an item as described:\n\n```python\ndef calculate_discount(total_price):\n    # Check if the total price is above $100\n    if total_price > 100:\n        discount_amount = total_price * 0.1\n    # Check if the total price is between $50 and $100\n    elif 50 <= total_price <= 100:\n        discount_amount = total_price * 0.05\n    # If the total price is below $50, no discount is applied\n    else:\n        discount_amount = 0\n\n    return discount_amount\n\n# Get user input\ntotal_price = float(input(\"Enter the total price: \"))\n\n# Calculate and print the discount amount\ndiscount = calculate_discount(total_price)\nprint(f\"The discount amount is ${discount:.2f}\")\n```\n\nThis program defines a function `calculate_discount` that takes the total price as an argument and returns the corresponding discount amount. The function checks the total price and applies the appropriate discount percentage based on the given conditions. The program then gets user input for the total price, calls the function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 2.93,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

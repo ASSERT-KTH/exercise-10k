@@ -1,0 +1,9 @@
+{
+  "id": 1773,
+  "title": "Checking for Balanced Brackets",
+  "prompt": "Write a function to check if a given string has balanced brackets.\nSample Input: \"({[]})\"\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a given string has balanced brackets using a stack data structure. The function assumes that the brackets are represented as '(', ')', '[', ']', '{', '}', and that they should be balanced in the order of opening: '(', '[', '{' and closing: ')', ']', '}'.\n\n```python\ndef is_balanced(s: str) -> bool:\n    \"\"\"\n    Check if a given string has balanced brackets.\n\n    :param s: The string to check for balanced brackets.\n    :return: True if the string has balanced brackets, False otherwise.\n    \"\"\"\n\n    # Mapping of opening brackets to their corresponding closing brackets\n    bracket_map = {\")\": \"(\", \"]\": \"[\", \"}\": \"{\"}\n\n    stack = []\n\n    for char in s:\n        if char in bracket_map.values():\n            stack.append(char)\n        elif char in bracket_map.keys():\n            if not stack or bracket_map[char] != stack.pop():\n                return False\n\n    return not stack\n```\n\nHere's an example of how to use the function:\n\n```python\nprint(is_balanced(\"({[]})\"))  # Output: True\nprint(is_balanced(\"([)]\"))    # Output: False\nprint(is_balanced(\"{[]}\"))    # Output: True\nprint(is_balanced(\"([)]\"))    # Output: False\n```",
+  "error": null,
+  "elapsed_seconds": 3.6,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

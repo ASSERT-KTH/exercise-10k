@@ -1,0 +1,9 @@
+{
+  "id": 4456,
+  "title": "Binary Converter",
+  "prompt": "Write a program that converts decimal numbers to binary. The user should be able to input a decimal number and the program should then print out the binary equivalent.\nSample Input: 10\nSample Output: 1010\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef decimal_to_binary(decimal_number):\n    \"\"\"\n    Converts a decimal number to binary and returns the result as a string.\n\n    :param decimal_number: The decimal number to convert to binary.\n    :return: The binary equivalent of the input decimal number as a string.\n    \"\"\"\n    binary_number = ''\n    while decimal_number > 0:\n        remainder = decimal_number % 2\n        decimal_number = decimal_number // 2\n        binary_number = str(remainder) + binary_number\n\n    return binary_number\n\n# Get user input\ndecimal_number = int(input(\"Enter a decimal number: \"))\n\n# Convert decimal to binary and print the result\nbinary_number = decimal_to_binary(decimal_number)\nprint(f\"The binary equivalent of {decimal_number} is {binary_number}.\")\n```\n\nThis program defines a function `decimal_to_binary` that takes a decimal number as input and returns its binary equivalent as a string. The function uses a while loop to repeatedly divide the decimal number by 2 and append the remainder to a string, until the decimal number becomes 0. The function is then called with user input, and the result is printed to the console.",
+  "error": null,
+  "elapsed_seconds": 3.25,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

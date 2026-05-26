@@ -1,0 +1,9 @@
+{
+  "id": 6139,
+  "title": "Two Truths and a Lie",
+  "prompt": "Create a program that asks the user to guess which statement is false.\nSample Input: The capital of France is Paris. The largest planet in our solar system is Earth. The sun is a star.\nSample Output: The statement 'The largest planet in our solar system is Earth' is false.\n",
+  "answer": "Here's a Python program that meets your requirements. This program will ask the user to guess which statement is false, and then provide feedback.\n\n```python\n# Get user input\nuser_input = input(\"Please enter three statements: \")\n\n# Split the input into statements\nstatements = user_input.split(\".\")\n\n# Create a list of true statements\ntrue_statements = [\"The capital of France is Paris.\", \"The sun is a star.\", \"The largest planet in our solar system is Earth.\"]\n\n# Ask the user to guess which statement is false\nfor i, statement in enumerate(statements):\n    print(f\"Is statement {i+1} false? (yes/no)\")\n    guess = input().lower()\n\n    # Check the user's guess and provide feedback\n    if guess == \"yes\":\n        print(f\"The statement 'The capital of France is Paris.' is false.\")\n    elif guess == \"no\":\n        print(f\"The statement 'The largest planet in our solar system is Earth.' is false.\")\n    else:\n        print(\"Please enter 'yes' or 'no'.\")\n\n# Check if the user guessed correctly\nuser_guess = int(input(\"Which statement was false? \")) - 1\nif user_guess == 2:\n    print(\"Congratulations! You guessed correctly.\")\nelse:\n    print(f\"Sorry, the statement '{statements[user_guess]}' was false.\")\n```\n\nThis program will ask the user to enter three statements, split them into individual statements, and then ask the user to guess which statement is false. The program will provide feedback based on the user's guess.",
+  "error": null,
+  "elapsed_seconds": 3.73,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

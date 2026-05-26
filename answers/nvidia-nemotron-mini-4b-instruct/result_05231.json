@@ -1,0 +1,9 @@
+{
+  "id": 5231,
+  "title": "Number Sequence Checker",
+  "prompt": "Write a program that takes a sequence of numbers as input, and prints 'Increasing' if the sequence is increasing, 'Decreasing' if the sequence is decreasing, and 'Neither' otherwise.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: Increasing\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef check_sequence(seq):\n    \"\"\"\n    Check if a sequence of numbers is increasing, decreasing, or neither.\n\n    :param seq: List of numbers\n    :return: String indicating the type of sequence\n    \"\"\"\n    if not seq:  # Empty sequence is neither increasing nor decreasing\n        return 'Neither'\n\n    if all(seq[i] <= seq[i+1] for i in range(len(seq) - 1)):\n        return 'Increasing'\n    elif all(seq[i] >= seq[i+1] for i in range(len(seq) - 1)):\n        return 'Decreasing'\n    else:\n        return 'Neither'\n\n# Example usage\nseq = [1, 2, 3, 4, 5]\nprint(check_sequence(seq))  # Output: Increasing\n```\nThis program defines a function `check_sequence` that takes a list of numbers as input and returns a string indicating the type of sequence. The function first checks if the input sequence is empty, in which case it returns 'Neither'. Then, it checks if all elements in the sequence are less than or equal to their adjacent elements, or all elements are greater than or equal to their adjacent elements. If either condition is true, the function returns 'Increasing' or 'Decreasing', respectively. Otherwise, it returns 'Neither'. The example usage at the end of the program demonstrates how to use the function with a sample input sequence.",
+  "error": null,
+  "elapsed_seconds": 3.55,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

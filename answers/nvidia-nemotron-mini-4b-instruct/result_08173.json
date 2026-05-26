@@ -1,0 +1,9 @@
+{
+  "id": 8173,
+  "title": "Array Any",
+  "prompt": "Create an array of 5 integers and check if any element meets a condition.\nSample Input: [1, 2, 3, 4, 5], x > 3\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution using list comprehension and the `any()` function to check if any element in the array meets the given condition:\n\n```python\ndef check_condition(arr, x):\n    return any(num > x for num in arr)\n\n# Sample input and output as per your question\narr = [1, 2, 3, 4, 5]\nx = 3\nprint(check_condition(arr, x))  # Output: True\n```\n\nIn this solution, the `check_condition()` function takes an array `arr` and a value `x` as input. It uses a generator expression `(num > x for num in arr)` to check if any element `num` in the array is greater than `x`. The `any()` function then checks if any element in the generator expression is `True`, which means at least one element in the array meets the condition. If such an element exists, the function returns `True`, otherwise it returns `False`.\n\nYou can replace the condition in the function call with any other condition you want to check. For example, if you want to check if any element is less than 5, you can use:\n\n```python\nprint(check_condition(arr, 5))  # Output: False\n```",
+  "error": null,
+  "elapsed_seconds": 2.96,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

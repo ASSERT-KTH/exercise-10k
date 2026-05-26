@@ -1,0 +1,9 @@
+{
+  "id": 1911,
+  "title": "Fuel Efficiency Calculator",
+  "prompt": "Write a program that calculates the fuel efficiency given the distance traveled and amount of fuel consumed.\nSample Input: 500 25\nSample Output: 20.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates fuel efficiency given the distance traveled and amount of fuel consumed:\n```python\ndef calculate_fuel_efficiency(distance, fuel_consumed):\n    \"\"\"\n    Calculates fuel efficiency given the distance traveled and amount of fuel consumed.\n\n    :param distance: The distance traveled in miles.\n    :param fuel_consumed: The amount of fuel consumed in gallons.\n    :return: The fuel efficiency in miles per gallon (mpg).\n    \"\"\"\n    # Ensure the inputs are non-negative\n    if distance < 0:\n        raise ValueError(\"Distance must be non-negative.\")\n    if fuel_consumed < 0:\n        raise ValueError(\"Fuel consumed must be non-negative.\")\n\n    # Calculate fuel efficiency\n    mpg = distance / fuel_consumed\n\n    return mpg\n\n# Example usage\ndistance = 500\nfuel_consumed = 25\n\ntry:\n    fuel_efficiency = calculate_fuel_efficiency(distance, fuel_consumed)\n    print(f\"Fuel efficiency: {fuel_efficiency:.2f} mpg\")\nexcept ValueError as e:\n    print(e)\n```\nThis program defines a function `calculate_fuel_efficiency` that takes the distance traveled and amount of fuel consumed as input, checks for non-negative values, and calculates the fuel efficiency. The example usage at the end of the program demonstrates how to use the function with sample input.",
+  "error": null,
+  "elapsed_seconds": 3.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

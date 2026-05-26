@@ -1,0 +1,9 @@
+{
+  "id": 1683,
+  "title": "Function to Find the Maximum Value in a List",
+  "prompt": "Create a function to find the maximum value in a list of numbers.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the maximum value in a list of numbers:\n\n```python\ndef find_max(numbers):\n    \"\"\"\n    Find the maximum value in a list of numbers.\n\n    :param numbers: List of numbers\n    :return: Maximum number in the list\n    \"\"\"\n    if not numbers:  # Check if the list is empty\n        raise ValueError(\"Input list cannot be empty\")\n\n    return max(numbers)  # Return the maximum number using built-in max function\n```\n\nThis function first checks if the input list is empty and raises a `ValueError` if it is. Then, it uses the built-in `max()` function to find the maximum value in the list. Here's an example of how to use this function:\n\n```python\nnumbers = [1, 2, 3, 4, 5]\nmax_value = find_max(numbers)\nprint(max_value)  # Output: 5\n```\n\nThis function should work for any list of numbers, including lists with negative or zero values. If you want to ensure that the function only works with non-negative numbers, you can modify the function as follows:\n\n```python\ndef find_max(numbers):\n    \"\"\"\n    Find the maximum value in a list of non-negative numbers.\n\n    :param numbers: List of numbers\n    :return: Maximum number in the list\n    \"\"\"\n    if not numbers:  # Check if the list is empty\n        raise ValueError(\"Input list cannot be empty\")\n\n    return max(filter(lambda x: x >= 0, numbers))  # Return the maximum number using filter function\n```\n\nThis modified function uses the `filter()` function to filter out any negative numbers before finding the maximum value.",
+  "error": null,
+  "elapsed_seconds": 4.09,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

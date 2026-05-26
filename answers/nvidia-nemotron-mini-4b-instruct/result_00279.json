@@ -1,0 +1,9 @@
+{
+  "id": 279,
+  "title": "Tax Calculator",
+  "prompt": "Write a program that calculates the tax amount and total cost of a product given its price and tax rate.\nSample Input: 100 8\nSample Output: Tax Amount: 8\nTotal Cost: 108\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the tax amount and total cost of a product given its price and tax rate:\n\n```python\ndef calculate_tax_and_total_cost(price, tax_rate):\n    \"\"\"\n    Calculates the tax amount and total cost of a product given its price and tax rate.\n\n    :param price: The price of the product.\n    :param tax_rate: The tax rate as a decimal (e.g., 0.08 for 8%).\n    :return: A tuple containing the tax amount and total cost.\n    \"\"\"\n\n    # Validate input\n    if not isinstance(price, (int, float)) or price < 0:\n        raise ValueError(\"Price must be a non-negative number.\")\n\n    if not isinstance(tax_rate, (float, int)) or tax_rate < 0 or tax_rate > 1:\n        raise ValueError(\"Tax rate must be a number between 0 and 1 (exclusive).\")\n\n    # Calculate tax amount and total cost\n    tax_amount = price * tax_rate\n    total_cost = price + tax_amount\n\n    return tax_amount, total_cost\n\n\n# Example usage\nprice = 100\ntax_rate = 0.08\n\ntax_amount, total_cost = calculate_tax_and_total_cost(price, tax_rate)\n\nprint(f\"Tax Amount: {tax_amount:.2f}\")\nprint(f\"Total Cost: {total_cost:.2f}\")\n```\n\nThis program defines a function `calculate_tax_and_total_cost` that takes the price and tax rate as input and returns a tuple containing the tax amount and total cost. The function validates the input to ensure it's valid and then calculates the tax amount and total cost. The example usage at the end of the program demonstrates how to use the function to calculate the tax amount and total cost for a given price and tax rate.",
+  "error": null,
+  "elapsed_seconds": 6.03,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5764,
+  "title": "Weather Forecast",
+  "prompt": "Create a program that takes the temperature as input and prints out a weather forecast based on the following conditions: hot (above 25), warm (15-24), cool (5-14), cold (below 5).\nSample Input: 20\nSample Output: The weather is warm.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_weather_forecast(temperature):\n    \"\"\"\n    Given a temperature as input, returns a string indicating the weather forecast.\n\n    :param temperature: float or int representing the temperature\n    :return: str indicating the weather forecast (hot, warm, cool, cold)\n    \"\"\"\n    if temperature < 5:\n        return \"The weather is cold.\"\n    elif temperature >= 5 and temperature < 15:\n        return \"The weather is cool.\"\n    elif temperature >= 15 and temperature < 25:\n        return \"The weather is warm.\"\n    else:\n        return \"The weather is hot.\"\n\n# Get user input for temperature\ntry:\n    temperature = float(input(\"Enter the temperature: \"))\nexcept ValueError:\n    print(\"That's not a valid temperature. Please enter a number.\")\n    exit()\n\n# Print the weather forecast\nprint(get_weather_forecast(temperature))\n```\nThis program defines a function `get_weather_forecast` that takes a temperature as input and returns a string indicating the weather forecast. The function uses an `if` statement to check the temperature range and return the appropriate weather forecast. The program then gets user input for the temperature, converts it to a float, and calls the `get_weather_forecast` function to print the weather forecast. If the user enters an invalid input, the program catches the `ValueError` exception and prints an error message and exits.",
+  "error": null,
+  "elapsed_seconds": 3.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4218,
+  "title": "Mode Calculation",
+  "prompt": "Calculate the mode of an array.\nSample Input: [1, 2, 2, 3, 3, 3]\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you calculate the mode of an array. The mode is the value that appears most frequently in the array. Here's a Python function that calculates the mode:\n\n```python\ndef find_mode(arr):\n    count = {}\n    for num in arr:\n        if num in count:\n            count[num] += 1\n        else:\n            count[num] = 1\n    max_count = max(count.values())\n    return [key for key, value in count.items() if value == max_count]\n```\n\nYou can use this function as follows:\n\n```python\nsample_input = [1, 2, 2, 3, 3, 3]\nprint(find_mode(sample_input))  # Output: [3]\n```\n\nThis function first creates a dictionary `count` to keep track of the occurrences of each number in the array. Then, it finds the maximum count and returns all the keys (numbers) that have this maximum count. If there are multiple numbers with the maximum count, the function returns a list of all those numbers.",
+  "error": null,
+  "elapsed_seconds": 2.54,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

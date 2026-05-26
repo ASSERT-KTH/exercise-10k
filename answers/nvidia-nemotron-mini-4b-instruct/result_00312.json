@@ -1,0 +1,9 @@
+{
+  "id": 312,
+  "title": "List Transposition",
+  "prompt": "Write a function that transposes a given list of lists.\nSample Input: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nSample Output: [[1, 4, 7], [2, 5, 8], [3, 6, 9]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that transposes a given list of lists using list comprehension:\n\n```python\ndef transpose(matrix):\n    return [list(row) for row in zip(*matrix)]\n```\n\nThis function works by using the `zip` function to pair up corresponding elements from each row in the input matrix. Then, it uses a list comprehension to create a new list of lists where each inner list contains the transposed elements.\n\nHere's an example of how you can use this function:\n\n```python\nmatrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\ntransposed_matrix = transpose(matrix)\nprint(transposed_matrix)  # Output: [[1, 4, 7], [2, 5, 8], [3, 6, 9]]\n```\n\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.91,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

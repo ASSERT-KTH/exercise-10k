@@ -1,0 +1,9 @@
+{
+  "id": 5718,
+  "title": "Binary Converter",
+  "prompt": "Convert a decimal number to binary or vice versa.\nSample Input: 10\nSample Output: 1010\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that converts a decimal number to binary and vice versa:\n\n```python\ndef decimal_to_binary(decimal):\n    \"\"\"\n    Converts a decimal number to binary.\n\n    :param decimal: The decimal number to convert.\n    :return: The binary representation of the decimal number.\n    \"\"\"\n    if decimal < 0:\n        raise ValueError(\"Input must be non-negative\")\n\n    result = \"\"\n    while decimal > 0:\n        remainder = decimal % 2\n        decimal = decimal // 2\n        result = str(remainder) + result\n\n    return result\n\n\ndef binary_to_decimal(binary):\n    \"\"\"\n    Converts a binary number to decimal.\n\n    :param binary: The binary number to convert.\n    :return: The decimal representation of the binary number.\n    \"\"\"\n    if binary[0] == '-' and len(binary) > 1:\n        binary = binary[1:]\n\n    result = 0\n    power = 0\n    for digit in binary[::-1]:\n        result += int(digit) * (2**power)\n        power += 1\n\n    return result\n```\n\nHere's an example of how to use these functions:\n\n```python\nprint(decimal_to_binary(10))  # Output: 1010\nprint(binary_to_decimal('1010'))  # Output: 10\n```\n\nThis function first checks if the input is non-negative, and then converts the decimal number to binary using a while loop and the bitwise operator `//`. The binary number is reversed and converted back to an integer using a for loop and the bitwise operator `*`.",
+  "error": null,
+  "elapsed_seconds": 4.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

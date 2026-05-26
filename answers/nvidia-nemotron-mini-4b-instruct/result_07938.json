@@ -1,0 +1,9 @@
+{
+  "id": 7938,
+  "title": "Force Calculator",
+  "prompt": "Create a program to calculate the force given the mass and acceleration.\nSample Input: 10 5\nSample Output: 50.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the force given the mass and acceleration:\n\n```python\ndef calculate_force(mass, acceleration):\n    \"\"\"\n    Calculates the force given the mass and acceleration.\n\n    Parameters:\n    mass (float): The mass of the object in kilograms.\n    acceleration (float): The acceleration of the object in meters per second squared.\n\n    Returns:\n    float: The force exerted on the object in Newtons.\n    \"\"\"\n\n    # Check that the input values are non-negative\n    if mass < 0:\n        raise ValueError(\"Mass must be non-negative.\")\n    if acceleration < 0:\n        raise ValueError(\"Acceleration must be non-negative.\")\n\n    # Calculate the force using the formula F = m * a\n    force = mass * acceleration\n\n    return force\n\n# Get user input\nmass = float(input(\"Enter the mass of the object in kilograms: \"))\nacceleration = float(input(\"Enter the acceleration of the object in meters per second squared: \"))\n\n# Calculate and print the force\nforce = calculate_force(mass, acceleration)\nprint(f\"The force exerted on the object is {force:.2f} Newtons.\")\n```\n\nThis program defines a function `calculate_force` that checks the input values for validity and then calculates the force using the formula `F = m * a`. The program then prompts the user to enter the mass and acceleration, calculates the force using the function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

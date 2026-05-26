@@ -1,0 +1,9 @@
+{
+  "id": 1195,
+  "title": "Student Grade Book",
+  "prompt": "Write a program that stores student grades in a dictionary and calculates the average grade.\nSample Input: John 90, Jane 80\nSample Output: Average grade: 85.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_average_grade(students):\n    \"\"\"\n    Calculates the average grade of a list of students.\n\n    :param students: A list of tuples, where each tuple contains a student's name and grade.\n    :return: The average grade as a float.\n    \"\"\"\n    # Ensure the input is a list of tuples\n    if not all(isinstance(student, tuple) and len(student) == 2 for student in students):\n        raise ValueError(\"Input should be a list of tuples, where each tuple contains a student's name and grade.\")\n\n    # Calculate the total grade and the number of students\n    total_grade = sum(float(student[1]) for student in students)\n    num_students = len(students)\n\n    # Calculate and return the average grade\n    return total_grade / num_students\n\n\n# Example usage\nstudents = [(\"John\", 90), (\"Jane\", 80)]\naverage_grade = calculate_average_grade(students)\nprint(f\"Average grade: {average_grade:.2f}\")\n```\nThis program defines a function `calculate_average_grade` that takes a list of tuples as input, where each tuple contains a student's name and grade. The function first checks if the input is valid, then calculates the total grade and the number of students, and finally returns the average grade as a float. The example usage at the end of the program demonstrates how to use the function with a sample input.",
+  "error": null,
+  "elapsed_seconds": 3.61,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

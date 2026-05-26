@@ -1,0 +1,9 @@
+{
+  "id": 1947,
+  "title": "Array Deletion",
+  "prompt": "Write a program that takes an array and an index as input and removes the element at that index from the array.\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: [1, 2, 4, 5]\n",
+  "answer": "Here's a Python program that accomplishes this task:\n\n```python\ndef remove_element(arr, index):\n    # Check if the index is within the bounds of the array\n    if index < 0 or index >= len(arr):\n        return \"Invalid index. Please provide an index between 0 and the length of the array.\"\n    \n    # Remove the element at the given index and return the updated array\n    return arr[:index] + arr[index+1:]\n\n# Test the function with the provided sample input\nsample_input = [1, 2, 3, 4, 5]\nsample_index = 2\nprint(remove_element(sample_input, sample_index))  # Output: [1, 2, 4, 5]\n```\n\nThis program defines a function `remove_element` that takes an array and an index as input. It first checks if the index is within the bounds of the array. If not, it returns an error message. Otherwise, it removes the element at the given index by slicing the array before and after the index, and returns the updated array. The function is then tested with the provided sample input to demonstrate its functionality.",
+  "error": null,
+  "elapsed_seconds": 4.01,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

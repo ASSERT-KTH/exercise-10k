@@ -1,0 +1,9 @@
+{
+  "id": 2713,
+  "title": "Longest Common Suffix",
+  "prompt": "Write a program to find the longest common suffix of two or more strings.\nSample Input: hello, world, yellow\nSample Output: low\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the longest common suffix of two or more strings:\n\n```python\ndef longest_common_suffix(strings):\n    \"\"\"\n    Find the longest common suffix of two or more strings.\n\n    :param strings: List of strings\n    :return: Longest common suffix\n    \"\"\"\n    if not strings:\n        return \"\"\n\n    # Sort the strings by length in descending order\n    strings.sort(key=len, reverse=True)\n\n    # Initialize the longest common suffix\n    lcs = strings[0]\n\n    # Iterate over the remaining strings and update the lcs if necessary\n    for s in strings[1:]:\n        while s.index(lcs[-1]) == len(lcs) - 1 and len(s) >= len(lcs):\n            lcs += s[-1]\n\n    return lcs\n\n# Example usage\nstrings = [\"hello\", \"world\", \"yellow\"]\nprint(longest_common_suffix(strings))  # Output: low\n```\n\nThis program first sorts the input strings by length in descending order. Then, it initializes the longest common suffix to the first string in the list. It then iterates over the remaining strings, updating the lcs if the last character of the current string matches the last character of the lcs and the length of the current string is greater than or equal to the length of the lcs. Finally, it returns the longest common suffix.",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

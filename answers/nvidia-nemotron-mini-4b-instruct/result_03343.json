@@ -1,0 +1,9 @@
+{
+  "id": 3343,
+  "title": "Multiplication Table",
+  "prompt": "Write a program that uses a for loop to print the multiplication table of a given number up to 10.\nSample Input: 5\nSample Output: 5 x 1 = 5\n5 x 2 = 10\n5 x 3 = 15\n5 x 4 = 20\n5 x 5 = 25\n5 x 6 = 30\n5 x 7 = 35\n5 x 8 = 40\n5 x 9 = 45\n5 x 10 = 50\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses a for loop to print the multiplication table of a given number up to 10:\n\n```python\ndef print_multiplication_table(number):\n    \"\"\"Print the multiplication table of a given number up to 10.\"\"\"\n\n    # Ensure the input is a positive integer\n    if not isinstance(number, int) or number < 1:\n        raise ValueError(\"Input must be a positive integer.\")\n\n    # Print the header\n    print(f\"{number} x 1 = {number}\")\n\n    # Use a for loop to iterate from 2 to 10\n    for i in range(2, 11):\n        # Calculate the product and print it\n        product = number * i\n        print(f\"{number} x {i} = {product}\")\n\n# Get user input and call the function\nuser_input = int(input(\"Enter a number: \"))\nprint_multiplication_table(user_input)\n```\n\nThis program defines a function `print_multiplication_table` that takes a number as input and prints its multiplication table up to 10. The function checks if the input is a positive integer and raises a `ValueError` if it's not. Then, it prints the header and uses a for loop to iterate from 2 to 10, calculating and printing the product of the number and each iteration value. Finally, the program gets user input, calls the function with the user input, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

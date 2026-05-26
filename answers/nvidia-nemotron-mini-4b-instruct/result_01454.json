@@ -1,0 +1,9 @@
+{
+  "id": 1454,
+  "title": "CalculateMarkup",
+  "prompt": "Write a program that takes the cost and markup percentage as input and outputs the selling price.\nSample Input: 50 25\nSample Output: 62.5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes the cost and markup percentage as input and outputs the selling price:\n```python\ndef calculate_selling_price(cost, markup_percentage):\n    \"\"\"\n    Calculates the selling price given the cost and markup percentage.\n\n    :param cost: The cost of the item before adding markup.\n    :param markup_percentage: The markup percentage as a decimal (e.g., 0.25 for 25%).\n    :return: The selling price as a float.\n    \"\"\"\n    # Ensure the input is valid (positive decimal)\n    if not isinstance(markup_percentage, (float, int)) or markup_percentage < 0:\n        raise ValueError(\"Markup percentage must be a positive decimal.\")\n\n    # Calculate the selling price\n    selling_price = cost + (cost * markup_percentage)\n\n    return selling_price\n\n# Get user input\ncost = float(input(\"Enter the cost of the item: \"))\nmarkup_percentage = float(input(\"Enter the markup percentage as a decimal (e.g., 0.25 for 25%): \"))\n\n# Calculate and display the selling price\nselling_price = calculate_selling_price(cost, markup_percentage)\nprint(f\"The selling price is {selling_price}.\")\n```\nThis program defines a function `calculate_selling_price` that takes the cost and markup percentage as input and returns the selling price. The function checks for valid input and raises a `ValueError` if the markup percentage is not a positive decimal. The program then gets user input for the cost and markup percentage, calls the function, and displays the selling price.",
+  "error": null,
+  "elapsed_seconds": 3.82,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

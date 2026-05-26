@@ -1,0 +1,9 @@
+{
+  "id": 3751,
+  "title": "Finding the GCD",
+  "prompt": "Write a program to find the greatest common divisor (GCD) of two given numbers using a basic algorithm\nSample Input: [12, 18]\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the greatest common divisor (GCD) of two given numbers using a basic algorithm:\n\n```python\ndef gcd(a, b):\n    \"\"\"\n    Find the greatest common divisor of two numbers using the Euclidean algorithm.\n\n    :param a: The first number.\n    :param b: The second number.\n    :return: The greatest common divisor of a and b.\n    \"\"\"\n    while b:\n        a, b = b, a % b\n    return abs(a)\n\n# Get sample input\nsample_input = [12, 18]\n\n# Find the GCD using the function\ngcd_value = gcd(sample_input[0], sample_input[1])\n\n# Print the result\nprint(f\"The greatest common divisor of {sample_input[0]} and {sample_input[1]} is {gcd_value}.\")\n```\n\nWhen you run this program with the sample input `[12, 18]`, it will output:\n\n```\nThe greatest common divisor of 12 and 18 is 6.\n```\n\nThis program defines a function `gcd(a, b)` that implements the Euclidean algorithm to find the GCD of two numbers. The function repeatedly replaces `a` and `b` with `b` and the remainder of `a` divided by `b`, respectively, until `b` becomes zero. At that point, `a` contains the GCD. The function returns the absolute value of `a` to handle negative inputs. The program then gets the sample input, calls the `gcd()` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 4.09,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

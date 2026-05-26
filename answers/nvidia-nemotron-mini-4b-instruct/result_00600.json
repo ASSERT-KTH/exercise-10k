@@ -1,0 +1,9 @@
+{
+  "id": 600,
+  "title": "Find the Most Frequent Word",
+  "prompt": "Write a program that takes a string of words as input and returns the most frequent word in the string.\nSample Input: apple banana apple orange banana banana\nSample Output: banana\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\nfrom collections import Counter\n\ndef most_frequent_word(words):\n    \"\"\"\n    Given a string of words, return the most frequent word.\n\n    :param words: str, a string of words separated by spaces\n    :return: str, the most frequent word in the string\n    \"\"\"\n    # Split the input string into a list of words\n    words_list = words.split()\n\n    # Count the occurrences of each word using Counter\n    word_counts = Counter(words_list)\n\n    # Find the most frequent word and its count\n    most_common_word, count = word_counts.most_common(1)[0]\n\n    return most_common_word\n```\nHere's an example of how you can use this function:\n```python\nsample_input = \"apple banana apple orange banana banana\"\nprint(most_frequent_word(sample_input))  # Output: banana\n```\nThis program first splits the input string into a list of words using the `split()` method. Then, it uses the `Counter` class from the `collections` module to count the occurrences of each word in the list. Finally, it finds the most frequent word and its count using the `most_common()` method and returns the most frequent word.",
+  "error": null,
+  "elapsed_seconds": 3.09,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

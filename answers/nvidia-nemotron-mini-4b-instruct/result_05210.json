@@ -1,0 +1,9 @@
+{
+  "id": 5210,
+  "title": "Calculate GPA",
+  "prompt": "Write a program that calculates the Grade Point Average (GPA) based on the grades and credits provided by the user.\nSample Input: A 3 B 4 C 2\nSample Output: 2.8\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the Grade Point Average (GPA) based on the grades and credits provided by the user:\n```python\ndef calculate_gpa():\n    \"\"\"\n    Calculates the Grade Point Average (GPA) based on the grades and credits provided by the user.\n    \"\"\"\n\n    # Get grades and credits from the user\n    grades = input(\"Enter your grades separated by spaces (e.g. A 3 B 4 C 2): \").strip()\n    grades_and_credits = grades.split()\n\n    # Validate input\n    if len(grades_and_credits) != 2:\n        print(\"Invalid input. Please enter two grades and their corresponding credits separated by spaces.\")\n        return\n\n    grade, credit = grades_and_credits\n\n    # Convert grade to numerical value\n    grade_values = {\n        'A': 4.0,\n        'B': 3.0,\n        'C': 2.0,\n        'D': 1.0,\n        'F': 0.0\n    }\n\n    try:\n        grade_value = grade_values[grade]\n    except KeyError:\n        print(f\"Invalid grade '{grade}'. Please enter a valid grade (A, B, C, D, or F).\")\n        return\n\n    # Calculate GPA\n    gpa = grade_value / credit\n\n    # Print result\n    print(f\"Your GPA is {gpa:.2f}.\")\n\n# Call the function\ncalculate_gpa()\n```\nThis program prompts the user to enter their grades and credits, validates the input, converts the grade to a numerical value, and calculates the GPA. It then prints the result with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 4.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

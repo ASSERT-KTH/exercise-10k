@@ -1,0 +1,9 @@
+{
+  "id": 5318,
+  "title": "Filter Function",
+  "prompt": "Write a function that uses the filter function to filter a list of numbers based on a given condition\nSample Input: [1, 2, 3, 4, 5], f(x) = x > 3\nSample Output: [4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef filter_numbers(numbers, condition):\n    \"\"\"\n    Filters a list of numbers based on a given condition using the filter function.\n\n    Parameters:\n    numbers (list): A list of numbers.\n    condition (callable): A function that takes a single argument (the number) and returns a boolean.\n                          The function should return True if the number should be included in the filtered list,\n                          and False otherwise.\n\n    Returns:\n    list: A new list containing only the numbers from the input list that satisfy the given condition.\n    \"\"\"\n    return list(filter(condition, numbers))\n```\nHere's an example of how to use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\n\ndef f(x):\n    return x > 3\n\nfiltered_numbers = filter_numbers(numbers, f)\nprint(filtered_numbers)  # Output: [4, 5]\n```\nThis function first defines a helper function `filter_numbers` that takes a list of numbers and a condition function as input. It then uses the built-in `filter` function to apply the condition function to each number in the input list, and returns a new list containing only the numbers that satisfy the condition. The `list` function is used to convert the filter object returned by `filter` into a regular list.",
+  "error": null,
+  "elapsed_seconds": 3.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

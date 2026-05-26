@@ -1,0 +1,9 @@
+{
+  "id": 1196,
+  "title": "Ticket Price Calculator",
+  "prompt": "Create a program that calculates the ticket price based on the passenger's age and ticket type.\nSample Input: 25 adult\nSample Output: 100.0\n",
+  "answer": "Sure, I'd be happy to help you create a program that calculates the ticket price based on the passenger's age and ticket type. Here's an example Python program that meets your requirements:\n```python\ndef calculate_ticket_price(age, ticket_type):\n    \"\"\"\n    Calculates the ticket price based on the passenger's age and ticket type.\n\n    :param age: The age of the passenger as an integer.\n    :param ticket_type: The ticket type as a string ('adult' or 'child').\n    :return: The ticket price as a float.\n    \"\"\"\n\n    # Define the ticket prices based on age and ticket type\n    adult_prices = {\n        'adult': 100.0,\n        'child': 50.0\n    }\n\n    child_prices = {\n        'adult': 75.0,\n        'child': 0.0\n    }\n\n    # Check if the ticket type is valid\n    if ticket_type not in ['adult', 'child']:\n        raise ValueError(\"Invalid ticket type. Please use 'adult' or 'child'.\")\n\n    # Calculate the ticket price based on age and ticket type\n    if age >= 18:\n        return adult_prices[ticket_type]\n    else:\n        return child_prices[ticket_type]\n\n# Example usage\nage = 25\nticket_type = 'adult'\nticket_price = calculate_ticket_price(age, ticket_type)\nprint(f\"{age} {ticket_type}: ${ticket_price:.2f}\")\n```\nThis program defines a function `calculate_ticket_price` that takes the passenger's age and ticket type as input, checks if the ticket type is valid, and returns the corresponding ticket price based on the age. The example usage at the end of the program demonstrates how to use the function to calculate the ticket price for a 25-year-old adult passenger.",
+  "error": null,
+  "elapsed_seconds": 15.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

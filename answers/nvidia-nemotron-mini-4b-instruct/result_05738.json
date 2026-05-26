@@ -1,0 +1,9 @@
+{
+  "id": 5738,
+  "title": "Lambda Functions",
+  "prompt": "Create a function that uses lambda functions to sort a list of tuples based on the second element.\nSample Input: [(1, 2), (3, 1), (2, 3)]\nSample Output: [(3, 1), (1, 2), (2, 3)]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses lambda functions to sort a list of tuples based on the second element:\n```python\ndef sort_tuples(tuples):\n    \"\"\"\n    Sort a list of tuples based on the second element using a lambda function.\n\n    :param tuples: List of tuples\n    :return: Sorted list of tuples\n    \"\"\"\n    # Use a lambda function to define the sorting key (second element)\n    sort_key = lambda x: x[1]\n\n    # Sort the list of tuples using the lambda function as the key\n    return sorted(tuples, key=sort_key)\n```\nHere's an example of how to use this function:\n```python\nsample_input = [(1, 2), (3, 1), (2, 3)]\nsorted_output = sort_tuples(sample_input)\nprint(sorted_output)  # Output: [(3, 1), (1, 2), (2, 3)]\n```\nThis function first defines a lambda function that takes a tuple as input and returns the second element. Then, it uses this lambda function as the `key` argument in the `sorted()` function to sort the list of tuples based on the second element.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

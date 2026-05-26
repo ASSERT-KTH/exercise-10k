@@ -1,0 +1,9 @@
+{
+  "id": 1252,
+  "title": "Decorators",
+  "prompt": "Write a decorator that logs the execution time of a function.\nSample Input: None\nSample Output: The function executed in 0.05 seconds\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python decorator that logs the execution time of a function:\n\n```python\nimport time\n\ndef log_execution_time(func):\n    \"\"\"\n    A decorator that logs the execution time of a function.\n    \"\"\"\n\n    def wrapper(*args, **kwargs):\n        \"\"\"\n        The wrapper function that measures the execution time.\n        \"\"\"\n\n        # Measure the start time\n        start_time = time.time()\n\n        # Call the original function\n        result = func(*args, **kwargs)\n\n        # Measure the end time and calculate the execution time\n        end_time = time.time()\n        execution_time = end_time - start_time\n\n        # Log the execution time\n        print(f\"The function '{func.__name__}' executed in {execution_time:.6f} seconds.\")\n\n        return result\n\n    return wrapper\n```\n\nHere's an example of how to use this decorator:\n\n```python\n@log_execution_time\ndef factorial(n):\n    \"\"\"\n    A function that calculates the factorial of a number.\n    \"\"\"\n\n    if n == 0:\n        return 1\n    else:\n        return n * factorial(n-1)\n\n# Call the function\nfactorial(10)\n```\n\nThis will output:\n\n```\nThe function 'factorial' executed in 0.000001 seconds.\n```",
+  "error": null,
+  "elapsed_seconds": 3.37,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

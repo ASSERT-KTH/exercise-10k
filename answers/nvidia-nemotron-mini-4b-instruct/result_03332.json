@@ -1,0 +1,9 @@
+{
+  "id": 3332,
+  "title": "Array Modification (Element-wise Operations)",
+  "prompt": "Write a program that takes two arrays of integers as input and returns a new array containing the element-wise sum of the two input arrays.\nSample Input: [1, 2, 3], [4, 5, 6]\nSample Output: [5, 7, 9]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes two arrays of integers as input and returns a new array containing the element-wise sum of the two input arrays:\n```python\ndef element_wise_sum(arr1, arr2):\n    \"\"\"\n    Calculates the element-wise sum of two input arrays.\n\n    Parameters:\n    arr1 (list): The first input array of integers.\n    arr2 (list): The second input array of integers.\n\n    Returns:\n    list: A new array containing the element-wise sum of arr1 and arr2.\n    \"\"\"\n    # Check if the lengths of the arrays are equal\n    if len(arr1) != len(arr2):\n        raise ValueError(\"The lengths of the input arrays must be equal.\")\n\n    # Calculate the element-wise sum and return the result\n    return [a + b for a, b in zip(arr1, arr2)]\n```\nHere's an example of how to use this function:\n```python\narr1 = [1, 2, 3]\narr2 = [4, 5, 6]\n\nresult = element_wise_sum(arr1, arr2)\nprint(result)  # Output: [5, 7, 9]\n```\nThis function first checks if the lengths of the input arrays are equal, raising a `ValueError` if they are not. Then, it uses a list comprehension with the `zip` function to calculate the element-wise sum of the two arrays and returns the result as a new array.",
+  "error": null,
+  "elapsed_seconds": 3.55,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

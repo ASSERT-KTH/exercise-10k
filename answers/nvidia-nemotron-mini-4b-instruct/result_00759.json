@@ -1,0 +1,9 @@
+{
+  "id": 759,
+  "title": "Morse Code Translator",
+  "prompt": "Write a program that takes a message as input and translates it into Morse code\nSample Input: hello\nSample Output: .... . .-.. .-.. ---\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that translates a given message into Morse code:\n\n```python\ndef translate_to_morse(message):\n    \"\"\"\n    Translates a given message into Morse code.\n\n    :param message: str, the message to translate\n    :return: str, the Morse code representation of the message\n    \"\"\"\n    morse_code = {\n        'a': '.-', 'b': '-...', 'c': '-.-.', 'd': '-..', 'e': '.',\n        'f': '..-.', 'g': '--.', 'h': '....', 'i': '..', 'j': '.---',\n        'k': '-.-', 'l': '.-..', 'm': '--', 'n': '-.', 'o': '---',\n        'p': '.--.', 'q': '--.-', 'r': '.-.', 's': '...', 't': '-',\n        'u': '..-', 'v': '...-', 'w': '.--', 'x': '-..-', 'y': '-.--',\n        'z': '--..', ' ': '   '  # add a space for each space in the message\n    }\n\n    morse_message = ''.join(morse_code.get(char, ' ') for char in message)\n    return morse_message\n\n# Example usage\nmessage = 'hello'\nmorse_code_message = translate_to_morse(message)\nprint(f\"Sample Input: {message}\")\nprint(\"Sample Output:\")\nprint(f\"{morse_code_message}\")\n```\n\nThis program defines a function `translate_to_morse` that takes a message as input and returns its Morse code representation. The function uses a dictionary to map each letter to its corresponding Morse code sequence. The example usage at the end of the program demonstrates how to use the function to translate a given message into Morse code.",
+  "error": null,
+  "elapsed_seconds": 4.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

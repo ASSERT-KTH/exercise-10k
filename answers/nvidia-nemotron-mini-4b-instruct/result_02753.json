@@ -1,0 +1,9 @@
+{
+  "id": 2753,
+  "title": "Cost Calculator",
+  "prompt": "Write a program that calculates the total cost of a purchase given the price and quantity of items.\nSample Input: 10 5\nSample Output: 50\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a simple Python program that calculates the total cost of a purchase given the price and quantity of items:\n\n```python\ndef calculate_total_cost(price, quantity):\n    \"\"\"\n    Calculates the total cost of a purchase given the price and quantity of items.\n\n    :param price: The price of each item.\n    :param quantity: The number of items purchased.\n    :return: The total cost of the purchase.\n    \"\"\"\n\n    # Validate input\n    if not isinstance(price, (int, float)) or price <= 0:\n        raise ValueError(\"Price must be a positive number.\")\n\n    if not isinstance(quantity, int) or quantity < 1:\n        raise ValueError(\"Quantity must be a positive integer.\")\n\n    # Calculate the total cost\n    total_cost = price * quantity\n\n    return total_cost\n\n\n# Get sample input from the user\nprice = float(input(\"Enter the price of each item: \"))\nquantity = int(input(\"Enter the number of items purchased: \"))\n\n# Calculate and print the total cost\ntotal_cost = calculate_total_cost(price, quantity)\nprint(f\"The total cost is ${total_cost}.\")\n```\n\nThis program defines a function `calculate_total_cost` that checks for valid input and calculates the total cost. The function is then called with sample input from the user, and the result is printed to the console.",
+  "error": null,
+  "elapsed_seconds": 3.37,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7476,
+  "title": "Set Operation Performer",
+  "prompt": "Write a program that performs a given set operation on two sets\nSample Input: {1, 2, 3}, {2, 3, 4}, union\nSample Output: {1, 2, 3, 4}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that performs the given set operation (in this case, union) on two sets. We'll use the `set` data type in Python, which automatically handles set operations like union, intersection, difference, etc.\n\n```python\ndef perform_set_operation(set1, set2, operation):\n    \"\"\"\n    Performs a given set operation on two sets.\n\n    :param set1: The first set\n    :param set2: The second set\n    :param operation: The set operation to perform ('union', 'intersection', 'difference')\n    :return: The result of the set operation\n    \"\"\"\n\n    # Validate the input\n    if operation not in ['union', 'intersection', 'difference']:\n        raise ValueError(\"Invalid set operation. Choose from 'union', 'intersection', or 'difference'.\")\n\n    # Perform the set operation\n    if operation == 'union':\n        return set1.union(set2)\n    elif operation == 'intersection':\n        return set1.intersection(set2)\n    else:  # operation == 'difference'\n        return set1.difference(set2)\n\n\n# Example usage\nset1 = {1, 2, 3}\nset2 = {2, 3, 4}\noperation = 'union'\n\nresult = perform_set_operation(set1, set2, operation)\nprint(result)  # Output: {1, 2, 3, 4}\n```\n\nThis program defines a function `perform_set_operation` that takes three arguments: the first and second sets, and the set operation to perform. The function validates the input, performs the set operation, and returns the result. The example usage demonstrates how to use this function to perform the union operation on two sets.",
+  "error": null,
+  "elapsed_seconds": 6.14,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

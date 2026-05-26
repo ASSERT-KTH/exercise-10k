@@ -1,0 +1,9 @@
+{
+  "id": 5193,
+  "title": "Cricket Score Tracker",
+  "prompt": "Write a program that asks the user for the score of a cricket match and then prints out the score in the format 'team_name score/overs' (e.g. 'Australia 100/2').\nSample Input: 100 2 Australia\nSample Output: Australia 100/2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef print_cricket_score():\n    \"\"\"Ask the user for the score of a cricket match and print it in the specified format.\"\"\"\n\n    # Get the team name and the total score from the user\n    team_name = input(\"Enter the name of the team: \")\n    total_score = int(input(\"Enter the total score: \"))\n\n    # Calculate the number of overs (assuming 20 overs per innings)\n    overs = total_score // 6 + (total_score % 6 != 0)\n\n    # Print the score in the specified format\n    print(f\"{team_name} {total_score}/{overs}\")\n\n# Call the function to start the program\nprint_cricket_score()\n```\nThis program defines a function `print_cricket_score()` that prompts the user for the team name and total score, calculates the number of overs based on the total score, and then prints the score in the specified format. The function is then called at the end of the program to start the interaction with the user.\n\nWhen you run this program, it will prompt you to enter the team name and total score, and then print the score in the format 'team\\_name score/overs' (e.g. 'Australia 100/2').",
+  "error": null,
+  "elapsed_seconds": 3.27,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8716,
+  "title": "Binary Converter",
+  "prompt": "Ask the user for a decimal number and print out its binary equivalent.\nSample Input: 10\nSample Output: 1010\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that asks the user for a decimal number and prints its binary equivalent:\n```python\ndef decimal_to_binary(decimal):\n    \"\"\"\n    Converts a decimal number to binary.\n\n    :param decimal: The decimal number to convert.\n    :return: The binary equivalent as a string.\n    \"\"\"\n    binary = \"\"\n    while decimal > 0:\n        remainder = decimal % 2\n        decimal = decimal // 2\n        binary = str(remainder) + binary\n    return binary\n\n# Ask the user for a decimal number\ndecimal = float(input(\"Enter a decimal number: \"))\n\n# Print the binary equivalent\nbinary = decimal_to_binary(decimal)\nprint(f\"The binary equivalent of {decimal} is {binary}.\")\n```\nThis program defines a function `decimal_to_binary` that takes a decimal number as input and returns its binary equivalent as a string. The program then asks the user for a decimal number, converts it to binary using the `decimal_to_binary` function, and prints the result. The `float` function is used to ensure that the user input can be converted to a decimal number, and the `//` operator is used for integer division to remove the decimal part of the number.",
+  "error": null,
+  "elapsed_seconds": 3.35,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 708,
+  "title": "Dictionary Values",
+  "prompt": "Write a function to return a list of dictionary's values\nSample Input: {'name': 'John', 'age': 30}\nSample Output: ['John', 30]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_values(input_dict):\n    \"\"\"\n    Returns a list of the values in a given dictionary.\n\n    :param input_dict: The dictionary to extract values from.\n    :return: A list of the values in the dictionary.\n    \"\"\"\n    if not isinstance(input_dict, dict):\n        raise TypeError(\"Input must be a dictionary.\")\n\n    return list(input_dict.values())\n```\nHere's how you can use this function:\n```python\nsample_input = {'name': 'John', 'age': 30}\nsample_output = get_values(sample_input)\nprint(sample_output)  # Output: ['John', 30]\n```\nThis function checks if the input is a dictionary and raises a `TypeError` if it's not. Then, it uses a generator expression to create a list of the values in the dictionary. The `list()` function is used to convert the generator to a list.",
+  "error": null,
+  "elapsed_seconds": 2.51,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5860,
+  "title": "Date Validator",
+  "prompt": "Create a program that asks the user for a date in the format MM/DD/YYYY and then checks if it is a valid date. Print out a message indicating whether the date is valid or not\nSample Input: 02/30/2022\nSample Output: Invalid date\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef is_valid_date(date_string):\n    \"\"\"Check if a given date string in the format MM/DD/YYYY is valid.\"\"\"\n    try:\n        date_parts = [int(part) for part in date_string.split(\"/\")]\n        if len(date_parts) != 3 or not all(part in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] for part in date_parts):\n            return False\n        year = date_parts[-1]\n        if year < 1900 or year % 4 != 0 and year % 100 != 0 or year % 400 == 0:\n            return False\n        return True\n    except ValueError:\n        return False\n\nwhile True:\n    user_date = input(\"Enter a date in the format MM/DD/YYYY: \")\n    if is_valid_date(user_date):\n        print(\"Valid date\")\n    else:\n        print(\"Invalid date\")\n    again = input(\"Do you want to try again? (yes/no): \").lower()\n    if again != \"yes\":\n        break\n```\n\nThis program defines a function `is_valid_date` that checks if a given date string is in the correct format and if the year is valid. The main part of the program then asks the user for a date, checks if it's valid, and prints a message accordingly. The program continues to ask for dates until the user decides to stop.",
+  "error": null,
+  "elapsed_seconds": 3.9,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

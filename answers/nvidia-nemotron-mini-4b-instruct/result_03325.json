@@ -1,0 +1,9 @@
+{
+  "id": 3325,
+  "title": "List Slicing",
+  "prompt": "Write a program that takes a list of integers and a start and end index as input and returns the slice of the list from the start index to the end index.\nSample Input: [1, 2, 3, 4, 5], 1, 3\nSample Output: [2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_slice(numbers, start_index, end_index):\n    \"\"\"\n    Returns a slice of the given list of integers from the start index to the end index.\n\n    :param numbers: The list of integers\n    :param start_index: The start index (inclusive)\n    :param end_index: The end index (exclusive)\n    :return: A slice of the list from the start index to the end index\n    \"\"\"\n    # Check if the start index is within the bounds of the list\n    if start_index < 0 or start_index >= len(numbers):\n        raise IndexError(\"Start index is out of bounds\")\n\n    # Check if the end index is within the bounds of the list\n    if end_index < 0 or end_index > len(numbers) or start_index >= end_index:\n        raise IndexError(\"End index is out of bounds or start index is greater than or equal to end index\")\n\n    # Return the slice of the list from the start index to the end index\n    return numbers[start_index:end_index]\n```\nHere's an example of how to use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\nprint(get_slice(numbers, 1, 3))  # Output: [2, 3]\n```\nThis function checks if the start and end indices are within the bounds of the list, and raises an `IndexError` if they are not. It then returns the slice of the list from the start index to the end index (exclusive of the end index).",
+  "error": null,
+  "elapsed_seconds": 5.31,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

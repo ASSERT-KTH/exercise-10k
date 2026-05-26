@@ -1,0 +1,9 @@
+{
+  "id": 6436,
+  "title": "Coin Flip Simulator",
+  "prompt": "Write a program to simulate a coin flip using a for loop. The program should simulate a specified number of coin flips and print the results.\nSample Input: 10\nSample Output: Heads: 5, Tails: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that simulates a specified number of coin flips using a for loop and prints the results:\n\n```python\ndef simulate_coin_flips(num_flips):\n    \"\"\"\n    Simulates a specified number of coin flips and prints the results.\n\n    :param num_flips: The number of coin flips to simulate.\n    \"\"\"\n\n    # Initialize variables to keep track of the number of heads and tails\n    heads = 0\n    tails = 0\n\n    # Use a for loop to simulate the specified number of coin flips\n    for _ in range(num_flips):\n        # Simulate a coin flip by generating a random boolean value\n        result = bool(random.randint(0, 1))\n\n        # Increment the count of heads or tails based on the result\n        if result:\n            heads += 1\n        else:\n            tails += 1\n\n    # Print the results\n    print(f\"Heads: {heads}, Tails: {tails}\")\n\n# Call the function with the sample input\nsimulate_coin_flips(10)\n```\n\nThis program uses the `random` module to generate a random boolean value for each coin flip, which represents either heads or tails. The results are then printed to the console, with the number of heads and tails separated by a colon.",
+  "error": null,
+  "elapsed_seconds": 3.15,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

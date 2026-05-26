@@ -1,0 +1,9 @@
+{
+  "id": 6551,
+  "title": " validations",
+  "prompt": "Create a function that validates whether a given string is in a valid format (e.g. email, phone number, etc.).\nSample Input: example@example.com\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses regular expressions to validate various formats, such as email, phone number, and URL. You can add more formats by adding more regular expression patterns to the `formats` list.\n\n```python\nimport re\n\nformats = [\n    r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$',  # Email\n    r'^\\+?1?\\d{9,15}$',                                  # Phone number (10-15 digits)\n    r'^(https?:\\/\\/)?(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)?$',  # URL\n]\n\ndef is_valid_format(s):\n    for pattern in formats:\n        if re.match(pattern, s):\n            return True\n    return False\n\n# Example usage:\nprint(is_valid_format('example@example.com'))  # True\nprint(is_valid_format('+1234567890'))           # True\nprint(is_valid_format('https://www.example.com'))  # True\nprint(is_valid_format('invalid_format'))        # False\n```\n\nThis function checks each string against all the regular expression patterns in the `formats` list. If any pattern matches, the function returns `True`. If none of the patterns match, the function returns `False`. You can add more formats to the `formats` list as needed.",
+  "error": null,
+  "elapsed_seconds": 4.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

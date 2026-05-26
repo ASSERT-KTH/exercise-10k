@@ -1,0 +1,9 @@
+{
+  "id": 7222,
+  "title": "Data Type Checker",
+  "prompt": "Write a program that takes a user input and determines its data type. The program should be able to identify if the input is an integer, float, or string.\nSample Input: 123\nSample Output: The input is an integer.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_input():\n    \"\"\"Get user input and determine its data type.\"\"\"\n    while True:\n        try:\n            user_input = input(\"Please enter a value: \")\n            if user_input.isdigit():\n                return int(user_input)\n            elif user_input.strip().isalpha():\n                return str(user_input)\n            else:\n                return float(user_input)\n        except ValueError:\n            print(\"Invalid input. Please enter a number or a string.\")\n\n# Example usage:\nuser_input = get_input()\nif type(user_input) == int:\n    print(f\"The input is an integer: {user_input}\")\nelif type(user_input) == str:\n    print(f\"The input is a string: {user_input}\")\nelse:\n    print(f\"The input is a float: {user_input}\")\n```\nThis program defines a function `get_input()` that prompts the user for input, checks if it's a number (integer or float), a string, or neither, and returns the appropriate data type. The example usage at the end of the program demonstrates how to use this function to get user input and determine its data type.",
+  "error": null,
+  "elapsed_seconds": 3.18,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

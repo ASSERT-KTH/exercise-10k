@@ -1,0 +1,9 @@
+{
+  "id": 2230,
+  "title": "List Filtering",
+  "prompt": "Write a program that filters a list of numbers and returns only the numbers that meet a specified condition.\nSample Input: [1, 2, 3, 4, 5], x > 3\nSample Output: [4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef filter_numbers(numbers, condition):\n    \"\"\"\n    Filters a list of numbers and returns only the numbers that meet a specified condition.\n\n    Parameters:\n    numbers (list): A list of numbers.\n    condition (callable): A function that takes a single number as input and returns a boolean.\n                          The function should return True if the number meets the specified condition,\n                          and False otherwise.\n\n    Returns:\n    list: A list of numbers that meet the specified condition.\n    \"\"\"\n    return [num for num in numbers if condition(num)]\n\n# Example usage:\nsample_input = [1, 2, 3, 4, 5]\nsample_condition = lambda x: x > 3\n\nfiltered_numbers = filter_numbers(sample_input, sample_condition)\nprint(filtered_numbers)  # Output: [4, 5]\n```\nThis program defines a function `filter_numbers` that takes a list of numbers and a condition function as input, and returns a new list containing only the numbers that meet the specified condition. The example usage demonstrates how to use this function with a simple condition that checks if a number is greater than 3.",
+  "error": null,
+  "elapsed_seconds": 8.1,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

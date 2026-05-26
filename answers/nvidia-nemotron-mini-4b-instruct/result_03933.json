@@ -1,0 +1,9 @@
+{
+  "id": 3933,
+  "title": "Mode Calculator",
+  "prompt": "Write a program that takes a list of numbers as input and returns the mode of the numbers.\nSample Input: 1 2 2 3 3 3\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a list of numbers as input and returns the mode (i.e., the number that appears most frequently) using the `collections.Counter` class to count the occurrences of each number.\n\n```python\nfrom collections import Counter\n\ndef find_mode(numbers):\n    \"\"\"\n    Given a list of numbers, return the mode (i.e., the number that appears most frequently).\n\n    :param numbers: List[int] - The list of numbers to find the mode of.\n    :return: int - The mode of the numbers.\n    \"\"\"\n    # Count the occurrences of each number in the list\n    count = Counter(numbers)\n\n    # Find the number with the highest count (i.e., the mode)\n    mode = count.most_common(1)[0][0]\n\n    return mode\n\n# Example usage\nsample_input = [1, 2, 2, 3, 3, 3]\nprint(find_mode(sample_input))  # Output: 3\n```\n\nThis program first uses the `Counter` class to count the occurrences of each number in the input list. The `most_common(1)` method is used to get the number with the highest count (i.e., the mode). Finally, the mode is returned as the result.",
+  "error": null,
+  "elapsed_seconds": 3.12,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6413,
+  "title": "Simple Quiz",
+  "prompt": "Write a program that asks the user a series of questions and keeps track of their score. Use if/else statements to determine the correct answer.\nSample Input: answer1 answer2 answer3\nSample Output: You scored 3/3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program asks the user a series of questions and keeps track of their score using if/else statements.\n\n```python\ndef get_user_answer(question):\n    \"\"\"Get user input for a question and validate it.\"\"\"\n    while True:\n        user_answer = input(question + \" (yes/no): \").lower()\n        if user_answer in ['yes', 'no']:\n            return user_answer\n        else:\n            print(\"Please enter 'yes' or 'no'.\")\n\ndef main():\n    questions = [\n        \"Do you like pizza? (yes/no)\",\n        \"Can you swim? (yes/no)\",\n        \"Do you have a pet? (yes/no)\"\n    ]\n\n    score = 0\n    for question in questions:\n        user_answer = get_user_answer(question)\n        if user_answer == 'yes':\n            score += 1\n\n    print(f\"You scored {score} out of {len(questions)}.\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\nWhen you run this program, it will ask the user a series of questions and keep track of their score. For example:\n\n```\nDo you like pizza? (yes/no): yes\nCan you swim? (yes/no): no\nDo you have a pet? (yes/no): yes\n\nYou scored 2 out of 3.\n```",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6111,
+  "title": "Array Rotation",
+  "prompt": "Write a program that takes an array of integers and a rotation value as input, and returns a new array containing the elements rotated by the specified amount.\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: [4, 5, 1, 2, 3]\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef rotate_array(arr, rotation):\n    # Ensure rotation is within bounds\n    rotation %= len(arr)\n\n    # Rotate the array by shifting elements to the left\n    for _ in range(rotation):\n        arr.insert(0, arr.pop())\n\n    return arr\n\n# Test the function\nprint(rotate_array([1, 2, 3, 4, 5], 2))  # Output: [4, 5, 1, 2, 3]\n```\n\nThis program first checks if the rotation value is within the bounds of the array length. Then, it uses a loop to rotate the array by shifting elements to the left. The `insert()` method is used to add elements at the beginning of the array, and the `pop()` method is used to remove elements from the end of the array. The function returns the rotated array.",
+  "error": null,
+  "elapsed_seconds": 2.26,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

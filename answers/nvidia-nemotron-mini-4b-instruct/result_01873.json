@@ -1,0 +1,9 @@
+{
+  "id": 1873,
+  "title": "Array Chunking",
+  "prompt": "Write a program to chunk an array into smaller sub-arrays of a specified size and print the resulting chunks.\nSample Input: [1, 2, 3, 4, 5] and chunk size 2\nSample Output: [[1, 2], [3, 4], [5]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes an array and a chunk size as input, and prints the resulting chunks:\n```python\ndef chunk_array(arr, chunk_size):\n    \"\"\"\n    Chunks an array into smaller sub-arrays of a specified size.\n\n    Parameters:\n    arr (list): The input array to be chunked.\n    chunk_size (int): The size of each chunk.\n\n    Returns:\n    list: A list of sub-arrays, where each sub-array has the specified size.\n    \"\"\"\n    # Check that the input is valid\n    if not isinstance(arr, list) or not all(isinstance(x, int) for x in arr):\n        raise ValueError(\"Input array must be a list of integers.\")\n    if not isinstance(chunk_size, int) or chunk_size <= 0:\n        raise ValueError(\"Chunk size must be a positive integer.\")\n\n    # Chunk the array and return the result\n    return [arr[i:i+chunk_size] for i in range(0, len(arr), chunk_size)]\n\n# Example usage\narr = [1, 2, 3, 4, 5]\nchunk_size = 2\nchunks = chunk_array(arr, chunk_size)\nfor i, chunk in enumerate(chunks):\n    print(f\"Chunk {i+1}: {chunk}\")\n```\nThis program defines a function `chunk_array` that takes an array and a chunk size as input, and returns a list of sub-arrays with the specified size. The function checks that the input is valid, and then uses a list comprehension to create the sub-arrays. The example usage at the end of the program demonstrates how to use the function to chunk an array into sub-arrays of a specified size.",
+  "error": null,
+  "elapsed_seconds": 5.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

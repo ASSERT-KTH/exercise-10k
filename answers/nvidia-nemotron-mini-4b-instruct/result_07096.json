@@ -1,0 +1,9 @@
+{
+  "id": 7096,
+  "title": "Factorial Calculation",
+  "prompt": "Read a positive integer from the user and calculate its factorial\nSample Input: 5\nSample Output: 120\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that reads a positive integer from the user and calculates its factorial:\n```python\ndef get_positive_integer():\n    \"\"\"Reads a positive integer from the user and returns it.\"\"\"\n    while True:\n        try:\n            num = int(input(\"Enter a positive integer: \"))\n            if num > 0:\n                return num\n            else:\n                print(\"Please enter a positive integer.\")\n        except ValueError:\n            print(\"That's not a valid integer. Please try again.\")\n\ndef factorial(n):\n    \"\"\"Calculates the factorial of a given integer n.\"\"\"\n    if n == 0:\n        return 1\n    else:\n        return n * factorial(n-1)\n\npositive_integer = get_positive_integer()\nfactorial_value = factorial(positive_integer)\nprint(f\"{positive_integer}! = {factorial_value}\")\n```\nWhen you run this program, it will prompt the user to enter a positive integer. Once a valid positive integer is entered, the program calculates its factorial using a recursive function and prints the result.",
+  "error": null,
+  "elapsed_seconds": 2.67,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

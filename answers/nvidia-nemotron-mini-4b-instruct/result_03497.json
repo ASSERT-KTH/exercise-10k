@@ -1,0 +1,9 @@
+{
+  "id": 3497,
+  "title": "Calculation of Discount",
+  "prompt": "Write a program that takes the original price and the discount percentage as input and returns the price after the discount.\nSample Input: 100 20\nSample Output: 80.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_discount(original_price, discount_percentage):\n    \"\"\"\n    Calculates the price after a discount given the original price and the discount percentage.\n\n    :param original_price: The original price before the discount.\n    :param discount_percentage: The discount percentage as a decimal (e.g., 0.2 for 20%).\n    :return: The price after the discount.\n    \"\"\"\n    # Ensure the discount percentage is a decimal\n    discount_percentage = float(discount_percentage)\n\n    # Calculate the discount amount\n    discount_amount = original_price * discount_percentage\n\n    # Calculate the price after the discount\n    price_after_discount = original_price - discount_amount\n\n    return price_after_discount\n\n# Example usage\noriginal_price = 100\ndiscount_percentage = 20\n\nprice_after_discount = calculate_discount(original_price, discount_percentage)\nprint(f\"{original_price} - {discount_percentage}% discount = {price_after_discount:.2f}\")\n```\nThis program defines a function `calculate_discount` that takes the original price and the discount percentage as input, calculates the discount amount, and returns the price after the discount. The example usage at the end of the program demonstrates how to use the function to calculate the price after a 20% discount on a $100 item.",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

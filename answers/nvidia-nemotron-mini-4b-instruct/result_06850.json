@@ -1,0 +1,9 @@
+{
+  "id": 6850,
+  "title": "Calculating Grade Points",
+  "prompt": "Create a function called calculateGradePoint that takes in a student's score as an argument and returns their corresponding grade point. The grade points are as follows: score 90-100 corresponds to 4.0, score 80-89 corresponds to 3.0, score 70-79 corresponds to 2.0, score 60-69 corresponds to 1.0, and score below 60 corresponds to 0.0.\nSample Input: 85\nSample Output: 3.0\n",
+  "answer": "Sure, I'd be happy to help you create the `calculateGradePoint` function. Here's an example implementation in Python that meets your requirements:\n\n```python\ndef calculateGradePoint(score):\n    \"\"\"\n    Calculates the grade point corresponding to a given student score.\n\n    :param score: The student's score as a float between 0 and 100.\n    :return: The corresponding grade point as a float.\n    \"\"\"\n\n    # Define the grade point ranges and corresponding values\n    grade_points = {\n        (90, 100): 4.0,\n        (80, 89): 3.0,\n        (70, 79): 2.0,\n        (60, 69): 1.0,\n        (0, 60): 0.0,\n    }\n\n    # Find the range that includes the given score\n    for range_start, range_end in grade_points.keys():\n        if score >= range_start and score <= range_end:\n            break\n\n    # Return the corresponding grade point\n    return grade_points[(range_start, range_end)]\n```\n\nThis function uses a dictionary to map score ranges to their corresponding grade points. It then iterates over the keys of the dictionary, finding the range that includes the given score and returning the corresponding value. The function handles edge cases (e.g., scores below 60) and ensures that the grade point is returned as a float.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

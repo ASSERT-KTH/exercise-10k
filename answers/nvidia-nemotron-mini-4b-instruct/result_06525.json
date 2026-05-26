@@ -1,0 +1,9 @@
+{
+  "id": 6525,
+  "title": "Guessing Game",
+  "prompt": "Create a function that generates a random number and allows the user to guess it.\nSample Input: 5\nSample Output: You won! The number was 5\n",
+  "answer": "Sure, I'd be happy to help you create a function for that. Here's a Python function that meets your requirements. This function generates a random number between 1 and 100 (inclusive) and allows the user to guess it. If the user guesses correctly, it displays a congratulatory message.\n\n```python\nimport random\n\ndef generate_random_number():\n    \"\"\"Generates a random number between 1 and 100 (inclusive).\"\"\"\n    return random.randint(1, 100)\n\ndef play_guessing_game():\n    \"\"\"Allows the user to guess a random number between 1 and 100.\"\"\"\n    # Generate a random number\n    random_number = generate_random_number()\n\n    # Get user input and convert it to an integer\n    user_guess = int(input(\"Guess a number between 1 and 100: \"))\n\n    # Check if the user guessed correctly\n    if user_guess == random_number:\n        print(f\"You won! The number was {random_number}.\")\n    else:\n        print(f\"Sorry, the number was {random_number}. Try again!\")\n\n# Call the function to start the game\nplay_guessing_game()\n```\n\nThis function generates a random number, prompts the user to guess it, checks the user's input, and displays a congratulatory message or a message indicating that the user guessed incorrectly.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

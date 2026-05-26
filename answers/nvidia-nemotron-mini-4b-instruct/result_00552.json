@@ -1,0 +1,9 @@
+{
+  "id": 552,
+  "title": "String Rotation",
+  "prompt": "Write a program that takes a string and a rotation value as input and returns the rotated string.\nSample Input: hello, 2\nSample Output: llohe\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef rotate_string(input_str: str, rotation_value: int) -> str:\n    \"\"\"\n    Rotates a given string by the specified number of characters.\n\n    :param input_str: The string to rotate.\n    :param rotation_value: The number of characters to rotate the string.\n    :return: The rotated string.\n    \"\"\"\n    # Ensure the rotation value is non-negative\n    rotation_value %= len(input_str)\n\n    # Rotate the string using slicing\n    return input_str[rotation_value:] + input_str[:rotation_value]\n\n# Example usage\ninput_str = \"hello\"\nrotation_value = 2\nprint(rotate_string(input_str, rotation_value))  # Output: llohe\n```\nThis program defines a function `rotate_string` that takes a string and a rotation value as input, and returns the rotated string. The function first ensures that the rotation value is non-negative by taking its modulus with the length of the input string. Then, it rotates the string using slicing, appending the substring starting from the rotation value to the end of the original string, and prepending the substring starting from position 0 to the beginning of the original string.\n\nThe example usage at the end of the program demonstrates how to use the `rotate_string` function with a sample input and expected output.",
+  "error": null,
+  "elapsed_seconds": 3.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

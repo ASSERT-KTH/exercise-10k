@@ -1,0 +1,9 @@
+{
+  "id": 5303,
+  "title": "Function with Default Argument",
+  "prompt": "Create a function that takes a name and an optional age parameter, and returns a string with the name and age\nSample Input: John, 30\nSample Output: John is 30 years old\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef describe_person(name, age=None):\n    \"\"\"\n    Create a string describing a person with their name and optional age.\n\n    Parameters:\n    name (str): The name of the person.\n    age (int, optional): The age of the person. If not provided, an error will be raised.\n\n    Returns:\n    str: A string describing the person with their name and age.\n    \"\"\"\n    if age is None:\n        raise ValueError(\"Age must be provided if it's not already present.\")\n\n    return f\"{name} is {age} years old.\"\n```\nHere's an example of how you can use this function:\n```python\nprint(describe_person(\"John\", 30))  # Output: John is 30 years old\nprint(describe_person(\"Jane\"))  # Raises ValueError: Age must be provided if it's not already present.\n```\nThis function checks if an `age` parameter is provided, and if not, raises a `ValueError` with an appropriate message. If an `age` parameter is provided, it returns a string describing the person with their name and age.",
+  "error": null,
+  "elapsed_seconds": 2.86,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

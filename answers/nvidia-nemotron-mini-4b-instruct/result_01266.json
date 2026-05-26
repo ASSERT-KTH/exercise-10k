@@ -1,0 +1,9 @@
+{
+  "id": 1266,
+  "title": "List Filtering",
+  "prompt": "Write a program to filter a list and extract a subset of elements that meet a condition.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that filters a list and extracts a subset of elements that meet a given condition:\n```python\ndef filter_list(lst, condition):\n    \"\"\"\n    Filters a list and extracts a subset of elements that meet a condition.\n\n    Parameters:\n    lst (list): The list to filter.\n    condition (callable): A function that takes an element from the list and returns a boolean value.\n                          The function should return True if the element should be included in the subset,\n                          and False otherwise.\n\n    Returns:\n    list: A new list containing only the elements from lst that meet the condition.\n    \"\"\"\n    return [element for element in lst if condition(element)]\n\n# Example usage:\nnumbers = [1, 2, 3, 4, 5]\neven_numbers = filter_list(numbers, lambda x: x % 2 == 0)\nprint(even_numbers)  # Output: [2, 4]\n```\nIn this program, the `filter_list` function takes a list and a condition function as input. It uses a list comprehension to iterate over each element in the list and includes it in the new list if the condition function returns `True`. The condition function, `lambda x: x % 2 == 0`, checks if a number is even by checking if the remainder of dividing it by 2 is 0.\n\nYou can replace the `lambda x: x % 2 == 0` condition with any other condition that you need, such as checking if an element is greater than a certain value or less than another value.",
+  "error": null,
+  "elapsed_seconds": 3.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 98,
+  "title": "Sieve of Eratosthenes",
+  "prompt": "Use the Sieve of Eratosthenes algorithm to find all prime numbers up to a given limit\nSample Input: 20\nSample Output: [2, 3, 5, 7, 11, 13, 17, 19]\n",
+  "answer": "Sure, I'd be happy to help you with that! The Sieve of Eratosthenes is an efficient algorithm to find all prime numbers up to a given limit. Here's a Python implementation of the algorithm:\n\n```python\ndef sieve_of_eratosthenes(limit):\n    \"\"\"\n    Find all prime numbers up to a given limit using the Sieve of Eratosthenes algorithm.\n\n    :param limit: The upper limit for prime numbers.\n    :return: A list of prime numbers up to the limit.\n    \"\"\"\n    if limit < 2:\n        return []\n\n    # Initialize a boolean array to keep track of prime numbers\n    is_prime = [True] * (limit + 1)\n    is_prime[0], is_prime[1] = False, False\n\n    # Implement the Sieve of Eratosthenes algorithm\n    for num in range(2, int(limit**0.5) + 1):\n        if is_prime[num]:\n            for multiple in range(num*num, limit+1, num):\n                is_prime[multiple] = False\n\n    # Return the list of prime numbers\n    return [num for num in range(2, limit+1) if is_prime[num]]\n```\n\nYou can use this function to find all prime numbers up to a given limit, as shown in the sample input/output:\n\n```python\nprint(sieve_of_eratosthenes(20))  # Output: [2, 3, 5, 7, 11, 13, 17, 19]\n```",
+  "error": null,
+  "elapsed_seconds": 5.22,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

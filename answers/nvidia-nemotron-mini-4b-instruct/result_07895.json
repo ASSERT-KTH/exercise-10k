@@ -1,0 +1,9 @@
+{
+  "id": 7895,
+  "title": "Printing Patterns with Loops",
+  "prompt": "Write a program that prints a pattern of numbers using a loop. The pattern should start with 1 and each subsequent row should have one more number than the previous row. The numbers in each row should be separated by a space. For example, if the input is 5, the output should be: 1, 2 1, 3 2 1, 4 3 2 1, 5 4 3 2 1\nSample Input: 5\nSample Output: 1\n2 1\n3 2 1\n4 3 2 1\n5 4 3 2 1\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef print_pattern(n):\n    # Initialize the first row with a single number\n    first_row = [str(i+1) for i in range(n)]\n\n    # Print the first row\n    print(' '.join(first_row))\n\n    # Generate the remaining rows\n    for i in range(1, n):\n        # Initialize the current row with the previous row's numbers\n        current_row = first_row[:]\n\n        # Add one more number to the right of the previous row's last number\n        current_row.append(str(len(current_row) + 1))\n\n        # Print the current row\n        print(' '.join(current_row))\n\n# Get user input\nn = int(input(\"Enter a positive integer: \"))\n\n# Validate input\nwhile n <= 0:\n    print(\"Input must be a positive integer. Try again.\")\n    n = int(input(\"Enter a positive integer: \"))\n\n# Print the pattern\nprint_pattern(n)\n```\n\nThis program defines a function `print_pattern(n)` that takes an integer `n` as input and prints a pattern of numbers using a loop. The function first generates the first row with a single number, then generates the remaining rows by adding one more number to the right of the previous row's last number. The program then gets user input for `n`, validates the input, and calls the `print_pattern(n)` function to print the pattern.",
+  "error": null,
+  "elapsed_seconds": 3.77,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

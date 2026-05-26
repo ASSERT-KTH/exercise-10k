@@ -1,0 +1,9 @@
+{
+  "id": 9792,
+  "title": "Input Validation with Conditional Statements",
+  "prompt": "Write a program that takes an input and validates it using a conditional statement.\nSample Input: hello\nSample Output: Valid input\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef validate_input(input_value):\n    \"\"\"\n    Validates an input string and returns a message indicating whether it's valid or not.\n\n    :param input_value: The input string to validate.\n    :return: A string indicating whether the input is valid or not.\n    \"\"\"\n    # Ensure the input is a string\n    if not isinstance(input_value, str):\n        return \"Invalid input. Please provide a string.\"\n\n    # Check if the input is empty or whitespace-only\n    if not input_value or input_value.strip() == \"\":\n        return \"Invalid input. The input cannot be empty or consist only of whitespace.\"\n\n    # If the input passes all checks, return a message indicating it's valid\n    return \"Valid input\"\n\n# Get user input\nuser_input = input(\"Please enter a string: \")\n\n# Validate the input and print the result\nvalid_message = validate_input(user_input)\nprint(valid_message)\n```\nWhen you run this program and enter \"hello\" as input, it will output:\n```yaml\nValid input\n```",
+  "error": null,
+  "elapsed_seconds": 2.87,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

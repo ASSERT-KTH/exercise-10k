@@ -1,0 +1,9 @@
+{
+  "id": 210,
+  "title": "Filter Function",
+  "prompt": "Write a function that filters a list based on a given condition.\nSample Input: [1, 2, 3, 4, 5], is_even\nSample Output: [2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef filter_list(lst, func):\n    \"\"\"\n    Filters a list based on a given condition.\n\n    Parameters:\n    lst (list): The list to filter.\n    func (callable): A function that takes one argument (the element of the list) and returns a boolean.\n\n    Returns:\n    list: A new list containing only the elements for which the condition returned True.\n    \"\"\"\n    return [element for element in lst if func(element)]\n```\nHere's an example of how to use this function:\n```python\nis_even = lambda x: x % 2 == 0\nfiltered_list = filter_list([1, 2, 3, 4, 5], is_even)\nprint(filtered_list)  # Output: [2, 4]\n```\nThis function uses a list comprehension to filter the input list based on the given condition. The `func` parameter is a callable object that takes one argument (the element of the list) and returns a boolean. The list comprehension iterates over each element in the input list and includes it in the new list only if the condition returned `True`.",
+  "error": null,
+  "elapsed_seconds": 2.88,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

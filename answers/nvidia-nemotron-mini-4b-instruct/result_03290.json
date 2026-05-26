@@ -1,0 +1,9 @@
+{
+  "id": 3290,
+  "title": "Finding Prime Numbers",
+  "prompt": "Write a program that finds all prime numbers up to a given number using a for loop.\nSample Input: 20\nSample Output: [2, 3, 5, 7, 11, 13, 17, 19]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds all prime numbers up to a given number using a for loop:\n```python\ndef find_primes(limit):\n    \"\"\"Find all prime numbers up to a given limit.\"\"\"\n    # Initialize a list of booleans to keep track of whether each number is prime\n    is_prime = [True] * (limit + 1)\n    is_prime[0], is_prime[1] = False, False\n\n    # Iterate from 2 to the square root of the limit (inclusive)\n    for num in range(2, int(limit**0.5) + 1):\n        # If the current number is prime, mark all its multiples as non-prime\n        if is_prime[num]:\n            for multiple in range(num*num, limit+1, num):\n                is_prime[multiple] = False\n\n    # Return the list of prime numbers\n    return [num for num in range(2, limit+1) if is_prime[num]]\n\n# Example usage\nlimit = 20\nprint(find_primes(limit))  # Output: [2, 3, 5, 7, 11, 13, 17, 19]\n```\nThis program works by first initializing a list of booleans to keep track of whether each number is prime. It then iterates from 2 to the square root of the limit (inclusive), marking all multiples of each prime number as non-prime. Finally, it returns the list of prime numbers by filtering out the non-prime numbers.",
+  "error": null,
+  "elapsed_seconds": 3.84,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

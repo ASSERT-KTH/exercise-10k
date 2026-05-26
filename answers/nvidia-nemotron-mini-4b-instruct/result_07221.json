@@ -1,0 +1,9 @@
+{
+  "id": 7221,
+  "title": "Function Mapper",
+  "prompt": "Create a function that takes another function and a list of inputs as arguments, then applies the given function to each input in the list and returns a new list with the results. The function should handle functions that take one or more arguments.\nSample Input: def add(a, b): return a + b; inputs = [(1, 2), (3, 4)]\nSample Output: [3, 7]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function, `apply_function_to_list`, takes a function and a list of inputs as arguments, applies the given function to each input in the list, and returns a new list with the results. The function handles functions that take one or more arguments by using the `*args` syntax to unpack the variable number of arguments passed to the function.\n\n```python\ndef apply_function_to_list(func, inputs):\n    \"\"\"\n    Applies a given function to each input in a list and returns a new list with the results.\n\n    Parameters:\n    func (callable): The function to apply to each input in the list.\n    inputs (list): A list of inputs to apply the function to.\n\n    Returns:\n    list: A new list with the results of applying the function to each input in the list.\n    \"\"\"\n\n    # Unpack the variable number of arguments passed to the function\n    result = []\n    for input_ in inputs:\n        result.append(func(*input_))\n\n    return result\n```\n\nHere's an example of how to use this function:\n\n```python\ndef add(a, b):\n    return a + b\n\ninputs = [(1, 2), (3, 4)]\nprint(apply_function_to_list(add, inputs))  # Output: [3, 7]\n```",
+  "error": null,
+  "elapsed_seconds": 3.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

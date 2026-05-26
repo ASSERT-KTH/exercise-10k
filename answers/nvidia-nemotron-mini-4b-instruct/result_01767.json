@@ -1,0 +1,9 @@
+{
+  "id": 1767,
+  "title": "Calculating the GCD",
+  "prompt": "Write a function to calculate the greatest common divisor (GCD) of two integers.\nSample Input: 12, 15\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that calculates the greatest common divisor (GCD) of two integers using the Euclidean algorithm:\n\n```python\ndef gcd(a, b):\n    \"\"\"\n    Calculate the greatest common divisor (GCD) of two integers.\n\n    :param a: The first integer.\n    :param b: The second integer.\n    :return: The greatest common divisor of a and b.\n    \"\"\"\n    while b:\n        a, b = b, a % b\n    return abs(a)\n```\n\nThis function works by repeatedly applying the Euclidean algorithm, which states that the GCD of two numbers is equal to the GCD of the larger number and the remainder of the division of the smaller number by the larger number. The algorithm continues until the remainder is zero, at which point the original larger number is the GCD. The function ensures that the result is always positive by taking the absolute value of the final result.\n\nHere's an example of how to use the function:\n\n```python\nprint(gcd(12, 15))  # Output: 3\n```",
+  "error": null,
+  "elapsed_seconds": 2.6,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1688,
+  "title": "Rock, Paper, Scissors Game Function",
+  "prompt": "Write a function to play a game of Rock, Paper, Scissors.\nSample Input: rock\nSample Output: You win!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that plays a game of Rock, Paper, Scissors against the user. The function uses a simple strategy where it always chooses the option that beats the user's choice. If the choices are equal, it's a tie.\n\n```python\nimport random\n\ndef play_rock_paper_scissors():\n    \"\"\"\n    Plays a game of Rock, Paper, Scissors against the user.\n    \"\"\"\n    choices = [\"rock\", \"paper\", \"scissors\"]\n\n    while True:\n        user_choice = input(\"Enter your choice (rock, paper, scissors): \").lower()\n        if user_choice in choices:\n            break\n        else:\n            print(\"Invalid choice. Please enter 'rock', 'paper', or 'scissors'.\")\n\n    computer_choice = random.choice(choices)\n\n    if user_choice == computer_choice:\n        print(\"It's a tie!\")\n    elif (user_choice == \"rock\" and computer_choice == \"scissors\") or \\\n         (user_choice == \"paper\" and computer_choice == \"rock\") or \\\n         (user_choice == \"scissors\" and computer_choice == \"paper\"):\n        print(\"You win!\")\n    else:\n        print(\"You lose!\")\n\n# Call the function to start the game\nplay_rock_paper_scissors()\n```\n\nThis function will keep prompting the user for their choice until a valid input is provided. Then, it will randomly choose a computer choice and compare it to the user's choice to determine the outcome of the game.",
+  "error": null,
+  "elapsed_seconds": 3.84,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

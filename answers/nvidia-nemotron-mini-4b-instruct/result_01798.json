@@ -1,0 +1,9 @@
+{
+  "id": 1798,
+  "title": "Dictionary Grouping",
+  "prompt": "Write a function to group a dictionary by its values and return a new dictionary containing the grouped key-value pairs.\nSample Input: dictionary = {\"a\": 1, \"b\": 1, \"c\": 2, \"d\": 2}\nSample Output: {1: [\"a\", \"b\"], 2: [\"c\", \"d\"]}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef group_dict_by_values(dictionary):\n    \"\"\"\n    Groups a dictionary by its values and returns a new dictionary containing the grouped key-value pairs.\n\n    :param dictionary: The input dictionary\n    :return: A new dictionary with grouped key-value pairs\n    \"\"\"\n    # Use a dictionary comprehension to create a new dictionary with grouped key-value pairs\n    return {value: [key for key in dictionary.keys() if dictionary[key] == value] for value in set(dictionary.values())}\n```\nHere's how this function works:\n\n1. It first converts the input dictionary's values to a set to remove any duplicates.\n2. It then uses a dictionary comprehension to create a new dictionary with grouped key-value pairs. The outer dictionary comprehension iterates over each unique value in the input dictionary's values, and the inner dictionary comprehension iterates over each key-value pair in the input dictionary, only including the key if the corresponding value is equal to the current value being iterated over.\n\nHere's an example of how you can use this function:\n```python\ndictionary = {\"a\": 1, \"b\": 1, \"c\": 2, \"d\": 2}\nresult = group_dict_by_values(dictionary)\nprint(result)  # Output: {1: ['a', 'b'], 2: ['c', 'd']}\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.53,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4074,
+  "title": "String Interpolation",
+  "prompt": "Write a program that takes a string and a dictionary as input and returns the string with all placeholders replaced with the corresponding values from the dictionary.\nSample Input: ['hello {name}', {'name': 'world'}]\nSample Output: hello world\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef format_string(template, data):\n    \"\"\"\n    Replaces placeholders in a string with corresponding values from a dictionary.\n\n    Parameters:\n    template (str): A string containing one or more placeholders.\n    data (dict): A dictionary containing the values to replace the placeholders with.\n\n    Returns:\n    str: The formatted string with placeholders replaced.\n    \"\"\"\n    # Use string formatting to replace placeholders with values from the dictionary\n    formatted_string = template.format(**data)\n\n    return formatted_string\n\n# Example usage\ninput_data = ['hello {name}', {'name': 'world'}]\noutput = format_string(*input_data)\nprint(output)  # Output: hello world\n```\nThis program defines a function `format_string` that takes a template string and a dictionary as input, and returns the formatted string with placeholders replaced. The function uses Python's string formatting syntax (`{}`) to iterate over the placeholders in the template string and replace them with the corresponding values from the dictionary. The example usage at the end of the program demonstrates how to use the function with a sample input and output.",
+  "error": null,
+  "elapsed_seconds": 2.87,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

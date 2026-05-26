@@ -1,0 +1,9 @@
+{
+  "id": 5280,
+  "title": "Price Comparator",
+  "prompt": "Develop a program to compare the prices of two items and determine which one is cheaper using conditional statements\nSample Input: 10 20\nSample Output: Item A is cheaper\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef compare_prices(price_a, price_b):\n    \"\"\"\n    Compares the prices of two items and determines which one is cheaper.\n\n    :param price_a: The price of item A.\n    :param price_b: The price of item B.\n    :return: A string indicating which item is cheaper.\n    \"\"\"\n\n    # Ensure the inputs are numbers\n    if not isinstance(price_a, (int, float)) or not isinstance(price_b, (int, float)):\n        raise ValueError(\"Both inputs must be numbers.\")\n\n    # Compare the prices and determine which one is cheaper\n    if price_a < price_b:\n        cheaper_item = \"Item A\"\n    elif price_a > price_b:\n        cheaper_item = \"Item B\"\n    else:\n        cheaper_item = \"Both items cost the same.\"\n\n    return f\"{cheaper_item} is cheaper.\"\n\n\n# Example usage\nprice_a = 10\nprice_b = 20\nprint(compare_prices(price_a, price_b))  # Output: Item B is cheaper\n```\n\nThis program defines a function `compare_prices` that takes two integer or float inputs and returns a string indicating which item is cheaper. The function checks if the inputs are numbers, compares the prices, and returns a message indicating which item is cheaper. The example usage shows how to use the function to compare the prices of two items.",
+  "error": null,
+  "elapsed_seconds": 3.64,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

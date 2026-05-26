@@ -1,0 +1,9 @@
+{
+  "id": 8818,
+  "title": "Data Type Analyzer",
+  "prompt": "Create a program that takes in a list of values and determines the data type of each value. The program should then print out the data type of each value and the total count of each data type. The data types to consider are integers, floats, strings, and booleans.\nSample Input: [1, 2.5, 'hello', True, 3, 4.2, 'world', False]\nSample Output: Integer: 1, Float: 2, String: 2, Boolean: 2\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef analyze_data_types(data):\n    # Initialize counters for each data type\n    int_count = 0\n    float_count = 0\n    str_count = 0\n    bool_count = 0\n\n    # Iterate through the list and count each data type\n    for item in data:\n        if isinstance(item, int):\n            int_count += 1\n        elif isinstance(item, float):\n            float_count += 1\n        elif isinstance(item, str):\n            str_count += 1\n        elif isinstance(item, bool):\n            bool_count += 1\n\n    # Print the results\n    print(\"Integer:\", int_count)\n    print(\"Float:\", float_count)\n    print(\"String:\", str_count)\n    print(\"Boolean:\", bool_count)\n\n# Example usage\ndata = [1, 2.5, 'hello', True, 3, 4.2, 'world', False]\nanalyze_data_types(data)\n```\n\nThis program defines a function `analyze_data_types` that takes a list of values as input and counts the occurrences of each data type (integer, float, string, and boolean). The function then prints out the total count of each data type. The example usage at the end of the program demonstrates how to use the function with a sample input list.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

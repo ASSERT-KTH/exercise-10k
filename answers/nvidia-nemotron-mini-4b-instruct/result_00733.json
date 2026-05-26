@@ -1,0 +1,9 @@
+{
+  "id": 733,
+  "title": "GeV Calculator",
+  "prompt": "Write a program that takes the mass and velocity of an object as input and outputs its kinetic energy.\nSample Input: 10 5\nSample Output: 125\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef calculate_kinetic_energy(mass, velocity):\n    \"\"\"\n    Calculates the kinetic energy of an object with given mass and velocity.\n\n    :param mass: The mass of the object in kilograms.\n    :param velocity: The velocity of the object in meters per second.\n    :return: The kinetic energy of the object in joules.\n    \"\"\"\n\n    # Check that the input values are positive\n    if mass <= 0 or velocity <= 0:\n        raise ValueError(\"Mass and velocity must be positive numbers.\")\n\n    # Calculate the kinetic energy using the formula KE = 0.5 * m * v^2\n    kinetic_energy = 0.5 * mass * (velocity ** 2)\n\n    return kinetic_energy\n\n# Get user input\nmass = float(input(\"Enter the mass of the object in kilograms: \"))\nvelocity = float(input(\"Enter the velocity of the object in meters per second: \"))\n\n# Calculate and display the kinetic energy\nkinetic_energy = calculate_kinetic_energy(mass, velocity)\nprint(f\"The kinetic energy of the object is {kinetic_energy} joules.\")\n```\n\nThis program defines a function `calculate_kinetic_energy` that takes the mass and velocity as input and returns the kinetic energy. The function checks that the input values are positive and calculates the kinetic energy using the formula `KE = 0.5 * m * v^2`. The program then gets user input for the mass and velocity, calls the function to calculate the kinetic energy, and displays the result.",
+  "error": null,
+  "elapsed_seconds": 3.67,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

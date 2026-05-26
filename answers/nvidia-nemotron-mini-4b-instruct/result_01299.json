@@ -1,0 +1,9 @@
+{
+  "id": 1299,
+  "title": "Dictionary Merging",
+  "prompt": "Create a function that takes two dictionaries and returns a new dictionary containing all key-value pairs from both dictionaries.\nSample Input: {'a': 1, 'b': 2}, {'c': 3, 'd': 4}\nSample Output: {'a': 1, 'b': 2, 'c': 3, 'd': 4}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef combine_dicts(dict1, dict2):\n    \"\"\"\n    Combines two dictionaries into a new dictionary containing all key-value pairs from both input dictionaries.\n\n    :param dict1: The first input dictionary\n    :param dict2: The second input dictionary\n    :return: A new dictionary containing all key-value pairs from both input dictionaries\n    \"\"\"\n    # Combine the dictionaries using the update() method\n    new_dict = dict1.copy()\n    new_dict.update(dict2)\n\n    return new_dict\n```\nHere's an example of how you can use this function:\n```python\ndict1 = {'a': 1, 'b': 2}\ndict2 = {'c': 3, 'd': 4}\n\ncombined_dict = combine_dicts(dict1, dict2)\nprint(combined_dict)  # Output: {'a': 1, 'b': 2, 'c': 3, 'd': 4}\n```\nThis function first creates a copy of the first input dictionary to avoid modifying the original dictionary. Then, it uses the `update()` method to combine the two dictionaries, adding all key-value pairs from the second dictionary to the first dictionary. Finally, it returns the new dictionary containing all key-value pairs from both input dictionaries.",
+  "error": null,
+  "elapsed_seconds": 3.52,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

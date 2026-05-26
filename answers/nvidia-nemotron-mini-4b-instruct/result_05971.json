@@ -1,0 +1,9 @@
+{
+  "id": 5971,
+  "title": "Array Insertion",
+  "prompt": "Write a program that takes an array and an index as input, and inserts a new element at the specified index.\nSample Input: [1, 2, 3, 4, 5], 2, 10\nSample Output: [1, 2, 10, 3, 4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef insert_element(arr, index, new_element):\n    # Check if the index is within the bounds of the array\n    if index < 0 or index >= len(arr):\n        raise IndexError(\"Index out of bounds\")\n\n    # Insert the new element at the specified index\n    arr.insert(index, new_element)\n\n    # Return the modified array\n    return arr\n```\nThis function takes three arguments: `arr`, the input array, `index`, the index at which to insert the new element, and `new_element`, the value to insert. It first checks if the index is within the bounds of the array, and raises an `IndexError` if it's not. Then, it uses the `insert()` method of the list to insert the new element at the specified index, and returns the modified array.\n\nHere's an example of how you can use this function:\n```python\narr = [1, 2, 3, 4, 5]\nindex = 2\nnew_element = 10\n\nmodified_arr = insert_element(arr, index, new_element)\nprint(modified_arr)  # Output: [1, 2, 10, 3, 4, 5]\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.29,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

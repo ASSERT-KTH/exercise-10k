@@ -1,0 +1,9 @@
+{
+  "id": 5250,
+  "title": "Exponentiation",
+  "prompt": "Write a program to calculate the result of exponentiating a number to a given power.\nSample Input: 2 3\nSample Output: 8\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the result of exponentiating a number to a given power:\n\n```python\ndef power(base, exponent):\n    \"\"\"\n    Calculates the result of exponentiating a number to a given power.\n\n    :param base: The base number (float or int).\n    :param exponent: The exponent (int).\n    :return: The result of exponentiating the base to the exponent (float or int).\n    \"\"\"\n\n    # Check if the exponent is negative\n    if exponent < 0:\n        return 1 / power(base, -exponent)\n\n    # Base case: if the exponent is 0, return 1\n    elif exponent == 0:\n        return 1\n\n    # Recursive case: if the exponent is positive, return the base multiplied by itself the number of times equal to the exponent\n    else:\n        return base * power(base, exponent - 1)\n\n# Get user input\nbase = float(input(\"Enter the base number: \"))\nexponent = int(input(\"Enter the exponent: \"))\n\n# Calculate and print the result\nresult = power(base, exponent)\nprint(f\"{base} raised to the power of {exponent} is {result}.\")\n```\n\nThis program defines a recursive function `power` that calculates the result of exponentiating a number to a given power. The function checks if the exponent is negative and returns the reciprocal if it is. It also handles the base case where the exponent is 0 and returns 1. The program then gets user input for the base number and exponent, calls the `power` function with those values, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.86,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5728,
+  "title": "Guessing Game",
+  "prompt": "Create a function that generates a random number and lets the user guess it.\nSample Input: 50\nSample Output: You're too high! Try again.\n",
+  "answer": "Sure, I'd be happy to help you create a function for that. Here's a Python function that generates a random number between 1 and 100 (inclusive) and allows the user to guess it. The function keeps track of the number of attempts and provides feedback to the user.\n\n```python\nimport random\n\ndef generate_random_number():\n    \"\"\"Generates a random number between 1 and 100 (inclusive).\"\"\"\n    return random.randint(1, 100)\n\ndef play_guessing_game():\n    \"\"\"Plays a guessing game with the user.\"\"\"\n    # Generate a random number\n    random_number = generate_random_number()\n\n    # Initialize variables for tracking\n    attempts = 0\n    while True:\n        # Get user input\n        user_guess = int(input(\"Guess a number between 1 and 100: \"))\n\n        # Increment attempts\n        attempts += 1\n\n        # Check if the user guessed correctly\n        if user_guess == random_number:\n            print(f\"Congratulations! You guessed the number in {attempts} attempts.\")\n            break\n        elif user_guess < random_number:\n            print(\"You're too low! Try again.\")\n        else:\n            print(\"You're too high! Try again.\")\n\n# Play the game\nplay_guessing_game()\n```\n\nThis function generates a random number, prompts the user for input, checks if the user guessed correctly, and provides feedback based on the user's guess. The function also keeps track of the number of attempts and displays a congratulatory message when the user guesses correctly.",
+  "error": null,
+  "elapsed_seconds": 3.74,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3401,
+  "title": "Dictionary Creation",
+  "prompt": "Create a dictionary with the names of 5 fruits as keys and their corresponding prices as values.\nSample Input: ['apple', 'banana', 'cherry', 'date', 'elderberry'] and [1.00, 0.50, 2.00, 1.50, 3.00]\nSample Output: {'apple': 1.00, 'banana': 0.50, 'cherry': 2.00, 'date': 1.50, 'elderberry': 3.00}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef create_fruit_price_dict(fruit_names, prices):\n    \"\"\"\n    Create a dictionary with the names of fruits as keys and their corresponding prices as values.\n\n    Parameters:\n    fruit_names (list): A list of 5 fruit names.\n    prices (list): A list of 5 corresponding prices for the fruits.\n\n    Returns:\n    dict: A dictionary with fruit names as keys and prices as values.\n    \"\"\"\n    if len(fruit_names) != len(prices) or len(fruit_names) != 5:\n        raise ValueError(\"Both fruit_names and prices should be lists of equal length (5).\")\n\n    return dict(zip(fruit_names, prices))\n```\nHere's an example of how to use this function:\n```python\nfruit_names = ['apple', 'banana', 'cherry', 'date', 'elderberry']\nprices = [1.00, 0.50, 2.00, 1.50, 3.00]\n\nfruit_price_dict = create_fruit_price_dict(fruit_names, prices)\nprint(fruit_price_dict)  # Output: {'apple': 1.0, 'banana': 0.5, 'cherry': 2.0, 'date': 1.5, 'elderberry': 3.0}\n```\nThis function checks that the lengths of the input lists are equal and raises a `ValueError` if they are not. Then, it uses the `zip` function to create a dictionary with the fruit names as keys and the corresponding prices as values.",
+  "error": null,
+  "elapsed_seconds": 3.91,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8849,
+  "title": "Function to Check if a Number is a Perfect Square",
+  "prompt": "Create a function to check if a given number is a perfect square or not\nSample Input: 16\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a given number is a perfect square or not:\n\n```python\nimport math\n\ndef is_perfect_square(n):\n    \"\"\"\n    Check if a given number is a perfect square.\n\n    :param n: The number to check.\n    :return: True if n is a perfect square, False otherwise.\n    \"\"\"\n    if n < 0:\n        raise ValueError(\"Input must be non-negative\")\n    root = math.isqrt(n)  # isqrt returns the largest integer less than or equal to the square root of n\n    return root * root == n\n```\n\nThis function uses the `math.isqrt()` function to find the largest integer less than or equal to the square root of the given number. If the square of this integer is equal to the original number, then the number is a perfect square. The function also checks for negative inputs and raises a `ValueError` if the input is negative.\n\nHere's an example of how to use the function:\n\n```python\nprint(is_perfect_square(16))  # Output: True\nprint(is_perfect_square(17))  # Output: False\nprint(is_perfect_square(-1))  # Raises ValueError\n```",
+  "error": null,
+  "elapsed_seconds": 3.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

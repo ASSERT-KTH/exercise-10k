@@ -1,0 +1,9 @@
+{
+  "id": 2169,
+  "title": "LCM of Two Numbers",
+  "prompt": "Ask the user for two numbers and print their least common multiple.\nSample Input: 12 15\nSample Output: 60\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution that asks the user for two numbers and prints their least common multiple (LCM):\n\n```python\ndef get_lcm(a, b):\n    \"\"\"\n    Calculate the least common multiple of two numbers.\n\n    :param a: The first number.\n    :param b: The second number.\n    :return: The least common multiple of a and b.\n    \"\"\"\n    # Find the LCM using the Euclidean algorithm.\n    while True:\n        a, b = b % a, a\n        if b == 0:\n            return abs(a)\n\n# Ask the user for two numbers.\nnum1 = int(input(\"Enter the first number: \"))\nnum2 = int(input(\"Enter the second number: \"))\n\n# Calculate and print the LCM.\nlcm = get_lcm(num1, num2)\nprint(f\"The least common multiple of {num1} and {num2} is {lcm}.\")\n```\n\nThis program defines a helper function `get_lcm()` that uses the Euclidean algorithm to calculate the LCM of two numbers. The main part of the program asks the user for two numbers, calls the helper function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

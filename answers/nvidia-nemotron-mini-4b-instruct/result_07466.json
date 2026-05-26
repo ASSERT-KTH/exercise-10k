@@ -1,0 +1,9 @@
+{
+  "id": 7466,
+  "title": "List to String Converter",
+  "prompt": "Write a program that converts a given list into a string\nSample Input: [1, 2, 3]\nSample Output: 123\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that converts a given list into a string:\n\n```python\ndef list_to_string(input_list):\n    \"\"\"\n    Converts a given list into a string.\n\n    Parameters:\n    input_list (list): The list to be converted into a string.\n\n    Returns:\n    str: The string representation of the input list.\n    \"\"\"\n\n    # Check if the input is a list\n    if not isinstance(input_list, list):\n        raise TypeError(\"The input should be a list.\")\n\n    # Join the elements of the list into a string using a space as the separator\n    string_representation = \" \".join(str(item) for item in input_list)\n\n    return string_representation\n```\n\nYou can use this function as follows:\n\n```python\nsample_input = [1, 2, 3]\nsample_output = list_to_string(sample_input)\nprint(sample_output)  # Output: 1 2 3\n```\n\nThis function first checks if the input is a list. If not, it raises a `TypeError`. Then, it uses a list comprehension to convert each element of the list to a string and joins them together with a space as the separator. Finally, it returns the resulting string.",
+  "error": null,
+  "elapsed_seconds": 3.37,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

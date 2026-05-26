@@ -1,0 +1,9 @@
+{
+  "id": 1303,
+  "title": "Updating Dictionary Values",
+  "prompt": "Write a function to update the value associated with a given key in a dictionary\nSample Input: person = {'name': 'John', 'age': 25}; key = 'age'; new_value = 30\nSample Output: {'name': 'John', 'age': 30}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef update_dict_value(person, key, new_value):\n    \"\"\"\n    Updates the value associated with a given key in a dictionary.\n\n    Parameters:\n    person (dict): The dictionary to update.\n    key (str): The key of the value to update.\n    new_value (any): The new value to assign to the key.\n\n    Returns:\n    dict: The updated dictionary.\n    \"\"\"\n    # Check if the key exists in the dictionary\n    if key in person:\n        # Update the value associated with the key\n        person[key] = new_value\n        return person\n    else:\n        # If the key does not exist, raise a KeyError\n        raise KeyError(f\"The key '{key}' does not exist in the dictionary.\")\n```\nHere's an example of how you can use this function:\n```python\nperson = {'name': 'John', 'age': 25}\nkey = 'age'\nnew_value = 30\n\nupdated_person = update_dict_value(person, key, new_value)\nprint(updated_person)  # Output: {'name': 'John', 'age': 30}\n```\nThis function checks if the key exists in the dictionary before updating its value. If the key does not exist, it raises a `KeyError` with an appropriate error message.",
+  "error": null,
+  "elapsed_seconds": 3.35,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

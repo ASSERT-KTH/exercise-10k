@@ -1,0 +1,9 @@
+{
+  "id": 6030,
+  "title": "Closure Function",
+  "prompt": "Write a closure function that returns another function with access to its own scope. Use the function to create a counter that increments each time it is called.\nSample Input: None\nSample Output: 1, 2, 3, ...\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a JavaScript closure function that meets your requirements. This function, `createCounter`, returns another function that increments a private counter variable each time it is called. The private variable is accessible within the inner function because it has lexical scope with the outer function.\n\n```javascript\nfunction createCounter() {\n let counter = 0;\n\n  return function() {\n    counter++;\n    return counter;\n  };\n}\n\n// Usage:\nconst counter = createCounter();\n\nconsole.log(counter()); // Output: 1\nconsole.log(counter()); // Output: 2\nconsole.log(counter()); // Output: 3\n```\n\nIf you want to make the counter accessible outside the function, you can return the inner function instead of the counter value. This way, you can call the counter function directly without creating a new instance each time. However, this approach has a performance overhead due to the creation of a new function object for each call. Here's an example:\n\n```javascript\nfunction createCounter() {\n let counter = 0;\n\n  return function() {\n    counter++;\n    return counter;\n  };\n}\n\n// Usage:\nconst counter = createCounter();\n\nconsole.log(counter()); // Output: 1\nconsole.log(counter()); // Output: 2\nconsole.log(counter()); // Output: 3\n```",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

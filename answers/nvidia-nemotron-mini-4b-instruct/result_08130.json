@@ -1,0 +1,9 @@
+{
+  "id": 8130,
+  "title": "Number Sequence",
+  "prompt": "Create a program that generates a number sequence using if/else statements\nSample Input: 5\nSample Output: 1, 2, 3, 4, 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates a number sequence using if/else statements based on the input you provided. This program will generate a sequence of numbers from 1 to the given input (inclusive).\n\n```python\ndef generate_sequence(n):\n    \"\"\"\n    Generates a number sequence using if/else statements.\n\n    :param n: The upper limit of the sequence.\n    :return: A list of numbers in the sequence.\n    \"\"\"\n    if n < 1:\n        raise ValueError(\"Input must be a positive integer.\")\n\n    sequence = []\n    num = 1\n\n    while num <= n:\n        if num % 2 == 0:  # Even numbers\n            sequence.append(num)\n        else:  # Odd numbers\n            sequence.append(num * 2)\n        num += 1\n\n    return sequence\n\n\n# Get user input\nn = int(input(\"Enter the upper limit of the sequence: \"))\n\n# Generate and print the sequence\nsequence = generate_sequence(n)\nprint(f\"The sequence is: {sequence}\")\n```\n\nThis program defines a function `generate_sequence` that generates a sequence of numbers based on the given upper limit. The function checks if the input is a positive integer and raises a `ValueError` if it's not. Then, it uses a while loop to generate the sequence, appending even numbers to the sequence and doubling odd numbers. Finally, it returns the generated sequence. The program then gets user input, generates the sequence, and prints it.",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

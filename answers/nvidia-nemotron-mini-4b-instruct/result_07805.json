@@ -1,0 +1,9 @@
+{
+  "id": 7805,
+  "title": "Time Converter",
+  "prompt": "Write a program that converts a time from one format to another (e.g. from 12-hour to 24-hour format).\nSample Input: 3:45 PM\nSample Output: 15:45\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that converts a time from 12-hour format to 24-hour format:\n```python\ndef convert_time(time_str):\n    # Split the input string into hour and minute components\n    hour, minute = time_str.split(\":\")\n\n    # Convert the hour component from 12-hour format to 24-hour format\n    if time_str[-2:] == \"PM\":\n        hour = int(hour) + 12\n    elif time_str[0] == \"1\":\n        hour = 1\n    else:\n        hour = int(hour)\n\n    # Combine the hour and minute components into a single string\n    output_str = f\"{hour:02d}:{minute:02d}\"\n\n    return output_str\n\n# Test the function with a sample input\nsample_input = \"3:45 PM\"\nsample_output = convert_time(sample_input)\nprint(f\"Sample Input: {sample_input}\")\nprint(f\"Sample Output: {sample_output}\")\n```\nThis program defines a function `convert_time` that takes a time string as input and returns the corresponding 24-hour time string. The function first splits the input string into hour and minute components, then checks if the hour component is in 12-hour format and adjusts it accordingly. Finally, it combines the hour and minute components into a single string and returns it. The function is then tested with a sample input and output to verify its functionality.",
+  "error": null,
+  "elapsed_seconds": 3.57,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

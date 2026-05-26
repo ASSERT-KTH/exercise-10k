@@ -1,0 +1,9 @@
+{
+  "id": 9636,
+  "title": "Function with Async/Await",
+  "prompt": "Create a function that uses async/await to perform asynchronous operations.\nSample Input: None\nSample Output: Asynchronous result\n",
+  "answer": "Sure, I'd be happy to help you create an async/await function for asynchronous operations. Here's an example of a function that fetches data from a remote API using the `fetch` API, which is an asynchronous operation. This function will return a promise that resolves to the data when the API request is completed.\n\n```javascript\n// async/await function to fetch data from a remote API\nasync function fetchData() {\n  // Replace 'https://api.example.com/data' with the actual API endpoint\n const response = await fetch('https://api.example.com/data');\n\n  // Check if the request was successful\n  if (!response.ok) {\n    throw new Error(`HTTP error! Status: ${response.status}`);\n  }\n\n  // Parse the JSON response\n const data = await response.json();\n\n  // Return the data\n  return data;\n}\n\n// Example usage\nfetchData()\n  .then(data => {\n    console.log('Asynchronous result:', data);\n  })\n  .catch(error => {\n    console.error('Error:', error);\n  });\n```\n\nThis function demonstrates how to use async/await to perform asynchronous operations, and how to handle errors and resolve promises. You can replace the API endpoint with the actual URL of the API you want to fetch data from.",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

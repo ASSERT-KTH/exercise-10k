@@ -1,0 +1,9 @@
+{
+  "id": 6054,
+  "title": "Travel Planner",
+  "prompt": "Write a program that helps users plan trips using conditional statements, considering factors such as destination, budget, and time of year.\nSample Input: plan trip Paris 1000\nSample Output: Recommended itinerary: 5 days in Paris\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses conditional statements to suggest an itinerary based on the user's input. It considers the destination (Paris), the budget (1000), and the time of year (assumed to be any time, as the input doesn't provide a specific date).\n\n```python\ndef plan_trip(destination, budget):\n    # Define a dictionary of recommended itineraries for each destination and budget\n    itineraries = {\n        \"Paris\": {\n            \"1000\": \"Recommended itinerary: 5 days in Paris\",\n            \"2000\": \"Recommended itinerary: 7 days in Paris\",\n            \"3000\": \"Recommended itinerary: 10 days in Paris\"\n        },\n        \"New York\": {\n            \"1000\": \"Recommended itinerary: 3 days in New York\",\n            \"2000\": \"Recommended itinerary: 5 days in New York\",\n            \"3000\": \"Recommended itinerary: 7 days in New York\"\n        },\n        # Add more destinations and budgets here\n    }\n\n    # Check if the destination and budget are valid\n    if destination not in itineraries or budget not in itineraries[destination]:\n        print(f\"Sorry, we don't have a recommended itinerary for {destination} with a budget of {budget}.\")\n        return\n\n    # Print the recommended itinerary\n    print(itineraries[destination][budget])\n\n# Example usage\nplan_trip(\"Paris\", 1000)\n```\n\nThis program can be easily extended to include more destinations and budgets by adding them to the `itineraries` dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

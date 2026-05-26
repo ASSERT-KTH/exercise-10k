@@ -1,0 +1,9 @@
+{
+  "id": 3175,
+  "title": "Vowel Counter",
+  "prompt": "Write a function that counts the number of vowels in a given string.\nSample Input: hello world\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that counts the number of vowels in a given string:\n\n```python\ndef count_vowels(s: str) -> int:\n    \"\"\"\n    Count the number of vowels in a given string.\n\n    :param s: The string to count vowels in.\n    :return: The number of vowels in the string.\n    \"\"\"\n    vowels = set(\"aeiouAEIOU\")\n    return sum(1 for char in s if char in vowels)\n```\n\nThis function works by first defining a set of vowels, which includes both lowercase and uppercase vowels. It then uses a generator expression to iterate over each character in the input string, checking if it's a vowel using the `in` keyword. The `sum` function is used to count the number of vowels by summing the number of times each vowel is encountered.\n\nHere's an example of how you can use this function:\n\n```python\nprint(count_vowels(\"hello world\"))  # Output: 3\n```\n\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.98,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

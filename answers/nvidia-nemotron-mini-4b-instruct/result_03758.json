@@ -1,0 +1,9 @@
+{
+  "id": 3758,
+  "title": "Checking for a Substring",
+  "prompt": "Create a program to check whether a given substring is present in a string or not using a basic algorithm\nSample Input: ['hello world', 'world']\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks whether a given substring is present in a string using a basic algorithm:\n\n```python\ndef check_substring(string, substring):\n    \"\"\"\n    Check if a given substring is present in a string.\n\n    :param string: The string to search in.\n    :param substring: The substring to search for.\n    :return: True if the substring is found, False otherwise.\n    \"\"\"\n    # Check if the substring is empty or the string is empty\n    if not substring or not string:\n        return False\n\n    # Iterate through the string and check if the substring is found\n    for i in range(len(string)):\n        if string[i:i+len(substring)] == substring:\n            return True\n\n    # If the substring is not found, return False\n    return False\n\n# Example usage\nsample_input = ['hello world', 'world']\nsubstring = 'world'\n\nprint(check_substring(sample_input[0], substring))  # Output: True\n```\n\nThis program defines a function `check_substring` that takes a string and a substring as input, and returns `True` if the substring is found in the string, and `False` otherwise. The function first checks if the substring is empty or the string is empty, and returns `False` in those cases. Then, it iterates through the string using a for loop, checking if each substring of length equal to the length of the substring to search for is equal to the substring to search for. If a match is found, the function returns `True`.",
+  "error": null,
+  "elapsed_seconds": 3.81,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

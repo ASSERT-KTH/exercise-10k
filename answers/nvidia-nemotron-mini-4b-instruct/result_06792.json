@@ -1,0 +1,9 @@
+{
+  "id": 6792,
+  "title": "Arithmetic Operations Calculator",
+  "prompt": "Create a program that takes in two numbers and an arithmetic operation (+, -, *, /) as input, and then performs the specified operation on the two numbers and outputs the result.\nSample Input: 10 + 5\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you create a program for that. Here's a Python solution using the `input()` function to get user input and the `eval()` function to perform arithmetic operations. However, please note that `eval()` can be risky if the user inputs something other than a valid arithmetic expression, so it's better to use a library like `sympy` or `sympy-parser` for more secure and reliable arithmetic operations. Here's the code:\n\n```python\ndef perform_arithmetic(num1, num2, operation):\n    \"\"\"Perform arithmetic operation on two numbers and output the result.\"\"\"\n    result = eval(f\"{num1} {operation} {num2}\")\n    return result\n\n# Get user input\nnum1 = float(input(\"Enter the first number: \"))\nnum2 = float(input(\"Enter the second number: \"))\noperation = input(\"Enter the arithmetic operation (+, -, *, /): \")\n\n# Perform arithmetic operation\nresult = perform_arithmetic(num1, num2, operation)\n\n# Output the result\nprint(f\"The result of {num1} {operation} {num2} is {result}.\")\n```\n\nThis program will prompt the user to enter two numbers and an arithmetic operation, then perform the specified operation and output the result. The user can enter any valid arithmetic expression, but the program will not handle errors or exceptions. If you want to add error handling or use a safer library, please refer to the libraries mentioned above.",
+  "error": null,
+  "elapsed_seconds": 3.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

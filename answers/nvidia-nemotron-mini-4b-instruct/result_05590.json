@@ -1,0 +1,9 @@
+{
+  "id": 5590,
+  "title": "Function to Calculate the Square Root",
+  "prompt": "Write a function that takes a number as an argument and returns its square root.\nSample Input: square_root(16)\nSample Output: 4.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that takes a number as an argument and returns its square root using the built-in `math.isqrt()` function to compute the integer square root and then the `math.sqrt()` function to compute the decimal square root:\n\n```python\nimport math\n\ndef square_root(number):\n    \"\"\"\n    Returns the square root of a given number.\n\n    :param number: The number to find the square root of.\n    :return: The square root of the number as a float.\n    \"\"\"\n    # Use math.isqrt() to compute the integer square root\n    integer_sqrt = math.isqrt(number)\n\n    # Compute the decimal square root using math.sqrt()\n    decimal_sqrt = math.sqrt(number)\n\n    # Return the decimal square root if it's not an integer\n    return decimal_sqrt if integer_sqrt * integer_sqrt == number else integer_sqrt\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(square_root(16))  # Output: 4.0\nprint(square_root(25))  # Output: 5.0\nprint(square_root(1))   # Output: 1.0\nprint(square_root(0))   # Output: 0.0\n```",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8040,
+  "title": "Weather Forecast",
+  "prompt": "Write a program that uses an if/else statement to determine the weather forecast based on the temperature and humidity.\nSample Input: 25 60\nSample Output: Sunny\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef weather_forecast(temp, humidity):\n    \"\"\"\n    Determines the weather forecast based on the temperature and humidity.\n\n    :param temp: The temperature (in degrees Celsius)\n    :param humidity: The humidity (in percentage)\n    :return: A string indicating the weather forecast\n    \"\"\"\n    # Define the weather conditions based on temperature and humidity\n    if temp >= 25 and humidity < 60:\n        return \"Sunny\"\n    elif temp < 25 and humidity >= 60:\n        return \"Cloudy\"\n    else:\n        return \"Rainy\"\n\n# Get user input\ntemp = float(input(\"Enter the temperature (in degrees Celsius): \"))\nhumidity = int(input(\"Enter the humidity (in percentage): \"))\n\n# Print the weather forecast\nprint(weather_forecast(temp, humidity))\n```\nThis program defines a function `weather_forecast` that takes the temperature and humidity as input and returns a string indicating the weather forecast. The function uses an `if/else` statement to determine the weather based on the temperature and humidity ranges. The program then prompts the user to enter the temperature and humidity, calls the `weather_forecast` function with the user's input, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.1,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

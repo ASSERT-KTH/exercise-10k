@@ -1,0 +1,9 @@
+{
+  "id": 137,
+  "title": "Decimal to Fraction",
+  "prompt": "Write a program that converts a given decimal number to a simplified fraction.\nSample Input: 0.5\nSample Output: 1/2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that converts a given decimal number to a simplified fraction:\n\n```python\ndef decimal_to_fraction(decimal):\n    \"\"\"\n    Converts a given decimal number to a simplified fraction.\n\n    :param decimal: The decimal number to convert.\n    :return: A string representing the simplified fraction.\n    \"\"\"\n\n    # Ensure the input is a number\n    if not isinstance(decimal, (float, int)):\n        raise TypeError(\"Input must be a number.\")\n\n    # Convert the decimal to an integer\n    integer = int(decimal)\n\n    # Calculate the numerator and denominator\n    numerator = integer\n    denominator = 1\n\n    # Calculate the greatest common divisor (GCD)\n    while numerator != 0:\n        old_numerator, old_denominator = numerator, denominator\n        numerator, denominator = denominator, old_numerator % denominator\n\n    # Ensure the denominator is positive\n    if denominator < 0:\n        numerator, denominator = -numerator, -denominator\n\n    return f\"{numerator}/{denominator}\"\n\n# Sample usage\ndecimal = 0.5\nfraction = decimal_to_fraction(decimal)\nprint(f\"The simplified fraction of {decimal} is: {fraction}\")\n```\n\nThis program first checks if the input is a number, then converts it to an integer. It then calculates the greatest common divisor (GCD) of the numerator and denominator to ensure the fraction is simplified. Finally, it returns the simplified fraction as a string.",
+  "error": null,
+  "elapsed_seconds": 4.59,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

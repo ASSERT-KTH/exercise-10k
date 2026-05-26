@@ -1,0 +1,9 @@
+{
+  "id": 5362,
+  "title": "List Slicing",
+  "prompt": "Write a program to extract a subset of elements from a list using slicing.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [2, 3, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that extracts a subset of elements from a list using slicing:\n\n```python\ndef extract_subset(lst, start=0, end=None):\n    \"\"\"\n    Extract a subset of elements from a list using slicing.\n\n    :param lst: The list to extract from.\n    :param start: The starting index of the subset (default: 0).\n    :param end: The ending index of the subset (default: length of the list).\n    :return: A new list containing the extracted subset.\n    \"\"\"\n    if end is None:\n        end = len(lst)\n    return lst[start:end]\n\n# Example usage:\nsample_input = [1, 2, 3, 4, 5]\nsample_output = extract_subset(sample_input, start=1, end=4)\nprint(sample_output)  # Output: [2, 3, 4]\n```\n\nThis function, `extract_subset`, takes a list `lst`, an optional starting index `start`, and an optional ending index `end`. It returns a new list containing all elements from the `start`th index up to (but not including) the `end`th index of `lst`. If `end` is not provided, it defaults to the length of the list.\n\nThe example usage shows how to use the function to extract a subset of elements from a list, which is then printed to the console.",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6211,
+  "title": "Array of Cumulative Sums",
+  "prompt": "Write a function that takes an array of integers as input, and returns a new array where each element is the cumulative sum of the elements up to that point in the input array.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: [1, 3, 6, 10, 15]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function uses list comprehension to create a new array with cumulative sums.\n\n```python\ndef cumulative_sum(arr):\n    \"\"\"\n    Takes an array of integers as input and returns a new array where each element is the cumulative sum of the elements up to that point in the input array.\n\n    :param arr: List[int] - The input array of integers\n    :return: List[int] - The cumulative sum array\n    \"\"\"\n    return [sum(arr[:i+1]) for i in range(len(arr))]\n```\n\nHere's an example of how to use this function:\n\n```python\ninput_array = [1, 2, 3, 4, 5]\noutput_array = cumulative_sum(input_array)\nprint(output_array)  # Output: [1, 3, 6, 10, 15]\n```\n\nThis function has a time complexity of O(n) because it iterates through the input array only once.",
+  "error": null,
+  "elapsed_seconds": 2.71,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

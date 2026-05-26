@@ -1,0 +1,9 @@
+{
+  "id": 8987,
+  "title": "Character Frequency",
+  "prompt": "Write a function that takes a string as input and returns a dictionary with the frequency of each character in the string.\nSample Input: ['Hello World']\nSample Output: {'H': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'W': 1, 'r': 1, 'd': 1}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\nfrom collections import Counter\n\ndef char_frequency(input_string: str) -> dict:\n    \"\"\"\n    Takes a string as input and returns a dictionary with the frequency of each character in the string.\n\n    :param input_string: The string to analyze.\n    :return: A dictionary where keys are characters and values are their frequencies.\n    \"\"\"\n    # Use the Counter class from the collections module to count the frequency of each character\n    char_freq = Counter(input_string)\n\n    # Convert the Counter object to a regular dictionary and return it\n    return dict(char_freq)\n```\nHere's an example of how you can use this function:\n```python\ninput_string = 'Hello World'\nresult = char_frequency(input_string)\nprint(result)  # Output: {'H': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'W': 1, 'r': 1, 'd': 1}\n```\nThis function first imports the `Counter` class from the `collections` module, which is used to count the frequency of each character in the input string. Then, it creates a `Counter` object from the input string and converts it to a regular dictionary using the `dict()` function. Finally, it returns the resulting dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.35,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

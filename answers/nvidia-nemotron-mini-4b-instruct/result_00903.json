@@ -1,0 +1,9 @@
+{
+  "id": 903,
+  "title": "Data Type Converter",
+  "prompt": "Create a program that converts a given variable from one data type to another and prints out the converted value.\nSample Input: variable = 10, data_type = 'float'\nSample Output: The converted variable is 10.0.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef convert_data_type(variable, data_type):\n    \"\"\"\n    Converts a given variable from one data type to another and prints out the converted value.\n\n    :param variable: The variable to be converted.\n    :param data_type: The desired data type ('int', 'float', 'str').\n    \"\"\"\n\n    # Ensure the data type is valid\n    valid_types = {'int', 'float', 'str'}\n    if data_type not in valid_types:\n        raise ValueError(f\"Invalid data type '{data_type}'. Please choose from {valid_types}.\")\n\n    # Convert the variable to the desired data type\n    if data_type == 'int':\n        converted_variable = int(variable)\n    elif data_type == 'float':\n        converted_variable = float(variable)\n    elif data_type == 'str':\n        converted_variable = str(variable)\n    else:\n        raise ValueError(f\"Invalid data type '{data_type}'. Please choose from {valid_types}.\")\n\n    # Print the converted value\n    print(f\"The converted variable is {converted_variable}.\")\n\n# Example usage\nvariable = 10\ndata_type = 'float'\nconvert_data_type(variable, data_type)\n```\nThis program defines a function `convert_data_type` that takes a variable and a data type as arguments, converts the variable to the desired data type, and prints out the converted value. The function also checks that the data type is valid and raises a `ValueError` if it's not. The example usage at the end of the program demonstrates how to use the function with a sample input.",
+  "error": null,
+  "elapsed_seconds": 4.13,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

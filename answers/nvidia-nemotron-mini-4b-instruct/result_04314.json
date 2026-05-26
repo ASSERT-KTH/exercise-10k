@@ -1,0 +1,9 @@
+{
+  "id": 4314,
+  "title": "Decorator",
+  "prompt": "Write a function that takes another function as input and adds a logging feature to it\nSample Input: add\nSample Output: Added 2 + 2 = 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that takes another function as input and adds a logging feature to it, similar to your sample output. This function uses the `logging` module to log the result of the function call.\n\n```python\nimport logging\n\ndef add_logging(func):\n    \"\"\"\n    Adds a logging feature to the given function.\n\n    Parameters:\n    func (callable): The function to add logging to.\n\n    Returns:\n    callable: The original function with logging added.\n    \"\"\"\n\n    # Set up a simple logging format\n    logging.basicConfig(level=logging.INFO, format='%(message)s')\n\n    def wrapper(*args, **kwargs):\n        \"\"\"\n        Wrapper function that logs the result of the original function call.\n        \"\"\"\n        result = func(*args, **kwargs)\n        logging.info(f\"Added {func.__name__} {args} = {result}\")\n        return result\n\n    return wrapper\n```\n\nNow you can use this decorator to add logging to any function:\n\n```python\n@add_logging\ndef add(a, b):\n    \"\"\"\n    Adds two numbers.\n\n    Parameters:\n    a (int): The first number to add.\n    b (int): The second number to add.\n\n    Returns:\n    int: The sum of a and b.\n    \"\"\"\n    return a + b\n\nadd(2, 2)  # Output: Added add (2, 2) = 4\n```\n\nThis will log the result of the `add` function call with the name and arguments provided. You can adjust the logging level and format as needed for your specific use case.",
+  "error": null,
+  "elapsed_seconds": 3.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

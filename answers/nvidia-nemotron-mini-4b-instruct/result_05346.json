@@ -1,0 +1,9 @@
+{
+  "id": 5346,
+  "title": "Array Partitioning",
+  "prompt": "Write a function that takes an array and a predicate function as input, and returns two arrays: one containing the elements that satisfy the predicate, and one containing the elements that do not.\nSample Input: [1, 2, 3, 4, 5], lambda x: x % 2 == 0\nSample Output: [[2, 4], [1, 3, 5]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef filter_array(arr, predicate):\n    \"\"\"\n    Given an array and a predicate function, returns two arrays: one containing the elements\n    that satisfy the predicate, and one containing the elements that do not.\n\n    :param arr: The input array\n    :param predicate: A function that takes an element as input and returns a boolean value\n    :return: A tuple containing two arrays\n    \"\"\"\n    # Filter the array based on the predicate function\n    satisfies_predicate = [element for element in arr if predicate(element)]\n    does_not_satisfy_predicate = [element for element in arr if not predicate(element)]\n\n    return satisfies_predicate, does_not_satisfy_predicate\n```\nHere's an example of how to use this function:\n```python\narr = [1, 2, 3, 4, 5]\npredicate = lambda x: x % 2 == 0\n\nsatisfies_predicate, does_not_satisfy_predicate = filter_array(arr, predicate)\nprint(satisfies_predicate)  # [2, 4]\nprint(does_not_satisfy_predicate)  # [1, 3, 5]\n```\nThis function uses list comprehensions to filter the input array based on the given predicate function. The first list comprehension creates an array containing only the elements that satisfy the predicate, and the second list comprehension creates an array containing only the elements that do not satisfy the predicate. The function returns a tuple containing these two arrays.",
+  "error": null,
+  "elapsed_seconds": 3.75,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

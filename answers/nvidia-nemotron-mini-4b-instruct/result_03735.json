@@ -1,0 +1,9 @@
+{
+  "id": 3735,
+  "title": "Print User Input with Suffix",
+  "prompt": "Write a program that reads a string from the user and prints it out with a suffix added to each line.\nSample Input: Hello\nWorld\nSample Output: Hello!\nWorld!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef add_suffix(input_string):\n    \"\"\"\n    Adds a suffix ('!') to each line of a given string.\n\n    :param input_string: The string to modify.\n    :return: The modified string with suffixes added.\n    \"\"\"\n    # Split the input string into lines, add the suffix to each line,\n    # and then join them back together with newlines.\n    modified_string = '\\n'.join(f'{line}!' for line in input_string.splitlines())\n\n    return modified_string\n\n# Get user input\nuser_input = input(\"Enter a string: \")\n\n# Print the modified string\nprint(add_suffix(user_input))\n```\nWhen you run this program and enter \"Hello\\nWorld\", it will output:\n```yaml\nEnter a string: Hello\nWorld!\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

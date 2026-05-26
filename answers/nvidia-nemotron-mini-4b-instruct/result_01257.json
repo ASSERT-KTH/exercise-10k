@@ -1,0 +1,9 @@
+{
+  "id": 1257,
+  "title": "Higher-Order Function Map",
+  "prompt": "Write a higher-order function that applies a given function to each element of a list.\nSample Input: [1, 2, 3], square\nSample Output: [1, 4, 9]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a higher-order function in Python that applies a given function to each element of a list, using list comprehension and the `map()` function (which is a built-in higher-order function in Python). \n\n```python\ndef apply_to_list(func, lst):\n    \"\"\"\n    Applies a given function to each element of a list.\n\n    :param func: The function to apply to each element of the list.\n    :param lst: The list to apply the function to.\n    :return: A new list with the result of applying the function to each element.\n    \"\"\"\n    return list(map(func, lst))\n\n# Sample usage:\nsquare = lambda x: x**2\nprint(apply_to_list(square, [1, 2, 3]))  # Output: [1, 4, 9]\n```\n\nIn this example, the `apply_to_list()` function takes a function and a list as arguments, applies the function to each element of the list using `map()`, and converts the resulting map object to a list using `list()`. The `square` function is used as an example, but you can replace it with any other function that takes a single argument and returns a single value.",
+  "error": null,
+  "elapsed_seconds": 2.92,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

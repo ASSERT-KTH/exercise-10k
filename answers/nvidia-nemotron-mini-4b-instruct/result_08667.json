@@ -1,0 +1,9 @@
+{
+  "id": 8667,
+  "title": "To-Do List",
+  "prompt": "Write a program that allows the user to add and remove items from a to-do list.\nSample Input: add buy milk\nSample Output: To-do list: [buy milk]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses a list to store the to-do items and allows the user to add and remove items using the `add` and `remove` functions, respectively. The program also keeps track of the current length of the to-do list.\n\n```python\ndef add_item(to_do_list, item):\n    \"\"\"Add an item to the to-do list.\"\"\"\n    to_do_list.append(item)\n    print(f\"To-do list: [{', '.join(to_do_list)}]\")\n\n\ndef remove_item(to_do_list, index):\n    \"\"\"Remove an item from the to-do list at the given index.\"\"\"\n    if index < len(to_do_list):\n        del to_do_list[index]\n        print(f\"Item removed from to-do list: [{to_do_list[index - 1]}]\")\n    else:\n        print(\"Index out of range. Please enter a valid index.\")\n\n\ndef main():\n    to_do_list = []\n\n    while True:\n        user_input = input(\"Enter 'add' to add an item, 'remove' to remove an item, or 'quit' to exit: \").lower()\n\n        if user_input == \"add\":\n            item = input(\"Enter the item to add: \")\n            add_item(to_do_list, item)\n\n        elif user_input == \"remove\":\n            index = int(input(\"Enter the index of the item to remove (1-based): \")) - 1\n            remove_item(to_do_list, index)\n\n        elif user_input == \"quit\":\n            break\n\n        else:\n            print(\"Invalid input. Please try again.\")\n\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program will keep running until the user enters \"quit\". You can modify the `main` function to save the to-do list to a file or database as needed.",
+  "error": null,
+  "elapsed_seconds": 4.74,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

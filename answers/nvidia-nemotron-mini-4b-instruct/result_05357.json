@@ -1,0 +1,9 @@
+{
+  "id": 5357,
+  "title": "Array Mapping",
+  "prompt": "Create a function that takes an array and a mapping function as input, and applies the mapping function to each element of the array, returning a new array containing the mapped elements.\nSample Input: [1, 2, 3, 4, 5], lambda x: x * 2\nSample Output: [2, 4, 6, 8, 10]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses the built-in `map()` function along with the `list()` function to create a new array (list) containing the mapped elements.\n\n```python\ndef map_array(arr, mapping_func):\n    \"\"\"\n    Applies a mapping function to each element of a given array and returns a new array containing the mapped elements.\n\n    :param arr: The input array\n    :param mapping_func: A function that takes one argument and returns a value\n    :return: A new array containing the mapped elements\n    \"\"\"\n    if not callable(mapping_func):\n        raise ValueError(\"The 'mapping_func' parameter must be a callable function.\")\n\n    return list(map(mapping_func, arr))\n```\n\nHere's an example of how to use this function:\n\n```python\nnumbers = [1, 2, 3, 4, 5]\ndouble = lambda x: x * 2\n\nmapped_numbers = map_array(numbers, double)\nprint(mapped_numbers)  # Output: [2, 4, 6, 8, 10]\n```\n\nThis function also checks if the `mapping_func` parameter is a callable function, raising a `ValueError` if it's not.",
+  "error": null,
+  "elapsed_seconds": 3.12,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

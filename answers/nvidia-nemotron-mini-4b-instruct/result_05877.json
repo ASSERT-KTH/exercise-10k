@@ -1,0 +1,9 @@
+{
+  "id": 5877,
+  "title": "Primality Test",
+  "prompt": "Determine whether a given number is prime or not.\nSample Input: 23\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you determine if a given number is prime or not! Here's a simple algorithm in Python to do that:\n\n```python\ndef is_prime(n):\n    \"\"\"Check if a given number is prime\"\"\"\n    if n < 2:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n```\n\nThis function first checks if the number is less than 2, in which case it's not prime. Then, it checks if the number is divisible by any integer between 2 and its square root (inclusive). If it finds a divisor, it returns `False`. If it goes through all possible divisors without finding any, it returns `True`, indicating that the number is prime.\n\nHere's an example of how to use this function:\n\n```python\nprint(is_prime(23))  # Output: True\nprint(is_prime(12))  # Output: False\n```\n\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.59,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

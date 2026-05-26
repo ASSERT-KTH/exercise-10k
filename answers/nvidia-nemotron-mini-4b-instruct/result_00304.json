@@ -1,0 +1,9 @@
+{
+  "id": 304,
+  "title": "List Filtering",
+  "prompt": "Write a function that filters out elements from a list that do not meet a specified condition.\nSample Input: [1, 2, 3, 4, 5], even\nSample Output: [2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function, `filter_list`, takes two arguments: a list and a condition function. The condition function should take a single argument (the element) and return `True` if the element should be included in the filtered list, and `False` otherwise.\n\n```python\ndef filter_list(lst, condition):\n    \"\"\"\n    Filters out elements from a list that do not meet a specified condition.\n\n    Parameters:\n    lst (list): The list to filter.\n    condition (callable): A function that takes a single argument (the element) and returns True if the element should be included in the filtered list, and False otherwise.\n\n    Returns:\n    list: A new list containing only the elements from `lst` that meet the condition.\n    \"\"\"\n    return [element for element in lst if condition(element)]\n```\n\nHere's an example of how to use this function:\n\n```python\neven_numbers = filter_list([1, 2, 3, 4, 5], lambda x: x % 2 == 0)\nprint(even_numbers)  # Output: [2, 4]\n```\n\nThis function uses a list comprehension to create a new list containing only the elements from the input list that meet the condition. The condition function is passed to the list comprehension as an argument, and it is used to filter out elements that do not meet the specified condition.",
+  "error": null,
+  "elapsed_seconds": 3.53,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

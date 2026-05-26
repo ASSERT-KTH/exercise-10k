@@ -1,0 +1,9 @@
+{
+  "id": 2916,
+  "title": "Word Frequency Counter",
+  "prompt": "Write a program to count the frequency of each word in a given string.\nSample Input: this is a test this is a test\nSample Output: {'this': 2, 'is': 2, 'a': 2, 'test': 2}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that counts the frequency of each word in a given string:\n```python\nfrom collections import Counter\n\ndef count_word_frequencies(text):\n    \"\"\"\n    Count the frequency of each word in a given string.\n\n    :param text: The input string.\n    :return: A dictionary where keys are words and values are their frequencies.\n    \"\"\"\n    # Split the text into words, convert to lowercase, and remove punctuation\n    words = [word.lower() for word in text.lower().split() if word.isalnum()]\n\n    # Count the frequency of each word using Counter\n    word_counts = Counter(words)\n\n    return word_counts\n\n# Example usage\ninput_text = \"this is a test this is a test\"\nword_counts = count_word_frequencies(input_text)\nprint(word_counts)  # Output: {'this': 2, 'is': 2, 'a': 2, 'test': 2}\n```\nThis program first splits the input text into words, converts them to lowercase, and removes any non-alphanumeric characters. Then, it uses the `Counter` class from the `collections` module to count the frequency of each word. Finally, it returns the resulting dictionary as the output.",
+  "error": null,
+  "elapsed_seconds": 4.42,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

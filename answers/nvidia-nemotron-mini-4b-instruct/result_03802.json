@@ -1,0 +1,9 @@
+{
+  "id": 3802,
+  "title": "Guessing Game",
+  "prompt": "Create a program that uses a while loop to repeatedly ask the user for a guess until they guess a predetermined secret number.\nSample Input: 50\nSample Output: Too low!\nGuess again: \n",
+  "answer": "Sure, I'd be happy to help you create a program that meets your requirements. Here's a Python solution using a while loop:\n\n```python\n# Initialize the secret number\nsecret_number = 50\n\n# Initialize the number of guesses\nnum_guesses = 0\n\n# Keep asking the user for a guess until they guess the secret number\nwhile True:\n    # Ask the user for a guess\n    guess = int(input(\"Guess a number between 1 and 100: \"))\n\n    # Increment the number of guesses\n    num_guesses += 1\n\n    # Check if the user guessed the secret number\n    if guess == secret_number:\n        print(f\"Congratulations! You guessed the secret number in {num_guesses} guesses.\")\n        break\n    elif guess < secret_number:\n        print(\"Too low!\")\n    else:\n        print(\"Too high!\")\n```\n\nThis program will repeatedly ask the user for a guess until they guess the secret number (which is set to 50 in this example). After each guess, the program checks if the user guessed correctly, if their guess was too low, or if it was too high, and provides feedback accordingly. Once the user guesses the secret number, the program prints a congratulatory message and breaks out of the loop.",
+  "error": null,
+  "elapsed_seconds": 2.96,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6371,
+  "title": "Array Find",
+  "prompt": "Write a program that takes an array and a predicate function as input and returns the first element that satisfies the predicate\nSample Input: [1, 2, 3, 4, 5], is_even\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses the built-in `next()` function to find the first element that satisfies the given predicate. If no elements satisfy the predicate, it returns `None`.\n\n```python\ndef first_element_that_satisfies_predicate(arr, predicate):\n    \"\"\"\n    Returns the first element in the input array that satisfies the given predicate.\n\n    :param arr: The input array\n    :param predicate: A function that takes an element as input and returns a boolean value\n    :return: The first element that satisfies the predicate or None if no elements satisfy it\n    \"\"\"\n    for element in arr:\n        if predicate(element):\n            return element\n    return None\n\n# Sample usage:\nsample_input = [1, 2, 3, 4, 5]\nsample_predicate = lambda x: x % 2 == 0  # is even\n\nprint(first_element_that_satisfies_predicate(sample_input, sample_predicate))  # Output: 2\n```\n\nYou can replace the `lambda` function with any other predicate function that suits your needs.",
+  "error": null,
+  "elapsed_seconds": 2.78,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

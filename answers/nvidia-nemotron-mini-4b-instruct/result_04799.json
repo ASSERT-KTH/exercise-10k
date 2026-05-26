@@ -1,0 +1,9 @@
+{
+  "id": 4799,
+  "title": "Chatbot Program",
+  "prompt": "Write a program that responds to basic user input with a chatbot.\nSample Input: hello\nSample Output: Hi! How can I help you?\n",
+  "answer": "Sure, I'd be happy to help you create a basic chatbot that responds to user input. Here's a Python program using the `input()` function and simple pattern matching to provide a simple yet engaging conversation. You can expand this program to include more complex responses, context, and user input validation as needed.\n\n```python\ndef chatbot():\n    \"\"\"A simple chatbot that responds to user input.\"\"\"\n\n    while True:\n        user_input = input(\"You: \").strip().lower()\n\n        if not user_input:\n            continue\n\n        responses = {\n            \"hello\": \"Hi! How can I help you?\",\n            \"hi\": \"Hello! How can I assist you today?\",\n            \"hey\": \"Hi! What's up?\",\n            \"what's up\": \"Not much, how can I help you?\",\n            \"how are you\": \"I'm doing well, thank you for asking!\",\n            \"goodbye\": \"Bye for now! See you later.\",\n            \"quit\": \"Goodbye! Have a great day!\",\n        }\n\n        for pattern, response in responses.items():\n            if pattern in user_input:\n                print(response)\n                break\n        else:\n            print(\"I'm sorry, I didn't understand that. Please try again.\")\n\n\nif __name__ == \"__main__\":\n    chatbot()\n```\n\nThis program will continuously listen for user input and respond with predefined greetings or help messages. You can add more patterns and responses to make the chatbot more engaging and personalized.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

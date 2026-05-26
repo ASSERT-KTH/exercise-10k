@@ -1,0 +1,9 @@
+{
+  "id": 5633,
+  "title": "Checking for Cyclicity in a Linked List",
+  "prompt": "Write a program to check if a given linked list is cyclic or not.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given linked list is cyclic or not. We'll use two pointers, one slow and one fast, to traverse the linked list. If the linked list is cyclic, the fast pointer will eventually meet the slow pointer.\n\n```python\nclass ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef has_cycle(head: ListNode) -> bool:\n    \"\"\"Check if a linked list has a cycle.\"\"\"\n    if head is None or head.next is None:\n        return False\n\n    slow = head\n    fast = head.next\n\n    while fast is not None and fast.next is not None:\n        if slow == fast:\n            return True\n        slow = slow.next\n        fast = fast.next.next\n\n    return False\n```\n\nHere's how you can use this function with a sample input:\n\n```python\n# Create a linked list\nhead = ListNode(1)\nhead.next = ListNode(2)\nhead.next.next = ListNode(3)\nhead.next.next.next = ListNode(4)\nhead.next.next.next.next = ListNode(5)\nhead.next.next.next.next.next = head.next  # Create a cycle\n\nprint(has_cycle(head))  # Output: True\n```\n\nThis program has a time complexity of O(n), where n is the number of nodes in the linked list, since we only traverse the list twice.",
+  "error": null,
+  "elapsed_seconds": 3.72,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

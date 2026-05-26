@@ -1,0 +1,9 @@
+{
+  "id": 8719,
+  "title": "Simple Sorter",
+  "prompt": "Ask the user for a list of numbers and print out the sorted list.\nSample Input: 5 2 8 1\nSample Output: 1 2 5 8\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution for your problem:\n\n```python\ndef get_sorted_list():\n    \"\"\"\n    Ask the user for a list of numbers and print out the sorted list.\n    \"\"\"\n    # Initialize an empty list to store the user input\n    numbers = []\n\n    # Keep asking the user for numbers until they enter 'done'\n    while True:\n        num = input(\"Enter a number (or 'done' to finish): \")\n        if num.lower() == \"done\":\n            break\n        try:\n            num = int(num)\n            numbers.append(num)\n        except ValueError:\n            print(\"That's not a valid number. Please try again.\")\n\n    # Sort the list of numbers and print it out\n    sorted_numbers = sorted(numbers)\n    print(sorted_numbers)\n\n# Call the function to get user input\nget_sorted_list()\n```\n\nThis script defines a function `get_sorted_list()` that prompts the user for numbers until they enter 'done'. It then converts each input to an integer, appends it to a list, and sorts the list before printing it out. The `sorted()` function is used to sort the list in ascending order.",
+  "error": null,
+  "elapsed_seconds": 3.09,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

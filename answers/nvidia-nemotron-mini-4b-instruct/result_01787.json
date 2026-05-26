@@ -1,0 +1,9 @@
+{
+  "id": 1787,
+  "title": "Dictionary Filtering",
+  "prompt": "Create a function to filter a dictionary based on a given condition and return a new dictionary containing only the key-value pairs that satisfy the condition.\nSample Input: dictionary = {\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}, condition = lambda x, y: len(x) > 3\nSample Output: {\"name\": \"John\", \"city\": \"New York\"}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function uses a lambda function as the condition to filter the dictionary. The lambda function takes two arguments (`x` and `y`) and returns `True` if the length of `x` is greater than 3, and `False` otherwise.\n\n```python\ndef filter_dict(dictionary, condition):\n    \"\"\"\n    Filters a dictionary based on a given condition and returns a new dictionary\n    containing only the key-value pairs that satisfy the condition.\n\n    Parameters:\n    dictionary (dict): The input dictionary to filter.\n    condition (callable): A lambda function that takes two arguments (key, value)\n                          and returns a boolean value indicating whether the\n                          key-value pair should be included in the output.\n\n    Returns:\n    dict: A new dictionary containing only the key-value pairs that satisfy the\n         condition.\n    \"\"\"\n    return {k: v for k, v in dictionary.items() if condition(k, v)}\n```\n\nHere's an example of how to use this function:\n\n```python\ndictionary = {\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}\ncondition = lambda x, y: len(x) > 3\nfiltered_dict = filter_dict(dictionary, condition)\nprint(filtered_dict)  # Output: {'name': 'John', 'city': 'New York'}\n```",
+  "error": null,
+  "elapsed_seconds": 3.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

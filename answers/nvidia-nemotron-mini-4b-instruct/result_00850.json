@@ -1,0 +1,9 @@
+{
+  "id": 850,
+  "title": "Function Factory",
+  "prompt": "Write a function that returns a new function based on the input parameters, using a function factory pattern.\nSample Input: def create_adder(a): ...\nSample Output: function that adds a to its input\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example implementation of a function factory pattern in Python that creates a new function based on the input parameters. In this case, the function factory creates a function that adds a to its input.\n\n```python\ndef create_adder(a):\n    \"\"\"\n    Create a new function that adds a to its input.\n\n    :param a: The value to add to the input.\n    :return: A new function that adds a to its input.\n    \"\"\"\n\n    def adder(b):\n        \"\"\"\n        The actual adder function that adds a to its input.\n\n        :param b: The value to add a to.\n        :return: The sum of a and b.\n        \"\"\"\n        return a + b\n\n    return adder\n```\n\nYou can use this function factory to create a new adder function with a different value of `a`. Here's an example:\n\n```python\nadd_five = create_adder(5)\nprint(add_five(3))  # Output: 8\n\nadd_ten = create_adder(10)\nprint(add_ten(2))   # Output: 12\n```\n\nThis function factory pattern allows you to create new functions with different behavior based on the input parameters, making your code more modular and reusable.",
+  "error": null,
+  "elapsed_seconds": 3.15,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5675,
+  "title": "Finding the Next Prime Number",
+  "prompt": "Write a program that takes a number as input and outputs the next prime number.\nSample Input: 10\nSample Output: 11\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes an integer `n` as input and returns the next prime number greater than or equal to `n`. We can use the Sieve of Eratosthenes algorithm to efficiently find all prime numbers up to a given limit.\n\n```python\ndef next_prime(n):\n    \"\"\"\n    Returns the next prime number greater than or equal to n.\n\n    :param n: The number to find the next prime for.\n    :return: The next prime number greater than or equal to n.\n    \"\"\"\n    # Initialize a boolean array to keep track of prime numbers\n    is_prime = [True] * (n + 1)\n    is_prime[0], is_prime[1] = False, False\n\n    # Implement the Sieve of Eratosthenes algorithm\n    for num in range(2, int(n**0.5) + 1):\n        if is_prime[num]:\n            for multiple in range(num*num, n+1, num):\n                is_prime[multiple] = False\n\n    # Return the first prime number greater than or equal to n\n    for num in range(n, 0, -1):\n        if is_prime[num]:\n            return num\n\n# Get user input\nn = int(input(\"Enter a number: \"))\n\n# Call the function and print the result\nprint(f\"The next prime number greater than or equal to {n} is {next_prime(n)}.\")\n```\n\nThis program first initializes a boolean array `is_prime` to keep track of prime numbers. It then iterates through numbers up to the square root of `n` and marks their multiples as non-prime. Finally, it iterates through the `is_prime` array in reverse order, starting from `n`, and returns the first prime number greater than or equal to `n`.",
+  "error": null,
+  "elapsed_seconds": 4.35,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

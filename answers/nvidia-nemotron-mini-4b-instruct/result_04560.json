@@ -1,0 +1,9 @@
+{
+  "id": 4560,
+  "title": "Pig Latin Translator",
+  "prompt": "Write a program that translates a given string into Pig Latin.\nSample Input: hello world\nSample Output: ellohay orldway\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that translates a given string into Pig Latin:\n\n```python\ndef pig_latin(word):\n    \"\"\"Translate a given word into Pig Latin.\"\"\"\n    # Split the word into consonants and vowels\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    vowels = 'aeiou'\n    consonants_and_vowels = [c for c in word.lower() if c in consonants]\n    vowels_and_word = [v for v in word.lower() if v in vowels]\n\n    # Add \"way\" to the end of the word if it ends with a consonant\n    if consonants_and_vowels:\n        pig_word = vowels_and_word + consonants_and_vowels + 'way'\n    else:\n        pig_word = vowels_and_word + 'way'\n\n    return pig_word\n\n# Get user input\nuser_input = input(\"Enter a word to translate into Pig Latin: \")\n\n# Translate the input and print the result\npig_latin_output = pig_latin(user_input)\nprint(f\"{user_input} becomes {pig_latin_output} in Pig Latin.\")\n```\n\nThis program first splits the input word into consonants and vowels, then checks if the word ends with a consonant. If it does, it adds \"way\" to the end of the word; otherwise, it just adds \"way\" to the end of the vowels. The translated word is then returned as the output.",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

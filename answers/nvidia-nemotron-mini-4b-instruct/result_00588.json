@@ -1,0 +1,9 @@
+{
+  "id": 588,
+  "title": "Find the Missing Number",
+  "prompt": "Write a program that takes an array of numbers from 1 to n as input, with one number missing, and returns the missing number.\nSample Input: [1, 2, 3, 5, 6]\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes an array of numbers from 1 to n as input, with one number missing, and returns the missing number. The program uses the fact that the sum of the first n natural numbers (1 + 2 + 3 + ... + n) is equal to n(n+1)/2.\n\n```python\ndef find_missing(arr):\n    n = len(arr) + 1  # n is the upper limit of the array, which is one more than the length of the array plus one (to include 1)\n    total = n * (n + 1) // 2  # Calculate the expected sum of the first n natural numbers\n    missing_sum = sum(arr)\n    return n - (missing_sum // n)  # Calculate the missing number by subtracting the average sum from the expected sum\n\n# Test the function with your sample input\narr = [1, 2, 3, 5, 6]\nprint(find_missing(arr))  # Output: 4\n```\n\nThis program first calculates the expected sum of the first n natural numbers (n(n+1)/2) and then calculates the actual sum of the numbers in the array. Finally, it subtracts the average sum from the expected sum to get the missing number.",
+  "error": null,
+  "elapsed_seconds": 4.32,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7521,
+  "title": "Finding the Maximum Value in a List",
+  "prompt": "Write a program that takes a list of numbers as input and returns the maximum value in the list. The program should handle lists of varying lengths and should be able to handle cases where the list is empty.\nSample Input: [12, 45, 7, 23, 56, 89, 34]\nSample Output: 89\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef max_value(numbers):\n    \"\"\"\n    Given a list of numbers, return the maximum value in the list.\n    Handles lists of varying lengths and returns None for an empty list.\n    \"\"\"\n    if not numbers:  # Check if the list is empty\n        return None\n\n    max_number = numbers[0]  # Assume the first element is the maximum\n    for num in numbers[1:]:  # Iterate over all elements except the first one\n        if num > max_number:  # Update the maximum if a larger number is found\n            max_number = num\n\n    return max_number\n```\nHere's how you can use this function:\n```python\nprint(max_value([12, 45, 7, 23, 56, 89, 34]))  # Output: 89\nprint(max_value([]))  # Output: None\nprint(max_value([7, 7, 7]))  # Output: 7\n```\nThis function first checks if the input list is empty and returns `None` in that case. Then, it initializes the maximum number to the first element of the list. Finally, it iterates over the remaining elements in the list and updates the maximum number if a larger one is found.",
+  "error": null,
+  "elapsed_seconds": 3.18,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

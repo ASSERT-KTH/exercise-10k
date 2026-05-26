@@ -1,0 +1,9 @@
+{
+  "id": 5188,
+  "title": "Name Generator",
+  "prompt": "Write a program that generates a random name from a list of first and last names. The program should ask the user for the number of names to generate and then print the generated names.\nSample Input: 5\nSample Output: ['John Smith', 'Jane Doe', 'Bob Johnson', 'Alice Williams', 'Mike Davis']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses a list of first and last names to generate random names when asked for the number of names to generate.\n\n```python\nimport random\n\n# Sample list of first and last names\nnames = [\n    \"John\", \"Jane\", \"Bob\", \"Alice\", \"Mike\",\n    \"Smith\", \"Doe\", \"Johnson\", \"Williams\", \"Davis\"\n]\n\ndef generate_name():\n    \"\"\"Generate a random name from the list of first and last names.\"\"\"\n    first_name = random.choice(names)\n    last_name = random.choice(names)\n    return f\"{first_name} {last_name}\"\n\ndef main():\n    \"\"\"Ask the user for the number of names to generate and print the results.\"\"\"\n    num_names = int(input(\"Enter the number of names to generate: \"))\n\n    # Generate and print the names\n    for _ in range(num_names):\n        print(generate_name())\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis program defines a function `generate_name()` that randomly selects a first and last name from the list, and returns the concatenated string. The `main()` function asks the user for the number of names to generate, generates the names using the `generate_name()` function, and prints the results.",
+  "error": null,
+  "elapsed_seconds": 3.46,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

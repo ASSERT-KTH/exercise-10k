@@ -1,0 +1,9 @@
+{
+  "id": 2574,
+  "title": "Finding the Sum of Digits in a Number with While Loop",
+  "prompt": "Write a program that finds the sum of digits in a number using a while loop.\nSample Input: 12345\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the sum of digits in a number using a while loop:\n\n```python\ndef sum_of_digits(n):\n    \"\"\"\n    Calculates the sum of digits in a given number using a while loop.\n\n    :param n: The number to find the sum of digits for.\n    :return: The sum of digits in the given number.\n    \"\"\"\n    total = 0\n    remainder = n\n\n    # Continue adding the remainder to the total until the remainder is zero\n    while remainder > 0:\n        total += remainder % 10\n        remainder //= 10\n\n    return total\n\n# Example usage\nnumber = 12345\nprint(f\"The sum of digits in {number} is {sum_of_digits(number)}.\")\n```\n\nWhen you run this program with the sample input `12345`, it will output:\n\n```\nThe sum of digits in 12345 is 15.\n```\n\nThis program first initializes a `total` variable to keep track of the sum of digits. Then, it enters a while loop that continues as long as the `remainder` is greater than zero. In each iteration of the loop, it adds the remainder (which is the last digit of the number) to the `total` and then divides the number by 10 to remove the last digit. This process continues until the remainder is zero, at which point the loop terminates and the program returns the final value of `total`, which is the sum of digits in the given number.",
+  "error": null,
+  "elapsed_seconds": 12.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

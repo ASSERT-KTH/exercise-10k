@@ -1,0 +1,9 @@
+{
+  "id": 6105,
+  "title": "Array Search",
+  "prompt": "Write a program that takes an array of integers and a target value as input, and returns the index of the first occurrence of the target value in the array.\nSample Input: [1, 2, 3, 4, 5], 3\nSample Output: 2\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef find_index(arr, target):\n    \"\"\"\n    Finds the index of the first occurrence of the target value in the array.\n\n    :param arr: The input array of integers\n    :param target: The target value to search for\n    :return: The index of the first occurrence of the target value in the array, or -1 if not found\n    \"\"\"\n    for i, num in enumerate(arr):\n        if num == target:\n            return i\n    return -1\n\n# Sample usage\narr = [1, 2, 3, 4, 5]\ntarget = 3\nindex = find_index(arr, target)\nprint(index)  # Output: 2\n```\n\nThis function iterates through the array using a `for` loop and checks if each element is equal to the target value. If a match is found, it immediately returns the index of that element. If no match is found after checking all elements, it returns -1.",
+  "error": null,
+  "elapsed_seconds": 2.37,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9829,
+  "title": "String Reversal and Validation",
+  "prompt": "Write a program that takes a string as input, checks if it contains any digits, and if not, reverses the string. The program should print 'Invalid input' if the string contains digits and the reversed string otherwise.\nSample Input: HelloWorld\nSample Output: dlroWolleH\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef reverse_string(input_str):\n    \"\"\"Reverses a string and checks if it contains any digits.\"\"\"\n    # Remove any leading or trailing whitespace\n    input_str = input_str.strip()\n\n    # Check if the string contains any digits\n    if any(char.isdigit() for char in input_str):\n        return \"Invalid input\"\n\n    # Reverse the string\n    reversed_str = input_str[::-1]\n\n    return reversed_str\n\n# Get user input\nuser_input = input(\"Enter a string: \")\n\n# Print the result\nresult = reverse_string(user_input)\nprint(result)\n```\nThis program defines a function `reverse_string` that takes a string as input, checks if it contains any digits using a generator expression and the `any` function, and then reverses the string if it doesn't contain any digits. If the string contains digits, the function returns a message saying that the input is invalid. The program then gets user input, calls the `reverse_string` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 2.74,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

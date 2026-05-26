@@ -1,0 +1,9 @@
+{
+  "id": 2723,
+  "title": " Searching for an Element",
+  "prompt": "Write a program to search for a specific element in an array\nSample Input: [1, 2, 3, 4, 5], 3\nSample Output: Element found at index 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that searches for a specific element in an array (or list, as it's called in Python). In this example, I'll assume the input is a list and the output should be the index of the element if found, or -1 if not found.\n\n```python\ndef search_element(arr, element):\n    \"\"\"\n    Search for a specific element in an array.\n\n    :param arr: The array to search in\n    :param element: The element to search for\n    :return: The index of the element if found, otherwise -1\n    \"\"\"\n\n    # Check if the input is a list\n    if not isinstance(arr, list):\n        raise TypeError(\"The 'arr' parameter must be a list.\")\n\n    # Search for the element in the array\n    for i, value in enumerate(arr):\n        if value == element:\n            return i\n\n    # If the element is not found, return -1\n    return -1\n\n\n# Example usage\nsample_input = [1, 2, 3, 4, 5]\ntarget_element = 3\nindex = search_element(sample_input, target_element)\n\nif index != -1:\n    print(f\"Element found at index {index}.\")\nelse:\n    print(f\"Element not found in the array.\")\n```\n\nThis program defines a function `search_element` that takes an array and an element as input, and returns the index of the element if found, or -1 otherwise. The example usage at the end of the code demonstrates how to use this function with a sample input and target element.",
+  "error": null,
+  "elapsed_seconds": 3.86,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9860,
+  "title": "Advanced String Encoder",
+  "prompt": "Create a function that takes an input string and encodes it using a combination of string manipulation techniques: reverse the string, replace all vowels with their corresponding ASCII values, and then concatenate the result with its mirror image (the string reversed again). The function should handle both lowercase and uppercase letters and should not modify non-alphabetic characters.\nSample Input: Hello, World!\nSample Output: The encoded string\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. It uses the `re` module for string manipulation, which allows us to easily reverse and replace characters in a string. The function also handles both lowercase and uppercase letters and ignores non-alphabetic characters.\n\n```python\nimport re\n\ndef encode_string(input_str: str) -> str:\n    \"\"\"\n    Encodes an input string using a combination of string manipulation techniques:\n    1. Reverse the string.\n    2. Replace all vowels with their corresponding ASCII values.\n    3. Concatenate the result with its mirror image (the string reversed again).\n\n    :param input_str: The input string to encode.\n    :return: The encoded string.\n    \"\"\"\n\n    # Step 1: Reverse the string\n    reversed_str = input_str[::-1]\n\n    # Step 2: Replace vowels with their ASCII values\n    encoded_str = re.sub(r'[aeiouAEIOU]', lambda match: str(ord(match.group(0))) + '|', input_str)\n\n    # Step 3: Concatenate the result with its mirror image\n    encoded_str += reversed_str\n\n    return encoded_str\n```\n\nHere's an example of how to use the function:\n\n```python\nprint(encode_string(\"Hello, World!\"))  # Output: The encoded string\n```",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

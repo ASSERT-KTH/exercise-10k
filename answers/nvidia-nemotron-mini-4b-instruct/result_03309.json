@@ -1,0 +1,9 @@
+{
+  "id": 3309,
+  "title": "List Mapping",
+  "prompt": "Write a program that takes a list and a mapping function as input, and returns a new list containing the results of applying the mapping function to each element of the original list.\nSample Input: [1, 2, 3, 4, 5], double\nSample Output: [2, 4, 6, 8, 10]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef map_list(input_list, mapping_function):\n    \"\"\"\n    Applies a mapping function to each element in a list and returns a new list.\n\n    Parameters:\n    input_list (list): The list to apply the mapping function to.\n    mapping_function (callable): A function that takes one argument and returns a value.\n\n    Returns:\n    list: A new list containing the results of applying the mapping function to each element in the input list.\n    \"\"\"\n    # Use a list comprehension to apply the mapping function to each element in the input list\n    return [mapping_function(element) for element in input_list]\n\n# Example usage:\ninput_list = [1, 2, 3, 4, 5]\nmapping_function = lambda x: x * 2\noutput_list = map_list(input_list, mapping_function)\nprint(output_list)  # Output: [2, 4, 6, 8, 10]\n```\nThis program defines a function `map_list` that takes an input list and a mapping function as input, and returns a new list containing the results of applying the mapping function to each element in the input list. The function uses a list comprehension to apply the mapping function to each element in the input list, which is a more concise and efficient way to perform this operation compared to using a `for` loop.",
+  "error": null,
+  "elapsed_seconds": 3.55,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

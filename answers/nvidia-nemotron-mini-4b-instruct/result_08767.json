@@ -1,0 +1,9 @@
+{
+  "id": 8767,
+  "title": "Only Digits",
+  "prompt": "Write a function to remove non-digit characters from a given string.\nSample Input: hello123world456\nSample Output: 123456\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\nimport re\n\ndef remove_non_digit(s: str) -> str:\n    \"\"\"\n    Remove all non-digit characters from a given string.\n\n    :param s: The input string.\n    :return: The string with all non-digit characters removed.\n    \"\"\"\n    return re.sub(r'\\D', '', s)\n```\nThis function uses a regular expression to match any character that is not a digit (`\\D`). The `re.sub()` function then replaces all occurrences of these characters with an empty string, effectively removing them from the input string.\n\nHere's an example of how you can use this function:\n```python\nprint(remove_non_digit(\"hello123world456\"))  # Output: 123456\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.31,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

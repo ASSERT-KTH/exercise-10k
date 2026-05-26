@@ -1,0 +1,9 @@
+{
+  "id": 4623,
+  "title": "Array Partitioning",
+  "prompt": "Write a program that takes an array and a partition size as input, and returns a list of sub-arrays, each with the specified partition size.\nSample Input: [1, 2, 3, 4, 5, 6], 2\nSample Output: [[1, 2], [3, 4], [5, 6]]\n",
+  "answer": "Here's a Python solution for the problem:\n\n```python\ndef partition_arrays(arr, size):\n    return [arr[i:i+size] for i in range(0, len(arr), size)]\n\n# Test the function\nprint(partition_arrays([1, 2, 3, 4, 5, 6], 2))  # Output: [[1, 2], [3, 4], [5, 6]]\n```\n\nThis function uses list comprehension to create a new list of sub-arrays. The inner loop iterates over all indices that are multiples of `size` (i.e., starting from `i` to `i+size-1`). The resulting sub-arrays are then added to the new list.",
+  "error": null,
+  "elapsed_seconds": 1.91,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

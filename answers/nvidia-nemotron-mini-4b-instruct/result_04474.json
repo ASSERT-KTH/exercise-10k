@@ -1,0 +1,9 @@
+{
+  "id": 4474,
+  "title": "Count the Number of Elements in a List that Meet a Specific Condition",
+  "prompt": "Write a program to count the number of elements in a list that meet a specific condition (e.g. numbers greater than 3) using a for loop\nSample Input: [1, 2, 3, 4, 5], 3\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef count_elements(lst, condition):\n    \"\"\"\n    Count the number of elements in a list that meet a specific condition.\n\n    Parameters:\n    lst (list): The list to search through.\n    condition (callable): A function that takes an element from the list and returns a boolean.\n                          The function should return True if the element meets the condition,\n                          and False otherwise.\n\n    Returns:\n    int: The number of elements in the list that meet the condition.\n    \"\"\"\n    count = 0\n    for element in lst:\n        if condition(element):\n            count += 1\n    return count\n\n# Example usage:\nnumbers = [1, 2, 3, 4, 5]\ngreater_than_three = lambda x: x > 3\n\nprint(count_elements(numbers, greater_than_three))  # Output: 2\n```\nIn this program, the `count_elements` function takes a list and a condition function as input, and returns the number of elements in the list that meet the condition. The function uses a `for` loop to iterate over each element in the list, and increments a counter whenever the condition function returns `True`.\n\nThe example usage shows how to use the function with a list of numbers and a condition function that checks if a number is greater than 3.",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

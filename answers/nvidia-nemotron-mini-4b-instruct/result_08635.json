@@ -1,0 +1,9 @@
+{
+  "id": 8635,
+  "title": "Function to Check Prime Number",
+  "prompt": "Create a function that checks if a given number is prime or not.\nSample Input: 11\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a given number is prime or not:\n\n```python\ndef is_prime(n: int) -> bool:\n    \"\"\"\n    Check if a given number is prime or not.\n\n    :param n: The number to check for primality.\n    :return: True if the number is prime, False otherwise.\n    \"\"\"\n    if n < 2:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n```\n\nThis function first checks if the input number `n` is less than 2, in which case it's not prime. Then, it checks for divisibility by all integers from 2 up to the square root of `n`. If any of these numbers divide `n` evenly, then `n` is not prime. If none of them do, then `n` is prime.\n\nHere's an example of how to use this function:\n\n```python\nprint(is_prime(11))  # Output: True\nprint(is_prime(12))  # Output: False\nprint(is_prime(1))   # Output: False\nprint(is_prime(0))   # Raises a ValueError\n```",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

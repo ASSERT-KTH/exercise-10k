@@ -1,0 +1,9 @@
+{
+  "id": 8650,
+  "title": "Function to Find Intersection of Two Lists",
+  "prompt": "Write a function that finds the intersection of two given lists.\nSample Input: [['apple', 'banana', 'cherry'], ['banana', 'cherry', 'date']]\nSample Output: ['banana', 'cherry']\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the intersection of two given lists using list comprehension and the `set` data structure to remove duplicates and improve performance:\n\n```python\ndef find_intersection(list1, list2):\n    \"\"\"\n    Find the intersection of two given lists.\n\n    :param list1: The first list\n    :param list2: The second list\n    :return: A list containing the common elements between the two lists\n    \"\"\"\n    # Convert the lists to sets to remove duplicates and improve performance\n    set1 = set(list1)\n    set2 = set(list2)\n\n    # Find the intersection of the sets and convert it back to a list\n    intersection = list(set1 & set2)\n\n    return intersection\n```\n\nHere's an example of how to use this function:\n\n```python\nsample_input = [['apple', 'banana', 'cherry'], ['banana', 'cherry', 'date']]\nprint(find_intersection(sample_input[0], sample_input[1]))  # Output: ['banana', 'cherry']\n```\n\nThis function first converts the input lists to sets to remove duplicates and improve performance. Then, it finds the intersection of the sets using the `&` operator and converts the result back to a list before returning it.",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

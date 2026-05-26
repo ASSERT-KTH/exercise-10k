@@ -1,0 +1,9 @@
+{
+  "id": 5774,
+  "title": "Password Checker",
+  "prompt": "Create a program that checks if a given password meets certain conditions (e.g., length, uppercase letters, numbers).\nSample Input: Password123\nSample Output: Password is valid\n",
+  "answer": "Sure, I'd be happy to help you create a program that checks if a given password meets certain conditions. Here's an example Python program that checks for length, uppercase letters, and numbers:\n\n```python\nimport re\n\ndef check_password(password):\n    # Check if the password is at least 8 characters long\n    if len(password) < 8:\n        return \"Password is too short. Please use at least 8 characters.\"\n\n    # Check if the password contains at least one uppercase letter\n    if not any(char.isupper() for char in password):\n        return \"Password does not contain any uppercase letters.\"\n\n    # Check if the password contains at least one number\n    if not any(char.isdigit() for char in password):\n        return \"Password does not contain any numbers.\"\n\n    # Password meets all conditions\n    return \"Password is valid.\"\n\n# Get user input\npassword = input(\"Enter a password: \")\n\n# Check the password\nresult = check_password(password)\n\n# Print the result\nprint(result)\n```\n\nThis program defines a function `check_password` that checks the given password for length, uppercase letters, and numbers. The function returns a message indicating whether the password is valid or not. The program then gets user input, calls the function, and prints the result.\n\nYou can modify this program to add or remove conditions as needed. For example, you could add a condition to check for special characters or a condition to check for a minimum number of special characters.",
+  "error": null,
+  "elapsed_seconds": 3.51,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

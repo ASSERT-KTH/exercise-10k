@@ -1,0 +1,9 @@
+{
+  "id": 5799,
+  "title": "Function to Generate Random String",
+  "prompt": "Create a function that generates a random string of a specified length. The string should contain a mix of uppercase and lowercase letters, numbers, and special characters.\nSample Input: 10\nSample Output: 4S#8dJ7pN2a\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that generates a random string of a specified length containing a mix of uppercase and lowercase letters, numbers, and special characters. The function uses the `secrets` module for generating truly random numbers, which is more secure than using the current time as a seed.\n\n```python\nimport secrets\nimport string\n\ndef generate_random_string(length: int) -> str:\n    \"\"\"\n    Generates a random string of a specified length containing a mix of uppercase and lowercase letters, numbers, and special characters.\n\n    :param length: The length of the random string to generate.\n    :return: A random string of the specified length.\n    \"\"\"\n    # Combine all characters to include in the string\n    all_chars = string.ascii_letters + string.digits + string.punctuation\n\n    # Generate a random string of the specified length using secrets.choice()\n    return ''.join(secrets.choice(all_chars) for _ in range(length))\n```\n\nHere's an example of how to use the function:\n\n```python\nprint(generate_random_string(10))\n```\n\nThis will output a random string of length 10 containing a mix of uppercase and lowercase letters, numbers, and special characters.",
+  "error": null,
+  "elapsed_seconds": 2.95,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

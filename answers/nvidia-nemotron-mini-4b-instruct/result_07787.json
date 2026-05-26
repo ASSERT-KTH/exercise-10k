@@ -1,0 +1,9 @@
+{
+  "id": 7787,
+  "title": "Data Type Converter",
+  "prompt": "Write a program that takes a user input and determines its data type. If the input is a string, check if it can be converted to an integer or a float. If the input can be converted, print out the converted value and its data type. If the input cannot be converted, print out an error message.\nSample Input: 123\nSample Output: The input '123' is of type int and its value is 123\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef get_user_input():\n    \"\"\"Get user input and determine its data type.\"\"\"\n    while True:\n        try:\n            user_input = input(\"Enter a value: \")\n            if user_input.strip().isdigit():\n                # Check if the input can be converted to an integer or a float\n                value = float(user_input)\n                data_type = \"float\" if isinstance(value, float) else \"int\"\n                print(f\"The input '{user_input}' is of type {data_type} and its value is {value}.\")\n                break\n            elif user_input.strip() == \"\":\n                print(\"Error: Input cannot be empty.\")\n            else:\n                print(\"Error: Input must be a number.\")\n        except ValueError:\n            print(\"Error: Input cannot be converted to a number.\")\n\n# Call the function\nget_user_input()\n```\n\nThis program will keep prompting the user for input until they enter a valid number. If the input is a string that can be converted to an integer or a float, the program will print out the converted value and its data type. If the input cannot be converted, the program will print an error message.",
+  "error": null,
+  "elapsed_seconds": 2.9,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

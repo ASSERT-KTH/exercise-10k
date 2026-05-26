@@ -1,0 +1,9 @@
+{
+  "id": 1410,
+  "title": "Age checker",
+  "prompt": "Create a program that checks if a given age is valid for voting. If the age is 18 or above, print 'Valid', otherwise print 'Invalid'.\nSample Input: 25\nSample Output: Valid\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef check_voting_age(age):\n    \"\"\"Check if a given age is valid for voting.\n\n    Args:\n        age (int): The age to check.\n\n    Returns:\n        str: 'Valid' if the age is 18 or above, 'Invalid' otherwise.\n    \"\"\"\n    if not isinstance(age, int) or age < 0:\n        raise ValueError(\"Age must be a non-negative integer.\")\n\n    if age >= 18:\n        return \"Valid\"\n    else:\n        return \"Invalid\"\n\n# Get user input\nage = int(input(\"Enter your age: \"))\n\n# Check and print result\nresult = check_voting_age(age)\nprint(result)\n```\n\nThis program defines a function `check_voting_age` that checks if a given age is valid for voting (i.e., 18 or above). The function checks if the input is a non-negative integer, and then returns 'Valid' or 'Invalid' based on the age. The program then prompts the user to enter their age, converts the input to an integer, and calls the function to check its validity. Finally, it prints the result.",
+  "error": null,
+  "elapsed_seconds": 2.95,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

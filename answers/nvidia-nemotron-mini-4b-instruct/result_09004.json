@@ -1,0 +1,9 @@
+{
+  "id": 9004,
+  "title": "Higher-Order Functions",
+  "prompt": "Write a function that takes a function as an argument and returns a new function with an additional feature.\nSample Input: add_one(x) = x + 1\nSample Output: logged_add_one(x) = x + 1 with logging\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function, `logged_add_one`, takes a function as an argument and returns a new function with logging. The logging feature adds a print statement to the beginning of the original function's body, showing the input value before it's passed to the original function.\n\n```python\ndef logged(func):\n    \"\"\"Decorator to log the input value before calling the original function.\"\"\"\n\n    def wrapper(*args, **kwargs):\n        print(f\"Calling {func.__name__} with args={args}, kwargs={kwargs}\")\n        return func(*args, **kwargs)\n\n    return wrapper\n\n\ndef add_one(x):\n    \"\"\"Add one to the given value.\"\"\"\n    return x + 1\n\n\n# Example usage:\nlogged_add_one = logged(add_one)\n\nprint(logged_add_one(5))  # Output: Calling add_one with args=(5,), kwargs={}\nprint(logged_add_one(10))  # Output: Calling add_one with args=(10,), kwargs={}\n```\n\nYou can use this `logged` decorator to add logging to any function you like.",
+  "error": null,
+  "elapsed_seconds": 3.07,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6620,
+  "title": "Palindromes",
+  "prompt": "Write a program that takes a string as input from the user and prints whether it is a palindrome or not.\nSample Input: madam\nSample Output: This is a palindrome.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef is_palindrome(s):\n    \"\"\"Check if a string is a palindrome, ignoring case and non-alphanumeric characters.\"\"\"\n    s = ''.join(c.lower() for c in s if c.isalnum())\n    return s == s[::-1]\n\n# Get user input\nuser_input = input(\"Enter a string: \")\n\n# Check if it's a palindrome\nif is_palindrome(user_input):\n    print(f\"'{user_input}' is a palindrome.\")\nelse:\n    print(f\"'{user_input}' is not a palindrome.\")\n```\nThis program defines a helper function `is_palindrome` that checks if a string is a palindrome by converting it to lowercase, removing any non-alphanumeric characters, and then comparing it to its reverse. The main part of the program gets user input, calls the helper function, and prints the result.\n\nHere's an example interaction with the program:\n```\nEnter a string: madam\n'madam' is a palindrome.\n```",
+  "error": null,
+  "elapsed_seconds": 2.93,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

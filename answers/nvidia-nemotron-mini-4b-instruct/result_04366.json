@@ -1,0 +1,9 @@
+{
+  "id": 4366,
+  "title": "Dictionary Update",
+  "prompt": "Write a program that updates the value associated with a given key in a dictionary.\nSample Input: {'name': 'John', 'age': 25}, 'age', 30\nSample Output: {'name': 'John', 'age': 30}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that updates the value associated with a given key in a dictionary:\n```python\ndef update_dict_value(dictionary, key, new_value):\n    \"\"\"\n    Updates the value associated with a given key in a dictionary.\n\n    :param dictionary: The dictionary to update.\n    :param key: The key to update.\n    :param new_value: The new value to assign to the key.\n    :return: The updated dictionary.\n    \"\"\"\n    # Check if the key exists in the dictionary\n    if key in dictionary:\n        # Update the value associated with the key\n        dictionary[key] = new_value\n        return dictionary\n    else:\n        # If the key does not exist, raise a KeyError\n        raise KeyError(f\"The key '{key}' does not exist in the dictionary.\")\n\n# Example usage\noriginal_dict = {'name': 'John', 'age': 25}\nupdated_dict = update_dict_value(original_dict, 'age', 30)\nprint(updated_dict)  # Output: {'name': 'John', 'age': 30}\n```\nThis program defines a function `update_dict_value` that takes a dictionary, a key, and a new value as input, and returns the updated dictionary. The function first checks if the key exists in the dictionary using the `in` keyword. If the key exists, the function updates the value associated with the key and returns the updated dictionary. If the key does not exist, the function raises a `KeyError` with an appropriate error message. The example usage at the end of the program demonstrates how to use the function to update the value associated with the key 'age' in the dictionary `original_dict`.",
+  "error": null,
+  "elapsed_seconds": 3.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5811,
+  "title": "Binary Converter",
+  "prompt": "Write a program that uses a while loop to convert a decimal number to binary.\nSample Input: 10\nSample Output: 1010\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses a while loop to convert a decimal number to binary:\n\n```python\ndef decimal_to_binary(decimal):\n    \"\"\"\n    Converts a decimal number to binary using a while loop.\n\n    :param decimal: The decimal number to convert to binary.\n    :return: The binary representation of the decimal number as a string.\n    \"\"\"\n    binary = \"\"\n\n    # Continue the loop as long as the decimal number is greater than 0\n    while decimal > 0:\n        # Get the remainder when dividing the decimal number by 2\n        remainder = decimal % 2\n\n        # Append the remainder to the binary string\n        binary = str(remainder) + binary\n\n        # Divide the decimal number by 2 and round down\n        decimal = decimal // 2\n\n    return binary\n\n# Test the function with a sample input\ndecimal_number = 10\nbinary_representation = decimal_to_binary(decimal_number)\nprint(f\"The binary representation of {decimal_number} is {binary_representation}.\")\n```\n\nWhen you run this program with the input `10`, it will output:\n\n```\nThe binary representation of 10 is 1010.\n```",
+  "error": null,
+  "elapsed_seconds": 3.5,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

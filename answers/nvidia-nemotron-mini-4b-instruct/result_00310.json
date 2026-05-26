@@ -1,0 +1,9 @@
+{
+  "id": 310,
+  "title": "List Insertion",
+  "prompt": "Write a function that inserts a new element at a specified position in a given list.\nSample Input: [1, 2, 3], 4, 1\nSample Output: [1, 4, 2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function, `insert_element`, takes three arguments: the list to modify, the new element to insert, and the position at which to insert it. It returns the modified list.\n\n```python\ndef insert_element(lst, new_element, position):\n    \"\"\"\n    Inserts a new element at a specified position in a given list.\n\n    :param lst: The list to modify.\n    :param new_element: The element to insert.\n    :param position: The position at which to insert the new element.\n    :return: The modified list.\n    \"\"\"\n\n    # Check if the position is within the list bounds\n    if position < 0 or position > len(lst):\n        raise IndexError(\"Position out of range.\")\n\n    # Insert the new element at the specified position\n    lst.insert(position, new_element)\n\n    return lst\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(insert_element([1, 2, 3], 4, 1))  # Output: [1, 4, 2, 3]\nprint(insert_element([1, 2, 3], 5, 2))  # Output: [1, 2, 5, 3]\nprint(insert_element([1, 2, 3], 6, 0))  # Output: [6, 1, 2, 3]\n```",
+  "error": null,
+  "elapsed_seconds": 3.79,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

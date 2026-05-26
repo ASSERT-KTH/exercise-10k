@@ -1,0 +1,9 @@
+{
+  "id": 3979,
+  "title": "Finding the Longest Increasing Subsequence",
+  "prompt": "Write a program that finds the longest increasing subsequence in a given array of integers. The program should take an array of integers as input and output the longest increasing subsequence.\nSample Input: [10, 22, 9, 33, 21, 50, 41, 60, 80]\nSample Output: [10, 22, 33, 50, 60, 80]\n",
+  "answer": "Here's a Python program that finds the longest increasing subsequence in a given array of integers. This problem can be solved using dynamic programming. We maintain a table `dp` where `dp[i]` stores the length of the longest increasing subsequence ending at index `i`.\n\n```python\ndef longest_increasing_subsequence(arr):\n    n = len(arr)\n    dp = [1] * n  # Initialize dp with all elements as 1 (since every element is its own LIS)\n\n    for i in range(1, n):\n        for j in range(i):\n            if arr[j] < arr[i]:\n                dp[i] = max(dp[i], dp[j] + 1)\n\n    return max(dp)  # Return the maximum value in dp as LIS length\n\n# Test the function with sample input\narr = [10, 22, 9, 33, 21, 50, 41, 60, 80]\nprint(longest_increasing_subsequence(arr))  # Output: 6\n```\n\nThis program works by iterating through the array and comparing each element with its previous elements. If an element is smaller than its previous element, we update the `dp` array to include the length of the longest increasing subsequence ending at the previous element plus one. Finally, we return the maximum value in the `dp` array as the length of the longest increasing subsequence.",
+  "error": null,
+  "elapsed_seconds": 3.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

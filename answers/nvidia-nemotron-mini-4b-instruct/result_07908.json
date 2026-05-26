@@ -1,0 +1,9 @@
+{
+  "id": 7908,
+  "title": "Array Rotation",
+  "prompt": "Write a function that rotates the elements of an array to the right by a specified number of steps. The function should take two parameters: the array and the number of steps. The function should return the rotated array.\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: [4, 5, 1, 2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function uses slicing to rotate the elements of the array to the right by the specified number of steps. It handles cases where the number of steps is greater than the length of the array by wrapping around to the beginning.\n\n```python\ndef rotate_array(arr, steps):\n    \"\"\"\n    Rotates the elements of an array to the right by a specified number of steps.\n\n    Parameters:\n    arr (list): The array to rotate.\n    steps (int): The number of steps to rotate the array to the right.\n\n    Returns:\n    list: The rotated array.\n    \"\"\"\n\n    # Ensure steps is non-negative\n    steps %= len(arr)\n\n    # Rotate the array using slicing\n    return arr[-steps:] + arr[:-steps]\n```\n\nHere's an example of how to use this function:\n\n```python\narr = [1, 2, 3, 4, 5]\nsteps = 2\n\nrotated_arr = rotate_array(arr, steps)\nprint(rotated_arr)  # Output: [4, 5, 1, 2, 3]\n```",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

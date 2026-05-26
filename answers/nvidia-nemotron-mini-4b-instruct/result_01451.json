@@ -1,0 +1,9 @@
+{
+  "id": 1451,
+  "title": "Calculate Tip",
+  "prompt": "Write a program that takes the total cost of a meal and a tip percentage as input and outputs the total amount to pay.\nSample Input: 50 15\nSample Output: 57.5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_tip_amount(meal_cost, tip_percentage):\n    \"\"\"\n    Calculates the amount to be paid for a meal including tip.\n\n    Parameters:\n    meal_cost (float): The total cost of the meal before tip.\n    tip_percentage (float): The percentage of the meal cost to be added as tip.\n\n    Returns:\n    float: The total amount to be paid for the meal including tip.\n    \"\"\"\n    # Calculate the tip amount\n    tip_amount = meal_cost * (tip_percentage / 100)\n\n    # Return the total amount to be paid\n    return meal_cost + tip_amount\n\n# Get user input\nmeal_cost = float(input(\"Enter the total cost of the meal: \"))\ntip_percentage = float(input(\"Enter the tip percentage (as a percentage): \"))\n\n# Calculate and print the total amount to pay\ntotal_amount = calculate_tip_amount(meal_cost, tip_percentage)\nprint(f\"The total amount to pay is {total_amount:.2f}.\")\n```\nThis program defines a function `calculate_tip_amount` that takes the meal cost and tip percentage as input and returns the total amount to be paid. The program then prompts the user to enter the meal cost and tip percentage, calculates the total amount to pay using the function, and prints the result with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 4.86,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

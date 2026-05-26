@@ -1,0 +1,9 @@
+{
+  "id": 7446,
+  "title": "Conditional Student Grades",
+  "prompt": "Write a program that takes a student's grade as input and prints out the corresponding letter grade based on the following conditions: A (90-100), B (80-89), C (70-79), D (60-69), F (below 60). The program should also handle cases where the input is not a valid grade.\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_letter_grade(grade):\n    \"\"\"\n    Converts a given grade to a corresponding letter grade.\n\n    :param grade: The student's grade as an integer between 0 and 100.\n    :return: The corresponding letter grade (str).\n    \"\"\"\n    if not isinstance(grade, int) or grade < 0 or grade > 100:\n        return \"Invalid grade. Please enter a number between 0 and 100.\"\n\n    if grade >= 90:\n        return \"A\"\n    elif grade >= 80:\n        return \"B\"\n    elif grade >= 70:\n        return \"C\"\n    elif grade >= 60:\n        return \"D\"\n    else:\n        return \"F\"\n\n# Get user input\nwhile True:\n    grade_input = input(\"Enter a student's grade (0-100): \")\n    try:\n        grade = int(grade_input)\n        letter_grade = get_letter_grade(grade)\n        print(f\"The letter grade for {grade} is {letter_grade}.\")\n        break\n    except ValueError:\n        print(\"Invalid input. Please enter a number between 0 and 100.\")\n```\nThis program defines a function `get_letter_grade` that takes an integer grade as input and returns the corresponding letter grade. The main part of the program gets user input, converts it to an integer, and calls the `get_letter_grade` function to get the corresponding letter grade. If the input is not a valid grade, the program prompts the user to enter a new grade.",
+  "error": null,
+  "elapsed_seconds": 4.22,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

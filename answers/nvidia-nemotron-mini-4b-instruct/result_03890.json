@@ -1,0 +1,9 @@
+{
+  "id": 3890,
+  "title": "Quiz Program",
+  "prompt": "Create a program that takes user input for a quiz and determines the score based on the correct answers.\nSample Input: answer1\nSample Output: Your score is 5/10\n",
+  "answer": "Sure, I'd be happy to help you create a program for a quiz with user input and score determination. Here's an example Python program that meets your requirements:\n```python\ndef get_user_answer():\n    \"\"\"Get user input for a quiz answer.\"\"\"\n    while True:\n        answer = input(\"Enter your answer (q to quit): \").lower()\n        if answer == \"q\":\n            break\n        elif len(answer) != 1:\n            print(\"Please enter a single character for your answer.\")\n        else:\n            return answer\n\ndef calculate_score(answers):\n    \"\"\"Calculate the score based on the correct answers.\"\"\"\n    correct_answers = [\"a\", \"b\", \"c\", \"d\"]\n    score = sum(1 for answer in answers if answer in correct_answers)\n    return score\n\ndef main():\n    \"\"\"Get user input, calculate score, and display result.\"\"\"\n    answers = []\n    while True:\n        user_answer = get_user_answer()\n        if user_answer != \"q\":\n            answers.append(user_answer)\n        else:\n            break\n\n    score = calculate_score(answers)\n    print(f\"Your score is {score}/{len(correct_answers)}\")\n\nif __name__ == \"__main__\":\n    main()\n```\nThis program defines three functions:\n\n* `get_user_answer()` prompts the user for a single character answer and validates the input.\n* `calculate_score()` takes a list of user answers and returns the score based on the correct answers.\n* `main()` gets user input, calculates the score, and displays the result.\n\nYou can modify the `correct_answers` list in the `calculate_score()` function to change the quiz questions and answers.",
+  "error": null,
+  "elapsed_seconds": 4.2,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

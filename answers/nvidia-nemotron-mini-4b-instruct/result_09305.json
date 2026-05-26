@@ -1,0 +1,9 @@
+{
+  "id": 9305,
+  "title": "Shortest Word Finder",
+  "prompt": "Write a function that takes a string as input and returns the shortest word in the string.\nSample Input: Hello World this is a test\nSample Output: a\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function first splits the input string into a list of words using the `split()` method, then it finds the shortest word in the list and returns it. If there are no words in the input string, the function returns an empty string.\n\n```python\ndef shortest_word(input_string: str) -> str:\n    \"\"\"\n    Given a string, return the shortest word in the string.\n\n    :param input_string: The input string containing one or more words.\n    :return: The shortest word in the input string.\n    \"\"\"\n    # Split the input string into a list of words\n    words = input_string.split()\n\n    # If there are no words, return an empty string\n    if not words:\n        return \"\"\n\n    # Find the shortest word in the list\n    shortest_word = min(words, key=len)\n\n    return shortest_word\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(shortest_word(\"Hello World this is a test\"))  # Output: a\nprint(shortest_word(\"This is a short sentence\"))    # Output: a\nprint(shortest_word(\"This is a very long sentence\"))  # Output: a\nprint(shortest_word(\"\"))                              # Output: \"\"\n```",
+  "error": null,
+  "elapsed_seconds": 3.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

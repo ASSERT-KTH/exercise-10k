@@ -1,0 +1,9 @@
+{
+  "id": 7134,
+  "title": "Validate User Input",
+  "prompt": "Write a program that asks the user for their name and age, then validates if the age is within the range of 18 to 65. If the age is valid, print out a greeting message with the user's name and age. If the age is not valid, ask for the age again until a valid age is entered.\nSample Input: John\n17\n18\nSample Output: Hello, John! You are 18 years old.\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef get_age():\n    while True:\n        try:\n            age = int(input(\"Please enter your age: \"))\n            if 18 <= age <= 65:\n                return age\n            else:\n                print(\"Age must be between 18 and 65. Please try again.\")\n        except ValueError:\n            print(\"That's not a valid number. Please try again.\")\n\nname = input(\"What is your name? \")\nage = get_age()\n\ngreeting = f\"Hello, {name}! You are {age} years old.\"\nprint(greeting)\n```\n\nThis program defines a function `get_age()` that prompts the user for an age, validates it, and returns it if it's within the valid range. The program then prompts the user for their name and calls the `get_age()` function to get their age. Finally, it prints a greeting message with the user's name and age.",
+  "error": null,
+  "elapsed_seconds": 2.36,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 7658,
+  "title": "Function to Find the Median",
+  "prompt": "Write a function to find the median of a list of numbers.\nSample Input: numbers = [1, 2, 3, 4, 5]\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that finds the median of a list of numbers. The function first sorts the list in ascending order, then checks if the length of the list is odd or even. If the length is odd, the median is the middle element; if the length is even, the median is the average of the two middle elements.\n\n```python\ndef find_median(numbers):\n    \"\"\"\n    Find the median of a list of numbers.\n\n    :param numbers: List of numbers\n    :return: Median of the list\n    \"\"\"\n    # Sort the list\n    numbers.sort()\n\n    # Check if the list has an odd or even length\n    n = len(numbers)\n    if n % 2 == 0:\n        # Even length, calculate the average of the two middle elements\n        median = (numbers[n // 2 - 1] + numbers[n // 2]) / 2\n    else:\n        # Odd length, the middle element is the median\n        median = numbers[n // 2]\n\n    return median\n```\n\nYou can use this function as follows:\n\n```python\nnumbers = [1, 2, 3, 4, 5]\nprint(find_median(numbers))  # Output: 3\n```",
+  "error": null,
+  "elapsed_seconds": 3.0,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

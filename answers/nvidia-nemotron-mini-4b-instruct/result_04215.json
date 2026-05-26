@@ -1,0 +1,9 @@
+{
+  "id": 4215,
+  "title": "Kth Largest Element",
+  "prompt": "Find the kth largest element in an array.\nSample Input: [3, 2, 1, 5, 6, 4] and k=2\nSample Output: 5\n",
+  "answer": "To find the kth largest element in an array, you can use a combination of sorting and binary search algorithms. Here's a Python function that implements this:\n\n```python\ndef find_kth_largest(arr, k):\n    # Sort the array in descending order\n    arr.sort(reverse=True)\n\n    # Perform binary search to find the kth largest element\n    return arr[k - 1]\n```\n\nThis function first sorts the array in descending order, which effectively gives the array the elements in ascending order. Then, it uses binary search to find the kth largest element. The binary search algorithm works by repeatedly dividing the search interval in half. At each step, it compares the element in the middle of the interval with the target value. If the middle element is equal to the target, the search is complete. If the middle element is less than the target, the search continues in the lower half of the interval. If the middle element is greater than the target, the search continues in the upper half of the interval.\n\nHere's an example of how to use this function:\n\n```python\narr = [3, 2, 1, 5, 6, 4]\nk = 2\nprint(find_kth_largest(arr, k))  # Output: 5\n```\n\nThis function assumes that the input array contains at least k distinct elements. If the array may contain fewer than k distinct elements, you can modify the function to return a default value (e.g., -1) in such cases.",
+  "error": null,
+  "elapsed_seconds": 3.37,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

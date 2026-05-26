@@ -1,0 +1,9 @@
+{
+  "id": 1254,
+  "title": "Function Apply",
+  "prompt": "Write a function that applies a given function to a list of arguments.\nSample Input: [1, 2, 3], sum\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that applies a given function to a list of arguments:\n```python\ndef apply_function_to_list(function, args):\n    \"\"\"\n    Applies a given function to a list of arguments.\n\n    Parameters:\n    function (callable): The function to apply to the list of arguments.\n    args (list): The list of arguments to pass to the function.\n\n    Returns:\n    result (any): The result of applying the function to the list of arguments.\n    \"\"\"\n    # Check that the function is callable\n    if not callable(function):\n        raise ValueError(\"The first argument must be a callable function.\")\n\n    # Apply the function to the list of arguments\n    result = function(*args)\n\n    return result\n```\nHere's an example of how to use this function:\n```python\ndef add(a, b):\n    \"\"\"Returns the sum of two numbers.\"\"\"\n    return a + b\n\nprint(apply_function_to_list(add, [1, 2, 3]))  # Output: 6\n```\nThis function first checks that the first argument is callable, and then applies the function to the list of arguments using the `*args` syntax. The result is returned as the output of the function.",
+  "error": null,
+  "elapsed_seconds": 3.01,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

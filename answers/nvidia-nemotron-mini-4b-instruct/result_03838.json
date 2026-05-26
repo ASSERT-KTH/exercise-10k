@@ -1,0 +1,9 @@
+{
+  "id": 3838,
+  "title": "Word Scramble Game",
+  "prompt": "Write a program that takes a word as input, scrambles it, and asks the user to unscramble it.\nSample Input: listen\nSample Output: Unscramble the word: tnesil\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses the `random.shuffle()` function to scramble the word, and then prompts the user to unscramble it. It also checks if the user's input matches the scrambled word, and provides feedback accordingly.\n\n```python\nimport random\n\ndef scramble_word(word):\n    \"\"\"Scramble a word by randomly swapping adjacent characters.\"\"\"\n    shuffled_word = list(word)\n    random.shuffle(shuffled_word)\n    return ''.join(shuffled_word)\n\ndef unscramble_word(scrambled_word):\n    \"\"\"Ask the user to unscramble the word and validate the input.\"\"\"\n    while True:\n        user_input = input(\"Unscramble the word: \").lower()\n        if user_input == scrambled_word.lower():\n            print(f\"Correct! The original word was {word}.\")\n            break\n        else:\n            print(\"Sorry, that's not correct. Try again.\")\n\n# Get user input\nword = input(\"Enter a word: \")\n\n# Scramble the word\nscrambled_word = scramble_word(word)\n\n# Ask the user to unscramble the word\nunscramble_word(scrambled_word)\n```\n\nThis program will work for any word input, but it's important to note that the scrambling algorithm I used only swaps adjacent characters randomly. If you want to scramble the word in a more complex way, you can modify the `scramble_word()` function accordingly.",
+  "error": null,
+  "elapsed_seconds": 3.59,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

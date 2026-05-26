@@ -1,0 +1,9 @@
+{
+  "id": 474,
+  "title": "郎 Snapshot",
+  "prompt": "Write a program that takes a string as input and returns a snapshot of the string at a given index\nSample Input: hello world, 5\nSample Output:  world\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef get_snapshot(input_string: str, index: int) -> str:\n    \"\"\"\n    Returns a snapshot of the input string at a given index.\n\n    :param input_string: The string to get a snapshot of.\n    :param index: The index at which to get the snapshot.\n    :return: The snapshot of the input string at the given index.\n    \"\"\"\n    if not isinstance(input_string, str) or not isinstance(index, int):\n        raise ValueError(\"Both input_string and index must be of type str and int, respectively.\")\n\n    if index < 0 or index >= len(input_string):\n        raise IndexError(\"The given index is out of bounds for the input string.\")\n\n    return input_string[index]\n```\nHere's an example of how you can use this function:\n```python\ninput_string = \"hello world\"\nindex = 5\n\nsnapshot = get_snapshot(input_string, index)\nprint(snapshot)  # Output: 'r'\n```\nThis function checks that the input types are correct, and raises a `ValueError` or `IndexError` if they are not. It then returns the character at the given index in the input string.",
+  "error": null,
+  "elapsed_seconds": 4.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

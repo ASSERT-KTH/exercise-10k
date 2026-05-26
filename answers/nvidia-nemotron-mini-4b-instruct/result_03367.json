@@ -1,0 +1,9 @@
+{
+  "id": 3367,
+  "title": "Generate a Fibonacci Sequence",
+  "prompt": "Use a for loop to generate a Fibonacci sequence up to the nth term\nSample Input: 10\nSample Output: 0 1 1 2 3 5 8 13 21 34\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python code snippet that uses a for loop to generate a Fibonacci sequence up to the nth term:\n\n```python\ndef fibonacci(n):\n    sequence = [0, 1]\n\n    # Generate the Fibonacci sequence up to the nth term\n    for i in range(2, n):\n        sequence.append(sequence[i-1] + sequence[i-2])\n\n    return sequence\n\n# Get the sample input (n) from the user\nn = int(input(\"Enter the value of n: \"))\n\n# Print the Fibonacci sequence up to the nth term\nprint(\"Fibonacci sequence up to the\", n, \"th term:\")\nprint(fibonacci(n))\n```\n\nWhen you run this code and enter `10` as the sample input, it will output:\n\n```\nEnter the value of n: 10\nFibonacci sequence up to the 10th term:\n[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]\n```\n\nThis code first defines a function `fibonacci(n)` that generates the Fibonacci sequence up to the nth term. It then gets the sample input (n) from the user, calls the `fibonacci(n)` function, and prints the resulting sequence.",
+  "error": null,
+  "elapsed_seconds": 3.15,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

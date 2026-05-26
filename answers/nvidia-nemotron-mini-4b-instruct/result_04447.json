@@ -1,0 +1,9 @@
+{
+  "id": 4447,
+  "title": "String Repeater",
+  "prompt": "Create a program that takes a string and a number as input and prints out the string repeated that many times.\nSample Input: hello\n3\nSample Output: hellohellohello\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef repeat_string(input_string, num_times):\n    \"\"\"\n    Repeats the given string the specified number of times.\n\n    :param input_string: The string to repeat.\n    :param num_times: The number of times to repeat the string.\n    :return: None\n    \"\"\"\n    if not isinstance(input_string, str) or not isinstance(num_times, int):\n        raise TypeError(\"Both input_string and num_times must be of type str or int, respectively.\")\n\n    if num_times < 1:\n        raise ValueError(\"num_times must be a positive integer.\")\n\n    print(input_string * num_times)\n\n# Example usage:\nrepeat_string(\"hello\", 3)  # Output: hellohellohello\n```\nThis program defines a function `repeat_string` that takes two arguments: the input string and the number of times to repeat it. It checks that both inputs are of the correct type, and then checks that the number of times to repeat is a positive integer. Finally, it prints out the input string repeated the specified number of times. The example usage at the end of the program demonstrates how to use the function.",
+  "error": null,
+  "elapsed_seconds": 2.93,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

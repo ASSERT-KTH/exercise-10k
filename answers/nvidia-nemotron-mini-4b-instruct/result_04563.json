@@ -1,0 +1,9 @@
+{
+  "id": 4563,
+  "title": "Dictionary Access",
+  "prompt": "Write a function that takes a dictionary and a key, then returns the value associated with that key. If the key does not exist, return a default value\nSample Input: {'name': 'John', 'age': 25}, 'name'\nSample Output: John\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_value_or_default(dictionary, key, default=None):\n    \"\"\"\n    Retrieves the value associated with a key in a dictionary, or returns a default value if the key does not exist.\n\n    Parameters:\n    dictionary (dict): The dictionary to search in.\n    key (any): The key to look up in the dictionary.\n    default (any, optional): The default value to return if the key is not found. Defaults to None.\n\n    Returns:\n    any: The value associated with the key, or the default value if the key does not exist.\n    \"\"\"\n    return dictionary.get(key, default)\n```\nHere's an example of how you can use this function:\n```python\nresult = get_value_or_default({'name': 'John', 'age': 25}, 'name')\nprint(result)  # Output: John\n\nresult = get_value_or_default({'name': 'John', 'age': 25}, 'job')\nprint(result)  # Output: None (default value)\n```\nThis function uses the `get()` method of Python dictionaries, which returns the value associated with the key if it exists, or the default value if it does not. The `default` parameter allows you to specify a default value to return if the key is not found.",
+  "error": null,
+  "elapsed_seconds": 3.29,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

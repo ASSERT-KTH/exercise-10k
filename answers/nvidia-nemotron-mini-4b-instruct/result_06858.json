@@ -1,0 +1,9 @@
+{
+  "id": 6858,
+  "title": "Arithmetic Operations Challenge",
+  "prompt": "Create a program that takes three numbers as input and performs the following arithmetic operations: addition, subtraction, multiplication, and division. The program should then output the results of each operation.\nSample Input: 10 5 2\nSample Output: Addition: 17, Subtraction: 5, Multiplication: 100, Division: 2.5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef perform_operations(num1, num2, num3):\n    \"\"\"\n    Performs addition, subtraction, multiplication, and division on three numbers.\n\n    :param num1: The first number.\n    :param num2: The second number.\n    :param num3: The third number.\n    :return: None\n    \"\"\"\n\n    # Perform addition\n    print(f\"Addition: {num1 + num2 + num3}\")\n\n    # Perform subtraction\n    print(f\"Subtraction: {num1 - num2 - num3}\")\n\n    # Perform multiplication\n    print(f\"Multiplication: {num1 * num2 * num3}\")\n\n    # Perform division (if possible)\n    try:\n        print(f\"Division: {num1 / num2 / num3}\")\n    except ZeroDivisionError:\n        print(\"Division by zero is not allowed. Please provide different numbers.\")\n\n\n# Get user input\nnum1 = float(input(\"Enter the first number: \"))\nnum2 = float(input(\"Enter the second number: \"))\nnum3 = float(input(\"Enter the third number: \"))\n\n# Perform operations\nperform_operations(num1, num2, num3)\n```\n\nThis program defines a function `perform_operations` that takes three numbers as input and performs the specified arithmetic operations. The function then calls itself with the user-provided numbers. The program also checks for division by zero and prints an error message if that occurs.",
+  "error": null,
+  "elapsed_seconds": 3.82,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

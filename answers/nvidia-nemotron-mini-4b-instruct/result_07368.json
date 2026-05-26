@@ -1,0 +1,9 @@
+{
+  "id": 7368,
+  "title": "Unicode Escape Sequences",
+  "prompt": "Create Unicode escape sequences and print their values.\nSample Input: None\nSample Output: Unicode escape sequence value\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that prints the Unicode escape sequences and their corresponding values:\n\n```python\nimport re\n\n# Define a regular expression pattern to match Unicode escape sequences\npattern = r'\\\\u[0-9a-fA-F]{4}'\n\n# Function to print the Unicode escape sequence and its value\ndef print_unicode_escape(match):\n    value = int(match.group(1), 16)  # Convert the hexadecimal value to an integer\n    print(f\"Unicode escape sequence: \\\\u{value:04x}, Value: {value}\")\n\n# Find all Unicode escape sequences in the input string\ninput_string = \"This is a sample input string with Unicode escape sequences: \\\\u006C, \\\\u006F, \\\\u0063, \\\\u0020, \\\\u0061, \\\\u006E, \\\\u006F, \\\\u006E\"\nunicode_sequences = re.findall(pattern, input_string)\n\n# Print each Unicode escape sequence and its value\nfor sequence in unicode_sequences:\n    print_unicode_escape(re.match(pattern, sequence))\n```\n\nWhen you run this program with an empty input string, it will print the Unicode escape sequences and their corresponding values in the sample output format. You can replace the input string with your own text containing Unicode escape sequences to see the results.",
+  "error": null,
+  "elapsed_seconds": 5.39,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

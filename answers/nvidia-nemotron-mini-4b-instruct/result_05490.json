@@ -1,0 +1,9 @@
+{
+  "id": 5490,
+  "title": "Check Balanced Parentheses",
+  "prompt": "Write a program to check if a given string has balanced parentheses.\nSample Input: (())\nSample Output: true\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that checks if a given string has balanced parentheses:\n\n```python\ndef has_balanced_parentheses(s):\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n\n    for char in s:\n        if char in mapping.values():\n            stack.append(char)\n        elif char in mapping.keys():\n            if not stack or mapping[char] != stack.pop():\n                return False\n\n    return not stack\n\n# Test the function\nprint(has_balanced_parentheses(\"(())\"))  # Output: True\nprint(has_balanced_parentheses(\"(]\"))    # Output: False\nprint(has_balanced_parentheses(\"{[]}\"))  # Output: True\nprint(has_balanced_parentheses(\"([)]\"))  # Output: False\n```\n\nThis program uses a stack to keep track of the opening parentheses it has seen so far. It also maintains a mapping of closing parentheses to their corresponding opening parentheses. When it encounters a closing parenthesis, it checks if the stack is empty or if the top element in the stack does not match the corresponding opening parenthesis. If either condition is true, it returns `False`, indicating that the parentheses are not balanced. Otherwise, it removes the top element from the stack. Finally, it checks if the stack is empty after processing all characters in the string, and returns `True` if it is not, indicating that the parentheses are balanced.",
+  "error": null,
+  "elapsed_seconds": 3.51,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

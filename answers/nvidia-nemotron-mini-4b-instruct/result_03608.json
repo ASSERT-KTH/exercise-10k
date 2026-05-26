@@ -1,0 +1,9 @@
+{
+  "id": 3608,
+  "title": "Function Closures",
+  "prompt": "Write a function that returns another function with access to its own scope\nSample Input: None\nSample Output: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example function in JavaScript that returns another function with access to its own scope:\n```javascript\nfunction createCounter() {\n let count = 0;\n\n  return function() {\n    return ++count;\n  };\n}\n\nconst counter = createCounter();\nconsole.log(counter()); // Output: 1\nconsole.log(counter()); // Output: 2\nconsole.log(counter()); // Output: 3\n```\nIn this example, the `createCounter` function returns a new function that increments a private `count` variable each time it's called. The `counter` variable is assigned the returned function, and it can be called multiple times to increment the count. The `count` variable is accessible to both the outer `createCounter` function and the inner function returned by `createCounter`.\n\nHere's another example using a closure to demonstrate the same concept:\n```javascript\nfunction createCounter() {\n let count = 0;\n\n  return function() {\n    return ++count;\n  };\n}\n\nconst counter = createCounter();\nconsole.log(counter()); // Output: 1\nconsole.log(counter()); // Output: 2\nconsole.log(counter()); // Output: 3\n```\nIn this example, the `createCounter` function creates a closure by capturing the `count` variable in its inner function. The `count` variable is accessible to both the outer `createCounter` function and the inner function returned by `createCounter`.",
+  "error": null,
+  "elapsed_seconds": 3.87,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

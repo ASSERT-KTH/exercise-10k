@@ -1,0 +1,9 @@
+{
+  "id": 9670,
+  "title": "String Alternator",
+  "prompt": "Write a program that asks for two strings and alternates their characters.\nSample Input: hello, world\nSample Output: hweolrllod\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef alternate_chars(str1, str2):\n    \"\"\"\n    Alternates the characters of two input strings.\n\n    :param str1: The first string.\n    :param str2: The second string.\n    :return: A new string with alternating characters from str1 and str2.\n    \"\"\"\n    # Ensure both inputs are strings\n    if not isinstance(str1, str) or not isinstance(str2, str):\n        raise TypeError(\"Both inputs must be strings.\")\n\n    # Pad the shorter string with an empty string to match the length of the longer string\n    max_len = max(len(str1), len(str2))\n    str1 += \" \" * (max_len - len(str1))\n    str2 += \" \" * (max_len - len(str2))\n\n    # Alternate characters and join them back into a string\n    result = \"\".join(str1[i] + str2[i] for i in range(max_len))\n\n    return result\n\n# Example usage\ninput_str1 = \"hello\"\ninput_str2 = \"world\"\noutput_str = alternate_chars(input_str1, input_str2)\nprint(output_str)  # Output: hweolrllod\n```\nThis program first checks if the inputs are strings, then pads the shorter string with spaces to match the length of the longer string. It then uses a list comprehension to alternate the characters and joins them back into a single string. The example usage demonstrates how to use the function with two input strings.",
+  "error": null,
+  "elapsed_seconds": 3.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

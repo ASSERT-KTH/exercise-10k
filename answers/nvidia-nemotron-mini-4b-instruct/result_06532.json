@@ -1,0 +1,9 @@
+{
+  "id": 6532,
+  "title": "Fibonacci Sequence",
+  "prompt": "Write a function that generates the Fibonacci sequence up to a given number.\nSample Input: 10\nSample Output: [0, 1, 1, 2, 3, 5, 8]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that generates the Fibonacci sequence up to a given number:\n\n```python\ndef fibonacci(n: int) -> list:\n    \"\"\"\n    Generates the Fibonacci sequence up to a given number.\n\n    :param n: The upper limit of the Fibonacci sequence.\n    :return: A list containing the Fibonacci numbers up to n.\n    \"\"\"\n    if n < 1:\n        raise ValueError(\"The upper limit must be at least 1.\")\n\n    fib_sequence = [0, 1]\n\n    while fib_sequence[-1] + fib_sequence[-2] < n:\n        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])\n\n    return fib_sequence\n```\n\nThis function checks if the input is valid (i.e., greater than or equal to 1), generates the first two Fibonacci numbers, and then iteratively adds the last two numbers in the sequence until the sum of the last two numbers is less than the given limit. The resulting list is returned.\n\nHere's an example of how to use this function:\n\n```python\nprint(fibonacci(10))  # Output: [0, 1, 1, 2, 3, 5, 8]\n```",
+  "error": null,
+  "elapsed_seconds": 2.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

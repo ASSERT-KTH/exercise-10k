@@ -1,0 +1,9 @@
+{
+  "id": 5214,
+  "title": "Calculate Change",
+  "prompt": "Create a program that calculates the change amount based on the payment and total bill provided by the user.\nSample Input: 100 50\nSample Output: 50.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the change amount based on the payment and total bill provided by the user:\n```python\ndef calculate_change():\n    \"\"\"\n    Calculates the change amount based on the payment and total bill provided by the user.\n\n    :return: The change amount as a float.\n    \"\"\"\n\n    # Get user input\n    payment = float(input(\"Enter the payment amount: \"))\n    total_bill = float(input(\"Enter the total bill amount: \"))\n\n    # Validate input\n    if payment < 0 or total_bill < 0:\n        print(\"Payment and total bill amounts must be non-negative numbers.\")\n        return\n\n    # Calculate change\n    change = total_bill - payment\n\n    # Format and return change amount\n    return format(change, '.2f')\n\n# Call the function and print the result\nprint(calculate_change())\n```\nThis program defines a function `calculate_change()` that prompts the user to enter the payment and total bill amounts, validates the input to ensure it's non-negative, calculates the change, formats the change amount to two decimal places, and returns it. The function is then called and the result is printed to the console.",
+  "error": null,
+  "elapsed_seconds": 2.91,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

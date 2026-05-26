@@ -1,0 +1,9 @@
+{
+  "id": 6691,
+  "title": "Percentage Increase",
+  "prompt": "Create a program that takes two numbers as input and returns the percentage increase from the first to the second.\nSample Input: 10 15\nSample Output: 50.0\n",
+  "answer": "Sure, I'd be happy to help you create a program that calculates the percentage increase between two numbers. Here's an example solution in Python:\n\n```python\ndef percentage_increase(num1, num2):\n    \"\"\"\n    Calculates the percentage increase from the first number to the second.\n\n    :param num1: The first number.\n    :param num2: The second number.\n    :return: The percentage increase as a float.\n    \"\"\"\n    # Check if both inputs are numbers\n    if not isinstance(num1, (int, float)) or not isinstance(num2, (int, float)):\n        raise ValueError(\"Both inputs must be numbers.\")\n\n    # Calculate the percentage increase\n    increase = (num2 - num1) / num1 * 100\n\n    return increase\n\n# Get user input\nnum1 = float(input(\"Enter the first number: \"))\nnum2 = float(input(\"Enter the second number: \"))\n\n# Calculate and print the percentage increase\npercentage = percentage_increase(num1, num2)\nprint(f\"{num1} is {percentage:.0f}% greater than {num2}.\")\n```\n\nThis program defines a function `percentage_increase` that checks if the inputs are numbers and calculates the percentage increase. The function is then called with user inputs to calculate and print the result.",
+  "error": null,
+  "elapsed_seconds": 3.28,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

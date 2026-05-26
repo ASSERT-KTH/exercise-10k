@@ -1,0 +1,9 @@
+{
+  "id": 5057,
+  "title": "Decimal to Fraction",
+  "prompt": "Create a program that converts a decimal number to a fraction.\nSample Input: 0.5\nSample Output: 1/2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that converts a decimal number to a fraction:\n\n```python\ndef decimal_to_fraction(decimal):\n    \"\"\"\n    Converts a decimal number to a fraction in the form of numerator/denominator.\n\n    :param decimal: The decimal number to convert.\n    :return: A string representing the fraction.\n    \"\"\"\n\n    # Ensure the input is a decimal number\n    if not isinstance(decimal, (float, int)):\n        raise TypeError(\"Input must be a decimal number.\")\n\n    # Convert the decimal to an integer to ensure exact representation\n    integer = int(decimal * 10 ** max(0, -int(decimal)))\n\n    # Calculate the numerator and denominator\n    numerator = integer\n    denominator = 10 ** len(str(integer))\n\n    # Simplify the fraction if possible\n    gcd = math.gcd(numerator, denominator)\n    numerator //= gcd\n    denominator //= gcd\n\n    return f\"{numerator}/{denominator}\"\n\n\n# Example usage\ndecimal = 0.5\nfraction = decimal_to_fraction(decimal)\nprint(f\"The decimal {decimal} is equivalent to the fraction {fraction}.\")\n```\n\nThis program first ensures the input is a decimal number, then converts it to an integer to ensure exact representation. It then calculates the numerator and denominator as a function of the integer value. Finally, it simplifies the fraction if possible using the `math.gcd()` function.",
+  "error": null,
+  "elapsed_seconds": 3.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

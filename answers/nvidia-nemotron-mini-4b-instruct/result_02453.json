@@ -1,0 +1,9 @@
+{
+  "id": 2453,
+  "title": "Array Partitioning",
+  "prompt": "Write a program that takes an array and a partition size as input and returns a new array containing the same elements partitioned into subarrays of the specified size.\nSample Input: [1, 2, 3, 4, 5, 6], 2\nSample Output: [[1, 2], [3, 4], [5, 6]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef partition_array(arr, partition_size):\n    \"\"\"\n    Partitions the input array into subarrays of a specified size.\n\n    Parameters:\n    arr (list): The input array of elements.\n    partition_size (int): The size of each subarray.\n\n    Returns:\n    list: A new list containing the partitioned array elements.\n    \"\"\"\n    # Ensure partition_size is positive\n    if partition_size <= 0:\n        raise ValueError(\"Partition size must be a positive integer.\")\n\n    # Partition the array into subarrays of the specified size\n    partitioned_array = [arr[i:i+partition_size] for i in range(0, len(arr), partition_size)]\n\n    return partitioned_array\n```\nHere's an example of how to use this function:\n```python\narr = [1, 2, 3, 4, 5, 6]\npartition_size = 2\n\npartitioned_array = partition_array(arr, partition_size)\nprint(partitioned_array)  # Output: [[1, 2], [3, 4], [5, 6]]\n```\nThis function first checks if the partition size is positive, as it should be for the function to work correctly. Then, it uses a list comprehension to partition the input array into subarrays of the specified size. The resulting list of subarrays is then returned.",
+  "error": null,
+  "elapsed_seconds": 3.46,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

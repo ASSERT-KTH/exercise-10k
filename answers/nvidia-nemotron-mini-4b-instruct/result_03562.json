@@ -1,0 +1,9 @@
+{
+  "id": 3562,
+  "title": "Dictionary Keys",
+  "prompt": "Write a function that returns all keys from a given dictionary\nSample Input: {\"a\": 1, \"b\": 2, \"c\": 3}\nSample Output: [\"a\", \"b\", \"c\"]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_dict_keys(d):\n    \"\"\"\n    Returns a list of all keys from a given dictionary.\n\n    :param d: The dictionary to extract keys from.\n    :return: A list of all keys in the dictionary.\n    \"\"\"\n    if not isinstance(d, dict):\n        raise ValueError(\"Input must be a dictionary.\")\n\n    return list(d.keys())\n```\nThis function checks if the input is a dictionary and raises a `ValueError` if it's not. Then, it uses the built-in `dict.keys()` method to get a view object that represents the set of all keys in the dictionary, and converts it to a list before returning it.\n\nHere's an example of how you can use this function:\n```python\nd = {\"a\": 1, \"b\": 2, \"c\": 3}\nkeys = get_dict_keys(d)\nprint(keys)  # Output: ['a', 'b', 'c']\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.82,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

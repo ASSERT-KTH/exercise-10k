@@ -1,0 +1,9 @@
+{
+  "id": 6878,
+  "title": "Calculating Student Grades",
+  "prompt": "Create a function called calculate_grade that takes in a student's score and returns their corresponding grade. The grades are calculated as follows: A (90-100), B (80-89), C (70-79), D (60-69), F (below 60). The function should also handle cases where the input score is not a number or is not within the range of 0 to 100.\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you create the `calculate_grade` function. Here's a Python solution that meets your requirements:\n\n```python\ndef calculate_grade(score):\n    \"\"\"\n    Calculates a student's grade based on their score.\n\n    :param score: The student's score as a number between 0 and 100.\n    :return: The corresponding letter grade (A, B, C, D, or F).\n    \"\"\"\n    if not isinstance(score, (int, float)):  # Check if the input is a number\n        return \"Error: Input must be a number.\"\n\n    if score < 0 or score > 100:  # Check if the score is within the valid range\n        return \"Error: Score must be between 0 and 100.\"\n\n    if score >= 90:\n        return \"A\"\n    elif score >= 80:\n        return \"B\"\n    elif score >= 70:\n        return \"C\"\n    elif score >= 60:\n        return \"D\"\n    else:\n        return \"F\"\n```\n\nThis function checks if the input is a number, within the valid range, and then calculates the corresponding letter grade based on the score. If any of these conditions are not met, it returns an error message. Here are some sample inputs and outputs:\n\n```python\nprint(calculate_grade(85))  # Output: B\nprint(calculate_grade(95))  # Output: A\nprint(calculate_grade(65))  # Output: D\nprint(calculate_grade(\"85\"))  # Output: Error: Input must be a number.\nprint(calculate_grade(105))  # Output: Error: Score must be between 0 and 100.\n```",
+  "error": null,
+  "elapsed_seconds": 4.2,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

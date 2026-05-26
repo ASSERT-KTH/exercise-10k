@@ -1,0 +1,9 @@
+{
+  "id": 3919,
+  "title": "Score Calculator",
+  "prompt": "Write a program that calculates the total score given a list of scores and their respective weights.\nSample Input: 90 10 80 20\nSample Output: 86.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the total score given a list of scores and their respective weights:\n```python\ndef calculate_total_score(scores, weights):\n    \"\"\"\n    Calculates the total score given a list of scores and their respective weights.\n\n    Parameters:\n    scores (list): A list of scores.\n    weights (list): A list of corresponding weights for each score.\n\n    Returns:\n    float: The total score.\n    \"\"\"\n\n    # Check that the lengths of scores and weights are equal\n    if len(scores) != len(weights):\n        raise ValueError(\"The lengths of scores and weights must be equal.\")\n\n    # Calculate the total score by summing the products of scores and weights\n    total_score = sum(score * weight for score, weight in zip(scores, weights))\n\n    return total_score\n\n# Example usage\nscores = [90, 10, 80, 20]\nweights = [0.3, 0.4, 0.2, 0.1]\n\ntotal_score = calculate_total_score(scores, weights)\nprint(f\"The total score is {total_score:.2f}.\")\n```\nThis program defines a function `calculate_total_score` that takes in two lists, `scores` and `weights`, and returns the total score calculated as the sum of the products of scores and weights. The function checks that the lengths of the input lists are equal, and raises a `ValueError` if they are not. The example usage demonstrates how to use the function with a sample input.",
+  "error": null,
+  "elapsed_seconds": 3.86,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

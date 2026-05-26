@@ -1,0 +1,9 @@
+{
+  "id": 1736,
+  "title": "Finding the First Duplicate in a List",
+  "prompt": "Write a program that takes a list of numbers as input and returns the first duplicate value.\nSample Input: [1, 2, 3, 2, 4]\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef find_duplicate(numbers):\n    \"\"\"\n    Given a list of numbers, return the first duplicate value.\n\n    :param numbers: List[int] - The list of numbers to search through\n    :return: int - The first duplicate value in the list, or None if no duplicates are found\n    \"\"\"\n    # Create a set to store the numbers we've seen so far\n    seen = set()\n\n    # Iterate through each number in the input list\n    for num in numbers:\n        # If the number has already been seen, it's a duplicate\n        if num in seen:\n            return num\n        # Otherwise, mark it as seen and continue to the next number\n        seen.add(num)\n\n    # If we didn't find any duplicates, return None\n    return None\n```\nHere's an example of how you can use this function:\n```python\nnumbers = [1, 2, 3, 2, 4]\nresult = find_duplicate(numbers)\nprint(result)  # Output: 2\n```\nThis function works by iterating through each number in the input list and checking if it has already been seen (i.e., if it's a duplicate). If a duplicate is found, the function returns that number. If no duplicates are found, the function returns `None`. The function uses a set to efficiently check if a number has already been seen, which allows it to run in O(n) time complexity.",
+  "error": null,
+  "elapsed_seconds": 3.93,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

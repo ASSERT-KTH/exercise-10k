@@ -1,0 +1,9 @@
+{
+  "id": 6554,
+  "title": "Letter Count",
+  "prompt": "Write a function that counts the number of letters in a given string.\nSample Input: Hello World\nSample Output: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that counts the number of letters (both uppercase and lowercase) in a given string:\n\n```python\ndef count_letters(s: str) -> int:\n    \"\"\"\n    Count the number of letters in a given string.\n\n    :param s: The string to count letters in.\n    :return: The number of letters in the string.\n    \"\"\"\n    # Use a regular expression to match any letter (both uppercase and lowercase)\n    letter_pattern = r'[a-zA-Z]'\n\n    # Count the number of matches in the string\n    return len(re.findall(letter_pattern, s))\n```\n\nHere's how you can use this function:\n\n```python\nprint(count_letters(\"Hello World\"))  # Output: 10\nprint(count_letters(\"Python is great\"))  # Output: 11\nprint(count_letters(\"12345\"))  # Output: 0\n```\n\nThis function uses a regular expression to match any letter (both uppercase and lowercase) in the string. The `re.findall()` function is used to find all non-overlapping matches of the pattern in the string, and the length of the resulting list is returned as the number of letters in the string.",
+  "error": null,
+  "elapsed_seconds": 3.06,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

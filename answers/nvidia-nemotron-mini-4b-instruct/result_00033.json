@@ -1,0 +1,9 @@
+{
+  "id": 33,
+  "title": "Function to Calculate the Greatest Common Divisor",
+  "prompt": "Create a function that takes two integers as input and returns their greatest common divisor.\nSample Input: 48, 18\nSample Output: 6\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses the Euclidean algorithm to find the greatest common divisor (GCD) of two integers. The Euclidean algorithm states that if `a` and `b` are integers with `a > b`, then `gcd(a, b) = gcd(b, a % b)`. This function implements this algorithm recursively until it reaches a base case of `a == b`, at which point the GCD is returned.\n\n```python\ndef gcd(a: int, b: int) -> int:\n    \"\"\"\n    Calculate the greatest common divisor of two integers.\n\n    :param a: The first integer.\n    :param b: The second integer.\n    :return: The greatest common divisor of a and b.\n    \"\"\"\n    # Base case: if a and b are equal, their GCD is 1\n    if a == b:\n        return 1\n\n    # Recursive case: if a is greater than b, calculate the GCD of b and a % b\n    if a > b:\n        return gcd(b, a % b)\n\n    # If a is less than b, calculate the GCD of a and b % a\n    return gcd(a, b % a)\n```\n\nYou can use this function as follows:\n\n```python\nprint(gcd(48, 18))  # Output: 6\n```",
+  "error": null,
+  "elapsed_seconds": 3.38,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2273,
+  "title": "Financial Calculations",
+  "prompt": "Write a program that calculates the interest earned on an investment.\nSample Input: 1000 5 2\nSample Output: 1102.5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the interest earned on an investment, given the initial amount, the annual interest rate, and the number of years:\n\n```python\ndef calculate_interest(initial_amount, annual_interest_rate, years):\n    \"\"\"\n    Calculates the interest earned on an investment.\n\n    Parameters:\n    initial_amount (float): The initial amount of the investment.\n    annual_interest_rate (float): The annual interest rate as a decimal (e.g., 0.05 for 5%).\n    years (int): The number of years the investment will be held.\n\n    Returns:\n    float: The total amount of interest earned.\n    \"\"\"\n\n    # Calculate the monthly interest rate\n    monthly_interest_rate = annual_interest_rate / 12\n\n    # Calculate the interest earned for each year\n    interest_earned = [initial_amount * (1 + monthly_interest_rate)] * years\n\n    # Calculate the total interest earned\n    total_interest = sum(interest_earned) - initial_amount\n\n    return total_interest\n\n# Example usage\ninitial_amount = 1000\nannual_interest_rate = 0.05\nyears = 2\n\ninterest_earned = calculate_interest(initial_amount, annual_interest_rate, years)\nprint(f\"{initial_amount} invested at {annual_interest_rate * 100:.0f}% for {years} years will earn {interest_earned:.2f} dollars in interest.\")\n```\n\nThis program defines a function `calculate_interest` that takes the initial amount, annual interest rate, and years as input and returns the total interest earned. The example usage at the end of the program demonstrates how to use this function to calculate the interest earned on an investment.",
+  "error": null,
+  "elapsed_seconds": 4.27,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

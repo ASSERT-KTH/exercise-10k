@@ -1,0 +1,9 @@
+{
+  "id": 5844,
+  "title": "Time of Day Greeting",
+  "prompt": "Create a program that asks the user for their name and the current time of day (in 24-hour format). Then, print out a greeting based on the time of day (e.g., Good morning, Good afternoon, Good evening)\nSample Input: John 14:30\nSample Output: Good afternoon, John\n",
+  "answer": "Sure, I'd be happy to help you create a program for that. Here's a Python solution that meets your requirements:\n\n```python\ndef greet_user():\n    \"\"\"Ask the user for their name and the current time of day, then print a greeting.\"\"\"\n\n    # Ask the user for their name\n    name = input(\"Please enter your name: \")\n\n    # Ask the user for the current time of day (in 24-hour format)\n    current_time = input(\"Please enter the current time (in 24-hour format): \")\n\n    # Parse the time and determine the greeting\n    hour = int(current_time.split(\":\")[0])\n\n    if hour < 12:\n        greeting = f\"Good morning, {name}\"\n    elif 12 <= hour < 18:\n        greeting = f\"Good afternoon, {name}\"\n    else:\n        greeting = f\"Good evening, {name}\"\n\n    # Print the greeting\n    print(greeting)\n\n# Call the function to start the program\ngreet_user()\n```\n\nThis program defines a function `greet_user()` that prompts the user for their name and the current time of day, then prints a greeting based on the time of day. The function uses string manipulation to split the input time string into its hour component and checks which greeting to print based on the hour.",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

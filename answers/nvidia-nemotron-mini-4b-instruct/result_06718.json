@@ -1,0 +1,9 @@
+{
+  "id": 6718,
+  "title": "Input Parsing",
+  "prompt": "Write a program that takes user-provided input and parses it into a usable format\nSample Input: 123,456,789\nSample Output: [123, 456, 789]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes user-provided input and parses it into a list of integers:\n```python\ndef parse_input():\n    \"\"\"\n    Parses user-provided input into a list of integers.\n\n    Returns:\n        A list of integers.\n    \"\"\"\n    # Get user input\n    input_str = input(\"Enter a comma-separated list of integers: \")\n\n    # Check if the input is empty or contains only whitespace\n    if not input_str or input_str.isspace():\n        print(\"Error: Input cannot be empty or contain only whitespace.\")\n        return []\n\n    # Parse the input string into a list of integers\n    try:\n        numbers = [int(num) for num in input_str.split(\",\")]\n    except ValueError:\n        print(\"Error: Input contains non-integer values.\")\n        return []\n\n    return numbers\n\n# Example usage\nnumbers = parse_input()\nprint(numbers)\n```\nThis program defines a function `parse_input()` that gets user input, checks if it's empty or contains only whitespace, and then parses the input string into a list of integers using a list comprehension. If there are any non-integer values in the input, the program prints an error message and returns an empty list. The example usage at the end of the program demonstrates how to call the function and print the resulting list of integers.",
+  "error": null,
+  "elapsed_seconds": 3.32,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

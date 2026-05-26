@@ -1,0 +1,9 @@
+{
+  "id": 1213,
+  "title": "Function to Calculate theSum of Squares of a List",
+  "prompt": "Create a function that calculates the sum of squares of all elements in a given list.\nSample Input: sum_of_squares([1, 2, 3, 4, 5])\nSample Output: 55\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that calculates the sum of squares of all elements in a given list:\n\n```python\ndef sum_of_squares(lst):\n    \"\"\"\n    Calculates the sum of squares of all elements in a given list.\n\n    :param lst: The list of numbers\n    :return: The sum of squares of all elements in the list\n    \"\"\"\n    # Check if the input is a non-empty list\n    if not isinstance(lst, list) or len(lst) == 0:\n        raise ValueError(\"Input should be a non-empty list\")\n\n    # Calculate the sum of squares using a generator expression\n    squares = (num ** 2 for num in lst)\n    return sum(squares)\n```\n\nHere's an example of how to use this function:\n\n```python\nprint(sum_of_squares([1, 2, 3, 4, 5]))  # Output: 55\n```\n\nThis function first checks if the input is a non-empty list. If not, it raises a `ValueError`. Then, it calculates the sum of squares using a generator expression and the built-in `sum()` function. The generator expression creates a generator object that yields the squares of each element in the list. The `sum()` function then adds up all the elements in the generator.",
+  "error": null,
+  "elapsed_seconds": 3.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4238,
+  "title": "Rectangle Area Calculator",
+  "prompt": "Write a program to calculate the area of a rectangle.\nSample Input: 5 10\nSample Output: Area: 50\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a simple Python program that calculates the area of a rectangle based on the given dimensions:\n\n```python\ndef calculate_rectangle_area(width, height):\n    \"\"\"\n    Calculates the area of a rectangle with given width and height.\n\n    :param width: The width of the rectangle.\n    :param height: The height of the rectangle.\n    :return: The area of the rectangle.\n    \"\"\"\n\n    # Validate input parameters\n    if not isinstance(width, (int, float)) or width <= 0:\n        raise ValueError(\"Width must be a positive number.\")\n\n    if not isinstance(height, (int, float)) or height <= 0:\n        raise ValueError(\"Height must be a positive number.\")\n\n    # Calculate and return the area\n    area = width * height\n    return area\n\n# Get user input\nwidth = float(input(\"Enter the width of the rectangle: \"))\nheight = float(input(\"Enter the height of the rectangle: \"))\n\n# Calculate and display the area\narea = calculate_rectangle_area(width, height)\nprint(f\"Area: {area}\")\n```\n\nThis program defines a function `calculate_rectangle_area` that takes the width and height as input parameters, validates them to ensure they are positive numbers, and calculates the area using the formula `width * height`. The program then gets user input for the width and height, calls the function to calculate the area, and displays the result.",
+  "error": null,
+  "elapsed_seconds": 3.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

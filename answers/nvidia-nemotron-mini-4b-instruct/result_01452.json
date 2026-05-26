@@ -1,0 +1,9 @@
+{
+  "id": 1452,
+  "title": "Calculate Sales Tax",
+  "prompt": "Write a program that takes the subtotal and sales tax rate as input and outputs the total amount to pay.\nSample Input: 50 8\nSample Output: 54.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef calculate_total(subtotal, sales_tax_rate):\n    \"\"\"\n    Calculates the total amount to pay given the subtotal and sales tax rate.\n\n    Parameters:\n    subtotal (float): The subtotal before adding tax.\n    sales_tax_rate (float): The sales tax rate as a decimal (e.g., 0.08 for 8%).\n\n    Returns:\n    float: The total amount to pay.\n    \"\"\"\n\n    # Calculate the sales tax amount\n    sales_tax = subtotal * sales_tax_rate\n\n    # Return the total amount to pay\n    return subtotal + sales_tax\n\n# Get user input\nsubtotal = float(input(\"Enter the subtotal: \"))\nsales_tax_rate = float(input(\"Enter the sales tax rate (as a decimal): \"))\n\n# Calculate and display the total amount to pay\ntotal = calculate_total(subtotal, sales_tax_rate)\nprint(f\"{subtotal} + {sales_tax_rate * subtotal:.2f} = {total:.2f}\")\n```\nThis program defines a function `calculate_total` that takes the subtotal and sales tax rate as input and returns the total amount to pay. The program then prompts the user to enter the subtotal and sales tax rate, calculates the total amount using the `calculate_total` function, and displays the result. The output format includes two decimal places for the subtotal, sales tax rate, and total amount to pay.",
+  "error": null,
+  "elapsed_seconds": 3.62,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

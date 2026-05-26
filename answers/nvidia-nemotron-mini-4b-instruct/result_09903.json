@@ -1,0 +1,9 @@
+{
+  "id": 9903,
+  "title": "Coin Change Problem",
+  "prompt": "Write a program that calculates the minimum number of coins needed to make change for a given amount.\nSample Input: 36\nSample Output: 3 coins (25, 10, 1)\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the minimum number of coins needed to make change for a given amount using dynamic programming:\n\n```python\ndef min_coins(amount, coins):\n    # Initialize a list to store the minimum number of coins needed for each amount\n    min_coins_needed = [float('inf')] * (amount + 1)\n\n    # Base case: min_coins_needed[0] is already 0\n    min_coins_needed[0] = 0\n\n    # Iterate through the coins and update the min_coins_needed list\n    for coin in coins:\n        for i in range(coin, amount + 1):\n            min_coins_needed[i] = min(min_coins_needed[i], min_coins_needed[i - coin] + 1)\n\n    # Return the minimum number of coins needed for the given amount\n    return min_coins_needed[amount] if min_coins_needed[amount] != float('inf') else -1\n\n# Test the function with the given sample input\ncoins = [25, 10, 1]\namount = 36\nprint(f\"Minimum number of coins needed: {min_coins(amount, coins)}\")  # Output: Minimum number of coins needed: 3\n```\n\nThis program defines a function `min_coins` that takes an amount and a list of coins as input and returns the minimum number of coins needed to make change for that amount. The function uses dynamic programming to build up the solution from smaller subproblems, which helps to optimize the time complexity. The base case is when the amount is 0, since no coins are needed to make change for 0.",
+  "error": null,
+  "elapsed_seconds": 4.16,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9668,
+  "title": "Character Decoder",
+  "prompt": "Write a program that asks for a list of ASCII values and decodes them into a string.\nSample Input: [104, 101, 108, 108, 111]\nSample Output: hello\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef decode_ascii(ascii_values):\n    \"\"\"Decodes a list of ASCII values into a string.\n\n    Args:\n        ascii_values (list): A list of ASCII values.\n\n    Returns:\n        str: The decoded string.\n    \"\"\"\n    # Ensure the input is a list and contains only integers\n    if not isinstance(ascii_values, list) or not all(isinstance(value, int) for value in ascii_values):\n        raise ValueError(\"Input should be a list of integers representing ASCII values.\")\n\n    # Decode the ASCII values into a string\n    decoded_string = ''.join(chr(value) for value in ascii_values)\n\n    return decoded_string\n\n# Example usage\nascii_values = [104, 101, 108, 108, 111]\nprint(decode_ascii(ascii_values))  # Output: hello\n```\nThis program defines a function `decode_ascii` that takes a list of ASCII values as input and returns the decoded string. It first checks that the input is a list of integers, and then uses a list comprehension to decode each ASCII value into a character and concatenates them to form the final string. The example usage at the end of the program demonstrates how to use the function with a sample input list.",
+  "error": null,
+  "elapsed_seconds": 3.37,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 4717,
+  "title": "Dictionary Setdefault",
+  "prompt": "Set a value for a key in a dictionary if the key is not already present\nSample Input: {'name': 'John', 'age': 25}, 'country', 'USA'\nSample Output: {'name': 'John', 'age': 25, 'country': 'USA'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that sets a value for a key in a dictionary if the key is not already present:\n```python\ndef set_value_if_not_present(dictionary, key, value):\n    \"\"\"\n    Sets a value for a key in a dictionary if the key is not already present.\n\n    Parameters:\n    dictionary (dict): The dictionary to update.\n    key (any): The key to set the value for.\n    value (any): The value to set for the key.\n\n    Returns:\n    dict: The updated dictionary.\n    \"\"\"\n    if key not in dictionary:\n        dictionary[key] = value\n    return dictionary\n```\nHere's an example of how you can use this function:\n```python\nsample_input = {'name': 'John', 'age': 25}\nsample_output = set_value_if_not_present(sample_input, 'country', 'USA')\nprint(sample_output)  # Output: {'name': 'John', 'age': 25, 'country': 'USA'}\n```\nThis function checks if the key is already present in the dictionary using the `in` keyword. If the key is not present, it adds the key-value pair to the dictionary using the `[]` syntax. Finally, it returns the updated dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.17,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

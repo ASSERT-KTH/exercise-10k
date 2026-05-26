@@ -1,0 +1,9 @@
+{
+  "id": 6735,
+  "title": "Input Generation",
+  "prompt": "Write a program that generates input data programmatically\nSample Output: Generated data\n",
+  "answer": "Sure, I can help you with that. Here's a Python program that generates input data programmatically. This program generates a list of random numbers between 0 and 100, which can be used as input data for various purposes. You can modify the code to generate different types of data as needed.\n\n```python\nimport random\n\ndef generate_input_data(size=10):\n    \"\"\"\n    Generates a list of random numbers between 0 and 100.\n\n    :param size: The number of random numbers to generate. Default is 10.\n    :return: A list of random numbers.\n    \"\"\"\n    return [random.randint(0, 100) for _ in range(size)]\n\n# Generate and print the input data\ninput_data = generate_input_data(size=50)\nprint(\"Generated data:\")\nprint(input_data)\n```\n\nWhen you run this program, it will generate a list of 50 random numbers between 0 and 100. You can adjust the `size` parameter to generate a different number of random numbers. The generated data will be printed to the console, and you can save it to a file or use it in your program as needed.\n\nHere's an example of how you can use the generated data in a Python program:\n\n```python\n# Use the generated data in a Python program\nimport numpy as np\n\n# Convert the list to a NumPy array\ndata = np.array(input_data)\n\n# Perform some operations on the data\nmean = np.mean(data)\nstddev = np.std(data)\n\nprint(f\"Mean: {mean}, Standard Deviation: {stddev}\")\n```\n\nThis will give you the mean and standard deviation of the generated data. You can modify the operations performed on the data to suit your specific needs.",
+  "error": null,
+  "elapsed_seconds": 4.27,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

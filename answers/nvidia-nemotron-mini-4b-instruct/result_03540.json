@@ -1,0 +1,9 @@
+{
+  "id": 3540,
+  "title": "Printing the Binary Representation",
+  "prompt": "Write a program that prints the binary representation of a given number using a while loop.\nSample Input: 10\nSample Output: 1010\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that prints the binary representation of a given number using a while loop:\n\n```python\ndef print_binary(n):\n    \"\"\"Print the binary representation of a given number using a while loop.\"\"\"\n    # Initialize the binary string and the quotient\n    binary = \"\"\n    quotient = n\n\n    # Continue dividing by 2 and storing the remainders in binary\n    while quotient > 0:\n        remainder = quotient % 2\n        binary = str(remainder) + binary\n        quotient = quotient // 2\n\n    # If the number was 0, print an empty string\n    if n == 0:\n        print(\"Binary representation of 0 is an empty string.\")\n    else:\n        print(f\"Binary representation of {n} is {binary}.\")\n\n# Get user input and call the function\nuser_input = int(input(\"Enter a number: \"))\nprint_binary(user_input)\n```\n\nThis program defines a function `print_binary` that takes an integer `n` as input and prints its binary representation using a while loop. The function initializes a binary string `binary` and the quotient `quotient` to 0. Then, it enters a loop that continues as long as `quotient` is greater than 0. In each iteration of the loop, it calculates the remainder of `quotient` divided by 2 and stores it in `remainder`. It then appends the binary representation of `remainder` to the end of `binary`, and updates `quotient` by dividing it by 2 using integer division (`//`). Finally, it checks if `n` is 0 and prints an appropriate message. If `n` is not 0, it prints the binary representation of `n` as a string.",
+  "error": null,
+  "elapsed_seconds": 4.2,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

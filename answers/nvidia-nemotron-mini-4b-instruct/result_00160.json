@@ -1,0 +1,9 @@
+{
+  "id": 160,
+  "title": "Dictionary Union",
+  "prompt": "Create a function that takes in two dictionaries and returns a new dictionary containing all key-value pairs from both dictionaries\nSample Input: dict1 = {'name': 'John', 'age': 30}, dict2 = {'age': 30, 'city': 'New York'}\nSample Output: {'name': 'John', 'age': 30, 'city': 'New York'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef merge_dicts(dict1, dict2):\n    \"\"\"\n    Merges two dictionaries and returns a new dictionary containing all key-value pairs from both dictionaries.\n\n    :param dict1: The first dictionary\n    :param dict2: The second dictionary\n    :return: A new dictionary containing all key-value pairs from both input dictionaries\n    \"\"\"\n    # Combine the two dictionaries using the update() method\n    merged_dict = dict1.copy()\n    merged_dict.update(dict2)\n\n    return merged_dict\n```\nHere's an example of how you can use this function:\n```python\ndict1 = {'name': 'John', 'age': 30}\ndict2 = {'age': 30, 'city': 'New York'}\n\nmerged_dict = merge_dicts(dict1, dict2)\nprint(merged_dict)  # Output: {'name': 'John', 'age': 30, 'city': 'New York'}\n```\nThis function first creates a copy of the first dictionary to avoid modifying the original dictionary. Then, it uses the `update()` method to combine the two dictionaries, which adds all key-value pairs from the second dictionary to the first dictionary. Finally, it returns the merged dictionary.",
+  "error": null,
+  "elapsed_seconds": 3.1,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

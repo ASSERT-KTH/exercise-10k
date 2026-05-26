@@ -1,0 +1,9 @@
+{
+  "id": 7655,
+  "title": "Function to Find the Nearest Number",
+  "prompt": "Create a function to find the nearest number to a given target in a list of numbers.\nSample Input: numbers = [1, 2, 3, 4, 5], target = 3.7\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function uses the `abs()` function to calculate the absolute difference between each number in the list and the target, and then returns the number that has the smallest absolute difference.\n\n```python\ndef nearest_number(numbers, target):\n    \"\"\"\n    Find the nearest number to a given target in a list of numbers.\n\n    Parameters:\n    numbers (list): A list of numbers.\n    target (float): The target number to find the nearest to.\n\n    Returns:\n    int: The nearest number to the target in the list of numbers.\n    \"\"\"\n\n    # Calculate the absolute difference between each number and the target\n    diffs = [abs(num - target) for num in numbers]\n\n    # Find the index of the number with the smallest absolute difference\n    min_index = diffs.index(min(diffs))\n\n    # Return the number at that index\n    return numbers[min_index]\n```\n\nHere's an example of how to use this function:\n\n```python\nnumbers = [1, 2, 3, 4, 5]\ntarget = 3.7\nprint(nearest_number(numbers, target))  # Output: 4\n```",
+  "error": null,
+  "elapsed_seconds": 3.14,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 511,
+  "title": "List Insertion",
+  "prompt": "Write a program to insert a new element into a given list at a specific position.\nSample Input: [1, 2, 3, 4, 5], 2, 10\nSample Output: [1, 2, 10, 3, 4, 5]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that inserts a new element into a given list at a specific position:\n```python\ndef insert_element(lst, index, element):\n    # Check if the index is within the bounds of the list\n    if index < 0 or index >= len(lst):\n        raise IndexError(\"Index out of bounds\")\n\n    # Insert the element at the given index\n    lst.insert(index, element)\n\n    return lst\n```\nYou can use this function by passing in a list, the index where you want to insert the element, and the element itself. Here's an example of how you could use it:\n```python\nnumbers = [1, 2, 3, 4, 5]\nnew_number = 10\nindex = 2\n\ninserted_numbers = insert_element(numbers, index, new_number)\nprint(inserted_numbers)  # Output: [1, 2, 10, 3, 4, 5]\n```\nThis function first checks if the index is within the bounds of the list. If it is, it inserts the new element at the given index using the `insert()` method. Finally, it returns the modified list. If the index is out of bounds, it raises an `IndexError` exception.",
+  "error": null,
+  "elapsed_seconds": 3.03,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

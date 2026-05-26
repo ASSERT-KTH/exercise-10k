@@ -1,0 +1,9 @@
+{
+  "id": 2265,
+  "title": "Exponentiation",
+  "prompt": "Write a program that raises a number to a power.\nSample Input: 2 3\nSample Output: 8\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that raises a number to a power:\n\n```python\ndef raise_to_power(base, exponent):\n    \"\"\"\n    Raises a number to a power.\n\n    :param base: The base number.\n    :param exponent: The exponent to raise the base to.\n    :return: The result of raising the base to the exponent.\n    \"\"\"\n    # Check if the exponent is negative, in which case we'll take the reciprocal\n    if exponent < 0:\n        base, exponent = 1 / base, -exponent\n\n    # Calculate the result using the mathematical formula for raising a number to a power\n    result = 1\n    for _ in range(abs(exponent)):\n        result *= base\n\n    return result\n\n# Example usage\nbase = 2\nexponent = 3\nprint(raise_to_power(base, exponent))  # Output: 8\n```\n\nThis program defines a function `raise_to_power` that takes two arguments, `base` and `exponent`, and returns the result of raising `base` to the power of `exponent`. The function first checks if the exponent is negative, in which case it takes the reciprocal of the base and negates the exponent. Then, it calculates the result using the mathematical formula for raising a number to a power: `result = base * base * ... * base (exponent times)`. The function returns the result, which is then printed to the console in the example usage.",
+  "error": null,
+  "elapsed_seconds": 3.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

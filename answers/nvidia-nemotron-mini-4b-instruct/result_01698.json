@@ -1,0 +1,9 @@
+{
+  "id": 1698,
+  "title": "Function to Check if a List is Sorted",
+  "prompt": "Write a function to check if a given list is sorted.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a given list is sorted in ascending order:\n\n```python\ndef is_sorted(lst):\n    \"\"\"\n    Check if a given list is sorted in ascending order.\n\n    :param lst: The list to check.\n    :return: True if the list is sorted, False otherwise.\n    \"\"\"\n    # Check if the list has less than two elements\n    if len(lst) < 2:\n        return True\n\n    # Compare adjacent elements and return False if any two elements are not equal\n    for i in range(len(lst) - 1):\n        if lst[i] > lst[i + 1]:\n            return False\n\n    # If we reach this point, the list is sorted\n    return True\n```\n\nYou can use this function as follows:\n\n```python\nprint(is_sorted([1, 2, 3, 4, 5]))  # Output: True\nprint(is_sorted([5, 4, 3, 2, 1]))  # Output: False\n```\n\nThis function first checks if the list has less than two elements, in which case it returns `True` since an empty or one-element list is considered sorted. Then, it iterates through the list and checks if any two adjacent elements are not equal. If it finds a pair that is not equal, it returns `False`. If it goes through the entire list without finding any such pair, it returns `True`, indicating that the list is sorted.",
+  "error": null,
+  "elapsed_seconds": 5.14,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

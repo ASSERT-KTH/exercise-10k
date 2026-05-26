@@ -1,0 +1,9 @@
+{
+  "id": 4297,
+  "title": "Dictionary Mapping",
+  "prompt": "Write a function to map a dictionary's values to a new dictionary using a given function.\nSample Input: {'a': 1, 'b': 2}; lambda x: x * 2\nSample Output: {'a': 2, 'b': 4}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef map_dict_values(input_dict, value_func):\n    \"\"\"\n    Maps the values of a dictionary to a new dictionary using a given function.\n\n    Parameters:\n    input_dict (dict): The input dictionary.\n    value_func (callable): A function that takes a single argument (the value of the input dictionary) and returns a new value.\n\n    Returns:\n    dict: A new dictionary with the same keys as the input dictionary, but with values obtained by applying the value_func to each key-value pair.\n    \"\"\"\n    return {key: value_func(value) for key, value in input_dict.items()}\n```\nHere's an example of how to use this function:\n```python\ninput_dict = {'a': 1, 'b': 2}\nvalue_func = lambda x: x * 2\n\noutput_dict = map_dict_values(input_dict, value_func)\nprint(output_dict)  # Output: {'a': 2, 'b': 4}\n```\nThis function uses a dictionary comprehension to create a new dictionary with the same keys as the input dictionary, but with values obtained by applying the `value_func` to each key-value pair. The `items()` method is used to iterate over the key-value pairs in the input dictionary, and the `value_func` is applied to each value using the `lambda` function.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

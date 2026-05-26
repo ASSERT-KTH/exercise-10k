@@ -1,0 +1,9 @@
+{
+  "id": 5683,
+  "title": "Weather Checker",
+  "prompt": "Create a program that takes the temperature as input and checks if it's hot, cold, or mild using conditional statements.\nSample Input: 25\nSample Output: Mild\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef check_temperature(temperature):\n    \"\"\"\n    Check if the given temperature is hot, cold, or mild.\n\n    :param temperature: float or int representing the temperature\n    :return: str indicating whether the temperature is hot, cold, or mild\n    \"\"\"\n\n    # Define the temperature ranges for hot, cold, and mild\n    hot_range = (90, 100)\n    cold_range = (60, 90)\n    mild_range = (30, 60)\n\n    # Check if the temperature is within the hot range\n    if temperature >= hot_range[0] and temperature <= hot_range[1]:\n        return \"Hot\"\n\n    # Check if the temperature is within the cold range\n    elif temperature >= cold_range[0] and temperature <= cold_range[1]:\n        return \"Cold\"\n\n    # If the temperature is within the mild range, return \"Mild\"\n    else:\n        return \"Mild\"\n\n\n# Get user input and print the result\ntry:\n    temperature = float(input(\"Enter the temperature: \"))\n    result = check_temperature(temperature)\n    print(f\"{temperature}°C is {result}.\")\nexcept ValueError:\n    print(\"Invalid input. Please enter a number.\")\n```\n\nThis program defines three temperature ranges (hot, cold, and mild) and checks if the given temperature falls within one of them. If the temperature is within the hot range, it returns \"Hot\". If the temperature is within the cold range, it returns \"Cold\". Otherwise, it returns \"Mild\". The program also handles invalid input and prints an error message if the user enters something other than a number.",
+  "error": null,
+  "elapsed_seconds": 4.15,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3932,
+  "title": "Median Calculator",
+  "prompt": "Create a program that takes a list of numbers as input and returns the median of the numbers.\nSample Input: 1 2 3 4 5\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a list of numbers as input and returns the median of the numbers. We'll use the built-in `sorted()` function to sort the list first, and then check if the length of the sorted list is even or odd. If it's even, we'll return the average of the two middle numbers. If it's odd, we'll simply return the middle number.\n\n```python\ndef find_median(numbers):\n    \"\"\"\n    Given a list of numbers, return the median of the numbers.\n\n    :param numbers: List[float] - The list of numbers to find the median of.\n    :return: float - The median of the numbers.\n    \"\"\"\n    # Sort the list of numbers\n    sorted_numbers = sorted(numbers)\n\n    # Check if the length of the sorted list is even or odd\n    n = len(sorted_numbers)\n    if n % 2 == 0:\n        # If the length is even, return the average of the two middle numbers\n        median = (sorted_numbers[n // 2 - 1] + sorted_numbers[n // 2]) / 2\n    else:\n        # If the length is odd, return the middle number\n        median = sorted_numbers[n // 2]\n\n    return median\n```\n\nHere's an example of how to use the function:\n\n```python\nnumbers = [1, 2, 3, 4, 5]\nprint(find_median(numbers))  # Output: 3\n```",
+  "error": null,
+  "elapsed_seconds": 4.19,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1397,
+  "title": "Password Generator",
+  "prompt": "Write a program that uses a for loop to generate a random password of length 10.\nSample Input: None\nSample Output: 4S$eJ#8dLp\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates a random password of length 10 using a for loop and the `secrets` module, which provides cryptographically strong random numbers. Make sure to install the `secrets` module if you haven't already by running `pip install secrets`.\n\n```python\nimport secrets\n\ndef generate_password():\n    \"\"\"\n    Generates a random password of length 10.\n\n    Returns:\n        A string containing a random password.\n    \"\"\"\n    # Define the character set for the password\n    char_set = \"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+[]{}|;:,.<>?\"\n\n    # Generate the password using a for loop\n    password = \"\"\n    for _ in range(10):\n        password += secrets.choice(char_set)\n\n    return password\n\n# Call the function to generate a password\npassword = generate_password()\nprint(password)\n```\n\nThis program defines a function `generate_password()` that generates a random password of length 10 by iterating over a character set containing lowercase and uppercase letters, digits, and special characters. The `secrets.choice()` function is used to select a random character from the character set. The resulting password is stored in a string and returned by the function.",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

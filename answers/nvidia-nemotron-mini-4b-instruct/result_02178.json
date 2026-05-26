@@ -1,0 +1,9 @@
+{
+  "id": 2178,
+  "title": "Statistics Calculator",
+  "prompt": "Ask the user for a list of numbers and print the mean, median, and standard deviation.\nSample Input: 1 2 3 4 5\nSample Output: mean: 3.0, median: 3.0, standard deviation: 1.5811388300841898\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution that meets your requirements:\n```python\nimport math\n\ndef get_stats(numbers):\n    \"\"\"\n    Calculate the mean, median, and standard deviation of a list of numbers.\n\n    :param numbers: List of numbers\n    :return: Tuple of (mean, median, standard_deviation)\n    \"\"\"\n    # Calculate the mean\n    total = sum(numbers)\n    mean = total / len(numbers)\n\n    # Calculate the median\n    numbers.sort()\n    n = len(numbers)\n    if n % 2 == 0:  # Even number of elements\n        median = (numbers[n // 2 - 1] + numbers[n // 2]) / 2\n    else:  # Odd number of elements\n        median = numbers[n // 2]\n\n    # Calculate the standard deviation\n    variance = sum((x - mean) ** 2 for x in numbers) / (len(numbers) - 1)\n    standard_deviation = math.sqrt(variance)\n\n    return mean, median, standard_deviation\n\n# Get user input\nnumbers_str = input(\"Enter a list of numbers separated by spaces: \")\nnumbers = [float(num) for num in numbers_str.split()]\n\n# Calculate and print the stats\nmean, median, standard_deviation = get_stats(numbers)\nprint(f\"mean: {mean:.2f}, median: {median:.2f}, standard deviation: {standard_deviation:.2f}\")\n```\nThis script defines a function `get_stats` that calculates the mean, median, and standard deviation of a list of numbers. It then prompts the user to enter a list of numbers separated by spaces, converts the input to a list of floats, and calls the `get_stats` function to calculate and print the statistics.",
+  "error": null,
+  "elapsed_seconds": 14.99,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

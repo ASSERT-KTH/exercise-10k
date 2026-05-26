@@ -1,0 +1,9 @@
+{
+  "id": 5047,
+  "title": "Calculate Average",
+  "prompt": "Create a program that calculates the average of a list of numbers.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 3.0\n",
+  "answer": "Sure, I'd be happy to help you create a program that calculates the average of a list of numbers. Here's an example Python program that does this:\n```python\ndef calculate_average(numbers):\n    \"\"\"\n    Calculates the average of a list of numbers.\n\n    :param numbers: List of numbers\n    :return: Average of the numbers\n    \"\"\"\n\n    # Check if the input is a non-empty list\n    if not isinstance(numbers, list) or len(numbers) == 0:\n        raise ValueError(\"Input should be a non-empty list of numbers.\")\n\n    # Calculate the sum of the numbers\n    total = sum(numbers)\n\n    # Calculate the average by dividing the sum by the number of elements\n    average = total / len(numbers)\n\n    return average\n\n# Example usage\nnumbers = [1, 2, 3, 4, 5]\naverage = calculate_average(numbers)\nprint(f\"The average of {numbers} is {average}.\")\n```\nWhen you run this program with the sample input `[1, 2, 3, 4, 5]`, it will output:\n```yaml\nThe average of [1, 2, 3, 4, 5] is 3.0.\n```\nThis program checks if the input is a non-empty list, calculates the sum of the numbers, and then divides the sum by the number of elements to get the average.",
+  "error": null,
+  "elapsed_seconds": 3.35,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

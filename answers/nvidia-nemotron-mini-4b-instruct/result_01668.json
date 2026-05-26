@@ -1,0 +1,9 @@
+{
+  "id": 1668,
+  "title": "Discount Calculator",
+  "prompt": "Develop a program that takes the total cost and the discount percentage as input and calculates the discounted price using if/else statements\nSample Input: 100 10\nSample Output: 90.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. It uses an `if` statement to calculate the discounted price based on the given total cost and discount percentage.\n\n```python\ndef calculate_discounted_price():\n    \"\"\"\n    This function takes the total cost and discount percentage as input and calculates the discounted price.\n\n    :return: Discounted price as a float\n    \"\"\"\n\n    # Get user input\n    total_cost = float(input(\"Enter the total cost: \"))\n    discount_percentage = float(input(\"Enter the discount percentage (as a decimal): \"))\n\n    # Validate input\n    if total_cost <= 0 or discount_percentage < 0 or discount_percentage > 1:\n        print(\"Invalid input. Please enter a positive decimal value between 0 and 1 for the discount percentage.\")\n        return\n\n    # Calculate discounted price\n    discounted_price = total_cost * (1 - discount_percentage)\n\n    # Format the output\n    discounted_price = format(discounted_price, '.2f')  # Format the output to two decimal places\n\n    return float(discounted_price)\n\n\n# Call the function and print the result\ndiscounted_price = calculate_discounted_price()\nprint(f\"The discounted price is {discounted_price}.\")\n```\n\nThis program will prompt the user to enter the total cost and discount percentage, validate the input, calculate the discounted price, and format the output to two decimal places. The final discounted price will be printed to the console.",
+  "error": null,
+  "elapsed_seconds": 3.52,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

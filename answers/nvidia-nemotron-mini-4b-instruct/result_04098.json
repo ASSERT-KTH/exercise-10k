@@ -1,0 +1,9 @@
+{
+  "id": 4098,
+  "title": "Memoization",
+  "prompt": "Create a function that uses memoization to cache the results of expensive function calls\nSample Input: example_function\nSample Output: example_function result\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example Python function that uses memoization to cache the results of expensive function calls. In this example, I'll define an `expensive_function` that calculates the factorial of a number, which can be time-consuming for large inputs. We'll use a dictionary to store previously computed results and memoize the function.\n\n```python\ndef memoize(func):\n    \"\"\"Memoization decorator to cache results of expensive function calls.\"\"\"\n    cache = {}\n\n    def wrapper(*args, **kwargs):\n        key = str(args) + str(kwargs)\n        if key not in cache:\n            cache[key] = func(*args, **kwargs)\n        return cache[key]\n\n    return wrapper\n\n@memoize\ndef expensive_function(n):\n    \"\"\"Calculate the factorial of a number using memoization.\"\"\"\n    if n == 0:\n        return 1\n    return n * expensive_function(n - 1)\n\n# Example usage\nresult = expensive_function(10)\nprint(f\"expensive_function result: {result}\")\n```\n\nIn this example, the `memoize` decorator takes a function as an argument and returns a wrapper function that caches the results of the original function. When the wrapper function is called, it first checks if the result has been cached for the given arguments. If it has, the cached result is returned. Otherwise, the original function is called and the result is stored in the cache before being returned.\n\nYou can replace the `expensive_function` with any other expensive function that you want to memoize. The `memoize` decorator will automatically cache the results for the given function.",
+  "error": null,
+  "elapsed_seconds": 3.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

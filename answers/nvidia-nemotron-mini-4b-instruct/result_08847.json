@@ -1,0 +1,9 @@
+{
+  "id": 8847,
+  "title": "Function to Check if a String is a Palindrome",
+  "prompt": "Create a function to check if a given string is a palindrome or not\nSample Input: madam\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a given string is a palindrome or not:\n\n```python\ndef is_palindrome(s):\n    \"\"\"\n    Check if a given string is a palindrome or not.\n\n    :param s: str - The string to check.\n    :return: bool - True if the string is a palindrome, False otherwise.\n    \"\"\"\n    # Remove any non-alphanumeric characters and convert to lowercase\n    s = ''.join(c.lower() for c in s if c.isalnum())\n\n    # Check if the string is equal to its reverse\n    return s == s[::-1]\n```\n\nThis function first removes any non-alphanumeric characters from the input string and converts it to lowercase. Then, it checks if the string is equal to its reverse (which can be obtained using slicing with a step of -1). If the string is equal to its reverse, it means that the string is a palindrome, so the function returns `True`. Otherwise, it returns `False`.\n\nHere's an example of how to use this function:\n\n```python\nprint(is_palindrome(\"madam\"))  # Output: True\nprint(is_palindrome(\"hello\"))  # Output: False\n```",
+  "error": null,
+  "elapsed_seconds": 3.02,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

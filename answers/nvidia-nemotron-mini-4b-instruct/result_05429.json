@@ -1,0 +1,9 @@
+{
+  "id": 5429,
+  "title": "Password Validator",
+  "prompt": "Create a program that checks if a password is valid or not. If the password contains at least one uppercase letter, one lowercase letter, and one digit, it is valid. If the password does not meet these conditions, it is invalid.\nSample Input: Password123\nSample Output: Valid password\n",
+  "answer": "Sure, I'd be happy to help you create a program that checks if a password is valid or not. Here's an example Python program that meets your requirements:\n\n```python\nimport re\n\ndef is_valid_password(password):\n    \"\"\"Check if a password is valid (contains at least one uppercase letter, one lowercase letter, and one digit).\"\"\"\n    # Regular expression pattern to match at least one uppercase letter, one lowercase letter, and one digit\n    pattern = r'^.*[A-Z].*[a-z].*[0-9].*$'\n\n    # Check if the password matches the pattern\n    if re.match(pattern, password):\n        return True\n    else:\n        return False\n\n# Get user input for the password\npassword = input(\"Enter a password: \")\n\n# Check if the password is valid\nif is_valid_password(password):\n    print(f\"Valid password: {password}\")\nelse:\n    print(\"Invalid password\")\n```\n\nThis program defines a function `is_valid_password` that checks if a password matches a regular expression pattern that requires at least one uppercase letter, one lowercase letter, and one digit. The function is then called with user input for the password, and the result is printed based on whether the password is valid or not.\n\nHere's an example of how the program might interact with a user:\n\n```\nEnter a password: Password123\nValid password: Password123\n```",
+  "error": null,
+  "elapsed_seconds": 3.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

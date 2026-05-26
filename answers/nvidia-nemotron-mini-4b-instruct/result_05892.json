@@ -1,0 +1,9 @@
+{
+  "id": 5892,
+  "title": "Array Transposition",
+  "prompt": "Write a function that takes a 2D array as input and returns the transpose of the array.\nSample Input: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nSample Output: [[1, 4, 7], [2, 5, 8], [3, 6, 9]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that takes a 2D array (represented as a list of lists) as input and returns its transpose:\n```python\ndef transpose(arr):\n    # Get the number of rows and columns\n    nrows = len(arr)\n    ncols = len(arr[0]) if arr else 0\n\n    # Initialize the transposed array\n    transposed = [[0] * ncols for _ in range(nrows)]\n\n    # Fill the transposed array with the elements from the original array\n    for i in range(nrows):\n        for j in range(ncols):\n            transposed[i][j] = arr[j][i]\n\n    return transposed\n```\nHere's an example of how to use this function:\n```python\nsample_input = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\ntransposed_output = transpose(sample_input)\nprint(transposed_output)\n```\nOutput:\n```python\n[[1, 4, 7], [2, 5, 8], [3, 6, 9]]\n```\nThis function first gets the number of rows and columns in the input array. Then, it initializes a new 2D array with the same number of rows as the input array and the same number of columns as the number of columns in the input array. Finally, it fills the transposed array with the elements from the input array by iterating over the rows and columns in reverse order.",
+  "error": null,
+  "elapsed_seconds": 3.89,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

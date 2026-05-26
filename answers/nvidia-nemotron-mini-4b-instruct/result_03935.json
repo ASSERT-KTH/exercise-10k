@@ -1,0 +1,9 @@
+{
+  "id": 3935,
+  "title": "Standard Deviation Calculator",
+  "prompt": "Write a program that takes a list of numbers as input and returns the standard deviation of the numbers.\nSample Input: 1 2 3 4 5\nSample Output: 1.4142135623730951\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a list of numbers as input and returns their standard deviation:\n```python\nimport math\n\ndef calculate_standard_deviation(numbers):\n    \"\"\"\n    Calculates the standard deviation of a given list of numbers.\n\n    :param numbers: List of numbers\n    :return: Standard deviation of the numbers\n    \"\"\"\n\n    # Check if the input is a non-empty list\n    if not isinstance(numbers, list) or len(numbers) == 0:\n        raise ValueError(\"Input should be a non-empty list of numbers.\")\n\n    # Calculate the mean (average) of the numbers\n    mean = sum(numbers) / len(numbers)\n\n    # Calculate the squared differences from the mean\n    squared_differences = [(x - mean) ** 2 for x in numbers]\n\n    # Calculate the variance (average of the squared differences)\n    variance = sum(squared_differences) / len(numbers)\n\n    # Calculate the standard deviation (square root of the variance)\n    standard_deviation = math.sqrt(variance)\n\n    return standard_deviation\n```\nHere's an example of how to use this function:\n```python\nnumbers = [1, 2, 3, 4, 5]\nstandard_deviation = calculate_standard_deviation(numbers)\nprint(f\"The standard deviation of {numbers} is {standard_deviation}.\")\n```\nThis will output:\n```yaml\nThe standard deviation of [1, 2, 3, 4, 5] is 1.4142135623730951.\n```",
+  "error": null,
+  "elapsed_seconds": 4.05,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

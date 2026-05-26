@@ -1,0 +1,9 @@
+{
+  "id": 9240,
+  "title": "Dictionary Operations",
+  "prompt": "Write a program that performs dictionary operations (insert, delete, search, etc.) and prints the result.\nSample Input: dict = {'name': 'John', 'age': 25}\nSample Output: {'name': 'John', 'age': 25, 'city': 'New York'}\n",
+  "answer": "Here's a Python program that performs dictionary operations and prints the result:\n\n```python\ndef perform_dict_operation(dictionary, operation, value):\n    if operation == 'insert':\n        dictionary[value] = None\n    elif operation == 'delete':\n        if value in dictionary:\n            del dictionary[value]\n        else:\n            print(\"Value not found.\")\n    elif operation == 'search':\n        if value in dictionary:\n            print(f\"'{value}' found: {dictionary[value]}\")\n        else:\n            print(f\"'{value}' not found.\")\n    else:\n        print(\"Invalid operation. Please use 'insert', 'delete', or 'search'.\")\n\n# Sample input\ndict = {'name': 'John', 'age': 25}\n\n# Perform dictionary operations\nperform_dict_operation(dict, 'insert', 'city')\nperform_dict_operation(dict, 'search', 'name')\nperform_dict_operation(dict, 'delete', 'age')\n```\n\nThis program defines a function `perform_dict_operation()` that takes a dictionary, an operation, and a value as arguments. It performs the specified operation on the dictionary and prints the result. The program then calls this function with different operations and values to demonstrate its usage.",
+  "error": null,
+  "elapsed_seconds": 3.02,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

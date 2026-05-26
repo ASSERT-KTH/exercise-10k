@@ -1,0 +1,9 @@
+{
+  "id": 55,
+  "title": "Find the First Non-Repeating Character",
+  "prompt": "Find the first non-repeating character in a string\nSample Input: aabbccde\nSample Output: d\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution using a dictionary to keep track of the characters and their last seen positions:\n\n```python\ndef first_non_repeating(s):\n    char_map = {}\n    for char in s:\n        if char in char_map:\n            char_map[char] = s.index(char) + 1\n        else:\n            char_map[char] = s.index(char) + 1\n\n    for char in s:\n        if char_map[char] == len(s):\n            return char\n\n    return None\n```\n\nThis function iterates through the string and updates the `char_map` dictionary with the index of each character and its last seen position. Then, it iterates through the string again and returns the first character with a last seen position equal to the length of the string (i.e., the first non-repeating character). If no such character is found, it returns `None`.\n\nHere's an example of how to use this function:\n\n```python\nprint(First_non_repeating(\"aabbccde\"))  # Output: d\n```",
+  "error": null,
+  "elapsed_seconds": 2.76,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5713,
+  "title": "Mad Libs",
+  "prompt": "Create a Mad Libs game that asks the user for words and generates a story with the given words.\nSample Input: noun verb adjective\nSample Output: The noun was very adjective and loved to verb.\n",
+  "answer": "Sure, I'd be happy to help you create a Mad Libs game! Here's a Python script that prompts the user for words in a specific format (noun, verb, adjective) and generates a story based on those words. You can modify the story template and the list of possible words to suit your needs.\n\n```python\nimport random\n\n# Define the story template and possible words\nstory_template = \"The {noun} was very {adjective} and loved to {verb}.\"\npossible_words = {\n    \"noun\": [\"book\", \"car\", \"house\", \"person\", \"planet\"],\n    \"verb\": [\"read\", \"drive\", \"live\", \"dance\", \"fly\"],\n    \"adjective\": [\"happy\", \"sad\", \"angry\", \"excited\", \"scary\"],\n}\n\n# Get user input for words\nnoun = input(\"Enter a noun: \").capitalize()\nverb = input(\"Enter a verb: \").capitalize()\nadjective = input(\"Enter an adjective: \").capitalize()\n\n# Generate the story\nstory = story_template.format(noun=noun, adjective=adjective, verb=verb)\n\n# Print the story\nprint(story)\n\n# Add some randomness to the story\nstory = story.replace(\"very\", random.choice([\"very\", \"extremely\", \"super\", \"really\"]))\nstory = story.replace(\"loved\", random.choice([\"loved\", \"hated\", \"enjoyed\", \"disliked\"]))\n\n# Print the final story\nprint(story)\n```\n\nThis script will prompt the user for three words (noun, verb, adjective) and generate a story based on those words. You can customize the story template, possible words, and the randomness applied to the story to make it more engaging and diverse.",
+  "error": null,
+  "elapsed_seconds": 4.06,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

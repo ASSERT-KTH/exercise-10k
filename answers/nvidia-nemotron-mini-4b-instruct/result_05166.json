@@ -1,0 +1,9 @@
+{
+  "id": 5166,
+  "title": "Dictionary Filtering",
+  "prompt": "Write a function to filter a dictionary based on a condition. For example, filter out key-value pairs where the value is less than 5.\nSample Input: {\"a\": 1, \"b\": 2, \"c\": 3, \"d\": 6}\nSample Output: {\"d\": 6}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef filter_dict(input_dict, condition):\n    \"\"\"\n    Filters a dictionary based on a given condition.\n\n    Parameters:\n    input_dict (dict): The input dictionary to filter.\n    condition (callable): A function that takes a single argument (the value of a key-value pair) and returns a boolean.\n                          The function should return True if the value should be included in the output dictionary,\n                          and False otherwise.\n\n    Returns:\n    dict: A new dictionary containing only the key-value pairs from the input dictionary that satisfy the condition.\n    \"\"\"\n    return {k: v for k, v in input_dict.items() if condition(v)}\n```\nHere's an example of how you can use this function:\n```python\ndef is_value_greater_than_five(value):\n    \"\"\"A simple condition that returns True if the value is greater than 5.\"\"\"\n    return value > 5\n\nfiltered_dict = filter_dict({\"a\": 1, \"b\": 2, \"c\": 3, \"d\": 6}, is_value_greater_than_five)\nprint(filtered_dict)  # Output: {'d': 6}\n```\nThis function uses a dictionary comprehension to create a new dictionary that only includes key-value pairs where the value satisfies the given condition. The `condition` parameter can be any callable that takes a single argument and returns a boolean.",
+  "error": null,
+  "elapsed_seconds": 3.68,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

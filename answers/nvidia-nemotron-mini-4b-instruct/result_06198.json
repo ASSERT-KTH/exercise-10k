@@ -1,0 +1,9 @@
+{
+  "id": 6198,
+  "title": "String IsDigit",
+  "prompt": "Write a function that takes a string as input and returns True if the string contains only digit characters, False otherwise.\nSample Input: 123\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\nimport re\n\ndef is_only_digits(s: str) -> bool:\n    \"\"\"\n    Returns True if the given string contains only digit characters, False otherwise.\n\n    :param s: The string to check.\n    :return: True if s contains only digit characters, False otherwise.\n    \"\"\"\n    # Use a regular expression to check if all characters in s are digits (0-9)\n    return bool(re.match(r'^\\d+$', s))\n```\nThis function uses the `re` module to check if the string `s` contains only digit characters using a regular expression pattern `^\\d+$`. The `bool()` function is used to convert the result of the regular expression match to a boolean value.\n\nHere are some examples of how you can use this function:\n```python\n>>> is_only_digits('123')\nTrue\n>>> is_only_digits('abc')\nFalse\n>>> is_only_digits('0')\nTrue\n>>> is_only_digits('12345')\nTrue\n>>> is_only_digits('123abc')\nFalse\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 2.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

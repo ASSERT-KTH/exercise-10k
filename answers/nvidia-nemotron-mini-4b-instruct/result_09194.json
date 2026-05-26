@@ -1,0 +1,9 @@
+{
+  "id": 9194,
+  "title": "Data Type Conversion Functions",
+  "prompt": "Use built-in functions to convert between data types\nSample Input: String(5)\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! In Python, you can use the built-in `int()` function to convert a string to an integer, as long as the string contains only digits. Here's how you can do it:\n\n```python\nsample_input = \"5\"\nsample_output = int(sample_input)\nprint(sample_output)  # Output: 5\n```\n\nIf the string contains non-digit characters, it will raise a `ValueError`. For example:\n\n```python\nsample_input = \"abc5\"\ntry:\n    sample_output = int(sample_input)\nexcept ValueError as e:\n    print(e)  # Output: ValueError: could not convert string to integer\n```\n\nIf you want to handle strings that might contain leading or trailing whitespace, you can use the `strip()` method:\n\n```python\nsample_input = \"  5  \"\nsample_output = int(sample_input.strip())\nprint(sample_output)  # Output: 5\n```\n\nI hope this helps! Let me know if you have any other questions.",
+  "error": null,
+  "elapsed_seconds": 2.66,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

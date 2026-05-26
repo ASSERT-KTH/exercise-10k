@@ -1,0 +1,9 @@
+{
+  "id": 2940,
+  "title": "Diamond Shape Printing",
+  "prompt": "Create a program that uses nested for loops to print a diamond shape of asterisks (*).\nSample Input: 5\nSample Output:     *\n   ***\n  *****\n *******\n*********\n *******\n  *****\n   ***\n    *\n",
+  "answer": "Sure, I'd be happy to help you create a program that prints a diamond shape of asterisks using nested for loops. Here's a Python solution for your sample input (5):\n\n```python\nn = 5  # replace with the desired number of rows\n\n# outer loop for rows\nfor i in range(1, n + 1):\n    # inner loop for spaces\n    for j in range(1, n - i + 1):\n        print(\" \", end=\"\")\n\n    # inner loop for asterisks\n    for j in range(2 * i - 1):\n        print(\"*\", end=\"\")\n\n    # print a newline character\n    print()\n\n# outer loop for rows in reverse order\nfor i in range(n - 1, 0, -1):\n    # inner loop for spaces\n    for j in range(1, n - i + 1):\n        print(\" \", end=\"\")\n\n    # inner loop for asterisks\n    for j in range(2 * i - 1):\n        print(\"*\", end=\"\")\n\n    # print a newline character\n    print()\n```\n\nWhen you run this program with `n = 5`, it will print the diamond shape as shown in your sample output. You can replace `5` with any positive integer to generate a diamond shape of the desired number of rows.",
+  "error": null,
+  "elapsed_seconds": 3.12,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

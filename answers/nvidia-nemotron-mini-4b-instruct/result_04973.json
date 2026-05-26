@@ -1,0 +1,9 @@
+{
+  "id": 4973,
+  "title": "String Upper/Lower Case Conversion",
+  "prompt": "Write a function that converts a string to upper or lower case based on a given flag\nSample Input: ['Hello World', 'upper']\nSample Output: HELLO WORLD\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef convert_case(text, flag):\n    \"\"\"\n    Converts a string to upper or lower case based on a given flag.\n\n    Parameters:\n    text (str): The string to convert.\n    flag (str): 'upper' or 'lower', indicating whether to convert to uppercase or lowercase.\n\n    Returns:\n    str: The converted string.\n    \"\"\"\n    if flag not in ['upper', 'lower']:\n        raise ValueError(\"Invalid flag. Must be 'upper' or 'lower'.\")\n\n    return text.upper() if flag == 'upper' else text.lower()\n```\nHere's an example of how you can use this function:\n```python\nprint(convert_case('Hello World', 'upper'))  # Output: HELLO WORLD\nprint(convert_case('hello world', 'lower'))  # Output: hello world\n```\nThis function checks if the input flag is valid, and then converts the string to the desired case using the `upper()` or `lower()` methods, depending on the flag value.",
+  "error": null,
+  "elapsed_seconds": 2.7,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

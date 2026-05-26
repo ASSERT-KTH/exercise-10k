@@ -1,0 +1,9 @@
+{
+  "id": 8695,
+  "title": "Mad Libs",
+  "prompt": "Create a simple Mad Libs game that asks the user for different types of words and then prints out a funny story with the words inserted.\nSample Input: adjective noun verb\nSample Output: One day, a very adjective noun walked into the room and started to verb.\n",
+  "answer": "Sure, I'd be happy to help you create a Mad Libs game! Here's a Python script that meets your requirements:\n\n```python\ndef create_mad_lib():\n    \"\"\"Create a Mad Libs game that asks the user for different types of words and then prints out a funny story.\"\"\"\n\n    # Define the categories of words to ask for\n    categories = {\n        \"adjective\": \"Enter an adjective:\",\n        \"noun\": \"Enter a noun:\",\n        \"verb\": \"Enter a verb:\",\n    }\n\n    # Ask the user for each type of word and store it in a dictionary\n    words = {}\n    for category, question in categories.items():\n        words[category] = input(question)\n\n    # Create the Mad Libs story using the user-provided words\n    story = f\"One day, a very {words['adjective']} {words['noun']} walked into the room and started to {words['verb']}.\"\n\n    # Print the story\n    print(story)\n\n# Call the function to start the Mad Libs game\ncreate_mad_lib()\n```\n\nWhen you run this script, it will prompt you to enter an adjective, noun, and verb. After you provide the words, it will create a Mad Libs story and print it out. You can customize the categories and questions in the `categories` dictionary to fit your specific needs.",
+  "error": null,
+  "elapsed_seconds": 3.36,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

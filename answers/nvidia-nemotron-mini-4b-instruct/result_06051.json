@@ -1,0 +1,9 @@
+{
+  "id": 6051,
+  "title": "Game Show Simulator",
+  "prompt": "Create a program that simulates a game show, allowing contestants to answer questions and win prizes using conditional statements.\nSample Input: answer 1\nSample Output: Correct! You win $100\n",
+  "answer": "Sure, I'd be happy to help you create a simple game show simulator using Python. Here's a basic implementation that allows contestants to answer questions and win prizes using conditional statements. This example only includes a single question and prize, but you can easily expand it to include more questions and prizes.\n\n```python\nimport random\n\n# Define the question and prize\nquestion = \"What is the capital of France?\"\nprize = 100\n\n# Function to check if the contestant's answer is correct\ndef check_answer(answer):\n    if answer.lower() == question.lower():\n        return True\n    else:\n        return False\n\n# Main game loop\nwhile True:\n    # Ask the contestant for their answer\n    answer = input(f\"Answer the question '{question}'. (Correct answer is '{question.lower()}'.): \")\n\n    # Check if the answer is correct\n    if check_answer(answer):\n        print(f\"Correct! You win ${prize}.\")\n        break\n    else:\n        print(\"Sorry, that's incorrect. The correct answer is '\", question, \"'.\")\n\n# If the contestant wants to play again, ask for confirmation\nif input(\"Do you want to play again? (yes/no): \").lower() == \"yes\":\n    print(\"Great! Let's play again.\")\nelse:\n    print(\"Thanks for playing!\")\n```\n\nThis program defines a question and prize, checks if the contestant's answer is correct using a function, and then enters a loop that continues until the contestant answers correctly. The program also includes a confirmation prompt at the end to ask if the contestant wants to play again.",
+  "error": null,
+  "elapsed_seconds": 5.03,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

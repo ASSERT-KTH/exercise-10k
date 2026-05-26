@@ -1,0 +1,9 @@
+{
+  "id": 4420,
+  "title": "Merge Sort",
+  "prompt": "Create a program that sorts a list using the merge sort algorithm with a while loop.\nSample Input: 5 2 8 3 1\nSample Output: 1 2 3 5 8\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that sorts a list using the merge sort algorithm with a while loop:\n```python\ndef merge_sort(arr):\n    \"\"\"\n    Sort the given list using the merge sort algorithm with a while loop.\n\n    :param arr: The list to be sorted\n    :return: The sorted list\n    \"\"\"\n\n    # Base case: if the list has 1 or 0 elements, it's already sorted\n    if len(arr) <= 1:\n        return arr\n\n    # Split the list into two halves\n    mid = len(arr) // 2\n    left = arr[:mid]\n    right = arr[mid:]\n\n    # Recursively sort the left and right halves\n    left = merge_sort(left)\n    right = merge_sort(right)\n\n    # Merge the sorted halves\n    result = []\n    i = j = 0\n    while i < len(left) and j < len(right):\n        if left[i] <= right[j]:\n            result.append(left[i])\n            i += 1\n        else:\n            result.append(right[j])\n            j += 1\n\n    # Append any remaining elements from the left or right halves\n    result.extend(left[i:])\n    result.extend(right[j:])\n\n    return result\n\n# Example usage\narr = [5, 2, 8, 3, 1]\nsorted_arr = merge_sort(arr)\nprint(sorted_arr)  # Output: [1, 2, 3, 5, 8]\n```\nThis program first checks if the list has 1 or 0 elements, in which case it returns the list as is. Otherwise, it splits the list into two halves, recursively sorts each half, and then merges the sorted halves using a while loop. The while loop continues until both halves are exhausted, at which point it appends any remaining elements from one or both halves to the result list. Finally, it returns the sorted list.",
+  "error": null,
+  "elapsed_seconds": 4.73,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

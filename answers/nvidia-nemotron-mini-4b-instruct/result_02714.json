@@ -1,0 +1,9 @@
+{
+  "id": 2714,
+  "title": "String to Integer Conversion",
+  "prompt": "Write a program to convert a given string to an integer.\nSample Input: 123\nSample Output: 123\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that converts a given string to an integer:\n\n```python\ndef str_to_int(s: str) -> int:\n    \"\"\"\n    Converts a given string to an integer.\n\n    :param s: The string to convert to an integer.\n    :return: The integer value of the given string.\n    \"\"\"\n    # Check if the input is a non-empty string\n    if not isinstance(s, str) or len(s) == 0:\n        raise ValueError(\"Input must be a non-empty string.\")\n\n    # Try to convert the string to an integer using the int() function\n    try:\n        return int(s)\n    except ValueError:\n        raise ValueError(f\"Could not convert '{s}' to an integer.\")\n\n# Example usage\nsample_input = \"123\"\ntry:\n    sample_output = str_to_int(sample_input)\n    print(f\"Sample Output: {sample_output}\")\nexcept ValueError as e:\n    print(e)\n```\n\nThis program defines a function `str_to_int()` that checks if the input is a non-empty string, and then attempts to convert it to an integer using the `int()` function. If the conversion fails, it raises a `ValueError` with an appropriate error message. The example usage demonstrates how to use the function with a sample input.",
+  "error": null,
+  "elapsed_seconds": 3.44,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

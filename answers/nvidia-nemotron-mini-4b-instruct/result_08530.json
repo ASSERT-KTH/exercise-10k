@@ -1,0 +1,9 @@
+{
+  "id": 8530,
+  "title": "Equation Solver",
+  "prompt": "Create a program to solve a linear equation of the form ax + b = c.\nSample Input: 2 3 7\nSample Output: 2.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that can solve a linear equation of the form `ax + b = c` for the variable `x`:\n\n```python\ndef solve_linear_equation(a, b, c):\n    \"\"\"\n    Solves a linear equation of the form ax + b = c for the variable x.\n\n    Parameters:\n    a (float): The coefficient of x.\n    b (float): The constant term.\n    c (float): The right-hand side of the equation.\n\n    Returns:\n    float: The value of x that satisfies the equation.\n    \"\"\"\n\n    # Check for a zero coefficient (i.e., a vertical line)\n    if a == 0:\n        raise ValueError(\"Coefficient a cannot be zero.\")\n\n    # Calculate the value of x\n    x = c / a\n\n    return x\n\n# Get sample input from the user\na, b, c = map(float, input(\"Enter the coefficients a, b, and c (space-separated): \").split())\n\n# Solve the equation\nx = solve_linear_equation(a, b, c)\n\n# Print the result\nprint(f\"{x:.2f}\")\n```\n\nThis program defines a function `solve_linear_equation` that takes the coefficients `a`, `b`, and `c` as input and returns the value of `x` that satisfies the equation. The function checks for a zero coefficient (which would result in a vertical line) and raises a `ValueError` if such a coefficient is provided. The program then gets sample input from the user, calls the function to solve the equation, and prints the result with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 3.87,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

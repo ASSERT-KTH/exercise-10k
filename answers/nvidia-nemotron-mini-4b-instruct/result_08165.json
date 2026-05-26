@@ -1,0 +1,9 @@
+{
+  "id": 8165,
+  "title": "Array Count",
+  "prompt": "Create an array of 5 integers and count the occurrences of a specific element.\nSample Input: [1, 2, 2, 3, 2], 2\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution using the built-in `collections.Counter` class to count the occurrences of a specific element in an array:\n\n```python\nfrom collections import Counter\n\ndef count_element(arr, element):\n    \"\"\"\n    Count the occurrences of a specific element in an array.\n\n    :param arr: The array of integers\n    :param element: The element to count\n    :return: The number of occurrences of the element\n    \"\"\"\n    # Use Counter to count the occurrences of the element\n    count = Counter(arr)\n\n    # Return the count for the specified element\n    return count[element]\n\n# Example usage\narr = [1, 2, 2, 3, 2]\nelement = 2\nprint(count_element(arr, element))  # Output: 3\n```\n\nThis function first uses the `Counter` class to count the occurrences of each element in the array. Then, it returns the count for the specified element using the `get()` method with a default value of 0. The `get()` method returns the count for the specified element if it exists, or the default value if it doesn't.",
+  "error": null,
+  "elapsed_seconds": 2.77,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

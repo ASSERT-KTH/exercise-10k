@@ -1,0 +1,9 @@
+{
+  "id": 150,
+  "title": "Dictionary Key Sorting",
+  "prompt": "Create a function that takes in a dictionary and returns a new dictionary containing the same key-value pairs, but with the keys sorted in ascending order\nSample Input: dictionary = {'name': 'John', 'age': 30, 'city': 'New York'}\nSample Output: {'age': 30, 'city': 'New York', 'name': 'John'}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef sort_dict_keys(dictionary):\n    \"\"\"\n    Takes in a dictionary and returns a new dictionary containing the same key-value pairs,\n    but with the keys sorted in ascending order.\n\n    :param dictionary: The input dictionary\n    :return: A new dictionary with sorted keys\n    \"\"\"\n    # Use the built-in sorted() function to sort the keys, then create a new dictionary\n    # from the sorted keys and their corresponding values\n    return dict(sorted(dictionary.items()))\n```\nHere's an example of how you can use this function:\n```python\ndictionary = {'name': 'John', 'age': 30, 'city': 'New York'}\nsorted_dict = sort_dict_keys(dictionary)\nprint(sorted_dict)  # Output: {'age': 30, 'city': 'New York', 'name': 'John'}\n```\nThis function first uses the `sorted()` function to sort the keys in the input dictionary by value (which is the default sorting order). Then, it creates a new dictionary from the sorted keys and their corresponding values using the `dict()` constructor. This ensures that the original dictionary is not modified.",
+  "error": null,
+  "elapsed_seconds": 2.96,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

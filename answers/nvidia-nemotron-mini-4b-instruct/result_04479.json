@@ -1,0 +1,9 @@
+{
+  "id": 4479,
+  "title": "Find the Sum of Squares of Elements in a List that Meet a Specific Condition",
+  "prompt": "Write a program to find the sum of squares of elements in a list that meet a specific condition (e.g. numbers greater than 3) using a for loop\nSample Input: [1, 2, 3, 4, 5], 3\nSample Output: 41\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef sum_of_squares_greater_than_three(numbers, threshold):\n    \"\"\"\n    Calculates the sum of squares of elements in a list that meet a specific condition (e.g. numbers greater than 3).\n\n    Parameters:\n    numbers (list): A list of numbers.\n    threshold (int): A threshold value for the condition.\n\n    Returns:\n    int: The sum of squares of elements in the list that meet the condition.\n    \"\"\"\n    # Filter out elements that do not meet the condition\n    greater_than_three = [num**2 for num in numbers if num > threshold]\n\n    # Calculate the sum of squares of the filtered elements\n    sum_of_squares = sum(greater_than_three)\n\n    return sum_of_squares\n\n# Example usage\nnumbers = [1, 2, 3, 4, 5]\nthreshold = 3\nprint(sum_of_squares_greater_than_three(numbers, threshold))  # Output: 41\n```\nThis program defines a function `sum_of_squares_greater_than_three` that takes a list of numbers and a threshold value as input. It first filters out the elements in the list that do not meet the condition (i.e., are less than or equal to the threshold), and then calculates the sum of squares of these filtered elements. The function returns the result. The example usage at the end of the program demonstrates how to use this function with the given sample input.",
+  "error": null,
+  "elapsed_seconds": 3.64,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

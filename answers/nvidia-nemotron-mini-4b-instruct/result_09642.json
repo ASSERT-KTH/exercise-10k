@@ -1,0 +1,9 @@
+{
+  "id": 9642,
+  "title": "Function with JSON",
+  "prompt": "Create a function that uses the json module to read and write JSON files.\nSample Input: data.json\nSample Output: JSON data\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses the `json` module to read and write JSON files. This function will read the JSON data from a file named `data.json` and print it to the console, and it will also allow you to write JSON data to a file named `data.json`.\n\n```python\nimport json\n\ndef read_write_json(file_name):\n    \"\"\"\n    Reads and writes JSON data to/from a file.\n\n    :param file_name: The name of the JSON file to read or write to.\n    \"\"\"\n\n    # Read JSON data from the file\n    with open(file_name, 'r') as file:\n        data = json.load(file)\n\n    # Print the JSON data\n    print(json.dumps(data, indent=4))\n\n    # Write JSON data to the file\n    with open(file_name, 'w') as file:\n        json.dump(data, file, indent=4)\n\n# Example usage\nread_write_json('data.json')\n```\n\nThis function reads the JSON data from the file using the `json.load()` function, which parses the JSON string and returns the Python object. It then prints the JSON data to the console using the `json.dumps()` function, which converts the Python object back to a JSON string and prints it with indentation for readability.\n\nThe function also allows you to write JSON data to the file using the `json.dump()` function. This function takes a Python object and a file object as arguments, and writes the JSON data to the file using the `json.dump()` function. The `indent` parameter is used to control the indentation of the JSON data, which is useful for making the output more readable.\n\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 4.21,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2026,
+  "title": "Tax Calculator",
+  "prompt": "Create a program that calculates the tax amount based on the income. The program should use if/else statements to determine the tax rate.\nSample Input: 50000\nSample Output: 10000\n",
+  "answer": "Sure, I'd be happy to help you create a program that calculates the tax amount based on the income using if/else statements. Here's an example Python program that meets your requirements:\n\n```python\ndef calculate_tax(income):\n    \"\"\"\n    Calculates the tax amount based on the income using if/else statements.\n\n    :param income: The annual income in dollars\n    :return: The tax amount in dollars\n    \"\"\"\n\n    # Define tax rates for different income ranges\n    tax_rates = {\n        \"0_10000\": 0,\n        \"10001_50000\": 1000,\n        \"50001_150000\": 2000,\n        \"150001_200000\": 3000,\n        \"200001_300000\": 4000,\n        \"300001_400000\": 5000,\n        \"400001_500000\": 6000,\n    }\n\n    # Check if the income is within a tax range\n    for range_start, range_end in tax_rates.keys():\n        if range_start <= income <= range_end:\n            return tax_rates[f\"{range_start}_10000\"]\n\n    # If the income is not within any tax range, return 0\n    return 0\n\n\n# Get user input for income\nincome = float(input(\"Enter your annual income: \"))\n\n# Calculate and display the tax amount\ntax_amount = calculate_tax(income)\nprint(f\"Your tax amount is ${tax_amount:.2f}.\")\n```\n\nThis program defines a function `calculate_tax` that takes an annual income in dollars as input and returns the corresponding tax amount. The function uses an `if/else` statement to determine the tax rate based on the income range. The program then prompts the user to enter their annual income and calculates the tax amount using the function.",
+  "error": null,
+  "elapsed_seconds": 6.0,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

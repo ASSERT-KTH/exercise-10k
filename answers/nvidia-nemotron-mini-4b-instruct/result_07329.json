@@ -1,0 +1,9 @@
+{
+  "id": 7329,
+  "title": "Input with Timeout",
+  "prompt": "Write a program that takes input from the user with a timeout and prints out the results.\nSample Input: example\nSample Output: Timeout expired\n",
+  "answer": "Sure, I can help you with that. Here's an example Python program that takes input from the user with a timeout and prints out the results. In this example, I'll use the `time` module to set the timeout and the `input()` function to get user input.\n\n```python\nimport time\n\ndef get_input_with_timeout(prompt, timeout_seconds=5):\n    \"\"\"\n    Get input from the user with a timeout.\n\n    :param prompt: The prompt to display to the user.\n    :param timeout_seconds: The timeout in seconds. Default is 5.\n    :return: The user input or a message indicating a timeout.\n    \"\"\"\n    start_time = time.time()\n    while True:\n        user_input = input(prompt)\n        if user_input:\n            elapsed_time = time.time() - start_time\n            if elapsed_time < timeout_seconds:\n                return user_input\n            else:\n                print(f\"Timeout expired after {timeout_seconds} seconds.\")\n                return \"Timeout\"\n        else:\n            print(\"Please enter a value.\")\n\n# Example usage:\nuser_input = get_input_with_timeout(\"Enter a sample input: \", timeout_seconds=10)\nif user_input == \"Timeout\":\n    print(user_input)\nelse:\n    print(f\"You entered: {user_input}\")\n```\n\nThis program defines a function `get_input_with_timeout()` that takes a prompt and an optional timeout in seconds. The function repeatedly prompts the user for input until a valid input is received within the specified timeout. If no input is received within the timeout, the function prints a message indicating a timeout. The example usage at the end of the program demonstrates how to use this function.",
+  "error": null,
+  "elapsed_seconds": 4.2,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

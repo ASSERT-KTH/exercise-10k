@@ -1,0 +1,9 @@
+{
+  "id": 8712,
+  "title": " ออนไลน์Translator",
+  "prompt": "Create a simple translator that translates text from one language to another.\nSample Input: hello\nSample Output: Bonjour\n",
+  "answer": "Sure, I'd be happy to help you create a simple translator. Here's a Python function that translates text from English to French using the `googletrans` library, which is a simple and easy-to-use library for translating text between languages. If you don't have it installed, you can install it using pip:\n\n```bash\npip install googletrans\n```\n\nHere's the function:\n\n```python\nfrom googletrans import Translator\n\ndef translate_text(text, from_lang, to_lang):\n    \"\"\"\n    Translates text from one language to another.\n\n    :param text: The text to translate.\n    :param from_lang: The language of the text (ISO 639-1 code).\n    :param to_lang: The target language (ISO 639-1 code).\n    :return: The translated text.\n    \"\"\"\n    translator = Translator()\n    return translator.translate(text, src=from_lang, dest=to_lang).text\n\n# Example usage:\nsample_input = \"hello\"\nsample_output = translate_text(sample_input, \"en\", \"fr\")\nprint(sample_output)  # Output: Bonjour\n```\n\nThis function takes three arguments: the text to translate, the source language, and the target language. It uses the `googletrans` library to translate the text and returns the translated text as a string.",
+  "error": null,
+  "elapsed_seconds": 3.6,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

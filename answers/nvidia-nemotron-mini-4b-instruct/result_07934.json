@@ -1,0 +1,9 @@
+{
+  "id": 7934,
+  "title": "BMI Calculator",
+  "prompt": "Create a program to calculate the body mass index (BMI) given the weight and height.\nSample Input: 70 1.75\nSample Output: 22.86\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the Body Mass Index (BMI) given the weight and height:\n\n```python\ndef calculate_bmi(weight, height):\n    \"\"\"\n    Calculates the Body Mass Index (BMI) given the weight and height.\n\n    :param weight: float or int - The person's weight in kilograms.\n    :param height: float - The person's height in meters.\n    :return: float - The calculated BMI.\n    \"\"\"\n\n    # Ensure the input is valid\n    if not isinstance(weight, (int, float)) or weight <= 0:\n        raise ValueError(\"Weight must be a positive number.\")\n\n    if not isinstance(height, float) or height <= 0:\n        raise ValueError(\"Height must be a positive number.\")\n\n    # Calculate BMI\n    bmi = weight / (height ** 2)\n\n    return bmi\n\n\n# Get user input\nweight = float(input(\"Enter your weight in kilograms: \"))\nheight = float(input(\"Enter your height in meters: \"))\n\n# Calculate and print BMI\nbmi = calculate_bmi(weight, height)\nprint(f\"Your BMI is: {bmi:.2f}\")\n```\n\nThis program defines a function `calculate_bmi` that checks for valid input and calculates the BMI. The function is then called with user input to calculate and print the BMI. The output will be formatted to two decimal places.",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

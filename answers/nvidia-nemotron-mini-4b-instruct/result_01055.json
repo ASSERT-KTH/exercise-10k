@@ -1,0 +1,9 @@
+{
+  "id": 1055,
+  "title": "Array Partitioning",
+  "prompt": "Write a program that takes an array and a predicate as input, and returns two arrays: one containing the elements that satisfy the predicate, and one containing the elements that do not.\nSample Input: [1, 2, 3, 4, 5], x % 2 == 0\nSample Output: [[2, 4], [1, 3, 5]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. It uses list comprehensions to create the two output arrays based on the given predicate (in this case, whether an element is even or not).\n\n```python\ndef filter_array(arr, predicate):\n    \"\"\"\n    Takes an array and a predicate as input, and returns two arrays:\n    one containing the elements that satisfy the predicate,\n    and one containing the elements that do not.\n    \"\"\"\n    # Split the input array into two arrays based on the predicate\n    even_elements = [element for element in arr if predicate(element)]\n    odd_elements = [element for element in arr if not predicate(element)]\n\n    return even_elements, odd_elements\n\n# Example usage:\narr = [1, 2, 3, 4, 5]\npredicate = lambda x: x % 2 == 0\n\neven_elements, odd_elements = filter_array(arr, predicate)\nprint(even_elements)  # Output: [2, 4]\nprint(odd_elements)   # Output: [1, 3, 5]\n```\n\nThis program defines a function `filter_array` that takes an array and a predicate as input, and returns two arrays based on the predicate. The function uses list comprehensions to create the two output arrays, which are then returned. The example usage demonstrates how to use the function with a sample array and predicate.",
+  "error": null,
+  "elapsed_seconds": 3.34,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 1663,
+  "title": "Time of Day",
+  "prompt": "Create a program that takes the current hour as input and prints the corresponding time of day (morning, afternoon, evening, night) based on the following criteria: morning (6-11), afternoon (12-16), evening (17-20), night (21-5) using if/else statements\nSample Input: 14\nSample Output: afternoon\n",
+  "answer": "Sure, I'd be happy to help you create a program for that. Here's a Python solution using if/else statements:\n\n```python\ndef time_of_day(hour):\n    \"\"\"\n    Determines the time of day based on the given hour.\n\n    :param hour: The current hour as an integer between 0 and 23.\n    :return: A string indicating the time of day ('morning', 'afternoon', 'evening', or 'night').\n    \"\"\"\n    if 6 <= hour <= 11:\n        return \"morning\"\n    elif 12 <= hour <= 16:\n        return \"afternoon\"\n    elif 17 <= hour <= 20:\n        return \"evening\"\n    elif 21 <= hour <= 12:\n        return \"night\"\n    else:\n        raise ValueError(\"Hour must be between 0 and 23\")\n\n# Example usage:\nhour = 14\nprint(time_of_day(hour))  # Output: afternoon\n```\n\nThis function first checks if the hour is within the morning range (6-11). If so, it returns \"morning\". If not, it checks if the hour is within the afternoon range (12-16). If so, it returns \"afternoon\". Similarly, it checks for evening (17-20) and night (21-12) ranges. If the hour is outside the valid range, it raises a `ValueError`.",
+  "error": null,
+  "elapsed_seconds": 3.3,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

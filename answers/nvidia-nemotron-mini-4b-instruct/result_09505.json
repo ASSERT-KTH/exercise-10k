@@ -1,0 +1,9 @@
+{
+  "id": 9505,
+  "title": "Data Type Converter",
+  "prompt": "Write a program that takes an input string and converts it into different data types (integer, float, boolean) based on the user's choice. The program should handle invalid inputs and provide appropriate error messages.\nSample Input: 123 true\nSample Output: Integer: 123, Boolean: true\n",
+  "answer": "Here's a Python program that meets your requirements. This program uses the `try`-`except` block to handle invalid inputs and provides appropriate error messages.\n\n```python\ndef get_input():\n    \"\"\"Get user input and convert it to different data types.\"\"\"\n\n    while True:\n        user_input = input(\"Enter a value to convert to different data types (or type 'quit' to exit): \")\n\n        if user_input.lower() == \"quit\":\n            return\n\n        try:\n            # Convert input to integer, float, and boolean\n            integer = int(user_input)\n            float_value = float(user_input)\n            boolean_value = bool(user_input)\n\n            print(f\"Integer: {integer}, Float: {float_value}, Boolean: {boolean_value}\")\n\n        except ValueError:\n            print(f\"Invalid input. Please enter a number or 'true' for boolean.\")\n\n        except Exception as e:\n            print(f\"An error occurred: {e}. Please try again.\")\n\n\nif __name__ == \"__main__\":\n    get_input()\n```\n\nThis program will keep prompting the user for input until they type 'quit'. Once the user enters a valid input, it will convert it to integer, float, and boolean data types and display the results. If the user enters an invalid input, the program will display an error message and prompt the user to try again.",
+  "error": null,
+  "elapsed_seconds": 3.27,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

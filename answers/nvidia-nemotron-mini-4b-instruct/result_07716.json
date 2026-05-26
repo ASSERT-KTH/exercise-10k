@@ -1,0 +1,9 @@
+{
+  "id": 7716,
+  "title": "Most Frequent Character",
+  "prompt": "Find the most frequent character in a given string.\nSample Input: hello\nSample Output: l\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution using the built-in `collections.Counter` class to count the occurrences of each character in the string:\n\n```python\nfrom collections import Counter\n\ndef most_frequent_char(s):\n    \"\"\"\n    Find the most frequent character in a given string.\n\n    :param s: str - The input string\n    :return: str - The most frequent character\n    \"\"\"\n    # Count the occurrences of each character in the string\n    char_counts = Counter(s)\n\n    # Find the character with the highest count\n    most_common = char_counts.most_common(1)[0]\n\n    # Return the most frequent character\n    return most_common[0]\n\n# Example usage\ninput_string = \"hello\"\nprint(most_frequent_char(input_string))  # Output: l\n```\n\nThis function first counts the occurrences of each character in the string using `Counter`. Then, it finds the character with the highest count using `most_common(1)`, which returns a list of tuples, where each tuple contains a character and its count. Finally, it returns the first character in the list.",
+  "error": null,
+  "elapsed_seconds": 2.78,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

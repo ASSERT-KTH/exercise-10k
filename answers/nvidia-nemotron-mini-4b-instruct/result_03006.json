@@ -1,0 +1,9 @@
+{
+  "id": 3006,
+  "title": "String Joining",
+  "prompt": "Write a program to join a list of strings into a single string with a delimiter.\nSample Input: ['apple', 'banana', 'orange']\nSample Output: apple,banana,orange\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that joins a list of strings into a single string with a delimiter:\n```python\ndef join_strings(string_list, delimiter=', '):\n    \"\"\"\n    Joins a list of strings into a single string with a delimiter.\n\n    Parameters:\n    string_list (list): The list of strings to join.\n    delimiter (str, optional): The delimiter to use between strings. Defaults to a comma followed by a space.\n\n    Returns:\n    str: The joined string.\n    \"\"\"\n    # Check that the input is a non-empty list\n    if not string_list or not isinstance(string_list, list) or len(string_list) == 0:\n        raise ValueError(\"Input must be a non-empty list of strings.\")\n\n    # Join the strings with the specified delimiter\n    joined_string = delimiter.join(string_list)\n\n    return joined_string\n```\nHere's an example of how to use this function:\n```python\nsample_input = ['apple', 'banana', 'orange']\nsample_output = join_strings(sample_input)\nprint(sample_output)  # Output: apple,banana,orange\n```\nThis function checks that the input is a non-empty list, and then uses the `join()` method of the string type to concatenate the strings with the specified delimiter. The optional `delimiter` parameter allows you to customize the string that is used to separate the individual strings.",
+  "error": null,
+  "elapsed_seconds": 3.5,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

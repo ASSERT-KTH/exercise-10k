@@ -1,0 +1,9 @@
+{
+  "id": 2140,
+  "title": "List Reduction",
+  "prompt": "Write a function that takes a list and a reduction function as input and returns a single value, which is the result of applying the reduction function to all elements in the list.\nSample Input: ([1, 2, 3, 4, 5], lambda x, y: x + y)\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef reduce_list(lst, reduction_func):\n    \"\"\"\n    Applies a reduction function to all elements in a list, reducing them to a single value.\n\n    Parameters:\n    lst (list): The list of elements to reduce.\n    reduction_func (callable): A function that takes two arguments and returns a single value.\n\n    Returns:\n    any: The result of applying the reduction function to all elements in the list.\n    \"\"\"\n    if not callable(reduction_func):\n        raise ValueError(\"reduction_func must be a callable function\")\n\n    return reduce(reduction_func, lst)\n```\nHere's how you can use this function:\n```python\n>>> reduce_list([1, 2, 3, 4, 5], lambda x, y: x + y)\n15\n```\nThis function first checks if the `reduction_func` argument is callable. If not, it raises a `ValueError`. Then, it uses the `reduce()` function from the `functools` module to apply the `reduction_func` to all elements in the list, reducing them to a single value.\n\nYou can replace the `lambda x, y: x + y` expression with any other reduction function that takes two arguments and returns a single value. For example, you could use a lambda function that takes two elements and returns their product:\n```python\n>>> reduce_list([1, 2, 3, 4, 5], lambda x, y: x * y)\n120\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 4.78,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2449,
+  "title": "Array Deletion",
+  "prompt": "Write a program that takes an array and an index as input and returns a new array containing all elements except the one at the specified index.\nSample Input: [1, 2, 3, 4, 5], 2\nSample Output: [1, 2, 4, 5]\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef remove_element(arr, index):\n    # Check if the index is within the array bounds\n    if index < 0 or index >= len(arr):\n        raise IndexError(\"Index out of bounds\")\n\n    # Return a new array with all elements except the one at the specified index\n    return arr[:index] + arr[index+1:]\n```\n\nYou can use this function like this:\n\n```python\nprint(remove_element([1, 2, 3, 4, 5], 2))  # Output: [1, 2, 4, 5]\n```\n\nThis function first checks if the given index is within the array bounds. If not, it raises an `IndexError`. Then, it creates a new array by slicing the original array at the specified index, taking all elements before the index and all elements after the index.",
+  "error": null,
+  "elapsed_seconds": 2.31,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5179,
+  "title": "Dictionary Equality",
+  "prompt": "Write a function to check if two dictionaries are equal.\nSample Input: {\"a\": 1, \"b\": 2}, {\"a\": 1, \"b\": 2}\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if two dictionaries are equal:\n\n```python\ndef are_dicts_equal(dict1, dict2):\n    \"\"\"\n    Check if two dictionaries are equal.\n\n    :param dict1: The first dictionary to compare.\n    :param dict2: The second dictionary to compare.\n    :return: True if the dictionaries are equal, False otherwise.\n    \"\"\"\n    # Check if the dictionaries have the same keys\n    if set(dict1.keys()) != set(dict2.keys()):\n        return False\n\n    # Check if the values of corresponding keys are equal\n    for key in dict1:\n        if dict1[key] != dict2[key]:\n            return False\n\n    # If we've made it this far, the dictionaries are equal\n    return True\n```\n\nThis function first checks if the two dictionaries have the same keys by comparing their sets of keys. If the keys are not equal, the function immediately returns `False`. If the keys are equal, the function iterates over the keys and checks if the values of corresponding keys are equal. If any of the values are not equal, the function returns `False`. If the function has made it this far without finding any differences, it returns `True`.\n\nHere's an example of how to use this function:\n\n```python\ndict1 = {\"a\": 1, \"b\": 2}\ndict2 = {\"a\": 1, \"b\": 2}\nprint(are_dicts_equal(dict1, dict2))  # Output: True\n```",
+  "error": null,
+  "elapsed_seconds": 3.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3055,
+  "title": "Higher-Order Function",
+  "prompt": "Write a higher-order function that takes a function and a list of numbers as input and applies the function to each number in the list.\nSample Input: double, [1, 2, 3, 4, 5]\nSample Output: [2, 4, 6, 8, 10]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an implementation of a higher-order function in Python that meets your requirements. This function, `apply_to_list`, takes a function and a list of numbers as input, and applies the function to each number in the list. The function is defined as a lambda function to make it more concise and easier to read.\n\n```python\ndef apply_to_list(func, numbers):\n    \"\"\"\n    Applies a function to each number in a list.\n\n    Parameters:\n    func (callable): The function to apply to each number in the list.\n    numbers (list): A list of numbers.\n\n    Returns:\n    list: A new list with the results of applying the function to each number in the input list.\n    \"\"\"\n    return [func(num) for num in numbers]\n```\n\nHere's an example of how to use this function:\n\n```python\ndouble = lambda x: x * 2\nprint(apply_to_list(double, [1, 2, 3, 4, 5]))  # Output: [2, 4, 6, 8, 10]\n```\n\nYou can replace `double` with any other function that takes a single argument and returns a single value.",
+  "error": null,
+  "elapsed_seconds": 3.12,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

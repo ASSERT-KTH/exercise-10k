@@ -1,0 +1,9 @@
+{
+  "id": 3248,
+  "title": "Maximum and Minimum",
+  "prompt": "Create a program that finds the maximum and minimum of a list of numbers.\nSample Input: 1 2 3 4 5\nSample Output: 5 1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the maximum and minimum of a list of numbers:\n\n```python\ndef find_min_max(numbers):\n    \"\"\"\n    Find the minimum and maximum of a list of numbers.\n\n    :param numbers: List of numbers\n    :return: Tuple of (minimum, maximum)\n    \"\"\"\n    if not numbers:  # Check if the input list is empty\n        raise ValueError(\"Input list cannot be empty\")\n\n    # Initialize minimum and maximum to the first element of the list\n    min_val = max_val = numbers[0]\n\n    # Iterate through the list to find the minimum and maximum\n    for num in numbers[1:]:\n        if num < min_val:\n            min_val = num\n        elif num > max_val:\n            max_val = num\n\n    return min_val, max_val\n\n# Example usage\nnumbers = [1, 2, 3, 4, 5]\nmin_val, max_val = find_min_max(numbers)\nprint(f\"{min_val} {max_val}\")  # Output: 1 5\n```\n\nThis program defines a function `find_min_max` that takes a list of numbers as input and returns a tuple of the minimum and maximum values. The function first checks if the input list is empty and raises a `ValueError` if it is. Then, it initializes the minimum and maximum values to the first element of the list. Finally, it iterates through the rest of the list to find the minimum and maximum values and returns them as a tuple.",
+  "error": null,
+  "elapsed_seconds": 3.97,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8616,
+  "title": "Remove Duplicate Words",
+  "prompt": "Write a program that takes a string as input and returns a new string with duplicate words removed.\nSample Input: hello world hello\nSample Output: hello world\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef remove_duplicate_words(input_string: str) -> str:\n    \"\"\"\n    Takes a string as input and returns a new string with duplicate words removed.\n\n    :param input_string: The input string containing words that may have duplicates.\n    :return: A new string with duplicate words removed.\n    \"\"\"\n    # Split the input string into words, convert to lowercase, and remove duplicates\n    words = set(word.lower() for word in input_string.split())\n\n    # Join the words back into a string with no spaces\n    result = \" \".join(words)\n\n    return result\n```\nHere's an example of how you can use this function:\n```python\ninput_string = \"hello world hello\"\noutput_string = remove_duplicate_words(input_string)\nprint(output_string)  # Output: \"hello world\"\n```\nThis function first splits the input string into words using the `split()` method, then converts each word to lowercase using a generator expression. Finally, it converts the set of words back into a string using the `join()` method, with no spaces between the words.",
+  "error": null,
+  "elapsed_seconds": 3.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

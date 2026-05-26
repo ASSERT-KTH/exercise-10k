@@ -1,0 +1,9 @@
+{
+  "id": 6320,
+  "title": "Dictionary Intersection",
+  "prompt": "Find the intersection between two dictionaries\nSample Input: {\"name\": \"John\", \"age\": 30}, {\"name\": \"John\", \"age\": 30}\nSample Output: {\"name\": \"John\", \"age\": 30}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution using the built-in `dict.items()` method to get the key-value pairs of both dictionaries, and then checking for duplicates using a set:\n\n```python\ndef find_intersection(dict1, dict2):\n    # Convert dictionaries to sets of key-value pairs\n    set1 = set(dict1.items())\n    set2 = set(dict2.items())\n\n    # Find the intersection of the two sets\n    intersection = set1 & set2\n\n    # Convert the intersection back to a dictionary\n    result = dict(intersection)\n\n    return result\n\n# Example usage\ndict1 = {\"name\": \"John\", \"age\": 30}\ndict2 = {\"name\": \"John\", \"age\": 30}\n\nprint(find_intersection(dict1, dict2))  # Output: {'name': 'John', 'age': 30}\n```\n\nThis solution has a time complexity of O(min(len(dict1), len(dict2))), which is efficient for small to medium-sized dictionaries.",
+  "error": null,
+  "elapsed_seconds": 2.6,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

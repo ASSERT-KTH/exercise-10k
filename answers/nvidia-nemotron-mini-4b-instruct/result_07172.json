@@ -1,0 +1,9 @@
+{
+  "id": 7172,
+  "title": "Basic Decryption",
+  "prompt": "Write a program that decrypts a string by shifting each character back by a fixed amount\nSample Input: 'Khoor, Zruog!', 3\nSample Output: Hello, World!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that decrypts a given string by shifting each character back by a fixed amount (in this case, 3). The program first takes input for the string and the shift amount, then decrypts the string and prints the result.\n\n```python\ndef decrypt(s, shift):\n    \"\"\"Decrypt a string by shifting each character back by a fixed amount.\"\"\"\n    return ''.join(chr((ord(c) - ord('A') + shift) % 26 + ord('A')) if 'A' <= c <= 'Z' else c for c in s)\n\n# Get input from the user\ns = input(\"Enter the encrypted string: \")\nshift = int(input(\"Enter the shift amount: \"))\n\n# Decrypt the string and print the result\ndecrypted_s = decrypt(s, shift)\nprint(f\"Decrypted string: {decrypted_s}\")\n```\n\nThis program defines a function `decrypt` that takes a string `s` and a shift amount `shift` as input. It uses a generator expression to iterate over each character in the string, checks if it's a letter (between 'A' and 'Z'), and shifts it back by the given amount. If the character is not a letter, it simply keeps it as is. The result is then joined back into a string and returned.\n\nThe program then gets input from the user for the encrypted string and the shift amount, calls the `decrypt` function with these inputs, and prints the decrypted string.",
+  "error": null,
+  "elapsed_seconds": 3.78,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

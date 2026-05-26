@@ -1,0 +1,9 @@
+{
+  "id": 6144,
+  "title": "String Indexing",
+  "prompt": "Write a function to access a character at a specific index in a string.\nSample Input: ['hello', 2]\nSample Output: l\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef get_char_at_index(string, index):\n    \"\"\"\n    Access a character at a specific index in a string.\n\n    Parameters:\n    string (str): The string to access characters from.\n    index (int): The index of the character to access.\n\n    Returns:\n    str or None: The character at the given index, or None if the index is out of bounds.\n    \"\"\"\n    if not isinstance(string, str) or not isinstance(index, int):\n        raise TypeError(\"Both 'string' and 'index' must be of type str and int, respectively.\")\n\n    if index < 0 or index >= len(string):\n        return None\n\n    return string[index]\n```\nHere's an example of how you can use this function:\n```python\nprint(get_char_at_index('hello', 2))  # Output: l\nprint(get_char_at_index('world', 5))  # Output: None\n```\nThis function checks if the input types are correct, and then checks if the index is within the bounds of the string. If the index is out of bounds, it returns `None`. Otherwise, it returns the character at the given index.",
+  "error": null,
+  "elapsed_seconds": 3.12,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

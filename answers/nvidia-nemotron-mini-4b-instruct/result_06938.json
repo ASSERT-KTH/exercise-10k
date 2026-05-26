@@ -1,0 +1,9 @@
+{
+  "id": 6938,
+  "title": "Filter Function",
+  "prompt": "Create a function that uses the filter() function to filter a list of numbers based on a given condition\nSample Input: [1, 2, 3, 4, 5], is_even(x)\nSample Output: [2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. The `filter()` function applies a given function to each element of an iterable (like a list) and returns a filter object. The `list()` function is then used to convert the filter object to a list, which contains only the elements for which the condition is true.\n\n```python\ndef is_even(x):\n    \"\"\"Check if a number is even.\"\"\"\n    return x % 2 == 0\n\ndef filter_even_numbers(numbers):\n    \"\"\"Filter a list of numbers based on the given condition.\"\"\"\n    return list(filter(is_even, numbers))\n\n# Sample usage:\nsample_input = [1, 2, 3, 4, 5]\nsample_output = filter_even_numbers(sample_input)\nprint(sample_output)  # Output: [2, 4]\n```\n\nThis function can be used with any iterable containing numbers, and the `is_even()` function can be replaced with any other condition you want to check.",
+  "error": null,
+  "elapsed_seconds": 2.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

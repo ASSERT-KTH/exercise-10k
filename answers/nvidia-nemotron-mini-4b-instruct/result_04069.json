@@ -1,0 +1,9 @@
+{
+  "id": 4069,
+  "title": "String Validation",
+  "prompt": "Write a program that takes a string as input and returns True if the string contains only alphanumeric characters and False otherwise.\nSample Input: hello123\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\nimport re\n\ndef contains_only_alphanumeric(input_string: str) -> bool:\n    \"\"\"\n    Returns True if the given input string contains only alphanumeric characters, and False otherwise.\n\n    :param input_string: The string to check.\n    :return: True if the string contains only alphanumeric characters, False otherwise.\n    \"\"\"\n    # Use a regular expression to match any character that is alphanumeric (letters or numbers)\n    pattern = r'^[a-zA-Z0-9]*$'\n\n    # Check if the input string matches the pattern\n    return bool(re.match(pattern, input_string))\n```\nHere's how you can use this function:\n```python\nprint(contains_only_alphanumeric(\"hello123\"))  # Output: True\nprint(contains_only_alphanumeric(\"hello@world\"))  # Output: False\nprint(contains_only_alphanumeric(\"123abc\"))  # Output: False\nprint(contains_only_alphanumeric(\"abc\"))  # Output: True\n```\nThis function uses a regular expression to check if the input string contains only alphanumeric characters. The regular expression `^[a-zA-Z0-9]*$` matches any string that consists only of alphanumeric characters (letters or numbers). The `bool()` function is used to convert the result of the regular expression match to a boolean value.",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

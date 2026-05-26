@@ -1,0 +1,9 @@
+{
+  "id": 7910,
+  "title": "Finding the Maximum Number",
+  "prompt": "Write a program that takes a list of numbers as input and returns the maximum number in the list. The program should handle empty lists and lists with duplicate maximum numbers.\nSample Input: [1, 2, 3, 4, 5]\nSample Output: 5\n",
+  "answer": "Here's a Python program that meets your requirements:\n\n```python\ndef find_max(numbers):\n    \"\"\"\n    Given a list of numbers, return the maximum number in the list.\n    Handles empty lists and lists with duplicate maximum numbers.\n    \"\"\"\n    # Check if the input is a non-empty list\n    if numbers and isinstance(numbers, list):\n        # Initialize the maximum number to the first element of the list\n        max_num = numbers[0]\n\n        # Iterate through the list to find the maximum number\n        for num in numbers:\n            # If the current number is greater than the maximum number found so far, update it\n            if num > max_num:\n                max_num = num\n\n        return max_num\n    else:\n        # Return a default value if the input is not a non-empty list\n        return None\n\n# Test the function with a sample input\nsample_input = [1, 2, 3, 4, 5]\nprint(find_max(sample_input))  # Output: 5\n\n# Test the function with an empty list\nempty_list = []\nprint(find_max(empty_list))  # Output: None\n```\n\nThis program defines a function `find_max` that takes a list of numbers as input and returns the maximum number in the list. It handles empty lists and lists with duplicate maximum numbers by iterating through the list and updating the maximum number found so far if a larger number is encountered. If the input is not a non-empty list, the function returns `None`.",
+  "error": null,
+  "elapsed_seconds": 3.59,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

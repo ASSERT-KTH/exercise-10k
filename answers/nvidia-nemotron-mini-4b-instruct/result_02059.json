@@ -1,0 +1,9 @@
+{
+  "id": 2059,
+  "title": "Dictionary Mapping",
+  "prompt": "Create a function to map a dictionary to a new dictionary with transformed keys and values.\nSample Input: {'a': 1, 'b': 2}, lambda x: x.upper(), lambda x: x * 2\nSample Output: {'A': 2, 'B': 4}\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef transform_dict(input_dict, key_transformer, value_transformer):\n    \"\"\"\n    Maps a dictionary to a new dictionary with transformed keys and values.\n\n    Parameters:\n    input_dict (dict): The input dictionary to transform.\n    key_transformer (callable): A function that takes a key as input and returns a transformed key.\n    value_transformer (callable): A function that takes a value as input and returns a transformed value.\n\n    Returns:\n    dict: A new dictionary with transformed keys and values.\n    \"\"\"\n    return {key_transformer(key): value_transformer(value) for key, value in input_dict.items()}\n```\nHere's an example of how to use this function:\n```python\ninput_dict = {'a': 1, 'b': 2}\n\n# Transform keys to uppercase\nupper_keys = lambda x: x.upper()\n\n# Double the values\ndouble_values = lambda x: x * 2\n\noutput_dict = transform_dict(input_dict, upper_keys, double_values)\nprint(output_dict)  # Output: {'A': 4, 'B': 4}\n```\nThis function uses a dictionary comprehension to create the new dictionary, where each key-value pair is transformed using the provided key and value transformers. The `key_transformer` and `value_transformer` functions can be any callable objects that take a key or value as input and return a transformed version.",
+  "error": null,
+  "elapsed_seconds": 5.08,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

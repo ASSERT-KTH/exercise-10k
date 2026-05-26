@@ -1,0 +1,9 @@
+{
+  "id": 3375,
+  "title": "Calculate the Sum of Digits of a Number",
+  "prompt": "Use a while loop to calculate the sum of digits of a given number\nSample Input: 12345\nSample Output: 15\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution using a while loop to calculate the sum of digits of a given number:\n\n```python\ndef sum_of_digits(n):\n    \"\"\"\n    Calculates the sum of digits of a given number using a while loop.\n\n    :param n: The number to calculate the sum of digits for.\n    :return: The sum of digits of the given number.\n    \"\"\"\n    total = 0\n    while n > 0:\n        digit = n % 10  # Get the last digit of the number\n        total += digit  # Add the digit to the total\n        n //= 10  # Remove the last digit from the number (divide by 10)\n\n    return total\n```\n\nYou can use this function to calculate the sum of digits of a given number like this:\n\n```python\nprint(sum_of_digits(12345))  # Output: 15\n```\n\nThis function works by repeatedly extracting the last digit of the number using the modulo operator (`%`), adding it to the total, and then removing the last digit from the number by integer division (`//`). The loop continues until the number becomes zero, at which point the total sum of digits is returned.",
+  "error": null,
+  "elapsed_seconds": 2.94,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

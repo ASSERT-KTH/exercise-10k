@@ -1,0 +1,9 @@
+{
+  "id": 5086,
+  "title": "Guessing Game",
+  "prompt": "Create a program that generates a random number and asks the user to guess it.\nSample Input: 50\nSample Output: Too high! Try again.\n",
+  "answer": "Sure, I'd be happy to help you create a program that generates a random number and prompts the user to guess it. Here's a Python solution using the `random` module for generating a random number:\n\n```python\nimport random\n\n# Function to generate a random number between min and max (inclusive)\ndef generate_random_number(min, max):\n    return random.randint(min, max)\n\n# Function to play the guessing game\ndef play_guessing_game():\n    # Generate a random number between 1 and 100\n    random_number = generate_random_number(1, 100)\n\n    # Keep asking the user to guess until they get it right\n    while True:\n        user_guess = int(input(\"Guess a number between 1 and 100: \"))\n\n        if user_guess == random_number:\n            print(f\"Congratulations! You guessed the number correctly ({random_number}).\")\n            break\n        elif user_guess < random_number:\n            print(\"Too low! Try again.\")\n        else:\n            print(\"Too high! Try again.\")\n\n# Play the game\nplay_guessing_game()\n```\n\nThis program defines two functions: `generate_random_number` to generate a random number between two given limits, and `play_guessing_game` to play the guessing game. The game continues until the user guesses the correct number.",
+  "error": null,
+  "elapsed_seconds": 3.26,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

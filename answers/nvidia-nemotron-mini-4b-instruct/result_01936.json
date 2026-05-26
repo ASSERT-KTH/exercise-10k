@@ -1,0 +1,9 @@
+{
+  "id": 1936,
+  "title": "Variable Scope",
+  "prompt": "Write a program that demonstrates the scope of variables (local, global, nonlocal).\nSample Input: None\nSample Output: Global variable: 10, Local variable: 20\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that demonstrates the scope of variables (local, global, and nonlocal) using a function with nested functions.\n\n```python\n# Global variable\nglobal_var = 10\n\ndef outer_function():\n    # Local variable\n    local_var = 20\n\n    def inner_function():\n        # Nonlocal variable (accessible from outer function)\n        nonlocal global_var\n\n        # Local variable (accessible only within inner_function)\n        local_var_inner = 30\n\n        # Accessing global and nonlocal variables\n        print(f\"Local variable: {local_var_inner}\")\n        print(f\"Nonlocal variable: {global_var}\")\n\n    # Calling inner_function\n    inner_function()\n\n    # Accessing local variable (accessible only within outer_function)\n    print(f\"Local variable: {local_var}\")\n\n# Calling outer_function\nouter_function()\n\n# Output\n# Local variable: 20\n# Nonlocal variable: 10\n# Local variable: 20\n```\n\nIn this program, we define a global variable `global_var` outside any function. Inside the `outer_function`, we define a local variable `local_var`. Inside the `inner_function`, we use `nonlocal` to access the global variable `global_var` and modify it. We also define a local variable `local_var_inner` that is only accessible within the `inner_function`.\n\nWhen we call `outer_function`, the `inner_function` is executed, and it prints the values of `local_var_inner` and `global_var`. After that, we print the values of `local_var` and `global_var` again, but this time they are still accessible from the outer function.",
+  "error": null,
+  "elapsed_seconds": 5.35,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

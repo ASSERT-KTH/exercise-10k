@@ -1,0 +1,9 @@
+{
+  "id": 1560,
+  "title": "Array Mapping",
+  "prompt": "Given an array of integers, write a function to apply a specified transformation to each element, returning a new array with the transformed values.\nSample Input: [1, 2, 3, 4, 5], x => x * 2\nSample Output: [2, 4, 6, 8, 10]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef apply_transformation(arr, func):\n    \"\"\"\n    Applies a specified transformation to each element in the input array,\n    returning a new array with the transformed values.\n\n    Parameters:\n    arr (list): The input array of integers.\n    func (callable): A function that takes a single integer argument and returns a transformed value.\n\n    Returns:\n    list: A new array with the transformed values.\n    \"\"\"\n    return [func(x) for x in arr]\n```\nYou can use this function to apply a transformation to an array of integers like this:\n```python\narr = [1, 2, 3, 4, 5]\ndouble = lambda x: x * 2\nresult = apply_transformation(arr, double)\nprint(result)  # Output: [2, 4, 6, 8, 10]\n```\nThis function uses a list comprehension to apply the given function to each element in the input array and returns the resulting list. The `lambda` function `double` is used as an example of a transformation function, but you can replace it with any other function that takes a single integer argument and returns a transformed value.",
+  "error": null,
+  "elapsed_seconds": 2.96,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

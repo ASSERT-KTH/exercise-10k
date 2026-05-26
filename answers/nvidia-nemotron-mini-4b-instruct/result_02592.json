@@ -1,0 +1,9 @@
+{
+  "id": 2592,
+  "title": "Finding the Most Frequent Element",
+  "prompt": "Write a program to find the most frequent element in a given list of numbers.\nSample Input: [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the most frequent element in a given list of numbers:\n```python\nfrom collections import Counter\n\ndef most_frequent(numbers):\n    \"\"\"\n    Find the most frequent element in a given list of numbers.\n\n    :param numbers: List of numbers\n    :return: Most frequent element\n    \"\"\"\n    # Count the occurrences of each number using Counter\n    count = Counter(numbers)\n\n    # Find the key with the maximum value (most frequent element)\n    most_frequent_element = count.most_common(1)[0][0]\n\n    return most_frequent_element\n```\nHere's an example of how to use this function:\n```python\nsample_input = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]\nprint(most_frequent(sample_input))  # Output: 4\n```\nThis program uses the `Counter` class from the `collections` module to count the occurrences of each number in the list. The `most_common` method is then used to find the key with the maximum value (most frequent element). The result is returned as the most frequent element.",
+  "error": null,
+  "elapsed_seconds": 2.93,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

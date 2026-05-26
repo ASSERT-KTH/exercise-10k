@@ -1,0 +1,9 @@
+{
+  "id": 6560,
+  "title": "Morse Code Translation",
+  "prompt": "Write a function that translates a given string into Morse code.\nSample Input: hello\nSample Output: .... . .-.. .-.. ---\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that translates a given string into Morse code:\n\n```python\nmorse_code = {\n    'a': '-', 'b': '-...', 'c': '-.-.', 'd': '-..', 'e': '.',\n    'f': '..-.', 'g': '--.', 'h': '....', 'i': '..', 'j': '.---',\n    'k': '-.-', 'l': '.-..', 'm': '--', 'n': '-.', 'o': '---',\n    'p': '.--.', 'q': '--.-', 'r': '.-.', 's': '...', 't': '-',\n    'u': '..-', 'v': '...-', 'w': '.--', 'x': '-..-', 'y': '-.--',\n    'z': '--..', ' ': '   ', '1': '.----', '2': '..---', '3': '...--',\n    '4': '....-', '5': '.....', '6': '-....', '7': '--...', '8': '---..',\n    '9': '----.', '0': '-----', ',': '--..--', '.': '.-.-.-', '?': '..--..'\n}\n\ndef translate_to_morse(text):\n    return ' '.join([morse_code[char] if char in morse_code else char for char in text])\n\n# Example usage\nprint(translate_to_morse('hello'))  # Output: .... . .-.. .-.. ---\n```\n\nThis function first defines a dictionary that maps each English letter to its corresponding Morse code sequence. Then, it uses a list comprehension to iterate over each character in the input text, translating it to Morse code if it's in the dictionary, or leaving it unchanged if it's not. Finally, it joins all the translated characters with a single space to create the Morse code representation of the input text.",
+  "error": null,
+  "elapsed_seconds": 4.57,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

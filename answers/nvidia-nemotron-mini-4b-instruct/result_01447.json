@@ -1,0 +1,9 @@
+{
+  "id": 1447,
+  "title": "Calculate Average",
+  "prompt": "Write a program that takes a list of numbers as input and outputs their average.\nSample Input: 1 2 3 4 5\nSample Output: 3.0\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a list of numbers as input and outputs their average:\n\n```python\ndef calculate_average(numbers):\n    \"\"\"\n    Calculates the average of a list of numbers.\n\n    :param numbers: List of numbers\n    :return: Average of the numbers\n    \"\"\"\n\n    # Check if the input is a non-empty list\n    if not isinstance(numbers, list) or len(numbers) == 0:\n        raise ValueError(\"Input should be a non-empty list of numbers.\")\n\n    # Calculate the sum of the numbers\n    total = sum(numbers)\n\n    # Calculate the average\n    average = total / len(numbers)\n\n    return average\n\n# Get user input\nuser_input = input(\"Enter a list of numbers separated by spaces: \")\n\n# Convert user input to a list and calculate the average\nnumbers = [float(num) for num in user_input.split()]\naverage = calculate_average(numbers)\n\n# Print the result\nprint(f\"The average of the numbers is: {average:.2f}\")\n```\n\nThis program defines a function `calculate_average` that checks if the input is a non-empty list of numbers. It then calculates the sum of the numbers and divides it by the length of the list to get the average. The program then gets user input, converts it to a list of numbers, and calls the `calculate_average` function to calculate the average and print it with two decimal places.",
+  "error": null,
+  "elapsed_seconds": 3.43,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 8190,
+  "title": "Fibonacci Sequence",
+  "prompt": "Write a program that generates the Fibonacci sequence using a for loop.\nSample Input: 10\nSample Output: 0 1 1 2 3 5 8 13 21 34\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that generates the Fibonacci sequence using a for loop, up to a specified number of terms (in this case, 10 terms).\n\n```python\ndef fibonacci(n):\n    \"\"\"Generate the first n Fibonacci numbers.\"\"\"\n    sequence = [0, 1]\n\n    # Generate the remaining Fibonacci numbers up to n terms\n    for _ in range(2, n):\n        sequence.append(sequence[-1] + sequence[-2])\n\n    return sequence\n\n# Get the number of terms from the user\nnum_terms = int(input(\"Enter the number of Fibonacci terms to generate: \"))\n\n# Generate and print the Fibonacci sequence\nfib_sequence = fibonacci(num_terms)\nprint(\"Fibonacci sequence: \", *fib_sequence, sep=\" \")\n```\n\nWhen you run this program and enter `10`, it will output:\n\n```\nEnter the number of Fibonacci terms to generate: 10\nFibonacci sequence:  0 1 1 2 3 5 8 13 21 34\n```",
+  "error": null,
+  "elapsed_seconds": 2.95,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

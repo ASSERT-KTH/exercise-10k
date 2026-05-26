@@ -1,0 +1,9 @@
+{
+  "id": 5160,
+  "title": "Find Mode Age",
+  "prompt": "Find the mode age of students in a dictionary where keys are student names and values are their corresponding ages\nSample Input: {'John': 20, 'Emma': 22, 'Oliver': 21, 'Ava': 20, 'William': 22}\nSample Output: 20\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python solution for finding the mode age (the most common age) in a dictionary where keys are student names and values are their corresponding ages:\n```python\ndef find_mode_age(students):\n    # Create a list of unique ages\n    unique_ages = list(set([student_age for student_name, student_age in students.items()]))\n\n    # Initialize the mode age to the first element in unique_ages\n    mode_age = unique_ages[0]\n    count = students.get(str(mode_age), 0)\n\n    # Update the mode age and count for each unique age\n    for age in unique_ages:\n        count = students.get(str(age), 0) + count\n        if count > students.get(str(mode_age), 0):\n            mode_age = age\n\n    return mode_age\n```\nHere's how you can use this function with your sample input:\n```python\nstudents = {'John': 20, 'Emma': 22, 'Oliver': 21, 'Ava': 20, 'William': 22}\nprint(find_mode_age(students))  # Output: 20\n```\nThis function first creates a list of unique ages in the dictionary. Then, it initializes the mode age to the first element in the list and counts the occurrences of each unique age. Finally, it updates the mode age and count for each unique age, and returns the mode age when it finds a new mode.",
+  "error": null,
+  "elapsed_seconds": 3.56,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 17,
+  "title": "Web Development",
+  "prompt": "Write a program to create a simple web page using a web framework.\nSample Input: create a web page with a hello world message\nSample Output: web page with hello world message\n",
+  "answer": "To create a simple web page using a web framework, I'll use Flask, a popular Python web framework. Here's a program that generates a web page with the message \"Hello World\":\n\n```python\nfrom flask import Flask, render_template\n\napp = Flask(__name__)\n\n@app.route('/')\ndef index():\n    return render_template('index.html')\n\nif __name__ == '__main__':\n    app.run(debug=True)\n```\n\nThis program creates a Flask application with a single route (`/`) that renders the `index.html` template. The `render_template` function takes the template name as an argument and returns the rendered HTML content.\n\nTo create the `index.html` template, save it in the same directory as your Python script. Here's an example:\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Hello World</title>\n</head>\n<body>\n    <h1>Hello World</h1>\n</body>\n</html>\n```\n\nNow, you can run the Python script using:\n\n```\npython app.py\n```\n\nAnd access the web page at `http://localhost:5000/` in your web browser.",
+  "error": null,
+  "elapsed_seconds": 3.89,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

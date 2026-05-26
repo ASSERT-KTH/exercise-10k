@@ -1,0 +1,9 @@
+{
+  "id": 2860,
+  "title": "Dictionary Pop Item",
+  "prompt": "Write a function to remove and return the last inserted key-value pair from a dictionary.\nSample Input: {'name': 'John', 'age': 30}\nSample Output: ('age', 30)\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements. This function uses the `items()` method to get a list of key-value pairs, removes the last pair (which is the most recently inserted), and then converts it back to a tuple before returning it.\n\n```python\ndef remove_last_inserted_pair(dictionary):\n    \"\"\"\n    Remove and return the last inserted key-value pair from a dictionary.\n\n    :param dictionary: The dictionary to remove the last pair from.\n    :return: A tuple containing the removed key and value.\n    \"\"\"\n    # Get a list of key-value pairs, remove the last one, and convert it back to a tuple\n    last_pair = dictionary.popitem()  # This will raise a KeyError if the dictionary is empty\n    return tuple(last_pair)\n```\n\nHere's an example of how to use this function:\n\n```python\nmy_dict = {'name': 'John', 'age': 30}\nprint(remove_last_inserted_pair(my_dict))  # Output: ('age', 30)\n\n# Now the dictionary is {'name': 'John'}\nmy_dict = {'name': 'John', 'age': 30}\nprint(remove_last_inserted_pair(my_dict))  # Output: ('name', 'John')\n```",
+  "error": null,
+  "elapsed_seconds": 3.49,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

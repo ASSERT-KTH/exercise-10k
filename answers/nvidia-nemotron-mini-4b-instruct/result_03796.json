@@ -1,0 +1,9 @@
+{
+  "id": 3796,
+  "title": "Coin Change",
+  "prompt": "Write a function that finds the minimum number of coins needed to make change for a given amount.\nSample Input: [1, 2, 5], 11\nSample Output: 3\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses dynamic programming to find the minimum number of coins needed to make change for a given amount. This function assumes that the coins have distinct values.\n\n```python\ndef min_coins(coins, amount):\n    # Initialize a list to store the minimum number of coins needed for each amount\n    min_coins_needed = [float('inf')] * (amount + 1)\n    min_coins_needed[0] = 0\n\n    # Iterate through the coins and update the minimum number of coins needed for each amount\n    for coin in coins:\n        for i in range(coin, amount + 1):\n            min_coins_needed[i] = min(min_coins_needed[i], min_coins_needed[i - coin] + 1)\n\n    # Return the minimum number of coins needed for the given amount\n    return min_coins_needed[amount] if min_coins_needed[amount] != float('inf') else -1\n```\n\nYou can use this function as follows:\n\n```python\ncoins = [1, 2, 5]\namount = 11\nprint(min_coins(coins, amount))  # Output: 3\n```\n\nThis function has a time complexity of O(n * amount), where n is the number of coins. This is because we iterate through each coin and for each coin, we iterate through each amount up to the given amount.",
+  "error": null,
+  "elapsed_seconds": 3.82,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

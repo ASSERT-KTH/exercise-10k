@@ -1,0 +1,9 @@
+{
+  "id": 449,
+  "title": "Weather Program",
+  "prompt": "Write a program that asks the user for their location, then prints out the current weather for that location.\nSample Input: New York\nSample Output: The current weather in New York is sunny with a high of 75 and a low of 50.\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements. This program uses the OpenWeatherMap API to get the current weather for a given location. Make sure you have an API key from OpenWeatherMap to use in this program. You can sign up for a free API key at https://openweathermap.org/appid.\n\n```python\nimport requests\n\ndef get_weather(location):\n    # Replace 'your_api_key' with your actual API key\n    url = f\"http://api.openweathermap.org/data/2.5/weather?q={location}&appid=your_api_key&units=metric\"\n\n    response = requests.get(url)\n\n    if response.status_code == 200:\n        data = response.json()\n\n        temperature = data[\"main\"][\"temp\"]\n        feels_like = data[\"main\"][\"feels_like\"]\n        humidity = data[\"main\"][\"humidity\"]\n\n        weather_description = data[\"weather\"][0][\"description\"]\n\n        print(f\"The current weather in {location} is {weather_description}. The temperature is {temperature} degrees Celsius, and it feels like {feels_like} degrees. The humidity is {humidity}%.\")\n    else:\n        print(f\"Error getting weather for {location}. Status code: {response.status_code}\")\n\n# Get user input\nuser_location = input(\"Enter your location: \")\n\n# Call the get_weather function with the user input\nget_weather(user_location)\n```\n\nReplace `'your_api_key'` with your actual API key before running the program.",
+  "error": null,
+  "elapsed_seconds": 3.8,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

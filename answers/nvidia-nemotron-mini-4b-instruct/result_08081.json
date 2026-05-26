@@ -1,0 +1,9 @@
+{
+  "id": 8081,
+  "title": "Function that Uses a Generator Expression",
+  "prompt": "Write a function that uses a generator expression to create a generator\nSample Input: None\nSample Output: A generator\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that uses a generator expression to create a generator. A generator expression is a concise way to create a generator by combining a parenthesized list comprehension with the `yield` keyword.\n\n```python\ndef create_generator():\n    \"\"\"\n    Create a generator using a generator expression.\n\n    Returns:\n        A generator.\n    \"\"\"\n    # Generator expression that yields even numbers from 0 to 10\n    even_numbers = (num for num in range(11) if num % 2 == 0)\n\n    # Function to demonstrate the generator's behavior\n    def process_numbers(generator):\n        for num in generator:\n            print(f\"Processing number: {num}\")\n            # Perform some operation on the number (e.g., square it)\n            result = num ** 2\n            print(f\"Result: {result}\")\n            yield result\n\n    # Call the process_numbers function with the created generator\n    processed_numbers = process_numbers(even_numbers)\n\n    # Print the first few elements of the processed generator\n    for num in processed_numbers:\n        print(num)\n\n    return processed_numbers\n```\n\nWhen you run this function, it will output:\n\n```\nProcessing number: 0\nResult: 0\nProcessing number: 2\nResult: 4\nProcessing number: 4\nResult: 16\nProcessing number: 6\nResult: 36\nProcessing number: 8\nResult: 64\nProcessing number: 10\nResult: 100\n```\n\nThis demonstrates that the generator created by the `create_generator` function is a sequence of even numbers from 0 to 10, and it can be used to perform operations on each number as needed.",
+  "error": null,
+  "elapsed_seconds": 4.18,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

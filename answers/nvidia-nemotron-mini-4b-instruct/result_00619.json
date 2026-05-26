@@ -1,0 +1,9 @@
+{
+  "id": 619,
+  "title": "Range Calculator",
+  "prompt": "Write a program to calculate the range of a set of numbers.\nSample Input: 1 2 3 4 5\nSample Output: 4\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that calculates the range of a set of numbers:\n\n```python\ndef calculate_range(numbers):\n    \"\"\"\n    Calculates the range of a set of numbers.\n\n    :param numbers: A set of numbers\n    :return: The range of the numbers\n    \"\"\"\n\n    # Check if the input is a non-empty set\n    if not isinstance(numbers, set) or not numbers:\n        raise ValueError(\"Input should be a non-empty set of numbers.\")\n\n    # Calculate the range by finding the difference between the maximum and minimum numbers\n    return max(numbers) - min(numbers)\n\n# Example usage\nnumbers = {1, 2, 3, 4, 5}\nprint(calculate_range(numbers))  # Output: 4\n```\n\nThis program defines a function `calculate_range` that takes a set of numbers as input and returns the range of those numbers. The function first checks if the input is a non-empty set, and raises a `ValueError` if it's not. Then, it calculates the range by finding the difference between the maximum and minimum numbers in the set using the built-in `max` and `min` functions. The example usage shows how to call the function with a set of numbers and print the result.",
+  "error": null,
+  "elapsed_seconds": 3.01,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

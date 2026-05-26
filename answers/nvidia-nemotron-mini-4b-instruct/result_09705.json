@@ -1,0 +1,9 @@
+{
+  "id": 9705,
+  "title": "Student Grade Checker",
+  "prompt": "Write a program that takes a student's score as input and prints out their corresponding grade. The grade is determined by the following rules: A (90-100), B (80-89), C (70-79), D (60-69), F (below 60). If the score is not within the range of 0 to 100, print 'Invalid score'. Use conditional statements (if/else) to solve this problem.\nSample Input: 85\nSample Output: B\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef get_grade(score):\n    \"\"\"\n    Determines a student's grade based on their score.\n\n    :param score: The student's score as an integer between 0 and 100.\n    :return: The corresponding grade as a string ('A', 'B', 'C', 'D', or 'F').\n    \"\"\"\n    if not (0 <= score <= 100):\n        return \"Invalid score\"\n\n    if score >= 90:\n        return \"A\"\n    elif score >= 80:\n        return \"B\"\n    elif score >= 70:\n        return \"C\"\n    elif score >= 60:\n        return \"D\"\n    else:\n        return \"F\"\n\n# Get user input\nscore = int(input(\"Enter a score between 0 and 100: \"))\n\n# Print the result\ngrade = get_grade(score)\nprint(f\"Your grade is {grade}.\")\n```\n\nThis program defines a function `get_grade` that takes a score as input and returns the corresponding grade. The function checks if the score is valid (between 0 and 100), and then applies the grade rules based on the score. The program then gets user input, calls the `get_grade` function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 3.44,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

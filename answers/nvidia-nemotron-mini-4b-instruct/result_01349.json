@@ -1,0 +1,9 @@
+{
+  "id": 1349,
+  "title": "Set Operations",
+  "prompt": "Write a program to perform basic set operations (union, intersection, difference, symmetric difference) on two given sets\nSample Input: {1, 2, 3}, {3, 4, 5}\nSample Output: {1, 2, 3, 4, 5}, {3}, {1, 2}, {1, 2, 4, 5}\n",
+  "answer": "Here's a Python program that performs the basic set operations (union, intersection, difference, symmetric difference) on two given sets:\n\n```python\ndef set_operations(set1, set2):\n    # Union\n    union = set1.union(set2)\n    union_str = str(union)\n\n    # Intersection\n    intersection = set1 & set2\n    intersection_str = str(intersection)\n\n    # Difference\n    difference = set1 - set2\n    difference_str = str(difference)\n\n    # Symmetric Difference\n    symmetric_difference = set1 ^ set2\n    symmetric_difference_str = str(symmetric_difference)\n\n    return [union_str, intersection_str, difference_str, symmetric_difference_str]\n\n# Sample Input\nset1 = {1, 2, 3}\nset2 = {3, 4, 5}\n\n# Call the function\nresult = set_operations(set1, set2)\n\n# Print the output\nprint(\"Union:\", result[0])\nprint(\"Intersection:\", result[1])\nprint(\"Difference:\", result[2])\nprint(\"Symmetric Difference:\", result[3])\n```\n\nThis program defines a function `set_operations()` that takes two sets as input and returns a list containing their union, intersection, difference, and symmetric difference as strings. The program then calls this function with sample input sets and prints the output.",
+  "error": null,
+  "elapsed_seconds": 3.35,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

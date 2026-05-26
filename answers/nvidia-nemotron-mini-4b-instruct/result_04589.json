@@ -1,0 +1,9 @@
+{
+  "id": 4589,
+  "title": "Function to Calculate Fibonacci Sequence",
+  "prompt": "Create a function that takes a number as input and returns the Fibonacci sequence up to that number\nSample Input: 10\nSample Output: [0, 1, 1, 2, 3, 5, 8]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef fibonacci(n):\n    \"\"\"\n    Generate the Fibonacci sequence up to the nth number.\n\n    :param n: The upper limit of the Fibonacci sequence.\n    :return: A list of Fibonacci numbers up to n.\n    \"\"\"\n    if n < 1:\n        raise ValueError(\"Input must be a positive integer\")\n\n    sequence = [0, 1]\n    while sequence[-1] + sequence[-2] < n:\n        sequence.append(sequence[-1] + sequence[-2])\n\n    return sequence[:n]\n```\nThis function first checks if the input `n` is a positive integer. If not, it raises a `ValueError`. Then, it initializes a list `sequence` with the first two Fibonacci numbers, 0 and 1. It then enters a loop that continues until the next number in the sequence would exceed `n`. In each iteration, it appends the sum of the last two numbers in the sequence to the end of the sequence. Finally, it returns the first `n` numbers in the sequence.\n\nHere's an example of how you can use this function:\n```python\nprint(fibonacci(10))  # Output: [0, 1, 1, 2, 3, 5, 8]\n```\nI hope this helps! Let me know if you have any questions.",
+  "error": null,
+  "elapsed_seconds": 3.36,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

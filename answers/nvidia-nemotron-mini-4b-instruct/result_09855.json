@@ -1,0 +1,9 @@
+{
+  "id": 9855,
+  "title": "List Manipulation",
+  "prompt": "Write a function that takes a list of integers as input, reverses the order of the elements, and returns the modified list. The function should also remove any duplicate elements from the list.\nSample Input: [1, 2, 3, 2, 1]\nSample Output: [3, 2, 1]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef reverse_and_remove_duplicates(numbers):\n    \"\"\"\n    Takes a list of integers as input, reverses the order of the elements,\n    and returns the modified list with any duplicate elements removed.\n\n    :param numbers: list of integers\n    :return: list of unique integers\n    \"\"\"\n    # Use a set to keep track of the unique elements we've seen so far\n    unique_numbers = set()\n\n    # Iterate over the input list, adding each element to the set and\n    # appending the corresponding unique element to the output list\n    output = []\n    for num in numbers:\n        if num not in unique_numbers:\n            unique_numbers.add(num)\n            output.append(num)\n\n    # Reverse the output list to match the original function signature\n    return output[::-1]\n```\nHere's an example of how you can use this function:\n```python\nnumbers = [1, 2, 3, 2, 1]\nprint(reverse_and_remove_duplicates(numbers))  # Output: [3, 2, 1]\n```\nThis function first converts the input list to a set, which automatically removes any duplicate elements. It then iterates over the set, adding each unique element to a new list and appending it to the output list. Finally, it reverses the output list to match the original function signature.",
+  "error": null,
+  "elapsed_seconds": 3.72,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 3851,
+  "title": "While Loop Guessing Game",
+  "prompt": "Create a program that uses a while loop to simulate a guessing game, where the user has to guess a randomly generated number.\nSample Output: Guess a number between 1 and 100!\n",
+  "answer": "Sure, I'd be happy to help you create a guessing game program using a while loop in Python. Here's an example:\n\n```python\nimport random\n\n# Generate a random number between 1 and 100\ntarget_number = random.randint(1, 100)\n\n# Initialize variables for user input and comparison\nuser_guess = None\nwhile user_guess != target_number:\n    # Get user input and convert it to an integer\n    user_guess = int(input(\"Guess a number between 1 and 100: \"))\n\n    # Compare user's guess with the target number\n    if user_guess < target_number:\n        print(\"Your guess is too low. Try again!\")\n    elif user_guess > target_number:\n        print(\"Your guess is too high. Try again!\")\n\n# If the user guesses the correct number, congratulate them\nif user_guess == target_number:\n    print(f\"Congratulations! You guessed the number {target_number} correctly!\")\n```\n\nThis program generates a random number between 1 and 100, and then enters a while loop that continues until the user guesses the correct number. Inside the loop, the program prompts the user for a guess, converts the user input to an integer, and then compares the user's guess with the target number. If the guess is too low, the program tells the user to try again. If the guess is too high, the program does the same. Once the user guesses the correct number, the program congratulates them.\n\nYou can modify this program to change the range of the random number, the number of attempts the user has, or to add other features as needed.",
+  "error": null,
+  "elapsed_seconds": 3.78,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

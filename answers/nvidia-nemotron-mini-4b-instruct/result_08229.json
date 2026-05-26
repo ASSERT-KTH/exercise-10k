@@ -1,0 +1,9 @@
+{
+  "id": 8229,
+  "title": "Phone Number Validator",
+  "prompt": "Write a program that validates a phone number using if/else statements\nSample Input: 123-456-7890\nSample Output: Valid phone number\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that validates a phone number using if/else statements:\n\n```python\ndef validate_phone_number(phone_number):\n    \"\"\"\n    Validates a phone number using if/else statements.\n\n    :param phone_number: str, the phone number to validate\n    :return: str, \"Valid phone number\" if valid, \"Invalid phone number\" otherwise\n    \"\"\"\n\n    # Regular expression pattern for a US phone number (10 digits, optional area code)\n    pattern = r'^\\d{3}[-\\.\\s]?\\d{3}[-\\.\\s]?\\d{4}$'\n\n    # Check if the input matches the pattern\n    if re.match(pattern, phone_number):\n        # The phone number is valid, return a message\n        return \"Valid phone number\"\n    else:\n        # The phone number is invalid, return an error message\n        return \"Invalid phone number\"\n\n# Example usage\nphone_number = \"123-456-7890\"\nprint(validate_phone_number(phone_number))  # Output: Valid phone number\n\nphone_number = \"invalid_phone_number\"\nprint(validate_phone_number(phone_number))  # Output: Invalid phone number\n```\n\nThis program uses the `re` module to check if the input matches a regular expression pattern for a US phone number. If the input matches the pattern, the function returns \"Valid phone number\". If the input does not match the pattern, the function returns \"Invalid phone number\".",
+  "error": null,
+  "elapsed_seconds": 3.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 482,
+  "title": "List Filtering",
+  "prompt": "Write a program that takes a list and a filter function as input, and returns a new list containing only the elements that pass the filter function.\nSample Input: [1, 2, 3, 4, 5], lambda x: x % 2 == 0\nSample Output: [2, 4]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef filter_list(input_list, filter_func):\n    \"\"\"\n    Filters a list using a given filter function.\n\n    Parameters:\n    input_list (list): The list to filter.\n    filter_func (callable): A function that takes one argument and returns a boolean.\n                            The function should return True for elements to be included\n                            in the output list, and False otherwise.\n\n    Returns:\n    list: A new list containing only the elements from the input list that pass the filter function.\n    \"\"\"\n    return [element for element in input_list if filter_func(element)]\n\n# Example usage:\nnumbers = [1, 2, 3, 4, 5]\neven_numbers = filter_list(numbers, lambda x: x % 2 == 0)\nprint(even_numbers)  # Output: [2, 4]\n```\nThis program defines a function `filter_list` that takes an input list and a filter function as arguments, and returns a new list containing only the elements that pass the filter function. The function uses a list comprehension to iterate over the input list and include each element in the output list only if the filter function returns `True` for that element. The example usage shows how to use the function with a lambda function that filters even numbers.",
+  "error": null,
+  "elapsed_seconds": 9.91,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

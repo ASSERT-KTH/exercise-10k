@@ -1,0 +1,9 @@
+{
+  "id": 7995,
+  "title": "Matrix Multiplication",
+  "prompt": "Write a program that multiplies two matrices.\nSample Input: [[1, 2], [3, 4]], [[5, 6], [7, 8]]\nSample Output: [[19, 22], [43, 50]]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that multiplies two matrices using list comprehension:\n\n```python\ndef multiply_matrices(matrix1, matrix2):\n    \"\"\"\n    Multiplies two matrices.\n\n    :param matrix1: A list of lists representing the first matrix.\n    :param matrix2: A list of lists representing the second matrix.\n    :return: A list of lists representing the product of the two matrices.\n    \"\"\"\n\n    # Check if the number of columns in matrix1 is equal to the number of rows in matrix2\n    if len(matrix1[0]) != len(matrix2):\n        raise ValueError(\"The number of columns in the first matrix must be equal to the number of rows in the second matrix.\")\n\n    # Multiply corresponding elements of the two matrices\n    product = [[sum(a * b for a, b in zip(row1, col)) for col in zip(*matrix2)] for row1 in matrix1]\n\n    return product\n\n# Example usage\nmatrix1 = [[1, 2], [3, 4]]\nmatrix2 = [[5, 6], [7, 8]]\n\nresult = multiply_matrices(matrix1, matrix2)\nprint(result)  # Output: [[19, 22], [43, 50]]\n```\n\nThis program first checks if the number of columns in the first matrix is equal to the number of rows in the second matrix, as this is a requirement for matrix multiplication. If the matrices can be multiplied, it uses list comprehension to perform the actual multiplication. The resulting list of lists is then returned as the output.",
+  "error": null,
+  "elapsed_seconds": 3.76,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

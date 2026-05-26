@@ -1,0 +1,9 @@
+{
+  "id": 6840,
+  "title": "Personalized Greeting",
+  "prompt": "Write a program that takes a user's name as input and prints out a personalized greeting message. The message should be in the format 'Hello, <name>!'. The program should also handle cases where the user enters an empty string or multiple names.\nSample Input: John Doe\nSample Output: Hello, John Doe!\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef greet_user():\n    \"\"\"\n    Gets the user's name and prints a personalized greeting message.\n    Handles cases where the user enters an empty string or multiple names.\n    \"\"\"\n    name = input(\"Please enter your name: \")\n\n    # Check if the user entered an empty string or multiple names\n    if not name or name.isspace():\n        print(\"Sorry, I didn't understand your name. Please try again.\")\n        return\n\n    # Split the name into individual names if there are multiple names\n    names = name.split()\n\n    # Print the personalized greeting message\n    print(f\"Hello, {', '.join(names)}!\")\n\n# Call the function to start the program\ngreet_user()\n```\nThis program defines a function `greet_user()` that prompts the user to enter their name, checks if the input is an empty string or multiple names, and then prints a personalized greeting message. The function also handles cases where the user enters multiple names by splitting the input string into individual names using the `split()` method.",
+  "error": null,
+  "elapsed_seconds": 2.77,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

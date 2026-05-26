@@ -1,0 +1,9 @@
+{
+  "id": 409,
+  "title": "Find First Duplicate in Array",
+  "prompt": "Write a program to find the first duplicate in an array.\nSample Input: [1, 2, 3, 2, 4, 5, 6]\nSample Output: 2\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that finds the first duplicate in an array (or list, as you might call it in Python). This program uses a dictionary to keep track of the elements we've seen so far, and iterates through the array to check if each element is already in the dictionary. If it is, we've found a duplicate, so we return its value. If we go through the entire array without finding a duplicate, we know there are no duplicates, so we return `None`.\n\n```python\ndef find_first_duplicate(arr):\n    \"\"\"\n    Find the first duplicate in an array.\n\n    :param arr: The array to search in\n    :return: The first duplicate in the array, or None if there are no duplicates\n    \"\"\"\n    # Create an empty dictionary to store elements we've seen so far\n    seen = {}\n\n    # Iterate through the array\n    for num in arr:\n        # Check if the number is already in the dictionary\n        if num in seen:\n            # If it is, we've found a duplicate, so return it\n            return num\n        else:\n            # If it's not, add it to the dictionary\n            seen[num] = True\n\n    # If we get here, we've gone through the entire array without finding a duplicate\n    return None\n```\n\nHere's an example of how you can use this function:\n\n```python\narr = [1, 2, 3, 2, 4, 5, 6]\nprint(find_first_duplicate(arr))  # Output: 2\n```",
+  "error": null,
+  "elapsed_seconds": 5.69,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

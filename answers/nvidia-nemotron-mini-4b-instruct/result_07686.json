@@ -1,0 +1,9 @@
+{
+  "id": 7686,
+  "title": "Function to Check if List is Sorted",
+  "prompt": "Write a function that checks if a list of numbers is sorted.\nSample Input: numbers = [1, 2, 3, 4, 5]\nSample Output: True\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that checks if a list of numbers is sorted:\n\n```python\ndef is_sorted(numbers):\n    \"\"\"\n    Check if a list of numbers is sorted in ascending order.\n\n    :param numbers: List of numbers\n    :return: Boolean indicating whether the list is sorted\n    \"\"\"\n    # Check if the list is empty\n    if not numbers:\n        return True\n\n    # Compare each number with the next one\n    for i in range(len(numbers) - 1):\n        if numbers[i] > numbers[i + 1]:\n            return False\n\n    # If we've made it this far, the list is sorted\n    return True\n```\n\nYou can use this function as follows:\n\n```python\nnumbers = [1, 2, 3, 4, 5]\nprint(is_sorted(numbers))  # Output: True\n\nnumbers = [5, 4, 3, 2, 1]\nprint(is_sorted(numbers))  # Output: False\n```\n\nThis function first checks if the list is empty, in which case it returns `True` since an empty list is considered sorted. Then, it iterates through the list and compares each number with the next one. If it finds a pair of numbers that are not in ascending order, it returns `False`. If it goes through the entire list without finding any out-of-order pairs, it returns `True`.",
+  "error": null,
+  "elapsed_seconds": 3.66,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

@@ -1,0 +1,9 @@
+{
+  "id": 6803,
+  "title": "String Reversal and Validation",
+  "prompt": "Given a string input, write a function that checks if the string is a palindrome and then reverses the string. A palindrome is a string that reads the same backward as forward. If the string is a palindrome, the function should return the reversed string; otherwise, return 'Not a palindrome'\nSample Input: madam\nSample Output: madam\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef is_palindrome(s):\n    \"\"\"Check if a string is a palindrome and return the reversed string if it is.\"\"\"\n    # Remove any non-alphanumeric characters and convert to lowercase\n    s = ''.join(c.lower() for c in s if c.isalnum())\n\n    # Check if the string is a palindrome\n    return s == s[::-1]\n\ndef reverse_and_check_palindrome(s):\n    \"\"\"Check if a string is a palindrome and return the reversed string if it is,\n    otherwise return 'Not a palindrome'.\"\"\"\n    if is_palindrome(s):\n        return s[::-1]\n    else:\n        return 'Not a palindrome'\n```\nHere's how you can use this function:\n```python\nprint(reverse_and_check_palindrome(\"madam\"))  # Output: \"madam\"\nprint(reverse_and_check_palindrome(\"hello\"))  # Output: \"Not a palindrome\"\n```\nThis function first removes any non-alphanumeric characters from the input string and converts it to lowercase to ensure that the palindrome check is case-insensitive. Then, it checks if the string is a palindrome by comparing it to its reverse (`s[::-1]`). If the string is a palindrome, the function returns the reversed string; otherwise, it returns 'Not a palindrome'.",
+  "error": null,
+  "elapsed_seconds": 10.94,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

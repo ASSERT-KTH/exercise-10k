@@ -1,0 +1,9 @@
+{
+  "id": 3456,
+  "title": "To-Do List App",
+  "prompt": "Write a program that simulates a To-Do List app, where the user can add, remove, and mark tasks as completed\nSample Input: add Buy milk\nSample Output: Task added: Buy milk\n",
+  "answer": "Sure, I'd be happy to help you create a simple To-Do List app simulator in Python. Here's a program that meets your requirements:\n\n```python\nclass ToDoList:\n    def __init__(self):\n        self.tasks = []\n\n    def add_task(self, task):\n        \"\"\"Add a task to the To-Do List.\"\"\"\n        self.tasks.append(task)\n        print(f\"Task added: {task}\")\n\n    def remove_task(self, task_name):\n        \"\"\"Remove a task from the To-Do List by name.\"\"\"\n        if task_name in self.tasks:\n            self.tasks.remove(task_name)\n            print(f\"Task removed: {task_name}\")\n        else:\n            print(f\"Task '{task_name}' not found in the list.\")\n\n    def mark_completed(self, task_name):\n        \"\"\"Mark a task as completed in the To-Do List by name.\"\"\"\n        if task_name in self.tasks:\n            self.tasks[self.tasks.index(task_name)] = f\"{task_name} (Done)\"\n            print(f\"Task '{task_name}' marked as completed.\")\n        else:\n            print(f\"Task '{task_name}' not found in the list.\")\n\n\n# Create a To-Do List instance\ntodo_list = ToDoList()\n\n# Example usage\ntodo_list.add_task(\"Buy milk\")\ntodo_list.remove_task(\"Buy milk\")\ntodo_list.mark_completed(\"Buy milk\")\n```\n\nThis program defines a `ToDoList` class with methods to add, remove, and mark tasks as completed. The example usage at the end of the program demonstrates how to use these methods.",
+  "error": null,
+  "elapsed_seconds": 4.41,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

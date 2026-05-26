@@ -1,0 +1,9 @@
+{
+  "id": 7249,
+  "title": "String Reversal and Validation",
+  "prompt": "Write a program that takes a string input from the user, checks if it's a palindrome, and then reverses the string. If the string is a palindrome, the program should print 'Palindrome' before printing the reversed string. Otherwise, it should only print the reversed string.\nSample Input: radar\nSample Output: Palindrome\nradar\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n\n```python\ndef is_palindrome(s):\n    \"\"\"Check if a string is a palindrome (ignoring case and spaces).\"\"\"\n    return s.lower() == s[::-1].lower()\n\ndef reverse_and_check(s):\n    \"\"\"Reverse a string and check if it's a palindrome.\"\"\"\n    reversed_s = s[::-1]\n    if is_palindrome(s):\n        print(\"Palindrome\")\n    print(reversed_s)\n\n# Get user input\nuser_input = input(\"Enter a string: \")\n\n# Call the function\nreverse_and_check(user_input)\n```\n\nThis program defines two functions: `is_palindrome()` and `reverse_and_check()`. The `is_palindrome()` function checks if a given string is a palindrome by converting it to lowercase and comparing it to its reverse. The `reverse_and_check()` function gets user input, reverses the string, and then checks if it's a palindrome using the `is_palindrome()` function. If the string is a palindrome, it prints \"Palindrome\" before printing the reversed string. Otherwise, it only prints the reversed string.",
+  "error": null,
+  "elapsed_seconds": 3.1,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

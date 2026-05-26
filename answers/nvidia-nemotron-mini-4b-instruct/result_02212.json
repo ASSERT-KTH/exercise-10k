@@ -1,0 +1,9 @@
+{
+  "id": 2212,
+  "title": "Time Converter",
+  "prompt": "Write a program that takes a time as input and converts it to a different time zone. Print the converted time to the console.\nSample Input: 14:30 EST\nSample Output: 11:30 PST\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that takes a time in Eastern Standard Time (EST) as input and converts it to Pacific Standard Time (PST) using the `pytz` library. If you don't have it installed, you can install it using pip:\n\n```bash\npip install pytz\n```\n\nHere's the Python code:\n\n```python\nimport pytz\n\ndef convert_time_to_pst(time_in_est):\n    \"\"\"\n    Converts a time in Eastern Standard Time (EST) to Pacific Standard Time (PST).\n\n    :param time_in_est: str, time in EST format (e.g., '14:30')\n    :return: str, time in PST format\n    \"\"\"\n    # Create a timezone object for EST\n    est = pytz.timezone('US/Eastern')\n\n    # Convert the input time to a datetime object in EST\n    est_datetime = est.localize(datetime.strptime(time_in_est, '%I:%M %p'))\n\n    # Convert the datetime object to PST and format it as a string\n    pst_datetime = est_datetime.astimezone(pytz.timezone('US/Pacific'))\n    pst_time = pst_datetime.strftime('%I:%M %p')\n\n    return pst_time\n\n# Get user input\ntime_in_est = input(\"Enter a time in EST format (e.g., '14:30'): \")\n\n# Convert the time and print the result\npst_time = convert_time_to_pst(time_in_est)\nprint(f\"The converted time is {pst_time} PST.\")\n```\n\nThis program defines a function `convert_time_to_pst` that takes a time in EST format as input and returns the corresponding time in PST format. The main part of the program gets user input, converts the time using the function, and prints the result.",
+  "error": null,
+  "elapsed_seconds": 4.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

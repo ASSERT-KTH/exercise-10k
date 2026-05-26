@@ -1,0 +1,9 @@
+{
+  "id": 7483,
+  "title": "List Filter",
+  "prompt": "Write a program that filters a given list based on a given condition\nSample Input: [1, 2, 3], x > 1\nSample Output: [2, 3]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that filters a given list based on a given condition using the `if` statement:\n\n```python\ndef filter_list(lst, condition):\n    \"\"\"\n    Filters a given list based on a given condition.\n\n    Parameters:\n    lst (list): The list to filter.\n    condition (callable): A function that takes an element from the list and returns a boolean value.\n\n    Returns:\n    list: A new list containing only the elements from the original list that satisfy the condition.\n    \"\"\"\n    return [element for element in lst if condition(element)]\n\n# Example usage:\nnumbers = [1, 2, 3, 4, 5]\ncondition = lambda x: x > 1\nfiltered_numbers = filter_list(numbers, condition)\nprint(filtered_numbers)  # Output: [2, 3, 4, 5]\n```\n\nIn this example, the `filter_list` function takes a list and a condition function as arguments. It uses a list comprehension to filter the elements in the list based on the condition function. The condition function should take an element from the list and return a boolean value indicating whether the element should be included in the filtered list.\n\nThe example usage shows how to use the `filter_list` function to filter a list of numbers based on a condition that the number is greater than 1. The resulting filtered list contains only the numbers 2, 3, 4, and 5.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

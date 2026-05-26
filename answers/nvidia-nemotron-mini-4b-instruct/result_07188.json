@@ -1,0 +1,9 @@
+{
+  "id": 7188,
+  "title": "Basic Insertion Sort",
+  "prompt": "Write a program that sorts an array using the insertion sort algorithm\nSample Input: [5, 2, 8, 1, 9]\nSample Output: [1, 2, 5, 8, 9]\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that sorts an array (or list) using the insertion sort algorithm:\n\n```python\ndef insertion_sort(arr):\n    \"\"\"\n    Sort the given array using the insertion sort algorithm.\n\n    :param arr: The array to be sorted (list)\n    :return: The sorted array (list)\n    \"\"\"\n    for i in range(1, len(arr)):\n        key = arr[i]\n        j = i - 1\n\n        # Move elements of arr[0..i-1], that are greater than key, to one position ahead of their current position\n        while j >= 0 and key < arr[j]:\n            arr[j + 1] = arr[j]\n            j -= 1\n\n        # Insert the key in its correct position\n        arr[j + 1] = key\n\n    return arr\n\n# Example usage\narr = [5, 2, 8, 1, 9]\nsorted_arr = insertion_sort(arr)\nprint(sorted_arr)  # Output: [1, 2, 5, 8, 9]\n```\n\nThis function works by iterating through the array from the second element (index 1) to the last element (index `len(arr) - 1`). For each element, it finds its correct position in the sorted array by moving elements to the right until it reaches a position where the element is smaller than the current element. Once the correct position is found, it inserts the element in its correct position.",
+  "error": null,
+  "elapsed_seconds": 3.77,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

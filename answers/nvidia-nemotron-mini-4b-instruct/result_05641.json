@@ -1,0 +1,9 @@
+{
+  "id": 5641,
+  "title": "Function Calculator",
+  "prompt": "Create a function that takes in two numbers and an operator, and returns the result of the operation. The operator can be +, -, *, or /.\nSample Input: 2, 3, +\nSample Output: 5\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python function that meets your requirements:\n```python\ndef calculate(num1, num2, operator):\n    \"\"\"\n    Calculates the result of an operation between two numbers based on the given operator.\n\n    Parameters:\n    num1 (float or int): The first number in the operation.\n    num2 (float or int): The second number in the operation.\n    operator (str): The operator to use for the calculation ('+', '-', '*', or '/').\n\n    Returns:\n    float or int: The result of the operation.\n    \"\"\"\n    # Ensure the operator is one of the allowed characters\n    if operator not in ['+', '-', '*', '/']:\n        raise ValueError(\"Invalid operator. Please use one of the following: +, -, *, /\")\n\n    # Perform the calculation based on the operator\n    if operator == '+':\n        return num1 + num2\n    elif operator == '-':\n        return num1 - num2\n    elif operator == '*':\n        return num1 * num2\n    elif operator == '/':\n        return num1 / num2\n    else:\n        raise ValueError(\"Invalid operator. Please use one of the following: +, -, *, /\")\n```\nHere's an example of how to use this function:\n```python\nresult = calculate(2, 3, '+')\nprint(result)  # Output: 5\n```\nThis function checks that the operator is one of the allowed characters and then performs the calculation based on the operator. It also raises a `ValueError` if the operator is not one of the allowed characters.",
+  "error": null,
+  "elapsed_seconds": 3.74,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

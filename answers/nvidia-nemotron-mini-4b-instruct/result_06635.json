@@ -1,0 +1,9 @@
+{
+  "id": 6635,
+  "title": "Function with Error Handling",
+  "prompt": "Write a function that uses error handling to catch and handle exceptions\nSample Input: 5\nSample Output: 10\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's an example Python function that uses error handling to catch and handle exceptions, specifically a `ValueError` that might be raised when the user inputs an invalid integer. The function will output the result of multiplying the input number by 2.\n\n```python\ndef multiply_by_two(number):\n    \"\"\"\n    Multiply the given number by 2 and return the result.\n\n    :param number: The number to multiply by 2.\n    :return: The result of multiplying the number by 2.\n    \"\"\"\n    try:\n        result = number * 2\n        return result\n    except ValueError as e:\n        # Handle the ValueError exception\n        print(f\"Error: The input '{number}' is not an integer. Please provide an integer value.\")\n        return None\n\n# Example usage\nuser_input = input(\"Enter a number: \")\ntry:\n    result = multiply_by_two(int(user_input))\n    if result is not None:\n        print(f\"The result of multiplying {user_input} by 2 is {result}.\")\nexcept Exception as e:\n    print(f\"An unexpected error occurred: {e}\")\n```\n\nThis function first tries to multiply the input number by 2. If the operation is successful, it returns the result. If a `ValueError` is raised (which means the input is not an integer), the function prints an error message and returns `None`. The example usage demonstrates how to call the function and handle any unexpected errors.",
+  "error": null,
+  "elapsed_seconds": 3.58,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

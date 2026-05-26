@@ -1,0 +1,9 @@
+{
+  "id": 7204,
+  "title": "Cookbook App",
+  "prompt": "Create a program that implements a cookbook app using a for loop.\nSample Input: recipe1\nSample Output: Recipe 1:\nIngredients: ingredient1, ingredient2\nInstructions: instruction1, instruction2\n",
+  "answer": "Sure, I'd be happy to help you create a program that implements a cookbook app using a for loop. Here's an example Python program that meets your requirements:\n```python\ndef display_recipe(recipe_name):\n    \"\"\"Displays a recipe with the given name.\"\"\"\n    # Define the sample recipe\n    recipe = {\n        \"name\": recipe_name,\n        \"ingredients\": [\"ingredient1\", \"ingredient2\"],\n        \"instructions\": [\"instruction1\", \"instruction2\"]\n    }\n\n    # Display the recipe\n    print(f\"Recipe {recipe_name}:\")\n    for ingredient, instruction in zip(recipe[\"ingredients\"], recipe[\"instructions\"]):\n        print(f\"- {ingredient}: {instruction}\")\n\n# Example usage\ndisplay_recipe(\"recipe1\")\n```\nThis program defines a function `display_recipe` that takes a recipe name as input and displays a sample recipe with that name. The function uses a for loop to iterate over the `ingredients` and `instructions` lists in the sample recipe dictionary, and prints each ingredient and instruction on a separate line.\n\nWhen you run the program with the sample input \"recipe1\", it will output:\n```yaml\nRecipe recipe1:\n- ingredient1: instruction1\n- ingredient2: instruction2\n```\nYou can modify the `recipe` dictionary to include any number of recipes with different names, ingredients, and instructions. The `zip` function is used to pair the `ingredients` and `instructions` lists together, so that each ingredient is printed with its corresponding instruction.",
+  "error": null,
+  "elapsed_seconds": 3.48,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

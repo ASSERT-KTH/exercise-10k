@@ -1,0 +1,9 @@
+{
+  "id": 1594,
+  "title": "Letter Counter",
+  "prompt": "Create a program to count the number of occurrences of each letter in a string.\nSample Input: hello\nSample Output: h: 1, e: 1, l: 2, o: 1\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that counts the number of occurrences of each letter in a string:\n\n```python\ndef count_letters(s):\n    \"\"\"\n    Count the number of occurrences of each letter in a string.\n\n    :param s: The input string\n    :return: A dictionary where keys are letters and values are their counts\n    \"\"\"\n    letter_counts = {}\n    for letter in s:\n        if letter.isalpha():  # Only count letters (not numbers, spaces, etc.)\n            letter = letter.lower()  # Convert to lowercase for case-insensitive counting\n            if letter in letter_counts:\n                letter_counts[letter] += 1\n            else:\n                letter_counts[letter] = 1\n    return letter_counts\n\n# Example usage:\ninput_string = \"hello\"\noutput = count_letters(input_string)\nprint(output)  # Output: {'h': 1, 'e': 1, 'l': 2, 'o': 1}\n```\n\nThis program defines a function `count_letters` that iterates over each character in the input string, checks if it's a letter (ignoring non-alphabetic characters), converts it to lowercase for case-insensitive counting, and increments its count in the `letter_counts` dictionary. Finally, it returns the dictionary as the output.",
+  "error": null,
+  "elapsed_seconds": 3.4,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

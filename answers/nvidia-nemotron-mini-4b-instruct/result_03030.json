@@ -1,0 +1,9 @@
+{
+  "id": 3030,
+  "title": "String Rotation",
+  "prompt": "Write a program that takes a string and a rotation value as input, and returns the string rotated by the specified value.\nSample Input: hello 2\nSample Output: llohe\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that meets your requirements:\n```python\ndef rotate_string(input_string: str, rotation_value: int) -> str:\n    \"\"\"\n    Rotates a given string by the specified value.\n\n    :param input_string: The string to rotate.\n    :param rotation_value: The number of positions to rotate the string.\n    :return: The rotated string.\n    \"\"\"\n    if not isinstance(input_string, str) or not isinstance(rotation_value, int):\n        raise TypeError(\"Both input_string and rotation_value must be of type str and int, respectively.\")\n\n    # Ensure rotation_value is within the valid range\n    rotation_value %= len(input_string)\n\n    # Rotate the string using slicing\n    return input_string[rotation_value:] + input_string[:rotation_value]\n\n# Example usage\ninput_string = \"hello\"\nrotation_value = 2\nprint(rotate_string(input_string, rotation_value))  # Output: llohe\n```\nThis program defines a function `rotate_string` that takes a string and a rotation value as input, and returns the string rotated by the specified value. The function checks if the input types are correct, ensures that the rotation value is within the valid range, and then rotates the string using slicing. The example usage at the end of the program demonstrates how to use the function.",
+  "error": null,
+  "elapsed_seconds": 3.33,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}

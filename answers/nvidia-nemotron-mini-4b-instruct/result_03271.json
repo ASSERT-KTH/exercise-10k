@@ -1,0 +1,9 @@
+{
+  "id": 3271,
+  "title": "Printing Prime Numbers",
+  "prompt": "Write a program that uses a for loop to print out the prime numbers from 1 to 100.\nSample Input: None\nSample Output: 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97\n",
+  "answer": "Sure, I'd be happy to help you with that! Here's a Python program that uses a for loop to print out all prime numbers between 1 and 100:\n\n```python\n# Initialize a list to store prime numbers\nprime_numbers = []\n\n# Initialize a variable to keep track of the current number\ncurrent_number = 2\n\n# Continue looping until the current number is greater than 100\nwhile current_number <= 100:\n    # Check if the current number is prime by dividing it by all numbers from 2 up to its square root\n    is_prime = True\n    for potential_divisor in range(2, int(current_number**0.5) + 1):\n        if current_number % potential_divisor == 0:\n            is_prime = False\n            break\n    # If the current number is prime, add it to the list\n    if is_prime:\n        prime_numbers.append(current_number)\n    # Increment the current number by 1\n    current_number += 1\n\n# Print the list of prime numbers\nprint(\"Prime numbers between 1 and 100:\")\nfor prime_number in prime_numbers:\n    print(prime_number, end=\" \")\n```\n\nWhen you run this program, it will output:\n\n```\nPrime numbers between 1 and 100:\n2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97\n```",
+  "error": null,
+  "elapsed_seconds": 3.94,
+  "model": "nvidia/nemotron-mini-4b-instruct"
+}
