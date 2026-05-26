@@ -8,6 +8,8 @@ import subprocess
 import sys
 import tempfile
 import argparse
+from collections import Counter
+from whats_that_code.election import guess_language_all_methods
 
 def extract_code_blocks(text):
     # Regex to find content between ``` and ```
@@ -60,6 +62,17 @@ def execute_code(code, input_data=None):
         if os.path.exists(temp_name):
             os.remove(temp_name)
 
+def detect_language(lang_tag, code):
+    if lang_tag:
+        return lang_tag.lower()
+    if not code.strip():
+        return 'unknown'
+    try:
+        return guess_language_all_methods(code).lower()
+    except Exception:
+        return 'unknown'
+
+
 def find_answer_path(answers_dir, exercise_id):
     """Try all known naming conventions for answer files."""
     candidates = [
@@ -99,6 +112,7 @@ def main():
     ast_success_cases = 0
     execution_success_cases = 0
     program_lengths = []
+    language_counts = Counter()
 
     for idx, filename in enumerate(exercise_files):
         print(f"\rProcessing {idx+1}/{total_files}...", end="", flush=True)
@@ -134,23 +148,29 @@ def main():
         md_filename = f"exercise_{str(exercise_id).zfill(5)}.md"
         md_path = os.path.join(output_dir, md_filename)
 
+        # blocks_to_write: list of (detected_lang, code) tuples
         blocks_to_write = []
         if code_blocks:
             has_lang_tag = any(lang for lang, code in code_blocks if lang)
             for lang, block in code_blocks:
                 if has_lang_tag and not lang:
                     continue
-                blocks_to_write.append(block.strip())
+                detected = detect_language(lang, block.strip())
+                blocks_to_write.append((detected, block.strip()))
 
         if len(blocks_to_write) == 0: no_blocks += 1
         if len(blocks_to_write) > 1: many_blocks += 1
+
+        # Count language of the primary (first) block
+        if blocks_to_write:
+            language_counts[blocks_to_write[0][0]] += 1
 
         # Check if it parses with AST and execute
         is_valid_python = False
         execution_successful = False
         current_exercise_length = 0
         generated_outputs = []
-        for block in blocks_to_write:
+        for detected_lang, block in blocks_to_write:
             current_exercise_length += len(block)
             success = False
 
@@ -177,8 +197,8 @@ def main():
             f.write("## Exercise\n")
             f.write(f"{description}\n\n")
             f.write("## Reference Solution\n")
-            for block in blocks_to_write:
-                f.write("```python\n")
+            for detected_lang, block in blocks_to_write:
+                f.write(f"```{detected_lang}\n")
                 f.write(block)
                 f.write("\n```\n\n")
             
@@ -214,13 +234,19 @@ def main():
             p25 = get_percentile(program_lengths, 25)
             p75 = get_percentile(program_lengths, 75)
             p95 = get_percentile(program_lengths, 95)
-            
+
             print(f"\nProgram Length Distribution (characters):")
             print(f"Median: {median}")
             print(f"Range: {min_len} - {max_len}")
             print(f"25th Percentile: {p25}")
             print(f"75th Percentile: {p75}")
             print(f"95th Percentile: {p95}")
+
+        if language_counts:
+            print(f"\nDetected Programming Languages (primary block per exercise):")
+            for lang, count in language_counts.most_common():
+                proportion = count / total_cases
+                print(f"  {lang}: {count} ({proportion:.2%})")
     else:
         print("No cases found to process.")
 

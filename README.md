@@ -76,7 +76,19 @@ Program Length Distribution (characters):
 
 Syntactically Valid Python (AST): 9,533 (95.32%)
 
-**Execution:**: Number of successfully executed cases: 7168 (71.70%)
+**Execution:** Number of successfully executed cases: 7,169 (71.69%)
+
+Detected Programming Languages (primary block per exercise, no language was specified in the prompt):
+- python: 9,408 (94.08%)
+- haskell: 241 (2.41%)
+- javascript: 48 (0.48%)
+- delphi: 45 (0.45%)
+- c#: 43 (0.43%)
+- java: 43 (0.43%)
+- cpp: 33 (0.33%)
+- ruby: 14 (0.14%)
+- c: 13 (0.13%)
+- other: 112 (1.12%)
 
 
 ### Generated solutions with nvidia/nemotron-mini-4b-instruct
@@ -92,9 +104,19 @@ Program Length Distribution (characters):
 - 75th Percentile: 829
 - 95th Percentile: 1300
 
-Syntactically Valid Python (AST): 2,305 (23.05%)
+Syntactically Valid Python (AST): 2,308 (23.08%)
 
-**Execution:**: Number of successfully executed cases: 7,483 (74.83%)
+**Execution:** Number of successfully executed cases: 7,480 (74.80%)
+
+Detected Programming Languages (primary block per exercise, no language was specified in the prompt):
+- python: 9,753 (97.53%)
+- javascript: 91 (0.91%)
+- bash: 49 (0.49%)
+- haskell: 7 (0.07%)
+- csharp: 5 (0.05%)
+- typescript: 4 (0.04%)
+- cpp: 3 (0.03%)
+- other: 9 (0.09%)
 
 ## Related work
 
